@@ -1,0 +1,385 @@
+{
+  "nav": {
+    "about": "Chi sono",
+    "skills": "Competenze",
+    "projects": "Progetti",
+    "certificates": "Certificati",
+    "bonus": "Bonus professionale",
+    "contact": "Contatti"
+  },
+  "hero": {
+    "meta": {
+      "title": "Consulente Salesforce ☁️\nSviluppatore Full-Stack",
+      "description": "Consulente Salesforce con Background da Sviluppatore Full-Stack\nAppassionato di CRM e Cloud specializzato in soluzioni Salesforce e sviluppo web moderno."
+    },
+    "title": "Consulente Salesforce ☁️\nSviluppatore Full-Stack",
+    "subtitle": "Transizione dallo sviluppo web full-stack all'ecosistema Salesforce\ncombinando competenza tecnica con soluzioni CRM",
+    "cta": {
+      "discover": "Connettiamoci",
+      "projects": "Guarda i miei progetti"
+    },
+    "quote": "Codifica. Crea. Connettiti."
+  },
+  "about": {
+    "title": "Chi sono",
+    "meta": {
+      "title": "Su Mohamed Amine Gharrab",
+      "description": "Sviluppatore Web Appassionato e Consulente Salesforce specializzato in UI/UX, React e soluzioni moderne."
+    },
+    "resume": {
+      "title": "Il Mio Percorso",
+      "current": "2024 - Attuale",
+      "currentRole": "Consulente Salesforce ☁️ ",
+      "currentDesc": "Transizione all'ecosistema Salesforce sfruttando l'esperienza di sviluppo full-stack. Apprendimento dell'amministrazione Salesforce, dello sviluppo e delle soluzioni CRM.",
+      "beforecurrent": "2022 - 2024",
+      "beforecurrentRole": "Sviluppatore Full-Stack",
+      "beforecurrentDesc": "Progettazione e sviluppo di applicazioni web con tecnologie moderne.",
+      "previous": "2020 - 2022",
+      "previousRole": "Sviluppatore Front-end",
+      "previousDesc": "Creazione di interfacce utente responsive con HTML, CSS e JavaScript.",
+      "education": "2018 - 2020",
+      "educationRole": "Formazione Sviluppatore Web",
+      "educationDesc": "Apprendimento dei fondamenti e delle migliori pratiche dello sviluppo web."
+    },
+    "goals": {
+      "title": "I miei obiettivi",
+      "expertise": {
+        "title": "Competenza tecnica",
+        "desc": "Approfondire la conoscenza di framework moderni e architetture avanzate."
+      },
+      "innovation": {
+        "title": "Innovazione",
+        "desc": "Rimanere all'avanguardia delle nuove tecnologie e metodologie."
+      },
+      "impact": {
+        "title": "Impatto sull'utente",
+        "desc": "Progettare esperienze utente intuitive e accessibili."
+      }
+    },
+    "services": {
+      "title": "Servizi che offro",
+      "web": {
+        "title": "Sviluppo Web",
+        "desc": "Costruzione di applicazioni web responsive e performanti con framework moderni e migliori pratiche."
+      },
+      "front": {
+        "title": "Sviluppo Frontend",
+        "desc": "Creazione di interfacce utente belle con attenzione ai dettagli, prestazioni e accessibilità."
+      },
+      "ui": {
+        "title": "Design UI/UX",
+        "desc": "Progettazione di interfacce utente centrati sull'utente, visivamente attraenti e funzionalmente intuitive."
+      }
+    },
+    "book": {
+      "title": "Pronto a collaborare?",
+      "desc": "Scegli una data che ti va bene e parliamo di come posso aiutarti con il tuo progetto.",
+      "date": "Seleziona una data",
+      "button": "Prenota ora",
+      "emailsubject": "Richiesta di prenotazione",
+      "emailbody": "Vorrei prenotare i tuoi servizi",
+      "availability": "La mia disponibilità",
+      "consultation": "Consulenza di design",
+      "consultdesc": "2-3 giorni",
+      "dev": "Progetto di sviluppo",
+      "devdesc": "1-2 settimane",
+      "techreview": "Revisione tecnica",
+      "techreviewtime": "24 ore",
+      "responsetime": "Tempo di risposta: di solito entro 24 ore"
+    }
+  },
+  "skills": {
+    "title": "Competenze",
+    "salesforce": "Salesforce",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "tools": "Strumenti",
+    "other": "UI/UX e altro",
+    "professional": "Competenze professionali",
+    "restApi": "Sviluppo RESTful API",
+    "seo": "Best practice SEO",
+    "wordpress": "Personalizzazione WordPress",
+    "git": "Git e controllo versione",
+    "curiosity": "Curiosità e autoapprendimento",
+    "multilingual": "Comunicazione multilingue"
+  },
+  "projects": {
+    "title": "Progetti",
+    "subtitle": "Una selezione dei miei lavori recenti nello sviluppo web fullstack",
+    "technologies": "Tecnologie",
+    "features": "Caratteristiche",
+    "items": {
+      "1": {
+        "title": "Generatore di Documentazione AI per Visualforce",
+        "description": "Un potente strumento basato su Node.js che genera automaticamente documentazione per le pagine Salesforce Visualforce in formato Markdown. Perfetto per gli sviluppatori Salesforce che desiderano risparmiare tempo nella manutenzione della documentazione tecnica.",
+        "technologies": [
+          "Salesforce",
+          "Apex",
+          "Lightning Web Components",
+          "Salesforce Flow",
+          "Node.js",
+          "API REST",
+          "Integrazione",
+          "Handlebars"
+        ],
+        "features": [
+          "Estrazione di componenti Visualforce (come apex:page, apex:form, apex:inputField, apex:commandButton, ecc.)",
+          "Rilevamento di controller, estensioni e riferimenti recordSetVar",
+          "Parsing delle classi Apex per metodi e proprietà",
+          "Estrazione migliorata dei componenti (apex:pageBlock, apex:pageBlockSection, apex:pageBlockSectionItem)",
+          "Sintesi basata su AI degli scopi e delle funzionalità dei componenti",
+          "Generazione Markdown con sezioni strutturate (Panoramica, Componenti, Controller, ecc.)",
+          "Modelli personalizzabili utilizzando Handlebars",
+          "Interfaccia a riga di comando per un facile utilizzo"
+        ]
+      },
+      "2": {
+        "title": "Bakery SaaS",
+        "description": "Una piattaforma SaaS completa per panetterie, che offre gestione dell'inventario, ordini online e analisi delle vendite.",
+        "technologies": [
+          "React",
+          "Node.js",
+          "Express",
+          "MongoDB",
+          "Stripe",
+          "AWS"
+        ],
+        "features": [
+          "Gestione dell'inventario in tempo reale",
+          "Sistema di ordini online",
+          "Dashboard di analisi",
+          "Gestione clienti"
+        ],
+        "captions": {
+          "0": "Pagina di login e registrazione su mobile",
+          "1": "Dashboard di analisi in modalità chiara con supporto per la lingua araba su mobile",
+          "2": "Grafico e analisi delle vendite, avvisi di gestione delle scorte",
+          "3": "Gestione dell'inventario in modalità scura con supporto per la lingua francese",
+          "4": "Strumenti avanzati di reportistica e analisi",
+          "5": "Dashboard di analisi in modalità scura su desktop con pannello impostazioni account"
+        }
+      },
+      "3": {
+        "title": "Bakery Website",
+        "description": "Un elegante sito vetrina per una panetteria, che evidenzia prodotti, servizi e informazioni di contatto.",
+        "technologies": [
+          "React",
+          "Next.js",
+          "Tailwind CSS",
+          "Prismic CMS"
+        ],
+        "features": [
+          "Design responsivo",
+          "Catalogo prodotti",
+          "Integrazione prenotazioni",
+          "Ottimizzazione SEO"
+        ],
+        "captions": {
+          "0": "Design completamente responsivo per tutti i dispositivi",
+          "1": "Catalogo prodotti interattivo",
+          "2": "Sezione testimonianze clienti",
+          "3": "Modulo di contatto integrato con Google Maps"
+        }
+      },
+      "4": {
+        "title": "Portfolio",
+        "description": "Un modello di portfolio moderno e personalizzabile per professionisti che vogliono mostrare il loro lavoro e le loro competenze.",
+        "technologies": [
+          "React",
+          "TypeScript",
+          "Framer Motion",
+          "Tailwind CSS"
+        ],
+        "features": [
+          "Temi personalizzabili",
+          "Sezioni modulari",
+          "Animazioni fluide",
+          "Ottimizzato per dispositivi mobili"
+        ],
+        "captions": {
+          "0": "Pagina di benvenuto animata con transizioni fluide",
+          "1": "Sezione progetti con filtraggio per categorie",
+          "2": "Sezione competenze con barre di progresso animate",
+          "3": "Modulo di contatto integrato con Google Maps"
+        }
+      },
+      "5": {
+        "title": "E-commerce",
+        "description": "Una piattaforma e-commerce completa con gestione prodotti, carrello, pagamenti sicuri e tracciamento ordini.",
+        "technologies": [
+          "React",
+          "Node.js",
+          "MongoDB",
+          "Stripe",
+          "Redux",
+          "Express"
+        ],
+        "features": [
+          "Catalogo prodotti filtrabile",
+          "Carrello persistente",
+          "Gateway di pagamento sicuro",
+          "Gestione ordini"
+        ]
+      }
+    }
+  },
+  "certificates": {
+    "title": "Certificati e formazione",
+    "subtitle": "Le mie qualifiche e certificati nello sviluppo web",
+    "sub": "Certificati",
+    "salesforceCerts": "Certificazioni e badge Salesforce",
+    "education": {
+      "title": "Formazione",
+      "degree": "Laurea in Ingegneria Informatica",
+      "university": "Università Internazionale di Casablanca, Marocco",
+      "years": "2018 - 2020",
+      "specialization": "Sistemi Informativi",
+      "projects": "Progetti: applicazione web di gestione, sito e-commerce, networking, JEE, ASP.Net, Python, Linux, gestione aziendale,...",
+      "internship": "Tirocinio finale: sviluppatore Fullstack presso Eurafric Marocco"
+    },
+    "academic": {
+      "title": "Formazione accademica",
+      "bachelor": "Laurea Professionale in Criptografia Matematica e Sicurezza Informatica",
+      "bachelorYears": "2015 - 2018",
+      "bachelorDesc": "Concentrato su matematica, crittografia e informatica.",
+      "hnd": "HND in Cybersecurity e Cloud Computing",
+      "hndYears": "2022-2024",
+      "hndDesc": "Competenze pratiche e teoriche in cybersecurity, infrastruttura cloud e protezione di rete."
+    },
+    "continuous": {
+      "title": "Formazione continua",
+      "online": "Corsi online e bootcamp",
+      "onlineYears": "2020 - Presente",
+      "onlineDesc": "Aggiornamento regolare delle competenze tramite piattaforme come Udemy, Coursera e freeCodeCamp"
+    }
+  },
+  "bonus": {
+    "sectionTitle": "Bonus professionale",
+    "testimonials": "Testimonianze",
+    "blog": "Blog tecnico",
+    "availability": "Disponibilità freelance",
+    "read": "Leggi di più",
+    "close": "Chiudi",
+    "testimonialsData": [
+      {
+        "id": 1,
+        "author": "Rashid AIT YAAZZA",
+        "role": "CEO, OpenView",
+        "quote": "Lavorare con te è stata un'esperienza eccezionale. La tua dedizione e le tue competenze sono straordinarie!"
+      },
+      {
+        "id": 2,
+        "author": "Abdessamad EL HASSANI",
+        "role": "Senior Project Manager, EurAfric",
+        "quote": "Sempre professionale, puntuale ed efficiente. Altamente raccomandato!"
+      },
+      {
+        "id": 3,
+        "author": "Hicham Benmetraf",
+        "role": "Lead Developer, CellInnovate",
+        "quote": "Un collaboratore affidabile e creativo che ha migliorato significativamente il nostro stack tecnico e i processi di sviluppo."
+      }
+    ],
+    "blogPosts": [
+      {
+        "id": 1,
+        "title": "Ottimizzazione delle prestazioni di React nel 2025",
+        "excerpt": "Scopri le ultime tecniche per migliorare significativamente le prestazioni delle tue applicazioni React...",
+        "content": "In questo articolo esploreremo tecniche avanzate per ottimizzare le prestazioni delle tue applicazioni React nel 2025. Copriremo caching intelligente, utilizzo di React Server Components, ottimizzazione del rendering con nuove API e best practice per ridurre la dimensione del bundle.\n\nLe prestazioni sono diventate più cruciali che mai nello sviluppo moderno di applicazioni web, e React continua ad evolversi per affrontare queste sfide. Vedremo come sfruttare le ultime funzionalità dell’ecosistema React per creare esperienze utente fluide e reattive.",
+        "date": "2025-04-18",
+        "url": "#blog-post-1"
+      },
+      {
+        "id": 2,
+        "title": "Architettura micro-frontends spiegata",
+        "excerpt": "Un'analisi dettagliata dell'architettura micro-frontends e come implementarla efficacemente nei tuoi progetti...",
+        "content": "L'architettura micro-frontends è diventata un approccio popolare per gestire applicazioni frontend grandi e complesse. In questo articolo analizziamo questo concetto in dettaglio ed esploriamo come implementarlo efficacemente.\n\nEsamineremo diverse strategie di integrazione, compromessi di prestazioni e manutenibilità, ed esempi concreti di implementazione con framework moderni come React, Vue e Angular. Imparerai anche come risolvere sfide comuni relative alla condivisione dello stato, alla navigazione e alla coerenza visiva.",
+        "date": "2025-03-22",
+        "url": "#blog-post-2"
+      },
+      {
+        "id": 3,
+        "title": "TypeScript avanzato per sviluppatori React",
+        "excerpt": "Padroneggia concetti avanzati di TypeScript per rendere il tuo codice React più robusto e manutenibile...",
+        "content": "Questo articolo approfondisce funzionalità avanzate di TypeScript particolarmente utili per sviluppatori React. Copriremo tipi generici, tipi condizionali, tipi mappati e concetti avanzati di tipi.\n\nImparerai a creare componenti fortemente tipizzati che siano flessibili e sicuri, a usare efficacemente l'inferenza dei tipi ed evitare errori comuni. Esploreremo anche librerie come zod e yup per la validazione degli schemi, e strategie per gestire lo stato globale con piena sicurezza dei tipi.",
+        "date": "2025-02-15",
+        "url": "#blog-post-3"
+      },
+      {
+        "id": 4,
+        "title": "Scatenare il potere di Salesforce Einstein nel 2025",
+        "excerpt": "Scopri come le capacità di intelligenza artificiale di Salesforce Einstein stanno rivoluzionando il CRM e l'engagement dei clienti...",
+        "content": "Salesforce Einstein continua ad essere un punto di svolta per le aziende che sfruttano l'IA all'interno del loro CRM. Nel 2024, Einstein offre sofisticate analisi predittive, raccomandazioni intelligenti e flussi di lavoro automatizzati per vendite, servizio e marketing. Questo post copre gli ultimi progressi, inclusa una NLP migliorata per insight sui clienti, previsioni accurate e percorsi cliente personalizzati. Scopri applicazioni pratiche e come le aziende possono sfruttare Einstein per offrire esperienze eccezionali e guidare la crescita, dalla previsione delle vendite all'automazione dei servizi.",
+        "date": "2025-10-10",
+        "url": "#blog-post-4"
+      },
+      {
+        "id": 5,
+        "title": "Padroneggiare Salesforce Flow: Strategie di automazione per l'efficienza",
+        "excerpt": "Scopri come costruire potenti automazioni con Salesforce Flow per ottimizzare i processi aziendali e aumentare la produttività...",
+        "content": "Salesforce Flow è uno strumento indispensabile per automatizzare processi aziendali complessi senza richiedere un codice esteso. Questa guida copre strategie avanzate per l'efficienza e la scalabilità, dai flow screen per le esperienze utente ai flow attivati da record. Approfondisci le migliori pratiche per la progettazione di flow robusti, la gestione degli errori e l'integrazione con sistemi esterni. Impara a sfruttare subflow, collezioni e azioni invocabili personalizzate per automazioni sofisticate, riducendo lo sforzo manuale e migliorando l'accuratezza dei dati. Trasforma l'efficienza operativa della tua organizzazione con Salesforce Flow.",
+        "date": "2025-10-11",
+        "url": "#blog-post-5"
+      }
+    ],
+    "freelance": {
+      "availableForWork": "✅ Disponibile per lavoro freelance",
+      "services": "Servizi offerti",
+      "contactMe": "Contattami",
+      "downloadCV": "Scarica il mio curriculum",
+      "downloadStarted": "Download iniziato",
+      "downloadError": "Errore nel download",
+      "servicesList": [
+        "Sviluppo applicazioni React/Next.js",
+        "Architettura backend con Node.js",
+        "Sviluppo siti e-commerce",
+        "Integrazione e personalizzazione WordPress",
+        "Ottimizzazione SEO e performance",
+        "Applicazioni ASP.NET [Desktop - Web]",
+        "Progettazione e gestione database",
+        "Ottimizzazione prestazioni e scalabilità",
+        "Consulenza tecnica e pianificazione architetturale"
+      ]
+    }
+  },
+  "contact": {
+    "title": "Contatti",
+    "subtitle": "Hai un progetto o una domanda? Sentiti libero di contattarmi!",
+    "form": {
+      "title": "Invia un messaggio",
+      "name": "Nome",
+      "email": "Email",
+      "message": "Messaggio",
+      "submit": "Invia messaggio",
+      "sending": "Invio in corso...",
+      "success": "Grazie per il tuo messaggio! Risponderò il prima possibile."
+    },
+    "info": {
+      "title": "Informazioni di contatto",
+      "address": "Indirizzo",
+      "addressValue": "Dubai, UAE",
+      "phone": "Telefono",
+      "email": "Email",
+      "linkedin": "LinkedIn",
+      "youtube": "YouTube"
+    }
+  },
+  "map": {
+    "tokenMessage": "Per visualizzare la mappa, inserisci il tuo token pubblico Mapbox",
+    "tokenPlaceholder": "Inserisci il token Mapbox",
+    "submit": "Invia",
+    "getToken": "Puoi ottenere un token su"
+  },
+  "footer": {
+    "title": "M.A.G",
+    "description": "Consulente Salesforce ☁️ con esperienza come Sviluppatore Full-Stack.\nAppassionato di soluzioni CRM, tecnologie cloud e sviluppo web moderno.\nSpecializzato in Salesforce, React, Node.js e gestione dei database.",
+    "stayConnected": "Rimani Connesso",
+    "copyright": "© {{year}} Consulente Salesforce ☁️ | ☁️ & Sviluppatore Full-Stack\nM.A.G Tutti i diritti riservati."
+  },
+  "theme": {
+    "dark": "Modalità scura",
+    "light": "Modalità chiara",
+    "toggleDark": "Passa alla modalità scura",
+    "toggleLight": "Passa alla modalità chiara"
+  }
+}
