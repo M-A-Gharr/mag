@@ -32,6 +32,37 @@ const Header = () => {
     };
   }, []);
 
+  useEffect(() => {
+    let last = performance.now();
+    let slowDevice = false;
+    let frame = 0;
+
+    const checkFPS = (now) => {
+      frame++;
+      const delta = now - last;
+      if (frame % 60 === 0) {
+        const fps = 60000 / delta;
+        if (fps < 40) slowDevice = true;
+        frame = 0;
+        last = now;
+        adjustAnimationSpeed();
+      }
+      requestAnimationFrame(checkFPS);
+    };
+
+    const adjustAnimationSpeed = () => {
+      document.querySelectorAll(".logo-letter").forEach((el) => {
+        const span = el as HTMLElement;
+        span.style.animationDuration = slowDevice ? "4s, 8s" : "2.5s, 5s";
+      });
+    };
+
+    if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      requestAnimationFrame(checkFPS);
+    }
+  }, []);
+
+
   const navLinks = useMemo(() => [
     { name: t("nav.about"), to: "about" },
     { name: t("nav.projects"), to: "projects" },
@@ -57,7 +88,11 @@ const Header = () => {
           duration={500}
           className="text-2xl font-bold text-gradient cursor-pointer"
         >
-          M.A.G
+          <span className="logo-letter">M</span>
+          <span className="logo-letter">.</span>
+          <span className="logo-letter">A</span>
+          <span className="logo-letter">.</span>
+          <span className="logo-letter">G</span>
         </Link>
 
         {/* Desktop Nav */}

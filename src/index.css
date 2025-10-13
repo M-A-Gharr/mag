@@ -52,32 +52,32 @@
     /* Dark Mode - Keep these values */
     --background: 240 10% 3.9%;
     --foreground: 0 0% 98%;
-    
+
     --card: 240 10% 3.9%;
     --card-foreground: 0 0% 98%;
-    
+
     --popover: 240 10% 3.9%;
     --popover-foreground: 0 0% 98%;
-    
+
     --primary: 0 0% 98%;
     --primary-foreground: 240 5.9% 10%;
-    
+
     --secondary: 240 3.7% 15.9%;
     --secondary-foreground: 0 0% 98%;
-    
+
     --muted: 240 3.7% 15.9%;
     --muted-foreground: 240 5% 64.9%;
-    
+
     --accent: 240 3.7% 15.9%;
     --accent-foreground: 0 0% 98%;
-    
+
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
-    
+
     --border: 240 3.7% 15.9%;
     --input: 240 3.7% 15.9%;
     --ring: 240 4.9% 83.9%;
-    
+
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -87,6 +87,7 @@
     --sidebar-border: 240 3.7% 15.9%;
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
+
   /* Chatbase Bubble Button Styling for Light Mode */
   @media (prefers-color-scheme: light) {
     [chatbase-bubble-button] {
@@ -175,20 +176,119 @@
   .glass-effect {
     @apply backdrop-blur-lg bg-black/40 border border-white/10;
   }
-  
+
   .text-gradient {
     @apply bg-gradient-to-br from-[#483dfb] to-highlight-dark bg-clip-text text-transparent;
   }
-  
+
   .section-container {
     @apply max-w-7xl mx-auto px-4 py-16 sm:px-6 md:py-24;
   }
-  
+
   .section-title {
     @apply text-3xl md:text-4xl font-bold mb-6 md:mb-10 text-gradient;
   }
-  
+
   .section-subtitle {
     @apply text-xl md:text-2xl font-medium mb-6 text-foreground/80;
+  }
+}
+
+/* --- M.A.G Floating Neon Animation --- */
+.logo {
+  font-weight: 800;
+  font-size: 1.5rem;
+  /* same as text-2xl */
+  color: #fff;
+  display: inline-block;
+  font-family: "Arial Black", sans-serif;
+}
+
+/* Each letter moves and glows */
+.logo-letter {
+  display: inline-block;
+  animation: floatWave 2.5s infinite ease-in-out alternate,
+    rainbowGlow 5s linear infinite;
+  text-shadow: 0 0 3px currentColor, 0 0 6px currentColor;
+}
+
+/* Wave delay per letter */
+.logo-letter:nth-child(1) {
+  animation-delay: 0s, 0s;
+}
+
+.logo-letter:nth-child(2) {
+  animation-delay: 0.1s, 0s;
+}
+
+.logo-letter:nth-child(3) {
+  animation-delay: 0.2s, 0s;
+}
+
+.logo-letter:nth-child(4) {
+  animation-delay: 0.3s, 0s;
+}
+
+.logo-letter:nth-child(5) {
+  animation-delay: 0.4s, 0s;
+}
+
+/* Floating wave */
+@keyframes floatWave {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-6px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Rainbow glow effect */
+@keyframes rainbowGlow {
+  0% {
+    color: #870087;
+  }
+
+  20% {
+    color: #7E69AB;
+  }
+
+  40% {
+    color: #870087;
+  }
+
+  60% {
+    color: #483dfb;
+  }
+
+  80% {
+    color: #006a8d;
+  }
+
+  100% {
+    color: #ad00ad;
+  }
+}
+
+/* Pause animation on hover or click */
+.logo:hover .logo-letter,
+.logo:active .logo-letter {
+  animation-play-state: paused;
+  transform: translateY(0);
+  color: #fff;
+  text-shadow: 0 0 3px #fff, 0 0 6px #fff;
+}
+
+/* Reduced motion accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .logo-letter {
+    animation: none !important;
+    color: #fff;
+    text-shadow: 0 0 2px #fff;
   }
 }
