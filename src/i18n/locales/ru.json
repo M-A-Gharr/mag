@@ -120,7 +120,9 @@
           "Node.js",
           "REST API",
           "Интеграция",
-          "Handlebars"
+          "Handlebars",
+          "TypeScript",
+          "Open AI"
         ],
         "features": [
           "Извлечение компонентов Visualforce (например, apex:page, apex:form, apex:inputField, apex:commandButton и т. д.)",
