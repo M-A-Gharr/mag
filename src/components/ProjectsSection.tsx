@@ -48,8 +48,8 @@ const ProjectsSection = () => {
     {
       id: 1,
       icon: <Cpu className="h-8 w-8 text-[#483dfb]" />,
-      link: "https://github.com/M-A-Gharr/visualforce-ai-doc-generator",
-      demo: "https://github.com/M-A-Gharr/visualforce-ai-doc-generator",
+      link: "https://github.com/M-A-Gharr/visualforce-ai-doc-generator-ts",
+      demo: "https://github.com/M-A-Gharr/visualforce-ai-doc-generator-ts",
       images: []
     },
     {
@@ -71,7 +71,7 @@ const ProjectsSection = () => {
     {
       id: 4,
       icon: <User className="h-8 w-8 text-[#483dfb]" />,
-      link: "https://github.com/M-A-Gharr/portfoliomag",
+      link: "https://github.com/M-A-Gharr/mag",
       demo: "#",
       images: ["/images/portfolio/Screenshot1.png", "/images/portfolio/Screenshot2.png", "/images/portfolio/Screenshot3.png", "/images/portfolio/Screenshot4.png"],
       captions: [t("projects.items.4.captions.0"), t("projects.items.4.captions.1"), t("projects.items.4.captions.2"), t("projects.items.4.captions.3")]
