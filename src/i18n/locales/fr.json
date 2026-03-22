@@ -9,13 +9,13 @@
   },
   "hero": {
     "meta": {
-      "title": "Salesforce Consultant ☁️\nFull-Stack Developer",
-      "description": "Salesforce Consultant with Full-Stack Developer Background\nCRM & Cloud Enthusiast specialized in Salesforce solutions and modern web development."
+      "title": "Créateur SaaS & ERP 🚀",
+      "description": "Je conçois et développe des plateformes SaaS et des systèmes ERP qui aident les entreprises à automatiser leurs opérations et augmenter leur rentabilité."
     },
-    "title": "Salesforce Consultant ☁️\nFull-Stack Developer",
-    "subtitle": "Salesforce Consultant with Full-Stack Developer Background\nCRM & Cloud Enthusiast\nSpecialized in Salesforce solutions and modern web development.",
+    "title": "Créateur SaaS & ERP 🚀",
+    "subtitle": "De l’idée à la production — je crée des plateformes SaaS et ERP qui résolvent de vrais problèmes business.",
     "cta": {
-      "discover": "Prenons Contact",
+      "discover": "Construisons votre SaaS",
       "projects": "Voir mes projets"
     },
     "quote": "Coder. Créer. Connecter."
@@ -24,11 +24,11 @@
     "title": "À propos",
     "meta": {
       "title": "À propos de Mohamed Amine Gharrab",
-      "description": "Développeur web passionné et Consultant Salesforce spécialisé en UI/UX, React et solutions modernes."
+      "description": "Je conçois et développe des plateformes SaaS et des systèmes ERP pour automatiser les opérations et améliorer la rentabilité."
     },
     "resume": {
       "title": "Mon Parcours",
-      "current": "2024 - Actuel",
+      "current": "2024 - 2026",
       "currentRole": "Consultant Salesforce ☁️ ",
       "currentDesc": "Transition vers l'écosystème Salesforce en tirant parti de l'expertise en développement full-stack. Apprentissage de l'administration Salesforce, du développement et des solutions CRM.",
       "beforecurrent": "2022 - 2024",
@@ -57,18 +57,18 @@
       }
     },
     "services": {
-      "title": "Services I Offer",
-      "web": {
-        "title": "Développement Web",
-        "desc": "Building responsive and performant web applications with modern frameworks and best practices."
+      "title": "Ce que je construis",
+      "saas": {
+        "title": "Développement SaaS",
+        "desc": "Plateformes SaaS complètes de l’idée à la production avec une architecture scalable."
       },
-      "front": {
-        "title": "Développement Frontend",
-        "desc": "Creating beautiful user interfaces with attention to detail, performance, and accessibility."
+      "erp": {
+        "title": "Systèmes ERP",
+        "desc": "Solutions ERP sur mesure pour gérer les opérations, les stocks et les processus métiers."
       },
-      "ui": {
-        "title": "Design UI/UX",
-        "desc": "Designing user-centered interfaces that are both visually appealing and functionally intuitive."
+      "automation": {
+        "title": "Automatisation",
+        "desc": "Automatisation des tâches répétitives pour gagner du temps et réduire les coûts."
       }
     },
     "book": {
@@ -105,6 +105,10 @@
   },
   "projects": {
     "title": "Projets",
+    "meta": {
+      "title": "Mohamed Amine Gharrab Projects",
+      "description": "Développement de solutions SaaS et ERP modernes."
+    },
     "subtitle": "Une sélection de mes réalisations récentes en développement web fullstack",
     "technologies": "Technologies",
     "features": "Fonctionnalités",
@@ -137,7 +141,7 @@
       },
       "2": {
         "title": "SaaS pour Boulangeries",
-        "description": "Une plateforme SaaS complète pour les boulangeries, offrant la gestion des stocks, les commandes en ligne et l’analyse des ventes.",
+        "description": "Une plateforme SaaS conçue pour aider les boulangeries à gérer leur stock, réduire le gaspillage et suivre les performances des ventes en temps réel.",
         "technologies": [
           "React",
           "Node.js",
@@ -345,6 +349,10 @@
     }
   },
   "contact": {
+    "meta": {
+      "title": "Contact M.A.G",
+      "description": "Créateur SaaS & ERP"
+    },
     "title": "Contact",
     "subtitle": "Vous avez un projet ou une question ? N'hésitez pas à me contacter !",
     "form": {
@@ -366,9 +374,9 @@
   },
   "footer": {
     "title": "M.A.G",
-    "description": "Consultant Salesforce ☁️ avec expérience en tant que Développeur Full-Stack.\nPassionné par les solutions CRM, les technologies cloud et le développement web moderne.\nSpécialisé en Salesforce, React, Node.js et gestion de bases de données.",
+    "description": "Créateur SaaS & ERP.\nSpécialisé dans les solutions cloud, les systèmes CRM et le développement web moderne.",
     "stayConnected": "Restez Connecté",
-    "copyright": "© {{year}} Consultant Salesforce ☁️ | ☁️ & Développeur Full-Stack\nM.A.G Tous droits réservés."
+    "copyright": "© {{year}} Créateur SaaS & ERP\nM.A.G Tous droits réservés."
   },
   "theme": {
     "dark": "Mode sombre",

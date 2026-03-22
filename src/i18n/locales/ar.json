@@ -9,14 +9,14 @@
   },
   "hero": {
     "meta": {
-      "title": "مستشار Salesforce ☁️\nمطور Full-Stack",
-      "description": "مستشار Salesforce بخلفية مطور Full-Stack | متحمس لـ CRM والسحابة متخصص في حلول Salesforce وتطوير الويب الحديث."
+      "title": "منشئ SaaS و ERP 🚀",
+      "description": "أقوم بتصميم وتطوير منصات SaaS وأنظمة ERP التي تساعد الشركات على أتمتة عملياتها وزيادة ربحيتها."
     },
-    "title": "مستشار Salesforce ☁️\nمطور Full-Stack",
-    "subtitle": "الانتقال من تطوير الويب المتكامل إلى نظام Salesforce\n والجمع بين الخبرة التقنية وحلول CRM",
+    "title": "مطور SaaS و ERP 🚀",
+    "subtitle": "من الفكرة إلى الإنتاج — أقوم بإنشاء منصات SaaS و ERP التي تحل مشاكل أعمال حقيقية.",
     "cta": {
-      "discover": "دعنا نتواصل",
-      "projects": "رؤية مشاريعي"
+      "discover": "لنقم ببناء SaaS الخاص بك",
+      "projects": "مشاهدة المشاريع"
     },
     "quote": "برمج. إبتكر. تواصل."
   },
@@ -24,11 +24,11 @@
     "title": "حول",
     "meta": {
       "title": "عن محمد أمين غراب",
-      "description": "مطور ويب متحمس ومستشار Salesforce متخصص في واجهة المستخدم/تجربة المستخدم (UI/UX) و React والحلول الحديثة."
+      "description": "أقوم بتصميم وتطوير منصات SaaS وأنظمة ERP لأتمتة العمليات وتحسين الربحية."
     },
     "resume": {
       "title": "رحلتي",
-      "current": "2024 - حالي",
+      "current": "2024 - 2026",
       "currentRole": "مستشار Salesforce ☁️ ",
       "currentDesc": "الانتقال إلى نظام Salesforce البيئي مع الاستفادة من خبرة تطوير Full-Stack. تعلم إدارة Salesforce وتطويرها وحلول CRM.",
       "beforecurrent": "2022 - 2024",
@@ -58,17 +58,17 @@
     },
     "services": {
       "title": "Services I Offer",
-      "web": {
-        "title": "Web Development",
-        "desc": "Building responsive and performant web applications with modern frameworks and best practices."
+      "saas": {
+        "title": "تطوير SaaS",
+        "desc": "منصات SaaS متكاملة من الفكرة إلى الإنتاج مع بنية قابلة للتوسع."
       },
-      "front": {
-        "title": "Frontend Development",
-        "desc": "Creating beautiful user interfaces with attention to detail, performance, and accessibility."
+      "erp": {
+        "title": "أنظمة ERP",
+        "desc": "حلول ERP مخصصة لإدارة العمليات والمخزون وسير العمل."
       },
-      "ui": {
-        "title": "UI/UX Design",
-        "desc": "Designing user-centered interfaces that are both visually appealing and functionally intuitive."
+      "automation": {
+        "title": "الأتمتة",
+        "desc": "أتمتة المهام المتكررة لتوفير الوقت وتقليل التكاليف."
       }
     },
     "book": {
@@ -105,6 +105,10 @@
   },
   "projects": {
     "title": "المشاريع",
+    "meta": {
+      "title": "مشاريع محمد أمين غراب",
+      "description": "تطوير حلول SaaS و ERP حديثة."
+    },
     "subtitle": "مجموعة مختارة من أعمالي الحديثة في تطوير الويب المتكامل",
     "technologies": "التقنيات",
     "features": "الميزات",
@@ -137,7 +141,7 @@
       },
       "2": {
         "title": "منصة SaaS للمخابز",
-        "description": "منصة SaaS متكاملة للمخابز، توفر إدارة المخزون والطلبات عبر الإنترنت وتحليلات المبيعات.",
+        "description": "منصة SaaS مصممة لمساعدة المخابز على إدارة المخزون وتقليل الهدر وتتبع أداء المبيعات في الوقت الحقيقي.",
         "technologies": [
           "React",
           "Node.js",
@@ -345,6 +349,10 @@
     }
   },
   "contact": {
+    "meta": {
+      "title": "اتصل بـ M.A.G",
+      "description": "منشئ SaaS و ERP"
+    },
     "title": "اتصل",
     "subtitle": "هل لديك مشروع أو سؤال؟ لا تتردد في الاتصال بي!",
     "form": {
@@ -374,9 +382,9 @@
   },
   "footer": {
     "title": "M.A.G",
-    "description": "مستشار Salesforce ☁️ مع خلفية كمطور Full-Stack.\nشغوف بحلول CRM والتقنيات السحابية وتطوير الويب الحديث.\nمتخصص في Salesforce وReact وNode.js وإدارة قواعد البيانات.",
+    "description": "منشئ SaaS و ERP.\nمتخصص في الحلول السحابية وأنظمة CRM وتطوير الويب الحديث.",
     "stayConnected": "ابقَ على تواصل",
-    "copyright": "© {{year}} مستشار Salesforce ☁️ | ☁️ & مطور Full-Stack\nM.A.G جميع الحقوق محفوظة."
+    "copyright": "© {{year}} منشئ SaaS و ERP\nجميع الحقوق محفوظة M.A.G"
   },
   "theme": {
     "dark": "الوضع المظلم",

@@ -9,13 +9,13 @@
   },
   "hero": {
     "meta": {
-      "title": "Salesforce Consultant ☁️\nFull-Stack Developer",
-      "description": "Salesforce Consultant with Full-Stack Developer Background\nCRM & Cloud Enthusiast\nSpecialized in Salesforce solutions and modern web development."
+      "title": "SaaS & ERP Builder 🚀",
+      "description": "I design and build SaaS platforms and ERP systems that help businesses automate operations and increase profitability."
     },
-    "title": "Salesforce Consultant ☁️\nFull-Stack Developer",
-    "subtitle": "Salesforce Consultant with Full-Stack Developer Background\nCRM & Cloud Enthusiast\nSpecialized in Salesforce solutions and modern web development.",
+    "title": "SaaS & ERP Builder 🚀",
+    "subtitle": "From idea to production — I create ERP and SaaS platforms that solve real business problems.",
     "cta": {
-      "discover": "Let's Connect",
+      "discover": "Build your SaaS with me",
       "projects": "See my projects"
     },
     "quote": "Code. Create. Connect."
@@ -24,11 +24,11 @@
     "title": "About",
     "meta": {
       "title": "About Mohamed Amine Gharrab",
-      "description": "Passionate Web Developer and Salesforce Consultant specializing in UI/UX, React, and modern solutions."
+      "description": "I design and build SaaS platforms and ERP systems that help businesses automate operations and increase profitability."
     },
     "resume": {
       "title": "My Journey",
-      "current": "2024 - Present",
+      "current": "2024 - 2026",
       "currentRole": "Salesforce Consultant ☁️ ",
       "currentDesc": "Transitioning to Salesforce ecosystem while leveraging full-stack development expertise. Learning Salesforce administration, development, and CRM solutions.",
       "beforecurrent": "2022 - 2024",
@@ -57,18 +57,18 @@
       }
     },
     "services": {
-      "title": "Services I Offer",
-      "web": {
-        "title": "Web Development",
-        "desc": "Building responsive and performant web applications with modern frameworks and best practices."
+      "title": "What I Build",
+      "saas": {
+        "title": "SaaS Development",
+        "desc": "End-to-end SaaS platforms from idea to production with scalable architecture."
       },
-      "front": {
-        "title": "Frontend Development",
-        "desc": "Creating beautiful user interfaces with attention to detail, performance, and accessibility."
+      "erp": {
+        "title": "ERP Systems",
+        "desc": "Custom ERP solutions to manage operations, inventory, and business workflows."
       },
-      "ui": {
-        "title": "UI/UX Design",
-        "desc": "Designing user-centered interfaces that are both visually appealing and functionally intuitive."
+      "automation": {
+        "title": "Business Automation",
+        "desc": "Automating repetitive processes to save time and reduce operational costs."
       }
     },
     "book": {
@@ -92,7 +92,7 @@
     "title": "Skills",
     "meta": {
       "title": "Mohamed Amine Gharrab Skills",
-      "description": "Salesforce Consultant in Training with Full-Stack Developer skills in CRM, cloud solutions, and modern web development."
+      "description": "SaaS & ERP builder with a full-stack background, specialized in building business systems, automation tools, and scalable cloud solutions."
     },
     "salesforce": "Salesforce",
     "frontend": "Frontend",
@@ -111,7 +111,7 @@
     "title": "Projects",
     "meta": {
       "title": "Mohamed Amine Gharrab Projects",
-      "description": "Développeur web passionné spécialisé en UI/UX, React, et solutions modernes."
+      "description": "Development of modern SaaS and ERP solutions."
     },
     "subtitle": "A selection of my recent work in fullstack web development",
     "technologies": "Technologies",
@@ -145,7 +145,7 @@
       },
       "2": {
         "title": "Bakery SaaS",
-        "description": "A complete SaaS platform for bakeries, offering inventory management, online ordering, and sales analytics.",
+        "description": "A SaaS platform designed to help bakeries manage inventory, reduce stock loss, and track sales performance in real-time.",
         "technologies": [
           "React",
           "Node.js",
@@ -364,8 +364,8 @@
   },
   "contact": {
     "meta": {
-      "title": "M.A.G Fullstack Developer",
-      "description": "Développeur web passionné spécialisé en UI/UX, React, et solutions modernes."
+      "title": "Contact M.A.G",
+      "description": "SaaS & ERP Builder"
     },
     "title": "Contact",
     "subtitle": "Have a project or question? Feel free to contact me!",
@@ -396,9 +396,9 @@
   },
   "footer": {
     "title": "M.A.G",
-    "description": "Salesforce Consultant ☁️ with Full-Stack Developer background.\nPassionate about CRM solutions, cloud technologies, and modern web development.\nSpecialized in Salesforce, React, Node.js, and database management.",
+    "description": "SaaS & ERP Builder.\nSpecialized in cloud solutions, CRM systems, and modern web development.",
     "stayConnected": "Stay Connected",
-    "copyright": "© {{year}} Salesforce Consultant ☁️ | ☁️ & Full-Stack Developer\nM.A.G All rights reserved."
+    "copyright": "© {{year}} SaaS & ERP Builder\nM.A.G All rights reserved."
   },
   "theme": {
     "dark": "Dark Mode",

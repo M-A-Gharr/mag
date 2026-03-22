@@ -49,7 +49,7 @@ const ProjectsSection = () => {
       id: 1,
       icon: <Cpu className="h-8 w-8 text-[#483dfb]" />,
       link: "https://github.com/M-A-Gharr/visualforce-ai-doc-generator-ts",
-      demo: "https://github.com/M-A-Gharr/visualforce-ai-doc-generator-ts",
+      demo: "https://github.com/M-A-Gharr/visualforce-ai-doc-generator-ts", 
       images: []
     },
     {
