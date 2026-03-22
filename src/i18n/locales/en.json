@@ -161,12 +161,12 @@
           "Customer management"
         ],
         "captions": {
-          "0": "Login & Registration page mobile display",
-          "1": "Analytics dashboard in light mode with Arabic language support on mobile",
-          "2": "Sales graph and analytics, stock management alerts",
-          "3": "Inventory management in dark mode with French language support",
-          "4": "Advanced reporting and analytics tools",
-          "5": "Analytics dashboard in dark mode on desktop with account settings panel"
+          "0": "Login page for BakeryOS SaaS with secure authentication",
+          "1": "Stock Reception Overview showing incoming inventory and alerts",
+          "2": "Recipe Overview with ingredient management and preparation steps",
+          "3": "Product Overview dashboard with sales and product metrics",
+          "4": "POS Overview for seamless checkout and order management",
+          "5": "Inventory Overview with detailed stock levels and analytics"
         }
       },
       "3": {

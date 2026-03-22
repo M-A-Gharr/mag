@@ -157,12 +157,12 @@
           "Gestion des clients"
         ],
         "captions": {
-          "0": "Page de connexion et d'inscription sur affichage mobile",
-          "1": "Tableau de bord analytique en mode clair avec prise en charge de la langue arabe sur mobile",
-          "2": "Graphique des ventes avec analyses et alertes de gestion des stocks",
-          "3": "Gestion des stocks en mode sombre avec prise en charge du français",
-          "4": "Outils de rapports et d’analyses avancés",
-          "5": "Tableau de bord analytique en mode sombre sur bureau avec panneau des paramètres du compte"
+          "0": "Page de connexion de BakeryOS SaaS avec authentification sécurisée",
+          "1": "Aperçu de la réception des stocks montrant l'inventaire entrant et les alertes",
+          "2": "Aperçu des recettes avec gestion des ingrédients et étapes de préparation",
+          "3": "Tableau de bord des produits avec ventes et métriques des produits",
+          "4": "Aperçu du point de vente pour un paiement et une gestion des commandes fluides",
+          "5": "Aperçu de l'inventaire avec niveaux de stock détaillés et analyses"
         }
       },
       "3": {

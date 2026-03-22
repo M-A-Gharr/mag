@@ -157,12 +157,12 @@
           "Gestione clienti"
         ],
         "captions": {
-          "0": "Pagina di login e registrazione su mobile",
-          "1": "Dashboard di analisi in modalità chiara con supporto per la lingua araba su mobile",
-          "2": "Grafico e analisi delle vendite, avvisi di gestione delle scorte",
-          "3": "Gestione dell'inventario in modalità scura con supporto per la lingua francese",
-          "4": "Strumenti avanzati di reportistica e analisi",
-          "5": "Dashboard di analisi in modalità scura su desktop con pannello impostazioni account"
+          "0": "Pagina di accesso di BakeryOS SaaS con autenticazione sicura",
+          "1": "Panoramica della ricezione scorte che mostra l'inventario in arrivo e gli avvisi",
+          "2": "Panoramica delle ricette con gestione degli ingredienti e passaggi di preparazione",
+          "3": "Panoramica dei prodotti con vendite e metriche dei prodotti",
+          "4": "Panoramica del POS per pagamenti e gestione ordini senza problemi",
+          "5": "Panoramica dell'inventario con livelli di stock dettagliati e analisi"
         }
       },
       "3": {

@@ -57,7 +57,7 @@ const ProjectsSection = () => {
       icon: <ShoppingBag className="h-8 w-8 text-[#483dfb]" />,
       link: "#",
       demo: "#",
-      images: ["/images/bakerysaas/Screenshot1.png", "/images/bakerysaas/Screenshot2.png", "/images/bakerysaas/Screenshot3.png", "/images/bakerysaas/Screenshot4.png", "/images/bakerysaas/Screenshot5.png", "/images/bakerysaas/Screenshot6.png"],
+      images: ["/images/bakerysaas/BakeryOS login .png", "/images/bakerysaas/Bakery OS Stock Reception Overview.png", "/images/bakerysaas/Bakery OS Receipe Overview.png", "/images/bakerysaas/Bakery OS Product Overview.png", "/images/bakerysaas/Bakery OS POS Overview.png", "/images/bakerysaas/Bakery OS Inventory Overview.png"],
       captions: [t("projects.items.2.captions.0"), t("projects.items.2.captions.1"), t("projects.items.2.captions.2"), t("projects.items.2.captions.3"), t("projects.items.2.captions.4"), t("projects.items.2.captions.5")]
     },
     {

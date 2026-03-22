@@ -157,12 +157,12 @@
           "Gestión de clientes"
         ],
         "captions": {
-          "0": "Página de inicio de sesión y registro en móvil",
-          "1": "Panel de análisis en modo claro con soporte para árabe en móvil",
-          "2": "Gráfico y análisis de ventas, alertas de gestión de stock",
-          "3": "Gestión de inventario en modo oscuro con soporte en francés",
-          "4": "Herramientas avanzadas de reportes y análisis",
-          "5": "Panel de análisis en modo oscuro en escritorio con panel de configuración de cuenta"
+          "0": "Página de inicio de sesión de BakeryOS SaaS con autenticación segura",
+          "1": "Resumen de recepción de inventario mostrando entradas y alertas",
+          "2": "Resumen de recetas con gestión de ingredientes y pasos de preparación",
+          "3": "Resumen de productos con ventas y métricas de productos",
+          "4": "Resumen del punto de venta para pagos y gestión de pedidos sin problemas",
+          "5": "Resumen de inventario con niveles de stock detallados y análisis"
         }
       },
       "3": {
