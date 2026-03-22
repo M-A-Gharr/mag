@@ -23,18 +23,18 @@ const AboutSection = () => {
   const services = [
     {
       icon: <Code className="h-10 w-10 text-[#483dfb]" />,
-      title: t('about.services.web.title'),
-      description: t('about.services.web.desc')
+      title: t('about.services.saas.title'),
+      description: t('about.services.saas.desc')
     },
     {
       icon: <Layout className="h-10 w-10 text-[#483dfb]" />,
-      title: t('about.services.front.title'),
-      description: t('about.services.front.desc')
+      title: t('about.services.erp.title'),
+      description: t('about.services.erp.desc')
     },
     {
       icon: <Brush className="h-10 w-10 text-[#483dfb]" />,
-      title: t('about.services.ui.title'),
-      description: t('about.services.ui.desc')
+      title: t('about.services.automation.title'),
+      description: t('about.services.automation.desc')
     }
   ];
 

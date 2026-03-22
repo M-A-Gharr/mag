@@ -336,15 +336,17 @@
       "downloadStarted": "Téléchargement démarré",
       "downloadError": "Erreur lors du téléchargement",
       "servicesList": [
-        "Développement d'applications React/Next.js",
-        "Architecture backend avec Node.js",
-        "Création de sites e-commerce",
+        "Administration et configuration Salesforce",
+        "Développement Salesforce (Apex, LWC)",
+        "Intégration, migration Salesforce et implémentation ERP",
+        "Stratégie et implémentation CRM & ERP",
+        "Développement d’applications SaaS & ERP (React/Next.js)",
+        "Architecture backend & ERP avec Node.js",
+        "Développement de systèmes E-commerce & ERP",
         "Intégration et personnalisation WordPress",
-        "Optimisation SEO et performances",
-        "Développement d’applications ASP.NET [Bureau - Web]",
-        "Conception et gestion de bases de données",
-        "Optimisation des performances et de l’évolutivité",
-        "Conseil technique et planification de l’architecture"
+        "SEO et optimisation des performances",
+        "Conception de bases de données pour systèmes SaaS & ERP",
+        "Conseil technique et planification d’architecture ERP"
       ]
     }
   },

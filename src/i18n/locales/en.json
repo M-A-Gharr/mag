@@ -350,15 +350,15 @@
       "servicesList": [
         "Salesforce Administration & Configuration",
         "Salesforce Development (Apex, LWC)",
-        "Salesforce Integration & Migration",
-        "CRM Strategy & Implementation",
-        "React/Next.js Application Development",
-        "Backend Architecture with Node.js",
-        "E-commerce Website Development",
+        "Salesforce Integration, Migration & ERP Implementation",
+        "CRM & ERP Strategy and Implementation",
+        "SaaS & ERP Application Development (React/Next.js)",
+        "Backend & ERP Architecture with Node.js",
+        "E-commerce & ERP Systems Development",
         "WordPress Integration and Customization",
         "SEO and Performance Optimization",
-        "Database Design and Management",
-        "Technical Consulting and Architecture Planning"
+        "Database Design for SaaS & ERP Systems",
+        "Technical Consulting and ERP Architecture Planning"
       ]
     }
   },
