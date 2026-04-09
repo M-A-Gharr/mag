@@ -131,7 +131,7 @@ const SkillsSection = () => {
                     </div>
                     <div className="h-2 bg-secondary/50 rounded-full overflow-hidden">
                       <div
-                        className="h-full bg-[#483dfb] transition-all duration-300 ease-out hover:shadow-md"
+                        className="h-full bg-[#483dfb] transition-all duration-[1500ms] ease-out hover:shadow-md"
                         style={{
                           width: `${skill.level}%`,
                           animation: 'growWidth 1.5s ease-out'
