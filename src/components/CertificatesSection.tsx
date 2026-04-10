@@ -9,6 +9,8 @@ const CertificatesSection = () => {
   const { t } = useTranslation();
 
   const certificates = [
+    { name: 'SaaS Dev', color: 'bg-indigo-500' },
+    { name: 'ERP Builder', color: 'bg-violet-500' },
     { name: 'Salesforce Admin', color: 'bg-blue-500' },
     { name: 'Platform Developer I', color: 'bg-cyan-500' },
     { name: 'Sales Cloud', color: 'bg-green-500' },

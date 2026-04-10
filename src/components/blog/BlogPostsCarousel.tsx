@@ -76,6 +76,16 @@ const BlogPostsCarousel = () => {
       url: t(`bonus.blogPosts.4.url`),
       read: t('bonus.read'),
       close: t('bonus.close'),
+    },
+    {
+      id: 6,
+      title: t(`bonus.blogPosts.5.title`),
+      excerpt: t(`bonus.blogPosts.5.excerpt`),
+      content: t(`bonus.blogPosts.5.content`),
+      date: t(`bonus.blogPosts.5.date`),
+      url: t(`bonus.blogPosts.5.url`),
+      read: t('bonus.read'),
+      close: t('bonus.close'),
     }
   ];
 

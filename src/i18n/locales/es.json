@@ -79,9 +79,9 @@
       "emailsubject": "Solicitud de reserva",
       "emailbody": "Me gustaría reservar sus servicios",
       "availability": "Mi disponibilidad",
-      "consultation": "Consulta de diseño",
+      "consultation": "SaaS Dev",
       "consultdesc": "2-3 días",
-      "dev": "Proyecto de desarrollo",
+      "dev": "ERP Builder",
       "devdesc": "1-2 semanas",
       "techreview": "Revisión técnica",
       "techreviewtime": "24 horas",
@@ -101,7 +101,9 @@
     "wordpress": "Personalización de WordPress",
     "git": "Git y control de versiones",
     "curiosity": "Curiosidad y autoaprendizaje",
-    "multilingual": "Comunicación multilingüe"
+    "multilingual": "Comunicación multilingüe",
+    "saasDev": "SaaS Dev",
+    "erpBuilder": "ERP Builder"
   },
   "projects": {
     "title": "Proyectos",
@@ -326,6 +328,14 @@
         "content": "Salesforce Flow es una herramienta indispensable para automatizar procesos comerciales complejos sin necesidad de un código extenso. Esta guía cubre estrategias avanzadas de eficiencia y escalabilidad, desde flujos de pantalla para experiencias de usuario hasta flujos activados por registros. Profundice en las mejores prácticas para diseñar flujos robustos, la gestión de errores y la integración con sistemas externos. Aprenda a aprovechar los subflujos, las colecciones y las acciones invocables personalizadas para automatizaciones sofisticadas, reduciendo el esfuerzo manual y mejorando la precisión de los datos. Transforme la eficiencia operativa de su organización con Salesforce Flow.",
         "date": "2025-10-11",
         "url": "#blog-post-5"
+      },
+      {
+        "id": 6,
+        "title": "Guia SaaS Dev: de MVP a producto escalable",
+        "excerpt": "Una guia practica para construir un producto SaaS con arquitectura correcta, modelo de precios y metricas de crecimiento desde el inicio...",
+        "content": "Crear un producto SaaS exitoso no es solo lanzar funciones rapido. En este articulo cubrimos todo el ciclo SaaS: validar el problema, definir un MVP, elegir una arquitectura multi-tenant y configurar autenticacion y facturacion de forma segura.\n\nAprenderas a estructurar tu base de codigo para escalar, medir indicadores clave como MRR, churn y activacion, y priorizar el roadmap segun feedback real de clientes. El objetivo es lanzar rapido sin comprometer la escalabilidad.",
+        "date": "2026-04-10",
+        "url": "#blog-post-6"
       }
     ],
     "freelance": {

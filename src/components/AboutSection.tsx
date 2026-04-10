@@ -191,6 +191,12 @@ const AboutSection = () => {
 
               <div className="flex flex-wrap gap-3 mb-6">
                 <Badge variant="outline" className="bg-blue-950/30 hover:bg-blue-900/30 border-blue-800/30">
+                  <Code className="mr-1 h-3 w-3" /> SaaS Dev
+                </Badge>
+                <Badge variant="outline" className="bg-blue-950/30 hover:bg-blue-900/30 border-blue-800/30">
+                  <Database className="mr-1 h-3 w-3" /> ERP Builder
+                </Badge>
+                <Badge variant="outline" className="bg-blue-950/30 hover:bg-blue-900/30 border-blue-800/30">
                   <Code className="mr-1 h-3 w-3" /> React
                 </Badge>
                 <Badge variant="outline" className="bg-blue-950/30 hover:bg-blue-900/30 border-blue-800/30">

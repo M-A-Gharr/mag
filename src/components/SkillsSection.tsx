@@ -86,6 +86,8 @@ const SkillsSection = () => {
       name: t('skills.professional'),
       icon: <Lightbulb className="h-6 w-6 text-[#483dfb]" />,
       skills: [
+        { name: t('skills.saasDev'), level: 95 },
+        { name: t('skills.erpBuilder'), level: 92 },
         { name: t('skills.restApi'), level: 85 },
         { name: t('skills.seo'), level: 80 },
         { name: t('skills.wordpress'), level: 75 },

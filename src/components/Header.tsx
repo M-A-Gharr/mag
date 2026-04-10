@@ -78,7 +78,7 @@ const Header = () => {
         }`}
       dir={i18n.language === "ar" ? "rtl" : "ltr"}
     >
-      <div className="container mx-auto px-4 py-4 flex justify-between items-center">
+      <div className="container mx-auto px-2 lg:px-4 py-4 flex justify-between items-center">
         <Link
           to="hero"
           aria-label="Go to hero section"
@@ -86,7 +86,7 @@ const Header = () => {
           smooth={true}
           offset={-70}
           duration={500}
-          className="text-2xl font-bold text-gradient cursor-pointer"
+          className="text-xl lg:text-2xl font-bold text-gradient cursor-pointer"
         >
           <span className="logo-letter">M</span>
           <span className="logo-letter">.</span>
@@ -96,7 +96,7 @@ const Header = () => {
         </Link>
 
         {/* Desktop Nav */}
-        <nav role="navigation" className="hidden md:flex items-center space-x-8">
+        <nav role="navigation" className="hidden lg:flex items-center space-x-4 xl:space-x-8">
           {navLinks.map((link) => (
             <Link
               key={link.name}
@@ -106,7 +106,7 @@ const Header = () => {
               smooth={true}
               offset={-70}
               duration={500}
-              className="text-foreground hover:text-[#483dfb] transition-colors cursor-pointer"
+              className="text-sm xl:text-base text-foreground hover:text-[#483dfb] transition-colors cursor-pointer whitespace-nowrap"
             >
               {link.name}
             </Link>
@@ -118,7 +118,7 @@ const Header = () => {
         </nav>
 
         {/* Mobile menu button */}
-        <div className="flex items-center space-x-2 md:hidden">
+        <div className="flex items-center space-x-2 lg:hidden">
           <LanguageSwitcher />
           <ThemeSwitcher />
           <Button
@@ -133,7 +133,7 @@ const Header = () => {
 
         {/* Mobile menu */}
         {isOpen && (
-          <div className="absolute top-full left-0 right-0 bg-background/95 backdrop-blur-md shadow-lg md:hidden animate-fade-in">
+          <div className="absolute top-full left-0 right-0 bg-background/95 backdrop-blur-md shadow-lg lg:hidden animate-fade-in">
             <nav className="flex flex-col p-4">
               {navLinks.map((link) => (
                 <Link

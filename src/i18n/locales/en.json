@@ -79,9 +79,9 @@
       "emailsubject": "Booking Request",
       "emailbody": "I would like to book your services",
       "availability": "My Availability",
-      "consultation": "Design Consultation",
+      "consultation": "SaaS Dev",
       "consultdesc": "2-3 Days",
-      "dev": "Development Project",
+      "dev": "ERP Builder",
       "devdesc": "1-2 Weeks",
       "techreview": "Technical Review",
       "techreviewtime": "24 Hours",
@@ -105,7 +105,9 @@
     "wordpress": "WordPress Customization",
     "git": "Git & Version Control",
     "curiosity": "Curiosity & Self-Learning",
-    "multilingual": "Multilingual Communication"
+    "multilingual": "Multilingual Communication",
+    "saasDev": "SaaS Dev",
+    "erpBuilder": "ERP Builder"
   },
   "projects": {
     "title": "Projects",
@@ -338,6 +340,14 @@
         "content": "Salesforce Flow is an indispensable tool for automating complex business processes without extensive code. This guide covers advanced strategies for efficiency and scalability, from screen flows for user experiences to record-triggered flows. Dive into best practices for designing robust flows, error management, and integrating with external systems. Learn to leverage subflows, collections, and custom invocable actions for sophisticated automations, reducing manual effort and improving data accuracy. Transform your organization's operational efficiency with Salesforce Flow.",
         "date": "2025-10-11",
         "url": "#blog-post-5"
+      },
+      {
+        "id": 6,
+        "title": "SaaS Dev Playbook: From MVP to Scalable Product",
+        "excerpt": "A practical guide to build a SaaS product with the right architecture, pricing model, and growth metrics from day one...",
+        "content": "Building a successful SaaS product requires more than shipping features quickly. In this post, we cover the full SaaS lifecycle: validating the problem, defining an MVP scope, choosing a multi-tenant architecture, and setting up secure authentication and billing.\n\nYou will learn how to structure your codebase for long-term scalability, track key metrics like MRR, churn, and activation, and prioritize roadmap decisions based on customer feedback. The goal is to help you launch faster while creating a product that can scale reliably.",
+        "date": "2026-04-10",
+        "url": "#blog-post-6"
       }
     ],
     "freelance": {

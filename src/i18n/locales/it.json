@@ -79,9 +79,9 @@
       "emailsubject": "Richiesta di prenotazione",
       "emailbody": "Vorrei prenotare i tuoi servizi",
       "availability": "La mia disponibilità",
-      "consultation": "Consulenza di design",
+      "consultation": "SaaS Dev",
       "consultdesc": "2-3 giorni",
-      "dev": "Progetto di sviluppo",
+      "dev": "ERP Builder",
       "devdesc": "1-2 settimane",
       "techreview": "Revisione tecnica",
       "techreviewtime": "24 ore",
@@ -101,7 +101,9 @@
     "wordpress": "Personalizzazione WordPress",
     "git": "Git e controllo versione",
     "curiosity": "Curiosità e autoapprendimento",
-    "multilingual": "Comunicazione multilingue"
+    "multilingual": "Comunicazione multilingue",
+    "saasDev": "SaaS Dev",
+    "erpBuilder": "ERP Builder"
   },
   "projects": {
     "title": "Progetti",
@@ -326,6 +328,14 @@
         "content": "Salesforce Flow è uno strumento indispensabile per automatizzare processi aziendali complessi senza richiedere un codice esteso. Questa guida copre strategie avanzate per l'efficienza e la scalabilità, dai flow screen per le esperienze utente ai flow attivati da record. Approfondisci le migliori pratiche per la progettazione di flow robusti, la gestione degli errori e l'integrazione con sistemi esterni. Impara a sfruttare subflow, collezioni e azioni invocabili personalizzate per automazioni sofisticate, riducendo lo sforzo manuale e migliorando l'accuratezza dei dati. Trasforma l'efficienza operativa della tua organizzazione con Salesforce Flow.",
         "date": "2025-10-11",
         "url": "#blog-post-5"
+      },
+      {
+        "id": 6,
+        "title": "SaaS Dev Playbook: da MVP a prodotto scalabile",
+        "excerpt": "Una guida pratica per costruire un prodotto SaaS con architettura corretta, pricing e metriche di crescita fin dal primo giorno...",
+        "content": "Costruire un prodotto SaaS di successo non significa solo rilasciare funzionalita velocemente. In questo articolo copriamo l'intero ciclo SaaS: validare il problema, definire lo scope MVP, scegliere un'architettura multi-tenant e impostare autenticazione e billing in modo sicuro.\n\nImparerai come organizzare la codebase per la scalabilita, monitorare metriche chiave come MRR, churn e activation, e prioritizzare la roadmap in base al feedback clienti. L'obiettivo e lanciare rapidamente senza compromettere la crescita futura.",
+        "date": "2026-04-10",
+        "url": "#blog-post-6"
       }
     ],
     "freelance": {

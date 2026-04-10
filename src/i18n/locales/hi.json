@@ -79,9 +79,9 @@
       "emailsubject": "बुकिंग अनुरोध",
       "emailbody": "मैं आपकी सेवाओं को बुक करना चाहता हूँ",
       "availability": "मेरी उपलब्धता",
-      "consultation": "डिज़ाइन परामर्श",
+      "consultation": "SaaS Dev",
       "consultdesc": "2-3 दिन",
-      "dev": "डेवलपमेंट प्रोजेक्ट",
+      "dev": "ERP Builder",
       "devdesc": "1-2 सप्ताह",
       "techreview": "तकनीकी समीक्षा",
       "techreviewtime": "24 घंटे",
@@ -101,7 +101,9 @@
     "wordpress": "वर्डप्रेस अनुकूलन",
     "git": "Git और संस्करण नियंत्रण",
     "curiosity": "जिज्ञासा और आत्म-अध्ययन",
-    "multilingual": "बहुभाषी संचार"
+    "multilingual": "बहुभाषी संचार",
+    "saasDev": "SaaS Dev",
+    "erpBuilder": "ERP Builder"
   },
   "projects": {
     "title": "परियोजनाएँ",
@@ -326,6 +328,14 @@
         "content": "सेल्सफोर्स फ्लो व्यापक कोड के बिना जटिल व्यावसायिक प्रक्रियाओं को स्वचालित करने के लिए एक अनिवार्य उपकरण है। यह मार्गदर्शिका दक्षता और मापनीयता के लिए उन्नत रणनीतियों को शामिल करती है, उपयोगकर्ता अनुभवों के लिए स्क्रीन प्रवाह से लेकर रिकॉर्ड-ट्रिगर किए गए प्रवाह तक। मजबूत प्रवाह डिजाइन करने, त्रुटि प्रबंधन और बाहरी प्रणालियों के साथ एकीकृत करने के लिए सर्वोत्तम प्रथाओं में गोता लगाएँ। परिष्कृत स्वचालन के लिए उप-प्रवाह, संग्रह और कस्टम इनवोकेबल क्रियाओं का लाभ उठाना सीखें, मैन्युअल प्रयास को कम करें और डेटा सटीकता में सुधार करें। सेल्सफोर्स फ्लो के साथ अपने संगठन की परिचालन दक्षता को बदलें।",
         "date": "2025-10-11",
         "url": "#blog-post-5"
+      },
+      {
+        "id": 6,
+        "title": "SaaS Dev Playbook: MVP से scalable product तक",
+        "excerpt": "एक practical guide जिसमें SaaS product के लिए architecture, pricing model और growth metrics को day one से सही रखने की strategy दी गई है...",
+        "content": "एक सफल SaaS product बनाना सिर्फ जल्दी features ship करना नहीं है। इस पोस्ट में हम पूरा SaaS lifecycle कवर करते हैं: समस्या validation, MVP scope, multi-tenant architecture, और secure authentication तथा billing setup।\n\nआप सीखेंगे कि codebase को scalability के लिए कैसे organize करें, MRR, churn और activation जैसे metrics कैसे track करें, और customer feedback के आधार पर roadmap को कैसे prioritize करें। लक्ष्य है तेजी से launch करना और future scale के लिए मजबूत foundation बनाना।",
+        "date": "2026-04-10",
+        "url": "#blog-post-6"
       }
     ],
     "freelance": {
