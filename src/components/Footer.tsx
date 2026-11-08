@@ -2,6 +2,7 @@
 import { ArrowUp, Github, Linkedin, Mail } from 'lucide-react';
 import { Link } from 'react-scroll';
 import { useTranslation } from 'react-i18next';
+import { Reveal } from './motion';
 
 const Footer = () => {
   const { t } = useTranslation();
@@ -17,13 +18,13 @@ const Footer = () => {
             smooth={true}
             offset={-70}
             duration={800}
-            className="p-3 bg-[#483dfb] hover:bg-[#483dfb]-dark text-white rounded-full cursor-pointer transition-colors"
+            className="p-3 bg-[#483dfb] hover:bg-[#3e30fb] text-white rounded-full cursor-pointer shadow-lg shadow-[#483dfb]/25 transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-1"
           >
             <ArrowUp size={28} />
           </Link>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
+        <Reveal className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
           <div>
             <h3 className="text-2xl font-bold mb-4 text-gradient">{t('footer.title', 'Portfolio')}</h3>
             <p className="text-foreground/80 max-w-md whitespace-pre-line">
@@ -36,15 +37,15 @@ const Footer = () => {
             <div className="flex space-x-4">
               <a 
                 href="mailto:contact.maminegh@gmail.com" 
-                className="p-3 bg-secondary/50 hover:bg-[#483dfb]/80 text-foreground hover:text-white rounded-full transition-colors"
+                className="p-3 bg-secondary/50 hover:bg-[#483dfb]/80 text-foreground hover:text-white rounded-full transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-1"
               >
                 <Mail size={20} />
               </a>
               <a 
-                href="https://github.com" 
+                href="https://github.com/M-A-Gharr" 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className="p-3 bg-secondary/50 hover:bg-[#483dfb]/80 text-foreground hover:text-white rounded-full transition-colors"
+                className="p-3 bg-secondary/50 hover:bg-[#483dfb]/80 text-foreground hover:text-white rounded-full transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-1"
               >
                 <Github size={20} />
               </a>
@@ -52,13 +53,13 @@ const Footer = () => {
                 href="https://linkedin.com/in/m-amine-gharrab" 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className="p-3 bg-secondary/50 hover:bg-[#483dfb]/80 text-foreground hover:text-white rounded-full transition-colors"
+                className="p-3 bg-secondary/50 hover:bg-[#483dfb]/80 text-foreground hover:text-white rounded-full transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-1"
               >
                 <Linkedin size={20} />
               </a>
             </div>
           </div>
-        </div>
+        </Reveal>
         
         <div className="border-t border-secondary/50 pt-8 text-center text-foreground/60 text-sm">
           <p className="whitespace-pre-line">{t('footer.copyright', '© {{year}} Fullstack Developer Portfolio. All rights reserved.', { year: currentYear })}</p>

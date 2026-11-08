@@ -82,7 +82,7 @@ const Map = () => {
             />
             <button
               type="submit"
-              className="px-3 py-2 bg-[#483dfb] hover:bg-[#483dfb]-dark text-white rounded-md text-sm transition-colors"
+              className="px-3 py-2 bg-[#483dfb] hover:bg-[#3e30fb] text-white rounded-md text-sm transition-colors"
             >
               {t('map.submit', 'Submit')}
             </button>

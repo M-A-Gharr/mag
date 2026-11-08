@@ -192,6 +192,60 @@
   .section-subtitle {
     @apply text-xl md:text-2xl font-medium mb-6 text-foreground/80;
   }
+
+  /* Desktop nav: underline that draws in on hover and stays on the active section. */
+  .nav-link {
+    position: relative;
+  }
+  .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -6px;
+    height: 2px;
+    border-radius: 2px;
+    background: #483dfb;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .nav-link:hover::after,
+  .nav-link-active::after {
+    transform: scaleX(1);
+  }
+  .nav-link-active {
+    color: #483dfb;
+  }
+
+  /* Shared hover for cards: a short lift, a soft brand-tinted shadow, a tinted border. */
+  .card-lift {
+    transition:
+      transform 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+      box-shadow 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+      border-color 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+      background-color 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .card-lift:hover {
+    transform: translateY(-4px);
+    border-color: rgb(72 61 251 / 0.4);
+    box-shadow: 0 20px 40px -20px rgb(72 61 251 / 0.35);
+  }
+
+  /* Image inside a .card-lift slowly zooms on hover. */
+  .card-lift .zoom-on-hover {
+    transition: transform 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .card-lift:hover .zoom-on-hover {
+    transform: scale(1.04);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .card-lift:hover,
+    .card-lift:hover .zoom-on-hover {
+      transform: none;
+    }
+  }
 }
 
 /* --- M.A.G Floating Neon Animation --- */

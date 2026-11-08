@@ -4,13 +4,12 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Award, GraduationCap, Book, BookOpen } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
+import { Reveal, SectionHeading, Stagger, StaggerItem } from './motion';
 
 const CertificatesSection = () => {
   const { t } = useTranslation();
 
   const certificates = [
-    { name: 'SaaS Dev', color: 'bg-indigo-500' },
-    { name: 'ERP Builder', color: 'bg-violet-500' },
     { name: 'Salesforce Admin', color: 'bg-blue-500' },
     { name: 'Platform Developer I', color: 'bg-cyan-500' },
     { name: 'Sales Cloud', color: 'bg-green-500' },
@@ -35,21 +34,21 @@ const CertificatesSection = () => {
         <link rel="canonical" href="https://maminegh.com/certificates" />
       </Helmet>
       <section id="certificates" className="section-container">
-        <h2 className="section-title text-center transition-all duration-300 ease-in-out hover:bg-muted hover:shadow-md hover:scale-[1.01]">{t('certificates.title')}</h2>
-        <p className="section-subtitle text-center">{t('certificates.subtitle')}</p>
+        <SectionHeading title={t('certificates.title')} subtitle={t('certificates.subtitle')} />
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Education Section with 3 subsections */}
-          <div className="space-y-8">
+          <Stagger className="space-y-8" stagger={0.15}>
             {/* Main education */}
-            <Card className="overflow-hidden ">
-              <CardContent className="p-6 transition-all duration-300 ease-in-out hover:bg-muted hover:shadow-md hover:scale-[1.01] hover:border-l-4">
+            <StaggerItem>
+            <Card className="card-lift overflow-hidden">
+              <CardContent className="p-6">
                 <div className="flex items-center mb-4 ">
-                  <GraduationCap className="text-[#483dfb] mr-3 transition-all duration-300 ease-in-out hover:bg-muted hover:shadow-md hover:scale-[1.01] hover:border-l-4" size={28} />
+                  <GraduationCap className="text-[#483dfb] me-3" size={28} />
                   <h3 className="text-xl font-semibold">{t('certificates.education.title')}</h3>
                 </div>
 
-                <div className="mb-4 border-l-2 border-[#483dfb] pl-4 transition-all duration-300 ease-in-out hover:bg-muted hover:shadow-md hover:scale-[1.01] hover:border-l-4">
+                <div className="mb-4 border-s-2 border-[#483dfb] ps-4 transition-colors duration-500 hover:border-[#9b87f5]">
                   <h4 className="text-lg font-medium">{t('certificates.education.degree')}</h4>
                   <p className="text-muted-foreground">{t('certificates.education.university')}, {t('certificates.education.years')}</p>
                   <ul className="mt-2 space-y-1 text-sm">
@@ -61,21 +60,24 @@ const CertificatesSection = () => {
               </CardContent>
             </Card>
 
+            </StaggerItem>
+
             {/* Academic Background */}
-            <Card className="overflow-hidden">
-              <CardContent className="p-6 transition-all duration-300 ease-in-out hover:bg-muted hover:shadow-md hover:scale-[1.01] hover:border-l-4">
+            <StaggerItem>
+            <Card className="card-lift overflow-hidden">
+              <CardContent className="p-6">
                 <div className="flex items-center mb-4">
-                  <Book className="text-[#483dfb] mr-3 transition-all duration-300 ease-in-out hover:bg-muted hover:shadow-md hover:scale-[1.01] hover:border-l-4" size={28} />
+                  <Book className="text-[#483dfb] me-3" size={28} />
                   <h3 className="text-xl font-semibold">{t('certificates.academic.title')}</h3>
                 </div>
 
-                <div className="mb-4 border-l-2 border-[#483dfb] pl-4 transition-all duration-300 ease-in-out hover:bg-muted hover:shadow-md hover:scale-[1.01] hover:border-l-4">
+                <div className="mb-4 border-s-2 border-[#483dfb] ps-4 transition-colors duration-500 hover:border-[#9b87f5]">
                   <h4 className="text-lg font-medium">{t('certificates.academic.bachelor')}</h4>
                   <p className="text-muted-foreground">{t('certificates.academic.bachelorYears')}</p>
                   <p className="mt-1 text-sm">{t('certificates.academic.bachelorDesc')}</p>
                 </div>
 
-                <div className="mb-4 border-l-2 border-[#483dfb] pl-4 transition-all duration-300 ease-in-out hover:bg-muted hover:shadow-md hover:scale-[1.01] hover:border-l-4">
+                <div className="mb-4 border-s-2 border-[#483dfb] ps-4 transition-colors duration-500 hover:border-[#9b87f5]">
                   <h4 className="text-lg font-medium">{t('certificates.academic.hnd')}</h4>
                   <p className="text-muted-foreground">{t('certificates.academic.hndYears')}</p>
                   <p className="mt-1 text-sm">{t('certificates.academic.hndDesc')}</p>
@@ -83,53 +85,57 @@ const CertificatesSection = () => {
               </CardContent>
             </Card>
 
+            </StaggerItem>
+
             {/* Continuous Learning */}
-            <Card className="overflow-hidden">
-              <CardContent className="p-6 transition-all duration-300 ease-in-out hover:bg-muted hover:shadow-md hover:scale-[1.01] hover:border-l-4">
+            <StaggerItem>
+            <Card className="card-lift overflow-hidden">
+              <CardContent className="p-6">
                 <div className="flex items-center mb-4">
-                  <BookOpen className="text-[#483dfb] mr-3 transition-all duration-300 ease-in-out hover:bg-muted hover:shadow-md hover:scale-[1.01] hover:border-l-4" size={28} />
+                  <BookOpen className="text-[#483dfb] me-3" size={28} />
                   <h3 className="text-xl font-semibold">{t('certificates.continuous.title')}</h3>
                 </div>
 
-                <div className="border-l-2 border-[#483dfb] pl-4 transition-all duration-300 ease-in-out hover:bg-muted hover:shadow-md hover:scale-[1.01] hover:border-l-4">
+                <div className="border-s-2 border-[#483dfb] ps-4 transition-colors duration-500 hover:border-[#9b87f5]">
                   <h4 className="text-lg font-medium">{t('certificates.continuous.online')}</h4>
                   <p className="text-muted-foreground">{t('certificates.continuous.onlineYears')}</p>
                   <p className="mt-1 text-sm">{t('certificates.continuous.onlineDesc')}</p>
                 </div>
               </CardContent>
             </Card>
-          </div>
+            </StaggerItem>
+          </Stagger>
 
           {/* Certificates */}
-          <div>
+          <Reveal delay={0.15}>
             <Card className="h-full">
               <CardContent className="p-6">
                 <div className="flex items-center mb-6">
-                  <Award className="text-[#483dfb] mr-3 transition-all duration-300 ease-in-out hover:bg-muted hover:shadow-md hover:scale-[1.01] hover:border-l-4" size={28} />
+                  <Award className="text-[#483dfb] me-3" size={28} />
                   <div>
                     <h3 className="text-xl font-semibold">{t('certificates.sub')}</h3>
                     <p className="text-sm text-muted-foreground mt-1">{t('certificates.salesforceCerts')}</p>
                   </div>
                 </div>
 
-                <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                <Stagger className="grid grid-cols-2 sm:grid-cols-3 gap-4" stagger={0.06} delay={0.2}>
                   {certificates.map((cert, index) => (
+                    <StaggerItem key={index}>
                     <div
-                      key={index}
-                      className="bg-secondary/20 rounded-lg p-4 flex flex-col items-center justify-center text-center 
-                hover:shadow-lg hover:scale-105 hover:bg-secondary/30 transition-all duration-300 ease-in-out"
+                      className="card-lift group h-full bg-secondary/20 border border-transparent rounded-lg p-4 flex flex-col items-center justify-center text-center hover:bg-secondary/30"
                     >
-                      <div className={`w-12 h-12 rounded-full mb-3 flex items-center justify-center ${cert.color}`}>
+                      <div className={`w-12 h-12 rounded-full mb-3 flex items-center justify-center transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-110 group-hover:rotate-[8deg] ${cert.color}`}>
                         <Award className="text-white" size={24} />
                       </div>
                       <h4 className="font-medium">{cert.name}</h4>
                       <Badge variant="outline" className="mt-2">Certified</Badge>
                     </div>
+                    </StaggerItem>
                   ))}
-                </div>
+                </Stagger>
               </CardContent>
             </Card>
-          </div>
+          </Reveal>
         </div>
       </section>
     </>

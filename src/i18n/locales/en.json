@@ -9,13 +9,13 @@
   },
   "hero": {
     "meta": {
-      "title": "SaaS & ERP Builder 🚀",
-      "description": "I design and build SaaS platforms and ERP systems that help businesses automate operations and increase profitability."
+      "title": "Mohamed Amine Gharrab · Full-Stack Developer | AI Automation | E-commerce",
+      "description": "Full-Stack Developer specializing in web applications, AI-powered automation, e-commerce and digital transformation."
     },
-    "title": "SaaS & ERP Builder 🚀",
-    "subtitle": "From idea to production — I create ERP and SaaS platforms that solve real business problems.",
+    "title": "Full-Stack Developer\n& AI Automation 🚀",
+    "subtitle": "I build web applications, AI-powered automations and e-commerce platforms that streamline business workflows.",
     "cta": {
-      "discover": "Build your SaaS with me",
+      "discover": "Work with me",
       "projects": "See my projects"
     },
     "quote": "Code. Create. Connect."
@@ -24,51 +24,65 @@
     "title": "About",
     "meta": {
       "title": "About Mohamed Amine Gharrab",
-      "description": "I design and build SaaS platforms and ERP systems that help businesses automate operations and increase profitability."
+      "description": "Full-Stack Developer specializing in web applications, AI-powered automation, e-commerce and digital transformation."
     },
     "resume": {
       "title": "My Journey",
-      "current": "2024 - 2026",
-      "currentRole": "Salesforce Consultant ☁️ ",
-      "currentDesc": "Transitioning to Salesforce ecosystem while leveraging full-stack development expertise. Learning Salesforce administration, development, and CRM solutions.",
-      "beforecurrent": "2022 - 2024",
-      "beforecurrentRole": "Full-Stack Developer",
-      "beforecurrentDesc": "Design and development of web applications with modern technologies.",
-      "previous": "2020 - 2022",
-      "previousRole": "Front-end Developer",
-      "previousDesc": "Creation of responsive user interfaces with HTML, CSS and JavaScript.",
-      "education": "2018 - 2020",
-      "educationRole": "Web Developer Training",
-      "educationDesc": "Learning web development fundamentals and best practices."
+      "items": [
+        {
+          "period": "2026 – Present",
+          "role": "Full-Stack Developer & Digital Solutions",
+          "company": "SIMTIS · Casablanca",
+          "desc": "Built SoftTech Lead Intelligence, a CRM-integrated lead generation and qualification app. Led the group-wide Claude AI training program. Developed and maintain PrestaShop and WordPress e-commerce sites, and took a PrestaShop site from page 10 to page 1 on Google in all 3 of its languages."
+        },
+        {
+          "period": "Personal project",
+          "role": "Founder",
+          "company": "M.A.G Store (Shopify)",
+          "desc": "Built and run a Shopify store focused on home comfort (cocooning), with delivery across Morocco and cash on delivery. Designed the brand identity (logo, positioning)."
+        },
+        {
+          "period": "Oct – Dec 2024",
+          "role": "Full-Stack Developer",
+          "company": "SaaS Inventory Platform · Casablanca",
+          "desc": "Developed an inventory, order and sales management platform with dashboards and automated alerts (React.js, Node.js, Vite, PostgreSQL)."
+        },
+        {
+          "period": "Aug – Sep 2024",
+          "role": "Web Developer",
+          "company": "Responsive Business Website · Casablanca",
+          "desc": "Developed a multilingual, responsive website with analytics and social media integrations."
+        }
+      ]
     },
     "goals": {
       "title": "My Goals",
       "expertise": {
-        "title": "Technical Expertise",
-        "desc": "Deepen knowledge of modern frameworks and advanced architectures."
+        "title": "AI-first development",
+        "desc": "Keep integrating generative AI and automation into the products and processes I build."
       },
       "innovation": {
-        "title": "Innovation",
-        "desc": "Stay at the forefront of new technologies and methodologies."
+        "title": "Measurable business impact",
+        "desc": "Ship tools that save teams time and drive results: lead intelligence, automation, SEO."
       },
       "impact": {
-        "title": "User Impact",
-        "desc": "Design intuitive and accessible user experiences."
+        "title": "Helping teams adopt AI",
+        "desc": "Help teams adopt generative AI through training, hands-on workshops and custom Skills."
       }
     },
     "services": {
       "title": "What I Build",
-      "saas": {
-        "title": "SaaS Development",
-        "desc": "End-to-end SaaS platforms from idea to production with scalable architecture."
+      "webapps": {
+        "title": "Full-Stack Web Apps",
+        "desc": "Custom platforms and business applications built with React, Node.js and ASP.NET, integrated with your CRM and data."
       },
-      "erp": {
-        "title": "ERP Systems",
-        "desc": "Custom ERP solutions to manage operations, inventory, and business workflows."
+      "ai": {
+        "title": "AI Automation",
+        "desc": "Automation workflows, AI content generation and custom Claude Skills, plus team training to adopt generative AI."
       },
-      "automation": {
-        "title": "Business Automation",
-        "desc": "Automating repetitive processes to save time and reduce operational costs."
+      "ecommerce": {
+        "title": "E-commerce & SEO",
+        "desc": "PrestaShop, WordPress and Shopify stores: custom modules, UX improvements and SEO that ranks."
       }
     },
     "book": {
@@ -79,10 +93,10 @@
       "emailsubject": "Booking Request",
       "emailbody": "I would like to book your services",
       "availability": "My Availability",
-      "consultation": "SaaS Dev",
-      "consultdesc": "2-3 Days",
-      "dev": "ERP Builder",
-      "devdesc": "1-2 Weeks",
+      "consultation": "AI Automation",
+      "consultdesc": "3-5 Days",
+      "dev": "Web App / E-commerce",
+      "devdesc": "1-3 Weeks",
       "techreview": "Technical Review",
       "techreviewtime": "24 Hours",
       "responsetime": "Response time: Usually within 24 hours"
@@ -92,30 +106,34 @@
     "title": "Skills",
     "meta": {
       "title": "Mohamed Amine Gharrab Skills",
-      "description": "SaaS & ERP builder with a full-stack background, specialized in building business systems, automation tools, and scalable cloud solutions."
+      "description": "Full-Stack Developer specializing in web applications, AI-powered automation, e-commerce and digital transformation."
     },
-    "salesforce": "Salesforce",
+    "languages": "Languages",
     "frontend": "Frontend",
-    "backend": "Backend",
-    "tools": "Tools",
-    "other": "UI/UX & Others",
+    "backend": "Backend & Databases",
+    "ecommerce": "E-commerce & CMS",
+    "ai": "AI & Automation",
     "professional": "Professional Skills",
     "restApi": "RESTful API Development",
-    "seo": "SEO Best Practices",
-    "wordpress": "WordPress Customization",
-    "git": "Git & Version Control",
+    "seo": "SEO (multilingual)",
+    "crm": "CRM Integration",
+    "leadIntel": "Lead Intelligence",
+    "processAutomation": "Business Process Automation",
+    "aiTraining": "AI Training & Team Enablement",
     "curiosity": "Curiosity & Self-Learning",
     "multilingual": "Multilingual Communication",
-    "saasDev": "SaaS Dev",
-    "erpBuilder": "ERP Builder"
+    "workflow": "Workflow Automation",
+    "contentGen": "AI Content Generation",
+    "responsive": "Responsive Design",
+    "constellationHint": "Hover a skill to see what it connects to."
   },
   "projects": {
     "title": "Projects",
     "meta": {
       "title": "Mohamed Amine Gharrab Projects",
-      "description": "Development of modern SaaS and ERP solutions."
+      "description": "Full-Stack Developer specializing in web applications, AI-powered automation, e-commerce and digital transformation."
     },
-    "subtitle": "A selection of my recent work in fullstack web development",
+    "subtitle": "A selection of my recent work: business applications, AI automation and e-commerce",
     "technologies": "Technologies",
     "features": "Features",
     "items": {
@@ -232,14 +250,85 @@
           "Secure payment gateway",
           "Order management"
         ]
+      },
+      "6": {
+        "title": "SoftTech Lead Intelligence (SLI)",
+        "description": "A lead generation and qualification application integrated with the CRM, built at SIMTIS to identify prospects and contacts and track the sales teams’ daily activity.",
+        "technologies": [
+          "React.js",
+          "Node.js",
+          "CRM Integration",
+          "Lead Intelligence"
+        ],
+        "features": [
+          "Prospect identification and qualification",
+          "Contact discovery for target accounts",
+          "Integration with the company CRM",
+          "Daily activity tracking for sales teams"
+        ]
+      },
+      "7": {
+        "title": "Group-wide Claude AI Training",
+        "description": "Designed and led the generative AI training program across the group, from a needs assessment of each department to custom Claude Skills tailored to their work.",
+        "technologies": [
+          "Claude",
+          "Claude Skills",
+          "Generative AI",
+          "Training"
+        ],
+        "features": [
+          "Needs assessment for each department",
+          "Shared sessions for the whole group",
+          "Department-specific workshops",
+          "Custom Skills created for each department"
+        ]
+      },
+      "8": {
+        "title": "Multilingual SEO for PrestaShop",
+        "description": "Led the SEO optimization of a PrestaShop e-commerce website with limited resources, from page 10 of Google to page 1 in all of its languages.",
+        "technologies": [
+          "PrestaShop",
+          "SEO",
+          "Multilingual SEO",
+          "UX"
+        ],
+        "features": [
+          "From page 10 to page 1 of Google in French",
+          "Page 1 in all 3 of the site’s languages",
+          "Custom modules and new features",
+          "Ongoing SEO work and support"
+        ]
+      },
+      "9": {
+        "title": "M.A.G Store",
+        "description": "My own Shopify store focused on home comfort (cocooning), with delivery across Morocco and cash on delivery. I built the store and created the brand identity.",
+        "technologies": [
+          "Shopify",
+          "E-commerce",
+          "Branding"
+        ],
+        "features": [
+          "Shopify store built and maintained",
+          "Delivery across Morocco",
+          "Cash on delivery",
+          "Brand identity: logo and positioning"
+        ]
       }
-    }
+    },
+    "swipeHint": "Drag the top card to see the next screenshot, or click it to enlarge.",
+    "prev": "Previous project",
+    "next": "Next project",
+    "goTo": "Go to project {{n}}: {{title}}",
+    "viewScreenshots": "Project screenshots",
+    "carouselHint": "Drag, swipe or use the arrows to browse the projects. Click the centre card to see its screenshots.",
+    "code": "Source code",
+    "demo": "Live demo"
   },
   "certificates": {
     "title": "Certificates & Education",
     "meta": {
       "title": "Mohamed Amine Gharrab Certificates",
-      "description": "Développeur web passionné spécialisé en UI/UX, React, et solutions modernes."
+      "description": "Mohamed Amine Gharrab’s education and certificates: information systems engineering, cybersecurity and cloud computing."
     },
     "subtitle": "My qualifications and certificates in web development",
     "sub": "Certificates",
@@ -272,7 +361,7 @@
   "bonus": {
     "meta": {
       "title": "Mohamed Amine Gharrab Professional Bonus",
-      "description": "Développeur web passionné spécialisé en UI/UX, React, et solutions modernes."
+      "description": "Testimonials, tech blog and freelance availability of Mohamed Amine Gharrab, Full-Stack Developer."
     },
     "sectionTitle": "Professional Bonus",
     "testimonials": "Testimonials",
@@ -358,24 +447,22 @@
       "downloadStarted": "Download started",
       "downloadError": "Download error",
       "servicesList": [
-        "Salesforce Administration & Configuration",
-        "Salesforce Development (Apex, LWC)",
-        "Salesforce Integration, Migration & ERP Implementation",
-        "CRM & ERP Strategy and Implementation",
-        "SaaS & ERP Application Development (React/Next.js)",
-        "Backend & ERP Architecture with Node.js",
-        "E-commerce & ERP Systems Development",
-        "WordPress Integration and Customization",
-        "SEO and Performance Optimization",
-        "Database Design for SaaS & ERP Systems",
-        "Technical Consulting and ERP Architecture Planning"
+        "Full-stack web application development (React, Node.js)",
+        "CRM integration and lead intelligence tools",
+        "AI automation workflows (Make, Claude)",
+        "Generative AI training and custom Claude Skills",
+        "E-commerce development (PrestaShop, WordPress, Shopify)",
+        "Custom PrestaShop and WordPress modules",
+        "SEO and multilingual SEO optimization",
+        "Theme customization and UX improvements",
+        "Business process automation"
       ]
     }
   },
   "contact": {
     "meta": {
       "title": "Contact M.A.G",
-      "description": "SaaS & ERP Builder"
+      "description": "Full-Stack Developer | AI Automation | E-commerce"
     },
     "title": "Contact",
     "subtitle": "Have a project or question? Feel free to contact me!",
@@ -386,16 +473,21 @@
       "message": "Message",
       "submit": "Send message",
       "sending": "Sending...",
-      "success": "Thank you for your message! I will reply as soon as possible."
+      "success": "Thank you for your message! I will reply as soon as possible.",
+      "sent": "Message sent!",
+      "error": "Something went wrong and your message wasn’t sent. Please try again, or email me directly.",
+      "characters": "{{count}} of {{max}} characters"
     },
     "info": {
       "title": "Contact information",
       "address": "Address",
-      "addressValue": "Dubai, UAE",
+      "addressValue": "Casablanca, Morocco",
       "phone": "Phone",
       "email": "Email",
       "linkedin": "LinkedIn",
-      "youtube": "YouTube"
+      "youtube": "YouTube",
+      "copied": "Copied!",
+      "copyEmail": "Click to copy the email address"
     }
   },
   "map": {
@@ -406,9 +498,9 @@
   },
   "footer": {
     "title": "M.A.G",
-    "description": "SaaS & ERP Builder.\nSpecialized in cloud solutions, CRM systems, and modern web development.",
+    "description": "Full-Stack Developer | AI Automation | E-commerce.\nWeb applications, CRM integration and AI-powered workflows.",
     "stayConnected": "Stay Connected",
-    "copyright": "© {{year}} SaaS & ERP Builder\nM.A.G All rights reserved."
+    "copyright": "© {{year}} M.A.G · Full-Stack Developer\nAll rights reserved."
   },
   "theme": {
     "dark": "Dark Mode",
