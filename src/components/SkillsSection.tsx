@@ -2,7 +2,6 @@
 import { useTranslation } from 'react-i18next';
 import { Badge } from '@/components/ui/badge';
 import { Code, Database, Layout, Lightbulb, ShoppingCart, Bot } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
 import { useEffect, useRef, useState } from 'react';
 import { animate, motion, useInView, useReducedMotion } from 'framer-motion';
 import SkillConstellation from './SkillConstellation';
@@ -179,15 +178,6 @@ const SkillsSection = () => {
 
   return (
     <>
-      <Helmet>
-        <title>{t('skills.meta.title')}</title>
-        <meta name="description" content={t('skills.meta.description')} />
-        <meta property="og:title" content={t('skills.meta.title')} />
-        <meta property="og:description" content={t('skills.meta.description')} />
-        <meta property="og:image" content="https://maminegh.com/images/profile/magprofile.png" />
-        <meta property="og:type" content="website" />
-        <link rel="canonical" href="https://maminegh.com/skills" />
-      </Helmet>
       <section id="skills" className="section-container">
         <SectionHeading title={t('skills.title')} />
 

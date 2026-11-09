@@ -13,6 +13,8 @@ import { EASE_OUT, Reveal, SectionHeading, Stagger, StaggerItem } from './motion
 import type { CrumpleCarouselHandle } from './CrumpleCardCarousel';
 import { useProjectCovers, type CoverInput } from './projectCovers';
 import ProjectVideo, { type ProjectVideoHandle } from './ProjectVideo';
+import { scroller } from 'react-scroll';
+import { SHOW_PROJECT_EVENT } from '@/lib/events';
 
 // three.js is only downloaded when the projects section renders.
 const CrumpleCardCarousel = lazy(() => import('./CrumpleCardCarousel'));
@@ -156,7 +158,7 @@ const ProjectsSection = () => {
       icon: <ShoppingBag className="h-8 w-8 text-[#483dfb]" />,
       link: "#",
       demo: "#",
-      images: ["/images/bakerysaas/BakeryOS login .png", "/images/bakerysaas/Bakery OS Stock Reception Overview.png", "/images/bakerysaas/Bakery OS Receipe Overview.png", "/images/bakerysaas/Bakery OS Product Overview.png", "/images/bakerysaas/Bakery OS POS Overview.png", "/images/bakerysaas/Bakery OS Inventory Overview.png"],
+      images: ["/images/bakerysaas/login.webp", "/images/bakerysaas/stock-reception.webp", "/images/bakerysaas/recipes.webp", "/images/bakerysaas/products.webp", "/images/bakerysaas/pos.webp", "/images/bakerysaas/inventory.webp"],
       captions: [t("projects.items.2.captions.0"), t("projects.items.2.captions.1"), t("projects.items.2.captions.2"), t("projects.items.2.captions.3"), t("projects.items.2.captions.4"), t("projects.items.2.captions.5")]
     },
     {
@@ -180,6 +182,22 @@ const ProjectsSection = () => {
     };
   });
   const covers = useProjectCovers(coverInputs, i18n.language);
+
+  // "See the project" in a case study: scroll up here and bring that project to the front.
+  const goToRef = useRef(goTo);
+  goToRef.current = goTo;
+  useEffect(() => {
+    const onShow = (e: Event) => {
+      const id = (e as CustomEvent<{ id: number }>).detail?.id;
+      const i = projects.findIndex((p) => p.id === id);
+      if (i < 0) return;
+      scroller.scrollTo('projects', { smooth: 'easeInOutQuart', duration: 900, offset: -70 });
+      goToRef.current(i);
+    };
+    window.addEventListener(SHOW_PROJECT_EVENT, onShow);
+    return () => window.removeEventListener(SHOW_PROJECT_EVENT, onShow);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <section id="projects" className="section-container">

@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { ArrowDown } from 'lucide-react';
 import { Link } from 'react-scroll';
 import { useTranslation } from 'react-i18next';
@@ -34,6 +34,17 @@ const HeroSection = () => {
 
   const titleLines = t('hero.title').split('\n');
 
+  // Same breakpoint as Tailwind's "sm": phones get the still image instead of the video.
+  const [wideScreen, setWideScreen] = useState(
+    () => typeof window !== 'undefined' && window.matchMedia('(min-width: 640px)').matches
+  );
+  useEffect(() => {
+    const mq = window.matchMedia('(min-width: 640px)');
+    const onChange = () => setWideScreen(mq.matches);
+    mq.addEventListener('change', onChange);
+    return () => mq.removeEventListener('change', onChange);
+  }, []);
+
   return (
     <header ref={ref} id="hero" className="relative min-h-screen flex items-center justify-center py-20 overflow-hidden">
       <motion.div
@@ -43,15 +54,19 @@ const HeroSection = () => {
         animate={{ opacity: 1 }}
         transition={{ duration: 1.6, ease: 'easeOut' }}
       >
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          className="absolute inset-0 w-full h-full object-cover hidden sm:block"
-        >
-          <source src="/videos/intro.webm" type="video/webm" />
-        </video>
+        {/* Only mounted from 640px: a hidden <video> would still be downloaded on phones */}
+        {wideScreen && (
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="auto"
+            className="absolute inset-0 w-full h-full object-cover"
+          >
+            <source src="/videos/intro.webm" type="video/webm" />
+          </video>
+        )}
 
         {/* Fallback image for mobile */}
         <div

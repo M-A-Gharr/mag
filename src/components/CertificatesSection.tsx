@@ -3,7 +3,6 @@ import { useTranslation } from 'react-i18next';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Award, GraduationCap, Book, BookOpen } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
 import { motion, type Variants } from 'framer-motion';
 import type { PointerEvent } from 'react';
 import { EASE_OUT, Reveal, SectionHeading } from './motion';
@@ -120,15 +119,6 @@ const CertificatesSection = () => {
 
   return (
     <>
-      <Helmet>
-        <title>{t('certificates.meta.title')}</title>
-        <meta name="description" content={t('certificates.meta.description')} />
-        <meta property="og:title" content={t('certificates.meta.title')} />
-        <meta property="og:description" content={t('certificates.meta.description')} />
-        <meta property="og:image" content="https://maminegh.com/images/profile/magprofile.png" />
-        <meta property="og:type" content="website" />
-        <link rel="canonical" href="https://maminegh.com/certificates" />
-      </Helmet>
       <section id="certificates" className="section-container overflow-x-clip">
         <SectionHeading title={t('certificates.title')} subtitle={t('certificates.subtitle')} />
 
