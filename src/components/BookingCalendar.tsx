@@ -188,7 +188,7 @@ const BookingCalendar = () => {
   const stepIndex = { slot: 0, details: 1, done: 2 }[step];
 
   return (
-    <div className="relative overflow-hidden rounded-2xl border border-secondary/20 bg-secondary/20 p-4 sm:p-6 md:p-8">
+    <div className="relative overflow-hidden rounded-2xl border border-secondary/20 bg-secondary/20 p-3 sm:p-6 md:p-8">
       <div aria-hidden className="pointer-events-none absolute -top-24 end-0 h-56 w-56 rounded-full bg-[#9b87f5]/15 blur-3xl" />
 
       {/* Header and progress */}
@@ -260,7 +260,8 @@ const BookingCalendar = () => {
             {/* 2. Day and time */}
             <p className="mb-3 text-sm font-medium">{t('about.book.cal.chooseSlot')}</p>
             <div className="grid gap-6 md:grid-cols-[auto_1fr]">
-              <div className="mx-auto w-fit rounded-xl border border-border bg-background/60" dir={rtl ? 'rtl' : 'ltr'}>
+              {/* Fluid on phones (the days share the width), natural size from md */}
+              <div className="w-full rounded-xl border border-border bg-background/60 md:mx-auto md:w-fit" dir={rtl ? 'rtl' : 'ltr'}>
                 <Calendar
                   mode="single"
                   selected={day}
@@ -274,7 +275,16 @@ const BookingCalendar = () => {
                   toDate={lastDay}
                   showOutsideDays={false}
                   disabled={(d) => d < today || d > lastDay || slotsFor(d).length === 0}
+                  className="p-2 sm:p-3"
                   classNames={{
+                    months: 'flex w-full flex-col',
+                    month: 'w-full space-y-4',
+                    table: 'w-full border-collapse',
+                    head_row: 'flex w-full',
+                    head_cell: 'flex-1 rounded-md text-[0.8rem] font-normal text-muted-foreground md:w-9 md:flex-none',
+                    row: 'mt-2 flex w-full',
+                    cell: 'relative flex-1 p-0 text-center text-sm focus-within:relative focus-within:z-20 md:w-9 md:flex-none',
+                    day: 'inline-flex h-9 w-full max-w-[2.75rem] items-center justify-center rounded-md p-0 text-sm font-normal transition-colors hover:bg-accent hover:text-accent-foreground aria-selected:opacity-100 md:w-9',
                     nav_button_previous: 'absolute start-1',
                     nav_button_next: 'absolute end-1',
                     day_selected:
