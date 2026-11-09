@@ -15,6 +15,8 @@ const Footer = () => {
         <div className="flex justify-center mb-10">
           <Link
             to="hero"
+            href="#hero"
+            aria-label="Back to top"
             spy={true}
             smooth={true}
             offset={-70}
@@ -37,13 +39,15 @@ const Footer = () => {
             <h3 className="text-xl font-semibold mb-4">{t('footer.stayConnected', 'Stay Connected')}</h3>
             <div className="flex space-x-4">
               <a 
-                href="mailto:contact.maminegh@gmail.com" 
+                href="mailto:contact.maminegh@gmail.com"
+                aria-label="Email"
                 className="p-3 bg-secondary/50 hover:bg-[#483dfb]/80 text-foreground hover:text-white rounded-full transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-1"
               >
                 <Mail size={20} />
               </a>
               <a 
-                href="https://github.com/M-A-Gharr" 
+                href="https://github.com/M-A-Gharr"
+                aria-label="GitHub"
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="p-3 bg-secondary/50 hover:bg-[#483dfb]/80 text-foreground hover:text-white rounded-full transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-1"
@@ -51,7 +55,8 @@ const Footer = () => {
                 <Github size={20} />
               </a>
               <a 
-                href="https://linkedin.com/in/m-amine-gharrab" 
+                href="https://linkedin.com/in/m-amine-gharrab"
+                aria-label="LinkedIn"
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="p-3 bg-secondary/50 hover:bg-[#483dfb]/80 text-foreground hover:text-white rounded-full transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-1"

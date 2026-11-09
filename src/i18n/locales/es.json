@@ -4,7 +4,7 @@
     "skills": "Habilidades",
     "projects": "Proyectos",
     "certificates": "Certificados",
-    "bonus": "Bono profesional",
+    "bonus": "Referencias",
     "contact": "Contacto",
     "menu": "Menú",
     "close": "Cerrar",
@@ -434,7 +434,7 @@
     }
   },
   "bonus": {
-    "sectionTitle": "Bono profesional",
+    "sectionTitle": "Referencias y disponibilidad",
     "testimonials": "Testimonios",
     "caseStudies": {
       "title": "Casos de estudio",
@@ -606,5 +606,11 @@
     "light": "Modo claro",
     "toggleDark": "Cambiar a modo oscuro",
     "toggleLight": "Cambiar a modo claro"
+  },
+  "notFound": {
+    "title": "Esta página no existe",
+    "desc": "Puede que el enlace esté roto o que la página se haya movido.",
+    "back": "Volver al portafolio",
+    "contact": "Escríbeme"
   }
 }

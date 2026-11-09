@@ -22,6 +22,13 @@ const fadeUp: Variants = {
   show: { opacity: 1, y: 0, filter: 'blur(0px)', transition: { duration: 0.9, ease: EASE_OUT } },
 };
 
+// The subtitle is the page's largest text (what Google times as "largest contentful paint"):
+// it is visible from the first frame and only sharpens and slides into place.
+const settleIn: Variants = {
+  hidden: { y: 12, filter: 'blur(4px)' },
+  show: { y: 0, filter: 'blur(0px)', transition: { duration: 0.9, ease: EASE_OUT } },
+};
+
 const HeroSection = () => {
   const { t, i18n } = useTranslation();
   const ref = useRef<HTMLElement>(null);
@@ -71,7 +78,7 @@ const HeroSection = () => {
         {/* Fallback image for mobile */}
         <div
           className="absolute inset-0 bg-cover bg-center sm:hidden"
-          style={{ backgroundImage: 'url("/images/profile/fallback.jpg")' }}
+          style={{ backgroundImage: 'url("/images/profile/fallback.webp")' }}
         />
       </motion.div>
 
@@ -108,7 +115,7 @@ const HeroSection = () => {
         </h1>
 
         <motion.p
-          variants={fadeUp}
+          variants={settleIn}
           className="text-xl md:text-2xl text-foreground/80 max-w-3xl mx-auto mb-10 whitespace-pre-line"
         >
           {t('hero.subtitle')}
@@ -117,6 +124,7 @@ const HeroSection = () => {
         <motion.div variants={fadeUp} className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
           <Link
             to="book"
+            href="#book"
             spy={true}
             smooth={true}
             offset={-70}
@@ -128,6 +136,7 @@ const HeroSection = () => {
 
           <Link
             to="projects"
+            href="#projects"
             spy={true}
             smooth={true}
             offset={-70}
@@ -147,6 +156,7 @@ const HeroSection = () => {
       >
         <Link
           to="about"
+          href="#about"
           spy={true}
           smooth={true}
           offset={-70}
