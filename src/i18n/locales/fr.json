@@ -313,6 +313,25 @@
           "Paiement à la livraison",
           "Identité de marque : logo et positionnement"
         ]
+      },
+      "10": {
+        "title": "VR Showroom",
+        "description": "Un projet personnel : un showroom immobilier immersif sur le web. Les visiteurs explorent chaque bien en 3D, le parcourent pièce par pièce ou en 360°, et chaque visite devient un lead qualifié dans un CRM intégré.",
+        "technologies": [
+          "React",
+          "Three.js",
+          "WebGL",
+          "3D",
+          "CRM"
+        ],
+        "features": [
+          "Catalogue et pages projets avec rendus et typologies",
+          "Plan interactif qui s’adapte à la surface choisie",
+          "Maquette 3D : faire pivoter, ouvrir chaque pièce, voir ses dimensions",
+          "Visite immersive et panoramas 360°",
+          "CRM intégré : scoring automatique des leads, attribution et pipeline",
+          "Statistiques : parcours de visite, entonnoir de leads, biens les plus vus"
+        ]
       }
     },
     "swipeHint": "Faites glisser la carte du dessus pour voir la capture suivante, ou cliquez pour l’agrandir.",
@@ -320,9 +339,11 @@
     "next": "Projet suivant",
     "goTo": "Aller au projet {{n}} : {{title}}",
     "viewScreenshots": "Captures du projet",
-    "carouselHint": "Faites glisser ou utilisez les flèches pour parcourir les projets. Cliquez sur la carte centrale pour voir ses captures.",
+    "carouselHint": "Faites glisser ou utilisez les flèches pour parcourir les projets. Cliquez sur la carte centrale pour voir ses captures ou sa vidéo.",
     "code": "Code source",
-    "demo": "Démo en ligne"
+    "demo": "Démo en ligne",
+    "playVideo": "Lire la vidéo",
+    "videoOf": "{{title}} – vidéo"
   },
   "certificates": {
     "title": "Certificats & Formation",
