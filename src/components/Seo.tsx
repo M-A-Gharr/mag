@@ -1,8 +1,9 @@
-// The page's SEO tags live in index.html, where crawlers that do not run JavaScript
-// (LinkedIn, WhatsApp…) read them. This component only translates them in place when
-// the language changes. It never adds tags: react-helmet would duplicate the static ones.
+// The page's SEO tags live in index.html (and in the generated fr/ and ar/ pages), where
+// crawlers that do not run JavaScript (LinkedIn, WhatsApp…) read them. This component only
+// updates them in place when the language changes; it never adds tags.
 import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
+import { urlFor } from '@/i18n/paths';
 
 // Open Graph locale codes for the site's languages.
 const OG_LOCALES: Record<string, string> = {
@@ -34,6 +35,9 @@ const Seo = () => {
     setContent('meta[property="og:title"]', title);
     setContent('meta[property="og:description"]', description);
     setContent('meta[property="og:locale"]', OG_LOCALES[lang] ?? 'en_US');
+    // /fr/ and /ar/ are their own pages; the other languages share the root address.
+    setContent('meta[property="og:url"]', urlFor(lang));
+    document.head.querySelector('link[rel="canonical"]')?.setAttribute('href', urlFor(lang));
     setContent('meta[name="twitter:title"]', title);
     setContent('meta[name="twitter:description"]', description);
   }, [t, lang]);
