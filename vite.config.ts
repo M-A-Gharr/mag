@@ -9,6 +9,7 @@ const SITE_URL = "https://www.maminegh.com/";
  * Writes dist/fr/index.html and dist/ar/index.html from the built English page, with the
  * title, description, share tags, language and canonical address of each language, so that
  * Google, LinkedIn and WhatsApp (which do not run JavaScript) see each page in its language.
+ * Also writes dist/404.html (the app, not indexed) so unknown addresses show the site's 404 page.
  * Fails the build if a tag it must change is missing, rather than publish a half-translated page.
  */
 function localizedPages(): Plugin {
@@ -49,6 +50,12 @@ function localizedPages(): Plugin {
         fs.mkdirSync(path.join(outDir, lng), { recursive: true });
         fs.writeFileSync(path.join(outDir, lng, "index.html"), html);
       }
+
+      // GitHub Pages serves 404.html (with a 404 status) for unknown addresses: give it the app,
+      // which renders its own 404 page in the visitor's language. Kept out of search results.
+      const notFound = source.replace("<head>", '<head>\n    <meta name="robots" content="noindex" />');
+      if (notFound === source) throw new Error("localized-pages: no <head> in index.html");
+      fs.writeFileSync(path.join(outDir, "404.html"), notFound);
     },
   };
 }
@@ -75,7 +82,6 @@ export default defineConfig(({ mode }) => ({
       output: {
         manualChunks: {
           react: ['react', 'react-dom'],
-          ui: ['lucide-react', '@/components/ui/index.ts'],
           animation: ['framer-motion'],
           i18n: ['i18next', 'react-i18next']
         }

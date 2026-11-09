@@ -6,7 +6,9 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { MotionConfig } from "framer-motion";
 
-const Index = lazy(() => import("./pages/Index"));
+// The main page is in the entry bundle (no second round trip before the first paint);
+// only the 404 page is loaded on demand.
+import Index from "./pages/Index";
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 const queryClient = new QueryClient();

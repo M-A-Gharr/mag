@@ -8,7 +8,7 @@ import { toast } from "sonner";
 import { useTranslation } from 'react-i18next';
 
 const FreelanceAvailability = () => {
-  const {t} = useTranslation();
+  const { t, i18n } = useTranslation();
   
   const servicesList = t('bonus.freelance.servicesList', { returnObjects: true });
   const services = Array.isArray(servicesList) ? (servicesList as string[]) : [];
@@ -24,13 +24,14 @@ const FreelanceAvailability = () => {
 
   const handleCVDownload = () => {
     try {
-      // Create a URL to a sample CV PDF file (assuming it's in the public folder)
-      const cvUrl = "/cv/Mohamed-Amine-Gharrab-CV-EN.pdf";
-      
-      // Create a link element
+      // French CV for the French and Arabic versions (French is the business language in
+      // Morocco), English for the others.
+      const fileName = ['fr', 'ar'].includes(i18n.language)
+        ? "Mohamed-Amine-Gharrab-CV-FR.pdf"
+        : "Mohamed-Amine-Gharrab-CV-EN.pdf";
       const link = document.createElement("a");
-      link.href = cvUrl; // Path to your CV file
-      link.setAttribute("download", "Mohamed-Amine-Gharrab-CV-EN.pdf");
+      link.href = `/cv/${fileName}`;
+      link.setAttribute("download", fileName);
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);

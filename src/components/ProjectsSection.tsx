@@ -7,7 +7,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import { Navigation, Keyboard } from 'swiper/modules';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence, useInView } from 'framer-motion';
 import SwipeCardStack from './SwipeCardStack';
 import { EASE_OUT, Reveal, SectionHeading, Stagger, StaggerItem } from './motion';
 import type { CrumpleCarouselHandle } from './CrumpleCardCarousel';
@@ -113,19 +113,19 @@ const ProjectsSection = () => {
       id: 11,
       icon: <Wand2 className="h-8 w-8 text-[#483dfb]" />,
       images: [],
-      video: { src: '/videos/projects/ai-fashion-studio.mp4', poster: '/videos/projects/ai-fashion-studio-poster.jpg', portrait: true }
+      video: { src: '/videos/projects/ai-fashion-studio.mp4', poster: '/videos/projects/ai-fashion-studio-poster.webp', portrait: true }
     },
     {
       id: 6,
       icon: <Target className="h-8 w-8 text-[#483dfb]" />,
       images: [],
-      video: { src: '/videos/projects/lead-intelligence.mp4', poster: '/videos/projects/lead-intelligence-poster.jpg' }
+      video: { src: '/videos/projects/lead-intelligence.mp4', poster: '/videos/projects/lead-intelligence-poster.webp' }
     },
     {
       id: 12,
       icon: <Handshake className="h-8 w-8 text-[#483dfb]" />,
       images: [],
-      video: { src: '/videos/projects/export-showroom-crm.mp4', poster: '/videos/projects/export-showroom-crm-poster.jpg' }
+      video: { src: '/videos/projects/export-showroom-crm.mp4', poster: '/videos/projects/export-showroom-crm-poster.webp' }
     },
     {
       id: 8,
@@ -141,7 +141,7 @@ const ProjectsSection = () => {
       id: 10,
       icon: <Box className="h-8 w-8 text-[#483dfb]" />,
       images: [],
-      video: { src: '/videos/projects/vr-showroom.mp4', poster: '/videos/projects/vr-showroom-poster.jpg' }
+      video: { src: '/videos/projects/vr-showroom.mp4', poster: '/videos/projects/vr-showroom-poster.webp' }
     },
     {
       id: 7,
@@ -181,7 +181,11 @@ const ProjectsSection = () => {
       image: project.images[0] ?? project.video?.poster,
     };
   });
-  const covers = useProjectCovers(coverInputs, i18n.language);
+  // The 3D carousel (three.js) and its cover drawings only start when the visitor gets close
+  // to this section, so they never compete with the first paint of the page.
+  const sectionRef = useRef<HTMLElement>(null);
+  const near = useInView(sectionRef, { once: true, margin: '800px 0px 800px 0px' });
+  const covers = useProjectCovers(near ? coverInputs : [], i18n.language);
 
   // "See the project" in a case study: scroll up here and bring that project to the front.
   const goToRef = useRef(goTo);
@@ -200,7 +204,7 @@ const ProjectsSection = () => {
   }, []);
 
   return (
-    <section id="projects" className="section-container">
+    <section ref={sectionRef} id="projects" className="section-container">
       <SectionHeading title={t('projects.title')} subtitle={t('projects.subtitle')} />
 
       <Reveal y={40}>
@@ -219,7 +223,9 @@ const ProjectsSection = () => {
             onKeyDown={handleStageKey}
             className="relative -mx-4 sm:mx-0 rounded-2xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#483dfb]"
           >
-            {webglOk ? (
+            {!near ? (
+              <div className={STAGE_HEIGHT} />
+            ) : webglOk ? (
               <Suspense fallback={<div className={STAGE_HEIGHT} />}>
                 <CrumpleCardCarousel
                   ref={carouselRef}

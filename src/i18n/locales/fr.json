@@ -4,7 +4,7 @@
     "skills": "Compétences",
     "projects": "Projets",
     "certificates": "Certificats",
-    "bonus": "Bonus Professionnels",
+    "bonus": "Références",
     "contact": "Contact",
     "menu": "Menu",
     "close": "Fermer",
@@ -434,7 +434,7 @@
     }
   },
   "bonus": {
-    "sectionTitle": "Bonus Professionnels",
+    "sectionTitle": "Références & disponibilité",
     "testimonials": "Témoignages",
     "caseStudies": {
       "title": "Études de cas",
@@ -599,5 +599,11 @@
     "light": "Mode clair",
     "toggleDark": "Passer au mode sombre",
     "toggleLight": "Passer au mode clair"
+  },
+  "notFound": {
+    "title": "Cette page n'existe pas",
+    "desc": "Le lien est peut-être cassé, ou la page a été déplacée.",
+    "back": "Retour au portfolio",
+    "contact": "M'écrire"
   }
 }

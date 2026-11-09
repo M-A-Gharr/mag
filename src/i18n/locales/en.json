@@ -4,7 +4,7 @@
     "skills": "Skills",
     "projects": "Projects",
     "certificates": "Certificates",
-    "bonus": "Professional Bonus",
+    "bonus": "References",
     "contact": "Contact",
     "menu": "Menu",
     "close": "Close",
@@ -438,7 +438,7 @@
       "title": "Mohamed Amine Gharrab Professional Bonus",
       "description": "Testimonials, tech blog and freelance availability of Mohamed Amine Gharrab, Full-Stack Developer."
     },
-    "sectionTitle": "Professional Bonus",
+    "sectionTitle": "References & Availability",
     "testimonials": "Testimonials",
     "caseStudies": {
       "title": "Case Studies",
@@ -606,5 +606,11 @@
     "light": "Light Mode",
     "toggleDark": "Switch to dark mode",
     "toggleLight": "Switch to light mode"
+  },
+  "notFound": {
+    "title": "This page doesn't exist",
+    "desc": "The link may be broken, or the page may have moved.",
+    "back": "Back to the portfolio",
+    "contact": "Write to me"
   }
 }

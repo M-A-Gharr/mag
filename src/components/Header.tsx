@@ -53,7 +53,7 @@ const Header = () => {
       <div className="container mx-auto px-2 lg:px-4 py-4 flex justify-between items-center">
         <Link
           to="hero"
-          aria-label="Go to hero section"
+          href="#hero"
           spy={true}
           smooth={true}
           offset={-70}
@@ -69,6 +69,7 @@ const Header = () => {
             <Link
               key={link.name}
               to={link.to}
+              href={`#${link.to}`}
               aria-label={`Navigate to ${link.name}`}
               spy={true}
               smooth={true}
