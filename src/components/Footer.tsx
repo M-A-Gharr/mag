@@ -3,6 +3,7 @@ import { ArrowUp, Github, Linkedin, Mail } from 'lucide-react';
 import { Link } from 'react-scroll';
 import { useTranslation } from 'react-i18next';
 import { Reveal } from './motion';
+import Logo from './Logo';
 
 const Footer = () => {
   const { t } = useTranslation();
@@ -26,7 +27,7 @@ const Footer = () => {
         
         <Reveal className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
           <div>
-            <h3 className="text-2xl font-bold mb-4 text-gradient">{t('footer.title', 'Portfolio')}</h3>
+            <h3 className="mb-4"><Logo playInView className="text-[2rem]" /></h3>
             <p className="text-foreground/80 max-w-md whitespace-pre-line">
               {t('footer.description', 'Fullstack web developer passionate about creating modern and intuitive web applications. Specialized in React, Node.js, and SQL/NoSQL databases.')}
             </p>
