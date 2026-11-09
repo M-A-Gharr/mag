@@ -163,9 +163,8 @@
     @apply border-border selection:bg-[#483dfb]/30 selection:text-foreground;
   }
 
-  html {
-    @apply scroll-smooth;
-  }
+  /* No CSS scroll-behavior: smooth here. react-scroll animates the page itself, and the CSS
+     setting smooths each of its steps, so the animation ends short of the section. */
 
   body {
     @apply bg-background text-foreground font-inter antialiased;

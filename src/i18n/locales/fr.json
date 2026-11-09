@@ -5,7 +5,12 @@
     "projects": "Projets",
     "certificates": "Certificats",
     "bonus": "Bonus Professionnels",
-    "contact": "Contact"
+    "contact": "Contact",
+    "menu": "Menu",
+    "close": "Fermer",
+    "letsTalk": "Travaillons ensemble",
+    "language": "Langue",
+    "theme": "Thème"
   },
   "hero": {
     "meta": {
