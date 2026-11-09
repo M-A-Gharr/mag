@@ -31,3 +31,6 @@ compos.js
 
 # Internal SIMTIS project material (never published)
 projectSimtis/
+
+# Chatbase setup notes (pasted into the Chatbase dashboard, not part of the site)
+chatbase/
