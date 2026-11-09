@@ -12,6 +12,7 @@ import { Separator } from "@/components/ui/separator";
 import { format } from "date-fns";
 import { Element } from 'react-scroll';
 import { motion } from 'framer-motion';
+import GlitchText from './GlitchText';
 import { EASE_OUT, ImageReveal, Reveal, SectionHeading, Stagger, StaggerItem } from './motion';
 
 
@@ -93,7 +94,7 @@ const AboutSection = () => {
                 <Quote className="text-[#483dfb] h-8 w-8" />
               </div>
               <p className="text-xl italic text-center font-medium">
-                {t('hero.quote')}
+                <GlitchText>{t('hero.quote')}</GlitchText>
               </p>
             </div>
           </Reveal>

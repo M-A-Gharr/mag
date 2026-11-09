@@ -4,6 +4,7 @@ import { Link } from 'react-scroll';
 import { useTranslation } from 'react-i18next';
 import { motion, useScroll, useTransform, type Variants } from 'framer-motion';
 import { EASE_OUT } from './motion';
+import LetterSwapTitle from './LetterSwapTitle';
 
 const intro: Variants = {
   hidden: {},
@@ -22,7 +23,7 @@ const fadeUp: Variants = {
 };
 
 const HeroSection = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const ref = useRef<HTMLElement>(null);
 
   // As the hero scrolls away, its content drifts up and fades out.
@@ -84,13 +85,11 @@ const HeroSection = () => {
         animate="show"
       >
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 text-foreground">
-          {titleLines.map((text, i) => (
-            <span key={i} className="block overflow-hidden pb-[0.12em]">
-              <motion.span className="block" variants={line}>
-                {text}
-              </motion.span>
-            </span>
-          ))}
+          <LetterSwapTitle
+            lines={titleLines}
+            lineVariants={line}
+            unit={['ar', 'hi'].includes(i18n.language) ? 'word' : 'letter'}
+          />
         </h1>
 
         <motion.p
