@@ -92,11 +92,7 @@
     },
     "book": {
       "title": "¿Listo para colaborar?",
-      "desc": "Elige una fecha que te funcione y hablemos sobre cómo puedo ayudarte con tu proyecto.",
-      "date": "Seleccionar una fecha",
-      "button": "Reservar ahora",
-      "emailsubject": "Solicitud de reserva",
-      "emailbody": "Me gustaría reservar sus servicios",
+      "desc": "Reserva una llamada gratuita en pocos clics: elige una hora abajo y Amine te la confirmará por correo.",
       "availability": "Mi disponibilidad",
       "consultation": "Automatización con IA",
       "consultdesc": "3-5 días",
@@ -104,7 +100,50 @@
       "devdesc": "1-3 semanas",
       "techreview": "Revisión técnica",
       "techreviewtime": "24 horas",
-      "responsetime": "Tiempo de respuesta: normalmente dentro de 24 horas"
+      "responsetime": "Tiempo de respuesta: normalmente dentro de 24 horas",
+      "cal": {
+        "title": "Reservar una llamada",
+        "subtitle": "Gratis · vídeo, teléfono o WhatsApp",
+        "chooseMeeting": "1. ¿De qué te gustaría hablar?",
+        "chooseSlot": "2. Elige un día y una hora",
+        "pickDay": "Elige un día en el calendario para ver las horas disponibles.",
+        "timezone": "Horas mostradas en tu zona horaria ({{tz}}).",
+        "pending": "Tu franja es una solicitud: Amine la confirma por correo en 24 horas.",
+        "continue": "Continuar",
+        "change": "Cambiar",
+        "name": "Tu nombre",
+        "email": "Tu correo",
+        "format": "3. ¿Cómo nos reunimos?",
+        "phone": "Número de teléfono (con prefijo del país)",
+        "message": "Tu proyecto en pocas palabras (opcional)",
+        "submit": "Solicitar esta franja",
+        "sending": "Enviando…",
+        "error": "No se pudo enviar la solicitud. Inténtalo de nuevo o escribe a contact.maminegh@gmail.com.",
+        "doneTitle": "¡Solicitud enviada!",
+        "doneDesc": "Amine confirmará la franja por correo a {{email}} en 24 horas.",
+        "addGoogle": "Añadir a Google Calendar",
+        "downloadIcs": "Descargar (.ics)",
+        "another": "Reservar otra franja",
+        "meetings": {
+          "discovery": {
+            "title": "Llamada de descubrimiento",
+            "desc": "Tu proyecto, tus necesidades, primeras ideas"
+          },
+          "consultation": {
+            "title": "Consulta de proyecto",
+            "desc": "Alcance, arquitectura, plazos y presupuesto"
+          },
+          "review": {
+            "title": "Revisión técnica",
+            "desc": "Un vistazo a tu web, tienda o código"
+          }
+        },
+        "formats": {
+          "meet": "Google Meet",
+          "phone": "Llamada telefónica",
+          "whatsapp": "WhatsApp"
+        }
+      }
     },
     "available": "Disponible para proyectos",
     "avatarAlt": "Foto de Mohamed Amine Gharrab"
@@ -132,7 +171,12 @@
     "workflow": "Automatización de flujos de trabajo",
     "contentGen": "Generación de contenido con IA",
     "responsive": "Diseño responsive",
-    "constellationHint": "Pasa el cursor sobre una habilidad para ver con qué se conecta."
+    "constellationHint": "Pasa el cursor sobre una habilidad para ver con qué se conecta.",
+    "levels": {
+      "expert": "Experto",
+      "advanced": "Avanzado",
+      "intermediate": "Intermedio"
+    }
   },
   "projects": {
     "title": "Proyectos",

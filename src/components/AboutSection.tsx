@@ -1,20 +1,19 @@
 
 import { useTranslation } from 'react-i18next';
-import { Briefcase, CalendarIcon, Code, Bot, ShoppingCart, Star, Quote, Database, Search, Sparkles } from 'lucide-react';
+import { Briefcase, Code, Bot, ShoppingCart, Star, Quote, Database, Search, Sparkles } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
-import { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
+import { lazy, Suspense } from "react";
 import { cn } from "@/lib/utils";
-import { Calendar } from "@/components/ui/calendar";
+import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
-import { format } from "date-fns";
 import { Element } from 'react-scroll';
 import { motion } from 'framer-motion';
 import GlitchText from './GlitchText';
 import { EASE_OUT, Reveal, SectionHeading, Stagger, StaggerItem } from './motion';
 import ProfileCard from './ProfileCard';
+
+// Calendar, date locales and EmailJS load only when the booking block is reached.
+const BookingCalendar = lazy(() => import('./BookingCalendar'));
 
 
 const bookBadges = [
@@ -37,9 +36,6 @@ type ResumeItem = {
 
 const AboutSection = () => {
   const { t } = useTranslation();
-  const [date, setDate] = useState<Date | undefined>(undefined);
-  const [showCalendar, setShowCalendar] = useState(false);
-  const [pendingBook, setPendingBook] = useState(false);
 
   const services = [
     {
@@ -61,17 +57,6 @@ const AboutSection = () => {
 
   const resumeItems = t('about.resume.items', { returnObjects: true }) as ResumeItem[];
   const safeResumeItems = Array.isArray(resumeItems) ? resumeItems : [];
-
-  const handleBookNow = () => {
-    if (date) {
-      // In a real implementation, this would send the booking request
-      console.log(`Booking requested for: ${format(date, 'PPP')}`);
-      window.open('mailto:contact.maminegh@gmail.com?subject=' + t('about.book.emailsubject') + '&body=' + t('about.book.emailbody') +
-        (date ? ` on ${format(date, 'PPP')}` : ''), '_blank');
-    } else {
-      setShowCalendar(true);
-    }
-  };
 
   return (
     <section id="about" className="section-container">
@@ -190,60 +175,6 @@ const AboutSection = () => {
                 ))}
               </Stagger>
 
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Popover
-                  open={showCalendar}
-                  onOpenChange={(open) => {
-                    setShowCalendar(open);
-
-                    // Si on attendait la fermeture pour Book Now
-                    if (!open && pendingBook) {
-                      handleBookNow();
-                      setPendingBook(false);
-                    }
-                  }}
-                >
-                  <PopoverTrigger asChild>
-                    <Button variant="outline" className={cn(
-                      "w-full sm:w-auto justify-start text-left font-normal",
-                      !date && "text-muted-foreground"
-                    )}>
-                      <CalendarIcon className="mr-2 h-4 w-4" />
-                      {date ? format(date, "PPP") : t('about.book.date')}
-                    </Button>
-                  </PopoverTrigger>
-                  <PopoverContent className="w-auto p-0" align="start">
-                    <Calendar
-                      mode="single"
-                      selected={date}
-                      onSelect={(newDate) => {
-                        setDate(newDate);
-                        setShowCalendar(false);
-                      }}
-                      initialFocus
-                    />
-                  </PopoverContent>
-                </Popover>
-
-                <Button
-                  className="bg-[#261bfb] hover:bg-[#3e30fb] dark:hover:bg-[#3e30fb] text-white w-full sm:w-auto"
-                  onClick={() => {
-                    if (!date) {
-                      setShowCalendar(true);
-                      return;
-                    }
-
-                    if (showCalendar) {
-                      setPendingBook(true);
-                      setShowCalendar(false);
-                    } else {
-                      handleBookNow();
-                    }
-                  }}
-                >
-                  {t('about.book.button')}
-                </Button>
-              </div>
             </Reveal>
             <Reveal delay={0.15} className="block md:block">
               <div className="relative">
@@ -271,6 +202,13 @@ const AboutSection = () => {
                   </p>
                 </div>
               </div>
+            </Reveal>
+
+            {/* Online booking */}
+            <Reveal className="md:col-span-2" y={30}>
+              <Suspense fallback={<div className="h-[520px] animate-pulse rounded-2xl bg-secondary/20" />}>
+                <BookingCalendar />
+              </Suspense>
             </Reveal>
           </div>
         </Element>

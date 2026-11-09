@@ -2,16 +2,21 @@
 import { useTranslation } from 'react-i18next';
 import { Badge } from '@/components/ui/badge';
 import { Code, Database, Layout, Lightbulb, ShoppingCart, Bot } from 'lucide-react';
-import { useEffect, useRef, useState } from 'react';
-import { animate, motion, useInView, useReducedMotion } from 'framer-motion';
+import { useRef } from 'react';
+import { motion, useInView, useReducedMotion } from 'framer-motion';
 import SkillConstellation from './SkillConstellation';
 import { EASE_OUT, Reveal, SectionHeading, Stagger, StaggerItem } from './motion';
+
+type Level = 'expert' | 'advanced' | 'intermediate';
 
 type Skill = {
   id: string;
   name: string;
-  level: number;
+  level: Level;
 };
+
+// Filled segments out of 3 for each level.
+const LEVEL_STEPS: Record<Level, number> = { intermediate: 1, advanced: 2, expert: 3 };
 
 type SkillCategory = {
   id: string;
@@ -29,67 +34,43 @@ const CROSS_LINKS: [string, string][] = [
   ['shopify', 'seo'], ['contentgen', 'seo'], ['aitraining', 'multilingual'],
 ];
 
-/** One skill row: the bar fills as it scrolls into view while the percentage counts up. */
+/** One skill row: its level as a word and a 3-segment meter that fills as it scrolls into view. */
 const SkillBar = ({ skill, index }: { skill: Skill; index: number }) => {
+  const { t } = useTranslation();
   const ref = useRef<HTMLDivElement>(null);
   const inView = useInView(ref, { once: true, amount: 0.8 });
   const reduce = useReducedMotion();
-  const [count, setCount] = useState(0);
-  const [done, setDone] = useState(false);
-  const delay = 0.2 + index * 0.08;
-
-  useEffect(() => {
-    if (!inView) return;
-    if (reduce) {
-      setCount(skill.level);
-      setDone(true);
-      return;
-    }
-    const controls = animate(0, skill.level, {
-      duration: 1.4,
-      delay,
-      ease: EASE_OUT,
-      onUpdate: (v) => setCount(Math.round(v)),
-      onComplete: () => setDone(true),
-    });
-    return () => controls.stop();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [inView]);
+  const steps = LEVEL_STEPS[skill.level];
+  const delay = 0.15 + index * 0.07;
+  const label = t(`skills.levels.${skill.level}`);
 
   return (
-    <div ref={ref} className="space-y-2">
-      <div className="flex justify-between">
-        <span className="text-sm font-medium">{skill.name}</span>
-        <span className={`text-xs tabular-nums transition-colors duration-500 ${done ? 'text-[#483dfb]' : 'text-muted-foreground'}`}>
-          {count}%
+    <div ref={ref} className="flex items-center justify-between gap-4">
+      <span className="min-w-0 text-sm font-medium">{skill.name}</span>
+      <div className="flex shrink-0 items-center gap-3" role="img" aria-label={`${skill.name}: ${label}`}>
+        <motion.span
+          aria-hidden
+          className={`text-xs font-medium ${skill.level === 'expert' ? 'text-[#483dfb] dark:text-[#9b87f5]' : 'text-muted-foreground'}`}
+          initial={{ opacity: 0, x: -6 }}
+          animate={inView ? { opacity: 1, x: 0 } : {}}
+          transition={{ duration: reduce ? 0 : 0.5, ease: EASE_OUT, delay: reduce ? 0 : delay + 0.35 }}
+        >
+          {label}
+        </motion.span>
+        <span aria-hidden className="flex gap-1">
+          {[0, 1, 2].map((i) => (
+            <span key={i} className="relative h-2 w-5 overflow-hidden rounded-full bg-secondary/60 sm:w-6">
+              {i < steps && (
+                <motion.span
+                  className="absolute inset-0 origin-left rounded-full bg-gradient-to-r from-[#483dfb] to-[#9b87f5] rtl:origin-right"
+                  initial={{ scaleX: 0 }}
+                  animate={{ scaleX: inView ? 1 : 0 }}
+                  transition={{ duration: reduce ? 0 : 0.45, ease: EASE_OUT, delay: reduce ? 0 : delay + i * 0.14 }}
+                />
+              )}
+            </span>
+          ))}
         </span>
-      </div>
-      <div
-        className="relative h-2 rounded-full bg-secondary/50"
-        role="progressbar"
-        aria-label={skill.name}
-        aria-valuenow={skill.level}
-        aria-valuemin={0}
-        aria-valuemax={100}
-      >
-        <motion.div
-          className="h-full rounded-full bg-gradient-to-r from-[#483dfb] to-[#9b87f5] origin-left rtl:origin-right"
-          style={{ width: `${skill.level}%` }}
-          initial={{ scaleX: 0 }}
-          animate={{ scaleX: inView ? 1 : 0 }}
-          transition={{ duration: 1.4, ease: EASE_OUT, delay: inView ? delay : 0 }}
-        />
-        {/* Glow that pulses once at the tip when the bar lands */}
-        {done && !reduce && (
-          <motion.span
-            aria-hidden
-            className="pointer-events-none absolute top-1/2 h-3 w-3 -translate-y-1/2 rounded-full bg-white shadow-[0_0_12px_4px_rgba(155,135,245,0.9)]"
-            style={{ insetInlineStart: `calc(${skill.level}% - 6px)` }}
-            initial={{ opacity: 0, scale: 0.4 }}
-            animate={{ opacity: [0, 1, 0], scale: [0.4, 1.3, 1] }}
-            transition={{ duration: 1.1, ease: 'easeOut' }}
-          />
-        )}
       </div>
     </div>
   );
@@ -104,13 +85,13 @@ const SkillsSection = () => {
       name: t('skills.languages'),
       icon: <Code className="h-6 w-6 text-[#483dfb]" aria-label='Languages Icon'/>,
       skills: [
-        { id: 'js', name: 'JavaScript', level: 90 },
-        { id: 'ts', name: 'TypeScript', level: 85 },
-        { id: 'python', name: 'Python', level: 75 },
-        { id: 'php', name: 'PHP', level: 80 },
-        { id: 'csharp', name: 'C#', level: 70 },
-        { id: 'java', name: 'Java', level: 70 },
-        { id: 'htmlcss', name: 'HTML / CSS', level: 95 },
+        { id: 'js', name: 'JavaScript', level: 'expert' },
+        { id: 'ts', name: 'TypeScript', level: 'advanced' },
+        { id: 'python', name: 'Python', level: 'advanced' },
+        { id: 'php', name: 'PHP', level: 'advanced' },
+        { id: 'csharp', name: 'C#', level: 'intermediate' },
+        { id: 'java', name: 'Java', level: 'intermediate' },
+        { id: 'htmlcss', name: 'HTML / CSS', level: 'expert' },
       ]
     },
     {
@@ -118,12 +99,12 @@ const SkillsSection = () => {
       name: t('skills.frontend'),
       icon: <Layout className="h-6 w-6 text-[#483dfb]" aria-label='Frontend Icon'/>,
       skills: [
-        { id: 'react', name: 'React.js', level: 90 },
-        { id: 'vite', name: 'Vite', level: 85 },
-        { id: 'tailwind', name: 'Tailwind CSS', level: 90 },
-        { id: 'responsive', name: t('skills.responsive'), level: 90 },
-        { id: 'i18n', name: 'i18n', level: 95 },
-        { id: 'git', name: 'Git & GitHub', level: 90 },
+        { id: 'react', name: 'React.js', level: 'expert' },
+        { id: 'vite', name: 'Vite', level: 'advanced' },
+        { id: 'tailwind', name: 'Tailwind CSS', level: 'expert' },
+        { id: 'responsive', name: t('skills.responsive'), level: 'expert' },
+        { id: 'i18n', name: 'i18n', level: 'expert' },
+        { id: 'git', name: 'Git & GitHub', level: 'expert' },
       ]
     },
     {
@@ -131,11 +112,11 @@ const SkillsSection = () => {
       name: t('skills.backend'),
       icon: <Database className="h-6 w-6 text-[#483dfb]" aria-label='Backend Icon'/>,
       skills: [
-        { id: 'node', name: 'Node.js', level: 85 },
-        { id: 'aspnet', name: 'ASP.NET', level: 70 },
-        { id: 'postgres', name: 'PostgreSQL', level: 85 },
-        { id: 'mssql', name: 'MSSQL', level: 75 },
-        { id: 'mysql', name: 'MySQL', level: 85 },
+        { id: 'node', name: 'Node.js', level: 'advanced' },
+        { id: 'aspnet', name: 'ASP.NET', level: 'intermediate' },
+        { id: 'postgres', name: 'PostgreSQL', level: 'advanced' },
+        { id: 'mssql', name: 'MSSQL', level: 'advanced' },
+        { id: 'mysql', name: 'MySQL', level: 'advanced' },
       ]
     },
     {
@@ -143,10 +124,10 @@ const SkillsSection = () => {
       name: t('skills.ecommerce'),
       icon: <ShoppingCart className="h-6 w-6 text-[#483dfb]" aria-label='E-commerce Icon'/>,
       skills: [
-        { id: 'prestashop', name: 'PrestaShop', level: 85 },
-        { id: 'wordpress', name: 'WordPress', level: 85 },
-        { id: 'shopify', name: 'Shopify', level: 85 },
-        { id: 'seo', name: t('skills.seo'), level: 85 },
+        { id: 'prestashop', name: 'PrestaShop', level: 'expert' },
+        { id: 'wordpress', name: 'WordPress', level: 'advanced' },
+        { id: 'shopify', name: 'Shopify', level: 'advanced' },
+        { id: 'seo', name: t('skills.seo'), level: 'advanced' },
       ]
     },
     {
@@ -154,11 +135,11 @@ const SkillsSection = () => {
       name: t('skills.ai'),
       icon: <Bot className="h-6 w-6 text-[#483dfb]" aria-label='AI Icon'/>,
       skills: [
-        { id: 'claude', name: 'Claude (Skills)', level: 90 },
-        { id: 'make', name: 'Make', level: 85 },
-        { id: 'workflow', name: t('skills.workflow'), level: 85 },
-        { id: 'contentgen', name: t('skills.contentGen'), level: 85 },
-        { id: 'aitraining', name: t('skills.aiTraining'), level: 90 },
+        { id: 'claude', name: 'Claude (Skills)', level: 'expert' },
+        { id: 'make', name: 'Make', level: 'advanced' },
+        { id: 'workflow', name: t('skills.workflow'), level: 'advanced' },
+        { id: 'contentgen', name: t('skills.contentGen'), level: 'advanced' },
+        { id: 'aitraining', name: t('skills.aiTraining'), level: 'expert' },
       ]
     },
     {
@@ -166,12 +147,12 @@ const SkillsSection = () => {
       name: t('skills.professional'),
       icon: <Lightbulb className="h-6 w-6 text-[#483dfb]" />,
       skills: [
-        { id: 'crm', name: t('skills.crm'), level: 85 },
-        { id: 'leadintel', name: t('skills.leadIntel'), level: 85 },
-        { id: 'processauto', name: t('skills.processAutomation'), level: 85 },
-        { id: 'restapi', name: t('skills.restApi'), level: 85 },
-        { id: 'curiosity', name: t('skills.curiosity'), level: 100 },
-        { id: 'multilingual', name: t('skills.multilingual'), level: 95 },
+        { id: 'crm', name: t('skills.crm'), level: 'advanced' },
+        { id: 'leadintel', name: t('skills.leadIntel'), level: 'advanced' },
+        { id: 'processauto', name: t('skills.processAutomation'), level: 'advanced' },
+        { id: 'restapi', name: t('skills.restApi'), level: 'advanced' },
+        { id: 'curiosity', name: t('skills.curiosity'), level: 'expert' },
+        { id: 'multilingual', name: t('skills.multilingual'), level: 'expert' },
       ]
     },
   ];
@@ -192,7 +173,7 @@ const SkillsSection = () => {
                   <h3 className="text-xl font-semibold ms-3">{category.name}</h3>
                 </div>
 
-                <div className="space-y-5">
+                <div className="space-y-4">
                   {category.skills.map((skill, i) => (
                     <SkillBar key={skill.id} skill={skill} index={i} />
                   ))}
