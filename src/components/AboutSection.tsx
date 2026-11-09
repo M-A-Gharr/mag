@@ -13,7 +13,8 @@ import { format } from "date-fns";
 import { Element } from 'react-scroll';
 import { motion } from 'framer-motion';
 import GlitchText from './GlitchText';
-import { EASE_OUT, ImageReveal, Reveal, SectionHeading, Stagger, StaggerItem } from './motion';
+import { EASE_OUT, Reveal, SectionHeading, Stagger, StaggerItem } from './motion';
+import ProfileCard from './ProfileCard';
 
 
 const bookBadges = [
@@ -77,16 +78,7 @@ const AboutSection = () => {
       <SectionHeading title={t('about.title')} />
       <div className="flex flex-col lg:flex-row gap-12">
         <div className="lg:w-1/3 flex flex-col items-center text-center">
-          <ImageReveal className="relative w-60 h-60 rounded-full border-4 border-[#483dfb] mb-6 shadow-xl shadow-[#483dfb]/20">
-            <div className="group relative h-full w-full overflow-hidden rounded-full">
-              <img
-                src="/images/profile/tripleprofile.png"
-                alt="Mohamed Amine Gharrab"
-                className="w-full h-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-            </div>
-          </ImageReveal>
+          <ProfileCard />
 
           <Reveal delay={0.2} className="w-full max-w-md">
             <div className="card-lift p-6 bg-secondary/20 border border-secondary/20 rounded-xl">
