@@ -1,4 +1,4 @@
-// Profile card for the About section: the avatar in a rounded square framed by a slowly
+// Profile card for the About section: the cut-out photo over a theme backdrop, in a rounded square framed by a slowly
 // turning violet gradient border, tilting in 3D towards the pointer, with an
 // "available for freelance" pill and a location tag.
 import { type PointerEvent } from 'react';
@@ -21,6 +21,11 @@ const ProfileCard = () => {
   // A soft light that follows the pointer across the avatar.
   const glareX = useTransform(px, [-0.5, 0.5], ['0%', '100%']);
   const glareY = useTransform(py, [-0.5, 0.5], ['0%', '100%']);
+  // Depth: the backdrop glow and the photo shift in opposite directions as the card tilts.
+  const photoX = useSpring(useTransform(px, [-0.5, 0.5], [-8, 8]), { stiffness: 180, damping: 20 });
+  const photoY = useSpring(useTransform(py, [-0.5, 0.5], [-5, 5]), { stiffness: 180, damping: 20 });
+  const glowX = useSpring(useTransform(px, [-0.5, 0.5], [10, -10]), { stiffness: 120, damping: 20 });
+  const glowY = useSpring(useTransform(py, [-0.5, 0.5], [8, -8]), { stiffness: 120, damping: 20 });
   const glare = useTransform(
     [glareX, glareY],
     ([x, y]) => `radial-gradient(circle at ${x} ${y}, rgba(255,255,255,0.28), transparent 55%)`
@@ -58,15 +63,30 @@ const ProfileCard = () => {
             className="absolute inset-[-50%] animate-[spin_8s_linear_infinite] bg-[conic-gradient(from_0deg,#261bfb,#9b87f5,transparent_35%,transparent_60%,#261bfb)] motion-reduce:animate-none"
           />
           <div className="absolute inset-[3px] overflow-hidden rounded-[calc(2rem-3px)] bg-background">
-            <img
-              src="/images/profile/profilecartoonblur.png"
-              alt={t('about.avatarAlt')}
-              className="h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-105 dark:hidden"
+            {/* Theme backdrop: soft lavender light in light mode, deep night with a violet glow in dark mode */}
+            <div
+              aria-hidden
+              className="absolute inset-0 bg-[radial-gradient(circle_at_50%_32%,#ffffff_0%,#f1edff_42%,#ddd5fb_100%)] dark:bg-[radial-gradient(circle_at_50%_38%,#2b2080_0%,#15103a_42%,#08070f_100%)]"
             />
-            <img
-              src="/images/profile/profilecartoonblurdark.png"
+            <div
+              aria-hidden
+              className="absolute inset-0 opacity-[0.35] [background-image:radial-gradient(rgb(72_61_251_/_0.35)_1px,transparent_1px)] [background-size:14px_14px] [mask-image:radial-gradient(circle_at_50%_40%,black,transparent_75%)] dark:opacity-25"
+            />
+            <motion.div
+              aria-hidden
+              className="absolute left-1/2 top-[18%] h-44 w-44 -translate-x-1/2 rounded-full bg-[#9b87f5]/35 blur-3xl dark:bg-[#6d5dfc]/55"
+              style={{ x: glowX, y: glowY }}
+            />
+            {/* The photo, cut out: it moves a little against the backdrop when the card tilts */}
+            <motion.img
+              src="/images/profile/profile-cutout.webp"
               alt={t('about.avatarAlt')}
-              className="hidden h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-105 dark:block"
+              width={800}
+              height={800}
+              loading="lazy"
+              decoding="async"
+              className="absolute inset-x-0 bottom-0 mx-auto h-[93%] w-[93%] object-contain object-bottom transition-[filter] duration-500 [filter:drop-shadow(0_10px_24px_rgb(38_27_251_/_0.18))] dark:[filter:drop-shadow(0_0_1px_rgb(155_135_245_/_0.9))_drop-shadow(0_0_22px_rgb(109_93_252_/_0.55))]"
+              style={{ x: photoX, y: photoY }}
             />
             <motion.div
               aria-hidden
@@ -76,12 +96,12 @@ const ProfileCard = () => {
           </div>
         </div>
 
-        {/* Location tag */}
+        {/* Location tag, floating over the left edge at shoulder height */}
         <motion.span
-          className="absolute -top-3 end-4 flex items-center gap-1.5 rounded-full border border-border bg-background/90 px-3 py-1.5 text-xs font-medium shadow-lg backdrop-blur-md"
+          className="absolute top-[52%] -start-6 flex items-center gap-1.5 rounded-full border border-border bg-background/90 px-3 py-1.5 text-xs font-medium shadow-lg backdrop-blur-md"
           style={{ z: 40 }}
-          initial={{ opacity: 0, y: -8 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, x: -10 }}
+          whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, ease: EASE_OUT, delay: 0.5 }}
         >
