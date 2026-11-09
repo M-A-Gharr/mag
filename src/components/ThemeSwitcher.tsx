@@ -34,7 +34,7 @@ const ThemeSwitcher = () => {
   };
 
   return (
-    <div className="flex items-center space-x-1">
+    <div className="flex items-center gap-1">
       <span className="text-sm sr-only md:not-sr-only text-muted-foreground">
         {theme === "dark" ? t("theme.dark") : t("theme.light")}
       </span>
@@ -48,7 +48,7 @@ const ThemeSwitcher = () => {
         size="icon"
         onClick={toggleTheme}
         aria-label={theme === "dark" ? t("theme.toggleLight") : t("theme.toggleDark")}
-        className="ml-1"
+        className="ms-1"
       >
         {theme === "dark" ? (
           <Moon className="h-[1.2rem] w-[1.2rem]" />
