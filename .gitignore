@@ -28,3 +28,6 @@ src/CCOCRSAGE.md
 compos.js
 # Original video sources (compressed copies live in public/videos/projects)
 /*.mp4
+
+# Internal SIMTIS project material (never published)
+projectSimtis/

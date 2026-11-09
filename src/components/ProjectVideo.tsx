@@ -13,10 +13,12 @@ type ProjectVideoProps = {
   /** Accessible name, e.g. "VR Showroom – video". */
   label: string;
   playLabel: string;
+  /** Portrait video (e.g. 4:5 social format): shown narrower and taller. */
+  portrait?: boolean;
 };
 
 const ProjectVideo = forwardRef<ProjectVideoHandle, ProjectVideoProps>(function ProjectVideo(
-  { src, poster, label, playLabel },
+  { src, poster, label, playLabel, portrait = false },
   ref
 ) {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -35,7 +37,7 @@ const ProjectVideo = forwardRef<ProjectVideoHandle, ProjectVideoProps>(function 
   useImperativeHandle(ref, () => ({ play }));
 
   return (
-    <div className="group relative aspect-video w-full overflow-hidden rounded-xl border border-border bg-black shadow-xl shadow-[#483dfb]/10">
+    <div className={`group relative w-full overflow-hidden ${portrait ? 'mx-auto aspect-[4/5] max-w-[340px]' : 'aspect-video'} rounded-xl border border-border bg-black shadow-xl shadow-[#483dfb]/10`}>
       <video
         ref={videoRef}
         src={src}
