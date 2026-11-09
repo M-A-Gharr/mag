@@ -74,27 +74,36 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WJ17T7CYTE"></script>
+    <!-- Fonts load without blocking the first paint (text shows in a system font, then swaps) -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@700&amp;display=swap" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@700&amp;display=swap"></noscript>
+    <!-- Google tag (gtag.js): calls are queued right away (no visit is lost); the 190 KB script
+         itself loads once the page has finished loading, so it never delays the first paint. -->
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'G-WJ17T7CYTE');
+      window.addEventListener('load', function () {
+        var load = function () {
+          var s = document.createElement('script');
+          s.async = true;
+          s.src = 'https://www.googletagmanager.com/gtag/js?id=G-WJ17T7CYTE';
+          document.head.appendChild(s);
+        };
+        if ('requestIdleCallback' in window) requestIdleCallback(load, { timeout: 3000 });
+        else setTimeout(load, 1500);
+      });
     </script>
-    <script type="module" crossorigin src="/assets/index-DR6ufL5S.js"></script>
+    <script type="module" crossorigin src="/assets/index-BLPJI6Tg.js"></script>
     <link rel="modulepreload" crossorigin href="/assets/react-Dvwkxfce.js">
-    <link rel="modulepreload" crossorigin href="/assets/ui-DoOeftoK.js">
-    <link rel="modulepreload" crossorigin href="/assets/animation-EM7Vn13z.js">
-    <link rel="stylesheet" crossorigin href="/assets/index-CYSKz2ox.css">
+    <link rel="modulepreload" crossorigin href="/assets/animation-DLzFu0UP.js">
+    <link rel="modulepreload" crossorigin href="/assets/i18n-CUc3i3Jr.js">
+    <link rel="stylesheet" crossorigin href="/assets/index-DGTPA-xO.css">
   </head>
 
   <body class="relative min-h-screen">
     <div id="root"></div>
-    <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
-    <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
     <script>
       (function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="1eD3-A8ZxJWQeyzQaE89z";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
     </script>
