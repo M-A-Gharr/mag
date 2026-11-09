@@ -392,7 +392,79 @@
   "bonus": {
     "sectionTitle": "Bono profesional",
     "testimonials": "Testimonios",
-    "blog": "Blog técnico",
+    "caseStudies": {
+      "title": "Casos de estudio",
+      "challenge": "El reto",
+      "approach": "Lo que hice",
+      "result": "El resultado",
+      "stack": "Stack",
+      "read": "Leer el caso de estudio",
+      "viewProject": "Ver el proyecto",
+      "prev": "Caso anterior",
+      "next": "Caso siguiente",
+      "items": [
+        {
+          "projectId": 11,
+          "sector": "Moda y retail · IA generativa",
+          "challenge": "Mostrar cada nuevo chal o pañuelo puesto en una modelo exigía una sesión de fotos, así que muchos productos salían en línea solo con una foto plana.",
+          "approach": [
+            "Análisis de cómo el equipo de marketing y las tiendas preparan realmente sus visuales",
+            "Un estudio interno con dos motores de IA: escenas con vida o una prueba virtual fiel",
+            "Una cola de generación compartida, cuotas por tienda y un paso de aprobación para proteger la imagen de la marca",
+            "Fichas de producto en tres idiomas y clips de vídeo cortos generados a partir de un visual"
+          ],
+          "result": "Un visual del producto puesto y fiel a la marca en pocos clics en lugar de una sesión de fotos, listo para la tienda online, las redes sociales y los catálogos para clientes."
+        },
+        {
+          "projectId": 8,
+          "sector": "E-commerce multilingüe · SEO",
+          "challenge": "Una marca de chales y pañuelos con una red de tiendas físicas tenía una tienda online difícil de encontrar en Google y desconectada del stock de las tiendas.",
+          "approach": [
+            "Rediseño del tema, las páginas y el recorrido del cliente en francés, inglés y árabe",
+            "Más de 20 módulos a medida: ventas adicionales, recompensas en el carrito, descuentos por niveles, seguimiento de afiliados",
+            "Sincronización del stock desde el archivo del ERP dos veces al día, con la disponibilidad en tienda en cada ficha de producto",
+            "Reconstrucción del SEO multilingüe: estructura, contenidos, metadatos y redirecciones"
+          ],
+          "result": "De la página 10 a la página 1 de Google en los tres idiomas, con una tienda que ahora se mantiene y protege a diario."
+        },
+        {
+          "projectId": 6,
+          "sector": "Exportación B2B · Cualificación con IA",
+          "challenge": "El equipo de exportación buscaba distribuidores a mano, entre búsquedas web, hojas de cálculo y correos, sin una visión común de quién ya había sido contactado.",
+          "approach": [
+            "Descubrimiento de empresas objetivo mediante búsqueda web y sugerencias de la IA",
+            "Enriquecimiento de contactos priorizando a quienes toman las decisiones",
+            "Cualificación con IA: puntuación, intención de compra y un primer mensaje sugerido",
+            "Pipeline Kanban, seguimientos e informes, con una persona que aprueba cada contacto"
+          ],
+          "result": "Una sola herramienta compartida, de la primera búsqueda a la venta: los prospectos se cualifican antes de dedicarles tiempo y ninguna oportunidad se olvida."
+        },
+        {
+          "projectId": 12,
+          "sector": "Exportación · CRM B2B",
+          "challenge": "Una casa tradicional de chales y pañuelos quería llegar a mayoristas en el extranjero, pero su web no estaba pensada para compradores profesionales y las solicitudes se perdían.",
+          "approach": [
+            "Una web escaparate multilingüe, con una versión árabe de derecha a izquierda y un catálogo que se hojea como un libro",
+            "Sin carrito: cada página lleva a una solicitud profesional, guardada y reenviada hasta que llega al CRM",
+            "Búsqueda de prospectos en Instagram, TikTok y Facebook, con puntuación multilingüe",
+            "Un pipeline de 7 etapas, territorios, roles y un historial que nadie puede modificar"
+          ],
+          "result": "Los compradores internacionales llegan a una web hecha para ellos, y cada solicitud y cada prospecto se sigue hasta el primer pedido."
+        },
+        {
+          "projectId": 13,
+          "sector": "Migración e-commerce",
+          "challenge": "Una tienda de moda tenía que pasar de WooCommerce a PrestaShop 9 sin perder sus clientes, su historial de pedidos ni el posicionamiento de sus páginas en Google.",
+          "approach": [
+            "Un extractor en Python para el catálogo, los contenidos, los clientes y los pedidos",
+            "Una importación repetible con simulación: sin duplicados y sin sobrescribir nunca los cambios manuales",
+            "Un tema y módulos a medida, incluido un checkout en una sola página",
+            "Una redirección 301 para cada URL antigua, y pruebas automáticas en el navegador en ordenador y móvil"
+          ],
+          "result": "Un cambio limpio: totales de pedidos comprobados con la fuente, todos los enlaces antiguos funcionando y guías de despliegue para el equipo."
+        }
+      ]
+    },
     "availability": "Disponibilidad freelance",
     "read": "Leer más",
     "close": "Cerrar",
@@ -414,56 +486,6 @@
         "author": "Hicham Benmetraf",
         "role": "Desarrollador principal, CellInnovate",
         "quote": "Un colaborador confiable y creativo que mejoró significativamente nuestra pila técnica y procesos de desarrollo."
-      }
-    ],
-    "blogPosts": [
-      {
-        "id": 1,
-        "title": "Optimización del rendimiento de React en 2025",
-        "excerpt": "Descubre las últimas técnicas para mejorar significativamente el rendimiento de tus aplicaciones React...",
-        "content": "En este artículo, exploraremos técnicas avanzadas para optimizar el rendimiento de tus aplicaciones React en 2025. Cubriremos el almacenamiento en caché inteligente, el uso de componentes de servidor React, la optimización del renderizado con nuevas API y las mejores prácticas para reducir el tamaño del paquete.\n\nEl rendimiento se ha vuelto más crucial que nunca en el desarrollo moderno de aplicaciones web, y React continúa evolucionando para enfrentar estos desafíos. Veremos cómo aprovechar las últimas características del ecosistema React para crear experiencias de usuario fluidas y receptivas.",
-        "date": "2025-04-18",
-        "url": "#blog-post-1"
-      },
-      {
-        "id": 2,
-        "title": "Arquitectura de micro-frontends explicada",
-        "excerpt": "Un análisis detallado de la arquitectura de micro-frontends y cómo implementarla eficazmente en tus proyectos...",
-        "content": "La arquitectura de micro-frontends se ha convertido en un enfoque popular para gestionar aplicaciones frontend grandes y complejas. En este artículo desglosamos este concepto en detalle y exploramos cómo implementarlo eficazmente.\n\nExaminaremos diferentes estrategias de integración, compensaciones de rendimiento y mantenibilidad, y ejemplos concretos de implementación con frameworks modernos como React, Vue y Angular. También aprenderás a resolver desafíos comunes relacionados con el intercambio de estado, la navegación y la coherencia visual.",
-        "date": "2025-03-22",
-        "url": "#blog-post-2"
-      },
-      {
-        "id": 3,
-        "title": "TypeScript avanzado para desarrolladores React",
-        "excerpt": "Domina conceptos avanzados de TypeScript para hacer tu código React más robusto y mantenible...",
-        "content": "Este artículo profundiza en características avanzadas de TypeScript especialmente útiles para desarrolladores React. Cubriremos tipos genéricos, tipos condicionales, tipos mapeados y conceptos avanzados de tipos.\n\nAprenderás a crear componentes fuertemente tipados que sean flexibles y seguros, a usar eficazmente la inferencia de tipos y a evitar errores comunes. También exploraremos bibliotecas como zod y yup para validación de esquemas, así como estrategias para gestionar el estado global con total seguridad de tipos.",
-        "date": "2025-02-15",
-        "url": "#blog-post-3"
-      },
-      {
-        "id": 4,
-        "title": "Desatando el poder de Salesforce Einstein en 2025",
-        "excerpt": "Explore cómo las capacidades de IA de Salesforce Einstein están revolucionando el CRM y la interacción con el cliente...",
-        "content": "Salesforce Einstein sigue siendo un cambio de juego para las empresas que aprovechan la IA dentro de su CRM. En 2024, Einstein ofrece análisis predictivos sofisticados, recomendaciones inteligentes y flujos de trabajo automatizados para ventas, servicio y marketing. Esta publicación cubre los últimos avances, incluido el PNL mejorado para obtener información del cliente, pronósticos precisos y viajes del cliente personalizados. Descubra aplicaciones prácticas y cómo las empresas pueden aprovechar Einstein para ofrecer experiencias excepcionales e impulsar el crecimiento, desde la previsión de ventas hasta la automatización del servicio.",
-        "date": "2025-10-10",
-        "url": "#blog-post-4"
-      },
-      {
-        "id": 5,
-        "title": "Dominando Salesforce Flow: Estrategias de automatización para la eficiencia",
-        "excerpt": "Aprenda a crear potentes automatizaciones con Salesforce Flow para optimizar los procesos comerciales y aumentar la productividad...",
-        "content": "Salesforce Flow es una herramienta indispensable para automatizar procesos comerciales complejos sin necesidad de un código extenso. Esta guía cubre estrategias avanzadas de eficiencia y escalabilidad, desde flujos de pantalla para experiencias de usuario hasta flujos activados por registros. Profundice en las mejores prácticas para diseñar flujos robustos, la gestión de errores y la integración con sistemas externos. Aprenda a aprovechar los subflujos, las colecciones y las acciones invocables personalizadas para automatizaciones sofisticadas, reduciendo el esfuerzo manual y mejorando la precisión de los datos. Transforme la eficiencia operativa de su organización con Salesforce Flow.",
-        "date": "2025-10-11",
-        "url": "#blog-post-5"
-      },
-      {
-        "id": 6,
-        "title": "Guia SaaS Dev: de MVP a producto escalable",
-        "excerpt": "Una guia practica para construir un producto SaaS con arquitectura correcta, modelo de precios y metricas de crecimiento desde el inicio...",
-        "content": "Crear un producto SaaS exitoso no es solo lanzar funciones rapido. En este articulo cubrimos todo el ciclo SaaS: validar el problema, definir un MVP, elegir una arquitectura multi-tenant y configurar autenticacion y facturacion de forma segura.\n\nAprenderas a estructurar tu base de codigo para escalar, medir indicadores clave como MRR, churn y activacion, y priorizar el roadmap segun feedback real de clientes. El objetivo es lanzar rapido sin comprometer la escalabilidad.",
-        "date": "2026-04-10",
-        "url": "#blog-post-6"
       }
     ],
     "freelance": {

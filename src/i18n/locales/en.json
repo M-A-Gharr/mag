@@ -15,7 +15,7 @@
   "hero": {
     "meta": {
       "title": "Mohamed Amine Gharrab · Full-Stack Developer | AI Automation | E-commerce",
-      "description": "Full-Stack Developer specializing in web applications, AI-powered automation, e-commerce and digital transformation."
+      "description": "Full-Stack Developer in Casablanca: web applications, AI automation, e-commerce (PrestaShop, WordPress, Shopify) and CRM integration."
     },
     "title": "Full-Stack Developer\n& AI Automation 🚀",
     "subtitle": "I build web applications, AI-powered automations and e-commerce platforms that streamline business workflows.",
@@ -396,7 +396,79 @@
     },
     "sectionTitle": "Professional Bonus",
     "testimonials": "Testimonials",
-    "blog": "Tech Blog",
+    "caseStudies": {
+      "title": "Case Studies",
+      "challenge": "The challenge",
+      "approach": "What I did",
+      "result": "The result",
+      "stack": "Stack",
+      "read": "Read the case study",
+      "viewProject": "See the project",
+      "prev": "Previous case study",
+      "next": "Next case study",
+      "items": [
+        {
+          "projectId": 11,
+          "sector": "Fashion retail · Generative AI",
+          "challenge": "Showing each new shawl or scarf worn by a model meant organising a photo shoot, so many products went online with a flat photo only.",
+          "approach": [
+            "Studied how the marketing team and the stores actually prepare their visuals",
+            "Built an in-house studio with two AI engines: lively scenes, or a faithful virtual try-on",
+            "Added a shared generation queue, quotas per store and an approval step to protect the brand image",
+            "Product sheets in three languages and short video clips generated from a visual"
+          ],
+          "result": "An on-brand visual of the product being worn, in a few clicks instead of a photo shoot, ready for the online store, social media and customer catalogues."
+        },
+        {
+          "projectId": 8,
+          "sector": "Multilingual e-commerce · SEO",
+          "challenge": "A scarf and shawl brand with a network of physical stores had an online shop that was hard to find on Google and disconnected from in-store stock.",
+          "approach": [
+            "Redesigned the theme, pages and customer journey in French, English and Arabic",
+            "Built 20+ custom modules: upsells, cart rewards, tiered discounts, affiliate tracking",
+            "Synced stock from the ERP file twice a day, with in-store availability on every product page",
+            "Rebuilt the multilingual SEO: structure, content, metadata and redirects"
+          ],
+          "result": "From page 10 to page 1 of Google in all three languages, with a store now maintained and secured every day."
+        },
+        {
+          "projectId": 6,
+          "sector": "B2B export · AI qualification",
+          "challenge": "The export team searched for distributors by hand, across web searches, spreadsheets and inboxes, with no shared view of who had already been contacted.",
+          "approach": [
+            "Discovery of target companies from web search and AI suggestions",
+            "Contact enrichment that prioritises decision-makers",
+            "AI qualification: score, buying intent and a suggested first message",
+            "Kanban pipeline, follow-ups and reports, with a person approving every contact"
+          ],
+          "result": "One shared tool from the first search to the sale: prospects are qualified before anyone spends time on them, and no lead is forgotten."
+        },
+        {
+          "projectId": 12,
+          "sector": "Export · B2B CRM",
+          "challenge": "A heritage scarf and shawl house wanted to reach wholesalers abroad, but its website was not built for trade buyers and enquiries got lost.",
+          "approach": [
+            "A multilingual showcase site, with a right-to-left Arabic version and a catalogue you leaf through like a book",
+            "No cart: every page leads to a trade enquiry, saved and retried until it reaches the CRM",
+            "Prospect search on Instagram, TikTok and Facebook, with multilingual scoring",
+            "A 7-stage pipeline, territories, roles and a history no one can edit"
+          ],
+          "result": "International buyers land on a site made for them, and every enquiry and prospect is followed up to the first order."
+        },
+        {
+          "projectId": 13,
+          "sector": "E-commerce migration",
+          "challenge": "A fashion store had to move from WooCommerce to PrestaShop 9 without losing its customers, its order history or the Google ranking of its pages.",
+          "approach": [
+            "A Python extractor for the catalogue, content, customers and orders",
+            "A replayable import with a dry run: no duplicates, manual edits never overwritten",
+            "A custom theme and modules, including a one-page checkout",
+            "A 301 redirect for every old URL, plus automated browser tests on desktop and mobile"
+          ],
+          "result": "A clean switch: order totals checked against the source, every old link still working, and deployment guides for the team."
+        }
+      ]
+    },
     "availability": "Freelance Availability",
     "read": "Read More",
     "close": "Close",
@@ -418,56 +490,6 @@
         "author": "Hicham Benmetraf",
         "role": "Lead Developer, CellInnovate",
         "quote": "A reliable and creative collaborator who significantly improved our technical stack and development processes."
-      }
-    ],
-    "blogPosts": [
-      {
-        "id": 1,
-        "title": "Optimizing React Performance in 2025",
-        "excerpt": "Discover the latest techniques to significantly improve the performance of your React applications...",
-        "content": "In this article, we'll explore advanced techniques to optimize the performance of your React applications in 2025. We'll cover intelligent caching, using React Server Components, render optimization with new APIs, and best practices for reducing bundle size.\n\nPerformance has become more crucial than ever in modern web application development, and React continues to evolve to meet these challenges. We'll see how to leverage the latest features of the React ecosystem to create smooth and responsive user experiences.",
-        "date": "2025-04-18",
-        "url": "#blog-post-1"
-      },
-      {
-        "id": 2,
-        "title": "Micro-frontends Architecture Explained",
-        "excerpt": "A detailed analysis of micro-frontends architecture and how to implement it effectively in your projects...",
-        "content": "Micro-frontends architecture has become a popular approach for managing large, complex frontend applications. In this article, we break down this concept in detail and explore how it can be implemented effectively.\n\nWe'll examine different integration strategies, performance and maintainability trade-offs, and concrete implementation examples with modern frameworks like React, Vue, and Angular. You'll also learn how to solve common challenges related to state sharing, navigation, and visual consistency.",
-        "date": "2025-03-22",
-        "url": "#blog-post-2"
-      },
-      {
-        "id": 3,
-        "title": "Advanced TypeScript for React Developers",
-        "excerpt": "Master advanced TypeScript concepts to make your React code more robust and maintainable...",
-        "content": "This article delves into advanced TypeScript features specifically useful for React developers. We'll cover generic types, conditional types, mapped types, and advanced type concepts.\n\nYou'll learn how to create strongly-typed components that are both flexible and safe, how to effectively use type inference, and how to avoid common pitfalls. We'll also explore libraries like zod and yup for schema validation, as well as strategies for managing global state with full type safety.",
-        "date": "2025-02-15",
-        "url": "#blog-post-3"
-      },
-      {
-        "id": 4,
-        "title": "Unleashing the Power of Salesforce Einstein in 2025",
-        "excerpt": "Explore how Salesforce Einstein's AI capabilities are revolutionizing CRM and customer engagement...",
-        "content": "Salesforce Einstein continues to be a game-changer for businesses leveraging AI within their CRM. In 2024, Einstein offers sophisticated predictive analytics, intelligent recommendations, and automated workflows for sales, service, and marketing. This post covers the latest advancements, including enhanced NLP for customer insights, accurate forecasting, and personalized customer journeys. Discover practical applications and how businesses can harness Einstein to deliver exceptional experiences and drive growth, from sales forecasting to service automation.",
-        "date": "2025-10-10",
-        "url": "#blog-post-4"
-      },
-      {
-        "id": 5,
-        "title": "Mastering Salesforce Flow: Automation Strategies for Efficiency",
-        "excerpt": "Learn how to build powerful automations with Salesforce Flow to streamline business processes and boost productivity...",
-        "content": "Salesforce Flow is an indispensable tool for automating complex business processes without extensive code. This guide covers advanced strategies for efficiency and scalability, from screen flows for user experiences to record-triggered flows. Dive into best practices for designing robust flows, error management, and integrating with external systems. Learn to leverage subflows, collections, and custom invocable actions for sophisticated automations, reducing manual effort and improving data accuracy. Transform your organization's operational efficiency with Salesforce Flow.",
-        "date": "2025-10-11",
-        "url": "#blog-post-5"
-      },
-      {
-        "id": 6,
-        "title": "SaaS Dev Playbook: From MVP to Scalable Product",
-        "excerpt": "A practical guide to build a SaaS product with the right architecture, pricing model, and growth metrics from day one...",
-        "content": "Building a successful SaaS product requires more than shipping features quickly. In this post, we cover the full SaaS lifecycle: validating the problem, defining an MVP scope, choosing a multi-tenant architecture, and setting up secure authentication and billing.\n\nYou will learn how to structure your codebase for long-term scalability, track key metrics like MRR, churn, and activation, and prioritize roadmap decisions based on customer feedback. The goal is to help you launch faster while creating a product that can scale reliably.",
-        "date": "2026-04-10",
-        "url": "#blog-post-6"
       }
     ],
     "freelance": {

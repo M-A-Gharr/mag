@@ -17,7 +17,7 @@ import Contact from '@/pages/Contact';
 import Bonus from '@/pages/Bonus';
 // import BonusProfessionnelsSection from '@/components/BonusProfessionelsSection';
 import Footer from '@/components/Footer';
-import { Helmet } from 'react-helmet-async';
+import Seo from '@/components/Seo';
 
 
 const Index = () => {
@@ -36,15 +36,7 @@ const Index = () => {
 
   return (
     <div className="relative min-h-screen bg-background text-foreground" dir={i18n.language === 'ar' ? 'rtl' : 'ltr'}>
-      <Helmet>
-        <title>{t('hero.title')} | M.A.G</title>
-        <meta name="description" content={t('hero.subtitle')} />
-        <meta property="og:title" content={t('hero.title')} />
-        <meta property="og:description" content={t('hero.subtitle')} />
-        <meta property="og:image" content="/images/profile/magprofile.png" />
-        <meta property="og:type" content="website" />
-        <html lang={i18n.language} dir={i18n.language === 'ar' ? 'rtl' : 'ltr'} />
-      </Helmet>
+      <Seo />
 
       <Header />
       <main>
