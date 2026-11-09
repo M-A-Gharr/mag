@@ -4,6 +4,7 @@ import { initReactI18next } from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
 
 import en from './locales/en.json';
+import { syncUrlWithLanguage } from './paths';
 
 // Only English (the fallback) is in the main bundle; each other language is downloaded the
 // first time it is used. The 7 files together weigh about 240 KB.
@@ -19,19 +20,24 @@ const lazyLocales = {
   },
 };
 
+// The address follows the language: /fr/ and /ar/ have their own page, the others use /.
+i18next.on('languageChanged', syncUrlWithLanguage);
+
 i18next
   .use(lazyLocales)
   .use(LanguageDetector)
   .use(initReactI18next)
   .init({
-    // No forced language: the visitor's choice (saved when they pick one) wins, then the
-    // browser's language; anything outside the 7 languages falls back to English.
+    // No forced language (see detection below); anything outside the 7 languages falls back to English.
     fallbackLng: 'en',
     supportedLngs: ['en', 'fr', 'ar', 'es', 'it', 'ru', 'hi'],
     resources: { en: { translation: en } },
     partialBundledLanguages: true,
     detection: {
-      order: ['localStorage', 'navigator'],
+      // /fr/ or /ar/ in the address wins (search results, shared links), then the saved choice,
+      // then the browser's language.
+      order: ['path', 'localStorage', 'navigator'],
+      lookupFromPathIndex: 0,
       caches: ['localStorage'],
       // New key: the old one ("i18nextLng") holds "en" for past visitors, saved while
       // English was forced, and would hide their browser language.

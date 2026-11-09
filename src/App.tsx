@@ -23,6 +23,9 @@ const App = () => (
           </div>}>
             <Routes>
               <Route path="/" element={<Index />} />
+              {/* Language pages (generated at build time with translated meta tags) */}
+              <Route path="/fr" element={<Index />} />
+              <Route path="/ar" element={<Index />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>
