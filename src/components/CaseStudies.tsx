@@ -95,18 +95,9 @@ const CaseStudies = () => {
         </AnimatePresence>
       </div>
 
-      <div className="mt-5 flex items-center justify-between gap-3">
-        <Button
-          variant="outline"
-          size="sm"
-          onClick={() => setOpen(true)}
-          className="group gap-1.5 hover:border-[#483dfb]/60 hover:text-[#483dfb]"
-        >
-          {t('bonus.caseStudies.read')}
-          <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 rtl:-scale-x-100" />
-        </Button>
-
-        <div className="flex items-center gap-1">
+      {/* Pagination on its own row, then the button: the card is narrow on phones and in the desktop column */}
+      <div className="mt-5 flex flex-col gap-3">
+        <div className="flex items-center justify-between gap-2">
           <Button variant="ghost" size="icon" className="h-9 w-9 rounded-full" onClick={() => go(-1)} aria-label={t('bonus.caseStudies.prev')}>
             <ChevronLeft className="h-4 w-4 rtl:rotate-180" />
           </Button>
@@ -135,6 +126,15 @@ const CaseStudies = () => {
             <ChevronRight className="h-4 w-4 rtl:rotate-180" />
           </Button>
         </div>
+        <Button
+          variant="outline"
+          size="sm"
+          onClick={() => setOpen(true)}
+          className="group w-full gap-1.5 hover:border-[#483dfb]/60 hover:text-[#483dfb]"
+        >
+          {t('bonus.caseStudies.read')}
+          <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 rtl:-scale-x-100" />
+        </Button>
       </div>
 
       <Dialog open={open} onOpenChange={setOpen}>

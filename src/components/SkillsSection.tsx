@@ -89,8 +89,8 @@ const SkillsSection = () => {
         { id: 'ts', name: 'TypeScript', level: 'advanced' },
         { id: 'python', name: 'Python', level: 'advanced' },
         { id: 'php', name: 'PHP', level: 'advanced' },
-        { id: 'csharp', name: 'C#', level: 'intermediate' },
-        { id: 'java', name: 'Java', level: 'intermediate' },
+        { id: 'csharp', name: 'C#', level: 'advanced' },
+        { id: 'java', name: 'Java', level: 'advanced' },
         { id: 'htmlcss', name: 'HTML / CSS', level: 'expert' },
       ]
     },
@@ -113,7 +113,7 @@ const SkillsSection = () => {
       icon: <Database className="h-6 w-6 text-[#483dfb]" aria-label='Backend Icon'/>,
       skills: [
         { id: 'node', name: 'Node.js', level: 'advanced' },
-        { id: 'aspnet', name: 'ASP.NET', level: 'intermediate' },
+        { id: 'aspnet', name: 'ASP.NET', level: 'advanced' },
         { id: 'postgres', name: 'PostgreSQL', level: 'advanced' },
         { id: 'mssql', name: 'MSSQL', level: 'advanced' },
         { id: 'mysql', name: 'MySQL', level: 'advanced' },

@@ -554,7 +554,9 @@
         "Theme customization and UX improvements",
         "Business process automation"
       ]
-    }
+    },
+    "prev": "Previous testimonial",
+    "next": "Next testimonial"
   },
   "contact": {
     "meta": {

@@ -246,3 +246,9 @@
     }
   }
 }
+
+/* Testimonials: story-style progress bar */
+@keyframes testimonial-progress {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}

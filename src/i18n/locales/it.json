@@ -554,7 +554,9 @@
     "meta": {
       "description": "Testimonianze, blog tecnico e disponibilità freelance di Mohamed Amine Gharrab, sviluppatore Full-Stack.",
       "title": "Mohamed Amine Gharrab"
-    }
+    },
+    "prev": "Testimonianza precedente",
+    "next": "Testimonianza successiva"
   },
   "contact": {
     "meta": {
