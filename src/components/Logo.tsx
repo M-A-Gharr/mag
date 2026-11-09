@@ -34,6 +34,8 @@ const Logo = ({ className, playInView = false }: LogoProps) => (
   <motion.span
     aria-label="M.A.G"
     role="img"
+    // A wordmark always reads left to right, even inside the Arabic (RTL) layout.
+    dir="ltr"
     className={cn('group inline-flex select-none items-end leading-none tracking-[-0.02em] text-foreground', className)}
     style={{ fontFamily: '"Space Grotesk", Inter, system-ui, sans-serif', fontWeight: 700 }}
     variants={container}

@@ -5,7 +5,12 @@
     "projects": "المشاريع",
     "certificates": "الشهادات",
     "bonus": "مزايا للمحترفين",
-    "contact": "اتصل"
+    "contact": "اتصل",
+    "menu": "القائمة",
+    "close": "إغلاق",
+    "letsTalk": "لنعمل معاً",
+    "language": "اللغة",
+    "theme": "المظهر"
   },
   "hero": {
     "meta": {
