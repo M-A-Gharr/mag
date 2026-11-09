@@ -26,3 +26,5 @@ dist-ssr
 # Local files, not part of the portfolio
 src/CCOCRSAGE.md
 compos.js
+# Original video sources (compressed copies live in public/videos/projects)
+/*.mp4

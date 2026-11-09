@@ -1,6 +1,6 @@
 import { lazy, Suspense, useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { ChevronLeft, ChevronRight, Code, Globe, ShoppingBag, User, Cpu, Target, GraduationCap, TrendingUp, Store } from 'lucide-react';
+import { Box, ChevronLeft, ChevronRight, Code, Globe, ShoppingBag, User, Cpu, Target, GraduationCap, TrendingUp, Store } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -12,6 +12,7 @@ import SwipeCardStack from './SwipeCardStack';
 import { EASE_OUT, Reveal, SectionHeading, Stagger, StaggerItem } from './motion';
 import type { CrumpleCarouselHandle } from './CrumpleCardCarousel';
 import { useProjectCovers, type CoverInput } from './projectCovers';
+import ProjectVideo, { type ProjectVideoHandle } from './ProjectVideo';
 
 // three.js is only downloaded when the projects section renders.
 const CrumpleCardCarousel = lazy(() => import('./CrumpleCardCarousel'));
@@ -29,6 +30,8 @@ type Project = {
   demo?: string;
   images: string[]; // tableau pour les url des images
   captions?: string[]; // tableau pour les légendes des images
+  /** Presentation video, shown instead of the screenshot stack. */
+  video?: { src: string; poster: string };
 };
 
 const ProjectsSection = () => {
@@ -65,10 +68,22 @@ const ProjectsSection = () => {
     } else if (e.key === 'ArrowLeft') {
       e.preventDefault();
       go(-1);
+    } else if (e.key === 'Enter' && projects[active].video) {
+      e.preventDefault();
+      playVideo();
     } else if (e.key === 'Enter' && projects[active].images.length > 0) {
       e.preventDefault();
       openModal(projects[active], 0);
     }
+  };
+
+  const detailsRef = useRef<HTMLDivElement>(null);
+  const videoRef = useRef<ProjectVideoHandle>(null);
+  // Clicking the centred card of a project with a video brings the player into view and starts it.
+  const playVideo = () => {
+    setInteracted(true);
+    detailsRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    videoRef.current?.play();
   };
 
   const openModal = (project: Project, imageIndex: number) => {
@@ -95,7 +110,14 @@ const ProjectsSection = () => {
     {
       id: 6,
       icon: <Target className="h-8 w-8 text-[#483dfb]" />,
-      images: []
+      images: [],
+      video: { src: '/videos/projects/softtech-sli.mp4', poster: '/videos/projects/softtech-sli-poster.jpg' }
+    },
+    {
+      id: 10,
+      icon: <Box className="h-8 w-8 text-[#483dfb]" />,
+      images: [],
+      video: { src: '/videos/projects/vr-showroom.mp4', poster: '/videos/projects/vr-showroom-poster.jpg' }
     },
     {
       id: 7,
@@ -160,7 +182,7 @@ const ProjectsSection = () => {
       title: t(`projects.items.${project.id}.title`),
       category: technologies[0] ?? '',
       stack: technologies.slice(1),
-      image: project.images[0],
+      image: project.images[0] ?? project.video?.poster,
     };
   });
   const covers = useProjectCovers(coverInputs, i18n.language);
@@ -199,7 +221,8 @@ const ProjectsSection = () => {
                   onInteract={() => setInteracted(true)}
                   onCardClick={(i) => {
                     const project = projects[i];
-                    if (project.images.length > 0) openModal(project, 0);
+                    if (project.video) playVideo();
+                    else if (project.images.length > 0) openModal(project, 0);
                   }}
                   onUnsupported={() => setWebglOk(false)}
                   className={`w-full ${STAGE_HEIGHT}`}
@@ -275,7 +298,7 @@ const ProjectsSection = () => {
           <p className="mt-2 text-center text-xs text-muted-foreground">{t('projects.carouselHint')}</p>
 
           {/* Details of the centred project */}
-          <div className="mt-8 md:mt-10">
+          <div ref={detailsRef} className="mt-8 md:mt-10 scroll-mt-24">
             <AnimatePresence mode="wait" initial={false}>
               <motion.article
                 key={current.id}
@@ -284,7 +307,7 @@ const ProjectsSection = () => {
                 exit={{ opacity: 0, y: -12, filter: 'blur(4px)' }}
                 transition={{ duration: 0.55, ease: EASE_OUT }}
                 className={`grid gap-8 rounded-2xl border border-secondary/20 bg-secondary/20 p-6 md:p-8 lg:p-10 ${
-                  current.images.length > 0 ? 'lg:grid-cols-[1.15fr_1fr] lg:items-center' : ''
+                  current.images.length > 0 || current.video ? 'lg:grid-cols-[1.15fr_1fr] lg:items-center' : ''
                 }`}
               >
                 <div className="min-w-0">
@@ -347,7 +370,17 @@ const ProjectsSection = () => {
                   </div>
                 </div>
 
-                {current.images.length > 0 && (
+                {current.video ? (
+                  <div className="min-w-0">
+                    <ProjectVideo
+                      ref={videoRef}
+                      src={current.video.src}
+                      poster={current.video.poster}
+                      label={t('projects.videoOf', { title: t(`projects.items.${current.id}.title`) })}
+                      playLabel={t('projects.playVideo')}
+                    />
+                  </div>
+                ) : current.images.length > 0 && (
                   <div className="min-w-0">
                     <SwipeCardStack
                       images={current.images.map((src, i) => ({

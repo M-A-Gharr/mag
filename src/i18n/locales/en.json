@@ -313,6 +313,25 @@
           "Cash on delivery",
           "Brand identity: logo and positioning"
         ]
+      },
+      "10": {
+        "title": "VR Showroom",
+        "description": "A personal project: an immersive real estate showroom on the web. Visitors explore each property in 3D, walk through it room by room or in 360°, and every visit becomes a qualified lead in a built-in CRM.",
+        "technologies": [
+          "React",
+          "Three.js",
+          "WebGL",
+          "3D",
+          "CRM"
+        ],
+        "features": [
+          "Project catalogue and pages with renderings and unit types",
+          "Interactive floor plan that adapts to the chosen surface",
+          "3D model: rotate it, open each room, see its dimensions",
+          "Immersive walkthrough and 360° panoramas",
+          "Built-in CRM: automatic lead scoring, assignment and pipeline",
+          "Analytics: visit journeys, lead funnel, most viewed properties"
+        ]
       }
     },
     "swipeHint": "Drag the top card to see the next screenshot, or click it to enlarge.",
@@ -320,9 +339,11 @@
     "next": "Next project",
     "goTo": "Go to project {{n}}: {{title}}",
     "viewScreenshots": "Project screenshots",
-    "carouselHint": "Drag, swipe or use the arrows to browse the projects. Click the centre card to see its screenshots.",
+    "carouselHint": "Drag, swipe or use the arrows to browse the projects. Click the centre card to see its screenshots or video.",
     "code": "Source code",
-    "demo": "Live demo"
+    "demo": "Live demo",
+    "playVideo": "Play the video",
+    "videoOf": "{{title}} – video"
   },
   "certificates": {
     "title": "Certificates & Education",
