@@ -33,7 +33,7 @@
           "period": "2026 – Present",
           "role": "Full-Stack Developer & Digital Solutions",
           "company": "SIMTIS · Casablanca",
-          "desc": "Built SoftTech Lead Intelligence, a CRM-integrated lead generation and qualification app. Led the group-wide Claude AI training program. Developed and maintain PrestaShop and WordPress e-commerce sites, and took a PrestaShop site from page 10 to page 1 on Google in all 3 of its languages."
+          "desc": "Built an in-house AI studio that turns product photos into model visuals, a lead intelligence platform (SLI) and a B2B prospecting CRM with its export showcase site. Redesigned a multilingual PrestaShop store with 20+ custom modules, migrated a WooCommerce store to PrestaShop 9, and led the group-wide Claude AI training program."
         },
         {
           "period": "Personal project",
@@ -189,82 +189,24 @@
           "5": "Inventory Overview with detailed stock levels and analytics"
         }
       },
-      "3": {
-        "title": "Bakery Website",
-        "description": "An elegant showcase website for a bakery, highlighting products, services, and contact information.",
-        "technologies": [
-          "React",
-          "Next.js",
-          "Tailwind CSS",
-          "Prismic CMS"
-        ],
-        "features": [
-          "Responsive design",
-          "Product catalog",
-          "Reservation integration",
-          "SEO optimized"
-        ],
-        "captions": {
-          "0": "Fully responsive design for all devices",
-          "1": "Interactive product catalog",
-          "2": "Client testimonials section",
-          "3": "Contact form integrated with Google Maps"
-        }
-      },
-      "4": {
-        "title": "Portfolio",
-        "description": "A modern and customizable portfolio template for professionals who want to showcase their work and skills.",
-        "technologies": [
-          "React",
-          "TypeScript",
-          "Framer Motion",
-          "Tailwind CSS"
-        ],
-        "features": [
-          "Customizable themes",
-          "Modular sections",
-          "Smooth animations",
-          "Mobile optimized"
-        ],
-        "captions": {
-          "0": "Animated welcome page with smooth transitions",
-          "1": "Projects section with category filtering",
-          "2": "Skills section featuring animated progress bars",
-          "3": "Contact form integrated with Google Maps"
-        }
-      },
-      "5": {
-        "title": "E-commerce",
-        "description": "A complete e-commerce platform with product management, shopping cart, secure payments, and order tracking.",
-        "technologies": [
-          "React",
-          "Node.js",
-          "MongoDB",
-          "Stripe",
-          "Redux",
-          "Express"
-        ],
-        "features": [
-          "Filterable product catalog",
-          "Persistent shopping cart",
-          "Secure payment gateway",
-          "Order management"
-        ]
-      },
       "6": {
-        "title": "SoftTech Lead Intelligence (SLI)",
-        "description": "A lead generation and qualification application integrated with the CRM, built at SIMTIS to identify prospects and contacts and track the sales teams’ daily activity.",
+        "title": "Lead Intelligence Platform (SLI)",
+        "description": "A B2B lead generation and qualification platform built at SIMTIS for the export team: it discovers target companies, finds decision-makers, qualifies prospects with AI and follows every opportunity to the sale — with a person always deciding before any contact.",
         "technologies": [
-          "React.js",
-          "Node.js",
-          "CRM Integration",
-          "Lead Intelligence"
+          "React",
+          "TanStack Start",
+          "Supabase",
+          "Vercel",
+          "OpenAI",
+          "Hunter.io"
         ],
         "features": [
-          "Prospect identification and qualification",
-          "Contact discovery for target accounts",
-          "Integration with the company CRM",
-          "Daily activity tracking for sales teams"
+          "Prospect discovery from web search and AI suggestions, with human review",
+          "Contact enrichment that prioritises decision-makers",
+          "AI qualification: score, buying intent, signals and recommended message",
+          "Kanban pipeline, follow-ups, agenda and exportable reports",
+          "Separate export and local market views, with roles and permissions",
+          "Data quality checks: anomalies, duplicates and normalisation"
         ]
       },
       "7": {
@@ -284,20 +226,21 @@
         ]
       },
       "8": {
-        "title": "PrestaShop Redesign & Multilingual SEO",
-        "description": "Complete redesign of a multilingual PrestaShop e-commerce site at SIMTIS: new theme and user experience, custom back-office modules, and an SEO strategy that took it from page 10 to page 1 of Google in all three of its languages. I also handle its daily maintenance and security.",
+        "title": "E-commerce Redesign, SEO & Custom PrestaShop Modules",
+        "description": "Complete redesign of a multilingual PrestaShop store for a scarf and shawl brand with a network of physical stores: new theme and user experience, 20+ custom modules, automated stock synchronisation, and an SEO strategy that took it from page 10 to page 1 of Google in all three of its languages. I also handle its daily maintenance and security.",
         "technologies": [
           "PrestaShop",
           "PHP",
           "Custom modules",
           "Multilingual SEO",
-          "UX/UI",
-          "Security"
+          "FASHN AI",
+          "Cron / CSV"
         ],
         "features": [
-          "Complete redesign of the website: theme, pages and user experience",
+          "Complete redesign in French, English and Arabic: theme, pages and user experience",
+          "20+ custom modules: upsell pop-ups, cart rewards, tiered discounts, affiliate tracking, live sales notifications, sales by channel",
+          "Automated stock sync from the ERP file twice a day, with in-store availability on each product page",
           "Multilingual SEO: from page 10 to page 1 of Google in all 3 languages",
-          "Custom back-office modules tailored to the team’s needs",
           "Daily maintenance, updates and security monitoring"
         ]
       },
@@ -333,6 +276,64 @@
           "Immersive walkthrough and 360° panoramas",
           "Built-in CRM: automatic lead scoring, assignment and pipeline",
           "Analytics: visit journeys, lead funnel, most viewed properties"
+        ]
+      },
+      "11": {
+        "title": "Simtis Studio — AI Fashion Visuals",
+        "description": "An in-house AI studio built at SIMTIS that turns a simple photo of a shawl or scarf into professional visuals worn by a model, ready for e-commerce, social media and customer catalogues — in a few clicks instead of a photo shoot.",
+        "technologies": [
+          "OpenAI",
+          "FASHN AI",
+          "Generative AI",
+          "Role-based access",
+          "FR / EN / AR (RTL)"
+        ],
+        "features": [
+          "Model renders from a product photo: pose, setting, wearing style and photo style",
+          "Two AI engines: lively scenes and posters, or faithful virtual try-on",
+          "Shared generation queue with daily and monthly quotas per store",
+          "Approval workflow: renders approved or sent back to be redone",
+          "Product sheets in 3 languages, exportable as PDF",
+          "Photo to video: a render becomes a short animated clip"
+        ]
+      },
+      "12": {
+        "title": "Export Showcase Site & B2B Prospecting CRM",
+        "description": "For a heritage scarf and shawl house: a multilingual showcase website for wholesalers and distributors abroad, connected to a B2B CRM that finds, scores and follows international prospects — from first contact to the first order.",
+        "technologies": [
+          "WordPress",
+          "CRM",
+          "Apify",
+          "Lead scoring",
+          "Multilingual / RTL"
+        ],
+        "features": [
+          "Showcase site with a catalogue you leaf through like a book and no cart: every page leads to a trade enquiry",
+          "Multilingual site with an Arabic right-to-left layout, designed for mobile",
+          "Enquiries saved and retried until they reach the CRM, bots filtered out",
+          "Prospect search on Instagram, TikTok and Facebook with multilingual rule-based scoring",
+          "Human review, duplicate detection, 7-stage pipeline and follow-ups",
+          "Roles, territories and a history no one can edit"
+        ]
+      },
+      "13": {
+        "title": "WooCommerce → PrestaShop 9 Migration",
+        "description": "Full migration of a fashion e-commerce store from WordPress/WooCommerce to PrestaShop 9: catalogue, content, customers and order history, with a custom theme and modules, a replayable import and every old URL redirected to keep its SEO.",
+        "technologies": [
+          "PrestaShop 9",
+          "PHP 8.4",
+          "Python",
+          "WooCommerce",
+          "Puppeteer",
+          "Docker"
+        ],
+        "features": [
+          "Python extractor for the public site (read-only) and the WooCommerce data",
+          "Replayable import with dry run: no duplicates, manual edits never overwritten",
+          "Customers and full order history migrated, totals checked against the source",
+          "Custom theme and modules: editable homepage blocks, blog, one-page checkout",
+          "301 redirects for every old URL, generated and checked automatically",
+          "Automated browser tests on desktop and mobile, plus deployment guides"
         ]
       }
     },

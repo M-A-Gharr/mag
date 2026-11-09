@@ -33,7 +33,7 @@
           "period": "2026 – Actualidad",
           "role": "Desarrollador Full-Stack y Soluciones Digitales",
           "company": "SIMTIS · Casablanca",
-          "desc": "Diseñé y desarrollé SoftTech Lead Intelligence, una aplicación de generación y cualificación de leads integrada con el CRM. Dirigí el programa de formación en IA (Claude) de todo el grupo. Desarrollo y mantengo tiendas PrestaShop y WordPress, y llevé un sitio PrestaShop de la página 10 a la página 1 de Google en sus 3 idiomas."
+          "desc": "Creé un estudio de IA interno que convierte fotos de producto en imágenes con modelo, una plataforma de lead intelligence (SLI) y un CRM de prospección B2B con su sitio escaparate para exportación. Rediseñé una tienda PrestaShop multilingüe con más de 20 módulos a medida, migré una tienda WooCommerce a PrestaShop 9 y dirigí el programa de formación en IA (Claude) del grupo."
         },
         {
           "period": "Proyecto personal",
@@ -189,82 +189,24 @@
           "5": "Resumen de inventario con niveles de stock detallados y análisis"
         }
       },
-      "3": {
-        "title": "Bakery Website",
-        "description": "Un sitio web elegante para panaderías, destacando productos, servicios e información de contacto.",
-        "technologies": [
-          "React",
-          "Next.js",
-          "Tailwind CSS",
-          "Prismic CMS"
-        ],
-        "features": [
-          "Diseño responsivo",
-          "Catálogo de productos",
-          "Integración de reservas",
-          "Optimizado para SEO"
-        ],
-        "captions": {
-          "0": "Diseño completamente responsivo para todos los dispositivos",
-          "1": "Catálogo de productos interactivo",
-          "2": "Sección de testimonios de clientes",
-          "3": "Formulario de contacto integrado con Google Maps"
-        }
-      },
-      "4": {
-        "title": "Portfolio",
-        "description": "Una plantilla de portfolio moderna y personalizable para profesionales que desean mostrar su trabajo y habilidades.",
-        "technologies": [
-          "React",
-          "TypeScript",
-          "Framer Motion",
-          "Tailwind CSS"
-        ],
-        "features": [
-          "Temas personalizables",
-          "Secciones modulares",
-          "Animaciones suaves",
-          "Optimizado para móviles"
-        ],
-        "captions": {
-          "0": "Página de bienvenida animada con transiciones suaves",
-          "1": "Sección de proyectos con filtrado por categorías",
-          "2": "Sección de habilidades con barras de progreso animadas",
-          "3": "Formulario de contacto integrado con Google Maps"
-        }
-      },
-      "5": {
-        "title": "E-commerce",
-        "description": "Una plataforma completa de comercio electrónico con gestión de productos, carrito de compras, pagos seguros y seguimiento de pedidos.",
-        "technologies": [
-          "React",
-          "Node.js",
-          "MongoDB",
-          "Stripe",
-          "Redux",
-          "Express"
-        ],
-        "features": [
-          "Catálogo de productos filtrable",
-          "Carrito de compras persistente",
-          "Pasarela de pago segura",
-          "Gestión de pedidos"
-        ]
-      },
       "6": {
-        "title": "SoftTech Lead Intelligence (SLI)",
-        "description": "Aplicación de generación y cualificación de leads integrada con el CRM, desarrollada en SIMTIS para identificar prospectos y contactos y seguir la actividad diaria de los equipos comerciales.",
+        "title": "Plataforma Lead Intelligence (SLI)",
+        "description": "Una plataforma de generación y cualificación de leads B2B desarrollada en SIMTIS para el equipo de exportación: descubre empresas objetivo, encuentra a los decisores, cualifica prospectos con IA y sigue cada oportunidad hasta la venta — siempre con una persona que decide antes de cualquier contacto.",
         "technologies": [
-          "React.js",
-          "Node.js",
-          "Integración CRM",
-          "Lead Intelligence"
+          "React",
+          "TanStack Start",
+          "Supabase",
+          "Vercel",
+          "OpenAI",
+          "Hunter.io"
         ],
         "features": [
-          "Identificación y cualificación de prospectos",
-          "Búsqueda de contactos en cuentas objetivo",
-          "Integración con el CRM de la empresa",
-          "Seguimiento de la actividad diaria de los comerciales"
+          "Descubrimiento de prospectos por búsqueda web y sugerencias de IA, con revisión humana",
+          "Enriquecimiento de contactos con prioridad a los decisores",
+          "Cualificación con IA: puntuación, intención de compra, señales y mensaje recomendado",
+          "Pipeline Kanban, seguimientos, agenda e informes exportables",
+          "Vistas separadas para exportación y mercado local, con roles y permisos",
+          "Control de calidad de datos: anomalías, duplicados y normalización"
         ]
       },
       "7": {
@@ -284,20 +226,21 @@
         ]
       },
       "8": {
-        "title": "Rediseño PrestaShop y SEO multilingüe",
-        "description": "Rediseño completo de una tienda PrestaShop multilingüe en SIMTIS: nuevo tema y nueva experiencia de usuario, módulos de back-office a medida y una estrategia SEO que la llevó de la página 10 a la página 1 de Google en sus tres idiomas. También me encargo de su mantenimiento diario y su seguridad.",
+        "title": "Rediseño e-commerce, SEO y módulos PrestaShop a medida",
+        "description": "Rediseño completo de una tienda PrestaShop multilingüe para una marca de chales y pañuelos con una red de tiendas físicas: nuevo tema y nueva experiencia de usuario, más de 20 módulos a medida, sincronización automática del stock y una estrategia SEO que la llevó de la página 10 a la página 1 de Google en sus tres idiomas. También me encargo de su mantenimiento diario y su seguridad.",
         "technologies": [
           "PrestaShop",
           "PHP",
           "Módulos a medida",
           "SEO multilingüe",
-          "UX/UI",
-          "Seguridad"
+          "FASHN AI",
+          "Cron / CSV"
         ],
         "features": [
-          "Rediseño completo del sitio: tema, páginas y experiencia de usuario",
+          "Rediseño completo en francés, inglés y árabe: tema, páginas y experiencia de usuario",
+          "Más de 20 módulos a medida: pop-ups de upsell, recompensas en el carrito, descuentos por tramos, seguimiento de afiliados, notificaciones de ventas en directo, ventas por canal",
+          "Sincronización automática del stock desde el archivo del ERP dos veces al día, con disponibilidad en tienda en cada ficha de producto",
           "SEO multilingüe: de la página 10 a la página 1 de Google en los 3 idiomas",
-          "Módulos de back-office a medida según las necesidades del equipo",
           "Mantenimiento diario, actualizaciones y supervisión de la seguridad"
         ]
       },
@@ -333,6 +276,64 @@
           "Recorrido inmersivo y panorámicas 360°",
           "CRM integrado: puntuación automática de leads, asignación y pipeline",
           "Analítica: recorridos de visita, embudo de leads, propiedades más vistas"
+        ]
+      },
+      "11": {
+        "title": "Simtis Studio — imágenes de moda con IA",
+        "description": "Un estudio de IA interno desarrollado en SIMTIS: a partir de una simple foto de un chal o un pañuelo, genera imágenes profesionales con modelo, listas para el e-commerce, las redes sociales y los catálogos de clientes — en unos clics en lugar de una sesión de fotos.",
+        "technologies": [
+          "OpenAI",
+          "FASHN AI",
+          "IA generativa",
+          "Acceso por roles",
+          "FR / EN / AR (RTL)"
+        ],
+        "features": [
+          "Imágenes con modelo a partir de una foto de producto: pose, escenario, forma de llevarlo y estilo fotográfico",
+          "Dos motores de IA: escenas vivas y carteles, o prueba virtual fiel",
+          "Cola de generación compartida con cuotas diarias y mensuales por tienda",
+          "Circuito de aprobación: imágenes aprobadas o devueltas para rehacer",
+          "Fichas de producto en 3 idiomas, exportables en PDF",
+          "De foto a vídeo: una imagen se convierte en un breve clip animado"
+        ]
+      },
+      "12": {
+        "title": "Sitio escaparate de exportación y CRM de prospección B2B",
+        "description": "Para una casa histórica de pañuelos y chales: un sitio escaparate multilingüe dirigido a mayoristas y distribuidores en el extranjero, conectado a un CRM B2B que encuentra, puntúa y sigue a los prospectos internacionales — del primer contacto al primer pedido.",
+        "technologies": [
+          "WordPress",
+          "CRM",
+          "Apify",
+          "Puntuación de leads",
+          "Multilingüe / RTL"
+        ],
+        "features": [
+          "Sitio escaparate con un catálogo que se hojea como un libro y sin carrito: cada página lleva a una solicitud profesional",
+          "Sitio multilingüe con diseño árabe de derecha a izquierda, pensado para móvil",
+          "Solicitudes guardadas y reenviadas hasta llegar al CRM, con filtrado de bots",
+          "Búsqueda de prospectos en Instagram, TikTok y Facebook con puntuación multilingüe por reglas",
+          "Revisión humana, detección de duplicados, pipeline de 7 etapas y seguimientos",
+          "Roles, territorios y un historial que nadie puede modificar"
+        ]
+      },
+      "13": {
+        "title": "Migración WooCommerce → PrestaShop 9",
+        "description": "Migración completa de una tienda de moda de WordPress/WooCommerce a PrestaShop 9: catálogo, contenidos, clientes e historial de pedidos, con tema y módulos a medida, una importación repetible y todas las URL antiguas redirigidas para conservar el SEO.",
+        "technologies": [
+          "PrestaShop 9",
+          "PHP 8.4",
+          "Python",
+          "WooCommerce",
+          "Puppeteer",
+          "Docker"
+        ],
+        "features": [
+          "Extractor en Python del sitio público (solo lectura) y de los datos de WooCommerce",
+          "Importación repetible con simulación: sin duplicados y sin sobrescribir cambios manuales",
+          "Clientes e historial completo de pedidos migrados, totales verificados frente al origen",
+          "Tema y módulos a medida: bloques de portada editables, blog, pedido en una página",
+          "Redirecciones 301 para cada URL antigua, generadas y verificadas automáticamente",
+          "Pruebas de navegador automatizadas en ordenador y móvil, y guías de despliegue"
         ]
       }
     },

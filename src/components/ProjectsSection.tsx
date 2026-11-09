@@ -1,6 +1,6 @@
 import { lazy, Suspense, useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Box, ChevronLeft, ChevronRight, Code, Globe, ShoppingBag, User, Cpu, Target, GraduationCap, TrendingUp, Store } from 'lucide-react';
+import { ArrowRightLeft, Box, ChevronLeft, ChevronRight, Code, Cpu, Globe, GraduationCap, Handshake, ShoppingBag, ShoppingCart, Store, Target, Wand2 } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -31,7 +31,7 @@ type Project = {
   images: string[]; // tableau pour les url des images
   captions?: string[]; // tableau pour les légendes des images
   /** Presentation video, shown instead of the screenshot stack. */
-  video?: { src: string; poster: string };
+  video?: { src: string; poster: string; portrait?: boolean };
 };
 
 const ProjectsSection = () => {
@@ -108,10 +108,32 @@ const ProjectsSection = () => {
 
   const projects: Project[] = [
     {
+      id: 11,
+      icon: <Wand2 className="h-8 w-8 text-[#483dfb]" />,
+      images: [],
+      video: { src: '/videos/projects/ai-fashion-studio.mp4', poster: '/videos/projects/ai-fashion-studio-poster.jpg', portrait: true }
+    },
+    {
       id: 6,
       icon: <Target className="h-8 w-8 text-[#483dfb]" />,
       images: [],
-      video: { src: '/videos/projects/softtech-sli.mp4', poster: '/videos/projects/softtech-sli-poster.jpg' }
+      video: { src: '/videos/projects/lead-intelligence.mp4', poster: '/videos/projects/lead-intelligence-poster.jpg' }
+    },
+    {
+      id: 12,
+      icon: <Handshake className="h-8 w-8 text-[#483dfb]" />,
+      images: [],
+      video: { src: '/videos/projects/export-showroom-crm.mp4', poster: '/videos/projects/export-showroom-crm-poster.jpg' }
+    },
+    {
+      id: 8,
+      icon: <ShoppingCart className="h-8 w-8 text-[#483dfb]" />,
+      images: []
+    },
+    {
+      id: 13,
+      icon: <ArrowRightLeft className="h-8 w-8 text-[#483dfb]" />,
+      images: []
     },
     {
       id: 10,
@@ -125,20 +147,8 @@ const ProjectsSection = () => {
       images: []
     },
     {
-      id: 8,
-      icon: <TrendingUp className="h-8 w-8 text-[#483dfb]" />,
-      images: []
-    },
-    {
       id: 9,
       icon: <Store className="h-8 w-8 text-[#483dfb]" />,
-      images: []
-    },
-    {
-      id: 1,
-      icon: <Cpu className="h-8 w-8 text-[#483dfb]" />,
-      link: "https://github.com/M-A-Gharr/visualforce-ai-doc-generator-ts",
-      demo: "https://github.com/M-A-Gharr/visualforce-ai-doc-generator-ts", 
       images: []
     },
     {
@@ -150,26 +160,10 @@ const ProjectsSection = () => {
       captions: [t("projects.items.2.captions.0"), t("projects.items.2.captions.1"), t("projects.items.2.captions.2"), t("projects.items.2.captions.3"), t("projects.items.2.captions.4"), t("projects.items.2.captions.5")]
     },
     {
-      id: 3,
-      icon: <Globe className="h-8 w-8 text-[#483dfb]" />,
-      link: "#",
-      demo: "#",
-      images: ["/images/bakerysite/Screenshot1.png", "/images/bakerysite/Screenshot2.png", "/images/bakerysite/Screenshot3.png", "/images/bakerysite/Screenshot4.png"],
-      captions: [t("projects.items.3.captions.0"), t("projects.items.3.captions.1"), t("projects.items.3.captions.2"), t("projects.items.3.captions.3")]
-    },
-    {
-      id: 4,
-      icon: <User className="h-8 w-8 text-[#483dfb]" />,
-      link: "https://github.com/M-A-Gharr/mag",
-      demo: "#",
-      images: ["/images/portfolio/Screenshot1.png", "/images/portfolio/Screenshot2.png", "/images/portfolio/Screenshot3.png", "/images/portfolio/Screenshot4.png"],
-      captions: [t("projects.items.4.captions.0"), t("projects.items.4.captions.1"), t("projects.items.4.captions.2"), t("projects.items.4.captions.3")]
-    },
-    {
-      id: 5,
-      icon: <ShoppingBag className="h-8 w-8 text-[#483dfb]" />,
-      link: "#",
-      demo: "#",
+      id: 1,
+      icon: <Cpu className="h-8 w-8 text-[#483dfb]" />,
+      link: "https://github.com/M-A-Gharr/visualforce-ai-doc-generator-ts",
+      demo: "https://github.com/M-A-Gharr/visualforce-ai-doc-generator-ts",
       images: []
     }
   ];
@@ -376,6 +370,7 @@ const ProjectsSection = () => {
                       ref={videoRef}
                       src={current.video.src}
                       poster={current.video.poster}
+                      portrait={current.video.portrait}
                       label={t('projects.videoOf', { title: t(`projects.items.${current.id}.title`) })}
                       playLabel={t('projects.playVideo')}
                     />
