@@ -92,11 +92,7 @@
     },
     "book": {
       "title": "Prêt à collaborer ?",
-      "desc": "Choisissez une date qui vous convient et discutons de la manière dont je peux vous aider dans votre projet.",
-      "date": "Sélectionner une date",
-      "button": "Réserver maintenant",
-      "emailsubject": "Demande de réservation",
-      "emailbody": "Je souhaite réserver vos services",
+      "desc": "Réservez un appel gratuit en quelques clics : choisissez un créneau ci-dessous et Amine vous le confirme par e-mail.",
       "availability": "Mes disponibilités",
       "consultation": "Automatisation IA",
       "consultdesc": "3-5 jours",
@@ -104,7 +100,50 @@
       "devdesc": "1-3 semaines",
       "techreview": "Revue technique",
       "techreviewtime": "24 heures",
-      "responsetime": "Délai de réponse : généralement sous 24 heures"
+      "responsetime": "Délai de réponse : généralement sous 24 heures",
+      "cal": {
+        "title": "Réserver un appel",
+        "subtitle": "Gratuit · visio, téléphone ou WhatsApp",
+        "chooseMeeting": "1. De quoi souhaitez-vous parler ?",
+        "chooseSlot": "2. Choisissez un jour et une heure",
+        "pickDay": "Choisissez un jour dans le calendrier pour voir les horaires disponibles.",
+        "timezone": "Horaires affichés dans votre fuseau horaire ({{tz}}).",
+        "pending": "Votre créneau est une demande : Amine le confirme par e-mail sous 24 heures.",
+        "continue": "Continuer",
+        "change": "Modifier",
+        "name": "Votre nom",
+        "email": "Votre e-mail",
+        "format": "3. Comment se retrouver ?",
+        "phone": "Numéro de téléphone (avec l'indicatif)",
+        "message": "Votre projet en quelques mots (facultatif)",
+        "submit": "Demander ce créneau",
+        "sending": "Envoi…",
+        "error": "La demande n'a pas pu être envoyée. Réessayez, ou écrivez à contact.maminegh@gmail.com.",
+        "doneTitle": "Demande envoyée !",
+        "doneDesc": "Amine confirmera le créneau par e-mail à {{email}} sous 24 heures.",
+        "addGoogle": "Ajouter à Google Agenda",
+        "downloadIcs": "Télécharger (.ics)",
+        "another": "Réserver un autre créneau",
+        "meetings": {
+          "discovery": {
+            "title": "Appel découverte",
+            "desc": "Votre projet, vos besoins, premières idées"
+          },
+          "consultation": {
+            "title": "Consultation projet",
+            "desc": "Périmètre, architecture, délais et devis"
+          },
+          "review": {
+            "title": "Revue technique",
+            "desc": "Un regard sur votre site, boutique ou code"
+          }
+        },
+        "formats": {
+          "meet": "Google Meet",
+          "phone": "Appel téléphonique",
+          "whatsapp": "WhatsApp"
+        }
+      }
     },
     "available": "Disponible pour des missions",
     "avatarAlt": "Photo de Mohamed Amine Gharrab"
@@ -132,7 +171,12 @@
     "workflow": "Automatisation de workflows",
     "contentGen": "Génération de contenu par IA",
     "responsive": "Design responsive",
-    "constellationHint": "Survolez une compétence pour voir à quoi elle est liée."
+    "constellationHint": "Survolez une compétence pour voir à quoi elle est liée.",
+    "levels": {
+      "expert": "Expert",
+      "advanced": "Avancé",
+      "intermediate": "Intermédiaire"
+    }
   },
   "projects": {
     "title": "Projets",

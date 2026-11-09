@@ -92,11 +92,7 @@
     },
     "book": {
       "title": "Pronto a collaborare?",
-      "desc": "Scegli una data che ti va bene e parliamo di come posso aiutarti con il tuo progetto.",
-      "date": "Seleziona una data",
-      "button": "Prenota ora",
-      "emailsubject": "Richiesta di prenotazione",
-      "emailbody": "Vorrei prenotare i tuoi servizi",
+      "desc": "Prenota una chiamata gratuita in pochi clic: scegli un orario qui sotto e Amine te lo confermerà via email.",
       "availability": "La mia disponibilità",
       "consultation": "Automazione IA",
       "consultdesc": "3-5 giorni",
@@ -104,7 +100,50 @@
       "devdesc": "1-3 settimane",
       "techreview": "Revisione tecnica",
       "techreviewtime": "24 ore",
-      "responsetime": "Tempo di risposta: di solito entro 24 ore"
+      "responsetime": "Tempo di risposta: di solito entro 24 ore",
+      "cal": {
+        "title": "Prenota una chiamata",
+        "subtitle": "Gratis · video, telefono o WhatsApp",
+        "chooseMeeting": "1. Di cosa vorresti parlare?",
+        "chooseSlot": "2. Scegli un giorno e un orario",
+        "pickDay": "Scegli un giorno nel calendario per vedere gli orari disponibili.",
+        "timezone": "Orari mostrati nel tuo fuso orario ({{tz}}).",
+        "pending": "Il tuo slot è una richiesta: Amine lo conferma via email entro 24 ore.",
+        "continue": "Continua",
+        "change": "Modifica",
+        "name": "Il tuo nome",
+        "email": "La tua email",
+        "format": "3. Come ci incontriamo?",
+        "phone": "Numero di telefono (con prefisso internazionale)",
+        "message": "Il tuo progetto in poche parole (facoltativo)",
+        "submit": "Richiedi questo slot",
+        "sending": "Invio…",
+        "error": "Non è stato possibile inviare la richiesta. Riprova o scrivi a contact.maminegh@gmail.com.",
+        "doneTitle": "Richiesta inviata!",
+        "doneDesc": "Amine confermerà lo slot via email a {{email}} entro 24 ore.",
+        "addGoogle": "Aggiungi a Google Calendar",
+        "downloadIcs": "Scarica (.ics)",
+        "another": "Prenota un altro slot",
+        "meetings": {
+          "discovery": {
+            "title": "Chiamata conoscitiva",
+            "desc": "Il tuo progetto, le tue esigenze, prime idee"
+          },
+          "consultation": {
+            "title": "Consulenza di progetto",
+            "desc": "Perimetro, architettura, tempi e preventivo"
+          },
+          "review": {
+            "title": "Revisione tecnica",
+            "desc": "Uno sguardo al tuo sito, negozio o codice"
+          }
+        },
+        "formats": {
+          "meet": "Google Meet",
+          "phone": "Chiamata",
+          "whatsapp": "WhatsApp"
+        }
+      }
     },
     "available": "Disponibile per progetti",
     "avatarAlt": "Foto di Mohamed Amine Gharrab"
@@ -132,7 +171,12 @@
     "workflow": "Automazione dei workflow",
     "contentGen": "Generazione di contenuti con IA",
     "responsive": "Design responsive",
-    "constellationHint": "Passa sopra una competenza per vedere a cosa è collegata."
+    "constellationHint": "Passa sopra una competenza per vedere a cosa è collegata.",
+    "levels": {
+      "expert": "Esperto",
+      "advanced": "Avanzato",
+      "intermediate": "Intermedio"
+    }
   },
   "projects": {
     "title": "Progetti",
