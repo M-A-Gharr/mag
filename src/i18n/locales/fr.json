@@ -105,7 +105,9 @@
       "techreview": "Revue technique",
       "techreviewtime": "24 heures",
       "responsetime": "Délai de réponse : généralement sous 24 heures"
-    }
+    },
+    "available": "Disponible pour des missions",
+    "avatarAlt": "Avatar illustré de Mohamed Amine Gharrab"
   },
   "skills": {
     "title": "Compétences",

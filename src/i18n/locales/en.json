@@ -105,7 +105,9 @@
       "techreview": "Technical Review",
       "techreviewtime": "24 Hours",
       "responsetime": "Response time: Usually within 24 hours"
-    }
+    },
+    "available": "Available for freelance",
+    "avatarAlt": "Illustrated avatar of Mohamed Amine Gharrab"
   },
   "skills": {
     "title": "Skills",

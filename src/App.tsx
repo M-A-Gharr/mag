@@ -17,18 +17,6 @@ const App = () => (
     <MotionConfig reducedMotion="user">
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
-        <div className="fixed inset-0 -z-50 overflow-hidden pointer-events-none">
-          <img
-            src="/images/profile/profile.png"
-            alt="Mohamed Amine Gharrab Light Background"
-            className="absolute inset-0 w-full h-full object-cover blur-2xl opacity-50 transition-all duration-500 dark:hidden"
-          />
-          <img
-            src="/images/profile/profile.png"
-            alt="Mohamed Amine Gharrab Dark Background"
-            className="absolute inset-0 w-full h-full object-cover blur-2xl opacity-40 transition-all duration-500 hidden dark:block"
-          />
-        </div>
         <Toaster />
         <Sonner />
         <BrowserRouter>
