@@ -284,19 +284,21 @@
         ]
       },
       "8": {
-        "title": "SEO multilingue PrestaShop",
-        "description": "Pilotage de l’optimisation SEO d’un site e-commerce PrestaShop avec des ressources limitées : de la page 10 à la page 1 de Google dans toutes ses langues.",
+        "title": "Refonte PrestaShop & SEO multilingue",
+        "description": "Refonte complète d’un site e-commerce PrestaShop multilingue chez SIMTIS : nouveau thème et nouvelle expérience utilisateur, modules back-office sur mesure, et une stratégie SEO qui l’a fait passer de la page 10 à la page 1 de Google dans ses trois langues. J’assure aussi sa maintenance quotidienne et sa sécurité.",
         "technologies": [
           "PrestaShop",
-          "SEO",
+          "PHP",
+          "Modules sur mesure",
           "SEO multilingue",
-          "UX"
+          "UX/UI",
+          "Sécurité"
         ],
         "features": [
-          "De la page 10 à la page 1 de Google en français",
-          "Page 1 dans les 3 langues du site",
-          "Modules sur mesure et nouvelles fonctionnalités",
-          "Travail SEO et support en continu"
+          "Refonte complète du site : thème, pages et expérience utilisateur",
+          "SEO multilingue : de la page 10 à la page 1 de Google dans les 3 langues",
+          "Modules back-office sur mesure adaptés aux besoins de l’équipe",
+          "Maintenance quotidienne, mises à jour et surveillance de la sécurité"
         ]
       },
       "9": {

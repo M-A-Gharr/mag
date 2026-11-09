@@ -284,19 +284,21 @@
         ]
       },
       "8": {
-        "title": "SEO multilingüe para PrestaShop",
-        "description": "Dirigí la optimización SEO de una tienda PrestaShop con recursos limitados: de la página 10 a la página 1 de Google en todos sus idiomas.",
+        "title": "Rediseño PrestaShop y SEO multilingüe",
+        "description": "Rediseño completo de una tienda PrestaShop multilingüe en SIMTIS: nuevo tema y nueva experiencia de usuario, módulos de back-office a medida y una estrategia SEO que la llevó de la página 10 a la página 1 de Google en sus tres idiomas. También me encargo de su mantenimiento diario y su seguridad.",
         "technologies": [
           "PrestaShop",
-          "SEO",
+          "PHP",
+          "Módulos a medida",
           "SEO multilingüe",
-          "UX"
+          "UX/UI",
+          "Seguridad"
         ],
         "features": [
-          "De la página 10 a la página 1 de Google en francés",
-          "Página 1 en los 3 idiomas del sitio",
-          "Módulos a medida y nuevas funcionalidades",
-          "Trabajo SEO y soporte continuos"
+          "Rediseño completo del sitio: tema, páginas y experiencia de usuario",
+          "SEO multilingüe: de la página 10 a la página 1 de Google en los 3 idiomas",
+          "Módulos de back-office a medida según las necesidades del equipo",
+          "Mantenimiento diario, actualizaciones y supervisión de la seguridad"
         ]
       },
       "9": {
