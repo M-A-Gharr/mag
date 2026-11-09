@@ -137,7 +137,7 @@ const AboutSection = () => {
       </div>
 
       {/* services I offer */}
-      <Reveal className="mt-12 bg-secondary/20 rounded-xl p-6 md:p-8 border border-secondary/20">
+      <Reveal className="mt-12 bg-secondary/20 rounded-xl p-4 sm:p-6 md:p-8 border border-secondary/20">
         <div className="flex items-center justify-center mb-8">
           <Briefcase className="text-[#483dfb] me-3" size={38} />
           <h3 className="text-2xl font-semibold">{t('about.services.title')}</h3>
