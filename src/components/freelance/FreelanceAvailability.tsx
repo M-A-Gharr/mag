@@ -46,17 +46,17 @@ const FreelanceAvailability = () => {
 
   return (
     <Card className="border border-[#483dfb] overflow-hidden hover:shadow-md transition-all duration-300 w-full max-w-[700px] mx-auto">
-      <CardHeader className="bg-blue-50 dark:bg-blue-900/20">
-        <CardTitle className="text-xl text-center text-blue-600 dark:text-[#9b87f5]">
+      <CardHeader className="bg-blue-50 dark:bg-blue-900/20 p-4 sm:p-6">
+        <CardTitle className="text-lg sm:text-xl leading-snug text-center text-blue-600 dark:text-[#9b87f5]">
           {t(`bonus.freelance.availableForWork`)}
         </CardTitle>
       </CardHeader>
       <CardContent className="px-4 md:px-6 py-4">
         <h4 className="font-semibold mb-2 text-base md:text-lg">{t(`bonus.freelance.availableForWork`)}:</h4>
-        <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 mb-6 text-sm md:text-base">
+        <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2.5 mb-6 text-sm md:text-base leading-relaxed">
           {services.map((service, index) => (
             <li key={index} className="flex items-start">
-              <span className="text-blue-500 mr-2">•</span>
+              <span className="text-blue-500 me-2 shrink-0">•</span>
               <span>{service}</span>
             </li>
           ))}
@@ -80,9 +80,9 @@ const FreelanceAvailability = () => {
           ))}
         </div>
       </CardContent>
-      <CardFooter className="flex flex-col sm:flex-row sm:justify-between gap-3 px-4 pb-4">
+      <CardFooter className="flex flex-col sm:flex-row sm:justify-between gap-3 px-4 md:px-6 pb-4">
         <Button 
-          className="relative inline-flex items-center justify-center sm:flex-row w-4/6 py-3 bg-[#261bfb] hover:bg-[#3e30fb] dark:hover:bg-[#3e30fb] text-white sm:w-auto"
+          className="relative inline-flex items-center justify-center w-full py-3 bg-[#261bfb] hover:bg-[#3e30fb] dark:hover:bg-[#3e30fb] text-white sm:w-auto"
           onClick={() => {
             const contactSection = document.getElementById('contact');
             if (contactSection) {
@@ -94,7 +94,7 @@ const FreelanceAvailability = () => {
         </Button>
         <Button 
           variant="outline"
-          className="relative inline-flex items-center justify-center w-5/6 px-6 py-3 overflow-hidden font-medium rounded-md border border-[#483dfb] bg-transparent text-[#483dfb] transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:bg-[#483dfb] hover:text-white hover:-translate-y-0.5 dark:text-[#9b87f5] dark:border-[#9b87f5] dark:hover:bg-[#483dfb] dark:hover:border-[#483dfb] dark:hover:text-white"
+          className="relative inline-flex items-center justify-center w-full sm:w-auto sm:flex-1 px-6 py-3 overflow-hidden font-medium rounded-md border border-[#483dfb] bg-transparent text-[#483dfb] transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:bg-[#483dfb] hover:text-white hover:-translate-y-0.5 dark:text-[#9b87f5] dark:border-[#9b87f5] dark:hover:bg-[#483dfb] dark:hover:border-[#483dfb] dark:hover:text-white"
           onClick={handleCVDownload}
         >
           <Download className="h-4 w-4" />
