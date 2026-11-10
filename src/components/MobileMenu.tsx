@@ -6,6 +6,8 @@ import { useEffect, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 import { useTranslation } from 'react-i18next';
 import { scroller } from 'react-scroll';
+import { useNavigate } from 'react-router-dom';
+import { isHomePath, pathFor } from '@/i18n/paths';
 import { AnimatePresence, motion, type Variants } from 'framer-motion';
 import { ArrowUpRight, Github, Linkedin, Mail } from 'lucide-react';
 import ThemeSwitcher from './ThemeSwitcher';
@@ -82,6 +84,7 @@ type MobileMenuProps = {
 
 const MobileMenu = ({ id, open, onClose, links }: MobileMenuProps) => {
   const { t, i18n } = useTranslation();
+  const navigate = useNavigate();
   const rtl = i18n.language === 'ar';
   const firstLinkRef = useRef<HTMLButtonElement>(null);
   const [current, setCurrent] = useState<string | null>(null);
@@ -121,6 +124,11 @@ const MobileMenu = ({ id, open, onClose, links }: MobileMenuProps) => {
     // and a locked page cannot scroll to the section.
     document.documentElement.style.overflow = '';
     onClose();
+    // From another page (a case study), go to the home page at that section.
+    if (!isHomePath(window.location.pathname)) {
+      navigate(`${pathFor(i18n.language)}#${to}`);
+      return;
+    }
     requestAnimationFrame(() => scroller.scrollTo(to, { smooth: 'easeInOutQuart', duration: 700, offset: -70 }));
   };
 

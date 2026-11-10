@@ -632,5 +632,15 @@
   },
   "testimonials": {
     "subtitle": "Cosa dicono le persone con cui ho lavorato."
+  },
+  "caseStudyPage": {
+    "home": "Home",
+    "sector": "Settore",
+    "mission": "Missione",
+    "result": "Risultato",
+    "ctaTitle": "Hai un progetto simile?",
+    "ctaDesc": "Parliamone. Ti rispondo in giornata.",
+    "ctaWork": "Vedi altri lavori",
+    "readFull": "Leggi il caso completo"
   }
 }

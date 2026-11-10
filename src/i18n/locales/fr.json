@@ -626,5 +626,15 @@
   },
   "testimonials": {
     "subtitle": "Ce qu'en disent les personnes avec qui j'ai travaillé."
+  },
+  "caseStudyPage": {
+    "home": "Accueil",
+    "sector": "Secteur",
+    "mission": "Mission",
+    "result": "Résultat",
+    "ctaTitle": "Un projet similaire ?",
+    "ctaDesc": "Parlons-en : je vous réponds dans la journée.",
+    "ctaWork": "Voir les autres réalisations",
+    "readFull": "Lire l'étude de cas complète"
   }
 }
