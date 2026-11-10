@@ -1,4 +1,4 @@
-import{r as pn,j as Gi}from"./animation-DLzFu0UP.js";import"./react-Dvwkxfce.js";/**
+import{r as pn,j as Gi}from"./animation-BqM7mhei.js";import"./react-Dvwkxfce.js";/**
  * @license
  * Copyright 2010-2024 Three.js Authors
  * SPDX-License-Identifier: MIT
