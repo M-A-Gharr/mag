@@ -78,7 +78,8 @@ const SkillBar = ({ skill, index }: { skill: Skill; index: number }) => {
 
 const SkillsSection = () => {
   const { t } = useTranslation();
-  const [view, setView] = useState<'levels' | 'map'>('levels');
+  // The skills map is shown first on tablets and desktops; phones always get the levels.
+  const [view, setView] = useState<'levels' | 'map'>('map');
 
   const skillCategories: SkillCategory[] = [
     {
@@ -165,7 +166,7 @@ const SkillsSection = () => {
       {/* Tablet and up: switch between the levels and the map of how skills connect */}
       <div className="mb-8 hidden justify-center md:flex">
         <div role="tablist" aria-label={t('skills.title')} className="panel inline-flex gap-1 rounded-full p-1">
-          {(['levels', 'map'] as const).map((key) => (
+          {(['map', 'levels'] as const).map((key) => (
             <button
               key={key}
               type="button"
@@ -189,7 +190,7 @@ const SkillsSection = () => {
         </div>
       </div>
 
-      {/* Levels: always on phones, on the first tab from tablets */}
+      {/* Levels: always on phones, on the second tab from tablets */}
       <div className={view === 'levels' ? 'block' : 'block md:hidden'}>
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
           {skillCategories.map((category, index) => (
@@ -212,7 +213,7 @@ const SkillsSection = () => {
         </div>
       </div>
 
-      {/* Map of how skills connect (tablet and up, second tab) */}
+      {/* Map of how skills connect (tablet and up, first tab) */}
       {view === 'map' && (
         <div className="hidden md:block">
           <SkillConstellation
