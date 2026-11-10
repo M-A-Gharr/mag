@@ -81,7 +81,7 @@ const write = (outDir: string, urlPath: string, html: string) => {
 };
 
 /** The article as plain HTML, for crawlers that do not run JavaScript. */
-const articleHtml = (t: CaseStudyText) => {
+const articleHtml = (t: CaseStudyText, related: { href: string; title: string }[], relatedHeading: string) => {
   const parts = [`<main><article>`, `<p>${esc(t.sector)}</p>`, `<h1>${esc(t.title)}</h1>`, `<p>${esc(t.lead)}</p>`];
   for (const s of t.sections) {
     parts.push(`<h2>${esc(s.heading)}</h2>`);
@@ -93,7 +93,11 @@ const articleHtml = (t: CaseStudyText) => {
       );
     }
   }
-  parts.push(`<p>${esc(t.result)}</p>`, `</article></main>`);
+  parts.push(`<p>${esc(t.result)}</p>`);
+  if (related.length) {
+    parts.push(`<nav><h2>${esc(relatedHeading)}</h2><ul>${related.map((r) => `<li><a href="${r.href}">${esc(r.title)}</a></li>`).join('')}</ul></nav>`);
+  }
+  parts.push(`</article></main>`);
   return parts.join('');
 };
 
@@ -150,6 +154,12 @@ const sitemap = (entries: { url: string; alternates: Alternate[]; lastmod: strin
     '',
   ].join('\n');
 
+/** The next two case studies, in home-page order (same rule as relatedCaseStudies in the app). */
+const relatedOf = (slug: string) => {
+  const i = CASE_STUDIES.findIndex((c) => c.slug === slug);
+  return [1, 2].filter((k) => k < CASE_STUDIES.length).map((k) => CASE_STUDIES[(i + k) % CASE_STUDIES.length]);
+};
+
 export function pagesPlugin(): Plugin {
   let outDir = 'dist';
   return {
@@ -194,7 +204,11 @@ export function pagesPlugin(): Plugin {
               alternates: studyAlternates(study.slug),
               ogType: 'article',
               jsonLd: studyJsonLd(study, lng, locales[lng].bonus.caseStudies.title, locales[lng].caseStudyPage.home),
-              body: articleHtml(t),
+              body: articleHtml(
+                t,
+                relatedOf(study.slug).map((r) => ({ href: caseStudyPath(lng, r.slug), title: r.text[lng].title })),
+                locales[lng].caseStudyPage.related
+              ),
             })
           );
           entries.push({ url, alternates: studyAlternates(study.slug), lastmod: study.modified });

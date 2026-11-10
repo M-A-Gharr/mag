@@ -1,0 +1,225 @@
+// Case study: redesign, multilingual SEO and custom modules of a PrestaShop store. The brand,
+// its stores and internal figures are not named; "20+ modules" and "page 10 to page 1" are
+// already public on the site.
+import type { CaseStudy } from './types';
+
+const study: CaseStudy = {
+  slug: 'prestashop-redesign-multilingual-seo',
+  projectId: 8,
+  published: '2026-11-10',
+  modified: '2026-11-10',
+  text: {
+    fr: {
+      title: 'Refonte, SEO multilingue et modules sur mesure pour une boutique PrestaShop',
+      metaTitle: 'Refonte et SEO PrestaShop multilingue · Étude de cas',
+      metaDescription:
+        'Refonte d’une boutique PrestaShop en trois langues : plus de 20 modules sur mesure, stock relié aux magasins, et de la page 10 à la page 1 de Google.',
+      sector: 'Mode · E-commerce multilingue',
+      lead:
+        "Une marque de châles et de foulards, présente dans de nombreux magasins, avait une boutique en ligne peu visible sur Google et coupée du stock réel. Je l'ai refondue en français, en anglais et en arabe, enrichie de modules sur mesure et reliée aux magasins. Elle est passée de la page 10 à la page 1 de Google dans ses trois langues.",
+      brief: {
+        mission: 'Refonte complète, SEO multilingue, modules sur mesure et maintenance au quotidien',
+        result: 'De la page 10 à la page 1 de Google dans les trois langues',
+      },
+      sections: [
+        {
+          heading: 'Le contexte',
+          paragraphs: [
+            "La marque vend dans un réseau de magasins physiques et en ligne, sur PrestaShop. La boutique fonctionnait, mais elle était difficile à trouver sur Google, peu pensée pour le téléphone, et elle ignorait ce qui se passait en magasin : un client ne pouvait pas savoir si un article était disponible près de chez lui.",
+          ],
+        },
+        {
+          heading: 'Le défi',
+          paragraphs: ['Il ne s’agissait pas seulement de changer le design. La boutique devait :'],
+          list: [
+            'être trouvée sur Google en français, en anglais et en arabe ;',
+            'vendre davantage à chaque visite, avec des mécanismes adaptés à sa clientèle ;',
+            'refléter le stock réel, pour ne jamais vendre un article épuisé ;',
+            'rester stable et sûre au quotidien.',
+          ],
+        },
+        {
+          heading: "Ce que j'ai fait",
+          steps: [
+            {
+              heading: 'Une refonte pensée pour trois langues',
+              paragraphs: [
+                "J'ai refait le thème, les pages et le parcours d'achat en français, en anglais et en arabe, avec une version arabe qui se lit de droite à gauche. La page d'accueil met en avant les meilleures ventes du mois et les nouveautés, et chaque page a été conçue d'abord pour le téléphone.",
+              ],
+            },
+            {
+              heading: 'Plus de 20 modules sur mesure',
+              paragraphs: [
+                "Plutôt que d'empiler des modules du marché, j'ai développé ceux dont la boutique avait vraiment besoin : ventes additionnelles au bon moment, récompenses dans le panier, remises par paliers, suivi des affiliés, notifications de ventes en direct (« plus que quelques exemplaires disponibles »), et un tableau de bord des ventes par canal (accès direct, Instagram, Facebook, TikTok) avec les produits les plus vus et les recherches les plus fréquentes.",
+                "Un module intègre aussi la création de visuels portés par IA directement dans l'administration de la boutique.",
+              ],
+            },
+            {
+              heading: 'Le stock des magasins sur chaque fiche produit',
+              paragraphs: [
+                "Le logiciel de gestion du groupe dépose un fichier de stock deux fois par jour. Un module le lit, ne garde que les lignes de la marque et retrouve chaque produit par son code-barres. Le stock vendable du site est mis à jour, ce qui évite de vendre un article épuisé, et chaque fiche produit indique dans quels magasins l'article est disponible, sans jamais afficher les quantités.",
+                "Les règles sont prudentes : une référence inconnue est écartée et notée dans un journal, jamais créée ; les prix du fichier sont ignorés ; si le fichier n'arrive pas, le dernier stock connu est conservé.",
+              ],
+            },
+            {
+              heading: 'Un SEO repris langue par langue',
+              paragraphs: [
+                "J'ai repris la structure des pages, les contenus, les titres et descriptions, les adresses et les redirections, dans chacune des trois langues. C'est ce travail qui a fait passer la boutique de la page 10 à la page 1 de Google, en français, en anglais et en arabe.",
+              ],
+            },
+            {
+              heading: 'Maintenance et sécurité au quotidien',
+              paragraphs: [
+                "J'assure la maintenance de la boutique au jour le jour : mises à jour, surveillance de la sécurité, corrections et nouvelles fonctionnalités au fil des besoins de l'équipe.",
+              ],
+            },
+          ],
+        },
+      ],
+      result:
+        "La boutique est désormais visible sur Google dans ses trois langues, elle reflète le stock réel des magasins et dispose d'outils de vente conçus pour elle. L'équipe suit ses ventes par canal, et la boutique est maintenue et sécurisée au quotidien.",
+    },
+    en: {
+      title: 'Redesign, multilingual SEO and custom modules for a PrestaShop store',
+      metaTitle: 'PrestaShop redesign and multilingual SEO · Case study',
+      metaDescription:
+        'A three-language PrestaShop redesign: 20+ custom modules, stock connected to the physical stores, and from page 10 to page 1 of Google.',
+      sector: 'Fashion · Multilingual e-commerce',
+      lead:
+        'A scarf and shawl brand with many stores had an online shop that was hard to find on Google and cut off from its real stock. I rebuilt it in French, English and Arabic, added custom modules and connected it to the stores. It went from page 10 to page 1 of Google in all three languages.',
+      brief: {
+        mission: 'Full redesign, multilingual SEO, custom modules and day-to-day maintenance',
+        result: 'From page 10 to page 1 of Google in all three languages',
+      },
+      sections: [
+        {
+          heading: 'The context',
+          paragraphs: [
+            'The brand sells through a network of physical stores and online, on PrestaShop. The shop worked, but it was hard to find on Google, not designed for phones, and blind to what happened in the stores: a customer could not tell whether an item was available nearby.',
+          ],
+        },
+        {
+          heading: 'The challenge',
+          paragraphs: ['This was not just a new design. The shop had to:'],
+          list: [
+            'be found on Google in French, English and Arabic;',
+            'sell more on every visit, with mechanisms that suit its customers;',
+            'reflect the real stock, so it never sells an item that is out of stock;',
+            'stay stable and secure day to day.',
+          ],
+        },
+        {
+          heading: 'What I did',
+          steps: [
+            {
+              heading: 'A redesign built for three languages',
+              paragraphs: [
+                'I rebuilt the theme, the pages and the checkout journey in French, English and Arabic, with an Arabic version that reads right to left. The homepage features the month’s best sellers and new arrivals, and every page was designed for phones first.',
+              ],
+            },
+            {
+              heading: 'More than 20 custom modules',
+              paragraphs: [
+                'Rather than piling up marketplace modules, I built the ones the shop really needed: well-timed upsells, cart rewards, tiered discounts, affiliate tracking, live sales notifications (“only a few left”), and a sales dashboard by channel (direct, Instagram, Facebook, TikTok) with the most viewed products and the most frequent searches.',
+                'Another module brings AI model shots straight into the shop’s back office.',
+              ],
+            },
+            {
+              heading: 'Store stock on every product page',
+              paragraphs: [
+                'The group’s management software drops a stock file twice a day. A module reads it, keeps only the brand’s lines and matches each product by its barcode. The shop’s sellable stock is updated, which avoids selling items that are out of stock, and each product page shows which stores have the item, without ever showing quantities.',
+                'The rules are careful: an unknown reference is set aside and logged, never created; prices in the file are ignored; if the file does not arrive, the last known stock is kept.',
+              ],
+            },
+            {
+              heading: 'SEO rebuilt language by language',
+              paragraphs: [
+                'I reworked the page structure, the content, the titles and descriptions, the addresses and the redirects in each of the three languages. That work took the shop from page 10 to page 1 of Google in French, English and Arabic.',
+              ],
+            },
+            {
+              heading: 'Day-to-day maintenance and security',
+              paragraphs: [
+                'I maintain the shop day to day: updates, security monitoring, fixes and new features as the team needs them.',
+              ],
+            },
+          ],
+        },
+      ],
+      result:
+        'The shop is now visible on Google in its three languages, reflects the stores’ real stock and has sales tools built for it. The team follows its sales by channel, and the shop is maintained and secured every day.',
+    },
+    ar: {
+      title: 'إعادة تصميم وتحسين SEO متعدد اللغات ووحدات مخصصة لمتجر PrestaShop',
+      metaTitle: 'إعادة تصميم متجر PrestaShop وSEO متعدد اللغات · دراسة حالة',
+      metaDescription:
+        'إعادة تصميم متجر PrestaShop بثلاث لغات: أكثر من 20 وحدة مخصصة، ومخزون مرتبط بالمتاجر، ومن الصفحة 10 إلى الصفحة 1 في Google.',
+      sector: 'الأزياء · تجارة إلكترونية متعددة اللغات',
+      lead:
+        'كان لعلامة شالات ووشاحات حاضرة في متاجر عديدة متجرٌ إلكتروني يصعب العثور عليه في Google ومنفصل عن المخزون الحقيقي. أعدت بناءه بالفرنسية والإنجليزية والعربية، وأضفت إليه وحدات مخصصة، وربطته بالمتاجر. فانتقل من الصفحة 10 إلى الصفحة 1 في Google باللغات الثلاث.',
+      brief: {
+        mission: 'إعادة تصميم كاملة، وSEO متعدد اللغات، ووحدات مخصصة، وصيانة يومية',
+        result: 'من الصفحة 10 إلى الصفحة 1 في Google باللغات الثلاث',
+      },
+      sections: [
+        {
+          heading: 'السياق',
+          paragraphs: [
+            'تبيع العلامة عبر شبكة من المتاجر الفعلية وعلى الإنترنت بمنصة PrestaShop. كان المتجر يعمل، لكن العثور عليه في Google كان صعباً، ولم يكن مصمماً للهاتف، ولا يعرف ما يجري في المتاجر: لم يكن بوسع الزبون معرفة إن كان المنتج متوفراً قربه.',
+          ],
+        },
+        {
+          heading: 'التحدي',
+          paragraphs: ['لم يكن الأمر مجرد تغيير للتصميم. كان على المتجر أن:'],
+          list: [
+            'يظهر في Google بالفرنسية والإنجليزية والعربية؛',
+            'يبيع أكثر في كل زيارة، بآليات تناسب زبائنه؛',
+            'يعكس المخزون الحقيقي، حتى لا يبيع أبداً منتجاً نفد؛',
+            'يبقى مستقراً وآمناً يوماً بعد يوم.',
+          ],
+        },
+        {
+          heading: 'ما قمت به',
+          steps: [
+            {
+              heading: 'إعادة تصميم مبنية لثلاث لغات',
+              paragraphs: [
+                'أعدت بناء القالب والصفحات ومسار الشراء بالفرنسية والإنجليزية والعربية، مع نسخة عربية تُقرأ من اليمين إلى اليسار. تبرز الصفحة الرئيسية الأكثر مبيعاً هذا الشهر والمنتجات الجديدة، وصُمّمت كل صفحة للهاتف أولاً.',
+              ],
+            },
+            {
+              heading: 'أكثر من 20 وحدة مخصصة',
+              paragraphs: [
+                'بدل تكديس وحدات جاهزة من السوق، طوّرت ما يحتاجه المتجر فعلاً: بيع إضافي في الوقت المناسب، ومكافآت في السلة، وخصومات متدرجة، وتتبع الشركاء، وإشعارات مبيعات مباشرة («لم يتبقَّ سوى قطع قليلة»)، ولوحة متابعة للمبيعات حسب القناة (مباشر، Instagram، Facebook، TikTok) مع المنتجات الأكثر مشاهدة وعمليات البحث الأكثر تكراراً.',
+                'وتُدمج وحدة أخرى إنشاء الصور الملبوسة بالذكاء الاصطناعي مباشرة في لوحة إدارة المتجر.',
+              ],
+            },
+            {
+              heading: 'مخزون المتاجر على كل صفحة منتج',
+              paragraphs: [
+                'يضع برنامج التسيير الخاص بالمجموعة ملف مخزون مرتين يومياً. تقرأه وحدة مخصصة، وتحتفظ بأسطر العلامة وحدها، وتتعرف على كل منتج من رمزه الشريطي. يُحدَّث المخزون القابل للبيع على الموقع، فلا يُباع منتج نفد، وتُظهر كل صفحة منتج المتاجر التي يتوفر فيها، دون عرض الكميات أبداً.',
+                'والقواعد حذرة: يُستبعد كل مرجع غير معروف ويُسجَّل في سجل، ولا يُنشأ أبداً؛ وتُتجاهل الأسعار الواردة في الملف؛ وإذا لم يصل الملف يُحتفظ بآخر مخزون معروف.',
+              ],
+            },
+            {
+              heading: 'SEO أُعيد بناؤه لغة بلغة',
+              paragraphs: [
+                'أعدت العمل على بنية الصفحات والمحتوى والعناوين والأوصاف والروابط وإعادة التوجيه في كل لغة من اللغات الثلاث. وهذا العمل هو ما نقل المتجر من الصفحة 10 إلى الصفحة 1 في Google بالفرنسية والإنجليزية والعربية.',
+              ],
+            },
+            {
+              heading: 'صيانة وأمان يومياً',
+              paragraphs: [
+                'أتولى صيانة المتجر يوماً بيوم: التحديثات، ومراقبة الأمان، والتصحيحات، والوظائف الجديدة حسب حاجات الفريق.',
+              ],
+            },
+          ],
+        },
+      ],
+      result:
+        'أصبح المتجر ظاهراً في Google بلغاته الثلاث، ويعكس المخزون الحقيقي للمتاجر، ويملك أدوات بيع صُمّمت له. ويتابع الفريق مبيعاته حسب القناة، ويُصان المتجر ويُؤمَّن كل يوم.',
+    },
+  },
+};
+
+export default study;
