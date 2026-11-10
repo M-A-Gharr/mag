@@ -5,7 +5,7 @@ const service: Service = {
   slug: 'ai-automation',
   key: 'ai',
   caseStudies: ['ai-fashion-visuals-studio', 'b2b-lead-intelligence-platform'],
-  tools: ['Claude', 'OpenAI', 'FASHN AI', 'Make'],
+  tools: ['Claude', 'OpenAI', 'Perplexity', 'FASHN AI', 'Make'],
   modified: '2026-11-10',
   text: {
     fr: {

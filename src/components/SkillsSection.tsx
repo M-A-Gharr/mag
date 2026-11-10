@@ -31,7 +31,8 @@ const CROSS_LINKS: [string, string][] = [
   ['php', 'prestashop'], ['php', 'wordpress'], ['csharp', 'aspnet'], ['aspnet', 'mssql'], ['node', 'postgres'],
   ['node', 'restapi'], ['python', 'workflow'], ['claude', 'contentgen'], ['workflow', 'processauto'],
   ['crm', 'restapi'], ['leadintel', 'react'], ['seo', 'multilingual'], ['i18n', 'multilingual'],
-  ['shopify', 'seo'], ['contentgen', 'seo'], ['aitraining', 'multilingual'],
+  ['shopify', 'seo'], ['gsc', 'seo'], ['ga', 'seo'], ['surfer', 'seo'], ['semrush', 'seo'],
+  ['ga', 'gsc'], ['surfer', 'contentgen'], ['perplexity', 'claude'], ['perplexity', 'contentgen'], ['contentgen', 'seo'], ['aitraining', 'multilingual'],
 ];
 
 /** One skill row: its level as a word and a 3-segment meter that fills as it scrolls into view. */
@@ -130,6 +131,10 @@ const SkillsSection = () => {
         { id: 'wordpress', name: 'WordPress', level: 'advanced' },
         { id: 'shopify', name: 'Shopify', level: 'advanced' },
         { id: 'seo', name: t('skills.seo'), level: 'advanced' },
+        { id: 'gsc', name: 'Google Search Console', level: 'advanced' },
+        { id: 'ga', name: 'Google Analytics', level: 'advanced' },
+        { id: 'surfer', name: 'Surfer SEO', level: 'advanced' },
+        { id: 'semrush', name: 'Semrush', level: 'advanced' },
       ]
     },
     {
@@ -139,6 +144,7 @@ const SkillsSection = () => {
       skills: [
         { id: 'claude', name: 'Claude (Skills)', level: 'expert' },
         { id: 'make', name: 'Make', level: 'advanced' },
+        { id: 'perplexity', name: 'Perplexity', level: 'advanced' },
         { id: 'workflow', name: t('skills.workflow'), level: 'advanced' },
         { id: 'contentgen', name: t('skills.contentGen'), level: 'advanced' },
         { id: 'aitraining', name: t('skills.aiTraining'), level: 'expert' },
