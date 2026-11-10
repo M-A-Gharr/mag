@@ -10,6 +10,7 @@ import { MotionConfig } from "framer-motion";
 // only the 404 page is loaded on demand.
 import Index from "./pages/Index";
 const NotFound = lazy(() => import("./pages/NotFound"));
+const CaseStudyPage = lazy(() => import("./pages/CaseStudyPage"));
 
 const queryClient = new QueryClient();
 
@@ -28,6 +29,10 @@ const App = () => (
               {/* Language pages (generated at build time with translated meta tags) */}
               <Route path="/fr" element={<Index />} />
               <Route path="/ar" element={<Index />} />
+              {/* Case study pages (generated at build time too, see vite.config.ts) */}
+              <Route path="/case-studies/:slug" element={<CaseStudyPage />} />
+              <Route path="/fr/etudes-de-cas/:slug" element={<CaseStudyPage />} />
+              <Route path="/ar/case-studies/:slug" element={<CaseStudyPage />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>

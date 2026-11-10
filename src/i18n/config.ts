@@ -4,7 +4,7 @@ import { initReactI18next } from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
 
 import en from './locales/en.json';
-import { syncUrlWithLanguage } from './paths';
+import { caseStudyPath, caseStudySlugAt, isHomePath, pathFor } from './paths';
 
 // Only English (the fallback) is in the main bundle; each other language is downloaded the
 // first time it is used. The 7 files together weigh about 240 KB.
@@ -20,7 +20,17 @@ const lazyLocales = {
   },
 };
 
-// The address follows the language: /fr/ and /ar/ have their own page, the others use /.
+/** Keeps the address bar on the page of the current language (home and case study pages). */
+const syncUrlWithLanguage = (lng: string) => {
+  const { pathname, search, hash } = window.location;
+  const slug = caseStudySlugAt(pathname);
+  const want = slug ? caseStudyPath(lng, slug) : isHomePath(pathname) ? pathFor(lng) : null;
+  if (want && pathname !== want) {
+    window.history.replaceState(window.history.state, '', `${want}${search}${hash}`);
+  }
+};
+
+// The address follows the language: /fr/ and /ar/ have their own pages, the others use the English ones.
 i18next.on('languageChanged', syncUrlWithLanguage);
 
 i18next

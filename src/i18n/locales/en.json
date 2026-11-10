@@ -632,5 +632,15 @@
   },
   "testimonials": {
     "subtitle": "What people I've worked with say."
+  },
+  "caseStudyPage": {
+    "home": "Home",
+    "sector": "Sector",
+    "mission": "Mission",
+    "result": "Result",
+    "ctaTitle": "Working on something similar?",
+    "ctaDesc": "Let's talk it through. I'll get back to you within a day.",
+    "ctaWork": "See other work",
+    "readFull": "Read the full case study"
   }
 }

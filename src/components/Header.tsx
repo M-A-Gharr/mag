@@ -1,6 +1,6 @@
 
 import { useState, useEffect, useMemo, useCallback } from "react";
-import { Link } from "react-scroll";
+import SectionLink from "./SectionLink";
 import { useTranslation } from "react-i18next";
 import LanguageSwitcher from "./LanguageSwitcher";
 import ThemeSwitcher from "./ThemeSwitcher";
@@ -51,35 +51,23 @@ const Header = () => {
       dir={i18n.language === "ar" ? "rtl" : "ltr"}
     >
       <div className="container mx-auto px-2 lg:px-4 py-4 flex justify-between items-center">
-        <Link
-          to="hero"
-          href="#hero"
-          spy={true}
-          smooth={true}
-          offset={-70}
-          duration={500}
-          className="cursor-pointer"
-        >
+        <SectionLink to="hero" duration={500} className="cursor-pointer">
           <Logo className="text-[1.6rem] lg:text-[1.75rem]" />
-        </Link>
+        </SectionLink>
 
         {/* Desktop Nav */}
         <nav role="navigation" className="hidden lg:flex items-center gap-4 xl:gap-8">
           {navLinks.map((link) => (
-            <Link
+            <SectionLink
               key={link.to}
               to={link.to}
-              href={`#${link.to}`}
               aria-label={`Navigate to ${link.name}`}
-              spy={true}
-              smooth={true}
-              offset={-70}
               duration={500}
               activeClass="nav-link-active"
               className="nav-link text-sm xl:text-base text-foreground hover:text-[#483dfb] transition-colors cursor-pointer whitespace-nowrap"
             >
               {link.name}
-            </Link>
+            </SectionLink>
           ))}
           <div className="flex items-center gap-2">
             <LanguageSwitcher />

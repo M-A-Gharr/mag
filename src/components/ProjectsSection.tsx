@@ -1,6 +1,6 @@
 import { lazy, Suspense, useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { ArrowRightLeft, BookOpenCheck, Box, ChevronLeft, ChevronRight, Code, Cpu, Globe, GraduationCap, Handshake, ShoppingBag, ShoppingCart, Store, Target, Wand2 } from 'lucide-react';
+import { ArrowRight, ArrowRightLeft, BookOpenCheck, Box, ChevronLeft, ChevronRight, Code, Cpu, Globe, GraduationCap, Handshake, ShoppingBag, ShoppingCart, Store, Target, Wand2 } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -14,6 +14,9 @@ import type { CrumpleCarouselHandle } from './CrumpleCardCarousel';
 import { useProjectCovers, type CoverInput } from './projectCovers';
 import ProjectVideo, { type ProjectVideoHandle } from './ProjectVideo';
 import { scroller } from 'react-scroll';
+import { Link as RouterLink } from 'react-router-dom';
+import { caseStudyForProject } from '@/content/caseStudies';
+import { caseStudyPath } from '@/i18n/paths';
 import { SHOW_PROJECT_EVENT } from '@/lib/events';
 
 // three.js is only downloaded when the projects section renders.
@@ -361,6 +364,15 @@ const ProjectsSection = () => {
                   </div>
 
                   <p className="mb-6 text-foreground/80 md:text-lg">{t(`projects.items.${current.id}.description`)}</p>
+                  {caseStudyForProject(current.id) && (
+                    <RouterLink
+                      to={caseStudyPath(i18n.language, caseStudyForProject(current.id)!.slug)}
+                      className="group -mt-2 mb-6 inline-flex items-center gap-1.5 text-sm font-medium text-[#483dfb] underline-offset-4 hover:underline dark:text-[#9b87f5]"
+                    >
+                      {t('caseStudyPage.readFull')}
+                      <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 rtl:rotate-180" aria-hidden />
+                    </RouterLink>
+                  )}
 
                   <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2">
                     <div>

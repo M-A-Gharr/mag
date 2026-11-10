@@ -2,12 +2,15 @@
 // the challenge and the result, and a dialog with the full story (challenge → what I did →
 // result) and a button that brings the matching project card into view.
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { AnimatePresence, motion, type PanInfo } from 'framer-motion';
 import { ArrowUpRight, ChevronLeft, ChevronRight, Flag, ListChecks, Trophy } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { SHOW_PROJECT_EVENT } from '@/lib/events';
+import { caseStudyForProject } from '@/content/caseStudies';
+import { caseStudyPath } from '@/i18n/paths';
 import { EASE_OUT } from './motion';
 
 type CaseStudy = {
@@ -33,6 +36,7 @@ const CaseStudies = () => {
 
   if (cases.length === 0) return null;
   const current = cases[index % cases.length];
+  const fullPage = caseStudyForProject(current.projectId);
   const title = (c: CaseStudy) => t(`projects.items.${c.projectId}.title`);
   const stack = asList<string>(t(`projects.items.${current.projectId}.technologies`, { returnObjects: true })).slice(0, 5);
 
@@ -126,15 +130,25 @@ const CaseStudies = () => {
             <ChevronRight className="h-4 w-4 rtl:rotate-180" />
           </Button>
         </div>
-        <Button
-          variant="outline"
-          size="sm"
-          onClick={() => setOpen(true)}
-          className="group w-full gap-1.5 hover:border-[#483dfb]/60 hover:text-[#483dfb]"
-        >
-          {t('bonus.caseStudies.read')}
-          <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 rtl:-scale-x-100" />
-        </Button>
+        {/* A case study with its own page opens it; the others open the summary dialog */}
+        {fullPage ? (
+          <Button asChild variant="outline" size="sm" className="group w-full gap-1.5 hover:border-[#483dfb]/60 hover:text-[#483dfb]">
+            <Link to={caseStudyPath(i18n.language, fullPage.slug)}>
+              {t('caseStudyPage.readFull')}
+              <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 rtl:-scale-x-100" />
+            </Link>
+          </Button>
+        ) : (
+          <Button
+            variant="outline"
+            size="sm"
+            onClick={() => setOpen(true)}
+            className="group w-full gap-1.5 hover:border-[#483dfb]/60 hover:text-[#483dfb]"
+          >
+            {t('bonus.caseStudies.read')}
+            <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 rtl:-scale-x-100" />
+          </Button>
+        )}
       </div>
 
       <Dialog open={open} onOpenChange={setOpen}>

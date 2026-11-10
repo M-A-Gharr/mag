@@ -1,33 +1,32 @@
 
 import { ArrowUp, Github, Linkedin, Mail } from 'lucide-react';
-import { Link } from 'react-scroll';
+import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { Reveal } from './motion';
 import Logo from './Logo';
+import { CASE_STUDY_PAGES } from '@/content/caseStudies';
+import { caseStudyPath } from '@/i18n/paths';
 
 const Footer = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const currentYear = new Date().getFullYear();
   
   return (
     <footer className="bg-secondary/30 pt-16 pb-8">
       <div className="container mx-auto px-4">
         <div className="flex justify-center mb-10">
-          <Link
-            to="hero"
-            href="#hero"
+          {/* Back to the top of the current page (home or case study) */}
+          <button
+            type="button"
+            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
             aria-label="Back to top"
-            spy={true}
-            smooth={true}
-            offset={-70}
-            duration={800}
             className="p-3 bg-[#483dfb] hover:bg-[#3e30fb] text-white rounded-full cursor-pointer shadow-lg shadow-[#483dfb]/25 transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-1"
           >
             <ArrowUp size={28} />
-          </Link>
+          </button>
         </div>
         
-        <Reveal className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
+        <Reveal className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10">
           <div>
             <h3 className="mb-4"><Logo playInView className="text-[2rem]" /></h3>
             <p className="text-foreground/80 max-w-md whitespace-pre-line">
@@ -35,6 +34,23 @@ const Footer = () => {
             </p>
           </div>
           
+          {/* Case studies: links present on every page, for visitors and for search engines */}
+          <nav aria-label={t('bonus.caseStudies.title')}>
+            <h3 className="text-xl font-semibold mb-4">{t('bonus.caseStudies.title')}</h3>
+            <ul className="space-y-2">
+              {CASE_STUDY_PAGES.map((page) => (
+                <li key={page.slug}>
+                  <Link
+                    to={caseStudyPath(i18n.language, page.slug)}
+                    className="text-foreground/80 underline-offset-4 transition-colors hover:text-[#483dfb] hover:underline"
+                  >
+                    {t(`projects.items.${page.projectId}.title`)}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
+
           <div className="flex flex-col md:items-end">
             <h3 className="text-xl font-semibold mb-4">{t('footer.stayConnected', 'Stay Connected')}</h3>
             <div className="flex space-x-4">
