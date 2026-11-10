@@ -4,7 +4,7 @@ import { initReactI18next } from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
 
 import en from './locales/en.json';
-import { caseStudyPath, caseStudySlugAt, isHomePath, pathFor } from './paths';
+import { caseStudyPath, caseStudySlugAt, isHomePath, pathFor, servicePath, serviceSlugAt } from './paths';
 
 // Only English (the fallback) is in the main bundle; each other language is downloaded the
 // first time it is used. The 7 files together weigh about 240 KB.
@@ -23,8 +23,15 @@ const lazyLocales = {
 /** Keeps the address bar on the page of the current language (home and case study pages). */
 const syncUrlWithLanguage = (lng: string) => {
   const { pathname, search, hash } = window.location;
-  const slug = caseStudySlugAt(pathname);
-  const want = slug ? caseStudyPath(lng, slug) : isHomePath(pathname) ? pathFor(lng) : null;
+  const study = caseStudySlugAt(pathname);
+  const service = serviceSlugAt(pathname);
+  const want = study
+    ? caseStudyPath(lng, study)
+    : service
+      ? servicePath(lng, service)
+      : isHomePath(pathname)
+        ? pathFor(lng)
+        : null;
   if (want && pathname !== want) {
     window.history.replaceState(window.history.state, '', `${want}${search}${hash}`);
   }

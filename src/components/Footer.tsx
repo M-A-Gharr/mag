@@ -5,7 +5,8 @@ import { useTranslation } from 'react-i18next';
 import { Reveal } from './motion';
 import Logo from './Logo';
 import { CASE_STUDY_PAGES } from '@/content/caseStudies';
-import { caseStudyPath } from '@/i18n/paths';
+import { SERVICE_PAGES } from '@/content/services';
+import { caseStudyPath, servicePath } from '@/i18n/paths';
 
 const Footer = () => {
   const { t, i18n } = useTranslation();
@@ -26,7 +27,7 @@ const Footer = () => {
           </button>
         </div>
         
-        <Reveal className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10">
+        <Reveal className="grid grid-cols-1 gap-8 mb-10 sm:grid-cols-2 lg:grid-cols-4">
           <div>
             <h3 className="mb-4"><Logo playInView className="text-[2rem]" /></h3>
             <p className="text-foreground/80 max-w-md whitespace-pre-line">
@@ -34,7 +35,24 @@ const Footer = () => {
             </p>
           </div>
           
-          {/* Case studies: links present on every page, for visitors and for search engines */}
+          {/* Services and case studies: links present on every page, for visitors and search engines */}
+          <nav aria-label={t('services.title')}>
+            <h3 className="text-xl font-semibold mb-4">{t('services.title')}</h3>
+            <ul className="space-y-2">
+              {SERVICE_PAGES.map((page) => (
+                <li key={page.slug}>
+                  <Link
+                    to={servicePath(i18n.language, page.slug)}
+                    className="text-foreground/80 underline-offset-4 transition-colors hover:text-[#483dfb] hover:underline"
+                  >
+                    {t(`about.services.${page.key}.title`)}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
+
+
           <nav aria-label={t('bonus.caseStudies.title')}>
             <h3 className="text-xl font-semibold mb-4">{t('bonus.caseStudies.title')}</h3>
             <ul className="space-y-2">
@@ -51,7 +69,7 @@ const Footer = () => {
             </ul>
           </nav>
 
-          <div className="flex flex-col md:items-end">
+          <div className="flex flex-col lg:items-end">
             <h3 className="text-xl font-semibold mb-4">{t('footer.stayConnected', 'Stay Connected')}</h3>
             <div className="flex space-x-4">
               <a 

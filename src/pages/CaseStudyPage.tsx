@@ -11,7 +11,8 @@ import Footer from '@/components/Footer';
 import SectionLink from '@/components/SectionLink';
 import { Reveal } from '@/components/motion';
 import { CASE_STUDY_PAGES, caseStudyLang, relatedCaseStudies, type CaseStudy } from '@/content/caseStudies';
-import { caseStudyPath, pathFor, SITE_URL } from '@/i18n/paths';
+import { caseStudyPath, pathFor, servicePath, SITE_URL } from '@/i18n/paths';
+import { serviceForCaseStudy } from '@/content/services';
 import NotFound from './NotFound';
 
 const OG_LOCALES: Record<string, string> = { en: 'en_US', fr: 'fr_FR', ar: 'ar_MA' };
@@ -118,6 +119,18 @@ const CaseStudyPage = () => {
                   <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">{t('caseStudyPage.result')}</p>
                   <p className="mt-1.5 font-medium text-[#483dfb] dark:text-[#9b87f5]">{text.brief.result}</p>
                 </div>
+                {serviceForCaseStudy(slug) && (
+                  <div className="md:col-span-3">
+                    <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">{t('caseStudyPage.service')}</p>
+                    <Link
+                      to={servicePath(i18n.language, serviceForCaseStudy(slug)!.slug)}
+                      className="mt-1.5 inline-flex items-center gap-1 font-medium text-[#483dfb] underline-offset-4 hover:underline dark:text-[#9b87f5]"
+                    >
+                      {t(`about.services.${serviceForCaseStudy(slug)!.key}.title`)}
+                      <ArrowUpRight className="h-4 w-4 rtl:-scale-x-100" aria-hidden />
+                    </Link>
+                  </div>
+                )}
                 {technologies.length > 0 && (
                   <div className="md:col-span-3">
                     <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">{t('projects.technologies')}</p>
