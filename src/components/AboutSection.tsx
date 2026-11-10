@@ -1,6 +1,5 @@
 // About: who I am. Photo and signature on one side; experience, education and the way I
-// work on the other, all on the same timeline style. Services now have their own section and
-// the booking calendar sits in Contact.
+// work on the other, all on the same timeline style. Expertise has its own section.
 import { useTranslation } from 'react-i18next';
 import { Briefcase, Compass, GraduationCap, Quote } from 'lucide-react';
 import { motion } from 'framer-motion';

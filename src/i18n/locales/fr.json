@@ -8,10 +8,10 @@
     "contact": "Contact",
     "menu": "Menu",
     "close": "Fermer",
-    "letsTalk": "Travaillons ensemble",
+    "letsTalk": "Me contacter",
     "language": "Langue",
     "theme": "Thème",
-    "services": "Services",
+    "services": "Expertise",
     "testimonials": "Témoignages"
   },
   "hero": {
@@ -20,9 +20,9 @@
       "description": "Développeur Full-Stack à Casablanca : applications web, automatisation IA, e-commerce (PrestaShop, WordPress, Shopify) et intégration CRM."
     },
     "title": "Développeur Full-Stack\n& Automatisation IA",
-    "subtitle": "Je conçois et développe des applications web, des boutiques en ligne et des automatisations IA pour les entreprises qui veulent moins de tâches manuelles et plus de ventes.",
+    "subtitle": "Développeur full-stack à Casablanca, je conçois des applications web, des boutiques en ligne et des automatisations IA qui font gagner du temps aux équipes et des ventes aux entreprises.",
     "cta": {
-      "discover": "Travaillons ensemble",
+      "discover": "Me contacter",
       "projects": "Voir mes réalisations"
     },
     "quote": "Coder. Créer. Connecter."
@@ -81,11 +81,11 @@
       "title": "Ce que je peux faire pour vous",
       "webapps": {
         "title": "Applications web",
-        "desc": "Outils internes, portails clients et CRM conçus autour de la façon dont votre équipe travaille vraiment, et reliés aux données que vous avez déjà."
+        "desc": "Outils internes, portails clients et CRM conçus autour du travail réel des équipes, et reliés aux données existantes."
       },
       "ai": {
         "title": "Automatisation IA",
-        "desc": "Des workflows qui rédigent, trient et qualifient à votre place, des Skills Claude sur mesure, et la formation pour que votre équipe s'en serve au quotidien."
+        "desc": "Des workflows qui rédigent, trient et qualifient, des Skills Claude sur mesure, et la formation des équipes pour s'en servir au quotidien."
       },
       "ecommerce": {
         "title": "E-commerce & SEO",
@@ -104,8 +104,8 @@
       "techreviewtime": "24 heures",
       "responsetime": "Je réponds en général dans la journée.",
       "cal": {
-        "title": "Réserver un appel",
-        "subtitle": "Gratuit · visio, téléphone ou WhatsApp",
+        "title": "Planifier un échange",
+        "subtitle": "Visio, téléphone ou WhatsApp, en dehors de mes heures de travail",
         "chooseMeeting": "1. De quoi souhaitez-vous parler ?",
         "chooseSlot": "2. Choisissez un jour et une heure",
         "pickDay": "Choisissez un jour dans le calendrier pour voir les horaires disponibles.",
@@ -117,7 +117,7 @@
         "email": "Votre e-mail",
         "format": "3. Comment se retrouver ?",
         "phone": "Numéro de téléphone (avec l'indicatif)",
-        "message": "Votre projet en quelques mots (facultatif)",
+        "message": "Quelques mots sur l'objet de l'échange (facultatif)",
         "submit": "Demander ce créneau",
         "sending": "Envoi…",
         "error": "La demande n'a pas pu être envoyée. Réessayez, ou écrivez à contact.maminegh@gmail.com.",
@@ -128,16 +128,16 @@
         "another": "Réserver un autre créneau",
         "meetings": {
           "discovery": {
-            "title": "Appel découverte",
-            "desc": "Votre projet, vos besoins, premières idées"
+            "title": "Premier échange",
+            "desc": "Faire connaissance et parler d'une opportunité"
           },
           "consultation": {
-            "title": "Consultation projet",
-            "desc": "Périmètre, architecture, délais et devis"
+            "title": "Entretien",
+            "desc": "Parcours, projets et poste proposé, en détail"
           },
           "review": {
-            "title": "Revue technique",
-            "desc": "Un regard sur votre site, boutique ou code"
+            "title": "Échange technique",
+            "desc": "Une question sur un projet, un outil ou une stack"
           }
         },
         "formats": {
@@ -147,9 +147,9 @@
         }
       }
     },
-    "available": "Disponible pour de nouveaux projets",
+    "available": "Ouvert aux opportunités",
     "avatarAlt": "Photo de Mohamed Amine Gharrab",
-    "subtitle": "Développeur chez SIMTIS à Casablanca, et disponible pour des projets en freelance.",
+    "subtitle": "Développeur full-stack chez SIMTIS à Casablanca, ouvert aux nouvelles opportunités.",
     "education": {
       "title": "Formation"
     }
@@ -575,7 +575,7 @@
       "description": "Développeur Full-Stack | Automatisation IA | E-commerce"
     },
     "title": "Contact",
-    "subtitle": "Décrivez votre projet en quelques lignes. Je vous réponds dans la journée.",
+    "subtitle": "Une opportunité, une question ? Écrivez-moi : je vous réponds dans la journée.",
     "form": {
       "name": "Nom",
       "email": "Email",
@@ -620,8 +620,8 @@
     "contact": "M'écrire"
   },
   "services": {
-    "title": "Services",
-    "subtitle": "Ce que je réalise pour vous, et en combien de temps.",
+    "title": "Expertise",
+    "subtitle": "Ce que je sais faire, et les projets où je l'ai prouvé.",
     "cta": "Réserver un appel gratuit"
   },
   "testimonials": {
@@ -632,19 +632,19 @@
     "sector": "Secteur",
     "mission": "Mission",
     "result": "Résultat",
-    "ctaTitle": "Un projet similaire ?",
-    "ctaDesc": "Parlons-en : je vous réponds dans la journée.",
+    "ctaTitle": "Ce profil vous intéresse ?",
+    "ctaDesc": "Écrivez-moi ou téléchargez mon CV : je vous réponds dans la journée.",
     "ctaWork": "Voir les autres réalisations",
     "readFull": "Lire l'étude de cas complète",
     "related": "Autres études de cas",
-    "service": "Service"
+    "service": "Expertise"
   },
   "servicePage": {
-    "timeline": "Délai habituel",
     "where": "Où",
-    "whereValue": "Casablanca, au Maroc et à distance",
+    "whereValue": "Casablanca, ouvert au travail à distance",
     "examples": "Exemples de réalisations",
-    "otherServices": "Autres services",
-    "discover": "Découvrir ce service"
+    "otherServices": "Autres domaines d'expertise",
+    "discover": "Voir en détail",
+    "tools": "Outils"
   }
 }

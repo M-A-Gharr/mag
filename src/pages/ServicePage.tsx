@@ -1,10 +1,10 @@
-// A service on its own page: who it is for, what I build, how I work, the case studies that
-// prove it, frequent questions, a call to action and the other services. Its HTML, meta tags
+// An area of expertise on its own page: the problems I solve, what I build, how I work, the
+// case studies that prove it, a call to action and the other areas. Its HTML, meta tags
 // and structured data are also written at build time (build/pagesPlugin.ts).
 import { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { ArrowRight, ArrowUpRight, Check, ChevronDown, ChevronRight } from 'lucide-react';
+import { ArrowRight, ArrowUpRight, Download, Check, ChevronRight } from 'lucide-react';
 import '@/i18n/config';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -14,14 +14,12 @@ import { CASE_STUDY_PAGES, caseStudyLang } from '@/content/caseStudies';
 import { SERVICE_PAGES, type Service } from '@/content/services';
 import { caseStudyPath, pathFor, servicePath, SITE_URL } from '@/i18n/paths';
 import NotFound from './NotFound';
+import { downloadCv } from '@/lib/cv';
 
 const OG_LOCALES: Record<string, string> = { en: 'en_US', fr: 'fr_FR', ar: 'ar_MA' };
 
 const setMeta = (selector: string, value: string) =>
   document.head.querySelector(selector)?.setAttribute(selector.startsWith('link') ? 'href' : 'content', value);
-
-/** Usual timeline of each service, from the home page's booking texts. */
-const TIMELINE_KEY: Record<Service['key'], string> = { webapps: 'devdesc', ai: 'consultdesc', ecommerce: 'devdesc' };
 
 const ServicePage = () => {
   const { slug = '' } = useParams();
@@ -108,8 +106,14 @@ const ServicePage = () => {
               {/* At a glance */}
               <Reveal delay={0.1} className="panel mt-10 grid gap-6 p-6 sm:grid-cols-2 md:p-8">
                 <div>
-                  <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">{t('servicePage.timeline')}</p>
-                  <p className="mt-1.5 font-medium">{t(`about.book.${TIMELINE_KEY[entry.key]}`)}</p>
+                  <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">{t('servicePage.tools')}</p>
+                  <ul className="mt-2 flex flex-wrap gap-2">
+                    {(service?.tools ?? []).map((tool) => (
+                      <li key={tool} className="rounded-full border border-border bg-background/60 px-3 py-1 text-sm">
+                        {tool}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
                 <div>
                   <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">{t('servicePage.where')}</p>
@@ -195,41 +199,28 @@ const ServicePage = () => {
                   </section>
                 )}
 
-                {/* Frequent questions: answers stay in the page (details), only folded */}
-                <section>
-                  <h2 className="text-2xl font-semibold md:text-3xl">{text.faq.heading}</h2>
-                  <div className="mt-6 space-y-3">
-                    {text.faq.items.map((item, i) => (
-                      <details key={i} className="panel group p-5 [&_summary::-webkit-details-marker]:hidden" open={i === 0}>
-                        <summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-semibold">
-                          {item.q}
-                          <ChevronDown className="h-5 w-5 shrink-0 text-muted-foreground transition-transform group-open:rotate-180" aria-hidden />
-                        </summary>
-                        <p className="mt-3 leading-relaxed text-foreground/85">{item.a}</p>
-                      </details>
-                    ))}
-                  </div>
-                </section>
               </div>
 
               {/* Call to action */}
               <div className="mt-14 rounded-2xl border border-[#483dfb]/25 bg-gradient-to-br from-[#483dfb]/10 to-[#9b87f5]/5 p-6 md:p-8">
-                <h2 className="text-xl font-semibold">{t('about.book.title')}</h2>
+                <h2 className="text-xl font-semibold">{t('caseStudyPage.ctaTitle')}</h2>
                 <p className="mt-1 text-muted-foreground">{t('caseStudyPage.ctaDesc')}</p>
                 <div className="mt-5 flex flex-col gap-3 sm:flex-row">
                   <SectionLink
-                    to="book"
+                    to="contact"
                     className="group inline-flex items-center justify-center gap-2 rounded-full bg-[#261bfb] px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-[#3e30fb]"
                   >
-                    {t('services.cta')}
+                    {t('hero.cta.discover')}
                     <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 rtl:rotate-180" aria-hidden />
                   </SectionLink>
-                  <SectionLink
-                    to="contact"
-                    className="inline-flex items-center justify-center rounded-full border border-border bg-background/60 px-5 py-2.5 text-sm font-medium transition-colors hover:border-[#483dfb]/50 hover:text-[#483dfb]"
+                  <button
+                    type="button"
+                    onClick={() => downloadCv(i18n.language)}
+                    className="inline-flex items-center justify-center gap-2 rounded-full border border-border bg-background/60 px-5 py-2.5 text-sm font-medium transition-colors hover:border-[#483dfb]/50 hover:text-[#483dfb]"
                   >
-                    {t('contact.form.title')}
-                  </SectionLink>
+                    <Download className="h-4 w-4" aria-hidden />
+                    {t('bonus.freelance.downloadCV')}
+                  </button>
                 </div>
               </div>
 

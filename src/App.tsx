@@ -34,10 +34,10 @@ const App = () => (
               <Route path="/case-studies/:slug" element={<CaseStudyPage />} />
               <Route path="/fr/etudes-de-cas/:slug" element={<CaseStudyPage />} />
               <Route path="/ar/case-studies/:slug" element={<CaseStudyPage />} />
-              {/* Service pages (generated at build time too) */}
-              <Route path="/services/:slug" element={<ServicePage />} />
-              <Route path="/fr/services/:slug" element={<ServicePage />} />
-              <Route path="/ar/services/:slug" element={<ServicePage />} />
+              {/* Expertise pages (generated at build time too) */}
+              <Route path="/expertise/:slug" element={<ServicePage />} />
+              <Route path="/fr/expertise/:slug" element={<ServicePage />} />
+              <Route path="/ar/expertise/:slug" element={<ServicePage />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>

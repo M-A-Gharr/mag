@@ -4,7 +4,7 @@
 import { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { ArrowRight, ArrowUpRight, ChevronRight, Trophy } from 'lucide-react';
+import { ArrowRight, ArrowUpRight, Download, ChevronRight, Trophy } from 'lucide-react';
 import '@/i18n/config';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -14,6 +14,7 @@ import { CASE_STUDY_PAGES, caseStudyLang, relatedCaseStudies, type CaseStudy } f
 import { caseStudyPath, pathFor, servicePath, SITE_URL } from '@/i18n/paths';
 import { serviceForCaseStudy } from '@/content/services';
 import NotFound from './NotFound';
+import { downloadCv } from '@/lib/cv';
 
 const OG_LOCALES: Record<string, string> = { en: 'en_US', fr: 'fr_FR', ar: 'ar_MA' };
 
@@ -206,12 +207,20 @@ const CaseStudyPage = () => {
                 </div>
                 <div className="flex shrink-0 flex-col gap-3 sm:flex-row">
                   <SectionLink
-                    to="book"
+                    to="contact"
                     className="group inline-flex items-center justify-center gap-2 rounded-full bg-[#261bfb] px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-[#3e30fb]"
                   >
-                    {t('services.cta')}
+                    {t('hero.cta.discover')}
                     <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 rtl:rotate-180" aria-hidden />
                   </SectionLink>
+                  <button
+                    type="button"
+                    onClick={() => downloadCv(i18n.language)}
+                    className="inline-flex items-center justify-center gap-2 rounded-full border border-border bg-background/60 px-5 py-2.5 text-sm font-medium transition-colors hover:border-[#483dfb]/50 hover:text-[#483dfb]"
+                  >
+                    <Download className="h-4 w-4" aria-hidden />
+                    {t('bonus.freelance.downloadCV')}
+                  </button>
                   <SectionLink
                     to="projects"
                     className="inline-flex items-center justify-center rounded-full border border-border px-5 py-2.5 text-sm font-medium transition-colors hover:border-[#483dfb]/50 hover:text-[#483dfb]"

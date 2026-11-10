@@ -8,10 +8,10 @@
     "contact": "Contact",
     "menu": "Menu",
     "close": "Close",
-    "letsTalk": "Let's work together",
+    "letsTalk": "Get in touch",
     "language": "Language",
     "theme": "Theme",
-    "services": "Services",
+    "services": "Expertise",
     "testimonials": "Testimonials"
   },
   "hero": {
@@ -20,9 +20,9 @@
       "description": "Full-Stack Developer in Casablanca: web applications, AI automation, e-commerce (PrestaShop, WordPress, Shopify) and CRM integration."
     },
     "title": "Full-Stack Developer\n& AI Automation",
-    "subtitle": "I design and build web applications, online stores and AI automations for businesses that want less manual work and more sales.",
+    "subtitle": "Full-stack developer in Casablanca. I build web applications, online stores and AI automations that save teams time and help businesses sell more.",
     "cta": {
-      "discover": "Work with me",
+      "discover": "Get in touch",
       "projects": "See my work"
     },
     "quote": "Code. Create. Connect."
@@ -81,11 +81,11 @@
       "title": "What I can do for you",
       "webapps": {
         "title": "Web applications",
-        "desc": "Internal tools, client portals and CRMs built around the way your team actually works, and connected to the data you already have."
+        "desc": "Internal tools, client portals and CRMs built around how teams actually work, and connected to the data they already have."
       },
       "ai": {
         "title": "AI automation",
-        "desc": "Workflows that write, sort and qualify for you, custom Claude Skills, and the training your team needs to use them every day."
+        "desc": "Workflows that write, sort and qualify, custom Claude Skills, and the training teams need to use them every day."
       },
       "ecommerce": {
         "title": "E-commerce & SEO",
@@ -104,8 +104,8 @@
       "techreviewtime": "24 hours",
       "responsetime": "I usually reply within a day.",
       "cal": {
-        "title": "Book a call",
-        "subtitle": "Free · video, phone or WhatsApp",
+        "title": "Schedule a call",
+        "subtitle": "Video, phone or WhatsApp, outside my working hours",
         "chooseMeeting": "1. What would you like to talk about?",
         "chooseSlot": "2. Choose a day and a time",
         "pickDay": "Pick a day in the calendar to see the available times.",
@@ -117,7 +117,7 @@
         "email": "Your email",
         "format": "3. How should we meet?",
         "phone": "Phone number (with country code)",
-        "message": "Your project in a few words (optional)",
+        "message": "A few words about what you'd like to discuss (optional)",
         "submit": "Request this slot",
         "sending": "Sending…",
         "error": "The request could not be sent. Please try again, or write to contact.maminegh@gmail.com.",
@@ -128,16 +128,16 @@
         "another": "Book another slot",
         "meetings": {
           "discovery": {
-            "title": "Discovery call",
-            "desc": "Your project, your needs, first ideas"
+            "title": "First conversation",
+            "desc": "Get to know each other and talk about an opportunity"
           },
           "consultation": {
-            "title": "Project consultation",
-            "desc": "Scope, architecture, timeline and quote"
+            "title": "Interview",
+            "desc": "My background, projects and the role, in detail"
           },
           "review": {
-            "title": "Technical review",
-            "desc": "A look at your site, store or code"
+            "title": "Technical chat",
+            "desc": "A question about a project, a tool or a stack"
           }
         },
         "formats": {
@@ -147,9 +147,9 @@
         }
       }
     },
-    "available": "Open to new projects",
+    "available": "Open to opportunities",
     "avatarAlt": "Photo of Mohamed Amine Gharrab",
-    "subtitle": "Developer at SIMTIS in Casablanca, and available for freelance projects.",
+    "subtitle": "Full-stack developer at SIMTIS in Casablanca, open to new opportunities.",
     "education": {
       "title": "Education"
     }
@@ -575,7 +575,7 @@
       "description": "Full-Stack Developer | AI Automation | E-commerce"
     },
     "title": "Contact",
-    "subtitle": "Tell me about your project in a few lines. I'll get back to you within a day.",
+    "subtitle": "An opportunity or a question? Write to me and I'll get back to you within a day.",
     "form": {
       "title": "Send a message",
       "name": "Name",
@@ -626,8 +626,8 @@
     "contact": "Write to me"
   },
   "services": {
-    "title": "Services",
-    "subtitle": "What I build for you, and how long it usually takes.",
+    "title": "Expertise",
+    "subtitle": "What I do best, and the projects that prove it.",
     "cta": "Book a free call"
   },
   "testimonials": {
@@ -638,19 +638,19 @@
     "sector": "Sector",
     "mission": "Mission",
     "result": "Result",
-    "ctaTitle": "Working on something similar?",
-    "ctaDesc": "Let's talk it through. I'll get back to you within a day.",
+    "ctaTitle": "Interested in my profile?",
+    "ctaDesc": "Write to me or download my CV. I'll get back to you within a day.",
     "ctaWork": "See other work",
     "readFull": "Read the full case study",
     "related": "More case studies",
-    "service": "Service"
+    "service": "Expertise"
   },
   "servicePage": {
-    "timeline": "Usual timeline",
     "where": "Where",
-    "whereValue": "Casablanca, across Morocco and remotely",
+    "whereValue": "Casablanca, open to remote work",
     "examples": "Examples of my work",
-    "otherServices": "Other services",
-    "discover": "Discover this service"
+    "otherServices": "Other areas of expertise",
+    "discover": "See in detail",
+    "tools": "Tools"
   }
 }
