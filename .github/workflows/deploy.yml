@@ -43,3 +43,22 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
           commit_message: "🚀 Deploy: ${{ github.event.head_commit.message }}"
+
+      # Tells Bing (and the other IndexNow search engines) which pages to re-read, right after
+      # each deploy. Waits for GitHub Pages to serve the new key file first, since the search
+      # engine checks it. Never fails the deploy: the sitemap stays the fallback.
+      - name: 📣 Notify search engines (IndexNow)
+        continue-on-error: true
+        env:
+          HOST: www.maminegh.com
+          KEY: f427231d923b1b3a899d8dc0efcad015
+        run: |
+          for i in $(seq 1 20); do
+            curl -fsS "https://$HOST/$KEY.txt" | grep -q "$KEY" && break
+            sleep 15
+          done
+          URLS=$(grep -o '<loc>[^<]*</loc>' dist/sitemap.xml | sed -e 's/<loc>//' -e 's/<\/loc>//' | jq -R . | jq -sc .)
+          jq -n --arg host "$HOST" --arg key "$KEY" --argjson urls "$URLS" \
+            '{host: $host, key: $key, keyLocation: "https://\($host)/\($key).txt", urlList: $urls}' > indexnow.json
+          curl -sS -o /dev/null -w "IndexNow: HTTP %{http_code}\n" -X POST "https://api.indexnow.org/indexnow" \
+            -H "Content-Type: application/json; charset=utf-8" --data @indexnow.json
