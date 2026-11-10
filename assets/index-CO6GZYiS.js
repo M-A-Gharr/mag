@@ -1,1 +1,0 @@
-import{_ as t}from"./index-DTu81iIH.js";const a=[{slug:"migration-woocommerce-prestashop-9",projectId:13,load:()=>t(()=>import("./migration-woocommerce-prestashop-9-CP1Wyan0.js"),[])}],s=o=>o==="fr"||o==="ar"?o:"en",c=o=>a.find(r=>r.projectId===o);export{a as C,c as a,s as c};

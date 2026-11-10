@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Studio IA de visuels mode · Étude de cas</title>
+    <meta name="description" content="Un studio IA interne qui transforme la photo d'un châle en visuels portés par mannequin, avec validation, quotas par magasin et fiches produit en trois langues." />
+    <meta name="author" content="Mohamed Amine Gharrab" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <link rel="canonical" href="https://www.maminegh.com/fr/etudes-de-cas/ai-fashion-visuals-studio/" />
+    <!-- Language versions: each page lists all of them (Google shows the right one to each visitor) -->
+    <link rel="alternate" hreflang="en" href="https://www.maminegh.com/case-studies/ai-fashion-visuals-studio/" />
+    <link rel="alternate" hreflang="fr" href="https://www.maminegh.com/fr/etudes-de-cas/ai-fashion-visuals-studio/" />
+    <link rel="alternate" hreflang="ar" href="https://www.maminegh.com/ar/case-studies/ai-fashion-visuals-studio/" />
+    <link rel="alternate" hreflang="x-default" href="https://www.maminegh.com/case-studies/ai-fashion-visuals-studio/" />
+    <meta name="theme-color" content="#261bfb" />
+    <!-- Icons: .ico for browser tabs, PNGs (multiples of 48px) for search results, manifest for phones -->
+    <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48" />
+    <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- Link previews (LinkedIn, WhatsApp, X…): read here, these crawlers do not run JavaScript -->
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="M.A.G — Mohamed Amine Gharrab" />
+    <meta property="og:url" content="https://www.maminegh.com/fr/etudes-de-cas/ai-fashion-visuals-studio/" />
+    <meta property="og:title" content="Studio IA de visuels mode · Étude de cas" />
+    <meta property="og:description" content="Un studio IA interne qui transforme la photo d'un châle en visuels portés par mannequin, avec validation, quotas par magasin et fiches produit en trois langues." />
+    <meta property="og:image" content="https://www.maminegh.com/images/share/og-image.jpg" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Studio IA de visuels mode · Étude de cas" />
+    <meta property="og:locale" content="fr_FR" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Studio IA de visuels mode · Étude de cas" />
+    <meta name="twitter:description" content="Un studio IA interne qui transforme la photo d'un châle en visuels portés par mannequin, avec validation, quotas par magasin et fiches produit en trois langues." />
+    <meta name="twitter:image" content="https://www.maminegh.com/images/share/og-image.jpg" />
+
+    <!-- Structured data: tells search engines who the site is about -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Person",
+          "@id": "https://www.maminegh.com/#person",
+          "name": "Mohamed Amine Gharrab",
+          "alternateName": "M.A.G",
+          "url": "https://www.maminegh.com/",
+          "image": "https://www.maminegh.com/images/profile/ProfileImage.png",
+          "jobTitle": "Full-Stack Developer",
+          "description": "Full-Stack Developer in Casablanca: web applications, AI automation, e-commerce (PrestaShop, WordPress, Shopify) and CRM integration.",
+          "worksFor": { "@type": "Organization", "name": "SIMTIS" },
+          "address": { "@type": "PostalAddress", "addressLocality": "Casablanca", "addressCountry": "MA" },
+          "email": "mailto:contact.maminegh@gmail.com",
+          "knowsLanguage": ["ar", "fr", "en"],
+          "knowsAbout": ["Full-stack web development", "React", "Node.js", "TypeScript", "PHP", "Python", "PrestaShop", "WordPress", "Shopify", "SEO", "AI automation", "Generative AI", "Claude", "CRM integration"],
+          "sameAs": ["https://www.linkedin.com/in/m-amine-gharrab", "https://github.com/M-A-Gharr"]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://www.maminegh.com/#website",
+          "url": "https://www.maminegh.com/",
+          "name": "M.A.G — Mohamed Amine Gharrab",
+          "inLanguage": ["en", "fr", "ar", "es", "it", "ru", "hi"],
+          "about": { "@id": "https://www.maminegh.com/#person" }
+        }
+      ]
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Fonts load without blocking the first paint (text shows in a system font, then swaps) -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@700&amp;display=swap" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@700&amp;display=swap"></noscript>
+    <!-- Google tag (gtag.js): calls are queued right away (no visit is lost); the 190 KB script
+         itself loads once the page has finished loading, so it never delays the first paint. -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-WJ17T7CYTE');
+      window.addEventListener('load', function () {
+        var load = function () {
+          var s = document.createElement('script');
+          s.async = true;
+          s.src = 'https://www.googletagmanager.com/gtag/js?id=G-WJ17T7CYTE';
+          document.head.appendChild(s);
+        };
+        if ('requestIdleCallback' in window) requestIdleCallback(load, { timeout: 3000 });
+        else setTimeout(load, 1500);
+      });
+    </script>
+    <script type="module" crossorigin src="/assets/index-D4OoTzgJ.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/react-Dvwkxfce.js">
+    <link rel="modulepreload" crossorigin href="/assets/animation-BqM7mhei.js">
+    <link rel="modulepreload" crossorigin href="/assets/i18n-DUR6zq1z.js">
+    <link rel="stylesheet" crossorigin href="/assets/index-BNh7Jniv.css">
+      <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"Simtis Studio : des visuels portés par mannequin, créés par IA à partir d'une photo produit","description":"Un studio IA interne qui transforme la photo d'un châle en visuels portés par mannequin, avec validation, quotas par magasin et fiches produit en trois langues.","inLanguage":"fr","datePublished":"2026-11-10","dateModified":"2026-11-10","image":"https://www.maminegh.com/images/share/og-image.jpg","mainEntityOfPage":"https://www.maminegh.com/fr/etudes-de-cas/ai-fashion-visuals-studio/","author":{"@id":"https://www.maminegh.com/#person"},"publisher":{"@id":"https://www.maminegh.com/#person"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Accueil","item":"https://www.maminegh.com/fr/"},{"@type":"ListItem","position":2,"name":"Études de cas","item":"https://www.maminegh.com/fr/#projects"},{"@type":"ListItem","position":3,"name":"Simtis Studio : des visuels portés par mannequin, créés par IA à partir d'une photo produit","item":"https://www.maminegh.com/fr/etudes-de-cas/ai-fashion-visuals-studio/"}]}]}</script>
+  </head>
+
+  <body class="relative min-h-screen">
+    <div id="root"><main><article><p>Mode &amp; retail · IA générative</p><h1>Simtis Studio : des visuels portés par mannequin, créés par IA à partir d'une photo produit</h1><p>Pour montrer un nouveau châle porté, un groupe de magasins devait organiser une séance photo. J'ai conçu un studio interne qui produit ces visuels en quelques clics, à partir d'une simple photo du produit, sans perdre le contrôle de l'image de marque.</p><h2>Le contexte</h2><p>Le groupe vend des châles et des foulards dans un réseau de magasins, sur son site et sur les réseaux sociaux. Chaque nouveau motif a besoin d'images où il est porté : ce sont elles qui font vendre. Mais une séance photo par collection coûte cher et prend du temps, si bien que beaucoup de produits partaient en ligne avec une simple photo à plat.</p><p>Les commerciaux des magasins, eux, voulaient pouvoir envoyer rapidement à un client un visuel soigné du produit qu'il demande.</p><h2>Le défi</h2><p>Générer une image par IA est devenu facile. En faire un outil fiable pour toute une équipe l'est beaucoup moins. Il fallait :</p><ul><li>des visuels fidèles au produit : le motif, les couleurs et les bordures ne doivent jamais être inventés ;</li><li>une image de marque cohérente d'un magasin à l'autre ;</li><li>des coûts maîtrisés, puisque chaque génération est payante ;</li><li>un outil que des commerciaux utilisent sans formation technique.</li></ul><h2>Ce que j'ai fait</h2><ol><li><h3>Partir du travail réel des magasins</h3><p>Avant de développer, j'ai observé comment le marketing et les commerciaux préparent leurs visuels, et ce qui les bloquait. Le parcours de l'outil suit ce travail : le tableau de bord signale les produits du magasin qui n'ont pas encore d'image portée, les plus en stock d'abord, et un clic ouvre le studio déjà rempli.</p></li><li><h3>Deux moteurs d'IA, chacun pour son usage</h3><p>Le studio propose deux moteurs : l'un pour les mises en scène vivantes, les affiches et les demandes libres, l'autre pour un essayage virtuel fidèle sur la photo d'un mannequin. Le commercial choisit la façon de porter le châle, la pose, le décor (riad, médina, terrasse, studio…) et le style photo, puis enregistre ses combinaisons préférées pour garder une série homogène.</p><p>Le produit vient du catalogue numérique interne ou d'une photo déposée directement. Plusieurs coloris se lancent en une fois, avec la même mise en scène.</p></li><li><h3>Une file partagée et des quotas par magasin</h3><p>Les générations passent par une file d'attente commune, traitée sur le serveur : on peut fermer la page, le résultat attend dans l'historique. Chaque magasin dispose d'un crédit journalier et mensuel par moteur, et une génération annulée avant son départ n'est pas décomptée.</p></li><li><h3>Une validation avant toute publication</h3><p>Chaque visuel est d'abord « à valider ». Le chef de zone l'approuve, ou le renvoie avec un commentaire précis, par exemple un motif déformé sur l'épaule, et le commercial le régénère en un clic. Un visuel reste privé tant qu'il n'est pas ajouté à la fiche produit.</p></li><li><h3>Des fiches produit partagées, en trois langues</h3><p>Chaque motif a une fiche unique, commune à tous les magasins : noms et descriptions en français, en anglais et en arabe, caractéristiques, coloris et visuels. Avant de générer, un commercial voit si un autre magasin a déjà publié un bon visuel, ce qui évite de payer deux fois la même image. La fiche s'exporte en PDF ou en image, prête à envoyer à un client, et un visuel peut devenir un court clip vidéo.</p><p>L'interface elle-même existe en français, en anglais et en arabe, avec une mise en page de droite à gauche.</p></li></ol><p>Les magasins obtiennent en quelques clics des visuels portés, fidèles au produit et à la marque, au lieu d'attendre une séance photo. Chaque image est validée avant d'être publiée, les coûts restent sous contrôle grâce aux quotas, et le catalogue se complète au fil de l'eau, avec des fiches prêtes à partager en trois langues.</p><nav><h2>Autres études de cas</h2><ul><li><a href="/fr/etudes-de-cas/prestashop-redesign-multilingual-seo/">Refonte, SEO multilingue et modules sur mesure pour une boutique PrestaShop</a></li><li><a href="/fr/etudes-de-cas/b2b-lead-intelligence-platform/">Une plateforme de prospection B2B qui trouve, qualifie et suit les prospects avec l'IA</a></li></ul></nav></article></main></div>
+    <script>
+      (function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="1eD3-A8ZxJWQeyzQaE89z";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
+    </script>
+  </body>
+</html>
