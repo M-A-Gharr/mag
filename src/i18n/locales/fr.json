@@ -580,7 +580,8 @@
       "youtube": "YouTube",
       "addressValue": "Casablanca, Maroc",
       "copied": "Copié !",
-      "copyEmail": "Cliquez pour copier l’adresse e-mail"
+      "copyEmail": "Cliquez pour copier l’adresse e-mail",
+      "openMap": "Voir sur Google Maps"
     }
   },
   "footer": {

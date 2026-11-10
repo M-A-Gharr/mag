@@ -4,7 +4,7 @@ import { MapPin, Mail, Phone, Linkedin } from 'lucide-react';
 import emailjs from 'emailjs-com'
 import { useTranslation } from 'react-i18next';
 import { AnimatePresence, motion } from 'framer-motion';
-import { EASE_OUT, ImageReveal, Reveal, SectionHeading, Stagger, StaggerItem } from './motion';
+import { EASE_OUT, Reveal, SectionHeading, Stagger, StaggerItem } from './motion';
 import FloatingField from './contact/FloatingField';
 import PaperPlaneButton, { type SendStatus } from './contact/PaperPlaneButton';
 import ContactItem from './contact/ContactItem';
@@ -202,9 +202,31 @@ const ContactSection = () => {
               </Stagger>
             </Reveal>
 
-            <ImageReveal delay={0.2} className="h-[300px] rounded-xl">
-              <iframe title="Casablanca, Morocco" src="https://maps.google.com/maps?q=Casablanca%2C%20Morocco&z=12&output=embed" width="100%" height="100%" style={{ border: 0 }} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
-            </ImageReveal>
+            {/* Plain fade-in: a clip-path reveal hides the map from Chrome, which then never
+                paints the Google frame. The card underneath shows if a blocker removes the map. */}
+            <Reveal delay={0.2} className="relative h-[300px] overflow-hidden rounded-xl border border-secondary/20 bg-secondary/20">
+              <div className="absolute inset-0 flex flex-col items-center justify-center gap-2 p-6 text-center">
+                <MapPin className="h-6 w-6 text-[#483dfb]" />
+                <p className="font-medium">{t('contact.info.addressValue')}</p>
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=Casablanca%2C%20Morocco"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-[#483dfb] underline-offset-4 hover:underline dark:text-[#9b87f5]"
+                >
+                  {t('contact.info.openMap')}
+                </a>
+              </div>
+              <iframe
+                title={t('contact.info.addressValue')}
+                src="https://www.google.com/maps/embed?pb=!1m3!2m1!1sCasablanca,+Morocco!6i12"
+                className="relative h-full w-full"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+            </Reveal>
           </div>
         </div>
       </section>
