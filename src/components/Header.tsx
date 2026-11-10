@@ -64,7 +64,7 @@ const Header = () => {
         </Link>
 
         {/* Desktop Nav */}
-        <nav role="navigation" className="hidden lg:flex items-center space-x-4 xl:space-x-8">
+        <nav role="navigation" className="hidden lg:flex items-center gap-4 xl:gap-8">
           {navLinks.map((link) => (
             <Link
               key={link.name}
@@ -81,7 +81,7 @@ const Header = () => {
               {link.name}
             </Link>
           ))}
-          <div className="flex items-center space-x-2">
+          <div className="flex items-center gap-2">
             <LanguageSwitcher />
             <ThemeSwitcher />
           </div>
