@@ -87,10 +87,11 @@ const CertificateTile = ({ name, index }: { name: string; index: number }) => {
   );
 };
 
+// overflow-hidden: before landing, each badge is scaled up to 170% and would widen the page.
 const Certifications = () => {
   const { t } = useTranslation();
   return (
-    <Reveal className="panel mt-6 p-6 md:p-8">
+    <Reveal className="panel mt-6 overflow-hidden p-6 md:p-8">
       <BlockTitle icon={Award} title={t('skills.certifications.title')} subtitle={t('skills.certifications.subtitle')} />
       <motion.div
         className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5"

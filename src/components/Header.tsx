@@ -67,7 +67,7 @@ const Header = () => {
         <nav role="navigation" className="hidden lg:flex items-center gap-4 xl:gap-8">
           {navLinks.map((link) => (
             <Link
-              key={link.name}
+              key={link.to}
               to={link.to}
               href={`#${link.to}`}
               aria-label={`Navigate to ${link.name}`}
