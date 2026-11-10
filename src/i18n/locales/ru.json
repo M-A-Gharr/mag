@@ -581,7 +581,8 @@
       "linkedin": "LinkedIn",
       "youtube": "YouTube",
       "copied": "Скопировано!",
-      "copyEmail": "Нажмите, чтобы скопировать адрес почты"
+      "copyEmail": "Нажмите, чтобы скопировать адрес почты",
+      "openMap": "Открыть в Google Картах"
     }
   },
   "map": {

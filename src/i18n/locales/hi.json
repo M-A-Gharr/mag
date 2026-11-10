@@ -581,7 +581,8 @@
       "linkedin": "LinkedIn",
       "youtube": "YouTube",
       "copied": "कॉपी हो गया!",
-      "copyEmail": "ईमेल पता कॉपी करने के लिए क्लिक करें"
+      "copyEmail": "ईमेल पता कॉपी करने के लिए क्लिक करें",
+      "openMap": "Google Maps पर देखें"
     }
   },
   "map": {

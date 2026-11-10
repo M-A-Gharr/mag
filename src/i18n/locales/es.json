@@ -581,7 +581,8 @@
       "linkedin": "LinkedIn",
       "youtube": "YouTube",
       "copied": "¡Copiado!",
-      "copyEmail": "Haz clic para copiar el correo"
+      "copyEmail": "Haz clic para copiar el correo",
+      "openMap": "Ver en Google Maps"
     }
   },
   "map": {
