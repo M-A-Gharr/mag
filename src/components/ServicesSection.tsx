@@ -3,7 +3,10 @@
 // lists the site used to have (in About and in the old "References" availability card).
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-scroll';
-import { ArrowRight, Bot, Check, Clock, Code, ShoppingCart } from 'lucide-react';
+import { Link as RouterLink } from 'react-router-dom';
+import { serviceForKey } from '@/content/services';
+import { servicePath } from '@/i18n/paths';
+import { ArrowRight, ArrowUpRight, Bot, Check, Clock, Code, ShoppingCart } from 'lucide-react';
 import { Reveal, SectionHeading, Stagger, StaggerItem } from './motion';
 
 // Which items of `bonus.freelance.servicesList` belong to each service.
@@ -20,7 +23,7 @@ const TIMELINES = [
 ] as const;
 
 const ServicesSection = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const raw = t('bonus.freelance.servicesList', { returnObjects: true });
   const list = Array.isArray(raw) ? (raw as string[]) : [];
 
@@ -47,6 +50,15 @@ const ServicesSection = () => {
                   ) : null
                 )}
               </ul>
+              {serviceForKey(key) && (
+                <RouterLink
+                  to={servicePath(i18n.language, serviceForKey(key)!.slug)}
+                  className="mt-auto inline-flex items-center gap-1 pt-6 text-sm font-medium text-[#483dfb] underline-offset-4 hover:underline dark:text-[#9b87f5]"
+                >
+                  {t('servicePage.discover')}
+                  <ArrowUpRight className="h-4 w-4 rtl:-scale-x-100" aria-hidden />
+                </RouterLink>
+              )}
             </article>
           </StaggerItem>
         ))}

@@ -642,6 +642,15 @@
     "ctaDesc": "Hablemos. Te respondo en el día.",
     "ctaWork": "Ver otros proyectos",
     "readFull": "Leer el caso completo",
-    "related": "Otros casos de estudio"
+    "related": "Otros casos de estudio",
+    "service": "Servicio"
+  },
+  "servicePage": {
+    "timeline": "Plazo habitual",
+    "where": "Dónde",
+    "whereValue": "Casablanca, en Marruecos y a distancia",
+    "examples": "Ejemplos de mi trabajo",
+    "otherServices": "Otros servicios",
+    "discover": "Descubrir este servicio"
   }
 }

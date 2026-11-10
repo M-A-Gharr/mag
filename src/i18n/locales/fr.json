@@ -636,6 +636,15 @@
     "ctaDesc": "Parlons-en : je vous réponds dans la journée.",
     "ctaWork": "Voir les autres réalisations",
     "readFull": "Lire l'étude de cas complète",
-    "related": "Autres études de cas"
+    "related": "Autres études de cas",
+    "service": "Service"
+  },
+  "servicePage": {
+    "timeline": "Délai habituel",
+    "where": "Où",
+    "whereValue": "Casablanca, au Maroc et à distance",
+    "examples": "Exemples de réalisations",
+    "otherServices": "Autres services",
+    "discover": "Découvrir ce service"
   }
 }

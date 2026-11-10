@@ -4,6 +4,7 @@
 //
 //   dist/fr/index.html, dist/ar/index.html          home pages in French and Arabic
 //   dist/<case study path>/index.html               each case study, in English, French, Arabic
+//   dist/<service path>/index.html                  each service, in English, French, Arabic
 //   dist/sitemap.xml                                every page, with its language versions
 //   dist/404.html                                   the app, not indexed (GitHub Pages 404)
 //
@@ -13,7 +14,9 @@ import path from 'path';
 import type { Plugin } from 'vite';
 import { CASE_STUDIES } from '../src/content/caseStudies/all';
 import type { CaseStudy, CaseStudyLang, CaseStudyText } from '../src/content/caseStudies/types';
-import { caseStudyPath, pathFor, SITE_URL } from '../src/i18n/paths';
+import { SERVICES } from '../src/content/services/all';
+import type { Service, ServiceText } from '../src/content/services/types';
+import { caseStudyPath, pathFor, servicePath, SITE_URL } from '../src/i18n/paths';
 
 const LANGS: { lng: CaseStudyLang; ogLocale: string; dir: 'ltr' | 'rtl' }[] = [
   { lng: 'en', ogLocale: 'en_US', dir: 'ltr' },
@@ -26,6 +29,7 @@ const esc = (s: string) => s.replace(/&/g, '&amp;').replace(/"/g, '&quot;').repl
 const abs = (p: string) => `${SITE_URL}${p.replace(/^\//, '')}`;
 const homeUrl = (lng: string) => abs(pathFor(lng));
 const studyUrl = (lng: string, slug: string) => abs(caseStudyPath(lng, slug));
+const serviceUrl = (lng: string, slug: string) => abs(servicePath(lng, slug));
 
 type Alternate = { hreflang: string; href: string };
 
@@ -99,6 +103,63 @@ const articleHtml = (t: CaseStudyText, related: { href: string; title: string }[
   }
   parts.push(`</article></main>`);
   return parts.join('');
+};
+
+/** A service page as plain HTML, for crawlers that do not run JavaScript. */
+const serviceHtml = (t: ServiceText, examples: { href: string; title: string }[], examplesHeading: string) => {
+  const list = (items: string[]) => `<ul>${items.map((i) => `<li>${esc(i)}</li>`).join('')}</ul>`;
+  const parts = [`<main><article>`, `<h1>${esc(t.title)}</h1>`, `<p>${esc(t.lead)}</p>`];
+  parts.push(`<h2>${esc(t.audience.heading)}</h2>`, list(t.audience.items));
+  parts.push(`<h2>${esc(t.offer.heading)}</h2>`, list(t.offer.items));
+  parts.push(
+    `<h2>${esc(t.process.heading)}</h2>`,
+    `<ol>${t.process.steps.map((st) => `<li><h3>${esc(st.heading)}</h3><p>${esc(st.text)}</p></li>`).join('')}</ol>`
+  );
+  if (examples.length) {
+    parts.push(`<h2>${esc(examplesHeading)}</h2><ul>${examples.map((e) => `<li><a href="${e.href}">${esc(e.title)}</a></li>`).join('')}</ul>`);
+  }
+  parts.push(`<h2>${esc(t.faq.heading)}</h2>`, ...t.faq.items.map((f) => `<h3>${esc(f.q)}</h3><p>${esc(f.a)}</p>`));
+  parts.push(`</article></main>`);
+  return parts.join('');
+};
+
+const serviceAlternates = (slug: string): Alternate[] => [
+  ...LANGS.map(({ lng }) => ({ hreflang: lng, href: serviceUrl(lng, slug) })),
+  { hreflang: 'x-default', href: serviceUrl('en', slug) },
+];
+
+const serviceJsonLd = (service: Service, lng: CaseStudyLang, sectionName: string, homeName: string) => {
+  const t = service.text[lng];
+  const url = serviceUrl(lng, service.slug);
+  return {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'Service',
+        name: t.title,
+        description: t.metaDescription,
+        url,
+        inLanguage: lng,
+        provider: { '@id': `${SITE_URL}#person` },
+        areaServed: [
+          { '@type': 'City', name: 'Casablanca' },
+          { '@type': 'Country', name: 'Morocco' },
+        ],
+      },
+      {
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: homeName, item: homeUrl(lng) },
+          { '@type': 'ListItem', position: 2, name: sectionName, item: `${homeUrl(lng)}#services` },
+          { '@type': 'ListItem', position: 3, name: t.title, item: url },
+        ],
+      },
+      {
+        '@type': 'FAQPage',
+        mainEntity: t.faq.items.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+      },
+    ],
+  };
 };
 
 const studyAlternates = (slug: string): Alternate[] => [
@@ -212,6 +273,34 @@ export function pagesPlugin(): Plugin {
             })
           );
           entries.push({ url, alternates: studyAlternates(study.slug), lastmod: study.modified });
+        }
+      }
+
+      // Services, one page per language.
+      for (const service of SERVICES) {
+        for (const { lng, ogLocale, dir } of LANGS) {
+          const t = service.text[lng];
+          const url = serviceUrl(lng, service.slug);
+          const examples = service.caseStudies
+            .map((slug) => CASE_STUDIES.find((c) => c.slug === slug))
+            .filter((c): c is CaseStudy => Boolean(c))
+            .map((c) => ({ href: caseStudyPath(lng, c.slug), title: c.text[lng].title }));
+          write(
+            outDir,
+            servicePath(lng, service.slug),
+            renderPage(source, {
+              lng,
+              dir,
+              ogLocale,
+              url,
+              title: t.metaTitle,
+              description: t.metaDescription,
+              alternates: serviceAlternates(service.slug),
+              jsonLd: serviceJsonLd(service, lng, locales[lng].services.title, locales[lng].caseStudyPage.home),
+              body: serviceHtml(t, examples, locales[lng].servicePage.examples),
+            })
+          );
+          entries.push({ url, alternates: serviceAlternates(service.slug), lastmod: service.modified });
         }
       }
 
