@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>نقل متجر من WooCommerce إلى PrestaShop 9 · دراسة حالة</title>
+    <meta name="description" content="كيف نقلت متجر أزياء من WooCommerce إلى PrestaShop 9 دون أن يفقد عملاءه أو سجل طلباته أو مراتبه في Google." />
+    <meta name="author" content="Mohamed Amine Gharrab" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <link rel="canonical" href="https://www.maminegh.com/ar/case-studies/migration-woocommerce-prestashop-9/" />
+    <!-- Language versions: each page lists all of them (Google shows the right one to each visitor) -->
+    <link rel="alternate" hreflang="en" href="https://www.maminegh.com/case-studies/migration-woocommerce-prestashop-9/" />
+    <link rel="alternate" hreflang="fr" href="https://www.maminegh.com/fr/etudes-de-cas/migration-woocommerce-prestashop-9/" />
+    <link rel="alternate" hreflang="ar" href="https://www.maminegh.com/ar/case-studies/migration-woocommerce-prestashop-9/" />
+    <link rel="alternate" hreflang="x-default" href="https://www.maminegh.com/case-studies/migration-woocommerce-prestashop-9/" />
+    <meta name="theme-color" content="#261bfb" />
+    <!-- Icons: .ico for browser tabs, PNGs (multiples of 48px) for search results, manifest for phones -->
+    <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48" />
+    <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- Link previews (LinkedIn, WhatsApp, X…): read here, these crawlers do not run JavaScript -->
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="M.A.G — Mohamed Amine Gharrab" />
+    <meta property="og:url" content="https://www.maminegh.com/ar/case-studies/migration-woocommerce-prestashop-9/" />
+    <meta property="og:title" content="نقل متجر من WooCommerce إلى PrestaShop 9 · دراسة حالة" />
+    <meta property="og:description" content="كيف نقلت متجر أزياء من WooCommerce إلى PrestaShop 9 دون أن يفقد عملاءه أو سجل طلباته أو مراتبه في Google." />
+    <meta property="og:image" content="https://www.maminegh.com/images/share/og-image.jpg" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="نقل متجر من WooCommerce إلى PrestaShop 9 · دراسة حالة" />
+    <meta property="og:locale" content="ar_MA" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="نقل متجر من WooCommerce إلى PrestaShop 9 · دراسة حالة" />
+    <meta name="twitter:description" content="كيف نقلت متجر أزياء من WooCommerce إلى PrestaShop 9 دون أن يفقد عملاءه أو سجل طلباته أو مراتبه في Google." />
+    <meta name="twitter:image" content="https://www.maminegh.com/images/share/og-image.jpg" />
+
+    <!-- Structured data: tells search engines who the site is about -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Person",
+          "@id": "https://www.maminegh.com/#person",
+          "name": "Mohamed Amine Gharrab",
+          "alternateName": "M.A.G",
+          "url": "https://www.maminegh.com/",
+          "image": "https://www.maminegh.com/images/profile/ProfileImage.png",
+          "jobTitle": "Full-Stack Developer",
+          "description": "Full-Stack Developer in Casablanca: web applications, AI automation, e-commerce (PrestaShop, WordPress, Shopify) and CRM integration.",
+          "worksFor": { "@type": "Organization", "name": "SIMTIS" },
+          "address": { "@type": "PostalAddress", "addressLocality": "Casablanca", "addressCountry": "MA" },
+          "email": "mailto:contact.maminegh@gmail.com",
+          "knowsLanguage": ["ar", "fr", "en"],
+          "knowsAbout": ["Full-stack web development", "React", "Node.js", "TypeScript", "PHP", "Python", "PrestaShop", "WordPress", "Shopify", "SEO", "AI automation", "Generative AI", "Claude", "CRM integration"],
+          "sameAs": ["https://www.linkedin.com/in/m-amine-gharrab", "https://github.com/M-A-Gharr"]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://www.maminegh.com/#website",
+          "url": "https://www.maminegh.com/",
+          "name": "M.A.G — Mohamed Amine Gharrab",
+          "inLanguage": ["en", "fr", "ar", "es", "it", "ru", "hi"],
+          "about": { "@id": "https://www.maminegh.com/#person" }
+        }
+      ]
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Fonts load without blocking the first paint (text shows in a system font, then swaps) -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@700&amp;display=swap" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@700&amp;display=swap"></noscript>
+    <!-- Google tag (gtag.js): calls are queued right away (no visit is lost); the 190 KB script
+         itself loads once the page has finished loading, so it never delays the first paint. -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-WJ17T7CYTE');
+      window.addEventListener('load', function () {
+        var load = function () {
+          var s = document.createElement('script');
+          s.async = true;
+          s.src = 'https://www.googletagmanager.com/gtag/js?id=G-WJ17T7CYTE';
+          document.head.appendChild(s);
+        };
+        if ('requestIdleCallback' in window) requestIdleCallback(load, { timeout: 3000 });
+        else setTimeout(load, 1500);
+      });
+    </script>
+    <script type="module" crossorigin src="/assets/index-DTu81iIH.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/react-Dvwkxfce.js">
+    <link rel="modulepreload" crossorigin href="/assets/animation-BqM7mhei.js">
+    <link rel="modulepreload" crossorigin href="/assets/i18n-DUR6zq1z.js">
+    <link rel="stylesheet" crossorigin href="/assets/index-CedsbNuc.css">
+      <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"نقل متجر أزياء من WooCommerce إلى PrestaShop 9","description":"كيف نقلت متجر أزياء من WooCommerce إلى PrestaShop 9 دون أن يفقد عملاءه أو سجل طلباته أو مراتبه في Google.","inLanguage":"ar","datePublished":"2026-11-10","dateModified":"2026-11-10","image":"https://www.maminegh.com/images/share/og-image.jpg","mainEntityOfPage":"https://www.maminegh.com/ar/case-studies/migration-woocommerce-prestashop-9/","author":{"@id":"https://www.maminegh.com/#person"},"publisher":{"@id":"https://www.maminegh.com/#person"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"الرئيسية","item":"https://www.maminegh.com/ar/"},{"@type":"ListItem","position":2,"name":"دراسات حالة","item":"https://www.maminegh.com/ar/#projects"},{"@type":"ListItem","position":3,"name":"نقل متجر أزياء من WooCommerce إلى PrestaShop 9","item":"https://www.maminegh.com/ar/case-studies/migration-woocommerce-prestashop-9/"}]}]}</script>
+  </head>
+
+  <body class="relative min-h-screen">
+    <div id="root"><main><article><p>الأزياء · التجارة الإلكترونية</p><h1>نقل متجر أزياء من WooCommerce إلى PrestaShop 9</h1><p>أراد متجر أزياء مغادرة WordPress وWooCommerce والانتقال إلى PrestaShop 9، بشرط واحد: ألا يضيع أي شيء في الطريق. لا العملاء، ولا سجل الطلبات، ولا المراتب التي اكتسبها في Google.</p><h2>السياق</h2><p>كان المتجر يعمل على WordPress مع WooCommerce وأداة لبناء الصفحات وعدة إضافات تراكمت مع الوقت. كان يعمل، لكن تطويره أصبح ثقيلاً، بل إن إضافتين لتحسين محركات البحث كانتا تعملان في الوقت نفسه وترسلان إلى Google معلومات متناقضة.</p><p>أراد الفريق متجراً أسهل في الإدارة اليومية، على منصة مصممة أولاً للتجارة الإلكترونية.</p><h2>التحدي</h2><p>الانتقال الفاشل يظهر بسرعة: عملاء لا يجدون سجلهم، ورقم معاملات سابق يختفي من الإحصاءات، وصفحات تتراجع في Google لأن عناوينها تغيّرت. لذلك كان لا بد أن تصل ثلاثة أشياء سليمة إلى الجهة الأخرى:</p><ul><li>كل عميل، مع عناوينه؛</li><li>سجل الطلبات كاملاً، دون أي فرق عن الموقع القديم؛</li><li>المراتب في محركات البحث: كان على كل عنوان قديم أن يقود إلى الصفحة الصحيحة.</li></ul><h2>ما قمت به</h2><ol><li><h3>جرد كامل دون المساس بالموقع</h3><p>قبل كتابة أي سطر للاستيراد، جردت الموقع العام كله: المنتجات والفئات والصفحات ومقالات المدونة والصور والقوائم وإعدادات SEO. تم الاستخراج بالقراءة فقط، وبوتيرة لا تُبطئ المتجر المفتوح للزبائن.</p><p>كل تناقض وجدته (عنوانا SEO للصفحة نفسها، وعرض مكتوب بصيغتين، واختيارات منتجات مرتبة يدوياً) وثّقته مع الخيار المعتمد، بدل تصحيحه دون إشارة.</p></li><li><h3>متجر أُعيد بناؤه، لا نُسخ</h3><p>بدل إعادة إنتاج أداة بناء الصفحات، أعدت إنشاء الصفحة الرئيسية بكتل بسيطة يعدّلها الفريق من لوحة الإدارة. ينطلق القالب من القالب الرسمي لـ PrestaShop 9، منسوخاً باسم جديد حتى لا يمحوه أي تحديث. الخطوط مستضافة على المتجر، ولم يُعتمد خط لم يكن التحقق من رخصته ممكناً.</p><p>احتُفظ بأسماء الفئات وبعناوين القائمة معاً حين كانت تختلف. وتحافظ الاختيارات اليدوية، مثل المنتجات الجديدة والأكثر إعجاباً، على ترتيبها بدل أن يحل محلها ترتيب آلي.</p></li><li><h3>العملاء والطلبات: نقل لا يكسر شيئاً</h3><p>نُقل العملاء وسجل الطلبات كاملاً مع العناوين والحالات والمدفوعات. ويُتعرَّف على العملاء الذين كانوا يطلبون دون بريد إلكتروني، بالدفع عند الاستلام، من خلال رقم هاتفهم. ومجاميع الطلبات مطابقة للموقع القديم حتى آخر سنتيم.</p><p>أثناء الاستيراد لا يُرسل أي بريد إلى العملاء، ولا يتحرك المخزون، ولا يُعاد حساب أي سعر. وإذا وصلت طلبات جديدة إلى الموقع القديم قبل الانتقال، يُعاد تشغيل الاستيراد: يضيف الجديد ولا يعدّل أبداً ما سبق نقله.</p><p>كلمات المرور غير متوافقة بين المنصتين، لذلك لا تُنقل: يستعيد العميل سجله بإنشاء حسابه بالبريد الإلكتروني نفسه.</p></li><li><h3>لا عنوان يضيع على Google</h3><p>كل عنوان قديم (منتج أو فئة أو صفحة أو مقال) يقود إلى صفحته الجديدة بإعادة توجيه دائمة (301). يتولى المتجر نفسه إعادة التوجيه، بشكل مستقل عن الخادم، دون سلاسل ولا حلقات. واحتفظت كل صفحة بعنوانها ووصفها في SEO.</p></li><li><h3>الاختبار قبل الانتقال</h3><p>شُغّلت كل مرحلة أولاً كتجربة مسبقة لا تكتب شيئاً. ثم قورن المتجر الجديد بالقديم صفحة بصفحة، على الحاسوب والهاتف، باختبارات آلية في المتصفح. ولدى الفريق أدلة خطوة بخطوة للإطلاق.</p></li></ol><p>انتقال دون خسارة: العملاء وسجلهم موجودون، والمجاميع مطابقة للموقع القديم، وكل رابط كان Google يعرفه ما زال يقود إلى الصفحة الصحيحة. ويدير الفريق اليوم متجره من لوحة إدارة واحدة، دون أداة لبناء الصفحات ولا إضافات مكررة.</p></article></main></div>
+    <script>
+      (function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="1eD3-A8ZxJWQeyzQaE89z";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
+    </script>
+  </body>
+</html>

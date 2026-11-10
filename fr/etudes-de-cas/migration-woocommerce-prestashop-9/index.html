@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Migration WooCommerce vers PrestaShop 9 · Étude de cas</title>
+    <meta name="description" content="Comment j'ai migré une boutique de mode de WooCommerce vers PrestaShop 9 sans perdre ses clients, son historique de commandes ni son référencement Google." />
+    <meta name="author" content="Mohamed Amine Gharrab" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <link rel="canonical" href="https://www.maminegh.com/fr/etudes-de-cas/migration-woocommerce-prestashop-9/" />
+    <!-- Language versions: each page lists all of them (Google shows the right one to each visitor) -->
+    <link rel="alternate" hreflang="en" href="https://www.maminegh.com/case-studies/migration-woocommerce-prestashop-9/" />
+    <link rel="alternate" hreflang="fr" href="https://www.maminegh.com/fr/etudes-de-cas/migration-woocommerce-prestashop-9/" />
+    <link rel="alternate" hreflang="ar" href="https://www.maminegh.com/ar/case-studies/migration-woocommerce-prestashop-9/" />
+    <link rel="alternate" hreflang="x-default" href="https://www.maminegh.com/case-studies/migration-woocommerce-prestashop-9/" />
+    <meta name="theme-color" content="#261bfb" />
+    <!-- Icons: .ico for browser tabs, PNGs (multiples of 48px) for search results, manifest for phones -->
+    <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48" />
+    <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- Link previews (LinkedIn, WhatsApp, X…): read here, these crawlers do not run JavaScript -->
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="M.A.G — Mohamed Amine Gharrab" />
+    <meta property="og:url" content="https://www.maminegh.com/fr/etudes-de-cas/migration-woocommerce-prestashop-9/" />
+    <meta property="og:title" content="Migration WooCommerce vers PrestaShop 9 · Étude de cas" />
+    <meta property="og:description" content="Comment j'ai migré une boutique de mode de WooCommerce vers PrestaShop 9 sans perdre ses clients, son historique de commandes ni son référencement Google." />
+    <meta property="og:image" content="https://www.maminegh.com/images/share/og-image.jpg" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Migration WooCommerce vers PrestaShop 9 · Étude de cas" />
+    <meta property="og:locale" content="fr_FR" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Migration WooCommerce vers PrestaShop 9 · Étude de cas" />
+    <meta name="twitter:description" content="Comment j'ai migré une boutique de mode de WooCommerce vers PrestaShop 9 sans perdre ses clients, son historique de commandes ni son référencement Google." />
+    <meta name="twitter:image" content="https://www.maminegh.com/images/share/og-image.jpg" />
+
+    <!-- Structured data: tells search engines who the site is about -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Person",
+          "@id": "https://www.maminegh.com/#person",
+          "name": "Mohamed Amine Gharrab",
+          "alternateName": "M.A.G",
+          "url": "https://www.maminegh.com/",
+          "image": "https://www.maminegh.com/images/profile/ProfileImage.png",
+          "jobTitle": "Full-Stack Developer",
+          "description": "Full-Stack Developer in Casablanca: web applications, AI automation, e-commerce (PrestaShop, WordPress, Shopify) and CRM integration.",
+          "worksFor": { "@type": "Organization", "name": "SIMTIS" },
+          "address": { "@type": "PostalAddress", "addressLocality": "Casablanca", "addressCountry": "MA" },
+          "email": "mailto:contact.maminegh@gmail.com",
+          "knowsLanguage": ["ar", "fr", "en"],
+          "knowsAbout": ["Full-stack web development", "React", "Node.js", "TypeScript", "PHP", "Python", "PrestaShop", "WordPress", "Shopify", "SEO", "AI automation", "Generative AI", "Claude", "CRM integration"],
+          "sameAs": ["https://www.linkedin.com/in/m-amine-gharrab", "https://github.com/M-A-Gharr"]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://www.maminegh.com/#website",
+          "url": "https://www.maminegh.com/",
+          "name": "M.A.G — Mohamed Amine Gharrab",
+          "inLanguage": ["en", "fr", "ar", "es", "it", "ru", "hi"],
+          "about": { "@id": "https://www.maminegh.com/#person" }
+        }
+      ]
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Fonts load without blocking the first paint (text shows in a system font, then swaps) -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@700&amp;display=swap" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@700&amp;display=swap"></noscript>
+    <!-- Google tag (gtag.js): calls are queued right away (no visit is lost); the 190 KB script
+         itself loads once the page has finished loading, so it never delays the first paint. -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-WJ17T7CYTE');
+      window.addEventListener('load', function () {
+        var load = function () {
+          var s = document.createElement('script');
+          s.async = true;
+          s.src = 'https://www.googletagmanager.com/gtag/js?id=G-WJ17T7CYTE';
+          document.head.appendChild(s);
+        };
+        if ('requestIdleCallback' in window) requestIdleCallback(load, { timeout: 3000 });
+        else setTimeout(load, 1500);
+      });
+    </script>
+    <script type="module" crossorigin src="/assets/index-DTu81iIH.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/react-Dvwkxfce.js">
+    <link rel="modulepreload" crossorigin href="/assets/animation-BqM7mhei.js">
+    <link rel="modulepreload" crossorigin href="/assets/i18n-DUR6zq1z.js">
+    <link rel="stylesheet" crossorigin href="/assets/index-CedsbNuc.css">
+      <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"Migration d'une boutique de mode de WooCommerce vers PrestaShop 9","description":"Comment j'ai migré une boutique de mode de WooCommerce vers PrestaShop 9 sans perdre ses clients, son historique de commandes ni son référencement Google.","inLanguage":"fr","datePublished":"2026-11-10","dateModified":"2026-11-10","image":"https://www.maminegh.com/images/share/og-image.jpg","mainEntityOfPage":"https://www.maminegh.com/fr/etudes-de-cas/migration-woocommerce-prestashop-9/","author":{"@id":"https://www.maminegh.com/#person"},"publisher":{"@id":"https://www.maminegh.com/#person"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Accueil","item":"https://www.maminegh.com/fr/"},{"@type":"ListItem","position":2,"name":"Études de cas","item":"https://www.maminegh.com/fr/#projects"},{"@type":"ListItem","position":3,"name":"Migration d'une boutique de mode de WooCommerce vers PrestaShop 9","item":"https://www.maminegh.com/fr/etudes-de-cas/migration-woocommerce-prestashop-9/"}]}]}</script>
+  </head>
+
+  <body class="relative min-h-screen">
+    <div id="root"><main><article><p>Mode · E-commerce</p><h1>Migration d'une boutique de mode de WooCommerce vers PrestaShop 9</h1><p>Une boutique de mode voulait quitter WordPress et WooCommerce pour PrestaShop 9. Une seule condition : ne rien perdre en route. Ni les clients, ni l'historique des commandes, ni les positions acquises sur Google.</p><h2>Le contexte</h2><p>La boutique tournait sur WordPress avec WooCommerce, un constructeur de pages et plusieurs extensions ajoutées au fil du temps. Elle fonctionnait, mais devenait lourde à faire évoluer. Deux extensions SEO actives en même temps envoyaient même à Google des informations contradictoires.</p><p>L'équipe voulait une boutique plus simple à gérer au quotidien, sur une plateforme pensée d'abord pour le e-commerce.</p><h2>Le défi</h2><p>Une migration ratée se voit vite : des clients qui ne retrouvent plus leur historique, un chiffre d'affaires passé qui disparaît des statistiques, des pages qui chutent dans Google parce que leurs adresses ont changé. Trois choses devaient donc arriver intactes de l'autre côté :</p><ul><li>chaque client, avec ses adresses ;</li><li>tout l'historique des commandes, sans le moindre écart avec l'ancien site ;</li><li>le référencement : chaque ancienne adresse devait mener à la bonne page.</li></ul><h2>Ce que j'ai fait</h2><ol><li><h3>Un état des lieux complet, sans toucher au site</h3><p>Avant d'écrire la moindre ligne d'import, j'ai inventorié tout le site public : produits, catégories, pages, articles de blog, images, menus et réglages SEO. L'extraction s'est faite en lecture seule, à un rythme qui ne ralentissait pas la boutique en ligne.</p><p>Chaque incohérence repérée (deux titres SEO pour la même page, une offre formulée de deux façons, des sélections de produits faites à la main) a été documentée, avec le choix retenu, plutôt que corrigée en silence.</p></li><li><h3>Une boutique reconstruite, pas copiée</h3><p>Plutôt que de reproduire un constructeur de pages, j'ai recréé la page d'accueil avec des blocs simples, modifiables depuis l'administration. Le thème part du thème officiel de PrestaShop 9, copié et renommé pour qu'aucune mise à jour ne l'écrase. Les polices sont hébergées sur la boutique, et une police dont la licence n'était pas vérifiable n'a pas été reprise.</p><p>Les noms des catégories et les intitulés du menu, parfois différents, sont conservés tous les deux. Les sélections faites à la main, comme les nouveautés ou les produits les plus aimés, gardent leur ordre au lieu d'être remplacées par un tri automatique.</p></li><li><h3>Clients et commandes : une reprise qui ne casse rien</h3><p>Les clients et tout l'historique des commandes ont été repris avec leurs adresses, leurs statuts et leurs paiements. Les clients qui commandaient sans e-mail, en paiement à la livraison, sont retrouvés grâce à leur téléphone. Les totaux des commandes sont identiques, au centime près, à ceux de l'ancien site.</p><p>Pendant l'import, aucun e-mail ne part vers les clients, aucun stock ne bouge et aucun prix n'est recalculé. Si de nouvelles commandes arrivent sur l'ancien site avant la bascule, l'import se rejoue : il ajoute les nouvelles et ne modifie jamais celles déjà reprises.</p><p>Les mots de passe, incompatibles d'une plateforme à l'autre, ne sont pas transférés : un client retrouve son historique en créant son compte avec la même adresse e-mail.</p></li><li><h3>Aucune adresse perdue pour Google</h3><p>Chaque ancienne adresse (produit, catégorie, page, article) mène à sa nouvelle page par une redirection permanente (301). Les redirections sont gérées par la boutique elle-même, indépendamment du serveur, sans chaîne ni boucle. Le titre et la description SEO de chaque page sont repris.</p></li><li><h3>Tester avant de basculer</h3><p>Chaque étape a d'abord tourné en essai à blanc, sans rien écrire. La nouvelle boutique a ensuite été comparée à l'ancienne, page par page, sur ordinateur et sur mobile, avec des tests automatisés dans le navigateur. L'équipe dispose enfin de guides pas à pas pour la mise en production.</p></li></ol><p>Une bascule sans perte : les clients et leur historique sont là, les totaux correspondent à l'ancien site, et chaque lien que Google connaissait mène toujours à la bonne page. L'équipe gère désormais sa boutique depuis une seule administration, sans constructeur de pages ni extensions en double.</p></article></main></div>
+    <script>
+      (function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="1eD3-A8ZxJWQeyzQaE89z";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
+    </script>
+  </body>
+</html>

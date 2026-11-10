@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  <!-- One page per language with its own address; each lists all language versions. -->
+  <!-- Generated at build time by build/pagesPlugin.ts -->
   <url>
     <loc>https://www.maminegh.com/</loc>
     <lastmod>2026-11-10</lastmod>
@@ -24,5 +24,29 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.maminegh.com/fr/" />
     <xhtml:link rel="alternate" hreflang="ar" href="https://www.maminegh.com/ar/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.maminegh.com/" />
+  </url>
+  <url>
+    <loc>https://www.maminegh.com/case-studies/migration-woocommerce-prestashop-9/</loc>
+    <lastmod>2026-11-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.maminegh.com/case-studies/migration-woocommerce-prestashop-9/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.maminegh.com/fr/etudes-de-cas/migration-woocommerce-prestashop-9/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.maminegh.com/ar/case-studies/migration-woocommerce-prestashop-9/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.maminegh.com/case-studies/migration-woocommerce-prestashop-9/" />
+  </url>
+  <url>
+    <loc>https://www.maminegh.com/fr/etudes-de-cas/migration-woocommerce-prestashop-9/</loc>
+    <lastmod>2026-11-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.maminegh.com/case-studies/migration-woocommerce-prestashop-9/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.maminegh.com/fr/etudes-de-cas/migration-woocommerce-prestashop-9/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.maminegh.com/ar/case-studies/migration-woocommerce-prestashop-9/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.maminegh.com/case-studies/migration-woocommerce-prestashop-9/" />
+  </url>
+  <url>
+    <loc>https://www.maminegh.com/ar/case-studies/migration-woocommerce-prestashop-9/</loc>
+    <lastmod>2026-11-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.maminegh.com/case-studies/migration-woocommerce-prestashop-9/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.maminegh.com/fr/etudes-de-cas/migration-woocommerce-prestashop-9/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.maminegh.com/ar/case-studies/migration-woocommerce-prestashop-9/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.maminegh.com/case-studies/migration-woocommerce-prestashop-9/" />
   </url>
 </urlset>

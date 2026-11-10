@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WooCommerce to PrestaShop 9 migration · Case study</title>
+    <meta name="description" content="How I moved a fashion store from WooCommerce to PrestaShop 9 without losing its customers, its order history or its Google rankings." />
+    <meta name="author" content="Mohamed Amine Gharrab" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <link rel="canonical" href="https://www.maminegh.com/case-studies/migration-woocommerce-prestashop-9/" />
+    <!-- Language versions: each page lists all of them (Google shows the right one to each visitor) -->
+    <link rel="alternate" hreflang="en" href="https://www.maminegh.com/case-studies/migration-woocommerce-prestashop-9/" />
+    <link rel="alternate" hreflang="fr" href="https://www.maminegh.com/fr/etudes-de-cas/migration-woocommerce-prestashop-9/" />
+    <link rel="alternate" hreflang="ar" href="https://www.maminegh.com/ar/case-studies/migration-woocommerce-prestashop-9/" />
+    <link rel="alternate" hreflang="x-default" href="https://www.maminegh.com/case-studies/migration-woocommerce-prestashop-9/" />
+    <meta name="theme-color" content="#261bfb" />
+    <!-- Icons: .ico for browser tabs, PNGs (multiples of 48px) for search results, manifest for phones -->
+    <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48" />
+    <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- Link previews (LinkedIn, WhatsApp, X…): read here, these crawlers do not run JavaScript -->
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="M.A.G — Mohamed Amine Gharrab" />
+    <meta property="og:url" content="https://www.maminegh.com/case-studies/migration-woocommerce-prestashop-9/" />
+    <meta property="og:title" content="WooCommerce to PrestaShop 9 migration · Case study" />
+    <meta property="og:description" content="How I moved a fashion store from WooCommerce to PrestaShop 9 without losing its customers, its order history or its Google rankings." />
+    <meta property="og:image" content="https://www.maminegh.com/images/share/og-image.jpg" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="WooCommerce to PrestaShop 9 migration · Case study" />
+    <meta property="og:locale" content="en_US" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="WooCommerce to PrestaShop 9 migration · Case study" />
+    <meta name="twitter:description" content="How I moved a fashion store from WooCommerce to PrestaShop 9 without losing its customers, its order history or its Google rankings." />
+    <meta name="twitter:image" content="https://www.maminegh.com/images/share/og-image.jpg" />
+
+    <!-- Structured data: tells search engines who the site is about -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Person",
+          "@id": "https://www.maminegh.com/#person",
+          "name": "Mohamed Amine Gharrab",
+          "alternateName": "M.A.G",
+          "url": "https://www.maminegh.com/",
+          "image": "https://www.maminegh.com/images/profile/ProfileImage.png",
+          "jobTitle": "Full-Stack Developer",
+          "description": "Full-Stack Developer in Casablanca: web applications, AI automation, e-commerce (PrestaShop, WordPress, Shopify) and CRM integration.",
+          "worksFor": { "@type": "Organization", "name": "SIMTIS" },
+          "address": { "@type": "PostalAddress", "addressLocality": "Casablanca", "addressCountry": "MA" },
+          "email": "mailto:contact.maminegh@gmail.com",
+          "knowsLanguage": ["ar", "fr", "en"],
+          "knowsAbout": ["Full-stack web development", "React", "Node.js", "TypeScript", "PHP", "Python", "PrestaShop", "WordPress", "Shopify", "SEO", "AI automation", "Generative AI", "Claude", "CRM integration"],
+          "sameAs": ["https://www.linkedin.com/in/m-amine-gharrab", "https://github.com/M-A-Gharr"]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://www.maminegh.com/#website",
+          "url": "https://www.maminegh.com/",
+          "name": "M.A.G — Mohamed Amine Gharrab",
+          "inLanguage": ["en", "fr", "ar", "es", "it", "ru", "hi"],
+          "about": { "@id": "https://www.maminegh.com/#person" }
+        }
+      ]
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Fonts load without blocking the first paint (text shows in a system font, then swaps) -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@700&amp;display=swap" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@700&amp;display=swap"></noscript>
+    <!-- Google tag (gtag.js): calls are queued right away (no visit is lost); the 190 KB script
+         itself loads once the page has finished loading, so it never delays the first paint. -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-WJ17T7CYTE');
+      window.addEventListener('load', function () {
+        var load = function () {
+          var s = document.createElement('script');
+          s.async = true;
+          s.src = 'https://www.googletagmanager.com/gtag/js?id=G-WJ17T7CYTE';
+          document.head.appendChild(s);
+        };
+        if ('requestIdleCallback' in window) requestIdleCallback(load, { timeout: 3000 });
+        else setTimeout(load, 1500);
+      });
+    </script>
+    <script type="module" crossorigin src="/assets/index-DTu81iIH.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/react-Dvwkxfce.js">
+    <link rel="modulepreload" crossorigin href="/assets/animation-BqM7mhei.js">
+    <link rel="modulepreload" crossorigin href="/assets/i18n-DUR6zq1z.js">
+    <link rel="stylesheet" crossorigin href="/assets/index-CedsbNuc.css">
+      <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"Migrating a fashion store from WooCommerce to PrestaShop 9","description":"How I moved a fashion store from WooCommerce to PrestaShop 9 without losing its customers, its order history or its Google rankings.","inLanguage":"en","datePublished":"2026-11-10","dateModified":"2026-11-10","image":"https://www.maminegh.com/images/share/og-image.jpg","mainEntityOfPage":"https://www.maminegh.com/case-studies/migration-woocommerce-prestashop-9/","author":{"@id":"https://www.maminegh.com/#person"},"publisher":{"@id":"https://www.maminegh.com/#person"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.maminegh.com/"},{"@type":"ListItem","position":2,"name":"Case Studies","item":"https://www.maminegh.com/#projects"},{"@type":"ListItem","position":3,"name":"Migrating a fashion store from WooCommerce to PrestaShop 9","item":"https://www.maminegh.com/case-studies/migration-woocommerce-prestashop-9/"}]}]}</script>
+  </head>
+
+  <body class="relative min-h-screen">
+    <div id="root"><main><article><p>Fashion · E-commerce</p><h1>Migrating a fashion store from WooCommerce to PrestaShop 9</h1><p>A fashion store wanted to leave WordPress and WooCommerce for PrestaShop 9, on one condition: lose nothing along the way. Not the customers, not the order history, not the rankings it had earned on Google.</p><h2>The context</h2><p>The store ran on WordPress with WooCommerce, a page builder and several plugins added over the years. It worked, but it had become heavy to change. Two SEO plugins running at the same time were even sending Google contradictory information.</p><p>The team wanted a store that was easier to run day to day, on a platform built for e-commerce first.</p><h2>The challenge</h2><p>A failed migration shows quickly: customers who can no longer find their history, past revenue that vanishes from the statistics, pages that drop on Google because their addresses changed. Three things had to arrive intact on the other side:</p><ul><li>every customer, with their addresses;</li><li>the full order history, with no difference at all from the old site;</li><li>the search rankings: every old address had to lead to the right page.</li></ul><h2>What I did</h2><ol><li><h3>A complete inventory, without touching the live site</h3><p>Before writing a single line of import code, I inventoried the whole public site: products, categories, pages, blog posts, images, menus and SEO settings. The extraction was read-only, at a pace that never slowed the live store down.</p><p>Every inconsistency I found (two SEO titles for the same page, an offer worded two different ways, product selections made by hand) was documented along with the choice made, rather than quietly fixed.</p></li><li><h3>A store rebuilt, not copied</h3><p>Instead of reproducing a page builder, I rebuilt the homepage from simple blocks the team can edit in the back office. The theme starts from the official PrestaShop 9 theme, copied and renamed so that no update can overwrite it. Fonts are hosted on the store, and one font whose licence could not be verified was left out.</p><p>Category names and menu labels, which sometimes differed, are both kept. Hand-picked selections such as new arrivals and favourites keep their order instead of being replaced by an automatic sort.</p></li><li><h3>Customers and orders: an import that breaks nothing</h3><p>Customers and the full order history came across with their addresses, statuses and payments. Customers who ordered without an email, paying cash on delivery, are matched by their phone number. Order totals match the old site to the cent.</p><p>During the import, no email goes out to customers, no stock moves and no price is recalculated. If new orders arrive on the old site before the switch, the import can run again: it adds the new ones and never changes those already imported.</p><p>Passwords cannot be carried over between the two platforms, so they are not transferred: customers get their history back by creating their account with the same email address.</p></li><li><h3>No address lost for Google</h3><p>Every old address (product, category, page, post) leads to its new page through a permanent 301 redirect. The store handles the redirects itself, independently of the server, with no chains and no loops. Each page keeps its SEO title and description.</p></li><li><h3>Testing before the switch</h3><p>Every step first ran as a dry run that wrote nothing. The new store was then compared with the old one, page by page, on desktop and mobile, with automated browser tests. The team also has step-by-step guides for going live.</p></li></ol><p>A switch with nothing lost: customers and their history are there, totals match the old site, and every link Google knew still leads to the right page. The team now runs its store from a single back office, with no page builder and no duplicate plugins.</p></article></main></div>
+    <script>
+      (function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="1eD3-A8ZxJWQeyzQaE89z";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
+    </script>
+  </body>
+</html>
