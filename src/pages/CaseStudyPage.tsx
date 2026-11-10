@@ -2,15 +2,15 @@
 // and a call to action. Its HTML, meta tags and structured data are also written at build time
 // (vite.config.ts), so crawlers that do not run JavaScript read the same text.
 import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { ArrowRight, ChevronRight, Trophy } from 'lucide-react';
+import { ArrowRight, ArrowUpRight, ChevronRight, Trophy } from 'lucide-react';
 import '@/i18n/config';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import SectionLink from '@/components/SectionLink';
 import { Reveal } from '@/components/motion';
-import { CASE_STUDY_PAGES, caseStudyLang, type CaseStudy } from '@/content/caseStudies';
+import { CASE_STUDY_PAGES, caseStudyLang, relatedCaseStudies, type CaseStudy } from '@/content/caseStudies';
 import { caseStudyPath, pathFor, SITE_URL } from '@/i18n/paths';
 import NotFound from './NotFound';
 
@@ -53,6 +53,11 @@ const CaseStudyPage = () => {
   }, [text, lang, rtl, slug]);
 
   if (!entry) return <NotFound />;
+
+  // Short sector and result of every case study, from the home page cards (all 7 languages).
+  const cardsRaw = t('bonus.caseStudies.items', { returnObjects: true });
+  const cards = Array.isArray(cardsRaw) ? (cardsRaw as { projectId: number; sector: string; result: string }[]) : [];
+  const related = relatedCaseStudies(slug);
 
   const raw = study ? t(`projects.items.${study.projectId}.technologies`, { returnObjects: true }) : [];
   const technologies = Array.isArray(raw) ? (raw as string[]) : [];
@@ -181,7 +186,7 @@ const CaseStudyPage = () => {
               </div>
 
               {/* Call to action */}
-              <div className="panel mt-8 flex flex-col gap-5 p-6 md:p-8 lg:flex-row lg:items-center lg:justify-between">
+              <div className="panel mt-8 flex flex-col gap-5 p-6 md:p-8">
                 <div>
                   <h2 className="text-xl font-semibold">{t('caseStudyPage.ctaTitle')}</h2>
                   <p className="mt-1 text-muted-foreground">{t('caseStudyPage.ctaDesc')}</p>
@@ -202,6 +207,37 @@ const CaseStudyPage = () => {
                   </SectionLink>
                 </div>
               </div>
+              {/* Other case studies: the internal links between the case study pages */}
+              <nav aria-labelledby="related-title" className="mt-16">
+                <h2 id="related-title" className="mb-5 text-xl font-semibold">
+                  {t('caseStudyPage.related')}
+                </h2>
+                <ul className="grid gap-4 sm:grid-cols-2">
+                  {related.map((page) => {
+                    const card = cards.find((c) => c.projectId === page.projectId);
+                    return (
+                      <li key={page.slug}>
+                        <Link
+                          to={caseStudyPath(i18n.language, page.slug)}
+                          className="panel card-lift group flex h-full flex-col p-5 transition-colors hover:border-[#483dfb]/40"
+                        >
+                          {card && (
+                            <span className="text-[11px] font-semibold uppercase tracking-wider text-[#483dfb] dark:text-[#9b87f5]">
+                              {card.sector}
+                            </span>
+                          )}
+                          <span className="mt-2 font-semibold leading-snug">{t(`projects.items.${page.projectId}.title`)}</span>
+                          {card && <span className="mt-2 line-clamp-3 text-sm text-muted-foreground">{card.result}</span>}
+                          <span className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-[#483dfb] dark:text-[#9b87f5]">
+                            {t('caseStudyPage.readFull')}
+                            <ArrowUpRight className="h-4 w-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5 rtl:-scale-x-100" aria-hidden />
+                          </span>
+                        </Link>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </nav>
             </>
           )}
         </article>
