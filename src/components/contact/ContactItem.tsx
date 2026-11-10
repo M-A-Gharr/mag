@@ -73,7 +73,7 @@ const ContactItem = ({ icon, label, value, href, copyValue, copiedLabel, copyHin
             aria-label={`${value}. ${copyHint ?? ''}`}
             className={`${valueClass} inline-flex max-w-full items-center gap-2 text-start`}
           >
-            <span className="truncate">{value}</span>
+            <bdi dir="ltr" className="truncate">{value}</bdi>
             <span className="text-muted-foreground opacity-0 transition-opacity duration-300 group-hover:opacity-100">
               {copied ? <Check className="h-3.5 w-3.5 text-emerald-500" /> : <Copy className="h-3.5 w-3.5" />}
             </span>
@@ -85,10 +85,11 @@ const ContactItem = ({ icon, label, value, href, copyValue, copiedLabel, copyHin
             rel={href.startsWith('http') ? 'noopener noreferrer' : undefined}
             className={valueClass}
           >
-            {value}
+            {/* Phone numbers, emails and URLs always read left to right, also in Arabic */}
+            <bdi dir="ltr">{value}</bdi>
           </a>
         ) : (
-          <p className="text-foreground">{value}</p>
+          <p className="text-foreground" dir="auto">{value}</p>
         )}
 
         <AnimatePresence>

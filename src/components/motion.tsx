@@ -2,6 +2,7 @@
 // keeps motion consistent; MotionConfig in App.tsx turns it all off for reduced-motion users.
 import { type ReactNode } from 'react';
 import { motion, type Variants } from 'framer-motion';
+import type { LucideIcon } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 export const EASE_OUT = [0.22, 1, 0.36, 1] as const;
@@ -137,4 +138,24 @@ export const ImageReveal = ({ children, className, delay = 0 }: ImageRevealProps
       {children}
     </motion.div>
   </motion.div>
+);
+
+type BlockTitleProps = {
+  icon: LucideIcon;
+  title: string;
+  subtitle?: string;
+  className?: string;
+};
+
+/** Title of a block inside a section: the same icon chip, size and spacing everywhere. */
+export const BlockTitle = ({ icon: Icon, title, subtitle, className }: BlockTitleProps) => (
+  <div className={cn('mb-6 flex items-start gap-3', className)}>
+    <span className="shrink-0 rounded-lg bg-[#483dfb]/10 p-2">
+      <Icon className="h-5 w-5 text-[#483dfb] dark:text-[#9b87f5]" aria-hidden />
+    </span>
+    <div className="min-w-0">
+      <h3 className="text-xl font-semibold leading-tight">{title}</h3>
+      {subtitle && <p className="mt-1 text-sm text-muted-foreground">{subtitle}</p>}
+    </div>
+  </div>
 );

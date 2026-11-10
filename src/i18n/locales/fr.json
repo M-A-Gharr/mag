@@ -10,7 +10,9 @@
     "close": "Fermer",
     "letsTalk": "Travaillons ensemble",
     "language": "Langue",
-    "theme": "Thème"
+    "theme": "Thème",
+    "services": "Services",
+    "testimonials": "Témoignages"
   },
   "hero": {
     "meta": {
@@ -146,7 +148,11 @@
       }
     },
     "available": "Disponible pour de nouveaux projets",
-    "avatarAlt": "Photo de Mohamed Amine Gharrab"
+    "avatarAlt": "Photo de Mohamed Amine Gharrab",
+    "subtitle": "Développeur chez SIMTIS à Casablanca, et disponible pour des projets en freelance.",
+    "education": {
+      "title": "Formation"
+    }
   },
   "skills": {
     "title": "Compétences",
@@ -176,6 +182,15 @@
       "expert": "Expert",
       "advanced": "Avancé",
       "intermediate": "Intermédiaire"
+    },
+    "subtitle": "Les outils que j'utilise au quotidien, et mon niveau sur chacun.",
+    "view": {
+      "levels": "Par niveau",
+      "map": "Les liens entre elles"
+    },
+    "certifications": {
+      "title": "Certifications",
+      "subtitle": "Obtenues sur Trailhead (Salesforce) et freeCodeCamp."
     }
   },
   "projects": {
@@ -392,7 +407,8 @@
     "code": "Code source",
     "demo": "Démo en ligne",
     "playVideo": "Lire la vidéo",
-    "videoOf": "{{title}} – vidéo"
+    "videoOf": "{{title}} – vidéo",
+    "caseStudiesSubtitle": "Comment se sont passés certains de ces projets, du problème au résultat."
   },
   "certificates": {
     "title": "Certificats & Formation",
@@ -402,7 +418,7 @@
     "education": {
       "title": "Formation",
       "degree": "Ingénieur en Informatique",
-      "university": "Université International de Casablanca, Maroc",
+      "university": "Université Internationale de Casablanca, Maroc",
       "years": "2018 - 2020",
       "specialization": "Spécialité Systèmes d'Information",
       "projects": "Projets réalisés : application web de gestion, site e-commerce, JEE, SQL, ASP.Net, Gestion de entreprises, Python, Linux, Réseautages,...",
@@ -413,7 +429,7 @@
       "bachelor": "Licence professionnelle",
       "bachelorYears": "2015 - 2018",
       "bachelorDesc": "Spécialisation en Cryptographie Mathématiques et Sécurité de l'Information",
-      "hnd": "Diplome Supérieur",
+      "hnd": "Diplôme supérieur",
       "hndYears": "2022 - 2024",
       "hndDesc": "Sécurité, infrastructure cloud et protection des réseaux, en théorie comme en pratique."
     },
@@ -569,7 +585,8 @@
       "success": "Merci, votre message est bien parti. Je vous réponds dans la journée.",
       "sent": "Message envoyé !",
       "error": "Un problème est survenu et votre message n’a pas été envoyé. Réessayez, ou écrivez-moi directement par e-mail.",
-      "characters": "{{count}} caractères sur {{max}}"
+      "characters": "{{count}} caractères sur {{max}}",
+      "title": "Envoyer un message"
     },
     "info": {
       "title": "Informations de contact",
@@ -601,5 +618,13 @@
     "desc": "Le lien est peut-être cassé, ou la page a été déplacée.",
     "back": "Retour au portfolio",
     "contact": "M'écrire"
+  },
+  "services": {
+    "title": "Services",
+    "subtitle": "Ce que je réalise pour vous, et en combien de temps.",
+    "cta": "Réserver un appel gratuit"
+  },
+  "testimonials": {
+    "subtitle": "Ce qu'en disent les personnes avec qui j'ai travaillé."
   }
 }

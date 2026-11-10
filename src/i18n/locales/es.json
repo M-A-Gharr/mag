@@ -10,7 +10,9 @@
     "close": "Cerrar",
     "letsTalk": "Trabajemos juntos",
     "language": "Idioma",
-    "theme": "Tema"
+    "theme": "Tema",
+    "services": "Servicios",
+    "testimonials": "Testimonios"
   },
   "hero": {
     "meta": {
@@ -146,7 +148,11 @@
       }
     },
     "available": "Disponible para nuevos proyectos",
-    "avatarAlt": "Foto de Mohamed Amine Gharrab"
+    "avatarAlt": "Foto de Mohamed Amine Gharrab",
+    "subtitle": "Desarrollador en SIMTIS, en Casablanca, y disponible para proyectos freelance.",
+    "education": {
+      "title": "Formación"
+    }
   },
   "skills": {
     "title": "Habilidades",
@@ -176,6 +182,15 @@
       "expert": "Experto",
       "advanced": "Avanzado",
       "intermediate": "Intermedio"
+    },
+    "subtitle": "Las herramientas que uso a diario, y mi nivel en cada una.",
+    "view": {
+      "levels": "Por nivel",
+      "map": "Cómo se conectan"
+    },
+    "certifications": {
+      "title": "Certificaciones",
+      "subtitle": "Obtenidas en Trailhead (Salesforce) y freeCodeCamp."
     }
   },
   "projects": {
@@ -392,7 +407,8 @@
     "code": "Código fuente",
     "demo": "Demo en vivo",
     "playVideo": "Reproducir el vídeo",
-    "videoOf": "{{title}} – vídeo"
+    "videoOf": "{{title}} – vídeo",
+    "caseStudiesSubtitle": "Cómo fueron algunos de estos proyectos, del problema al resultado."
   },
   "certificates": {
     "title": "Certificados y educación",
@@ -608,5 +624,13 @@
     "desc": "Puede que el enlace esté roto o que la página se haya movido.",
     "back": "Volver al portafolio",
     "contact": "Escríbeme"
+  },
+  "services": {
+    "title": "Servicios",
+    "subtitle": "Lo que hago por ti, y en cuánto tiempo.",
+    "cta": "Reservar una llamada gratuita"
+  },
+  "testimonials": {
+    "subtitle": "Lo que dicen las personas con las que he trabajado."
   }
 }

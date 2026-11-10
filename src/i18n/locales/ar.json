@@ -10,7 +10,9 @@
     "close": "إغلاق",
     "letsTalk": "لنعمل معاً",
     "language": "اللغة",
-    "theme": "المظهر"
+    "theme": "المظهر",
+    "services": "الخدمات",
+    "testimonials": "آراء العملاء"
   },
   "hero": {
     "meta": {
@@ -146,7 +148,11 @@
       }
     },
     "available": "متاح لمشاريع جديدة",
-    "avatarAlt": "صورة محمد أمين غراب"
+    "avatarAlt": "صورة محمد أمين غراب",
+    "subtitle": "مطوّر في SIMTIS بالدار البيضاء، ومتاح لمشاريع العمل الحر.",
+    "education": {
+      "title": "التكوين"
+    }
   },
   "skills": {
     "title": "المهارات",
@@ -176,6 +182,15 @@
       "expert": "خبير",
       "advanced": "متقدم",
       "intermediate": "متوسط"
+    },
+    "subtitle": "الأدوات التي أستخدمها يومياً، ومستواي في كل منها.",
+    "view": {
+      "levels": "حسب المستوى",
+      "map": "كيف ترتبط ببعضها"
+    },
+    "certifications": {
+      "title": "الشهادات",
+      "subtitle": "حصلت عليها عبر Trailhead (Salesforce) وfreeCodeCamp."
     }
   },
   "projects": {
@@ -392,7 +407,8 @@
     "code": "الشيفرة المصدرية",
     "demo": "عرض مباشر",
     "playVideo": "تشغيل الفيديو",
-    "videoOf": "{{title}} – فيديو"
+    "videoOf": "{{title}} – فيديو",
+    "caseStudiesSubtitle": "كيف جرت بعض هذه المشاريع، من المشكلة إلى النتيجة."
   },
   "certificates": {
     "title": "الشهادات والتعليم",
@@ -608,5 +624,13 @@
     "desc": "ربما الرابط معطّل، أو تم نقل الصفحة.",
     "back": "العودة إلى معرض الأعمال",
     "contact": "راسلني"
+  },
+  "services": {
+    "title": "الخدمات",
+    "subtitle": "ما أنجزه لكم، وفي كم من الوقت.",
+    "cta": "احجزوا مكالمة مجانية"
+  },
+  "testimonials": {
+    "subtitle": "ما يقوله من عملت معهم."
   }
 }
