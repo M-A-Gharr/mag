@@ -5,7 +5,7 @@ const service: Service = {
   slug: 'web-application-development',
   key: 'webapps',
   caseStudies: ['b2b-lead-intelligence-platform', 'export-showcase-site-b2b-crm'],
-  tools: ['React', 'Node.js', 'TypeScript', 'PostgreSQL', 'Supabase'],
+  tools: ['React', 'Node.js', 'TypeScript', 'PHP', 'ASP.NET', 'C#', 'PostgreSQL', 'MySQL', 'MSSQL', 'Supabase'],
   modified: '2026-11-10',
   text: {
     fr: {

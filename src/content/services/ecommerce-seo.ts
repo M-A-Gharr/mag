@@ -6,7 +6,7 @@ const service: Service = {
   slug: 'ecommerce-seo',
   key: 'ecommerce',
   caseStudies: ['prestashop-redesign-multilingual-seo', 'migration-woocommerce-prestashop-9'],
-  tools: ['PrestaShop', 'WordPress', 'Shopify', 'PHP'],
+  tools: ['PrestaShop', 'WordPress', 'Shopify', 'PHP', 'Google Search Console', 'Google Analytics', 'Surfer SEO', 'Semrush'],
   modified: '2026-11-10',
   text: {
     fr: {
