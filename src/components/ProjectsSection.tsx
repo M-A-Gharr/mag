@@ -1,6 +1,6 @@
 import { lazy, Suspense, useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { ArrowRightLeft, Box, ChevronLeft, ChevronRight, Code, Cpu, Globe, GraduationCap, Handshake, ShoppingBag, ShoppingCart, Store, Target, Wand2 } from 'lucide-react';
+import { ArrowRightLeft, BookOpenCheck, Box, ChevronLeft, ChevronRight, Code, Cpu, Globe, GraduationCap, Handshake, ShoppingBag, ShoppingCart, Store, Target, Wand2 } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -9,7 +9,7 @@ import 'swiper/css/navigation';
 import { Navigation, Keyboard } from 'swiper/modules';
 import { motion, AnimatePresence, useInView } from 'framer-motion';
 import SwipeCardStack from './SwipeCardStack';
-import { EASE_OUT, Reveal, SectionHeading, Stagger, StaggerItem } from './motion';
+import { BlockTitle, EASE_OUT, Reveal, SectionHeading, Stagger, StaggerItem } from './motion';
 import type { CrumpleCarouselHandle } from './CrumpleCardCarousel';
 import { useProjectCovers, type CoverInput } from './projectCovers';
 import ProjectVideo, { type ProjectVideoHandle } from './ProjectVideo';
@@ -18,6 +18,7 @@ import { SHOW_PROJECT_EVENT } from '@/lib/events';
 
 // three.js is only downloaded when the projects section renders.
 const CrumpleCardCarousel = lazy(() => import('./CrumpleCardCarousel'));
+const CaseStudies = lazy(() => import('./CaseStudies'));
 
 const STAGE_HEIGHT = 'h-[320px] sm:h-[400px] md:h-[440px] lg:h-[520px]';
 
@@ -421,6 +422,14 @@ const ProjectsSection = () => {
           </div>
         </div>
       </Reveal>
+
+      {/* Case studies of these projects, right under them */}
+      <Reveal className="panel mx-auto mt-10 max-w-3xl p-6 sm:p-8 md:mt-14">
+        <BlockTitle icon={BookOpenCheck} title={t('bonus.caseStudies.title')} subtitle={t('projects.caseStudiesSubtitle')} />
+        <Suspense fallback={<div className="h-64 animate-pulse rounded-xl bg-secondary/20" />}>
+          <CaseStudies />
+        </Suspense>
+      </Reveal>
       {/* Popup Modal for slideshow */}
       <AnimatePresence>
         {isOpen && (
@@ -443,6 +452,7 @@ const ProjectsSection = () => {
               {/* Close button */}
               <button
                 onClick={closeModal}
+                aria-label={t('nav.close')}
                 className="absolute top-4 right-4 z-50 text-gray-600 hover:text-black text-3xl font-bold bg-white rounded-full w-10 h-10 flex items-center justify-center shadow-md transition-all"
               >
                 ×

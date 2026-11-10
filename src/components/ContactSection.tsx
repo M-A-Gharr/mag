@@ -1,15 +1,20 @@
 
-import { useEffect, useRef, useState } from 'react';
-import { MapPin, Mail, Phone, Linkedin } from 'lucide-react';
+import { lazy, Suspense, useEffect, useRef, useState } from 'react';
+import { Contact as ContactIcon, Download, MapPin, Mail, Phone, Linkedin, Send } from 'lucide-react';
+import { Element } from 'react-scroll';
+import { toast } from 'sonner';
 import emailjs from 'emailjs-com'
 import { useTranslation } from 'react-i18next';
 import { AnimatePresence, motion } from 'framer-motion';
-import { EASE_OUT, Reveal, SectionHeading, Stagger, StaggerItem } from './motion';
+import { BlockTitle, EASE_OUT, Reveal, SectionHeading, Stagger, StaggerItem } from './motion';
 import FloatingField from './contact/FloatingField';
 import PaperPlaneButton, { type SendStatus } from './contact/PaperPlaneButton';
 import ContactItem from './contact/ContactItem';
 
 const MESSAGE_MAX = 1000;
+
+// Calendar, date locales and the booking logic load only when the contact section renders.
+const BookingCalendar = lazy(() => import('./BookingCalendar'));
 
 const ContactSection = () => {
   const { t, i18n } = useTranslation();
@@ -60,6 +65,24 @@ const ContactSection = () => {
     resetTimer.current = setTimeout(() => setStatus('idle'), 6000);
   };
 
+  // French CV for the French and Arabic versions (French is the business language in
+  // Morocco), English for the others.
+  const downloadCv = () => {
+    try {
+      const fileName = ['fr', 'ar'].includes(i18n.language)
+        ? 'Mohamed-Amine-Gharrab-CV-FR.pdf'
+        : 'Mohamed-Amine-Gharrab-CV-EN.pdf';
+      const link = Object.assign(document.createElement('a'), { href: `/cv/${fileName}`, download: fileName });
+      document.body.appendChild(link);
+      link.click();
+      link.remove();
+      toast.success(t('bonus.freelance.downloadStarted'));
+    } catch (error) {
+      toast.error(t('bonus.freelance.downloadError'));
+      console.error('CV download error', error);
+    }
+  };
+
   const contactInfo = [
     {
       icon: <MapPin className="h-5 w-5 text-[#483dfb]" />,
@@ -94,8 +117,8 @@ const ContactSection = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Form */}
-          <Reveal className="relative z-10 bg-secondary/20 rounded-xl p-6 md:p-8">
-            <h3 className="text-2xl font-semibold mb-6">{t('contact.form.title')}</h3>
+          <Reveal className="panel relative z-10 p-6 md:p-8">
+            <BlockTitle icon={Send} title={t('contact.form.title')} />
 
             <Stagger as="div" stagger={0.1} delay={0.15}>
             <form onSubmit={handleSubmit} className="space-y-5" noValidate={false}>
@@ -182,8 +205,8 @@ const ContactSection = () => {
 
           {/* Contact and map */}
           <div className="space-y-8">
-            <Reveal delay={0.15} className="bg-secondary/20 rounded-xl p-6 md:p-8">
-              <h3 className="text-2xl font-semibold mb-6">{t('contact.info.title')}</h3>
+            <Reveal delay={0.15} className="panel p-6 md:p-8">
+              <BlockTitle icon={ContactIcon} title={t('contact.info.title')} />
 
               <Stagger className="space-y-5" stagger={0.08} delay={0.25}>
                 {contactInfo.map((item) => (
@@ -200,11 +223,30 @@ const ContactSection = () => {
                   </StaggerItem>
                 ))}
               </Stagger>
+
+              {/* Availability and CV */}
+              <div className="mt-6 flex flex-col gap-3 border-t border-border/60 pt-6 sm:flex-row sm:items-center sm:justify-between">
+                <span className="flex items-center gap-2 text-sm font-medium">
+                  <span className="relative flex h-2.5 w-2.5">
+                    <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75 motion-reduce:hidden" />
+                    <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-emerald-500" />
+                  </span>
+                  {t('about.available')}
+                </span>
+                <button
+                  type="button"
+                  onClick={downloadCv}
+                  className="inline-flex items-center justify-center gap-2 rounded-full border border-border px-4 py-2 text-sm font-medium transition-colors hover:border-[#483dfb]/50 hover:text-[#483dfb]"
+                >
+                  <Download className="h-4 w-4" aria-hidden />
+                  {t('bonus.freelance.downloadCV')}
+                </button>
+              </div>
             </Reveal>
 
             {/* Plain fade-in: a clip-path reveal hides the map from Chrome, which then never
                 paints the Google frame. The card underneath shows if a blocker removes the map. */}
-            <Reveal delay={0.2} className="relative h-[300px] overflow-hidden rounded-xl border border-secondary/20 bg-secondary/20">
+            <Reveal delay={0.2} className="panel relative h-[300px] overflow-hidden">
               <div className="absolute inset-0 flex flex-col items-center justify-center gap-2 p-6 text-center">
                 <MapPin className="h-6 w-6 text-[#483dfb]" />
                 <p className="font-medium">{t('contact.info.addressValue')}</p>
@@ -229,6 +271,15 @@ const ContactSection = () => {
             </Reveal>
           </div>
         </div>
+
+        {/* Booking: target of every "book a call" button on the page */}
+        <Element name="book" id="book" className="mt-12 scroll-mt-24">
+          <Reveal>
+            <Suspense fallback={<div className="h-[520px] animate-pulse rounded-2xl bg-secondary/20" />}>
+              <BookingCalendar />
+            </Suspense>
+          </Reveal>
+        </Element>
       </section>
   );
 };

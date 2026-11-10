@@ -2,11 +2,11 @@
 // is downloaded and rendered right after (it starts loading as soon as the page renders).
 import { useEffect } from 'react';
 import { scroller } from 'react-scroll';
-import About from '@/pages/About';
+import ServicesSection from '@/components/ServicesSection';
 import Project from '@/pages/Projects';
+import TestimonialsSection from '@/components/TestimonialsSection';
+import About from '@/pages/About';
 import Skills from '@/pages/Skills';
-import Certificat from '@/pages/Certificates';
-import Bonus from '@/pages/Bonus';
 import Contact from '@/pages/Contact';
 
 const BelowFold = () => {
@@ -21,11 +21,12 @@ const BelowFold = () => {
 
   return (
   <>
-    <About />
+    {/* What I do, the proof, who I am, then how to reach me */}
+    <ServicesSection />
     <Project />
+    <TestimonialsSection />
+    <About />
     <Skills />
-    <Certificat />
-    <Bonus />
     <Contact />
   </>
   );

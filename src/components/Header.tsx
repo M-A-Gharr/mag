@@ -34,11 +34,11 @@ const Header = () => {
   }, []);
 
   const navLinks = useMemo(() => [
-    { name: t("nav.about"), to: "about" },
+    { name: t("nav.services"), to: "services" },
     { name: t("nav.projects"), to: "projects" },
+    { name: t("nav.testimonials"), to: "testimonials" },
+    { name: t("nav.about"), to: "about" },
     { name: t("nav.skills"), to: "skills" },
-    { name: t("nav.certificates"), to: "certificates" },
-    { name: t("nav.bonus"), to: "bonus-professionnels" },
     { name: t("nav.contact"), to: "contact" },
   ], [t]);
 

@@ -10,7 +10,9 @@
     "close": "Close",
     "letsTalk": "Let's work together",
     "language": "Language",
-    "theme": "Theme"
+    "theme": "Theme",
+    "services": "Services",
+    "testimonials": "Testimonials"
   },
   "hero": {
     "meta": {
@@ -146,7 +148,11 @@
       }
     },
     "available": "Open to new projects",
-    "avatarAlt": "Photo of Mohamed Amine Gharrab"
+    "avatarAlt": "Photo of Mohamed Amine Gharrab",
+    "subtitle": "Developer at SIMTIS in Casablanca, and available for freelance projects.",
+    "education": {
+      "title": "Education"
+    }
   },
   "skills": {
     "title": "Skills",
@@ -176,6 +182,15 @@
       "expert": "Expert",
       "advanced": "Advanced",
       "intermediate": "Intermediate"
+    },
+    "subtitle": "The tools I use every day, and how well I know them.",
+    "view": {
+      "levels": "By level",
+      "map": "How they connect"
+    },
+    "certifications": {
+      "title": "Certifications",
+      "subtitle": "Earned on Trailhead (Salesforce) and freeCodeCamp."
     }
   },
   "projects": {
@@ -392,7 +407,8 @@
     "code": "Source code",
     "demo": "Live demo",
     "playVideo": "Play the video",
-    "videoOf": "{{title}} – video"
+    "videoOf": "{{title}} – video",
+    "caseStudiesSubtitle": "How some of these projects went, from the problem to the result."
   },
   "certificates": {
     "title": "Certificates & Education",
@@ -608,5 +624,13 @@
     "desc": "The link may be broken, or the page may have moved.",
     "back": "Back to the portfolio",
     "contact": "Write to me"
+  },
+  "services": {
+    "title": "Services",
+    "subtitle": "What I build for you, and how long it usually takes.",
+    "cta": "Book a free call"
+  },
+  "testimonials": {
+    "subtitle": "What people I've worked with say."
   }
 }

@@ -1,11 +1,11 @@
 
 import { useTranslation } from 'react-i18next';
-import { Badge } from '@/components/ui/badge';
 import { Code, Database, Layout, Lightbulb, ShoppingCart, Bot } from 'lucide-react';
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import { motion, useInView, useReducedMotion } from 'framer-motion';
 import SkillConstellation from './SkillConstellation';
-import { EASE_OUT, Reveal, SectionHeading, Stagger, StaggerItem } from './motion';
+import { EASE_OUT, Reveal, SectionHeading } from './motion';
+import Certifications from './Certifications';
 
 type Level = 'expert' | 'advanced' | 'intermediate';
 
@@ -78,12 +78,13 @@ const SkillBar = ({ skill, index }: { skill: Skill; index: number }) => {
 
 const SkillsSection = () => {
   const { t } = useTranslation();
+  const [view, setView] = useState<'levels' | 'map'>('levels');
 
   const skillCategories: SkillCategory[] = [
     {
       id: 'cat-languages',
       name: t('skills.languages'),
-      icon: <Code className="h-6 w-6 text-[#483dfb]" aria-label='Languages Icon'/>,
+      icon: <Code className="h-5 w-5 text-[#483dfb] dark:text-[#9b87f5]" aria-label='Languages Icon'/>,
       skills: [
         { id: 'js', name: 'JavaScript', level: 'expert' },
         { id: 'ts', name: 'TypeScript', level: 'advanced' },
@@ -97,7 +98,7 @@ const SkillsSection = () => {
     {
       id: 'cat-frontend',
       name: t('skills.frontend'),
-      icon: <Layout className="h-6 w-6 text-[#483dfb]" aria-label='Frontend Icon'/>,
+      icon: <Layout className="h-5 w-5 text-[#483dfb] dark:text-[#9b87f5]" aria-label='Frontend Icon'/>,
       skills: [
         { id: 'react', name: 'React.js', level: 'expert' },
         { id: 'vite', name: 'Vite', level: 'advanced' },
@@ -110,7 +111,7 @@ const SkillsSection = () => {
     {
       id: 'cat-backend',
       name: t('skills.backend'),
-      icon: <Database className="h-6 w-6 text-[#483dfb]" aria-label='Backend Icon'/>,
+      icon: <Database className="h-5 w-5 text-[#483dfb] dark:text-[#9b87f5]" aria-label='Backend Icon'/>,
       skills: [
         { id: 'node', name: 'Node.js', level: 'advanced' },
         { id: 'aspnet', name: 'ASP.NET', level: 'advanced' },
@@ -122,7 +123,7 @@ const SkillsSection = () => {
     {
       id: 'cat-ecommerce',
       name: t('skills.ecommerce'),
-      icon: <ShoppingCart className="h-6 w-6 text-[#483dfb]" aria-label='E-commerce Icon'/>,
+      icon: <ShoppingCart className="h-5 w-5 text-[#483dfb] dark:text-[#9b87f5]" aria-label='E-commerce Icon'/>,
       skills: [
         { id: 'prestashop', name: 'PrestaShop', level: 'expert' },
         { id: 'wordpress', name: 'WordPress', level: 'advanced' },
@@ -133,7 +134,7 @@ const SkillsSection = () => {
     {
       id: 'cat-ai',
       name: t('skills.ai'),
-      icon: <Bot className="h-6 w-6 text-[#483dfb]" aria-label='AI Icon'/>,
+      icon: <Bot className="h-5 w-5 text-[#483dfb] dark:text-[#9b87f5]" aria-label='AI Icon'/>,
       skills: [
         { id: 'claude', name: 'Claude (Skills)', level: 'expert' },
         { id: 'make', name: 'Make', level: 'advanced' },
@@ -145,7 +146,7 @@ const SkillsSection = () => {
     {
       id: 'cat-professional',
       name: t('skills.professional'),
-      icon: <Lightbulb className="h-6 w-6 text-[#483dfb]" />,
+      icon: <Lightbulb className="h-5 w-5 text-[#483dfb] dark:text-[#9b87f5]" />,
       skills: [
         { id: 'crm', name: t('skills.crm'), level: 'advanced' },
         { id: 'leadintel', name: t('skills.leadIntel'), level: 'advanced' },
@@ -158,21 +159,48 @@ const SkillsSection = () => {
   ];
 
   return (
-    <>
-      <section id="skills" className="section-container">
-        <SectionHeading title={t('skills.title')} />
+    <section id="skills" className="section-container">
+      <SectionHeading title={t('skills.title')} subtitle={t('skills.subtitle')} />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+      {/* Tablet and up: switch between the levels and the map of how skills connect */}
+      <div className="mb-8 hidden justify-center md:flex">
+        <div role="tablist" aria-label={t('skills.title')} className="panel inline-flex gap-1 rounded-full p-1">
+          {(['levels', 'map'] as const).map((key) => (
+            <button
+              key={key}
+              type="button"
+              role="tab"
+              aria-selected={view === key}
+              onClick={() => setView(key)}
+              className={`relative rounded-full px-5 py-2 text-sm font-medium transition-colors duration-300 ${
+                view === key ? 'text-white' : 'text-muted-foreground hover:text-foreground'
+              }`}
+            >
+              {view === key && (
+                <motion.span
+                  layoutId="skills-tab"
+                  className="absolute inset-0 rounded-full bg-[#261bfb]"
+                  transition={{ type: 'spring', stiffness: 380, damping: 32 }}
+                />
+              )}
+              <span className="relative">{t(`skills.view.${key}`)}</span>
+            </button>
+          ))}
+        </div>
+      </div>
+
+      {/* Levels: always on phones, on the first tab from tablets */}
+      <div className={view === 'levels' ? 'block' : 'block md:hidden'}>
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
           {skillCategories.map((category, index) => (
-            <Reveal key={category.name} delay={(index % 2) * 0.12} className="h-full">
-              <div className="card-lift group h-full bg-secondary/20 rounded-xl p-6 border border-secondary/20">
-                <div className="flex items-center mb-6">
-                  <span className="transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-110 group-hover:-rotate-6">
+            <Reveal key={category.id} delay={(index % 2) * 0.12} className="h-full">
+              <div className="panel card-lift group h-full p-6">
+                <div className="mb-6 flex items-center gap-3">
+                  <span className="rounded-lg bg-[#483dfb]/10 p-2 transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-110 group-hover:-rotate-6">
                     {category.icon}
                   </span>
-                  <h3 className="text-xl font-semibold ms-3">{category.name}</h3>
+                  <h3 className="text-xl font-semibold">{category.name}</h3>
                 </div>
-
                 <div className="space-y-4">
                   {category.skills.map((skill, i) => (
                     <SkillBar key={skill.id} skill={skill} index={i} />
@@ -182,9 +210,11 @@ const SkillsSection = () => {
             </Reveal>
           ))}
         </div>
+      </div>
 
-        {/* Tablet and up: interactive constellation */}
-        <Reveal className="mt-16 hidden md:block">
+      {/* Map of how skills connect (tablet and up, second tab) */}
+      {view === 'map' && (
+        <div className="hidden md:block">
           <SkillConstellation
             centerLabel="M.A.G"
             categories={skillCategories.map(({ id, name, skills }) => ({ id, name, skills: skills.map(({ id, name }) => ({ id, name })) }))}
@@ -192,24 +222,11 @@ const SkillsSection = () => {
             className="h-[560px] lg:h-[620px]"
           />
           <p className="mt-4 text-center text-sm text-muted-foreground">{t('skills.constellationHint')}</p>
-        </Reveal>
+        </div>
+      )}
 
-        {/* Phones: the same skills as a badge cloud */}
-        <Stagger className="mt-12 flex flex-wrap justify-center gap-3 md:hidden" stagger={0.03}>
-          {skillCategories.flatMap((cat) => cat.skills).map((skill) => (
-            <StaggerItem as="span" key={skill.id}>
-              <Badge
-                variant="outline"
-                className="bg-secondary/30 text-foreground px-3 py-1 text-sm transition-colors duration-300 hover:bg-[#483dfb]/10 hover:border-[#483dfb]/40"
-              >
-                {skill.name}
-              </Badge>
-            </StaggerItem>
-          ))}
-        </Stagger>
-      </section>
-    </>
-
+      <Certifications />
+    </section>
   );
 };
 
