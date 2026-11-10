@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+/* No horizontal scroll, ever: an animation that briefly sticks out (scaled or rotated) would
+   otherwise widen the page on phones and leave a white strip on the right. `clip` (unlike
+   `hidden`) does not create a scroll container, so sticky elements keep working. */
+html,
+body {
+  overflow-x: clip;
+}
+
+
 
 @layer base {
   :root {

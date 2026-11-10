@@ -366,8 +366,9 @@ const ProjectsSection = () => {
                     <div>
                       <h4 className="mb-2 text-sm font-medium text-foreground/70">{t('projects.technologies')}</h4>
                       <Stagger className="flex flex-wrap gap-2" stagger={0.04} delay={0.15}>
-                        {asList(t(`projects.items.${current.id}.technologies`, { returnObjects: true })).map((tech) => (
-                          <StaggerItem as="span" key={tech}>
+                        {asList(t(`projects.items.${current.id}.technologies`, { returnObjects: true })).map((tech, i) => (
+                          // Position key: some technology names are translated (see ContactSection).
+                          <StaggerItem as="span" key={i}>
                             <Badge variant="outline" className="bg-secondary/30 transition-colors duration-300 hover:bg-[#483dfb]/10 hover:border-[#483dfb]/40">
                               {tech}
                             </Badge>

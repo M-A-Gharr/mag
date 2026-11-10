@@ -575,7 +575,7 @@
       "description": "Développeur Full-Stack | Automatisation IA | E-commerce"
     },
     "title": "Contact",
-    "subtitle": "Parlez-moi de votre projet. Je réponds dans la journée, en français, en anglais ou en arabe.",
+    "subtitle": "Décrivez votre projet en quelques lignes. Je vous réponds dans la journée.",
     "form": {
       "name": "Nom",
       "email": "Email",

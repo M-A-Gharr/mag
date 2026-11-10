@@ -209,8 +209,10 @@ const ContactSection = () => {
               <BlockTitle icon={ContactIcon} title={t('contact.info.title')} />
 
               <Stagger className="space-y-5" stagger={0.08} delay={0.25}>
-                {contactInfo.map((item) => (
-                  <StaggerItem key={item.label}>
+                {/* Keyed by position, not by the translated label: a new key on a language switch
+                    would mount the item after its reveal has run, and it would stay invisible. */}
+                {contactInfo.map((item, index) => (
+                  <StaggerItem key={index}>
                     <ContactItem
                       icon={item.icon}
                       label={item.label}
