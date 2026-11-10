@@ -6,6 +6,7 @@ const service: Service = {
   slug: 'ecommerce-seo',
   key: 'ecommerce',
   caseStudies: ['prestashop-redesign-multilingual-seo', 'migration-woocommerce-prestashop-9'],
+  tools: ['PrestaShop', 'WordPress', 'Shopify', 'PHP'],
   modified: '2026-11-10',
   text: {
     fr: {
@@ -16,7 +17,7 @@ const service: Service = {
       lead:
         'Je crée, refonds et fais évoluer des boutiques en ligne qui se chargent vite, se trouvent sur Google et restent simples à gérer au quotidien. Sur PrestaShop surtout, mais aussi sur WordPress et Shopify, en français, en anglais et en arabe.',
       audience: {
-        heading: 'Pour qui ?',
+        heading: 'Les problèmes que je résous',
         items: [
           'les marques dont la boutique en ligne est peu visible sur Google ;',
           'les enseignes avec des magasins, qui veulent relier leur stock à leur site ;',
@@ -39,18 +40,10 @@ const service: Service = {
         heading: 'Comment je travaille',
         steps: [
           { heading: 'Un état des lieux', text: "J'analyse la boutique, son référencement, ses données et ses extensions avant de proposer quoi que ce soit." },
-          { heading: 'Un plan et un devis', text: 'Je vous propose les priorités, découpées en étapes, avec un devis et un délai.' },
+          { heading: 'Un plan par étapes', text: 'Je fixe les priorités, découpées en étapes, avec un calendrier.' },
           { heading: 'Développer sans casser', text: 'Je travaille sur une copie de la boutique et je teste chaque changement avant la mise en ligne.' },
           { heading: 'Mise en ligne et suivi', text: 'Après la mise en ligne, je surveille le référencement et les erreurs.' },
-          { heading: 'Maintenance', text: "Je peux assurer la maintenance, la sécurité et les évolutions de la boutique." },
-        ],
-      },
-      faq: {
-        heading: 'Questions fréquentes',
-        items: [
-          { q: 'Pouvez-vous améliorer le référencement de ma boutique ?', a: "Oui. J'ai fait passer une boutique PrestaShop de la page 10 à la page 1 de Google dans ses trois langues. Chaque boutique est différente : je commence toujours par un état des lieux." },
-          { q: 'Pouvez-vous migrer ma boutique vers PrestaShop ?', a: 'Oui, avec les clients, l’historique des commandes et une redirection pour chaque ancienne adresse, pour ne pas perdre votre référencement.' },
-          { q: 'En combien de temps ?', a: 'Une boutique ou une refonte prend généralement de 1 à 3 semaines, selon son ampleur.' },
+          { heading: 'Maintenance', text: 'J’assure ensuite la maintenance, la sécurité et les évolutions de la boutique.' },
         ],
       },
     },
@@ -62,7 +55,7 @@ const service: Service = {
       lead:
         'I build, redesign and improve online stores that load fast, get found on Google and stay easy to run day to day. Mostly on PrestaShop, but also on WordPress and Shopify, in French, English and Arabic.',
       audience: {
-        heading: 'Who it is for',
+        heading: 'Problems I solve',
         items: [
           'brands whose online store is hard to find on Google;',
           'retailers with physical stores who want their stock connected to their website;',
@@ -85,18 +78,10 @@ const service: Service = {
         heading: 'How I work',
         steps: [
           { heading: 'An audit first', text: 'I review the store, its rankings, its data and its plugins before suggesting anything.' },
-          { heading: 'A plan and a quote', text: 'I send you the priorities, split into stages, with a quote and a timeline.' },
+          { heading: 'A staged plan', text: 'I set the priorities, split into stages, with a schedule.' },
           { heading: 'Building without breaking', text: 'I work on a copy of the store and test every change before it goes live.' },
           { heading: 'Go-live and follow-up', text: 'After go-live, I keep an eye on rankings and errors.' },
-          { heading: 'Maintenance', text: 'I can look after the store’s maintenance, security and new features.' },
-        ],
-      },
-      faq: {
-        heading: 'Frequently asked questions',
-        items: [
-          { q: 'Can you improve my store’s rankings?', a: 'Yes. I took a PrestaShop store from page 10 to page 1 of Google in all three of its languages. Every store is different, so I always start with an audit.' },
-          { q: 'Can you move my store to PrestaShop?', a: 'Yes, with the customers, the order history and a redirect for every old address, so you keep your rankings.' },
-          { q: 'How long does it take?', a: 'A new store or a redesign usually takes 1 to 3 weeks, depending on its size.' },
+          { heading: 'Maintenance', text: 'I then look after the store’s maintenance, security and new features.' },
         ],
       },
     },
@@ -108,7 +93,7 @@ const service: Service = {
       lead:
         'أنشئ متاجر إلكترونية وأعيد تصميمها وأطوّرها لتكون سريعة وظاهرة في Google وسهلة الإدارة يومياً. على PrestaShop أساساً، وكذلك على WordPress وShopify، بالفرنسية والإنجليزية والعربية.',
       audience: {
-        heading: 'لمن هذه الخدمة؟',
+        heading: 'المشكلات التي أحلّها',
         items: [
           'العلامات التي يصعب العثور على متجرها الإلكتروني في Google؛',
           'العلامات ذات المتاجر الفعلية التي تريد ربط مخزونها بموقعها؛',
@@ -131,18 +116,10 @@ const service: Service = {
         heading: 'طريقتي في العمل',
         steps: [
           { heading: 'تشخيص أولاً', text: 'أحلل المتجر ومراتبه وبياناته وإضافاته قبل اقتراح أي شيء.' },
-          { heading: 'خطة وعرض سعر', text: 'أقترح عليكم الأولويات مقسمة إلى مراحل، مع عرض سعر ومدة.' },
+          { heading: 'خطة على مراحل', text: 'أحدد الأولويات مقسّمة إلى مراحل، مع جدول زمني.' },
           { heading: 'تطوير دون كسر', text: 'أعمل على نسخة من المتجر وأختبر كل تغيير قبل الإطلاق.' },
           { heading: 'الإطلاق والمتابعة', text: 'بعد الإطلاق، أراقب المراتب والأخطاء.' },
-          { heading: 'الصيانة', text: 'يمكنني التكفل بصيانة المتجر وأمانه وتطويراته.' },
-        ],
-      },
-      faq: {
-        heading: 'أسئلة شائعة',
-        items: [
-          { q: 'هل يمكنك تحسين ظهور متجري في Google؟', a: 'نعم. نقلت متجر PrestaShop من الصفحة 10 إلى الصفحة 1 في Google بلغاته الثلاث. وكل متجر مختلف، لذلك أبدأ دائماً بتشخيص.' },
-          { q: 'هل يمكنك نقل متجري إلى PrestaShop؟', a: 'نعم، مع العملاء وسجل الطلبات وإعادة توجيه لكل عنوان قديم، حتى لا تفقدوا مراتبكم.' },
-          { q: 'كم من الوقت يستغرق ذلك؟', a: 'يستغرق إنشاء متجر أو إعادة تصميمه عادة من أسبوع إلى ثلاثة أسابيع حسب حجمه.' },
+          { heading: 'الصيانة', text: 'ثم أتولى صيانة المتجر وأمانه وتطويراته.' },
         ],
       },
     },

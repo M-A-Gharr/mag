@@ -1,25 +1,17 @@
-// What I do for clients, right after the hero: the three services, each with the work it
-// covers, then the usual timelines and a way to book a call. This replaces the two service
-// lists the site used to have (in About and in the old "References" availability card).
+// Expertise, right after the hero: the three areas I work in, each with what it covers and a
+// link to its own page (where the case studies that prove it are listed).
 import { useTranslation } from 'react-i18next';
-import { Link } from 'react-scroll';
 import { Link as RouterLink } from 'react-router-dom';
 import { serviceForKey } from '@/content/services';
 import { servicePath } from '@/i18n/paths';
-import { ArrowRight, ArrowUpRight, Bot, Check, Clock, Code, ShoppingCart } from 'lucide-react';
-import { Reveal, SectionHeading, Stagger, StaggerItem } from './motion';
+import { ArrowUpRight, Bot, Check, Code, ShoppingCart } from 'lucide-react';
+import { SectionHeading, Stagger, StaggerItem } from './motion';
 
 // Which items of `bonus.freelance.servicesList` belong to each service.
 const SERVICES = [
   { key: 'webapps', icon: Code, items: [0, 1, 8] },
   { key: 'ai', icon: Bot, items: [2, 3] },
   { key: 'ecommerce', icon: ShoppingCart, items: [4, 5, 6, 7] },
-] as const;
-
-const TIMELINES = [
-  ['consultation', 'consultdesc'],
-  ['dev', 'devdesc'],
-  ['techreview', 'techreviewtime'],
 ] as const;
 
 const ServicesSection = () => {
@@ -64,34 +56,6 @@ const ServicesSection = () => {
         ))}
       </Stagger>
 
-      {/* Usual timelines and the way to book */}
-      <Reveal delay={0.1} className="panel mt-6 flex flex-col gap-5 p-6 lg:flex-row lg:items-center lg:justify-between">
-        <div className="flex flex-wrap items-center gap-x-8 gap-y-3">
-          <span className="flex items-center gap-2 text-sm font-semibold">
-            <Clock className="h-4 w-4 text-[#483dfb] dark:text-[#9b87f5]" aria-hidden />
-            {t('about.book.availability')}
-          </span>
-          {TIMELINES.map(([label, value]) => (
-            <span key={label} className="text-sm text-muted-foreground">
-              {t(`about.book.${label}`)}
-              <span className="ms-2 rounded-full bg-[#483dfb]/10 px-2.5 py-0.5 text-xs font-medium text-foreground">
-                {t(`about.book.${value}`)}
-              </span>
-            </span>
-          ))}
-        </div>
-        <Link
-          to="book"
-          href="#book"
-          smooth
-          offset={-70}
-          duration={800}
-          className="group inline-flex shrink-0 cursor-pointer items-center justify-center gap-2 rounded-full bg-[#261bfb] px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-[#3e30fb]"
-        >
-          {t('services.cta')}
-          <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5 rtl:rotate-180 rtl:group-hover:-translate-x-0.5" aria-hidden />
-        </Link>
-      </Reveal>
     </section>
   );
 };

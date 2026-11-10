@@ -4,7 +4,8 @@
 //
 //   dist/fr/index.html, dist/ar/index.html          home pages in French and Arabic
 //   dist/<case study path>/index.html               each case study, in English, French, Arabic
-//   dist/<service path>/index.html                  each service, in English, French, Arabic
+//   dist/<expertise path>/index.html                each area of expertise, in English, French, Arabic
+//   dist/<old /services/ path>/index.html            redirects to the expertise pages (renamed)
 //   dist/sitemap.xml                                every page, with its language versions
 //   dist/404.html                                   the app, not indexed (GitHub Pages 404)
 //
@@ -105,7 +106,7 @@ const articleHtml = (t: CaseStudyText, related: { href: string; title: string }[
   return parts.join('');
 };
 
-/** A service page as plain HTML, for crawlers that do not run JavaScript. */
+/** An expertise page as plain HTML, for crawlers that do not run JavaScript. */
 const serviceHtml = (t: ServiceText, examples: { href: string; title: string }[], examplesHeading: string) => {
   const list = (items: string[]) => `<ul>${items.map((i) => `<li>${esc(i)}</li>`).join('')}</ul>`;
   const parts = [`<main><article>`, `<h1>${esc(t.title)}</h1>`, `<p>${esc(t.lead)}</p>`];
@@ -118,7 +119,6 @@ const serviceHtml = (t: ServiceText, examples: { href: string; title: string }[]
   if (examples.length) {
     parts.push(`<h2>${esc(examplesHeading)}</h2><ul>${examples.map((e) => `<li><a href="${e.href}">${esc(e.title)}</a></li>`).join('')}</ul>`);
   }
-  parts.push(`<h2>${esc(t.faq.heading)}</h2>`, ...t.faq.items.map((f) => `<h3>${esc(f.q)}</h3><p>${esc(f.a)}</p>`));
   parts.push(`</article></main>`);
   return parts.join('');
 };
@@ -135,16 +135,13 @@ const serviceJsonLd = (service: Service, lng: CaseStudyLang, sectionName: string
     '@context': 'https://schema.org',
     '@graph': [
       {
-        '@type': 'Service',
+        '@type': 'WebPage',
         name: t.title,
         description: t.metaDescription,
         url,
         inLanguage: lng,
-        provider: { '@id': `${SITE_URL}#person` },
-        areaServed: [
-          { '@type': 'City', name: 'Casablanca' },
-          { '@type': 'Country', name: 'Morocco' },
-        ],
+        about: { '@id': `${SITE_URL}#person` },
+        keywords: service.tools.join(', '),
       },
       {
         '@type': 'BreadcrumbList',
@@ -153,10 +150,6 @@ const serviceJsonLd = (service: Service, lng: CaseStudyLang, sectionName: string
           { '@type': 'ListItem', position: 2, name: sectionName, item: `${homeUrl(lng)}#services` },
           { '@type': 'ListItem', position: 3, name: t.title, item: url },
         ],
-      },
-      {
-        '@type': 'FAQPage',
-        mainEntity: t.faq.items.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
       },
     ],
   };
@@ -220,6 +213,29 @@ const relatedOf = (slug: string) => {
   const i = CASE_STUDIES.findIndex((c) => c.slug === slug);
   return [1, 2].filter((k) => k < CASE_STUDIES.length).map((k) => CASE_STUDIES[(i + k) % CASE_STUDIES.length]);
 };
+
+/**
+ * Old addresses of the expertise pages (they were published under /services/ before being
+ * renamed): a tiny page that sends visitors and search engines straight to the new address.
+ * GitHub Pages has no server-side redirects; Google treats an immediate meta refresh with a
+ * canonical link as a permanent redirect.
+ */
+const oldServicePath = (lng: string, slug: string) => (lng === 'fr' || lng === 'ar' ? `/${lng}/services/${slug}/` : `/services/${slug}/`);
+const redirectHtml = (lng: string, target: string) =>
+  [
+    '<!doctype html>',
+    `<html lang="${lng}">`,
+    '<head>',
+    '<meta charset="utf-8" />',
+    '<meta name="robots" content="noindex" />',
+    `<link rel="canonical" href="${target}" />`,
+    `<meta http-equiv="refresh" content="0; url=${target}" />`,
+    `<title>${target}</title>`,
+    '</head>',
+    `<body><a href="${target}">${target}</a></body>`,
+    '</html>',
+    '',
+  ].join('\n');
 
 export function pagesPlugin(): Plugin {
   let outDir = 'dist';
@@ -302,6 +318,11 @@ export function pagesPlugin(): Plugin {
           );
           entries.push({ url, alternates: serviceAlternates(service.slug), lastmod: service.modified });
         }
+      }
+
+      // Redirects from the old /services/ addresses.
+      for (const service of SERVICES) {
+        for (const { lng } of LANGS) write(outDir, oldServicePath(lng, service.slug), redirectHtml(lng, serviceUrl(lng, service.slug)));
       }
 
       fs.writeFileSync(path.join(outDir, 'sitemap.xml'), sitemap(entries));

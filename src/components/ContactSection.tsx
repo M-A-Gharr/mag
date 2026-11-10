@@ -3,6 +3,7 @@ import { lazy, Suspense, useEffect, useRef, useState } from 'react';
 import { Contact as ContactIcon, Download, MapPin, Mail, Phone, Linkedin, Send } from 'lucide-react';
 import { Element } from 'react-scroll';
 import { toast } from 'sonner';
+import { downloadCv } from '@/lib/cv';
 import emailjs from 'emailjs-com'
 import { useTranslation } from 'react-i18next';
 import { AnimatePresence, motion } from 'framer-motion';
@@ -13,7 +14,8 @@ import ContactItem from './contact/ContactItem';
 
 const MESSAGE_MAX = 1000;
 
-// Calendar, date locales and the booking logic load only when the contact section renders.
+// The calendar (slots outside working hours), its date locales and EmailJS load only when the
+// contact section renders.
 const BookingCalendar = lazy(() => import('./BookingCalendar'));
 
 const ContactSection = () => {
@@ -65,17 +67,9 @@ const ContactSection = () => {
     resetTimer.current = setTimeout(() => setStatus('idle'), 6000);
   };
 
-  // French CV for the French and Arabic versions (French is the business language in
-  // Morocco), English for the others.
-  const downloadCv = () => {
+  const onDownloadCv = () => {
     try {
-      const fileName = ['fr', 'ar'].includes(i18n.language)
-        ? 'Mohamed-Amine-Gharrab-CV-FR.pdf'
-        : 'Mohamed-Amine-Gharrab-CV-EN.pdf';
-      const link = Object.assign(document.createElement('a'), { href: `/cv/${fileName}`, download: fileName });
-      document.body.appendChild(link);
-      link.click();
-      link.remove();
+      downloadCv(i18n.language);
       toast.success(t('bonus.freelance.downloadStarted'));
     } catch (error) {
       toast.error(t('bonus.freelance.downloadError'));
@@ -237,7 +231,7 @@ const ContactSection = () => {
                 </span>
                 <button
                   type="button"
-                  onClick={downloadCv}
+                  onClick={onDownloadCv}
                   className="inline-flex items-center justify-center gap-2 rounded-full border border-border px-4 py-2 text-sm font-medium transition-colors hover:border-[#483dfb]/50 hover:text-[#483dfb]"
                 >
                   <Download className="h-4 w-4" aria-hidden />
@@ -274,7 +268,7 @@ const ContactSection = () => {
           </div>
         </div>
 
-        {/* Booking: target of every "book a call" button on the page */}
+        {/* Scheduling a call: target of the "#book" links */}
         <Element name="book" id="book" className="mt-12 scroll-mt-24">
           <Reveal>
             <Suspense fallback={<div className="h-[520px] animate-pulse rounded-2xl bg-secondary/20" />}>

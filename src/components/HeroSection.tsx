@@ -123,8 +123,8 @@ const HeroSection = () => {
 
         <motion.div variants={fadeUp} className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
           <Link
-            to="book"
-            href="#book"
+            to="contact"
+            href="#contact"
             spy={true}
             smooth={true}
             offset={-70}

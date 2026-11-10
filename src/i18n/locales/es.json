@@ -8,10 +8,10 @@
     "contact": "Contacto",
     "menu": "Menú",
     "close": "Cerrar",
-    "letsTalk": "Trabajemos juntos",
+    "letsTalk": "Contactar",
     "language": "Idioma",
     "theme": "Tema",
-    "services": "Servicios",
+    "services": "Especialidades",
     "testimonials": "Testimonios"
   },
   "hero": {
@@ -20,9 +20,9 @@
       "description": "Desarrollador Full-Stack en Casablanca: aplicaciones web, automatización con IA, e-commerce (PrestaShop, WordPress, Shopify) e integración de CRM."
     },
     "title": "Desarrollador Full-Stack\n& Automatización con IA",
-    "subtitle": "Diseño y desarrollo aplicaciones web, tiendas online y automatizaciones con IA para empresas que quieren menos trabajo manual y más ventas.",
+    "subtitle": "Desarrollador full-stack en Casablanca. Creo aplicaciones web, tiendas online y automatizaciones con IA que ahorran tiempo a los equipos y ayudan a las empresas a vender más.",
     "cta": {
-      "discover": "Trabajemos juntos",
+      "discover": "Contactar",
       "projects": "Ver mi trabajo"
     },
     "quote": "Codifica. Crea. Conecta."
@@ -81,11 +81,11 @@
       "title": "Lo que puedo hacer por ti",
       "webapps": {
         "title": "Aplicaciones web",
-        "desc": "Herramientas internas, portales de clientes y CRM pensados según cómo trabaja de verdad tu equipo, y conectados a los datos que ya tienes."
+        "desc": "Herramientas internas, portales de clientes y CRM pensados según cómo trabajan de verdad los equipos, y conectados a los datos existentes."
       },
       "ai": {
         "title": "Automatización con IA",
-        "desc": "Flujos que redactan, clasifican y califican por ti, Skills de Claude a medida y la formación para que tu equipo los use cada día."
+        "desc": "Flujos que redactan, clasifican y califican, Skills de Claude a medida y la formación para que los equipos los usen cada día."
       },
       "ecommerce": {
         "title": "E-commerce y SEO",
@@ -104,8 +104,8 @@
       "techreviewtime": "24 horas",
       "responsetime": "Suelo responder en el día.",
       "cal": {
-        "title": "Reservar una llamada",
-        "subtitle": "Gratis · vídeo, teléfono o WhatsApp",
+        "title": "Programar una llamada",
+        "subtitle": "Videollamada, teléfono o WhatsApp, fuera de mi horario laboral",
         "chooseMeeting": "1. ¿De qué te gustaría hablar?",
         "chooseSlot": "2. Elige un día y una hora",
         "pickDay": "Elige un día en el calendario para ver las horas disponibles.",
@@ -117,7 +117,7 @@
         "email": "Tu correo",
         "format": "3. ¿Cómo nos reunimos?",
         "phone": "Número de teléfono (con prefijo del país)",
-        "message": "Tu proyecto en pocas palabras (opcional)",
+        "message": "Unas palabras sobre el tema de la llamada (opcional)",
         "submit": "Solicitar esta franja",
         "sending": "Enviando…",
         "error": "No se pudo enviar la solicitud. Inténtalo de nuevo o escribe a contact.maminegh@gmail.com.",
@@ -128,16 +128,16 @@
         "another": "Reservar otra franja",
         "meetings": {
           "discovery": {
-            "title": "Llamada de descubrimiento",
-            "desc": "Tu proyecto, tus necesidades, primeras ideas"
+            "title": "Primera conversación",
+            "desc": "Conocernos y hablar de una oportunidad"
           },
           "consultation": {
-            "title": "Consulta de proyecto",
-            "desc": "Alcance, arquitectura, plazos y presupuesto"
+            "title": "Entrevista",
+            "desc": "Trayectoria, proyectos y el puesto, en detalle"
           },
           "review": {
-            "title": "Revisión técnica",
-            "desc": "Un vistazo a tu web, tienda o código"
+            "title": "Charla técnica",
+            "desc": "Una pregunta sobre un proyecto, una herramienta o un stack"
           }
         },
         "formats": {
@@ -147,9 +147,9 @@
         }
       }
     },
-    "available": "Disponible para nuevos proyectos",
+    "available": "Abierto a oportunidades",
     "avatarAlt": "Foto de Mohamed Amine Gharrab",
-    "subtitle": "Desarrollador en SIMTIS, en Casablanca, y disponible para proyectos freelance.",
+    "subtitle": "Desarrollador full-stack en SIMTIS, en Casablanca, abierto a nuevas oportunidades.",
     "education": {
       "title": "Formación"
     }
@@ -575,7 +575,7 @@
       "description": "Desarrollador Full-Stack | Automatización con IA | E-commerce"
     },
     "title": "Contacto",
-    "subtitle": "Cuéntame tu proyecto en unas líneas. Te respondo en el día.",
+    "subtitle": "¿Una oportunidad o una pregunta? Escríbeme y te respondo en el día.",
     "form": {
       "title": "Enviar un mensaje",
       "name": "Nombre",
@@ -626,8 +626,8 @@
     "contact": "Escríbeme"
   },
   "services": {
-    "title": "Servicios",
-    "subtitle": "Lo que hago por ti, y en cuánto tiempo.",
+    "title": "Especialidades",
+    "subtitle": "Lo que mejor sé hacer, y los proyectos que lo demuestran.",
     "cta": "Reservar una llamada gratuita"
   },
   "testimonials": {
@@ -638,19 +638,19 @@
     "sector": "Sector",
     "mission": "Misión",
     "result": "Resultado",
-    "ctaTitle": "¿Tienes un proyecto parecido?",
-    "ctaDesc": "Hablemos. Te respondo en el día.",
+    "ctaTitle": "¿Te interesa mi perfil?",
+    "ctaDesc": "Escríbeme o descarga mi CV. Te respondo en el día.",
     "ctaWork": "Ver otros proyectos",
     "readFull": "Leer el caso completo",
     "related": "Otros casos de estudio",
-    "service": "Servicio"
+    "service": "Especialidades"
   },
   "servicePage": {
-    "timeline": "Plazo habitual",
     "where": "Dónde",
-    "whereValue": "Casablanca, en Marruecos y a distancia",
+    "whereValue": "Casablanca, abierto al trabajo a distancia",
     "examples": "Ejemplos de mi trabajo",
-    "otherServices": "Otros servicios",
-    "discover": "Descubrir este servicio"
+    "otherServices": "Otras especialidades",
+    "discover": "Ver en detalle",
+    "tools": "Herramientas"
   }
 }

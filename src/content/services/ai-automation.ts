@@ -5,17 +5,18 @@ const service: Service = {
   slug: 'ai-automation',
   key: 'ai',
   caseStudies: ['ai-fashion-visuals-studio', 'b2b-lead-intelligence-platform'],
+  tools: ['Claude', 'OpenAI', 'FASHN AI', 'Make'],
   modified: '2026-11-10',
   text: {
     fr: {
       title: "Automatisation par l'IA et formation des équipes",
       metaTitle: 'Automatisation IA et formation Claude au Maroc · M.A.G',
       metaDescription:
-        'Workflows qui rédigent, trient et qualifient à votre place, Skills Claude sur mesure et formation de vos équipes à l’IA générative, à Casablanca et à distance.',
+        'Workflows qui rédigent, trient et qualifient à votre place, Skills Claude sur mesure et formation des équipes à l’IA générative.',
       lead:
-        "J'ajoute de l'IA là où elle fait vraiment gagner du temps : rédiger, trier, qualifier des prospects, produire des visuels. Et je forme vos équipes pour qu'elles s'en servent chaque jour, en gardant toujours la main sur les décisions.",
+        "J'ajoute de l'IA là où elle fait vraiment gagner du temps : rédiger, trier, qualifier des prospects, produire des visuels. Et je forme les équipes à s'en servir chaque jour, en gardant toujours la main sur les décisions.",
       audience: {
-        heading: 'Pour qui ?',
+        heading: 'Les problèmes que je résous',
         items: [
           'les équipes qui passent des heures sur des tâches répétitives de rédaction ou de tri ;',
           'les commerciaux qui doivent qualifier beaucoup de prospects ;',
@@ -30,7 +31,7 @@ const service: Service = {
           'génération de contenus et de visuels par IA, avec une étape de validation ;',
           'qualification de prospects par IA, avec une personne qui décide ;',
           'Skills Claude sur mesure, adaptées au travail de chaque service ;',
-          'formation de vos équipes : séances communes et ateliers par service.',
+          'formation des équipes : séances communes et ateliers par service.',
         ],
       },
       process: {
@@ -38,17 +39,9 @@ const service: Service = {
         steps: [
           { heading: 'Repérer ce qui en vaut la peine', text: "Avec votre équipe, je repère les tâches où l'IA fait vraiment gagner du temps, et celles où elle n'apporte rien." },
           { heading: 'Un premier workflow, vite', text: 'Je livre un premier workflow utile en quelques jours, pour le tester en conditions réelles.' },
-          { heading: 'Des garde-fous', text: "Quotas, validation humaine, journal des actions : l'IA propose, une personne de votre équipe décide." },
+          { heading: 'Des garde-fous', text: "Quotas, validation humaine, journal des actions : l'IA propose, une personne de l'équipe décide." },
           { heading: 'Former et documenter', text: "Je forme les personnes qui utiliseront l'outil et j'écris des guides simples." },
           { heading: 'Améliorer', text: "Nous ajustons les réglages à partir des retours de l'équipe." },
-        ],
-      },
-      faq: {
-        heading: 'Questions fréquentes',
-        items: [
-          { q: "L'IA va-t-elle remplacer mon équipe ?", a: "Non. Les outils que je construis préparent le travail : c'est votre équipe qui valide, envoie et décide." },
-          { q: 'En combien de temps ?', a: "Une automatisation par l'IA demande généralement de 3 à 5 jours. Une formation se prépare après un échange avec chaque service." },
-          { q: 'Avec quels outils ?', a: "Surtout Claude, OpenAI, FASHN AI et Make, choisis selon la tâche. Je vous conseille l'outil le plus simple qui fait le travail." },
         ],
       },
     },
@@ -56,11 +49,11 @@ const service: Service = {
       title: 'AI automation and team training',
       metaTitle: 'AI automation and Claude training in Morocco · M.A.G',
       metaDescription:
-        'Workflows that write, sort and qualify for you, custom Claude Skills and generative AI training for your teams, in Casablanca and remotely.',
+        'Workflows that write, sort and qualify for you, custom Claude Skills and generative AI training for teams.',
       lead:
-        'I add AI where it really saves time: writing, sorting, qualifying leads, producing visuals. And I train your teams to use it every day, while they stay in charge of every decision.',
+        'I add AI where it really saves time: writing, sorting, qualifying leads, producing visuals. And I train teams to use it every day, while they stay in charge of every decision.',
       audience: {
-        heading: 'Who it is for',
+        heading: 'Problems I solve',
         items: [
           'teams that spend hours on repetitive writing or sorting;',
           'sales staff who have to qualify a lot of prospects;',
@@ -75,7 +68,7 @@ const service: Service = {
           'AI-generated content and visuals, with an approval step;',
           'AI lead qualification, with a person making the decision;',
           'custom Claude Skills, tailored to each department’s work;',
-          'training for your teams: shared sessions and workshops per department.',
+          'team training: shared sessions and workshops per department.',
         ],
       },
       process: {
@@ -83,17 +76,9 @@ const service: Service = {
         steps: [
           { heading: 'Finding what is worth it', text: 'With your team, I spot the tasks where AI really saves time, and the ones where it adds nothing.' },
           { heading: 'A first workflow, fast', text: 'I deliver a first useful workflow within a few days, so it can be tested in real conditions.' },
-          { heading: 'Guardrails', text: 'Quotas, human approval, an activity log: the AI suggests, someone on your team decides.' },
+          { heading: 'Guardrails', text: 'Quotas, human approval, an activity log: the AI suggests, someone on the team decides.' },
           { heading: 'Training and documentation', text: 'I train the people who will use the tool and write simple guides.' },
           { heading: 'Improving', text: 'We fine-tune the settings based on the team’s feedback.' },
-        ],
-      },
-      faq: {
-        heading: 'Frequently asked questions',
-        items: [
-          { q: 'Will AI replace my team?', a: 'No. The tools I build prepare the work: your team approves, sends and decides.' },
-          { q: 'How long does it take?', a: 'An AI automation usually takes 3 to 5 days. A training programme is prepared after talking with each department.' },
-          { q: 'Which tools do you use?', a: 'Mainly Claude, OpenAI, FASHN AI and Make, chosen for the task. I recommend the simplest tool that does the job.' },
         ],
       },
     },
@@ -101,11 +86,11 @@ const service: Service = {
       title: 'الأتمتة بالذكاء الاصطناعي وتكوين الفرق',
       metaTitle: 'الأتمتة بالذكاء الاصطناعي وتكوين Claude في المغرب · M.A.G',
       metaDescription:
-        'مسارات عمل تكتب وتفرز وتؤهل نيابة عنكم، وSkills مخصصة لـ Claude، وتكوين فرقكم على الذكاء الاصطناعي التوليدي، في الدار البيضاء وعن بُعد.',
+        'مسارات عمل تكتب وتفرز وتؤهل نيابة عنكم، وSkills مخصصة لـ Claude، وتكوين الفرق على الذكاء الاصطناعي التوليدي.',
       lead:
-        'أضيف الذكاء الاصطناعي حيث يوفّر الوقت فعلاً: الكتابة والفرز وتأهيل العملاء المحتملين وإنتاج الصور. وأكوّن فرقكم لتستخدمه كل يوم، مع بقاء القرار دائماً بأيديها.',
+        'أضيف الذكاء الاصطناعي حيث يوفّر الوقت فعلاً: الكتابة والفرز وتأهيل العملاء المحتملين وإنتاج الصور. وأكوّن الفرق على استخدامه كل يوم، مع بقاء القرار دائماً بأيديها.',
       audience: {
-        heading: 'لمن هذه الخدمة؟',
+        heading: 'المشكلات التي أحلّها',
         items: [
           'الفرق التي تقضي ساعات في مهام متكررة من الكتابة أو الفرز؛',
           'مستشارو المبيعات الذين عليهم تأهيل عدد كبير من العملاء المحتملين؛',
@@ -120,7 +105,7 @@ const service: Service = {
           'محتوى وصور يولّدها الذكاء الاصطناعي، مع خطوة موافقة؛',
           'تأهيل العملاء المحتملين بالذكاء الاصطناعي، مع شخص يتخذ القرار؛',
           'Skills مخصصة لـ Claude تلائم عمل كل قسم؛',
-          'تكوين فرقكم: جلسات مشتركة وورشات لكل قسم.',
+          'تكوين الفرق: جلسات مشتركة وورشات لكل قسم.',
         ],
       },
       process: {
@@ -128,17 +113,9 @@ const service: Service = {
         steps: [
           { heading: 'تحديد ما يستحق العناء', text: 'أحدد مع فريقكم المهام التي يوفّر فيها الذكاء الاصطناعي الوقت فعلاً، وتلك التي لا يضيف فيها شيئاً.' },
           { heading: 'مسار عمل أول، بسرعة', text: 'أسلّم مسار عمل أولاً مفيداً في بضعة أيام، لاختباره في ظروف حقيقية.' },
-          { heading: 'ضوابط', text: 'حصص، وموافقة بشرية، وسجل للإجراءات: الذكاء الاصطناعي يقترح، وشخص من فريقكم يقرر.' },
+          { heading: 'ضوابط', text: 'حصص، وموافقة بشرية، وسجل للإجراءات: الذكاء الاصطناعي يقترح، وشخص من الفريق يقرر.' },
           { heading: 'التكوين والتوثيق', text: 'أكوّن من سيستخدمون الأداة وأكتب أدلة بسيطة.' },
           { heading: 'التحسين', text: 'نعدّل الإعدادات انطلاقاً من ملاحظات الفريق.' },
-        ],
-      },
-      faq: {
-        heading: 'أسئلة شائعة',
-        items: [
-          { q: 'هل سيحل الذكاء الاصطناعي محل فريقي؟', a: 'لا. الأدوات التي أبنيها تُعدّ العمل، وفريقكم هو من يوافق ويرسل ويقرر.' },
-          { q: 'كم من الوقت يستغرق ذلك؟', a: 'تستغرق الأتمتة بالذكاء الاصطناعي عادة من 3 إلى 5 أيام. ويُحضَّر التكوين بعد نقاش مع كل قسم.' },
-          { q: 'ما الأدوات التي تستعملها؟', a: 'أساساً Claude وOpenAI وFASHN AI وMake، تُختار حسب المهمة. وأنصحكم بأبسط أداة تؤدي العمل.' },
         ],
       },
     },

@@ -1,4 +1,4 @@
-// Shape of a service page. Pure data, no imports: the build plugin (build/pagesPlugin.ts) reads
+// Shape of an expertise page (called "service" in the code). Pure data, no imports: the build plugin (build/pagesPlugin.ts) reads
 // these files directly to write each page's HTML, meta tags and structured data.
 
 export type ServiceLang = 'en' | 'fr' | 'ar';
@@ -14,15 +14,16 @@ export type ServiceText = {
   audience: { heading: string; items: string[] };
   offer: { heading: string; items: string[] };
   process: { heading: string; steps: { heading: string; text: string }[] };
-  faq: { heading: string; items: { q: string; a: string }[] };
 };
 
 export type Service = {
   slug: string;
   /** Matching card in the home page's services section (about.services.<key>). */
   key: 'webapps' | 'ai' | 'ecommerce';
-  /** Case studies that prove this service, by slug (shown as examples). */
+  /** Case studies that prove this expertise, by slug (shown as examples). */
   caseStudies: string[];
+  /** Main tools, shown in the summary (same in every language). */
+  tools: string[];
   modified: string;
   text: Record<ServiceLang, ServiceText>;
 };
