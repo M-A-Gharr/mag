@@ -1,0 +1,56 @@
+# Mohamed Amine Gharrab (M.A.G)
+
+> Full-stack developer at SIMTIS in Casablanca, open to new opportunities.
+
+Full-stack developer in Casablanca. I build web applications, online stores and AI automations that save teams time and help businesses sell more.
+
+Languages: Arabic, French, English. Based in Casablanca, Morocco.
+Contact: contact.maminegh@gmail.com · LinkedIn: https://www.linkedin.com/in/m-amine-gharrab · GitHub: https://github.com/M-A-Gharr
+
+## Areas of expertise
+
+- [Custom web application development](https://www.maminegh.com/expertise/web-application-development/): Full-stack developer in Casablanca: internal tools, CRMs and business platforms in React and Node.js, connected to your data and built around your team. Tools: React, Node.js, TypeScript, PHP, ASP.NET, C#, PostgreSQL, MySQL, MSSQL, Supabase.
+- [AI automation and team training](https://www.maminegh.com/expertise/ai-automation/): Workflows that write, sort and qualify for you, custom Claude Skills and generative AI training for teams. Tools: Claude, OpenAI, Perplexity, FASHN AI, Make.
+- [E-commerce and SEO: PrestaShop, WordPress and Shopify](https://www.maminegh.com/expertise/ecommerce-seo/): Fast PrestaShop, WordPress and Shopify stores that rank on Google: redesigns, custom modules, platform migrations and multilingual SEO, from Casablanca. Tools: PrestaShop, WordPress, Shopify, PHP, Google Search Console, Google Analytics, Surfer SEO, Semrush.
+
+## Case studies
+
+- [Simtis Studio: AI-generated model shots from a single product photo](https://www.maminegh.com/case-studies/ai-fashion-visuals-studio/): An in-house AI studio that turns a photo of a shawl into model shots, with an approval step, quotas per store and product sheets in three languages.
+- [Redesign, multilingual SEO and custom modules for a PrestaShop store](https://www.maminegh.com/case-studies/prestashop-redesign-multilingual-seo/): A three-language PrestaShop redesign: 20+ custom modules, stock connected to the physical stores, and from page 10 to page 1 of Google.
+- [A B2B prospecting platform that finds, qualifies and follows leads with AI](https://www.maminegh.com/case-studies/b2b-lead-intelligence-platform/): A platform that finds target companies, qualifies them with AI and follows each opportunity to the sale, with a person approving every step.
+- [An export showcase website and a CRM to win trade buyers abroad](https://www.maminegh.com/case-studies/export-showcase-site-b2b-crm/): A showcase site for foreign wholesalers, in English and Arabic, connected to a CRM that finds and follows prospects on Instagram, TikTok and Facebook.
+- [Migrating a fashion store from WooCommerce to PrestaShop 9](https://www.maminegh.com/case-studies/migration-woocommerce-prestashop-9/): How I moved a fashion store from WooCommerce to PrestaShop 9 without losing its customers, its order history or its Google rankings.
+
+## Experience
+
+- 2026 – Present: Full-Stack Developer & Digital Solutions, SIMTIS · Casablanca. In-house developer for a group of retail brands. I built an AI studio that turns product photos into model shots, a B2B lead platform, and an export website connected to its own CRM. I also rebuilt a three-language PrestaShop store (20+ custom modules, from page 10 to page 1 on Google), moved another store from WooCommerce to PrestaShop 9, and trained the whole group to work with Claude.
+- Personal project: Founder, M.A.G Store (Shopify). My own Shopify store for home comfort products, delivering across Morocco with cash on delivery. I built the store and the brand, from the logo to the positioning.
+- Oct – Dec 2024: Full-Stack Developer, SaaS Inventory Platform · Casablanca. An inventory, order and sales platform with dashboards and stock alerts, built with React, Node.js and PostgreSQL.
+- Aug – Sep 2024: Web Developer, Responsive Business Website · Casablanca. A multilingual business website, designed mobile-first, with analytics and social media connected.
+
+## Other languages
+
+- [Accueil en français](https://www.maminegh.com/fr/)
+- [Développement d'applications web sur mesure](https://www.maminegh.com/fr/expertise/web-application-development/)
+- [Automatisation par l'IA et formation des équipes](https://www.maminegh.com/fr/expertise/ai-automation/)
+- [E-commerce et SEO : PrestaShop, WordPress et Shopify](https://www.maminegh.com/fr/expertise/ecommerce-seo/)
+- [Simtis Studio : des visuels portés par mannequin, créés par IA à partir d'une photo produit](https://www.maminegh.com/fr/etudes-de-cas/ai-fashion-visuals-studio/)
+- [Refonte, SEO multilingue et modules sur mesure pour une boutique PrestaShop](https://www.maminegh.com/fr/etudes-de-cas/prestashop-redesign-multilingual-seo/)
+- [Une plateforme de prospection B2B qui trouve, qualifie et suit les prospects avec l'IA](https://www.maminegh.com/fr/etudes-de-cas/b2b-lead-intelligence-platform/)
+- [Un site vitrine export et un CRM pour conquérir des acheteurs professionnels à l'étranger](https://www.maminegh.com/fr/etudes-de-cas/export-showcase-site-b2b-crm/)
+- [Migration d'une boutique de mode de WooCommerce vers PrestaShop 9](https://www.maminegh.com/fr/etudes-de-cas/migration-woocommerce-prestashop-9/)
+- [الصفحة الرئيسية بالعربية](https://www.maminegh.com/ar/)
+- [تطوير تطبيقات ويب مخصصة](https://www.maminegh.com/ar/expertise/web-application-development/)
+- [الأتمتة بالذكاء الاصطناعي وتكوين الفرق](https://www.maminegh.com/ar/expertise/ai-automation/)
+- [التجارة الإلكترونية وSEO: PrestaShop وWordPress وShopify](https://www.maminegh.com/ar/expertise/ecommerce-seo/)
+- [Simtis Studio: صور ملبوسة على عارضات يُنشئها الذكاء الاصطناعي من صورة منتج واحدة](https://www.maminegh.com/ar/case-studies/ai-fashion-visuals-studio/)
+- [إعادة تصميم وتحسين SEO متعدد اللغات ووحدات مخصصة لمتجر PrestaShop](https://www.maminegh.com/ar/case-studies/prestashop-redesign-multilingual-seo/)
+- [منصة للتنقيب عن عملاء الشركات تجد العملاء المحتملين وتؤهلهم وتتابعهم بالذكاء الاصطناعي](https://www.maminegh.com/ar/case-studies/b2b-lead-intelligence-platform/)
+- [موقع عرض للتصدير ونظام CRM لكسب المشترين المحترفين في الخارج](https://www.maminegh.com/ar/case-studies/export-showcase-site-b2b-crm/)
+- [نقل متجر أزياء من WooCommerce إلى PrestaShop 9](https://www.maminegh.com/ar/case-studies/migration-woocommerce-prestashop-9/)
+
+## Optional
+
+- [Sitemap](https://www.maminegh.com/sitemap.xml)
+- [CV (English, PDF)](https://www.maminegh.com/cv/Mohamed-Amine-Gharrab-CV-EN.pdf)
+- [CV (French, PDF)](https://www.maminegh.com/cv/Mohamed-Amine-Gharrab-CV-FR.pdf)
