@@ -2,11 +2,12 @@
 // home page, so that Google, LinkedIn and WhatsApp (which may not run JavaScript) read each
 // page in its language with its own title, description, canonical address and structured data:
 //
-//   dist/fr/index.html, dist/ar/index.html          home pages in French and Arabic
+//   dist/index.html, dist/fr/, dist/ar/             home pages, with their content as plain HTML
 //   dist/<case study path>/index.html               each case study, in English, French, Arabic
 //   dist/<expertise path>/index.html                each area of expertise, in English, French, Arabic
 //   dist/<old /services/ path>/index.html            redirects to the expertise pages (renamed)
 //   dist/sitemap.xml                                every page, with its language versions
+//   dist/llms.txt                                   a summary of the site for AI assistants
 //   dist/404.html                                   the app, not indexed (GitHub Pages 404)
 //
 // It fails the build if a tag it must change is missing, rather than publish a half-done page.
@@ -121,6 +122,111 @@ const serviceHtml = (t: ServiceText, examples: { href: string; title: string }[]
   }
   parts.push(`</article></main>`);
   return parts.join('');
+};
+
+const EMAIL = 'contact.maminegh@gmail.com';
+const PROFILES = [
+  { name: 'LinkedIn', href: 'https://www.linkedin.com/in/m-amine-gharrab' },
+  { name: 'GitHub', href: 'https://github.com/M-A-Gharr' },
+];
+
+type ResumeItem = { period: string; role: string; company?: string; desc?: string };
+
+/**
+ * The home page as plain HTML, for crawlers that do not run JavaScript: who I am, the areas of
+ * expertise, the case studies, my experience and how to reach me, with links to every page.
+ * Same texts as the app (locale files and content files), so what crawlers read is what visitors see.
+ */
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const homeHtml = (lng: CaseStudyLang, l: any) => {
+  const parts = [`<header><nav><a href="${pathFor(lng)}">M.A.G</a></nav></header>`, `<main>`];
+  parts.push(`<section><h1>${esc(l.hero.title.replace(/\s*\n\s*/g, ' '))}</h1><p>${esc(l.hero.subtitle)}</p></section>`);
+
+  parts.push(`<section id="services"><h2>${esc(l.services.title)}</h2><p>${esc(l.services.subtitle)}</p><ul>`);
+  for (const s of SERVICES) {
+    parts.push(
+      `<li><h3><a href="${servicePath(lng, s.slug)}">${esc(s.text[lng].title)}</a></h3><p>${esc(l.about.services[s.key].desc)}</p></li>`
+    );
+  }
+  parts.push(`</ul></section>`);
+
+  parts.push(`<section id="projects"><h2>${esc(l.bonus.caseStudies.title)}</h2><ul>`);
+  for (const c of CASE_STUDIES) {
+    const t = c.text[lng];
+    parts.push(`<li><h3><a href="${caseStudyPath(lng, c.slug)}">${esc(t.title)}</a></h3><p>${esc(t.metaDescription)}</p></li>`);
+  }
+  parts.push(`</ul></section>`);
+
+  const resume = (l.about.resume?.items ?? []) as ResumeItem[];
+  parts.push(`<section id="about"><h2>${esc(l.about.title)}</h2><p>${esc(l.about.subtitle)}</p>`);
+  parts.push(`<h3>${esc(l.about.resume.title)}</h3><ul>`);
+  for (const r of resume) {
+    parts.push(
+      `<li><p>${esc(r.period)}</p><h4>${esc(r.role)}</h4>${r.company ? `<p>${esc(r.company)}</p>` : ''}${r.desc ? `<p>${esc(r.desc)}</p>` : ''}</li>`
+    );
+  }
+  parts.push(`</ul></section>`);
+
+  parts.push(
+    `<section id="contact"><h2>${esc(l.contact.title)}</h2><p>${esc(l.contact.subtitle)}</p><ul>`,
+    `<li>${esc(l.contact.info.email)} : <a href="mailto:${EMAIL}">${EMAIL}</a></li>`,
+    `<li>${esc(l.contact.info.address)} : ${esc(l.contact.info.addressValue)}</li>`,
+    ...PROFILES.map((p) => `<li><a href="${p.href}">${p.name}</a></li>`),
+    `</ul></section>`,
+    `</main>`
+  );
+  return parts.join('');
+};
+
+/**
+ * /llms.txt: a short Markdown summary of the site for AI assistants (ChatGPT, Perplexity,
+ * Claude…), following the llms.txt proposal. English, with the French and Arabic pages listed.
+ */
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const llmsTxt = (en: any) => {
+  const lines = [
+    '# Mohamed Amine Gharrab (M.A.G)',
+    '',
+    `> ${en.about.subtitle}`,
+    '',
+    en.hero.subtitle,
+    '',
+    'Languages: Arabic, French, English. Based in Casablanca, Morocco.',
+    `Contact: ${EMAIL} · ${PROFILES.map((p) => `${p.name}: ${p.href}`).join(' · ')}`,
+    '',
+    '## Areas of expertise',
+    '',
+    ...SERVICES.map(
+      (s) => `- [${s.text.en.title}](${serviceUrl('en', s.slug)}): ${s.text.en.metaDescription} Tools: ${s.tools.join(', ')}.`
+    ),
+    '',
+    '## Case studies',
+    '',
+    ...CASE_STUDIES.map((c) => `- [${c.text.en.title}](${studyUrl('en', c.slug)}): ${c.text.en.metaDescription}`),
+    '',
+    '## Experience',
+    '',
+    ...((en.about.resume?.items ?? []) as ResumeItem[]).map(
+      (r) => `- ${r.period}: ${r.role}${r.company ? `, ${r.company}` : ''}. ${r.desc ?? ''}`.trim()
+    ),
+    '',
+    '## Other languages',
+    '',
+    `- [Accueil en français](${homeUrl('fr')})`,
+    ...SERVICES.map((s) => `- [${s.text.fr.title}](${serviceUrl('fr', s.slug)})`),
+    ...CASE_STUDIES.map((c) => `- [${c.text.fr.title}](${studyUrl('fr', c.slug)})`),
+    `- [الصفحة الرئيسية بالعربية](${homeUrl('ar')})`,
+    ...SERVICES.map((s) => `- [${s.text.ar.title}](${serviceUrl('ar', s.slug)})`),
+    ...CASE_STUDIES.map((c) => `- [${c.text.ar.title}](${studyUrl('ar', c.slug)})`),
+    '',
+    '## Optional',
+    '',
+    `- [Sitemap](${SITE_URL}sitemap.xml)`,
+    `- [CV (English, PDF)](${SITE_URL}cv/Mohamed-Amine-Gharrab-CV-EN.pdf)`,
+    `- [CV (French, PDF)](${SITE_URL}cv/Mohamed-Amine-Gharrab-CV-FR.pdf)`,
+    '',
+  ];
+  return lines.join('\n');
 };
 
 const serviceAlternates = (slug: string): Alternate[] => [
@@ -252,10 +358,15 @@ export function pagesPlugin(): Plugin {
       );
       const today = new Date().toISOString().slice(0, 10);
 
-      // Home pages in French and Arabic (the English one is the built index.html itself).
-      for (const { lng, ogLocale, dir } of LANGS.filter((l) => l.lng !== 'en')) {
+      // Home pages in French and Arabic, and the English one (the built index.html itself) with
+      // its content added. Every other page below is built from the untouched `source`.
+      for (const { lng, ogLocale, dir } of LANGS) {
         const { title, description } = locales[lng].hero.meta as { title: string; description: string };
-        write(outDir, pathFor(lng), renderPage(source, { lng, dir, ogLocale, url: homeUrl(lng), title, description }));
+        write(
+          outDir,
+          pathFor(lng),
+          renderPage(source, { lng, dir, ogLocale, url: homeUrl(lng), title, description, body: homeHtml(lng, locales[lng]) })
+        );
       }
       const homeAlternates: Alternate[] = [
         ...LANGS.map(({ lng }) => ({ hreflang: lng, href: homeUrl(lng) })),
@@ -326,6 +437,7 @@ export function pagesPlugin(): Plugin {
       }
 
       fs.writeFileSync(path.join(outDir, 'sitemap.xml'), sitemap(entries));
+      fs.writeFileSync(path.join(outDir, 'llms.txt'), llmsTxt(locales.en));
 
       // GitHub Pages serves 404.html (with a 404 status) for unknown addresses: give it the app,
       // which renders its own 404 page in the visitor's language. Kept out of search results.
