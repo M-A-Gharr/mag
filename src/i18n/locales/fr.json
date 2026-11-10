@@ -17,11 +17,11 @@
       "title": "Mohamed Amine Gharrab · Développeur Full-Stack & IA",
       "description": "Développeur Full-Stack à Casablanca : applications web, automatisation IA, e-commerce (PrestaShop, WordPress, Shopify) et intégration CRM."
     },
-    "title": "Développeur Full-Stack\n& Automatisation IA 🚀",
-    "subtitle": "Je crée des applications web, des automatisations IA et des plateformes e-commerce qui simplifient les processus métier.",
+    "title": "Développeur Full-Stack\n& Automatisation IA",
+    "subtitle": "Je conçois et développe des applications web, des boutiques en ligne et des automatisations IA pour les entreprises qui veulent moins de tâches manuelles et plus de ventes.",
     "cta": {
       "discover": "Travaillons ensemble",
-      "projects": "Voir mes projets"
+      "projects": "Voir mes réalisations"
     },
     "quote": "Coder. Créer. Connecter."
   },
@@ -32,75 +32,75 @@
       "description": "Développeur Full-Stack spécialisé en applications web, automatisation par l’IA, e-commerce et transformation digitale."
     },
     "resume": {
-      "title": "Mon parcours",
+      "title": "Parcours",
       "items": [
         {
           "period": "2026 – Aujourd’hui",
           "role": "Développeur Full-Stack & Solutions Digitales",
           "company": "SIMTIS · Casablanca",
-          "desc": "Création d'un studio IA interne qui transforme des photos produit en visuels mannequin, d'une plateforme de lead intelligence (SLI) et d'un CRM de prospection B2B avec son site vitrine export. Refonte d'une boutique PrestaShop multilingue avec plus de 20 modules sur mesure, migration d'une boutique WooCommerce vers PrestaShop 9, et pilotage du programme de formation IA (Claude) du groupe."
+          "desc": "Développeur interne d'un groupe de marques retail. J'ai créé un studio IA qui transforme les photos produit en visuels portés, une plateforme de prospection B2B et un site export relié à son propre CRM. J'ai aussi refondu une boutique PrestaShop en trois langues (plus de 20 modules sur mesure, de la page 10 à la page 1 de Google), migré une autre boutique de WooCommerce vers PrestaShop 9 et formé tout le groupe à Claude."
         },
         {
           "period": "Projet personnel",
           "role": "Fondateur",
           "company": "M.A.G Store (Shopify)",
-          "desc": "Création et gestion d’une boutique Shopify dédiée au confort de la maison (cocooning), avec livraison partout au Maroc et paiement à la livraison. Création de l’identité de marque (logo, positionnement)."
+          "desc": "Ma propre boutique Shopify d'articles cocooning, livrée partout au Maroc avec paiement à la livraison. J'ai monté la boutique et la marque, du logo au positionnement."
         },
         {
           "period": "Oct – Déc 2024",
           "role": "Développeur Full-Stack",
           "company": "Plateforme SaaS de gestion de stock · Casablanca",
-          "desc": "Développement d’une plateforme de gestion des stocks, commandes et ventes avec tableaux de bord et alertes automatisées (React.js, Node.js, Vite, PostgreSQL)."
+          "desc": "Une plateforme de gestion des stocks, des commandes et des ventes, avec tableaux de bord et alertes de stock, développée en React, Node.js et PostgreSQL."
         },
         {
           "period": "Août – Sep 2024",
           "role": "Développeur Web",
           "company": "Site vitrine responsive · Casablanca",
-          "desc": "Développement d’un site multilingue et responsive, avec intégration d’outils d’analytics et de réseaux sociaux."
+          "desc": "Un site vitrine multilingue pensé d'abord pour le mobile, avec statistiques et réseaux sociaux intégrés."
         }
       ]
     },
     "goals": {
-      "title": "Mes objectifs",
+      "title": "Ma façon de travailler",
       "expertise": {
-        "title": "Développement orienté IA",
-        "desc": "Intégrer toujours plus l’IA générative et l’automatisation dans les produits et processus que je construis."
+        "title": "Une IA utile, pas un gadget",
+        "desc": "J'ajoute de l'IA là où elle fait vraiment gagner du temps : rédiger, trier, qualifier des prospects, produire des visuels. Pour tout le reste, je privilégie des solutions simples et fiables."
       },
       "innovation": {
-        "title": "Impact business mesurable",
-        "desc": "Livrer des outils qui font gagner du temps et produisent des résultats : lead intelligence, automatisation, SEO."
+        "title": "Des résultats mesurables",
+        "desc": "Chaque projet part d'un chiffre à faire bouger : heures gagnées, prospects qualifiés, positions sur Google, ventes."
       },
       "impact": {
-        "title": "Accompagner l’adoption de l’IA",
-        "desc": "Aider les équipes à adopter l’IA générative grâce aux formations, aux ateliers pratiques et aux Skills sur mesure."
+        "title": "Votre équipe garde la main",
+        "desc": "Je forme les personnes qui utiliseront l'outil, j'écris les guides, et chaque décision importante reste entre les mains d'une personne."
       }
     },
     "services": {
-      "title": "Ce que je construis",
+      "title": "Ce que je peux faire pour vous",
       "webapps": {
-        "title": "Applications web Full-Stack",
-        "desc": "Plateformes et applications métier sur mesure avec React, Node.js et ASP.NET, intégrées à votre CRM et à vos données."
+        "title": "Applications web",
+        "desc": "Outils internes, portails clients et CRM conçus autour de la façon dont votre équipe travaille vraiment, et reliés aux données que vous avez déjà."
       },
       "ai": {
         "title": "Automatisation IA",
-        "desc": "Workflows d’automatisation, génération de contenu par IA et Skills Claude sur mesure, avec formation des équipes."
+        "desc": "Des workflows qui rédigent, trient et qualifient à votre place, des Skills Claude sur mesure, et la formation pour que votre équipe s'en serve au quotidien."
       },
       "ecommerce": {
         "title": "E-commerce & SEO",
-        "desc": "Boutiques PrestaShop, WordPress et Shopify : modules sur mesure, amélioration de l’UX et SEO qui positionne."
+        "desc": "Des boutiques PrestaShop, WordPress et Shopify rapides, bien placées sur Google et simples à gérer au jour le jour."
       }
     },
     "book": {
-      "title": "Prêt à collaborer ?",
-      "desc": "Réservez un appel gratuit en quelques clics : choisissez un créneau ci-dessous et Amine vous le confirme par e-mail.",
-      "availability": "Mes disponibilités",
+      "title": "Parlons de votre projet",
+      "desc": "Un appel gratuit pour faire le point sur votre projet. Choisissez un créneau ci-dessous, je vous le confirme par e-mail.",
+      "availability": "Délais habituels",
       "consultation": "Automatisation IA",
-      "consultdesc": "3-5 jours",
-      "dev": "App web / E-commerce",
-      "devdesc": "1-3 semaines",
+      "consultdesc": "3 à 5 jours",
+      "dev": "Application web ou boutique",
+      "devdesc": "1 à 3 semaines",
       "techreview": "Revue technique",
       "techreviewtime": "24 heures",
-      "responsetime": "Délai de réponse : généralement sous 24 heures",
+      "responsetime": "Je réponds en général dans la journée.",
       "cal": {
         "title": "Réserver un appel",
         "subtitle": "Gratuit · visio, téléphone ou WhatsApp",
@@ -108,7 +108,7 @@
         "chooseSlot": "2. Choisissez un jour et une heure",
         "pickDay": "Choisissez un jour dans le calendrier pour voir les horaires disponibles.",
         "timezone": "Horaires affichés dans votre fuseau horaire ({{tz}}).",
-        "pending": "Votre créneau est une demande : Amine le confirme par e-mail sous 24 heures.",
+        "pending": "Votre créneau est une demande : je vous le confirme par e-mail sous 24 heures.",
         "continue": "Continuer",
         "change": "Modifier",
         "name": "Votre nom",
@@ -120,7 +120,7 @@
         "sending": "Envoi…",
         "error": "La demande n'a pas pu être envoyée. Réessayez, ou écrivez à contact.maminegh@gmail.com.",
         "doneTitle": "Demande envoyée !",
-        "doneDesc": "Amine confirmera le créneau par e-mail à {{email}} sous 24 heures.",
+        "doneDesc": "Je vous confirme le créneau par e-mail à {{email}} sous 24 heures.",
         "addGoogle": "Ajouter à Google Agenda",
         "downloadIcs": "Télécharger (.ics)",
         "another": "Réserver un autre créneau",
@@ -145,7 +145,7 @@
         }
       }
     },
-    "available": "Disponible pour des missions",
+    "available": "Disponible pour de nouveaux projets",
     "avatarAlt": "Photo de Mohamed Amine Gharrab"
   },
   "skills": {
@@ -184,13 +184,13 @@
       "title": "Mohamed Amine Gharrab Projects",
       "description": "Développeur Full-Stack spécialisé en applications web, automatisation par l’IA, e-commerce et transformation digitale."
     },
-    "subtitle": "Une sélection de mes travaux récents : applications métier, automatisation IA et e-commerce",
+    "subtitle": "Des projets récents : outils IA, CRM et boutiques en ligne, pour la plupart réalisés pour un groupe de marques retail et export.",
     "technologies": "Technologies",
     "features": "Fonctionnalités",
     "items": {
       "1": {
-        "title": "Générateur de Documentation AI pour Visualforce",
-        "description": "Un puissant outil basé sur Node.js qui génère automatiquement la documentation pour les pages Salesforce Visualforce au format Markdown. Parfait pour les développeurs Salesforce qui souhaitent gagner du temps dans la maintenance de la documentation technique.",
+        "title": "Générateur de documentation IA pour Visualforce",
+        "description": "Un outil open source en ligne de commande pour les équipes Salesforce. Il lit les pages Visualforce et leurs classes Apex, puis rédige une documentation Markdown claire, avec un résumé par IA du rôle de chaque page. Documenter d'anciennes pages tient en une seule commande.",
         "technologies": [
           "Salesforce",
           "Apex",
@@ -204,32 +204,28 @@
           "Open AI"
         ],
         "features": [
-          "Extraction de composants Visualforce (apex:page, apex:form, apex:inputField, apex:commandButton, etc.)",
-          "Détection des contrôleurs, extensions et références recordSetVar",
-          "Analyse des classes Apex pour les méthodes et les propriétés",
-          "Extraction améliorée des composants (apex:pageBlock, apex:pageBlockSection, apex:pageBlockSectionItem)",
-          "Résumé par IA des objectifs et fonctionnalités des composants",
-          "Génération Markdown avec sections structurées (Vue d'ensemble, Composants, Contrôleurs, etc.)",
-          "Modèles personnalisables utilisant Handlebars",
-          "Interface en ligne de commande pour une utilisation facile"
+          "Lecture des pages Visualforce : formulaires, champs, boutons et blocs",
+          "Repérage des contrôleurs, extensions et méthodes Apex derrière chaque page",
+          "Résumé par IA du rôle de chaque composant",
+          "Documentation Markdown structurée : vue d'ensemble, composants, contrôleurs",
+          "Modèles Handlebars modifiables",
+          "Utilisation en ligne de commande, code source sur GitHub"
         ]
       },
       "2": {
-        "title": "SaaS pour Boulangeries",
-        "description": "Une plateforme SaaS conçue pour aider les boulangeries à gérer leur stock, réduire le gaspillage et suivre les performances des ventes en temps réel.",
+        "title": "SaaS de gestion pour boulangeries",
+        "description": "Une plateforme de gestion pour boulangeries : stock, commandes et ventes au même endroit, avec des chiffres en temps réel pour moins de pertes en fin de journée.",
         "technologies": [
-          "React",
+          "React.js",
           "Node.js",
-          "Express",
-          "MongoDB",
-          "Stripe",
-          "AWS"
+          "Vite",
+          "PostgreSQL"
         ],
         "features": [
-          "Gestion des stocks en temps réel",
-          "Système de commande en ligne",
-          "Tableau de bord analytique",
-          "Gestion des clients"
+          "Stock en temps réel et réception des livraisons",
+          "Recettes reliées à leurs ingrédients",
+          "Caisse et commandes en ligne",
+          "Tableau de bord des ventes et fichier clients"
         ],
         "captions": {
           "0": "Page de connexion de BakeryOS SaaS avec authentification sécurisée",
@@ -242,7 +238,7 @@
       },
       "6": {
         "title": "Plateforme Lead Intelligence (SLI)",
-        "description": "Une plateforme de génération et de qualification de leads B2B développée chez SIMTIS pour l'équipe export : elle découvre les entreprises cibles, trouve les décideurs, qualifie les prospects avec l'IA et suit chaque opportunité jusqu'à la vente — un commercial décide toujours avant tout contact.",
+        "description": "Conçue pour une équipe export qui cherchait ses distributeurs à la main. La plateforme trouve les entreprises cibles et leurs décideurs, note chaque prospect avec l'IA et le suit jusqu'à la vente. Personne n'est contacté sans l'accord d'un commercial.",
         "technologies": [
           "React",
           "TanStack Start",
@@ -252,17 +248,17 @@
           "Hunter.io"
         ],
         "features": [
-          "Découverte de prospects par recherche web et suggestions IA, avec revue humaine",
-          "Enrichissement des contacts en priorité vers les décideurs",
-          "Qualification IA : score, intention d'achat, signaux et message recommandé",
+          "Recherche d'entreprises par le web et suggestions de l'IA, validées par une personne",
+          "Contacts enrichis en commençant par les décideurs",
+          "Score IA : intention d'achat, signaux et premier message suggéré",
           "Pipeline Kanban, relances, agenda et rapports exportables",
-          "Vues séparées marché export et marché local, avec rôles et permissions",
-          "Contrôle qualité des données : anomalies, doublons et normalisation"
+          "Vues séparées marché export et marché local, avec des rôles",
+          "Contrôle des doublons, des anomalies et des données mal formatées"
         ]
       },
       "7": {
         "title": "Formation IA Claude du groupe",
-        "description": "Conception et pilotage du programme de formation à l’IA générative pour tout le groupe, de l’analyse des besoins de chaque département jusqu’à des Skills Claude adaptés à leur métier.",
+        "description": "J'ai conçu et animé la formation à l'IA générative de tout le groupe. Chaque département a d'abord été interrogé, pour que chaque séance et chaque Skill Claude corresponde à une vraie partie de son travail.",
         "technologies": [
           "Claude",
           "Claude Skills",
@@ -270,15 +266,15 @@
           "Formation"
         ],
         "features": [
-          "Analyse des besoins de chaque département",
-          "Sessions communes pour tout le groupe",
-          "Ateliers spécifiques par département",
-          "Skills sur mesure pour chaque département"
+          "Entretiens avec chaque département avant toute séance",
+          "Séances d'introduction pour tout le groupe",
+          "Ateliers pratiques par département",
+          "Skills Claude sur mesure pour les tâches récurrentes de chaque équipe"
         ]
       },
       "8": {
         "title": "Refonte e-commerce, SEO & modules PrestaShop sur mesure",
-        "description": "Refonte complète d'une boutique PrestaShop multilingue pour une marque de châles et de foulards dotée d'un réseau de magasins : nouveau thème et nouvelle expérience utilisateur, plus de 20 modules sur mesure, synchronisation automatique du stock, et une stratégie SEO qui l'a fait passer de la page 10 à la page 1 de Google dans ses trois langues. J'assure aussi sa maintenance quotidienne et sa sécurité.",
+        "description": "Une marque de châles et de foulards, avec son propre réseau de magasins, avait une boutique en ligne peu visible et sans lien avec le stock en point de vente. Je l'ai refondue en français, en anglais et en arabe, j'ai développé plus de 20 modules sur mesure, relié le stock des boutiques physiques et repris le SEO. Elle est passée de la page 10 à la page 1 de Google dans les trois langues, et j'en assure toujours la maintenance au quotidien.",
         "technologies": [
           "PrestaShop",
           "PHP",
@@ -288,31 +284,30 @@
           "Cron / CSV"
         ],
         "features": [
-          "Refonte complète en français, anglais et arabe : thème, pages et expérience utilisateur",
-          "Plus de 20 modules sur mesure : pop-ups d'upsell, récompenses panier, remises par palier, suivi d'affiliation, notifications de ventes en direct, ventes par canal",
-          "Synchronisation automatique du stock depuis le fichier de l'ERP deux fois par jour, avec la disponibilité en magasin sur chaque fiche produit",
-          "SEO multilingue : de la page 10 à la page 1 de Google dans les 3 langues",
+          "Refonte en français, anglais et arabe : thème, pages et parcours client",
+          "Plus de 20 modules sur mesure : ventes additionnelles, récompenses panier, remises par palier, suivi d'affiliation, notifications de ventes en direct, ventes par canal",
+          "Stock synchronisé depuis l'ERP deux fois par jour, avec la disponibilité en magasin sur chaque fiche produit",
+          "SEO multilingue : de la page 10 à la page 1 de Google dans les trois langues",
           "Maintenance quotidienne, mises à jour et surveillance de la sécurité"
         ]
       },
       "9": {
         "title": "M.A.G Store",
-        "description": "Ma propre boutique Shopify dédiée au confort de la maison (cocooning), avec livraison partout au Maroc et paiement à la livraison. J’ai construit la boutique et créé l’identité de marque.",
+        "description": "Ma propre boutique Shopify d'articles pour le confort de la maison, livrée partout au Maroc avec paiement à la livraison. J'ai monté la boutique et créé la marque, du logo au positionnement.",
         "technologies": [
           "Shopify",
           "E-commerce",
           "Branding"
         ],
         "features": [
-          "Boutique Shopify créée et maintenue",
-          "Livraison partout au Maroc",
-          "Paiement à la livraison",
+          "Boutique Shopify montée et gérée au quotidien",
+          "Livraison partout au Maroc, paiement à la livraison",
           "Identité de marque : logo et positionnement"
         ]
       },
       "10": {
         "title": "VR Showroom",
-        "description": "Un projet personnel : un showroom immobilier immersif sur le web. Les visiteurs explorent chaque bien en 3D, le parcourent pièce par pièce ou en 360°, et chaque visite devient un lead qualifié dans un CRM intégré.",
+        "description": "Un projet personnel pour les promoteurs immobiliers : les acheteurs visitent chaque bien en ligne, en 3D ou en 360°. Chaque visite est enregistrée et notée dans un CRM intégré, pour que l'équipe commerciale sache qui rappeler en premier.",
         "technologies": [
           "React",
           "Three.js",
@@ -321,17 +316,17 @@
           "CRM"
         ],
         "features": [
-          "Catalogue et pages projets avec rendus et typologies",
-          "Plan interactif qui s’adapte à la surface choisie",
-          "Maquette 3D : faire pivoter, ouvrir chaque pièce, voir ses dimensions",
+          "Catalogue de projets avec rendus et typologies",
+          "Plan interactif qui suit la surface choisie",
+          "Maquette 3D : la faire pivoter, ouvrir chaque pièce, lire ses dimensions",
           "Visite immersive et panoramas 360°",
-          "CRM intégré : scoring automatique des leads, attribution et pipeline",
+          "CRM intégré : scoring des leads, attribution et pipeline",
           "Statistiques : parcours de visite, entonnoir de leads, biens les plus vus"
         ]
       },
       "11": {
         "title": "Simtis Studio — visuels mode par IA",
-        "description": "Un studio IA interne développé chez SIMTIS : à partir d'une simple photo de châle ou de foulard, il produit des visuels professionnels portés par un mannequin, prêts pour l'e-commerce, les réseaux sociaux et les catalogues clients — en quelques clics au lieu d'une séance photo.",
+        "description": "Avant cet outil, montrer un nouveau châle porté demandait une séance photo. Aujourd'hui, une boutique envoie une photo produit et récupère en quelques clics des visuels portés, prêts pour le site, les réseaux sociaux et les catalogues clients. Développé en interne chez SIMTIS.",
         "technologies": [
           "OpenAI",
           "FASHN AI",
@@ -340,17 +335,17 @@
           "FR / EN / AR (RTL)"
         ],
         "features": [
-          "Rendus mannequin à partir d'une photo produit : pose, décor, façon de porter et style photo",
-          "Deux moteurs IA : scènes vivantes et affiches, ou essayage virtuel fidèle",
-          "File de génération partagée, quotas journaliers et mensuels par magasin",
-          "Circuit de validation : rendus approuvés ou renvoyés à refaire",
-          "Fiches produits en 3 langues, exportables en PDF",
-          "Photo vers vidéo : un rendu devient un court clip animé"
+          "Visuels portés à partir d'une seule photo produit : pose, décor, façon de porter, style photo",
+          "Deux moteurs IA : scènes lifestyle et affiches, ou essayage virtuel fidèle",
+          "File partagée avec quotas journaliers et mensuels par boutique",
+          "Étape de validation : chaque visuel est approuvé ou renvoyé",
+          "Fiches produit en trois langues, exportées en PDF",
+          "Courts clips vidéo créés à partir d'un visuel validé"
         ]
       },
       "12": {
         "title": "Site vitrine export & CRM de prospection B2B",
-        "description": "Pour une maison historique de foulards et de châles : un site vitrine multilingue destiné aux grossistes et distributeurs à l'étranger, relié à un CRM B2B qui trouve, note et suit les prospects internationaux — du premier contact à la première commande.",
+        "description": "Une maison historique de châles et de foulards voulait vendre aux grossistes à l'étranger. J'ai créé un site vitrine multilingue pour les acheteurs professionnels, et derrière lui un CRM qui trouve, note et suit les prospects internationaux jusqu'à leur première commande.",
         "technologies": [
           "WordPress",
           "CRM",
@@ -359,17 +354,17 @@
           "Multilingue / RTL"
         ],
         "features": [
-          "Site vitrine avec un catalogue qui se feuillette comme un livre, sans panier : chaque page mène à une demande professionnelle",
-          "Site multilingue avec mise en page arabe de droite à gauche, pensé pour le mobile",
+          "Un catalogue qui se feuillette comme un livre, sans panier : chaque page mène à une demande professionnelle",
+          "Site multilingue avec une version arabe de droite à gauche, pensé pour le mobile",
           "Demandes enregistrées et renvoyées jusqu'à leur arrivée dans le CRM, robots filtrés",
-          "Recherche de prospects sur Instagram, TikTok et Facebook avec un scoring multilingue par règles",
+          "Recherche de prospects sur Instagram, TikTok et Facebook, notés en plusieurs langues",
           "Revue humaine, détection des doublons, pipeline en 7 étapes et relances",
           "Rôles, territoires et un historique que personne ne peut modifier"
         ]
       },
       "13": {
         "title": "Migration WooCommerce → PrestaShop 9",
-        "description": "Migration complète d'une boutique de mode de WordPress/WooCommerce vers PrestaShop 9 : catalogue, contenus, clients et historique des commandes, avec un thème et des modules sur mesure, un import rejouable et toutes les anciennes URL redirigées pour préserver le SEO.",
+        "description": "Une boutique de mode qui passait de WooCommerce à PrestaShop 9 avait trois choses à ne pas perdre : ses clients, son historique de commandes et ses positions sur Google. Les trois ont suivi, avec le catalogue, les contenus et un nouveau thème sur mesure.",
         "technologies": [
           "PrestaShop 9",
           "PHP 8.4",
@@ -379,12 +374,12 @@
           "Docker"
         ],
         "features": [
-          "Extracteur Python du site public (lecture seule) et des données WooCommerce",
-          "Import rejouable avec simulation : aucun doublon, modifications manuelles jamais écrasées",
+          "Extracteur Python du site public (en lecture seule) et des données WooCommerce",
+          "Import rejouable avec essai à blanc : aucun doublon, modifications manuelles jamais écrasées",
           "Clients et historique complet des commandes migrés, totaux vérifiés par rapport à la source",
           "Thème et modules sur mesure : blocs d'accueil modifiables, blog, commande sur une page",
-          "Redirections 301 pour chaque ancienne URL, générées et vérifiées automatiquement",
-          "Tests navigateur automatisés sur ordinateur et mobile, et guides de déploiement"
+          "Une redirection 301 pour chaque ancienne URL, générée et vérifiée automatiquement",
+          "Tests automatisés dans le navigateur sur ordinateur et mobile, et guides de déploiement"
         ]
       }
     },
@@ -401,7 +396,7 @@
   },
   "certificates": {
     "title": "Certificats & Formation",
-    "subtitle": "Mes qualifications et certificats dans le domaine du développement web",
+    "subtitle": "Diplômes, certifications et formations que je continue de suivre.",
     "sub": "Certificats",
     "salesforceCerts": "Certifications et badges Salesforce",
     "education": {
@@ -420,13 +415,13 @@
       "bachelorDesc": "Spécialisation en Cryptographie Mathématiques et Sécurité de l'Information",
       "hnd": "Diplome Supérieur",
       "hndYears": "2022 - 2024",
-      "hndDesc": "Cybersécurité et Informatique Cloud"
+      "hndDesc": "Sécurité, infrastructure cloud et protection des réseaux, en théorie comme en pratique."
     },
     "continuous": {
       "title": "Formation continue",
       "online": "Cours en ligne & Bootcamps",
       "onlineYears": "2020 - Présent",
-      "onlineDesc": "Mise à jour régulière des compétences via des plateformes comme Udemy, Coursera et freeCodeCamp"
+      "onlineDesc": "Des cours Udemy, Coursera et freeCodeCamp pour garder mes compétences à jour."
     },
     "meta": {
       "description": "Formation et certificats de Mohamed Amine Gharrab : ingénierie des systèmes d’information, cybersécurité et cloud computing.",
@@ -450,62 +445,62 @@
         {
           "projectId": 11,
           "sector": "Mode & retail · IA générative",
-          "challenge": "Montrer chaque nouveau châle ou foulard porté par un mannequin demandait un shooting photo : beaucoup de produits partaient en ligne avec une simple photo à plat.",
+          "challenge": "Montrer un nouveau châle ou foulard porté demandait une séance photo. La plupart des produits partaient donc en ligne avec une simple photo à plat.",
           "approach": [
-            "Analyse de la façon dont le marketing et les boutiques préparent réellement leurs visuels",
-            "Un studio interne avec deux moteurs d'IA : scènes vivantes, ou essayage virtuel fidèle",
-            "Une file de génération partagée, des quotas par boutique et une étape de validation pour protéger l'image de la marque",
-            "Des fiches produit en trois langues et de courts clips vidéo générés à partir d'un visuel"
+            "J'ai observé comment le marketing et les boutiques préparent réellement leurs visuels",
+            "J'ai créé un studio interne avec deux moteurs d'IA : scènes lifestyle ou essayage virtuel fidèle",
+            "J'ai ajouté une file partagée, des quotas par boutique et une étape de validation pour protéger l'image de la marque",
+            "J'ai complété l'outil avec des fiches produit en trois langues et de courts clips vidéo"
           ],
-          "result": "Un visuel porté et fidèle à la marque en quelques clics au lieu d'un shooting, prêt pour la boutique en ligne, les réseaux sociaux et les catalogues clients."
+          "result": "Des visuels portés, fidèles à la marque, en quelques clics au lieu d'une séance photo, prêts pour le site, les réseaux sociaux et les catalogues clients."
         },
         {
           "projectId": 8,
           "sector": "E-commerce multilingue · SEO",
-          "challenge": "Une marque de châles et foulards, avec un réseau de boutiques physiques, avait une boutique en ligne difficile à trouver sur Google et déconnectée du stock en magasin.",
+          "challenge": "Une marque de châles et de foulards, avec son propre réseau de magasins, avait une boutique en ligne peu visible sur Google et sans lien avec le stock en point de vente.",
           "approach": [
-            "Refonte du thème, des pages et du parcours client en français, anglais et arabe",
-            "Plus de 20 modules sur mesure : ventes additionnelles, récompenses panier, remises par paliers, suivi d'affiliation",
-            "Synchronisation du stock depuis le fichier de l'ERP deux fois par jour, avec la disponibilité en boutique sur chaque fiche produit",
-            "Refonte du SEO multilingue : structure, contenus, métadonnées et redirections"
+            "J'ai refondu le thème, les pages et le parcours client en français, en anglais et en arabe",
+            "J'ai développé plus de 20 modules sur mesure : ventes additionnelles, récompenses panier, remises par palier, suivi d'affiliation",
+            "J'ai synchronisé le stock depuis l'ERP deux fois par jour, avec la disponibilité en magasin sur chaque fiche produit",
+            "J'ai repris le SEO multilingue : structure, contenus, métadonnées et redirections"
           ],
-          "result": "De la page 10 à la page 1 de Google dans les trois langues, avec une boutique désormais maintenue et sécurisée au quotidien."
+          "result": "De la page 10 à la page 1 de Google dans les trois langues. J'assure toujours la maintenance et la sécurité de la boutique au quotidien."
         },
         {
           "projectId": 6,
           "sector": "Export B2B · Qualification par IA",
           "challenge": "L'équipe export cherchait ses distributeurs à la main, entre recherches web, tableurs et boîtes mail, sans vue commune sur qui avait déjà été contacté.",
           "approach": [
-            "Découverte d'entreprises cibles par recherche web et suggestions de l'IA",
-            "Enrichissement des contacts en priorité vers les décideurs",
-            "Qualification par IA : score, intention d'achat et premier message suggéré",
-            "Pipeline Kanban, relances et rapports, avec une personne qui valide chaque prise de contact"
+            "J'ai automatisé la recherche d'entreprises cibles, par le web et avec des suggestions de l'IA",
+            "J'ai enrichi les contacts en commençant par les décideurs",
+            "J'ai fait noter chaque prospect par l'IA : intention d'achat et premier message suggéré",
+            "J'ai mis en place un pipeline Kanban avec relances et rapports, où une personne valide chaque prise de contact"
           ],
-          "result": "Un seul outil partagé, de la première recherche à la vente : les prospects sont qualifiés avant qu'on y passe du temps, et aucune piste n'est oubliée."
+          "result": "Un seul outil partagé, de la première recherche à la vente. Les prospects sont qualifiés avant qu'on y consacre du temps, et aucune piste ne se perd."
         },
         {
           "projectId": 12,
           "sector": "Export · CRM B2B",
-          "challenge": "Une maison patrimoniale de châles et foulards voulait toucher les grossistes à l'étranger, mais son site n'était pas pensé pour les acheteurs professionnels et les demandes se perdaient.",
+          "challenge": "Une maison historique de châles et de foulards voulait toucher les grossistes à l'étranger, mais son site n'était pas pensé pour les acheteurs professionnels et les demandes se perdaient.",
           "approach": [
-            "Un site vitrine multilingue, avec une version arabe de droite à gauche et un catalogue qui se feuillette comme un livre",
-            "Pas de panier : chaque page mène à une demande professionnelle, enregistrée et renvoyée jusqu'à ce qu'elle arrive dans le CRM",
-            "Recherche de prospects sur Instagram, TikTok et Facebook, avec un scoring multilingue",
-            "Pipeline en 7 étapes, territoires, rôles et un historique non modifiable"
+            "J'ai créé un site vitrine multilingue, avec une version arabe de droite à gauche et un catalogue qui se feuillette comme un livre",
+            "J'ai fait mener chaque page à une demande professionnelle, sans panier, enregistrée et renvoyée jusqu'à son arrivée dans le CRM",
+            "J'ai mis en place la recherche de prospects sur Instagram, TikTok et Facebook, notés en plusieurs langues",
+            "J'ai organisé le suivi en un pipeline de 7 étapes, avec territoires, rôles et un historique non modifiable"
           ],
-          "result": "Les acheteurs internationaux arrivent sur un site fait pour eux, et chaque demande et chaque prospect est suivi jusqu'à la première commande."
+          "result": "Les acheteurs étrangers arrivent sur un site fait pour eux, et chaque demande est suivie jusqu'à la première commande."
         },
         {
           "projectId": 13,
           "sector": "Migration e-commerce",
-          "challenge": "Une boutique de mode devait quitter WooCommerce pour PrestaShop 9 sans perdre ses clients, son historique de commandes ni le classement Google de ses pages.",
+          "challenge": "Une boutique de mode devait passer de WooCommerce à PrestaShop 9 sans perdre ses clients, son historique de commandes ni ses positions sur Google.",
           "approach": [
-            "Un extracteur Python pour le catalogue, les contenus, les clients et les commandes",
-            "Un import rejouable avec essai à blanc : aucun doublon, les modifications manuelles jamais écrasées",
-            "Un thème et des modules sur mesure, dont un tunnel de commande sur une seule page",
-            "Une redirection 301 pour chaque ancienne adresse, et des tests automatisés dans le navigateur sur ordinateur et mobile"
+            "J'ai écrit un extracteur Python pour le catalogue, les contenus, les clients et les commandes",
+            "J'ai construit un import rejouable avec essai à blanc : aucun doublon, modifications manuelles jamais écrasées",
+            "J'ai créé un thème et des modules sur mesure, dont une commande sur une seule page",
+            "J'ai généré une redirection 301 pour chaque ancienne adresse et testé la boutique automatiquement sur ordinateur et mobile"
           ],
-          "result": "Une bascule propre : les totaux des commandes vérifiés par rapport à la source, chaque ancien lien toujours valide, et des guides de déploiement pour l'équipe."
+          "result": "Une bascule propre : les totaux des commandes correspondent à la source, chaque ancien lien fonctionne toujours, et l'équipe dispose de guides de déploiement."
         }
       ]
     },
@@ -533,26 +528,26 @@
       }
     ],
     "freelance": {
-      "availableForWork": "✅ Disponible pour missions freelance",
-      "services": "Services proposés",
+      "availableForWork": "Disponible pour de nouveaux projets",
+      "services": "Ce que je peux prendre en charge",
       "contactMe": "Me contacter",
       "downloadCV": "Télécharger mon CV",
       "downloadStarted": "Téléchargement démarré",
       "downloadError": "Erreur lors du téléchargement",
       "servicesList": [
-        "Développement d’applications web full-stack (React, Node.js)",
-        "Intégration CRM et outils de lead intelligence",
-        "Workflows d’automatisation IA (Make, Claude)",
-        "Formation à l’IA générative et Skills Claude sur mesure",
-        "Développement e-commerce (PrestaShop, WordPress, Shopify)",
+        "Applications web (React, Node.js)",
+        "Intégration CRM et outils de qualification de prospects",
+        "Automatisation IA avec Make et Claude",
+        "Formation à l'IA générative et Skills Claude sur mesure",
+        "Boutiques en ligne sous PrestaShop, WordPress et Shopify",
         "Modules PrestaShop et WordPress sur mesure",
-        "Optimisation SEO et SEO multilingue",
-        "Personnalisation de thèmes et amélioration de l’UX",
-        "Automatisation des processus métier"
+        "SEO, y compris pour les sites multilingues",
+        "Personnalisation de thèmes et amélioration de l'UX",
+        "Automatisation des tâches répétitives"
       ]
     },
     "meta": {
-      "description": "Témoignages, blog tech et disponibilité freelance de Mohamed Amine Gharrab, développeur Full-Stack.",
+      "description": "Témoignages, études de cas et disponibilités de Mohamed Amine Gharrab, développeur full-stack à Casablanca.",
       "title": "Mohamed Amine Gharrab"
     },
     "prev": "Témoignage précédent",
@@ -564,14 +559,14 @@
       "description": "Développeur Full-Stack | Automatisation IA | E-commerce"
     },
     "title": "Contact",
-    "subtitle": "Vous avez un projet ou une question ? N'hésitez pas à me contacter !",
+    "subtitle": "Parlez-moi de votre projet. Je réponds dans la journée, en français, en anglais ou en arabe.",
     "form": {
       "name": "Nom",
       "email": "Email",
       "message": "Message",
       "submit": "Envoyer le message",
       "sending": "Envoi en cours...",
-      "success": "Merci pour votre message ! Je vous répondrai dès que possible.",
+      "success": "Merci, votre message est bien parti. Je vous réponds dans la journée.",
       "sent": "Message envoyé !",
       "error": "Un problème est survenu et votre message n’a pas été envoyé. Réessayez, ou écrivez-moi directement par e-mail.",
       "characters": "{{count}} caractères sur {{max}}"
@@ -590,8 +585,8 @@
   },
   "footer": {
     "title": "M.A.G",
-    "description": "Développeur Full-Stack | Automatisation IA | E-commerce.\nApplications web, intégration CRM et workflows propulsés par l’IA.",
-    "stayConnected": "Restez Connecté",
+    "description": "Développeur full-stack à Casablanca.\nApplications web, boutiques en ligne et automatisation IA.",
+    "stayConnected": "Me retrouver",
     "copyright": "© {{year}} M.A.G · Développeur Full-Stack\nTous droits réservés."
   },
   "theme": {

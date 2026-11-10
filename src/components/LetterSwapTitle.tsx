@@ -119,7 +119,9 @@ const LetterSwapTitle = ({
       <span className="sr-only">{fullText}</span>
       {structure.map((words, l) => (
         // The line keeps the hero's entrance: it rises out of its own mask.
-        <span key={l} aria-hidden className="block overflow-hidden">
+        // Extra room above and below each mask (cancelled by negative margins, so the layout does
+        // not move) keeps tall marks visible: Devanagari vowel signs, Arabic diacritics.
+        <span key={l} aria-hidden className="-mt-[0.2em] block overflow-hidden pt-[0.2em]">
           <motion.span className="block" variants={lineVariants}>
             {words.map((units, w) => (
               <Fragment key={w}>
@@ -127,9 +129,9 @@ const LetterSwapTitle = ({
                 {/* A word never breaks inside; lines still wrap between words on small screens. */}
                 <span className="inline-flex whitespace-nowrap">
                   {units.map(({ text, index }) => (
-                    <span key={index} className="relative inline-flex overflow-hidden">
-                      <motion.span className={`swap-${index} relative block pb-[0.12em]`}>{text}</motion.span>
-                      <motion.span className={`swap-alt-${index} absolute inset-x-0 block`} style={{ top: '100%' }}>
+                    <span key={index} className="relative -mb-[0.1em] -mt-[0.2em] inline-flex overflow-hidden">
+                      <motion.span className={`swap-${index} relative block pb-[0.22em] pt-[0.2em]`}>{text}</motion.span>
+                      <motion.span className={`swap-alt-${index} absolute inset-x-0 block pb-[0.22em] pt-[0.2em]`} style={{ top: '100%' }}>
                         {text}
                       </motion.span>
                     </span>
