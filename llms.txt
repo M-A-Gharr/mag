@@ -22,6 +22,9 @@ Contact: contact.maminegh@gmail.com · LinkedIn: https://www.linkedin.com/in/m-a
 - [Migrating a fashion store from WooCommerce to PrestaShop 9](https://www.maminegh.com/case-studies/migration-woocommerce-prestashop-9/): How I moved a fashion store from WooCommerce to PrestaShop 9 without losing its customers, its order history or its Google rankings.
 - [Bakery SaaS: bringing stock, recipes and sales into one application](https://www.maminegh.com/case-studies/bakery-management-saas/): A bakery management application combining stock, recipes, orders and point of sale, with dashboards and an interface in English, French and Arabic.
 - [VR Showroom: connecting virtual property visits to sales follow-up](https://www.maminegh.com/case-studies/vr-property-showroom-crm/): A personal real estate project combining interactive plans, 3D models, 360° visits and a CRM with lead scoring, assignment and sales follow-up.
+- [Configurable invoice extraction with human review](https://www.maminegh.com/case-studies/configurable-invoice-ocr/): Invoice OCR built at OpenView around 2019: configurable fields, JPG and PDF inputs, human review and validated JSON output.
+- [Moving medical records into a structured database](https://www.maminegh.com/case-studies/medical-practice-management-mvp/): A C# MVP built in 2020–2021 for client and insurance records, OCR-assisted digitisation, Excel imports and accountant exports.
+- [A reusable foundation for banking agencies](https://www.maminegh.com/case-studies/banking-agency-java-jee/): A 2020 final-year project at Eurafric Maroc: Java/JEE application foundations, authentication, REST APIs, onboarding and PDF generation.
 
 ## Experience
 
@@ -43,6 +46,9 @@ Contact: contact.maminegh@gmail.com · LinkedIn: https://www.linkedin.com/in/m-a
 - [Migration d'une boutique de mode de WooCommerce vers PrestaShop 9](https://www.maminegh.com/fr/etudes-de-cas/migration-woocommerce-prestashop-9/)
 - [Bakery SaaS : réunir les stocks, les recettes et les ventes dans une seule application](https://www.maminegh.com/fr/etudes-de-cas/bakery-management-saas/)
 - [VR Showroom : relier les visites immobilières virtuelles au suivi commercial](https://www.maminegh.com/fr/etudes-de-cas/vr-property-showroom-crm/)
+- [Extraire les données des factures avec configuration et validation humaine](https://www.maminegh.com/fr/etudes-de-cas/configurable-invoice-ocr/)
+- [Transférer les dossiers d’un cabinet médical vers une base de données structurée](https://www.maminegh.com/fr/etudes-de-cas/medical-practice-management-mvp/)
+- [Un socle réutilisable pour les agences bancaires](https://www.maminegh.com/fr/etudes-de-cas/banking-agency-java-jee/)
 - [الصفحة الرئيسية بالعربية](https://www.maminegh.com/ar/)
 - [تطوير تطبيقات ويب مخصصة](https://www.maminegh.com/ar/expertise/web-application-development/)
 - [الأتمتة بالذكاء الاصطناعي وتكوين الفرق](https://www.maminegh.com/ar/expertise/ai-automation/)
@@ -54,6 +60,9 @@ Contact: contact.maminegh@gmail.com · LinkedIn: https://www.linkedin.com/in/m-a
 - [نقل متجر أزياء من WooCommerce إلى PrestaShop 9](https://www.maminegh.com/ar/case-studies/migration-woocommerce-prestashop-9/)
 - [Bakery SaaS: إدارة المخزون والوصفات والمبيعات في تطبيق واحد](https://www.maminegh.com/ar/case-studies/bakery-management-saas/)
 - [VR Showroom: ربط الزيارات العقارية الافتراضية بالمتابعة التجارية](https://www.maminegh.com/ar/case-studies/vr-property-showroom-crm/)
+- [استخراج بيانات الفواتير بخيارات مخصّصة ومراجعة بشرية](https://www.maminegh.com/ar/case-studies/configurable-invoice-ocr/)
+- [نقل سجلات العيادة إلى قاعدة بيانات منظّمة](https://www.maminegh.com/ar/case-studies/medical-practice-management-mvp/)
+- [أساس قابل لإعادة الاستخدام لتطبيقات الوكالات البنكية](https://www.maminegh.com/ar/case-studies/banking-agency-java-jee/)
 
 ## Optional
 
