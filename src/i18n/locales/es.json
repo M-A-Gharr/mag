@@ -340,7 +340,7 @@
         ]
       },
       "11": {
-        "title": "Simtis Studio — imágenes de moda con IA",
+        "title": "Simtis Studio - imágenes de moda con IA",
         "description": "Antes de esta herramienta, mostrar un chal nuevo puesto en una modelo exigía una sesión de fotos. Ahora una tienda sube una foto del producto y obtiene en pocos clics imágenes con modelo para la web, las redes sociales y los catálogos de clientes. Desarrollado internamente en SIMTIS.",
         "technologies": [
           "OpenAI",

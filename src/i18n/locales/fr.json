@@ -340,7 +340,7 @@
         ]
       },
       "11": {
-        "title": "Simtis Studio — visuels mode par IA",
+        "title": "Simtis Studio - visuels mode par IA",
         "description": "Avant cet outil, montrer un nouveau châle porté demandait une séance photo. Aujourd'hui, une boutique envoie une photo produit et récupère en quelques clics des visuels portés, prêts pour le site, les réseaux sociaux et les catalogues clients. Développé en interne chez SIMTIS.",
         "technologies": [
           "OpenAI",
