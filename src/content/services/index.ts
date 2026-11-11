@@ -12,7 +12,7 @@ export const SERVICE_PAGES: ServiceEntry[] = [
   {
     slug: 'web-application-development',
     key: 'webapps',
-    caseStudies: ['b2b-lead-intelligence-platform', 'export-showcase-site-b2b-crm'],
+    caseStudies: ['b2b-lead-intelligence-platform', 'export-showcase-site-b2b-crm', 'bakery-management-saas', 'vr-property-showroom-crm'],
     load: () => import('./web-application-development'),
   },
   {

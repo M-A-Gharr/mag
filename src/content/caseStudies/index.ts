@@ -11,6 +11,8 @@ export const CASE_STUDY_PAGES: { slug: string; projectId: number; load: () => Pr
   { slug: 'b2b-lead-intelligence-platform', projectId: 6, load: () => import('./b2b-lead-intelligence-platform') },
   { slug: 'export-showcase-site-b2b-crm', projectId: 12, load: () => import('./export-showcase-site-b2b-crm') },
   { slug: 'migration-woocommerce-prestashop-9', projectId: 13, load: () => import('./migration-woocommerce-prestashop-9') },
+  { slug: 'bakery-management-saas', projectId: 2, load: () => import('./bakery-management-saas') },
+  { slug: 'vr-property-showroom-crm', projectId: 10, load: () => import('./vr-property-showroom-crm') },
 ];
 
 /** The other case studies to suggest at the end of one: the next two, in home-page order. */
