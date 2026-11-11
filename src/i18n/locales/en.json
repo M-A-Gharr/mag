@@ -424,8 +424,8 @@
         ]
       },
       "16": {
-        "title": "Configurable Invoice OCR",
-        "description": "c. 2019 · Built at OpenView. An application that extracts information from JPG and PDF invoices. Users can select specific fields, such as an invoice ID, or request broader extraction, then review and validate the values before receiving JSON.",
+        "title": "Invoice OCR & Data Extraction",
+        "description": "Configurable invoice data extraction for JPG and PDF documents. Users can select the fields they need or request broader extraction, then review, edit and validate the results directly in the application before receiving structured JSON or CSV output.",
         "technologies": [
           "Python",
           "Tesseract",
@@ -434,28 +434,30 @@
         ],
         "features": [
           "JPG and PDF invoice processing",
-          "User-selected fields or broader invoice extraction",
-          "Review and validation of extracted values",
-          "Validated results returned as JSON"
+          "User-selected fields or broader extraction",
+          "In-app review, editing and validation",
+          "Structured JSON and CSV outputs"
         ]
       },
       "17": {
-        "title": "Medical Practice Management MVP",
-        "description": "Late 2020–early 2021. A C# MVP built from scratch to help doctors and secretaries manage client and insurance information. An OCR-assisted workflow helped transfer handwritten records into a new database, alongside Excel imports and file exports for the accountant.",
+        "title": "Medical Practice Management",
+        "description": "A C# application for managing a medical practice and digitising client and insurance records. It combines OCR-assisted capture from handwritten books, Excel imports and accounting exports with role-based permissions, telephone appointment scheduling by the assistant, and invoices that deduct insurance and supplementary coverage and can be emailed to clients.",
         "technologies": [
           "C#",
           "OCR"
         ],
         "features": [
-          "Client and insurance information management",
-          "OCR-assisted transfer of handwritten records into a database",
-          "Excel data imports",
-          "File exports for the accountant"
+          "Client and insurance records, with OCR-assisted digitisation",
+          "Excel imports and accounting exports",
+          "Staff roles with permissions for each role",
+          "Dedicated booking screen: availability checks and appointments arranged by phone",
+          "Invoices with insurance and supplementary coverage deductions",
+          "Invoices sent directly to clients by email"
         ]
       },
       "18": {
-        "title": "Banking Agency Application — Final-year Project",
-        "description": "2020 · Final-year project at Eurafric Maroc. A Java/JEE application foundation for banking agencies, with authentication, onboarding and PDF document generation. My work included the authentication component, the application foundation and REST APIs.",
+        "title": "Banking Agency Application — Final-Year Project",
+        "description": "A Java/JEE application foundation developed for my 2020 final-year project at Eurafric Maroc. Designed for reuse across banking agencies, it supported authentication, customer onboarding and PDF generation. My contribution focused on authentication and the application foundation.",
         "technologies": [
           "Java",
           "Java EE (JEE)",
@@ -464,7 +466,7 @@
         "features": [
           "Authentication",
           "Reusable application foundation for banking agencies",
-          "Onboarding functionality",
+          "Customer onboarding",
           "PDF document generation"
         ]
       }
@@ -619,36 +621,38 @@
         },
         {
           "projectId": 16,
-          "sector": "Document processing · c. 2019 · OpenView",
+          "sector": "Document processing · OpenView",
           "challenge": "Invoices contain different information, and users may need particular fields, such as an invoice ID, or broader extraction.",
           "approach": [
             "JPG and PDF invoice processing",
-            "User-selected fields or broader invoice extraction",
-            "Review and validation of extracted values",
-            "Validated results returned as JSON"
+            "User-selected fields or broader extraction",
+            "In-app review, editing and validation",
+            "Structured JSON and CSV outputs"
           ],
-          "result": "A configurable invoice extraction workflow with human validation before structured JSON is returned."
+          "result": "Configurable invoice extraction with in-app editing and validation before structured JSON or CSV output."
         },
         {
           "projectId": 17,
-          "sector": "Medical practice administration · MVP · 2020–2021",
-          "challenge": "Doctors and secretaries needed to bring handwritten records and Excel data into a database and manage related client and insurance information.",
+          "sector": "Medical practice administration · 2020–2021",
+          "challenge": "The practice needed to transfer handwritten and Excel records into a database, give each staff role appropriate permissions, and coordinate appointments and invoices.",
           "approach": [
-            "Client and insurance information management",
-            "OCR-assisted transfer of handwritten records into a database",
-            "Excel data imports",
-            "File exports for the accountant"
+            "Client and insurance records, with OCR-assisted digitisation",
+            "Excel imports and accounting exports",
+            "Staff roles with permissions for each role",
+            "Dedicated booking screen: availability checks and appointments arranged by phone",
+            "Invoices with insurance and supplementary coverage deductions",
+            "Invoices sent directly to clients by email"
           ],
-          "result": "The MVP combined record digitisation, client and insurance management, Excel imports and accountant exports. I handed the code to the owner; its current status is unknown."
+          "result": "The application combined record digitisation, role-based access, appointment scheduling, invoicing and accounting exchanges. I handed the code to the owner; its current status is unknown."
         },
         {
           "projectId": 18,
           "sector": "Banking · Final-year project · 2020 · Eurafric Maroc",
-          "challenge": "The project needed an application foundation for agency workflows, including authentication, onboarding and PDF document generation.",
+          "challenge": "The project needed an application foundation for agency workflows, including authentication, customer onboarding and PDF document generation.",
           "approach": [
             "Authentication",
             "Reusable application foundation for banking agencies",
-            "Onboarding functionality",
+            "Customer onboarding",
             "PDF document generation"
           ],
           "result": "The final-year project established an application foundation for banking-agency workflows. This describes the project at the time, rather than the current state of any later application."

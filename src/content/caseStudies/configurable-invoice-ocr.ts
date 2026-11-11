@@ -7,14 +7,14 @@ const study: CaseStudy = {
   "modified": "2026-11-11",
   "text": {
     "en": {
-      "title": "Configurable invoice extraction with human review",
-      "metaTitle": "Configurable invoice OCR · Case study",
-      "metaDescription": "Invoice OCR built at OpenView around 2019: configurable fields, JPG and PDF inputs, human review and validated JSON output.",
-      "sector": "Document processing · c. 2019 · OpenView",
-      "lead": "Around 2019, I built an invoice OCR application at OpenView to extract information from JPG and PDF invoices while letting users choose what data to capture.",
+      "title": "Invoice extraction with in-app review and editing",
+      "metaTitle": "Invoice OCR & data extraction · Case study",
+      "metaDescription": "Configurable JPG and PDF invoice extraction at OpenView, with in-app editing, human validation and structured JSON or CSV outputs.",
+      "sector": "Document processing · OpenView",
+      "lead": "At OpenView, I built an invoice OCR application for JPG and PDF documents. Users could choose the fields to capture or request broader extraction, then review, edit and validate the result directly in the application.",
       "brief": {
         "mission": "Build a configurable invoice OCR application with human review",
-        "result": "Configurable extraction with validated JSON output"
+        "result": "Configurable extraction with JSON and CSV outputs"
       },
       "sections": [
         {
@@ -26,21 +26,21 @@ const study: CaseStudy = {
         {
           "heading": "What I built",
           "paragraphs": [
-            "I built the application using Python, Tesseract, TensorFlow and Rossum AI. Users could configure the fields they wanted extracted or request broader extraction. They could then review and validate the result before receiving it in JSON format."
+            "I built the application using Python, Tesseract, TensorFlow and Rossum AI. Users could configure the fields they wanted extracted or request broader extraction. They could then review the values, edit them directly in the application and validate the result before receiving structured JSON or CSV output."
           ]
         }
       ],
-      "result": "A configurable invoice extraction workflow with human validation before structured JSON is returned."
+      "result": "Configurable invoice extraction with in-app editing and validation before structured JSON or CSV output."
     },
     "fr": {
-      "title": "Extraire les données des factures avec configuration et validation humaine",
-      "metaTitle": "OCR de factures configurable · Étude de cas",
-      "metaDescription": "Une application OCR développée chez OpenView vers 2019 : factures JPG et PDF, champs configurables, validation humaine et résultat JSON.",
-      "sector": "Traitement documentaire · Vers 2019 · OpenView",
-      "lead": "Vers 2019, j’ai développé chez OpenView une application OCR pour extraire les informations de factures JPG et PDF, en laissant l’utilisateur choisir les données à récupérer.",
+      "title": "Extraire les données des factures avec vérification et modification intégrées",
+      "metaTitle": "OCR et extraction de factures · Étude de cas",
+      "metaDescription": "Extraction configurable de factures JPG et PDF chez OpenView, avec modification dans l’application, validation humaine et sorties JSON ou CSV.",
+      "sector": "Traitement documentaire · OpenView",
+      "lead": "Chez OpenView, j’ai développé une application OCR pour les factures JPG et PDF. L’utilisateur pouvait choisir les champs à récupérer ou demander une extraction plus large, puis vérifier, modifier et valider le résultat directement dans l’application.",
       "brief": {
         "mission": "Développer une application OCR de factures configurable avec validation humaine",
-        "result": "Une extraction configurable avec un résultat JSON validé"
+        "result": "Une extraction configurable avec sorties JSON et CSV"
       },
       "sections": [
         {
@@ -52,21 +52,21 @@ const study: CaseStudy = {
         {
           "heading": "Ce que j’ai développé",
           "paragraphs": [
-            "J’ai développé l’application avec Python, Tesseract, TensorFlow et Rossum AI. L’utilisateur pouvait configurer les champs à extraire ou demander une extraction plus large. Il pouvait ensuite vérifier et valider le résultat avant de le recevoir au format JSON."
+            "J’ai développé l’application avec Python, Tesseract, TensorFlow et Rossum AI. L’utilisateur pouvait configurer les champs à extraire ou demander une extraction plus large. Il pouvait ensuite vérifier les valeurs, les modifier dans l’application et valider le résultat avant de le récupérer au format JSON ou CSV."
           ]
         }
       ],
-      "result": "Un parcours configurable d’extraction de factures, avec validation humaine avant la restitution des données structurées en JSON."
+      "result": "Une extraction de factures configurable, avec modification et validation dans l’application avant la restitution en JSON ou CSV."
     },
     "ar": {
-      "title": "استخراج بيانات الفواتير بخيارات مخصّصة ومراجعة بشرية",
+      "title": "استخراج بيانات الفواتير مع مراجعتها وتعديلها داخل التطبيق",
       "metaTitle": "استخراج بيانات الفواتير بتقنية OCR · دراسة حالة",
-      "metaDescription": "تطبيق طُوّر لدى OpenView نحو 2019 لاستخراج بيانات فواتير JPG وPDF، مع اختيار الحقول ومراجعة بشرية ونتيجة JSON.",
-      "sector": "معالجة المستندات · نحو 2019 · OpenView",
-      "lead": "نحو عام 2019، طوّرت لدى OpenView تطبيقًا للتعرّف الضوئي على النصوص في فواتير JPG وPDF، مع إتاحة اختيار البيانات المطلوب استخراجها.",
+      "metaDescription": "استخراج قابل للتخصيص لبيانات فواتير JPG وPDF لدى OpenView، مع تعديل داخل التطبيق ومراجعة بشرية ومخرجات JSON أو CSV.",
+      "sector": "معالجة المستندات · OpenView",
+      "lead": "طوّرت لدى OpenView تطبيقًا للتعرّف الضوئي على النصوص في فواتير JPG وPDF. كان المستخدم يختار الحقول المطلوبة أو يطلب استخراجًا أوسع، ثم يراجع النتائج ويعدّلها ويعتمدها داخل التطبيق.",
       "brief": {
         "mission": "تطوير تطبيق قابل للتخصيص لاستخراج بيانات الفواتير مع مراجعة بشرية",
-        "result": "استخراج قابل للتخصيص مع بيانات JSON معتمدة"
+        "result": "استخراج قابل للتخصيص مع مخرجات JSON وCSV"
       },
       "sections": [
         {
@@ -78,11 +78,11 @@ const study: CaseStudy = {
         {
           "heading": "ما طوّرته",
           "paragraphs": [
-            "طوّرت التطبيق باستخدام Python وTesseract وTensorFlow وRossum AI. كان المستخدم يحدّد الحقول المطلوبة أو يطلب استخراجًا أوسع للمعلومات، ثم يراجع النتيجة ويعتمدها قبل استلامها بصيغة JSON."
+            "طوّرت التطبيق باستخدام Python وTesseract وTensorFlow وRossum AI. كان المستخدم يحدّد الحقول المطلوبة أو يطلب استخراجًا أوسع، ثم يراجع القيم ويعدّلها داخل التطبيق ويعتمد النتيجة قبل استلام البيانات المنظّمة بصيغة JSON أو CSV."
           ]
         }
       ],
-      "result": "مسار قابل للتخصيص لاستخراج بيانات الفواتير، مع مراجعة بشرية قبل إرجاع النتيجة المنظّمة بصيغة JSON."
+      "result": "استخراج قابل للتخصيص لبيانات الفواتير، مع تعديل النتائج واعتمادها داخل التطبيق قبل إخراجها بصيغة JSON أو CSV."
     }
   }
 };

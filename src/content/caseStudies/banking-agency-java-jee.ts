@@ -9,7 +9,7 @@ const study: CaseStudy = {
     "en": {
       "title": "A reusable foundation for banking agencies",
       "metaTitle": "Banking agency Java/JEE project · Case study",
-      "metaDescription": "A 2020 final-year project at Eurafric Maroc: Java/JEE application foundations, authentication, REST APIs, onboarding and PDF generation.",
+      "metaDescription": "A 2020 final-year project at Eurafric Maroc: Java/JEE application foundations, authentication, REST APIs, customer onboarding and PDF generation.",
       "sector": "Banking · Final-year project · 2020 · Eurafric Maroc",
       "lead": "For my 2020 final-year project at Eurafric Maroc, I worked on a Java/JEE application foundation intended for use by banking agencies.",
       "brief": {
@@ -20,13 +20,13 @@ const study: CaseStudy = {
         {
           "heading": "The challenge",
           "paragraphs": [
-            "The project needed an application foundation for agency workflows, including authentication, onboarding and PDF document generation."
+            "The project needed an application foundation for agency workflows, including authentication, customer onboarding and PDF document generation."
           ]
         },
         {
           "heading": "What I built",
           "paragraphs": [
-            "I built the authentication component and the base of the application, using Java/JEE and REST APIs. The application also included onboarding and PDF-generation functionality."
+            "I built the authentication component and the base of the application, using Java/JEE and REST APIs. The application also included customer onboarding and PDF-generation functionality."
           ]
         }
       ],
@@ -35,7 +35,7 @@ const study: CaseStudy = {
     "fr": {
       "title": "Un socle réutilisable pour les agences bancaires",
       "metaTitle": "Application bancaire Java/JEE · Étude de cas",
-      "metaDescription": "Projet de fin d’études réalisé en 2020 chez Eurafric Maroc : socle Java/JEE, authentification, API REST, intégration et génération de PDF.",
+      "metaDescription": "Projet de fin d’études réalisé en 2020 chez Eurafric Maroc : socle Java/JEE, authentification, API REST, entrée en relation client et génération de PDF.",
       "sector": "Banque · Projet de fin d’études · 2020 · Eurafric Maroc",
       "lead": "Pour mon projet de fin d’études en 2020 chez Eurafric Maroc, j’ai travaillé sur un socle applicatif Java/JEE destiné aux agences bancaires.",
       "brief": {
@@ -46,13 +46,13 @@ const study: CaseStudy = {
         {
           "heading": "Le défi",
           "paragraphs": [
-            "Le projet nécessitait un socle pour les activités des agences, comprenant l’authentification, des parcours d’intégration et la génération de documents PDF."
+            "Le projet nécessitait un socle pour les activités des agences, comprenant l’authentification, l’entrée en relation avec de nouveaux clients et la génération de documents PDF."
           ]
         },
         {
           "heading": "Ce que j’ai développé",
           "paragraphs": [
-            "J’ai développé le composant d’authentification et la base de l’application avec Java/JEE et des API REST. L’application comprenait également des fonctionnalités d’intégration et de génération de documents PDF."
+            "J’ai développé le composant d’authentification et la base de l’application avec Java/JEE et des API REST. L’application comprenait également l’entrée en relation avec de nouveaux clients et la génération de documents PDF."
           ]
         }
       ],
@@ -61,7 +61,7 @@ const study: CaseStudy = {
     "ar": {
       "title": "أساس قابل لإعادة الاستخدام لتطبيقات الوكالات البنكية",
       "metaTitle": "تطبيق بنكي بلغة Java/JEE · دراسة حالة",
-      "metaDescription": "مشروع تخرّج أُنجز سنة 2020 لدى Eurafric Maroc: أساس تطبيق Java/JEE، والمصادقة، وREST API، والانضمام، وإنشاء PDF.",
+      "metaDescription": "مشروع تخرّج أُنجز سنة 2020 لدى Eurafric Maroc: أساس تطبيق Java/JEE، والمصادقة، وREST API، وتسجيل العملاء الجدد، وإنشاء PDF.",
       "sector": "القطاع البنكي · مشروع التخرّج · 2020 · Eurafric Maroc",
       "lead": "في إطار مشروع تخرّجي سنة 2020 لدى Eurafric Maroc، عملت على أساس تطبيق Java/JEE مخصّص للاستخدام في الوكالات البنكية.",
       "brief": {
@@ -72,13 +72,13 @@ const study: CaseStudy = {
         {
           "heading": "التحدي",
           "paragraphs": [
-            "احتاج المشروع إلى أساس تطبيقي لدعم أعمال الوكالات، بما يشمل المصادقة ومسار الانضمام وإنشاء مستندات PDF."
+            "احتاج المشروع إلى أساس تطبيقي لدعم أعمال الوكالات، بما يشمل المصادقة وتسجيل العملاء الجدد وإنشاء مستندات PDF."
           ]
         },
         {
           "heading": "ما طوّرته",
           "paragraphs": [
-            "طوّرت مكوّن المصادقة وأساس التطبيق باستخدام Java/JEE وواجهات REST API. وشمل التطبيق أيضًا وظائف الانضمام وإنشاء مستندات PDF."
+            "طوّرت مكوّن المصادقة وأساس التطبيق باستخدام Java/JEE وواجهات REST API. وشمل التطبيق أيضًا وظائف تسجيل العملاء الجدد وإنشاء مستندات PDF."
           ]
         }
       ],
