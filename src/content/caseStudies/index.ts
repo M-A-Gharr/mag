@@ -13,6 +13,9 @@ export const CASE_STUDY_PAGES: { slug: string; projectId: number; load: () => Pr
   { slug: 'migration-woocommerce-prestashop-9', projectId: 13, load: () => import('./migration-woocommerce-prestashop-9') },
   { slug: 'bakery-management-saas', projectId: 2, load: () => import('./bakery-management-saas') },
   { slug: 'vr-property-showroom-crm', projectId: 10, load: () => import('./vr-property-showroom-crm') },
+  { slug: 'configurable-invoice-ocr', projectId: 16, load: () => import('./configurable-invoice-ocr') },
+  { slug: 'medical-practice-management-mvp', projectId: 17, load: () => import('./medical-practice-management-mvp') },
+  { slug: 'banking-agency-java-jee', projectId: 18, load: () => import('./banking-agency-java-jee') },
 ];
 
 /** The other case studies to suggest at the end of one: the next two, in home-page order. */

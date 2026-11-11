@@ -422,6 +422,51 @@
           "Post history with favourites and copying",
           "Content calendar with ideas, dates, categories and completion tracking"
         ]
+      },
+      "16": {
+        "title": "Configurable Invoice OCR",
+        "description": "c. 2019 · Built at OpenView. An application that extracts information from JPG and PDF invoices. Users can select specific fields, such as an invoice ID, or request broader extraction, then review and validate the values before receiving JSON.",
+        "technologies": [
+          "Python",
+          "Tesseract",
+          "TensorFlow",
+          "Rossum AI"
+        ],
+        "features": [
+          "JPG and PDF invoice processing",
+          "User-selected fields or broader invoice extraction",
+          "Review and validation of extracted values",
+          "Validated results returned as JSON"
+        ]
+      },
+      "17": {
+        "title": "Medical Practice Management MVP",
+        "description": "Late 2020–early 2021. A C# MVP built from scratch to help doctors and secretaries manage client and insurance information. An OCR-assisted workflow helped transfer handwritten records into a new database, alongside Excel imports and file exports for the accountant.",
+        "technologies": [
+          "C#",
+          "OCR"
+        ],
+        "features": [
+          "Client and insurance information management",
+          "OCR-assisted transfer of handwritten records into a database",
+          "Excel data imports",
+          "File exports for the accountant"
+        ]
+      },
+      "18": {
+        "title": "Banking Agency Application — Final-year Project",
+        "description": "2020 · Final-year project at Eurafric Maroc. A Java/JEE application foundation for banking agencies, with authentication, onboarding and PDF document generation. My work included the authentication component, the application foundation and REST APIs.",
+        "technologies": [
+          "Java",
+          "Java EE (JEE)",
+          "REST API"
+        ],
+        "features": [
+          "Authentication",
+          "Reusable application foundation for banking agencies",
+          "Onboarding functionality",
+          "PDF document generation"
+        ]
       }
     },
     "swipeHint": "Drag the top card to see the next screenshot, or click it to enlarge.",
@@ -571,6 +616,42 @@
             "Added analytics for visit paths, the lead funnel and the most viewed properties"
           ],
           "result": "A personal project bringing the property showroom and CRM into one application, from the first visit to lead follow-up."
+        },
+        {
+          "projectId": 16,
+          "sector": "Document processing · c. 2019 · OpenView",
+          "challenge": "Invoices contain different information, and users may need particular fields, such as an invoice ID, or broader extraction.",
+          "approach": [
+            "JPG and PDF invoice processing",
+            "User-selected fields or broader invoice extraction",
+            "Review and validation of extracted values",
+            "Validated results returned as JSON"
+          ],
+          "result": "A configurable invoice extraction workflow with human validation before structured JSON is returned."
+        },
+        {
+          "projectId": 17,
+          "sector": "Medical practice administration · MVP · 2020–2021",
+          "challenge": "Doctors and secretaries needed to bring handwritten records and Excel data into a database and manage related client and insurance information.",
+          "approach": [
+            "Client and insurance information management",
+            "OCR-assisted transfer of handwritten records into a database",
+            "Excel data imports",
+            "File exports for the accountant"
+          ],
+          "result": "The MVP combined record digitisation, client and insurance management, Excel imports and accountant exports. I handed the code to the owner; its current status is unknown."
+        },
+        {
+          "projectId": 18,
+          "sector": "Banking · Final-year project · 2020 · Eurafric Maroc",
+          "challenge": "The project needed an application foundation for agency workflows, including authentication, onboarding and PDF document generation.",
+          "approach": [
+            "Authentication",
+            "Reusable application foundation for banking agencies",
+            "Onboarding functionality",
+            "PDF document generation"
+          ],
+          "result": "The final-year project established an application foundation for banking-agency workflows. This describes the project at the time, rather than the current state of any later application."
         }
       ]
     },

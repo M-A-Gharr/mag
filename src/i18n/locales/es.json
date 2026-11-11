@@ -422,6 +422,51 @@
           "Historial de publicaciones con favoritos y opción de copiar",
           "Calendario de contenidos con ideas, fechas, categorías y seguimiento del progreso"
         ]
+      },
+      "16": {
+        "title": "OCR configurable de facturas",
+        "description": "Hacia 2019 · Desarrollado en OpenView. Aplicación que extrae información de facturas JPG y PDF. El usuario puede elegir campos concretos, como el número de factura, o solicitar una extracción más amplia, y revisar y validar los valores antes de recibirlos en JSON.",
+        "technologies": [
+          "Python",
+          "Tesseract",
+          "TensorFlow",
+          "Rossum AI"
+        ],
+        "features": [
+          "Procesamiento de facturas JPG y PDF",
+          "Selección de campos o extracción más amplia",
+          "Revisión y validación de los valores extraídos",
+          "Entrega de los resultados validados en JSON"
+        ]
+      },
+      "17": {
+        "title": "MVP de gestión de consulta médica",
+        "description": "Finales de 2020–principios de 2021. MVP desarrollado desde cero en C# para ayudar a médicos y personal administrativo a gestionar datos de clientes y seguros. Un proceso asistido por OCR facilitaba el traslado de registros manuscritos a una nueva base de datos, con importaciones de Excel y exportaciones para el contable.",
+        "technologies": [
+          "C#",
+          "OCR"
+        ],
+        "features": [
+          "Gestión de información de clientes y seguros",
+          "Traslado de registros manuscritos a una base de datos con ayuda de OCR",
+          "Importación de datos de Excel",
+          "Exportación de archivos para el contable"
+        ]
+      },
+      "18": {
+        "title": "Aplicación para agencias bancarias — Proyecto de fin de carrera",
+        "description": "2020 · Proyecto de fin de carrera en Eurafric Maroc. Base de una aplicación Java/JEE para agencias bancarias, con autenticación, procesos de incorporación y generación de documentos PDF. Mi trabajo incluyó la autenticación, la base de la aplicación y las API REST.",
+        "technologies": [
+          "Java",
+          "Java EE (JEE)",
+          "REST API"
+        ],
+        "features": [
+          "Autenticación",
+          "Base de aplicación reutilizable para agencias bancarias",
+          "Procesos de incorporación",
+          "Generación de documentos PDF"
+        ]
       }
     },
     "swipeHint": "Arrastra la tarjeta superior para ver la siguiente captura, o haz clic para ampliarla.",
@@ -567,6 +612,42 @@
             "Análisis de recorridos, embudo de conversión e inmuebles más visitados"
           ],
           "result": "Un proyecto personal que reúne el showroom inmobiliario y el CRM en una aplicación, desde la primera visita hasta el seguimiento comercial."
+        },
+        {
+          "projectId": 16,
+          "sector": "Procesamiento documental · Hacia 2019 · OpenView",
+          "challenge": "Las facturas contienen información diversa: el usuario puede necesitar campos concretos o una extracción más amplia.",
+          "approach": [
+            "Procesamiento de facturas JPG y PDF",
+            "Selección de campos o extracción más amplia",
+            "Revisión y validación de los valores extraídos",
+            "Entrega de los resultados validados en JSON"
+          ],
+          "result": "Un flujo configurable de extracción de facturas con validación humana antes de entregar los datos estructurados en JSON."
+        },
+        {
+          "projectId": 17,
+          "sector": "Administración de consulta médica · MVP · 2020–2021",
+          "challenge": "La consulta necesitaba reunir registros manuscritos y datos de Excel en una base de datos y gestionar la información de clientes y seguros.",
+          "approach": [
+            "Gestión de información de clientes y seguros",
+            "Traslado de registros manuscritos a una base de datos con ayuda de OCR",
+            "Importación de datos de Excel",
+            "Exportación de archivos para el contable"
+          ],
+          "result": "El MVP reunía digitalización, gestión de clientes y seguros, importaciones de Excel y exportaciones contables. Entregué el código al propietario; desconozco su estado actual."
+        },
+        {
+          "projectId": 18,
+          "sector": "Banca · Proyecto de fin de carrera · 2020 · Eurafric Maroc",
+          "challenge": "El proyecto necesitaba una base para los procesos de las agencias: autenticación, incorporación y generación de documentos PDF.",
+          "approach": [
+            "Autenticación",
+            "Base de aplicación reutilizable para agencias bancarias",
+            "Procesos de incorporación",
+            "Generación de documentos PDF"
+          ],
+          "result": "El proyecto de fin de carrera estableció una base para las operaciones de agencias bancarias. La descripción corresponde a aquel proyecto, no al estado actual de una posible aplicación posterior."
         }
       ]
     },
