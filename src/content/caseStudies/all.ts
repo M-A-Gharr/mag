@@ -7,7 +7,10 @@ import exportSite from './export-showcase-site-b2b-crm';
 import migration from './migration-woocommerce-prestashop-9';
 import bakery from './bakery-management-saas';
 import vrShowroom from './vr-property-showroom-crm';
+import invoiceOcr from './configurable-invoice-ocr';
+import medicalMvp from './medical-practice-management-mvp';
+import bankingAgency from './banking-agency-java-jee';
 import type { CaseStudy } from './types';
 
 /** Same order as the case studies on the home page. */
-export const CASE_STUDIES: CaseStudy[] = [aiStudio, prestashop, leadPlatform, exportSite, migration, bakery, vrShowroom];
+export const CASE_STUDIES: CaseStudy[] = [aiStudio, prestashop, leadPlatform, exportSite, migration, bakery, vrShowroom, invoiceOcr, medicalMvp, bankingAgency];

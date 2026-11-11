@@ -1,6 +1,6 @@
 import { lazy, Suspense, useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { ArrowRight, ArrowRightLeft, BookOpenCheck, Box, ChevronLeft, ChevronRight, Code, Cpu, Globe, GraduationCap, Handshake, ShoppingBag, ShoppingCart, Store, Target, Wand2 } from 'lucide-react';
+import { ArrowRight, ArrowRightLeft, BookOpenCheck, Box, ChevronLeft, ChevronRight, Code, Cpu, FileScan, Globe, GraduationCap, Handshake, Landmark, ShoppingBag, ShoppingCart, Stethoscope, Store, Target, Wand2 } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -184,6 +184,21 @@ const ProjectsSection = () => {
     {
       id: 9,
       icon: <Store className="h-8 w-8 text-[#483dfb]" />,
+      images: []
+    },
+    {
+      id: 16,
+      icon: <FileScan className="h-8 w-8 text-[#483dfb]" />,
+      images: []
+    },
+    {
+      id: 17,
+      icon: <Stethoscope className="h-8 w-8 text-[#483dfb]" />,
+      images: []
+    },
+    {
+      id: 18,
+      icon: <Landmark className="h-8 w-8 text-[#483dfb]" />,
       images: []
     }
   ];

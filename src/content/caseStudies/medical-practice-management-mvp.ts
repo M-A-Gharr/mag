@@ -1,0 +1,90 @@
+import type { CaseStudy } from './types';
+
+const study: CaseStudy = {
+  "slug": "medical-practice-management-mvp",
+  "projectId": 17,
+  "published": "2026-11-11",
+  "modified": "2026-11-11",
+  "text": {
+    "en": {
+      "title": "Moving medical records into a structured database",
+      "metaTitle": "Medical practice management MVP · Case study",
+      "metaDescription": "A C# MVP built in 2020–2021 for client and insurance records, OCR-assisted digitisation, Excel imports and accountant exports.",
+      "sector": "Medical practice administration · MVP · 2020–2021",
+      "lead": "In late 2020 and early 2021, I built a C# MVP from scratch to help a medical practice manage client and insurance information and move handwritten records into a new database.",
+      "brief": {
+        "mission": "Build an MVP for record digitisation and medical practice administration",
+        "result": "Record digitisation and administration in one MVP"
+      },
+      "sections": [
+        {
+          "heading": "The challenge",
+          "paragraphs": [
+            "Doctors and secretaries needed to bring handwritten records and Excel data into a database and manage related client and insurance information."
+          ]
+        },
+        {
+          "heading": "What I built",
+          "paragraphs": [
+            "The application included an OCR workflow to help doctors or secretaries extract client and insurance information from handwritten records and populate the new database. It also supported Excel imports and file exports for the accountant."
+          ]
+        }
+      ],
+      "result": "The MVP combined record digitisation, client and insurance management, Excel imports and accountant exports. I handed the code to the owner; its current status is unknown."
+    },
+    "fr": {
+      "title": "Transférer les dossiers d’un cabinet médical vers une base de données structurée",
+      "metaTitle": "MVP de gestion de cabinet médical · Étude de cas",
+      "metaDescription": "Un MVP C# développé en 2020–2021 : dossiers clients et assurances, numérisation assistée par OCR, imports Excel et exports comptables.",
+      "sector": "Gestion de cabinet médical · MVP · 2020–2021",
+      "lead": "Fin 2020 et début 2021, j’ai développé de zéro un MVP en C# pour aider un cabinet médical à gérer les informations des clients et des assurances, et à transférer ses registres manuscrits dans une nouvelle base de données.",
+      "brief": {
+        "mission": "Développer un MVP pour numériser les dossiers et gérer les informations du cabinet",
+        "result": "La numérisation et la gestion des dossiers dans un même MVP"
+      },
+      "sections": [
+        {
+          "heading": "Le défi",
+          "paragraphs": [
+            "Les médecins et les secrétaires devaient réunir des registres manuscrits et des données Excel dans une base de données, puis gérer les informations des clients et des assurances."
+          ]
+        },
+        {
+          "heading": "Ce que j’ai développé",
+          "paragraphs": [
+            "L’application comprenait un parcours OCR pour aider les médecins ou les secrétaires à extraire les informations des clients et des assurances depuis des registres manuscrits, puis à alimenter la nouvelle base de données. Elle permettait également d’importer des données Excel et d’exporter des fichiers pour le comptable."
+          ]
+        }
+      ],
+      "result": "Le MVP réunissait la numérisation des dossiers, la gestion des clients et des assurances, les imports Excel et les exports comptables. J’ai remis le code au propriétaire ; je ne connais pas son état actuel."
+    },
+    "ar": {
+      "title": "نقل سجلات العيادة إلى قاعدة بيانات منظّمة",
+      "metaTitle": "نسخة أولية لإدارة عيادة طبية · دراسة حالة",
+      "metaDescription": "نسخة أولية بلغة C# طُوّرت في 2020–2021 لإدارة بيانات العملاء والتأمين، مع رقمنة بمساعدة OCR واستيراد Excel وتصدير للمحاسب.",
+      "sector": "إدارة عيادة طبية · نسخة أولية · 2020–2021",
+      "lead": "في أواخر 2020 وبداية 2021، طوّرت من الصفر نسخة أولية بلغة C# لمساعدة عيادة طبية على إدارة بيانات العملاء والتأمين ونقل السجلات اليدوية إلى قاعدة بيانات جديدة.",
+      "brief": {
+        "mission": "تطوير نسخة أولية لرقمنة السجلات وإدارة بيانات العيادة",
+        "result": "رقمنة السجلات وإدارتها في نسخة أولية واحدة"
+      },
+      "sections": [
+        {
+          "heading": "التحدي",
+          "paragraphs": [
+            "احتاج الأطباء وموظفو السكرتارية إلى جمع السجلات المكتوبة بخط اليد وبيانات Excel في قاعدة بيانات، وإدارة معلومات العملاء والتأمين المرتبطة بها."
+          ]
+        },
+        {
+          "heading": "ما طوّرته",
+          "paragraphs": [
+            "تضمّن التطبيق مسارًا يعتمد على OCR لمساعدة الأطباء أو موظفي السكرتارية على استخراج معلومات العملاء والتأمين من السجلات المكتوبة بخط اليد وإدخالها في قاعدة البيانات الجديدة. كما أتاح استيراد بيانات Excel وتصدير ملفات للمحاسب."
+          ]
+        }
+      ],
+      "result": "جمعت النسخة الأولية رقمنة السجلات وإدارة بيانات العملاء والتأمين واستيراد Excel والتصدير للمحاسب. سلّمت الشيفرة إلى المالك، ولا أعرف الحالة الحالية للتطبيق."
+    }
+  }
+};
+
+export default study;
