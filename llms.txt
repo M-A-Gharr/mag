@@ -24,7 +24,7 @@ Contact: contact.maminegh@gmail.com · LinkedIn: https://www.linkedin.com/in/m-a
 - [VR Showroom: connecting virtual property visits to sales follow-up](https://www.maminegh.com/case-studies/vr-property-showroom-crm/): A personal real estate project combining interactive plans, 3D models, 360° visits and a CRM with lead scoring, assignment and sales follow-up.
 - [Invoice extraction with in-app review and editing](https://www.maminegh.com/case-studies/configurable-invoice-ocr/): Configurable JPG and PDF invoice extraction at OpenView, with in-app editing, human validation and structured JSON or CSV outputs.
 - [Medical practice management: records, appointments and invoicing](https://www.maminegh.com/case-studies/medical-practice-management-mvp/): A C# application combining OCR-assisted records, role-based permissions, telephone bookings, insurance deductions and emailed invoices.
-- [A reusable foundation for banking agencies](https://www.maminegh.com/case-studies/banking-agency-java-jee/): A 2020 final-year project at Eurafric Maroc: Java/JEE application foundations, authentication, REST APIs, customer onboarding and PDF generation.
+- [A reusable application foundation for public share offerings](https://www.maminegh.com/case-studies/banking-agency-java-jee/): A 2020 Java/JEE project at Eurafric Maroc: authentication, an application foundation, client onboarding for public share offerings (OPV) and PDFs.
 
 ## Experience
 
@@ -48,7 +48,7 @@ Contact: contact.maminegh@gmail.com · LinkedIn: https://www.linkedin.com/in/m-a
 - [VR Showroom : relier les visites immobilières virtuelles au suivi commercial](https://www.maminegh.com/fr/etudes-de-cas/vr-property-showroom-crm/)
 - [Extraire les données des factures avec vérification et modification intégrées](https://www.maminegh.com/fr/etudes-de-cas/configurable-invoice-ocr/)
 - [Gestion de cabinet médical : dossiers, rendez-vous et facturation](https://www.maminegh.com/fr/etudes-de-cas/medical-practice-management-mvp/)
-- [Un socle réutilisable pour les agences bancaires](https://www.maminegh.com/fr/etudes-de-cas/banking-agency-java-jee/)
+- [Un socle applicatif réutilisable pour les offres publiques de vente](https://www.maminegh.com/fr/etudes-de-cas/banking-agency-java-jee/)
 - [الصفحة الرئيسية بالعربية](https://www.maminegh.com/ar/)
 - [تطوير تطبيقات ويب مخصصة](https://www.maminegh.com/ar/expertise/web-application-development/)
 - [الأتمتة بالذكاء الاصطناعي وتكوين الفرق](https://www.maminegh.com/ar/expertise/ai-automation/)
@@ -62,7 +62,7 @@ Contact: contact.maminegh@gmail.com · LinkedIn: https://www.linkedin.com/in/m-a
 - [VR Showroom: ربط الزيارات العقارية الافتراضية بالمتابعة التجارية](https://www.maminegh.com/ar/case-studies/vr-property-showroom-crm/)
 - [استخراج بيانات الفواتير مع مراجعتها وتعديلها داخل التطبيق](https://www.maminegh.com/ar/case-studies/configurable-invoice-ocr/)
 - [إدارة العيادة الطبية: السجلات والمواعيد والفوترة](https://www.maminegh.com/ar/case-studies/medical-practice-management-mvp/)
-- [أساس قابل لإعادة الاستخدام لتطبيقات الوكالات البنكية](https://www.maminegh.com/ar/case-studies/banking-agency-java-jee/)
+- [أساس تطبيقي قابل لإعادة الاستخدام لعروض البيع العام للأسهم](https://www.maminegh.com/ar/case-studies/banking-agency-java-jee/)
 
 ## Optional
 
