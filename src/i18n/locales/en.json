@@ -396,6 +396,32 @@
           "A 301 redirect for every old URL, generated and checked automatically",
           "Automated browser tests on desktop and mobile, plus deployment guides"
         ]
+      },
+      "14": {
+        "title": "WordPress Store Redesign",
+        "description": "Redesign of a WordPress website showcasing nonwoven materials and custom bags for business customers. Visitors can browse the catalogue, choose product colours and request a quote, on desktop or mobile.",
+        "technologies": [
+          "WordPress"
+        ],
+        "features": [
+          "Catalogue of nonwoven materials and custom bags",
+          "Product colour options and a quote request form",
+          "Website available in French, English and Spanish",
+          "Responsive navigation on desktop and mobile"
+        ]
+      },
+      "15": {
+        "title": "AI LinkedIn Post Generator",
+        "description": "A workspace for turning ideas into LinkedIn drafts with AI. Choose a short post, a longer article-style post or a carousel, keep your best drafts in one place, and organise upcoming content in a calendar.",
+        "technologies": [
+          "AI"
+        ],
+        "features": [
+          "AI-assisted drafts based on a topic you provide",
+          "Short, long and carousel formats",
+          "Post history with favourites and copying",
+          "Content calendar with ideas, dates, categories and completion tracking"
+        ]
       }
     },
     "swipeHint": "Drag the top card to see the next screenshot, or click it to enlarge.",
@@ -521,6 +547,30 @@
             "Generated a 301 redirect for every old URL and tested the store automatically on desktop and mobile"
           ],
           "result": "A clean switch: order totals match the source, every old link still works, and the team has deployment guides."
+        },
+        {
+          "projectId": 2,
+          "sector": "Bakery management · Full-stack application",
+          "challenge": "Bring stock, recipes, orders and sales together without making daily bakery tasks complicated.",
+          "approach": [
+            "Built stock reception and inventory views with alerts",
+            "Linked recipes to ingredients alongside product, order and point-of-sale management",
+            "Added sales dashboards and customer records",
+            "Adapted the interface for desktop, tablet and mobile in English, French and Arabic"
+          ],
+          "result": "A shared workspace for the bakery’s daily operations, with readable dashboards and interfaces adapted to different devices and languages."
+        },
+        {
+          "projectId": 10,
+          "sector": "Real estate · Interactive 3D · Personal project",
+          "challenge": "Connect online property exploration to lead qualification and sales follow-up.",
+          "approach": [
+            "Built a catalogue with unit types and interactive floor plans",
+            "Added rotatable 3D models, room dimensions, walkthroughs and 360° panoramas",
+            "Connected visit information to CRM scoring, assignment and a sales pipeline",
+            "Added analytics for visit paths, the lead funnel and the most viewed properties"
+          ],
+          "result": "A personal project bringing the property showroom and CRM into one application, from the first visit to lead follow-up."
         }
       ]
     },

@@ -114,16 +114,25 @@ const ProjectsSection = () => {
 
   const projects: Project[] = [
     {
+      id: 6,
+      icon: <Target className="h-8 w-8 text-[#483dfb]" />,
+      images: [],
+      video: { src: '/videos/projects/lead-intelligence.mp4', poster: '/videos/projects/lead-intelligence-poster.webp' }
+    },
+    {
       id: 11,
       icon: <Wand2 className="h-8 w-8 text-[#483dfb]" />,
       images: [],
       video: { src: '/videos/projects/ai-fashion-studio.mp4', poster: '/videos/projects/ai-fashion-studio-poster.webp', portrait: true }
     },
     {
-      id: 6,
-      icon: <Target className="h-8 w-8 text-[#483dfb]" />,
-      images: [],
-      video: { src: '/videos/projects/lead-intelligence.mp4', poster: '/videos/projects/lead-intelligence-poster.webp' }
+      id: 2,
+      icon: <ShoppingBag className="h-8 w-8 text-[#483dfb]" />,
+      video: { src: '/videos/projects/bakery-saas.mp4', poster: '/videos/projects/bakery-saas-poster.webp' },
+      link: "#",
+      demo: "#",
+      images: ["/images/bakerysaas/login.webp", "/images/bakerysaas/stock-reception.webp", "/images/bakerysaas/recipes.webp", "/images/bakerysaas/products.webp", "/images/bakerysaas/pos.webp", "/images/bakerysaas/inventory.webp"],
+      captions: [t("projects.items.2.captions.0"), t("projects.items.2.captions.1"), t("projects.items.2.captions.2"), t("projects.items.2.captions.3"), t("projects.items.2.captions.4"), t("projects.items.2.captions.5")]
     },
     {
       id: 12,
@@ -139,13 +148,33 @@ const ProjectsSection = () => {
     {
       id: 13,
       icon: <ArrowRightLeft className="h-8 w-8 text-[#483dfb]" />,
-      images: []
+      images: [],
+      video: { src: '/videos/projects/migration-ecommerce.mp4', poster: '/videos/projects/migration-ecommerce-poster.webp' }
     },
     {
       id: 10,
       icon: <Box className="h-8 w-8 text-[#483dfb]" />,
       images: [],
       video: { src: '/videos/projects/vr-showroom.mp4', poster: '/videos/projects/vr-showroom-poster.webp' }
+    },
+    {
+      id: 15,
+      icon: <Wand2 className="h-8 w-8 text-[#483dfb]" />,
+      images: [],
+      video: { src: '/videos/projects/linkedin-post-generator.mp4', poster: '/videos/projects/linkedin-post-generator-poster.webp' }
+    },
+    {
+      id: 14,
+      icon: <Globe className="h-8 w-8 text-[#483dfb]" />,
+      images: [],
+      video: { src: '/videos/projects/wordpress-store-redesign.mp4', poster: '/videos/projects/wordpress-store-redesign-poster.webp' }
+    },
+    {
+      id: 1,
+      icon: <Cpu className="h-8 w-8 text-[#483dfb]" />,
+      link: "https://github.com/M-A-Gharr/visualforce-ai-doc-generator-ts",
+      demo: "https://github.com/M-A-Gharr/visualforce-ai-doc-generator-ts",
+      images: []
     },
     {
       id: 7,
@@ -155,21 +184,6 @@ const ProjectsSection = () => {
     {
       id: 9,
       icon: <Store className="h-8 w-8 text-[#483dfb]" />,
-      images: []
-    },
-    {
-      id: 2,
-      icon: <ShoppingBag className="h-8 w-8 text-[#483dfb]" />,
-      link: "#",
-      demo: "#",
-      images: ["/images/bakerysaas/login.webp", "/images/bakerysaas/stock-reception.webp", "/images/bakerysaas/recipes.webp", "/images/bakerysaas/products.webp", "/images/bakerysaas/pos.webp", "/images/bakerysaas/inventory.webp"],
-      captions: [t("projects.items.2.captions.0"), t("projects.items.2.captions.1"), t("projects.items.2.captions.2"), t("projects.items.2.captions.3"), t("projects.items.2.captions.4"), t("projects.items.2.captions.5")]
-    },
-    {
-      id: 1,
-      icon: <Cpu className="h-8 w-8 text-[#483dfb]" />,
-      link: "https://github.com/M-A-Gharr/visualforce-ai-doc-generator-ts",
-      demo: "https://github.com/M-A-Gharr/visualforce-ai-doc-generator-ts",
       images: []
     }
   ];
@@ -182,7 +196,7 @@ const ProjectsSection = () => {
       title: t(`projects.items.${project.id}.title`),
       category: technologies[0] ?? '',
       stack: technologies.slice(1),
-      image: project.images[0] ?? project.video?.poster,
+      image: project.video?.poster ?? project.images[0],
     };
   });
   // The 3D carousel (three.js) and its cover drawings only start when the visitor gets close

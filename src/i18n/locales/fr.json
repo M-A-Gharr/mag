@@ -396,6 +396,32 @@
           "Une redirection 301 pour chaque ancienne URL, générée et vérifiée automatiquement",
           "Tests automatisés dans le navigateur sur ordinateur et mobile, et guides de déploiement"
         ]
+      },
+      "14": {
+        "title": "Refonte de boutique WordPress",
+        "description": "Refonte d’un site WordPress destiné aux professionnels, consacré aux matériaux non tissés et aux sacs personnalisés. Le site permet de parcourir le catalogue, de choisir les couleurs des produits et de demander un devis, sur ordinateur comme sur mobile.",
+        "technologies": [
+          "WordPress"
+        ],
+        "features": [
+          "Catalogue de matériaux non tissés et de sacs personnalisés",
+          "Choix des couleurs et formulaire de demande de devis",
+          "Site disponible en français, en anglais et en espagnol",
+          "Navigation adaptée aux ordinateurs et aux mobiles"
+        ]
+      },
+      "15": {
+        "title": "Générateur de publications LinkedIn par IA",
+        "description": "Un espace de travail pour transformer ses idées en brouillons LinkedIn grâce à l’IA. Choisissez une publication courte, un texte plus développé ou un carrousel, retrouvez vos meilleurs brouillons et organisez vos prochains contenus dans un calendrier.",
+        "technologies": [
+          "IA"
+        ],
+        "features": [
+          "Création de brouillons par IA à partir du sujet choisi",
+          "Formats courts, longs et carrousels",
+          "Historique des publications, favoris et copie du contenu",
+          "Calendrier éditorial avec idées, dates, catégories et suivi de l’avancement"
+        ]
       }
     },
     "swipeHint": "Faites glisser la carte du dessus pour voir la capture suivante, ou cliquez pour l’agrandir.",
@@ -517,6 +543,30 @@
             "J'ai généré une redirection 301 pour chaque ancienne adresse et testé la boutique automatiquement sur ordinateur et mobile"
           ],
           "result": "Une bascule propre : les totaux des commandes correspondent à la source, chaque ancien lien fonctionne toujours, et l'équipe dispose de guides de déploiement."
+        },
+        {
+          "projectId": 2,
+          "sector": "Gestion de boulangerie · Application full-stack",
+          "challenge": "Réunir les stocks, les recettes, les commandes et les ventes sans compliquer les tâches quotidiennes de la boulangerie.",
+          "approach": [
+            "Création de vues de réception et d’inventaire avec alertes",
+            "Liaison des recettes aux ingrédients, avec gestion des produits, des commandes et de la caisse",
+            "Ajout de tableaux de bord des ventes et de fiches clients",
+            "Adaptation aux ordinateurs, tablettes et mobiles, en français, anglais et arabe"
+          ],
+          "result": "Un espace commun pour les opérations quotidiennes de la boulangerie, avec des tableaux de bord lisibles et des interfaces adaptées aux appareils et aux langues."
+        },
+        {
+          "projectId": 10,
+          "sector": "Immobilier · 3D interactive · Projet personnel",
+          "challenge": "Relier l’exploration immobilière en ligne à la qualification des prospects et au suivi commercial.",
+          "approach": [
+            "Création d’un catalogue avec typologies de logements et plans interactifs",
+            "Ajout de modèles 3D orientables, de dimensions par pièce, de visites intérieures et de panoramas à 360°",
+            "Liaison des informations de visite au scoring, à l’attribution des prospects et au pipeline du CRM",
+            "Ajout de statistiques sur les parcours, l’entonnoir de conversion et les biens les plus consultés"
+          ],
+          "result": "Un projet personnel qui réunit le showroom immobilier et le CRM dans une application, de la première visite au suivi des prospects."
         }
       ]
     },

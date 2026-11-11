@@ -396,6 +396,32 @@
           "Un redirect 301 per ogni vecchio URL, generato e verificato automaticamente",
           "Test automatici nel browser su desktop e mobile, e guide di deploy"
         ]
+      },
+      "14": {
+        "title": "Riprogettazione di un negozio WordPress",
+        "description": "Riprogettazione di un sito WordPress dedicato ai clienti professionali, con un catalogo di materiali in tessuto non tessuto e borse personalizzate. I visitatori possono consultare i prodotti, scegliere i colori e richiedere un preventivo, sia da computer che da smartphone.",
+        "technologies": [
+          "WordPress"
+        ],
+        "features": [
+          "Catalogo di materiali in tessuto non tessuto e borse personalizzate",
+          "Scelta dei colori e modulo di richiesta preventivo",
+          "Sito disponibile in francese, inglese e spagnolo",
+          "Navigazione ottimizzata per computer e smartphone"
+        ]
+      },
+      "15": {
+        "title": "Generatore di post LinkedIn con IA",
+        "description": "Uno spazio di lavoro per trasformare le idee in bozze per LinkedIn con l’aiuto dell’IA. Consente di scegliere tra post brevi, testi più articolati e caroselli, conservare le bozze migliori e organizzare i prossimi contenuti in un calendario.",
+        "technologies": [
+          "IA"
+        ],
+        "features": [
+          "Creazione di bozze con IA a partire dall’argomento scelto",
+          "Post brevi, lunghi e in formato carosello",
+          "Cronologia dei post con preferiti e funzione di copia",
+          "Calendario editoriale con idee, date, categorie e monitoraggio dello stato di avanzamento"
+        ]
       }
     },
     "swipeHint": "Trascina la scheda in alto per vedere lo screenshot successivo, o cliccala per ingrandirla.",
@@ -517,6 +543,30 @@
             "Ho generato un redirect 301 per ogni vecchio URL e testato il negozio automaticamente su desktop e mobile"
           ],
           "result": "Un passaggio pulito: i totali degli ordini corrispondono alla fonte, ogni vecchio link funziona ancora e il team ha le guide di deploy."
+        },
+        {
+          "projectId": 2,
+          "sector": "Gestione dei panifici · Applicazione full-stack",
+          "challenge": "Riunire scorte, ricette, ordini e vendite senza complicare il lavoro quotidiano del panificio.",
+          "approach": [
+            "Viste per la ricezione delle merci e l’inventario, con avvisi",
+            "Ricette collegate agli ingredienti, insieme alla gestione di prodotti, ordini e punto vendita",
+            "Dashboard delle vendite e schede clienti",
+            "Interfaccia per computer, tablet e smartphone, in inglese, francese e arabo"
+          ],
+          "result": "Uno spazio condiviso per le attività quotidiane del panificio, con dashboard chiare e interfacce adatte a dispositivi e lingue diversi."
+        },
+        {
+          "projectId": 10,
+          "sector": "Immobiliare · 3D interattivo · Progetto personale",
+          "challenge": "Collegare le visite immobiliari online alla valutazione dei potenziali clienti e al seguito commerciale.",
+          "approach": [
+            "Catalogo delle tipologie di immobili con planimetrie interattive",
+            "Modelli 3D ruotabili, dimensioni delle stanze, percorsi interni e panorami a 360°",
+            "Dati delle visite collegati a punteggi, assegnazione dei contatti e pipeline del CRM",
+            "Analisi dei percorsi di visita, del funnel e degli immobili più visualizzati"
+          ],
+          "result": "Un progetto personale che riunisce showroom immobiliare e CRM in un’applicazione, dalla prima visita alla gestione dei potenziali clienti."
         }
       ]
     },

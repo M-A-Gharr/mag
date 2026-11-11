@@ -396,6 +396,32 @@
           "Una redirección 301 para cada URL antigua, generada y comprobada automáticamente",
           "Pruebas automáticas en el navegador en ordenador y móvil, y guías de despliegue"
         ]
+      },
+      "14": {
+        "title": "Rediseño de tienda WordPress",
+        "description": "Rediseño de un sitio web en WordPress dirigido a clientes profesionales, con un catálogo de materiales no tejidos y bolsas personalizadas. Permite consultar los productos, elegir sus colores y solicitar un presupuesto desde el ordenador o el móvil.",
+        "technologies": [
+          "WordPress"
+        ],
+        "features": [
+          "Catálogo de materiales no tejidos y bolsas personalizadas",
+          "Selección de colores y formulario de solicitud de presupuesto",
+          "Sitio web disponible en francés, inglés y español",
+          "Navegación adaptada a ordenadores y móviles"
+        ]
+      },
+      "15": {
+        "title": "Generador de publicaciones de LinkedIn con IA",
+        "description": "Un espacio de trabajo para convertir ideas en borradores para LinkedIn con ayuda de la IA. Permite elegir entre publicaciones breves, textos más extensos y carruseles, guardar los mejores borradores y organizar el contenido en un calendario.",
+        "technologies": [
+          "IA"
+        ],
+        "features": [
+          "Borradores generados con IA a partir del tema elegido",
+          "Formatos breves, extensos y en carrusel",
+          "Historial de publicaciones con favoritos y opción de copiar",
+          "Calendario de contenidos con ideas, fechas, categorías y seguimiento del progreso"
+        ]
       }
     },
     "swipeHint": "Arrastra la tarjeta superior para ver la siguiente captura, o haz clic para ampliarla.",
@@ -517,6 +543,30 @@
             "Generé una redirección 301 para cada URL antigua y probé la tienda automáticamente en ordenador y móvil"
           ],
           "result": "Un cambio limpio: los totales de pedidos coinciden con el origen, todos los enlaces antiguos siguen funcionando y el equipo tiene guías de despliegue."
+        },
+        {
+          "projectId": 2,
+          "sector": "Gestión de panaderías · Aplicación full-stack",
+          "challenge": "Reunir existencias, recetas, pedidos y ventas sin complicar el trabajo diario de la panadería.",
+          "approach": [
+            "Vistas de recepción de mercancías e inventario con alertas",
+            "Recetas vinculadas a sus ingredientes, junto con la gestión de productos, pedidos y punto de venta",
+            "Paneles de ventas y fichas de clientes",
+            "Interfaz adaptada a ordenadores, tabletas y móviles, en inglés, francés y árabe"
+          ],
+          "result": "Un espacio compartido para las operaciones diarias de la panadería, con paneles claros e interfaces adaptadas a distintos dispositivos e idiomas."
+        },
+        {
+          "projectId": 10,
+          "sector": "Sector inmobiliario · 3D interactivo · Proyecto personal",
+          "challenge": "Conectar las visitas virtuales a inmuebles con la evaluación de clientes potenciales y el seguimiento comercial.",
+          "approach": [
+            "Catálogo de tipos de vivienda y planos interactivos",
+            "Modelos 3D giratorios, dimensiones de las habitaciones, recorridos y panorámicas de 360°",
+            "Información de las visitas conectada con la puntuación, asignación y seguimiento de contactos en el CRM",
+            "Análisis de recorridos, embudo de conversión e inmuebles más visitados"
+          ],
+          "result": "Un proyecto personal que reúne el showroom inmobiliario y el CRM en una aplicación, desde la primera visita hasta el seguimiento comercial."
         }
       ]
     },
