@@ -424,8 +424,8 @@
         ]
       },
       "16": {
-        "title": "OCR configurable de facturas",
-        "description": "Hacia 2019 · Desarrollado en OpenView. Aplicación que extrae información de facturas JPG y PDF. El usuario puede elegir campos concretos, como el número de factura, o solicitar una extracción más amplia, y revisar y validar los valores antes de recibirlos en JSON.",
+        "title": "OCR y extracción de datos de facturas",
+        "description": "Extracción configurable de datos de facturas JPG y PDF. El usuario elige los campos que necesita o solicita una extracción más amplia, y puede revisar, editar y validar los resultados en la aplicación antes de obtenerlos en JSON o CSV.",
         "technologies": [
           "Python",
           "Tesseract",
@@ -435,27 +435,29 @@
         "features": [
           "Procesamiento de facturas JPG y PDF",
           "Selección de campos o extracción más amplia",
-          "Revisión y validación de los valores extraídos",
-          "Entrega de los resultados validados en JSON"
+          "Revisión, edición y validación en la aplicación",
+          "Resultados estructurados en JSON y CSV"
         ]
       },
       "17": {
-        "title": "MVP de gestión de consulta médica",
-        "description": "Finales de 2020–principios de 2021. MVP desarrollado desde cero en C# para ayudar a médicos y personal administrativo a gestionar datos de clientes y seguros. Un proceso asistido por OCR facilitaba el traslado de registros manuscritos a una nueva base de datos, con importaciones de Excel y exportaciones para el contable.",
+        "title": "Gestión de consulta médica",
+        "description": "Aplicación C# para gestionar una consulta médica y digitalizar datos de clientes y seguros. Combina captura asistida por OCR de registros manuscritos, importaciones de Excel y exportaciones contables con permisos por rol, citas telefónicas gestionadas por la asistente y facturas que descuentan la cobertura del seguro y la cobertura complementaria, con envío por correo electrónico.",
         "technologies": [
           "C#",
           "OCR"
         ],
         "features": [
-          "Gestión de información de clientes y seguros",
-          "Traslado de registros manuscritos a una base de datos con ayuda de OCR",
-          "Importación de datos de Excel",
-          "Exportación de archivos para el contable"
+          "Datos de clientes y seguros, con digitalización asistida por OCR",
+          "Importaciones de Excel y exportaciones contables",
+          "Roles del personal con permisos específicos",
+          "Pantalla de reservas para comprobar disponibilidad y asignar citas por teléfono",
+          "Facturas con deducciones por seguro y cobertura complementaria",
+          "Envío de facturas directamente al cliente por correo electrónico"
         ]
       },
       "18": {
         "title": "Aplicación para agencias bancarias — Proyecto de fin de carrera",
-        "description": "2020 · Proyecto de fin de carrera en Eurafric Maroc. Base de una aplicación Java/JEE para agencias bancarias, con autenticación, procesos de incorporación y generación de documentos PDF. Mi trabajo incluyó la autenticación, la base de la aplicación y las API REST.",
+        "description": "Base de una aplicación Java/JEE desarrollada para mi proyecto de fin de carrera en 2020 en Eurafric Maroc. Diseñada para reutilizarse en agencias bancarias, incluía autenticación, alta de nuevos clientes y generación de PDF. Mi contribución se centró en la autenticación y la base de la aplicación.",
         "technologies": [
           "Java",
           "Java EE (JEE)",
@@ -463,8 +465,8 @@
         ],
         "features": [
           "Autenticación",
-          "Base de aplicación reutilizable para agencias bancarias",
-          "Procesos de incorporación",
+          "Base reutilizable para agencias bancarias",
+          "Alta de nuevos clientes",
           "Generación de documentos PDF"
         ]
       }
@@ -615,36 +617,38 @@
         },
         {
           "projectId": 16,
-          "sector": "Procesamiento documental · Hacia 2019 · OpenView",
+          "sector": "Procesamiento documental · OpenView",
           "challenge": "Las facturas contienen información diversa: el usuario puede necesitar campos concretos o una extracción más amplia.",
           "approach": [
             "Procesamiento de facturas JPG y PDF",
             "Selección de campos o extracción más amplia",
-            "Revisión y validación de los valores extraídos",
-            "Entrega de los resultados validados en JSON"
+            "Revisión, edición y validación en la aplicación",
+            "Resultados estructurados en JSON y CSV"
           ],
-          "result": "Un flujo configurable de extracción de facturas con validación humana antes de entregar los datos estructurados en JSON."
+          "result": "Extracción configurable de facturas con edición y validación en la aplicación antes de entregar los datos en JSON o CSV."
         },
         {
           "projectId": 17,
-          "sector": "Administración de consulta médica · MVP · 2020–2021",
-          "challenge": "La consulta necesitaba reunir registros manuscritos y datos de Excel en una base de datos y gestionar la información de clientes y seguros.",
+          "sector": "Administración de consulta médica · 2020–2021",
+          "challenge": "La consulta necesitaba digitalizar registros manuscritos y datos de Excel, definir permisos por rol y coordinar citas y facturación.",
           "approach": [
-            "Gestión de información de clientes y seguros",
-            "Traslado de registros manuscritos a una base de datos con ayuda de OCR",
-            "Importación de datos de Excel",
-            "Exportación de archivos para el contable"
+            "Datos de clientes y seguros, con digitalización asistida por OCR",
+            "Importaciones de Excel y exportaciones contables",
+            "Roles del personal con permisos específicos",
+            "Pantalla de reservas para comprobar disponibilidad y asignar citas por teléfono",
+            "Facturas con deducciones por seguro y cobertura complementaria",
+            "Envío de facturas directamente al cliente por correo electrónico"
           ],
-          "result": "El MVP reunía digitalización, gestión de clientes y seguros, importaciones de Excel y exportaciones contables. Entregué el código al propietario; desconozco su estado actual."
+          "result": "La aplicación reunía digitalización, permisos por rol, citas, facturación e intercambio contable. Entregué el código al propietario; desconozco su estado actual."
         },
         {
           "projectId": 18,
           "sector": "Banca · Proyecto de fin de carrera · 2020 · Eurafric Maroc",
-          "challenge": "El proyecto necesitaba una base para los procesos de las agencias: autenticación, incorporación y generación de documentos PDF.",
+          "challenge": "El proyecto necesitaba una base para las agencias bancarias, con autenticación, alta de nuevos clientes y generación de documentos PDF.",
           "approach": [
             "Autenticación",
-            "Base de aplicación reutilizable para agencias bancarias",
-            "Procesos de incorporación",
+            "Base reutilizable para agencias bancarias",
+            "Alta de nuevos clientes",
             "Generación de documentos PDF"
           ],
           "result": "El proyecto de fin de carrera estableció una base para las operaciones de agencias bancarias. La descripción corresponde a aquel proyecto, no al estado actual de una posible aplicación posterior."
