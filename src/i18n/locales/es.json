@@ -457,7 +457,7 @@
       },
       "18": {
         "title": "Aplicación para agencias bancarias — Proyecto de fin de carrera",
-        "description": "Base de una aplicación Java/JEE desarrollada para mi proyecto de fin de carrera en 2020 en Eurafric Maroc. Diseñada para reutilizarse en agencias bancarias, incluía autenticación, alta de nuevos clientes y generación de PDF. Mi contribución se centró en la autenticación y la base de la aplicación.",
+        "description": "Base de una aplicación Java/JEE desarrollada para mi proyecto de fin de carrera en 2020 en Eurafric Maroc. Diseñada para reutilizarse en agencias bancarias, incluía autenticación, alta de clientes que participan en ofertas públicas de venta (OPV) de acciones y generación de PDF. Mi contribución se centró en la autenticación y la base de la aplicación.",
         "technologies": [
           "Java",
           "Java EE (JEE)",
@@ -466,8 +466,11 @@
         "features": [
           "Autenticación",
           "Base reutilizable para agencias bancarias",
-          "Alta de nuevos clientes",
-          "Generación de documentos PDF"
+          "Alta de clientes de ofertas públicas de venta (OPV) de acciones",
+          "Generación de documentos PDF",
+          "Permisos y restricciones de compra para las OPV",
+          "Precio de compra de las acciones fijado por la empresa",
+          "Límites al número de acciones que puede adquirir cada cliente"
         ]
       }
     },
@@ -643,13 +646,16 @@
         },
         {
           "projectId": 18,
-          "sector": "Banca · Proyecto de fin de carrera · 2020 · Eurafric Maroc",
-          "challenge": "El proyecto necesitaba una base para las agencias bancarias, con autenticación, alta de nuevos clientes y generación de documentos PDF.",
+          "sector": "Banca · Ofertas públicas de venta (OPV) · 2020 · Eurafric Maroc",
+          "challenge": "El proyecto necesitaba una base para las agencias bancarias, con autenticación, alta de clientes que participan en ofertas públicas de venta (OPV) de acciones y generación de documentos PDF. La aplicación también gestionaba permisos y restricciones de compra, como el precio fijado por la empresa y los límites al número de acciones que podía adquirir cada cliente.",
           "approach": [
             "Autenticación",
             "Base reutilizable para agencias bancarias",
-            "Alta de nuevos clientes",
-            "Generación de documentos PDF"
+            "Alta de clientes de ofertas públicas de venta (OPV) de acciones",
+            "Generación de documentos PDF",
+            "Permisos y restricciones de compra para las OPV",
+            "Precio de compra de las acciones fijado por la empresa",
+            "Límites al número de acciones que puede adquirir cada cliente"
           ],
           "result": "El proyecto de fin de carrera estableció una base para las operaciones de agencias bancarias. La descripción corresponde a aquel proyecto, no al estado actual de una posible aplicación posterior."
         }
