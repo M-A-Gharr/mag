@@ -457,7 +457,7 @@
       },
       "18": {
         "title": "Applicazione per filiali bancarie — Progetto di fine studi",
-        "description": "Base applicativa Java/JEE sviluppata per il mio progetto di fine studi del 2020 presso Eurafric Maroc. Progettata per essere riutilizzata nelle filiali bancarie, comprendeva autenticazione, acquisizione di nuovi clienti e generazione di PDF. Il mio contributo si concentrava sull’autenticazione e sulla struttura di base dell’applicazione.",
+        "description": "Base applicativa Java/JEE sviluppata per il mio progetto di fine studi del 2020 presso Eurafric Maroc. Progettata per essere riutilizzata nelle filiali bancarie, comprendeva autenticazione, registrazione dei clienti che partecipano a offerte pubbliche di vendita (OPV) di azioni e generazione di PDF. Il mio contributo si concentrava sull’autenticazione e sulla struttura di base dell’applicazione.",
         "technologies": [
           "Java",
           "Java EE (JEE)",
@@ -466,8 +466,11 @@
         "features": [
           "Autenticazione",
           "Base applicativa riutilizzabile per filiali bancarie",
-          "Acquisizione di nuovi clienti",
-          "Generazione di documenti PDF"
+          "Registrazione dei clienti per offerte pubbliche di vendita (OPV) di azioni",
+          "Generazione di documenti PDF",
+          "Permessi e restrizioni di acquisto per le OPV",
+          "Prezzo di acquisto delle azioni stabilito dall’azienda",
+          "Limiti al numero di azioni acquistabili da ciascun cliente"
         ]
       }
     },
@@ -643,13 +646,16 @@
         },
         {
           "projectId": 18,
-          "sector": "Settore bancario · Progetto di fine studi · 2020 · Eurafric Maroc",
-          "challenge": "Il progetto richiedeva una base per le filiali bancarie, con autenticazione, acquisizione di nuovi clienti e generazione di documenti PDF.",
+          "sector": "Settore bancario · Offerte pubbliche di vendita (OPV) · 2020 · Eurafric Maroc",
+          "challenge": "Il progetto richiedeva una base per le filiali bancarie, con autenticazione, registrazione dei clienti che partecipano a offerte pubbliche di vendita (OPV) di azioni e generazione di documenti PDF. L’applicazione gestiva anche permessi e restrizioni di acquisto, tra cui il prezzo stabilito dall’azienda e i limiti al numero di azioni acquistabili da ciascun cliente.",
           "approach": [
             "Autenticazione",
             "Base applicativa riutilizzabile per filiali bancarie",
-            "Acquisizione di nuovi clienti",
-            "Generazione di documenti PDF"
+            "Registrazione dei clienti per offerte pubbliche di vendita (OPV) di azioni",
+            "Generazione di documenti PDF",
+            "Permessi e restrizioni di acquisto per le OPV",
+            "Prezzo di acquisto delle azioni stabilito dall’azienda",
+            "Limiti al numero di azioni acquistabili da ciascun cliente"
           ],
           "result": "Il progetto di fine studi ha definito una base applicativa per le attività delle filiali bancarie. La descrizione riguarda il progetto di allora, non lo stato attuale di un’eventuale applicazione successiva."
         }

@@ -457,7 +457,7 @@
       },
       "18": {
         "title": "Application pour agences bancaires — Projet de fin d’études",
-        "description": "Un socle applicatif Java/JEE développé pour mon projet de fin d’études en 2020 chez Eurafric Maroc. Conçu pour être réutilisé dans plusieurs agences bancaires, il comprenait l’authentification, l’entrée en relation avec de nouveaux clients et la génération de PDF. Ma contribution portait sur l’authentification et la base de l’application.",
+        "description": "Un socle applicatif Java/JEE développé pour mon projet de fin d’études en 2020 chez Eurafric Maroc. Conçu pour être réutilisé dans plusieurs agences bancaires, il comprenait l’authentification, l’entrée en relation avec les clients participant aux offres publiques de vente (OPV) d’actions et la génération de PDF. Ma contribution portait sur l’authentification et la base de l’application.",
         "technologies": [
           "Java",
           "Java EE (JEE)",
@@ -466,8 +466,11 @@
         "features": [
           "Authentification",
           "Socle applicatif réutilisable pour les agences bancaires",
-          "Entrée en relation avec de nouveaux clients",
-          "Génération de documents PDF"
+          "Entrée en relation avec les clients des offres publiques de vente (OPV) d’actions",
+          "Génération de documents PDF",
+          "Permissions et restrictions d’achat liées aux OPV",
+          "Prix d’achat des actions fixé par l’entreprise",
+          "Limites sur le nombre d’actions qu’un client peut acquérir"
         ]
       }
     },
@@ -643,15 +646,18 @@
         },
         {
           "projectId": 18,
-          "sector": "Banque · Projet de fin d’études · 2020 · Eurafric Maroc",
-          "challenge": "Le projet nécessitait un socle pour les activités des agences, comprenant l’authentification, l’entrée en relation avec de nouveaux clients et la génération de documents PDF.",
+          "sector": "Banque · Offres publiques de vente (OPV) · 2020 · Eurafric Maroc",
+          "challenge": "Le projet nécessitait un socle réutilisable dans les agences bancaires, avec authentification, entrée en relation avec les clients participant aux offres publiques de vente (OPV) d’actions et génération de documents PDF. L’application gérait également les permissions et les restrictions d’achat, notamment le prix fixé par l’entreprise et les limites sur le nombre d’actions qu’un client pouvait acquérir.",
           "approach": [
             "Authentification",
             "Socle applicatif réutilisable pour les agences bancaires",
-            "Entrée en relation avec de nouveaux clients",
-            "Génération de documents PDF"
+            "Entrée en relation avec les clients des offres publiques de vente (OPV) d’actions",
+            "Génération de documents PDF",
+            "Permissions et restrictions d’achat liées aux OPV",
+            "Prix d’achat des actions fixé par l’entreprise",
+            "Limites sur le nombre d’actions qu’un client peut acquérir"
           ],
-          "result": "Le projet de fin d’études a posé une base applicative pour les activités des agences bancaires. Cette présentation concerne le projet à l’époque, et non l’état actuel d’une éventuelle application ultérieure."
+          "result": "Le projet de fin d’études a posé une base applicative pour les parcours en agence des clients participant aux OPV d’actions. Cette présentation concerne le projet à l’époque, et non l’état actuel d’une éventuelle application ultérieure."
         }
       ]
     },

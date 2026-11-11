@@ -457,7 +457,7 @@
       },
       "18": {
         "title": "Banking Agency Application — Final-Year Project",
-        "description": "A Java/JEE application foundation developed for my 2020 final-year project at Eurafric Maroc. Designed for reuse across banking agencies, it supported authentication, customer onboarding and PDF generation. My contribution focused on authentication and the application foundation.",
+        "description": "A Java/JEE application foundation developed for my 2020 final-year project at Eurafric Maroc. Designed for reuse across banking agencies, it supported authentication, onboarding clients participating in public offerings of shares (OPV) and PDF generation. My contribution focused on authentication and the application foundation.",
         "technologies": [
           "Java",
           "Java EE (JEE)",
@@ -466,8 +466,11 @@
         "features": [
           "Authentication",
           "Reusable application foundation for banking agencies",
-          "Customer onboarding",
-          "PDF document generation"
+          "Client onboarding for public offerings of shares (OPV)",
+          "PDF document generation",
+          "Permissions and purchase restrictions for OPV workflows",
+          "Share purchase price set by the company",
+          "Limits on the number of shares each client can acquire"
         ]
       }
     },
@@ -647,15 +650,18 @@
         },
         {
           "projectId": 18,
-          "sector": "Banking · Final-year project · 2020 · Eurafric Maroc",
-          "challenge": "The project needed an application foundation for agency workflows, including authentication, customer onboarding and PDF document generation.",
+          "sector": "Banking · Public share offerings (OPV) · 2020 · Eurafric Maroc",
+          "challenge": "The project needed a reusable foundation for banking agencies, including authentication, onboarding clients participating in public offerings of shares (OPV), and generating PDF documents. The application also supported permissions and purchase restrictions, including the price set by the company and limits on the number of shares each client could acquire.",
           "approach": [
             "Authentication",
             "Reusable application foundation for banking agencies",
-            "Customer onboarding",
-            "PDF document generation"
+            "Client onboarding for public offerings of shares (OPV)",
+            "PDF document generation",
+            "Permissions and purchase restrictions for OPV workflows",
+            "Share purchase price set by the company",
+            "Limits on the number of shares each client can acquire"
           ],
-          "result": "The final-year project established an application foundation for banking-agency workflows. This describes the project at the time, rather than the current state of any later application."
+          "result": "The final-year project established an application foundation for banking-agency workflows involving clients of public share offerings (OPV). This describes the project at the time, rather than the current state of any later application."
         }
       ]
     },
