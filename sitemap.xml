@@ -3,7 +3,7 @@
   <!-- Generated at build time by build/pagesPlugin.ts -->
   <url>
     <loc>https://www.maminegh.com/</loc>
-    <lastmod>2026-11-10</lastmod>
+    <lastmod>2026-11-11</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.maminegh.com/" />
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.maminegh.com/fr/" />
     <xhtml:link rel="alternate" hreflang="ar" href="https://www.maminegh.com/ar/" />
@@ -11,7 +11,7 @@
   </url>
   <url>
     <loc>https://www.maminegh.com/fr/</loc>
-    <lastmod>2026-11-10</lastmod>
+    <lastmod>2026-11-11</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.maminegh.com/" />
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.maminegh.com/fr/" />
     <xhtml:link rel="alternate" hreflang="ar" href="https://www.maminegh.com/ar/" />
@@ -19,7 +19,7 @@
   </url>
   <url>
     <loc>https://www.maminegh.com/ar/</loc>
-    <lastmod>2026-11-10</lastmod>
+    <lastmod>2026-11-11</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.maminegh.com/" />
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.maminegh.com/fr/" />
     <xhtml:link rel="alternate" hreflang="ar" href="https://www.maminegh.com/ar/" />
@@ -146,8 +146,56 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.maminegh.com/case-studies/migration-woocommerce-prestashop-9/" />
   </url>
   <url>
+    <loc>https://www.maminegh.com/case-studies/bakery-management-saas/</loc>
+    <lastmod>2026-11-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.maminegh.com/case-studies/bakery-management-saas/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.maminegh.com/fr/etudes-de-cas/bakery-management-saas/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.maminegh.com/ar/case-studies/bakery-management-saas/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.maminegh.com/case-studies/bakery-management-saas/" />
+  </url>
+  <url>
+    <loc>https://www.maminegh.com/fr/etudes-de-cas/bakery-management-saas/</loc>
+    <lastmod>2026-11-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.maminegh.com/case-studies/bakery-management-saas/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.maminegh.com/fr/etudes-de-cas/bakery-management-saas/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.maminegh.com/ar/case-studies/bakery-management-saas/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.maminegh.com/case-studies/bakery-management-saas/" />
+  </url>
+  <url>
+    <loc>https://www.maminegh.com/ar/case-studies/bakery-management-saas/</loc>
+    <lastmod>2026-11-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.maminegh.com/case-studies/bakery-management-saas/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.maminegh.com/fr/etudes-de-cas/bakery-management-saas/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.maminegh.com/ar/case-studies/bakery-management-saas/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.maminegh.com/case-studies/bakery-management-saas/" />
+  </url>
+  <url>
+    <loc>https://www.maminegh.com/case-studies/vr-property-showroom-crm/</loc>
+    <lastmod>2026-11-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.maminegh.com/case-studies/vr-property-showroom-crm/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.maminegh.com/fr/etudes-de-cas/vr-property-showroom-crm/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.maminegh.com/ar/case-studies/vr-property-showroom-crm/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.maminegh.com/case-studies/vr-property-showroom-crm/" />
+  </url>
+  <url>
+    <loc>https://www.maminegh.com/fr/etudes-de-cas/vr-property-showroom-crm/</loc>
+    <lastmod>2026-11-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.maminegh.com/case-studies/vr-property-showroom-crm/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.maminegh.com/fr/etudes-de-cas/vr-property-showroom-crm/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.maminegh.com/ar/case-studies/vr-property-showroom-crm/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.maminegh.com/case-studies/vr-property-showroom-crm/" />
+  </url>
+  <url>
+    <loc>https://www.maminegh.com/ar/case-studies/vr-property-showroom-crm/</loc>
+    <lastmod>2026-11-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.maminegh.com/case-studies/vr-property-showroom-crm/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.maminegh.com/fr/etudes-de-cas/vr-property-showroom-crm/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.maminegh.com/ar/case-studies/vr-property-showroom-crm/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.maminegh.com/case-studies/vr-property-showroom-crm/" />
+  </url>
+  <url>
     <loc>https://www.maminegh.com/expertise/web-application-development/</loc>
-    <lastmod>2026-11-10</lastmod>
+    <lastmod>2026-11-11</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.maminegh.com/expertise/web-application-development/" />
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.maminegh.com/fr/expertise/web-application-development/" />
     <xhtml:link rel="alternate" hreflang="ar" href="https://www.maminegh.com/ar/expertise/web-application-development/" />
@@ -155,7 +203,7 @@
   </url>
   <url>
     <loc>https://www.maminegh.com/fr/expertise/web-application-development/</loc>
-    <lastmod>2026-11-10</lastmod>
+    <lastmod>2026-11-11</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.maminegh.com/expertise/web-application-development/" />
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.maminegh.com/fr/expertise/web-application-development/" />
     <xhtml:link rel="alternate" hreflang="ar" href="https://www.maminegh.com/ar/expertise/web-application-development/" />
@@ -163,7 +211,7 @@
   </url>
   <url>
     <loc>https://www.maminegh.com/ar/expertise/web-application-development/</loc>
-    <lastmod>2026-11-10</lastmod>
+    <lastmod>2026-11-11</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.maminegh.com/expertise/web-application-development/" />
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.maminegh.com/fr/expertise/web-application-development/" />
     <xhtml:link rel="alternate" hreflang="ar" href="https://www.maminegh.com/ar/expertise/web-application-development/" />
