@@ -456,7 +456,7 @@
         ]
       },
       "18": {
-        "title": "Banking Agency Application — Final-Year Project",
+        "title": "Banking Agency Application - Final-Year Project",
         "description": "A Java/JEE application foundation developed for my 2020 final-year project at Eurafric Maroc. Designed for reuse across banking agencies, it supported authentication, onboarding clients participating in public offerings of shares (OPV) and PDF generation. My contribution focused on authentication and the application foundation.",
         "technologies": [
           "Java",

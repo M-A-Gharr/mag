@@ -456,7 +456,7 @@
         ]
       },
       "18": {
-        "title": "Applicazione per filiali bancarie — Progetto di fine studi",
+        "title": "Applicazione per filiali bancarie - Progetto di fine studi",
         "description": "Base applicativa Java/JEE sviluppata per il mio progetto di fine studi del 2020 presso Eurafric Maroc. Progettata per essere riutilizzata nelle filiali bancarie, comprendeva autenticazione, registrazione dei clienti che partecipano a offerte pubbliche di vendita (OPV) di azioni e generazione di PDF. Il mio contributo si concentrava sull’autenticazione e sulla struttura di base dell’applicazione.",
         "technologies": [
           "Java",

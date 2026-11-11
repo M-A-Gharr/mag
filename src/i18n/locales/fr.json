@@ -456,7 +456,7 @@
         ]
       },
       "18": {
-        "title": "Application pour agences bancaires — Projet de fin d’études",
+        "title": "Application pour agences bancaires - Projet de fin d’études",
         "description": "Un socle applicatif Java/JEE développé pour mon projet de fin d’études en 2020 chez Eurafric Maroc. Conçu pour être réutilisé dans plusieurs agences bancaires, il comprenait l’authentification, l’entrée en relation avec les clients participant aux offres publiques de vente (OPV) d’actions et la génération de PDF. Ma contribution portait sur l’authentification et la base de l’application.",
         "technologies": [
           "Java",

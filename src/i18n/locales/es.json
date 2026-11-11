@@ -456,7 +456,7 @@
         ]
       },
       "18": {
-        "title": "Aplicación para agencias bancarias — Proyecto de fin de carrera",
+        "title": "Aplicación para agencias bancarias - Proyecto de fin de carrera",
         "description": "Base de una aplicación Java/JEE desarrollada para mi proyecto de fin de carrera en 2020 en Eurafric Maroc. Diseñada para reutilizarse en agencias bancarias, incluía autenticación, alta de clientes que participan en ofertas públicas de venta (OPV) de acciones y generación de PDF. Mi contribución se centró en la autenticación y la base de la aplicación.",
         "technologies": [
           "Java",
