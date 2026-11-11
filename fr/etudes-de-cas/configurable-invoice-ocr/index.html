@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>OCR de factures configurable · Étude de cas</title>
-    <meta name="description" content="Une application OCR développée chez OpenView vers 2019 : factures JPG et PDF, champs configurables, validation humaine et résultat JSON." />
+    <title>OCR et extraction de factures · Étude de cas</title>
+    <meta name="description" content="Extraction configurable de factures JPG et PDF chez OpenView, avec modification dans l’application, validation humaine et sorties JSON ou CSV." />
     <meta name="author" content="Mohamed Amine Gharrab" />
     <meta name="robots" content="index, follow, max-image-preview:large" />
     <link rel="canonical" href="https://www.maminegh.com/fr/etudes-de-cas/configurable-invoice-ocr/" />
@@ -26,17 +26,17 @@
     <meta property="og:type" content="article" />
     <meta property="og:site_name" content="M.A.G — Mohamed Amine Gharrab" />
     <meta property="og:url" content="https://www.maminegh.com/fr/etudes-de-cas/configurable-invoice-ocr/" />
-    <meta property="og:title" content="OCR de factures configurable · Étude de cas" />
-    <meta property="og:description" content="Une application OCR développée chez OpenView vers 2019 : factures JPG et PDF, champs configurables, validation humaine et résultat JSON." />
+    <meta property="og:title" content="OCR et extraction de factures · Étude de cas" />
+    <meta property="og:description" content="Extraction configurable de factures JPG et PDF chez OpenView, avec modification dans l’application, validation humaine et sorties JSON ou CSV." />
     <meta property="og:image" content="https://www.maminegh.com/images/share/og-image.jpg" />
     <meta property="og:image:type" content="image/jpeg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="OCR de factures configurable · Étude de cas" />
+    <meta property="og:image:alt" content="OCR et extraction de factures · Étude de cas" />
     <meta property="og:locale" content="fr_FR" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="OCR de factures configurable · Étude de cas" />
-    <meta name="twitter:description" content="Une application OCR développée chez OpenView vers 2019 : factures JPG et PDF, champs configurables, validation humaine et résultat JSON." />
+    <meta name="twitter:title" content="OCR et extraction de factures · Étude de cas" />
+    <meta name="twitter:description" content="Extraction configurable de factures JPG et PDF chez OpenView, avec modification dans l’application, validation humaine et sorties JSON ou CSV." />
     <meta name="twitter:image" content="https://www.maminegh.com/images/share/og-image.jpg" />
 
     <!-- Structured data: tells search engines who the site is about -->
@@ -95,16 +95,16 @@
         else setTimeout(load, 1500);
       });
     </script>
-    <script type="module" crossorigin src="/assets/index-CBGEDuzr.js"></script>
+    <script type="module" crossorigin src="/assets/index--6bLPYoi.js"></script>
     <link rel="modulepreload" crossorigin href="/assets/react-Dvwkxfce.js">
     <link rel="modulepreload" crossorigin href="/assets/animation-BqM7mhei.js">
     <link rel="modulepreload" crossorigin href="/assets/i18n-DUR6zq1z.js">
     <link rel="stylesheet" crossorigin href="/assets/index-DOx71Bj-.css">
-      <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"Extraire les données des factures avec configuration et validation humaine","description":"Une application OCR développée chez OpenView vers 2019 : factures JPG et PDF, champs configurables, validation humaine et résultat JSON.","inLanguage":"fr","datePublished":"2026-11-11","dateModified":"2026-11-11","image":"https://www.maminegh.com/images/share/og-image.jpg","mainEntityOfPage":"https://www.maminegh.com/fr/etudes-de-cas/configurable-invoice-ocr/","author":{"@id":"https://www.maminegh.com/#person"},"publisher":{"@id":"https://www.maminegh.com/#person"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Accueil","item":"https://www.maminegh.com/fr/"},{"@type":"ListItem","position":2,"name":"Études de cas","item":"https://www.maminegh.com/fr/#projects"},{"@type":"ListItem","position":3,"name":"Extraire les données des factures avec configuration et validation humaine","item":"https://www.maminegh.com/fr/etudes-de-cas/configurable-invoice-ocr/"}]}]}</script>
+      <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"Extraire les données des factures avec vérification et modification intégrées","description":"Extraction configurable de factures JPG et PDF chez OpenView, avec modification dans l’application, validation humaine et sorties JSON ou CSV.","inLanguage":"fr","datePublished":"2026-11-11","dateModified":"2026-11-11","image":"https://www.maminegh.com/images/share/og-image.jpg","mainEntityOfPage":"https://www.maminegh.com/fr/etudes-de-cas/configurable-invoice-ocr/","author":{"@id":"https://www.maminegh.com/#person"},"publisher":{"@id":"https://www.maminegh.com/#person"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Accueil","item":"https://www.maminegh.com/fr/"},{"@type":"ListItem","position":2,"name":"Études de cas","item":"https://www.maminegh.com/fr/#projects"},{"@type":"ListItem","position":3,"name":"Extraire les données des factures avec vérification et modification intégrées","item":"https://www.maminegh.com/fr/etudes-de-cas/configurable-invoice-ocr/"}]}]}</script>
   </head>
 
   <body class="relative min-h-screen">
-    <div id="root"><main><article><p>Traitement documentaire · Vers 2019 · OpenView</p><h1>Extraire les données des factures avec configuration et validation humaine</h1><p>Vers 2019, j’ai développé chez OpenView une application OCR pour extraire les informations de factures JPG et PDF, en laissant l’utilisateur choisir les données à récupérer.</p><h2>Le défi</h2><p>Les factures contiennent des informations variées. Selon le besoin, l’utilisateur souhaite extraire certains champs, comme le numéro de facture, ou un ensemble plus large de données.</p><h2>Ce que j’ai développé</h2><p>J’ai développé l’application avec Python, Tesseract, TensorFlow et Rossum AI. L’utilisateur pouvait configurer les champs à extraire ou demander une extraction plus large. Il pouvait ensuite vérifier et valider le résultat avant de le recevoir au format JSON.</p><p>Un parcours configurable d’extraction de factures, avec validation humaine avant la restitution des données structurées en JSON.</p><nav><h2>Autres études de cas</h2><ul><li><a href="/fr/etudes-de-cas/medical-practice-management-mvp/">Transférer les dossiers d’un cabinet médical vers une base de données structurée</a></li><li><a href="/fr/etudes-de-cas/banking-agency-java-jee/">Un socle réutilisable pour les agences bancaires</a></li></ul></nav></article></main></div>
+    <div id="root"><main><article><p>Traitement documentaire · OpenView</p><h1>Extraire les données des factures avec vérification et modification intégrées</h1><p>Chez OpenView, j’ai développé une application OCR pour les factures JPG et PDF. L’utilisateur pouvait choisir les champs à récupérer ou demander une extraction plus large, puis vérifier, modifier et valider le résultat directement dans l’application.</p><h2>Le défi</h2><p>Les factures contiennent des informations variées. Selon le besoin, l’utilisateur souhaite extraire certains champs, comme le numéro de facture, ou un ensemble plus large de données.</p><h2>Ce que j’ai développé</h2><p>J’ai développé l’application avec Python, Tesseract, TensorFlow et Rossum AI. L’utilisateur pouvait configurer les champs à extraire ou demander une extraction plus large. Il pouvait ensuite vérifier les valeurs, les modifier dans l’application et valider le résultat avant de le récupérer au format JSON ou CSV.</p><p>Une extraction de factures configurable, avec modification et validation dans l’application avant la restitution en JSON ou CSV.</p><nav><h2>Autres études de cas</h2><ul><li><a href="/fr/etudes-de-cas/medical-practice-management-mvp/">Gestion de cabinet médical : dossiers, rendez-vous et facturation</a></li><li><a href="/fr/etudes-de-cas/banking-agency-java-jee/">Un socle réutilisable pour les agences bancaires</a></li></ul></nav></article></main></div>
     <script>
       (function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="1eD3-A8ZxJWQeyzQaE89z";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
     </script>

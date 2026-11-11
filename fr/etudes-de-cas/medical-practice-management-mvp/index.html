@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MVP de gestion de cabinet médical · Étude de cas</title>
-    <meta name="description" content="Un MVP C# développé en 2020–2021 : dossiers clients et assurances, numérisation assistée par OCR, imports Excel et exports comptables." />
+    <title>Gestion de cabinet médical · Étude de cas</title>
+    <meta name="description" content="Une application C# avec OCR, permissions par rôle, rendez-vous téléphoniques, déductions d’assurance et de mutuelle, et factures par e-mail." />
     <meta name="author" content="Mohamed Amine Gharrab" />
     <meta name="robots" content="index, follow, max-image-preview:large" />
     <link rel="canonical" href="https://www.maminegh.com/fr/etudes-de-cas/medical-practice-management-mvp/" />
@@ -26,17 +26,17 @@
     <meta property="og:type" content="article" />
     <meta property="og:site_name" content="M.A.G — Mohamed Amine Gharrab" />
     <meta property="og:url" content="https://www.maminegh.com/fr/etudes-de-cas/medical-practice-management-mvp/" />
-    <meta property="og:title" content="MVP de gestion de cabinet médical · Étude de cas" />
-    <meta property="og:description" content="Un MVP C# développé en 2020–2021 : dossiers clients et assurances, numérisation assistée par OCR, imports Excel et exports comptables." />
+    <meta property="og:title" content="Gestion de cabinet médical · Étude de cas" />
+    <meta property="og:description" content="Une application C# avec OCR, permissions par rôle, rendez-vous téléphoniques, déductions d’assurance et de mutuelle, et factures par e-mail." />
     <meta property="og:image" content="https://www.maminegh.com/images/share/og-image.jpg" />
     <meta property="og:image:type" content="image/jpeg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="MVP de gestion de cabinet médical · Étude de cas" />
+    <meta property="og:image:alt" content="Gestion de cabinet médical · Étude de cas" />
     <meta property="og:locale" content="fr_FR" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="MVP de gestion de cabinet médical · Étude de cas" />
-    <meta name="twitter:description" content="Un MVP C# développé en 2020–2021 : dossiers clients et assurances, numérisation assistée par OCR, imports Excel et exports comptables." />
+    <meta name="twitter:title" content="Gestion de cabinet médical · Étude de cas" />
+    <meta name="twitter:description" content="Une application C# avec OCR, permissions par rôle, rendez-vous téléphoniques, déductions d’assurance et de mutuelle, et factures par e-mail." />
     <meta name="twitter:image" content="https://www.maminegh.com/images/share/og-image.jpg" />
 
     <!-- Structured data: tells search engines who the site is about -->
@@ -95,16 +95,16 @@
         else setTimeout(load, 1500);
       });
     </script>
-    <script type="module" crossorigin src="/assets/index-CBGEDuzr.js"></script>
+    <script type="module" crossorigin src="/assets/index--6bLPYoi.js"></script>
     <link rel="modulepreload" crossorigin href="/assets/react-Dvwkxfce.js">
     <link rel="modulepreload" crossorigin href="/assets/animation-BqM7mhei.js">
     <link rel="modulepreload" crossorigin href="/assets/i18n-DUR6zq1z.js">
     <link rel="stylesheet" crossorigin href="/assets/index-DOx71Bj-.css">
-      <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"Transférer les dossiers d’un cabinet médical vers une base de données structurée","description":"Un MVP C# développé en 2020–2021 : dossiers clients et assurances, numérisation assistée par OCR, imports Excel et exports comptables.","inLanguage":"fr","datePublished":"2026-11-11","dateModified":"2026-11-11","image":"https://www.maminegh.com/images/share/og-image.jpg","mainEntityOfPage":"https://www.maminegh.com/fr/etudes-de-cas/medical-practice-management-mvp/","author":{"@id":"https://www.maminegh.com/#person"},"publisher":{"@id":"https://www.maminegh.com/#person"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Accueil","item":"https://www.maminegh.com/fr/"},{"@type":"ListItem","position":2,"name":"Études de cas","item":"https://www.maminegh.com/fr/#projects"},{"@type":"ListItem","position":3,"name":"Transférer les dossiers d’un cabinet médical vers une base de données structurée","item":"https://www.maminegh.com/fr/etudes-de-cas/medical-practice-management-mvp/"}]}]}</script>
+      <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"Gestion de cabinet médical : dossiers, rendez-vous et facturation","description":"Une application C# avec OCR, permissions par rôle, rendez-vous téléphoniques, déductions d’assurance et de mutuelle, et factures par e-mail.","inLanguage":"fr","datePublished":"2026-11-11","dateModified":"2026-11-11","image":"https://www.maminegh.com/images/share/og-image.jpg","mainEntityOfPage":"https://www.maminegh.com/fr/etudes-de-cas/medical-practice-management-mvp/","author":{"@id":"https://www.maminegh.com/#person"},"publisher":{"@id":"https://www.maminegh.com/#person"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Accueil","item":"https://www.maminegh.com/fr/"},{"@type":"ListItem","position":2,"name":"Études de cas","item":"https://www.maminegh.com/fr/#projects"},{"@type":"ListItem","position":3,"name":"Gestion de cabinet médical : dossiers, rendez-vous et facturation","item":"https://www.maminegh.com/fr/etudes-de-cas/medical-practice-management-mvp/"}]}]}</script>
   </head>
 
   <body class="relative min-h-screen">
-    <div id="root"><main><article><p>Gestion de cabinet médical · MVP · 2020–2021</p><h1>Transférer les dossiers d’un cabinet médical vers une base de données structurée</h1><p>Fin 2020 et début 2021, j’ai développé de zéro un MVP en C# pour aider un cabinet médical à gérer les informations des clients et des assurances, et à transférer ses registres manuscrits dans une nouvelle base de données.</p><h2>Le défi</h2><p>Les médecins et les secrétaires devaient réunir des registres manuscrits et des données Excel dans une base de données, puis gérer les informations des clients et des assurances.</p><h2>Ce que j’ai développé</h2><p>L’application comprenait un parcours OCR pour aider les médecins ou les secrétaires à extraire les informations des clients et des assurances depuis des registres manuscrits, puis à alimenter la nouvelle base de données. Elle permettait également d’importer des données Excel et d’exporter des fichiers pour le comptable.</p><p>Le MVP réunissait la numérisation des dossiers, la gestion des clients et des assurances, les imports Excel et les exports comptables. J’ai remis le code au propriétaire ; je ne connais pas son état actuel.</p><nav><h2>Autres études de cas</h2><ul><li><a href="/fr/etudes-de-cas/banking-agency-java-jee/">Un socle réutilisable pour les agences bancaires</a></li><li><a href="/fr/etudes-de-cas/ai-fashion-visuals-studio/">Simtis Studio : des visuels portés par mannequin, créés par IA à partir d'une photo produit</a></li></ul></nav></article></main></div>
+    <div id="root"><main><article><p>Gestion de cabinet médical · 2020–2021</p><h1>Gestion de cabinet médical : dossiers, rendez-vous et facturation</h1><p>Fin 2020 et début 2021, j’ai développé de zéro une application C# pour numériser les dossiers clients et les informations d’assurance, et accompagner la gestion quotidienne du cabinet, des rendez-vous à la facturation.</p><h2>Le défi</h2><p>Le cabinet devait transférer ses registres manuscrits et ses données Excel dans une base de données, attribuer des permissions à chaque rôle et coordonner les rendez-vous avec la facturation.</p><h2>Ce que j’ai développé</h2><ol><li><h3>Numériser les dossiers</h3><p>Un parcours assisté par OCR aidait les médecins ou les secrétaires à transférer les informations des clients et des assurances depuis des registres manuscrits vers la nouvelle base de données. Les imports Excel et les exports comptables facilitaient les échanges de données.</p></li><li><h3>Organiser les rôles et les rendez-vous</h3><p>L’application attribuait des permissions propres à chaque rôle du personnel. Lorsqu’un client appelait pour prendre rendez-vous, l’assistante utilisait un écran dédié pour vérifier les disponibilités et lui attribuer un créneau.</p></li><li><h3>Préparer et envoyer les factures</h3><p>Les factures tenaient compte des montants pris en charge par l’assurance et la mutuelle, déduits du montant à régler. L’application permettait également d’envoyer les factures directement aux clients par e-mail.</p></li></ol><p>L’application réunissait numérisation des dossiers, permissions par rôle, rendez-vous, facturation et échanges comptables. J’ai remis le code au propriétaire ; je ne connais pas son état actuel.</p><nav><h2>Autres études de cas</h2><ul><li><a href="/fr/etudes-de-cas/banking-agency-java-jee/">Un socle réutilisable pour les agences bancaires</a></li><li><a href="/fr/etudes-de-cas/ai-fashion-visuals-studio/">Simtis Studio : des visuels portés par mannequin, créés par IA à partir d'une photo produit</a></li></ul></nav></article></main></div>
     <script>
       (function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="1eD3-A8ZxJWQeyzQaE89z";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
     </script>
