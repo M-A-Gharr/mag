@@ -340,7 +340,7 @@
         ]
       },
       "11": {
-        "title": "Simtis Studio — immagini moda con IA",
+        "title": "Simtis Studio - immagini moda con IA",
         "description": "Prima di questo strumento, mostrare uno scialle nuovo indossato richiedeva un servizio fotografico. Ora un negozio carica una foto del prodotto e ottiene in pochi clic immagini indossate per il sito, i social e i cataloghi clienti. Sviluppato internamente in SIMTIS.",
         "technologies": [
           "OpenAI",
