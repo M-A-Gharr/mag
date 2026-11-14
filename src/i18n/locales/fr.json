@@ -19,13 +19,14 @@
       "title": "Mohamed Amine Gharrab · Développeur Full-Stack & IA",
       "description": "Développeur Full-Stack à Casablanca : applications web, automatisation IA, e-commerce (PrestaShop, WordPress, Shopify) et intégration CRM."
     },
-    "title": "Développeur Full-Stack\n& Automatisation IA",
-    "subtitle": "Développeur full-stack à Casablanca, je conçois des applications web, des boutiques en ligne et des automatisations IA qui font gagner du temps aux équipes et des ventes aux entreprises.",
+    "title": "Comprendre votre métier.\nConstruire ce qui le fait avancer.",
+    "subtitle": "Je pars de votre quotidien : les tâches qui se répètent, les données dispersées, les opportunités qui se perdent. Je conçois des applications web, des boutiques et des automatisations IA qui relient vos outils et simplifient le travail, de la conception à la prise en main.",
     "cta": {
-      "discover": "Me contacter",
+      "discover": "Parlons de votre projet",
       "projects": "Voir mes réalisations"
     },
-    "quote": "Coder. Créer. Connecter."
+    "quote": "Coder. Créer. Connecter.",
+    "eyebrow": "Développeur Full-Stack · Applications métier & IA"
   },
   "about": {
     "title": "À propos",
@@ -40,13 +41,12 @@
           "period": "2026 – Aujourd’hui",
           "role": "Développeur Full-Stack & Solutions Digitales",
           "company": "SIMTIS · Casablanca",
-          "desc": "Développeur interne d'un groupe de marques retail. J'ai créé un studio IA qui transforme les photos produit en visuels portés, une plateforme de prospection B2B et un site export relié à son propre CRM. J'ai aussi refondu une boutique PrestaShop en trois langues (plus de 20 modules sur mesure, de la page 10 à la page 1 de Google), migré une autre boutique de WooCommerce vers PrestaShop 9 et formé tout le groupe à Claude."
-        },
-        {
-          "period": "Projet personnel",
-          "role": "Fondateur",
-          "company": "M.A.G Store (Shopify)",
-          "desc": "Ma propre boutique Shopify d'articles cocooning, livrée partout au Maroc avec paiement à la livraison. J'ai monté la boutique et la marque, du logo au positionnement."
+          "desc": "J’interviens en développement logiciel, intégration IA et digitalisation métier, de la conception à la livraison de solutions utilisées par différentes équipes du groupe.",
+          "responsibilities": [
+            "Traduire les besoins opérationnels en exigences techniques et concevoir les parcours applicatifs.",
+            "Développer des plateformes full-stack, intégrer des fonctionnalités IA et maintenir les systèmes en production.",
+            "Collaborer avec les équipes métier et la direction pour identifier les améliorations, livrer des outils concrets et former les équipes aux solutions développées."
+          ]
         },
         {
           "period": "Oct – Déc 2024",
@@ -147,11 +147,31 @@
         }
       }
     },
-    "available": "Ouvert aux opportunités",
+    "available": "Ouvert à des collaborations ciblées",
     "avatarAlt": "Photo de Mohamed Amine Gharrab",
-    "subtitle": "Développeur full-stack chez SIMTIS à Casablanca, ouvert aux nouvelles opportunités.",
+    "subtitle": "Développeur full-stack chez SIMTIS à Casablanca, à la croisée des besoins métier, du développement logiciel et de l’IA.",
     "education": {
       "title": "Formation"
+    },
+    "entrepreneurial": {
+      "title": "Expérience entrepreneuriale",
+      "items": [
+        {
+          "period": "Projet personnel",
+          "role": "Fondateur",
+          "company": "M.A.G Store (Shopify)",
+          "desc": "Ma propre boutique Shopify d'articles cocooning, livrée partout au Maroc avec paiement à la livraison. J'ai monté la boutique et la marque, du logo au positionnement."
+        }
+      ]
+    },
+    "collaboration": {
+      "title": "Collaboration métier & pilotage produit",
+      "items": [
+        "Travailler directement avec les équipes métier pour comprendre leurs besoins quotidiens.",
+        "Traduire les besoins de la direction en exigences techniques.",
+        "Gérer les priorités entre plusieurs projets.",
+        "Livrer et faire évoluer les solutions à partir des retours du terrain."
+      ]
     }
   },
   "skills": {
@@ -194,6 +214,16 @@
     }
   },
   "projects": {
+    "featuredTitle": "Projets à la une",
+    "featuredSubtitle": "Quatre projets pour découvrir ma façon de relier les enjeux métier, le développement et l’IA.",
+    "showPortfolio": "Voir le portfolio complet",
+    "hidePortfolio": "Réduire le portfolio",
+    "featuredSummaries": {
+      "11": "Des visuels portés, fidèles à la marque, en quelques clics au lieu d'une séance photo, prêts pour le site, les réseaux sociaux et les catalogues clients.",
+      "8": "De la page 10 à la page 1 de Google dans les trois langues. J'assure toujours la maintenance et la sécurité de la boutique au quotidien.",
+      "6": "Un seul outil partagé, de la première recherche à la vente. Les prospects sont qualifiés avant qu'on y consacre du temps, et aucune piste ne se perd.",
+      "13": "Une bascule propre : les totaux des commandes correspondent à la source, chaque ancien lien fonctionne toujours, et l'équipe dispose de guides de déploiement."
+    },
     "title": "Projets",
     "meta": {
       "title": "Mohamed Amine Gharrab Projects",
@@ -661,7 +691,7 @@
         }
       ]
     },
-    "availability": "Disponibilité Freelance",
+    "availability": "Ouvert à des collaborations ciblées",
     "read": "Lire Plus",
     "close": "Fermer",
     "testimonialsData": [
@@ -685,7 +715,7 @@
       }
     ],
     "freelance": {
-      "availableForWork": "Disponible pour de nouveaux projets",
+      "availableForWork": "Ouvert à des collaborations ciblées",
       "services": "Ce que je peux prendre en charge",
       "contactMe": "Me contacter",
       "downloadCV": "Télécharger mon CV",

@@ -4,7 +4,7 @@ const study: CaseStudy = {
   "slug": "vr-property-showroom-crm",
   "projectId": 10,
   "published": "2026-11-11",
-  "modified": "2026-11-11",
+  "modified": "2026-11-14",
   "text": {
     "en": {
       "title": "VR Showroom: connecting virtual property visits to sales follow-up",
@@ -15,6 +15,27 @@ const study: CaseStudy = {
       "brief": {
         "mission": "Design and development of a virtual property showroom with an integrated CRM",
         "result": "Property exploration and lead follow-up in the same application"
+      },
+      technical: {
+        "heading": "Project technical overview",
+        "groups": [
+          {
+            "heading": "Technology stack",
+            "text": "React, Three.js, WebGL, 3D, CRM"
+          },
+          {
+            "heading": "Architecture and workflows",
+            "text": "React application combining an interactive property showroom and CRM, with Three.js / WebGL 3D views."
+          },
+          {
+            "heading": "Integrations and data",
+            "text": "Visit data connected to qualification, lead assignment and the sales pipeline."
+          },
+          {
+            "heading": "My role and responsibilities",
+            "text": "Personal project: developing the showroom, viewing journeys and their connection to sales follow-up."
+          }
+        ]
       },
       "sections": [
         {
@@ -80,6 +101,27 @@ const study: CaseStudy = {
         "mission": "Conception et développement d’un showroom immobilier virtuel avec CRM intégré",
         "result": "L’exploration des biens et le suivi des prospects dans une même application"
       },
+      technical: {
+        "heading": "Fiche technique du projet",
+        "groups": [
+          {
+            "heading": "Stack utilisée",
+            "text": "React, Three.js, WebGL, 3D, CRM"
+          },
+          {
+            "heading": "Architecture et fonctionnement",
+            "text": "Application React réunissant showroom immobilier interactif et CRM, avec visualisation 3D via Three.js / WebGL."
+          },
+          {
+            "heading": "Intégrations et données",
+            "text": "Données de visite reliées à la qualification, à l’attribution des prospects et au pipeline commercial."
+          },
+          {
+            "heading": "Mon rôle et mes responsabilités",
+            "text": "Projet personnel : développement du showroom, des parcours de visite et de leur liaison au suivi commercial."
+          }
+        ]
+      },
       "sections": [
         {
           "heading": "Le contexte",
@@ -143,6 +185,27 @@ const study: CaseStudy = {
       "brief": {
         "mission": "تصميم وتطوير معرض عقاري افتراضي مع نظام مدمج لإدارة علاقات العملاء",
         "result": "استكشاف العقارات ومتابعة العملاء المحتملين في تطبيق واحد"
+      },
+      technical: {
+        "heading": "الملف التقني للمشروع",
+        "groups": [
+          {
+            "heading": "التقنيات المستخدمة",
+            "text": "React, Three.js, WebGL, 3D, CRM"
+          },
+          {
+            "heading": "البنية ومسارات العمل",
+            "text": "تطبيق React يجمع معرضًا عقاريًا تفاعليًا وCRM مع عرض ثلاثي الأبعاد باستخدام Three.js / WebGL."
+          },
+          {
+            "heading": "التكامل والبيانات",
+            "text": "ربط بيانات الزيارة بالتأهيل وتوزيع العملاء المحتملين ومسار المبيعات."
+          },
+          {
+            "heading": "دوري ومسؤولياتي",
+            "text": "مشروع شخصي: تطوير المعرض ومسارات الزيارة وربطها بالمتابعة التجارية."
+          }
+        ]
       },
       "sections": [
         {

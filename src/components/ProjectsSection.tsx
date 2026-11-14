@@ -16,7 +16,8 @@ import ProjectVideo, { type ProjectVideoHandle } from './ProjectVideo';
 import { scroller } from 'react-scroll';
 import { Link as RouterLink } from 'react-router-dom';
 import { caseStudyForProject } from '@/content/caseStudies';
-import { caseStudyPath } from '@/i18n/paths';
+import { caseStudyPath, servicePath } from '@/i18n/paths';
+import { servicesForProject } from '@/content/services';
 import { SHOW_PROJECT_EVENT } from '@/lib/events';
 
 // three.js is only downloaded when the projects section renders.
@@ -42,6 +43,7 @@ type Project = {
 
 const ProjectsSection = () => {
   const { t, i18n } = useTranslation();
+  const [showAll, setShowAll] = useState(false);
 
   const [isOpen, setIsOpen] = useState(false);
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
@@ -218,7 +220,7 @@ const ProjectsSection = () => {
   // to this section, so they never compete with the first paint of the page.
   const sectionRef = useRef<HTMLElement>(null);
   const near = useInView(sectionRef, { once: true, margin: '800px 0px 800px 0px' });
-  const covers = useProjectCovers(near ? coverInputs : [], i18n.language);
+  const covers = useProjectCovers(near && showAll ? coverInputs : [], i18n.language);
 
   // "See the project" in a case study: scroll up here and bring that project to the front.
   const goToRef = useRef(goTo);
@@ -228,6 +230,7 @@ const ProjectsSection = () => {
       const id = (e as CustomEvent<{ id: number }>).detail?.id;
       const i = projects.findIndex((p) => p.id === id);
       if (i < 0) return;
+      setShowAll(true);
       scroller.scrollTo('projects', { smooth: 'easeInOutQuart', duration: 900, offset: -70 });
       goToRef.current(i);
     };
@@ -238,6 +241,52 @@ const ProjectsSection = () => {
 
   return (
     <section ref={sectionRef} id="projects" className="section-container">
+      <SectionHeading title={t('projects.featuredTitle')} subtitle={t('projects.featuredSubtitle')} />
+
+      <div className="grid gap-6 md:grid-cols-2">
+        {[11, 6, 8, 13].map((id, index) => {
+          const project = projects.find((item) => item.id === id)!;
+          const study = caseStudyForProject(id)!;
+          return (
+            <Reveal key={id}>
+              <RouterLink
+                to={caseStudyPath(i18n.language, study.slug)}
+                className="group flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-secondary/20 transition-colors hover:border-[#483dfb]/60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#483dfb]"
+              >
+                <div className="relative flex aspect-video items-center justify-center overflow-hidden bg-gradient-to-br from-[#483dfb]/15 to-[#9b87f5]/5">
+                  {project.video ? (
+                    <img src={project.video.poster} alt="" loading="lazy" className="h-full w-full object-contain transition-transform duration-500 group-hover:scale-105" />
+                  ) : (
+                    <div className="flex flex-col items-center gap-4 p-6 text-center">
+                      <div className="rounded-2xl bg-background/80 p-5">{project.icon}</div>
+                      <span className="text-2xl font-semibold">PrestaShop</span>
+                      <span className="text-sm text-muted-foreground">{t(`projects.items.${id}.technologies.3`)}</span>
+                    </div>
+                  )}
+                  <span className="absolute start-4 top-4 rounded-full bg-background/90 px-3 py-1 text-xs font-medium tabular-nums">0{index + 1}</span>
+                </div>
+                <div className="flex flex-1 flex-col p-6 md:p-8">
+                  <h3 className="mb-3 text-xl font-semibold">{t(`projects.items.${id}.title`)}</h3>
+                  <p className="mb-6 text-sm leading-relaxed text-muted-foreground">{t(`projects.featuredSummaries.${id}`)}</p>
+                  <span className="mt-auto inline-flex items-center gap-2 text-sm font-medium text-[#483dfb] dark:text-[#9b87f5]">
+                    {t('caseStudyPage.readFull')}
+                    <ArrowRight aria-hidden className="h-4 w-4 rtl:rotate-180" />
+                  </span>
+                </div>
+              </RouterLink>
+            </Reveal>
+          );
+        })}
+      </div>
+
+      <div className="my-10 text-center">
+        <Button variant="outline" aria-expanded={showAll} aria-controls="complete-portfolio" onClick={() => setShowAll(!showAll)}>
+          {t(showAll ? 'projects.hidePortfolio' : 'projects.showPortfolio')}
+        </Button>
+      </div>
+
+      <div id="complete-portfolio" hidden={!showAll}>
+      {showAll && <>
       <SectionHeading title={t('projects.title')} subtitle={t('projects.subtitle')} />
 
       <Reveal y={40}>
@@ -393,6 +442,14 @@ const ProjectsSection = () => {
                   </div>
 
                   <p className="mb-6 text-foreground/80 md:text-lg">{t(`projects.items.${current.id}.description`)}</p>
+                  <nav aria-label={t('services.title')} className="mb-5 flex flex-wrap gap-3">
+                    {servicesForProject(current.id).map((service) => (
+                      <RouterLink key={service.slug} to={servicePath(i18n.language, service.slug)} className="inline-flex items-center gap-1 text-sm font-medium text-[#483dfb] underline-offset-4 hover:underline dark:text-[#9b87f5]">
+                        {t(`about.services.${service.key}.title`)}
+                        <ArrowRight aria-hidden className="h-4 w-4 rtl:rotate-180" />
+                      </RouterLink>
+                    ))}
+                  </nav>
                   {caseStudyForProject(current.id) && (
                     <RouterLink
                       to={caseStudyPath(i18n.language, caseStudyForProject(current.id)!.slug)}
@@ -473,6 +530,8 @@ const ProjectsSection = () => {
         </Suspense>
       </Reveal>
       {/* Popup Modal for slideshow */}
+      </>}
+      </div>
       <AnimatePresence>
         {isOpen && (
           <motion.div

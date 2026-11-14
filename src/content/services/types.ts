@@ -12,7 +12,17 @@ export type ServiceText = {
   metaDescription: string;
   lead: string;
   audience: { heading: string; items: string[] };
-  offer: { heading: string; items: string[] };
+  offer: {
+    heading: string;
+    items: string[];
+    levels?: { heading: string; description: string; items: string[] }[];
+    support?: { heading: string; text: string };
+  };
+  technicalCapabilities?: {
+    heading: string;
+    intro: string;
+    groups: { heading: string; items: string[] }[];
+  };
   process: { heading: string; steps: { heading: string; text: string }[] };
 };
 

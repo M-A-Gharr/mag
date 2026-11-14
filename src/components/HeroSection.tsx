@@ -106,7 +106,11 @@ const HeroSection = () => {
         initial="hidden"
         animate="show"
       >
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 text-foreground">
+        <motion.p variants={fadeUp} className="text-sm md:text-base font-medium text-foreground/70 mb-5">
+          {t('hero.eyebrow')}
+        </motion.p>
+
+        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 text-foreground">
           <LetterSwapTitle
             lines={titleLines}
             lineVariants={line}
@@ -116,7 +120,7 @@ const HeroSection = () => {
 
         <motion.p
           variants={settleIn}
-          className="text-xl md:text-2xl text-foreground/80 max-w-3xl mx-auto mb-10 whitespace-pre-line"
+          className="text-lg md:text-xl leading-relaxed text-foreground/80 max-w-3xl mx-auto mb-10 whitespace-pre-line"
         >
           {t('hero.subtitle')}
         </motion.p>

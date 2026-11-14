@@ -7,7 +7,7 @@ const service: Service = {
   key: 'ecommerce',
   caseStudies: ['prestashop-redesign-multilingual-seo', 'migration-woocommerce-prestashop-9'],
   tools: ['PrestaShop', 'WordPress', 'Shopify', 'PHP', 'Google Search Console', 'Google Analytics', 'Surfer SEO', 'Semrush'],
-  modified: '2026-11-10',
+  modified: '2026-11-14',
   text: {
     fr: {
       title: 'E-commerce et SEO : PrestaShop, WordPress et Shopify',
@@ -15,7 +15,7 @@ const service: Service = {
       metaDescription:
         'Boutiques PrestaShop, WordPress et Shopify rapides et bien placées sur Google : refonte, modules sur mesure, migration et SEO multilingue, depuis Casablanca.',
       lead:
-        'Je crée, refonds et fais évoluer des boutiques en ligne qui se chargent vite, se trouvent sur Google et restent simples à gérer au quotidien. Sur PrestaShop surtout, mais aussi sur WordPress et Shopify, en français, en anglais et en arabe.',
+        'Je crée, refonds et fais évoluer des boutiques en ligne qui se chargent vite, se trouvent sur Google et restent simples à gérer au quotidien. Mon expertise PrestaShop couvre les modules sur mesure, les migrations complexes et les connexions ERP ou logiciels de gestion. J’interviens aussi sur WordPress et Shopify, en français, en anglais et en arabe.',
       audience: {
         heading: 'Les problèmes que je résous',
         items: [
@@ -36,6 +36,36 @@ const service: Service = {
           'maintenance, mises à jour et sécurité au quotidien.',
         ],
       },
+      technicalCapabilities: {
+        "heading": "Expertise PrestaShop",
+        "intro": "Je développe les fonctionnalités métier de la boutique et ses échanges avec le système de gestion. Cette expertise s’appuie notamment sur une refonte multilingue avec plus de 20 modules sur mesure et une migration WooCommerce vers PrestaShop 9.",
+        "groups": [
+          {
+            "heading": "Développement de modules sur mesure",
+            "items": [
+              "Modules PHP adaptés aux règles commerciales : ventes additionnelles, récompenses panier, remises par palier et suivi d’affiliation.",
+              "Fonctionnalités de gestion et de vente : notifications de ventes, suivi par canal et disponibilité en magasin sur les fiches produit.",
+              "Thèmes et parcours personnalisés, dont une commande sur une seule page et des blocs d’accueil modifiables."
+            ]
+          },
+          {
+            "heading": "Migrations complexes",
+            "items": [
+              "Reprise du catalogue, des contenus, des clients et de l’historique des commandes, notamment de WooCommerce vers PrestaShop 9.",
+              "Extraction Python et imports rejouables avec essai à blanc : prévention des doublons, conservation des modifications manuelles et vérification des totaux de commandes.",
+              "Redirections 301 pour les anciennes URL, tests automatisés sur ordinateur et mobile, et guides de déploiement."
+            ]
+          },
+          {
+            "heading": "Intégrations ERP et logiciels de gestion",
+            "items": [
+              "Connexion de la boutique aux données de gestion existantes, en fonction des exports ou interfaces disponibles.",
+              "Cas réalisé : synchronisation du stock depuis l’ERP deux fois par jour, par fichiers CSV et tâches planifiées.",
+              "Affichage de la disponibilité en magasin sur chaque fiche produit, pour relier le catalogue en ligne au réseau de boutiques physiques."
+            ]
+          }
+        ]
+      },
       process: {
         heading: 'Comment je travaille',
         steps: [
@@ -53,7 +83,7 @@ const service: Service = {
       metaDescription:
         'Fast PrestaShop, WordPress and Shopify stores that rank on Google: redesigns, custom modules, platform migrations and multilingual SEO, from Casablanca.',
       lead:
-        'I build, redesign and improve online stores that load fast, get found on Google and stay easy to run day to day. Mostly on PrestaShop, but also on WordPress and Shopify, in French, English and Arabic.',
+        'I build, redesign and improve online stores that load fast, get found on Google and stay easy to run day to day. My PrestaShop expertise covers custom modules, complex migrations and connections to ERP or management software. I also work with WordPress and Shopify, in French, English and Arabic.',
       audience: {
         heading: 'Problems I solve',
         items: [
@@ -74,6 +104,36 @@ const service: Service = {
           'day-to-day maintenance, updates and security.',
         ],
       },
+      technicalCapabilities: {
+        "heading": "PrestaShop expertise",
+        "intro": "I build store-specific business features and connect them to existing management systems. This work includes a multilingual redesign with more than 20 custom modules and a WooCommerce-to-PrestaShop 9 migration.",
+        "groups": [
+          {
+            "heading": "Custom module development",
+            "items": [
+              "PHP modules tailored to commercial rules: upselling, cart rewards, tiered discounts and affiliate tracking.",
+              "Sales and management features: sales notifications, channel tracking and in-store availability on product pages.",
+              "Custom themes and purchase journeys, including one-page checkout and editable homepage blocks."
+            ]
+          },
+          {
+            "heading": "Complex migrations",
+            "items": [
+              "Transfer of catalogues, content, customers and order history, including WooCommerce to PrestaShop 9.",
+              "Python extraction and repeatable imports with dry runs: duplicate prevention, preservation of manual changes and order-total reconciliation.",
+              "301 redirects for legacy URLs, automated desktop and mobile tests, and deployment guides."
+            ]
+          },
+          {
+            "heading": "ERP and management software integrations",
+            "items": [
+              "Connect the store to existing management data through the exports or interfaces available.",
+              "Implemented example: ERP stock synchronisation twice a day using CSV files and scheduled tasks.",
+              "Display availability by physical store on product pages, connecting the online catalogue to the retail network."
+            ]
+          }
+        ]
+      },
       process: {
         heading: 'How I work',
         steps: [
@@ -91,7 +151,7 @@ const service: Service = {
       metaDescription:
         'متاجر PrestaShop وWordPress وShopify سريعة وظاهرة في Google: إعادة تصميم، ووحدات مخصصة، ونقل المنصات، وSEO متعدد اللغات، من الدار البيضاء.',
       lead:
-        'أنشئ متاجر إلكترونية وأعيد تصميمها وأطوّرها لتكون سريعة وظاهرة في Google وسهلة الإدارة يومياً. على PrestaShop أساساً، وكذلك على WordPress وShopify، بالفرنسية والإنجليزية والعربية.',
+        'أنشئ متاجر إلكترونية وأعيد تصميمها وأطوّرها لتكون سريعة وظاهرة في Google وسهلة الإدارة يومياً. تشمل خبرتي في PrestaShop الوحدات المخصصة والترحيل المعقد والربط بأنظمة ERP أو برامج الإدارة. وأعمل أيضًا على WordPress وShopify بالفرنسية والإنجليزية والعربية.',
       audience: {
         heading: 'المشكلات التي أحلّها',
         items: [
@@ -111,6 +171,36 @@ const service: Service = {
           'تخصيص القوالب وتحسين تجربة الشراء؛',
           'صيانة يومية وتحديثات وأمان.',
         ],
+      },
+      technicalCapabilities: {
+        "heading": "خبرة PrestaShop",
+        "intro": "أطوّر وظائف المتجر الخاصة بالنشاط وأربطها بأنظمة الإدارة القائمة. تشمل هذه الخبرة إعادة تصميم متعددة اللغات بأكثر من 20 وحدة مخصصة، وترحيل متجر من WooCommerce إلى PrestaShop 9.",
+        "groups": [
+          {
+            "heading": "تطوير وحدات مخصصة",
+            "items": [
+              "وحدات PHP تلائم القواعد التجارية: البيع الإضافي ومكافآت السلة والخصومات حسب القيمة وتتبع التسويق بالعمولة.",
+              "وظائف للمبيعات والإدارة: إشعارات المبيعات والتتبع حسب القناة وتوفر المنتجات في المتاجر على صفحات المنتجات.",
+              "قوالب ومسارات شراء مخصصة، منها إتمام الطلب في صفحة واحدة وكتل صفحة رئيسية قابلة للتعديل."
+            ]
+          },
+          {
+            "heading": "عمليات ترحيل معقدة",
+            "items": [
+              "نقل الكتالوج والمحتوى والعملاء وسجل الطلبات، بما فيه الترحيل من WooCommerce إلى PrestaShop 9.",
+              "استخراج باستخدام Python واستيراد قابل لإعادة التشغيل مع تشغيل تجريبي: منع التكرار والحفاظ على التعديلات اليدوية والتحقق من إجماليات الطلبات.",
+              "إعادة توجيه 301 للروابط القديمة واختبارات آلية للحاسوب والهاتف وأدلة للنشر."
+            ]
+          },
+          {
+            "heading": "الربط بأنظمة ERP وبرامج الإدارة",
+            "items": [
+              "ربط المتجر ببيانات الإدارة القائمة بحسب ملفات التصدير أو الواجهات المتاحة.",
+              "مثال منفّذ: مزامنة المخزون من نظام ERP مرتين يوميًا بملفات CSV ومهام مجدولة.",
+              "عرض توفر المنتج في المتاجر على كل صفحة منتج، لربط الكتالوج الإلكتروني بشبكة المتاجر الفعلية."
+            ]
+          }
+        ]
       },
       process: {
         heading: 'طريقتي في العمل',

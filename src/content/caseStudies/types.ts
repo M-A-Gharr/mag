@@ -21,6 +21,10 @@ export type CaseStudyText = {
   sector: string;
   lead: string;
   brief: { mission: string; result: string };
+  technical?: {
+    heading: string;
+    groups: { heading: string; text: string }[];
+  };
   sections: CaseStudySection[];
   result: string;
 };

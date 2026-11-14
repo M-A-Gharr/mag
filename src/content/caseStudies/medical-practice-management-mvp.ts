@@ -4,7 +4,7 @@ const study: CaseStudy = {
   "slug": "medical-practice-management-mvp",
   "projectId": 17,
   "published": "2026-11-11",
-  "modified": "2026-11-11",
+  "modified": "2026-11-14",
   "text": {
     "en": {
       "title": "Medical practice management: records, appointments and invoicing",
@@ -15,6 +15,27 @@ const study: CaseStudy = {
       "brief": {
         "mission": "Build a medical practice application for records, appointments and invoicing",
         "result": "Records, bookings and invoicing in one application"
+      },
+      technical: {
+        "heading": "Project technical overview",
+        "groups": [
+          {
+            "heading": "Technology stack",
+            "text": "C#, OCR"
+          },
+          {
+            "heading": "Architecture and workflows",
+            "text": "C# application combining records, role-based permissions, appointments and billing for a medical practice."
+          },
+          {
+            "heading": "Integrations and data",
+            "text": "OCR-assisted digitisation, Excel imports, accounting exports and invoice delivery by email."
+          },
+          {
+            "heading": "My role and responsibilities",
+            "text": "Developing practice management features: records, booking, permissions and billing, within the 2020–2021 project."
+          }
+        ]
       },
       "sections": [
         {
@@ -59,6 +80,27 @@ const study: CaseStudy = {
         "mission": "Développer une application de gestion des dossiers, des rendez-vous et de la facturation",
         "result": "Les dossiers, les réservations et la facturation dans une application"
       },
+      technical: {
+        "heading": "Fiche technique du projet",
+        "groups": [
+          {
+            "heading": "Stack utilisée",
+            "text": "C#, OCR"
+          },
+          {
+            "heading": "Architecture et fonctionnement",
+            "text": "Application C# réunissant dossiers, permissions par rôle, rendez-vous et facturation pour un cabinet médical."
+          },
+          {
+            "heading": "Intégrations et données",
+            "text": "Numérisation assistée par OCR, imports Excel, exports comptables et envoi des factures par e-mail."
+          },
+          {
+            "heading": "Mon rôle et mes responsabilités",
+            "text": "Développement des fonctions de gestion du cabinet : dossiers, réservation, permissions et facturation, dans le cadre du projet 2020–2021."
+          }
+        ]
+      },
       "sections": [
         {
           "heading": "Le défi",
@@ -101,6 +143,27 @@ const study: CaseStudy = {
       "brief": {
         "mission": "تطوير تطبيق لإدارة سجلات العيادة ومواعيدها وفواتيرها",
         "result": "السجلات والمواعيد والفوترة في تطبيق واحد"
+      },
+      technical: {
+        "heading": "الملف التقني للمشروع",
+        "groups": [
+          {
+            "heading": "التقنيات المستخدمة",
+            "text": "C#, OCR"
+          },
+          {
+            "heading": "البنية ومسارات العمل",
+            "text": "تطبيق C# يجمع الملفات والصلاحيات حسب الدور والمواعيد والفوترة لعيادة طبية."
+          },
+          {
+            "heading": "التكامل والبيانات",
+            "text": "رقمنة بمساعدة OCR واستيراد Excel وصادرات محاسبية وإرسال الفواتير بالبريد الإلكتروني."
+          },
+          {
+            "heading": "دوري ومسؤولياتي",
+            "text": "تطوير وظائف إدارة العيادة: الملفات والحجز والصلاحيات والفوترة ضمن مشروع 2020–2021."
+          }
+        ]
       },
       "sections": [
         {

@@ -7,7 +7,7 @@ const study: CaseStudy = {
   slug: 'prestashop-redesign-multilingual-seo',
   projectId: 8,
   published: '2026-11-10',
-  modified: '2026-11-10',
+  modified: '2026-11-14',
   text: {
     fr: {
       title: 'Refonte, SEO multilingue et modules sur mesure pour une boutique PrestaShop',
@@ -20,6 +20,27 @@ const study: CaseStudy = {
       brief: {
         mission: 'Refonte complète, SEO multilingue, modules sur mesure et maintenance au quotidien',
         result: 'De la page 10 à la page 1 de Google dans les trois langues',
+      },
+      technical: {
+        "heading": "Fiche technique du projet",
+        "groups": [
+          {
+            "heading": "Stack utilisée",
+            "text": "PrestaShop, PHP, Modules sur mesure, SEO multilingue, FASHN AI, Cron / CSV"
+          },
+          {
+            "heading": "Architecture et fonctionnement",
+            "text": "Boutique PrestaShop en trois langues, thème personnalisé et plus de 20 modules sur mesure reliés au parcours d’achat et à la gestion commerciale."
+          },
+          {
+            "heading": "Intégrations et données",
+            "text": "Stock ERP importé deux fois par jour par CSV et tâches planifiées ; disponibilité en magasin affichée sur les fiches produit."
+          },
+          {
+            "heading": "Mon rôle et mes responsabilités",
+            "text": "Refonte de la boutique, développement des modules, intégration des stocks, SEO multilingue et maintenance quotidienne."
+          }
+        ]
       },
       sections: [
         {
@@ -91,6 +112,27 @@ const study: CaseStudy = {
         mission: 'Full redesign, multilingual SEO, custom modules and day-to-day maintenance',
         result: 'From page 10 to page 1 of Google in all three languages',
       },
+      technical: {
+        "heading": "Project technical overview",
+        "groups": [
+          {
+            "heading": "Technology stack",
+            "text": "PrestaShop, PHP, Custom modules, Multilingual SEO, FASHN AI, Cron / CSV"
+          },
+          {
+            "heading": "Architecture and workflows",
+            "text": "Three-language PrestaShop store with a custom theme and more than 20 modules supporting checkout and commercial operations."
+          },
+          {
+            "heading": "Integrations and data",
+            "text": "ERP stock imported twice daily using CSV files and scheduled tasks; in-store availability displayed on product pages."
+          },
+          {
+            "heading": "My role and responsibilities",
+            "text": "Store redesign, module development, stock integration, multilingual SEO and daily maintenance."
+          }
+        ]
+      },
       sections: [
         {
           heading: 'The context',
@@ -160,6 +202,27 @@ const study: CaseStudy = {
       brief: {
         mission: 'إعادة تصميم كاملة، وSEO متعدد اللغات، ووحدات مخصصة، وصيانة يومية',
         result: 'من الصفحة 10 إلى الصفحة 1 في Google باللغات الثلاث',
+      },
+      technical: {
+        "heading": "الملف التقني للمشروع",
+        "groups": [
+          {
+            "heading": "التقنيات المستخدمة",
+            "text": "PrestaShop, PHP, وحدات مخصصة, SEO متعدد اللغات, FASHN AI, Cron / CSV"
+          },
+          {
+            "heading": "البنية ومسارات العمل",
+            "text": "متجر PrestaShop بثلاث لغات وقالب مخصص وأكثر من 20 وحدة تدعم الشراء والعمليات التجارية."
+          },
+          {
+            "heading": "التكامل والبيانات",
+            "text": "استيراد مخزون ERP مرتين يوميًا بملفات CSV ومهام مجدولة، وعرض التوفر في المتاجر على صفحات المنتجات."
+          },
+          {
+            "heading": "دوري ومسؤولياتي",
+            "text": "إعادة تصميم المتجر وتطوير الوحدات وربط المخزون وSEO متعدد اللغات والصيانة اليومية."
+          }
+        ]
       },
       sections: [
         {

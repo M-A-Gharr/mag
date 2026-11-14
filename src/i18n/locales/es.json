@@ -19,13 +19,14 @@
       "title": "Mohamed Amine Gharrab · Desarrollador Full-Stack e IA",
       "description": "Desarrollador Full-Stack en Casablanca: aplicaciones web, automatización con IA, e-commerce (PrestaShop, WordPress, Shopify) e integración de CRM."
     },
-    "title": "Desarrollador Full-Stack\n& Automatización con IA",
-    "subtitle": "Desarrollador full-stack en Casablanca. Creo aplicaciones web, tiendas online y automatizaciones con IA que ahorran tiempo a los equipos y ayudan a las empresas a vender más.",
+    "title": "Entender tu negocio.\nCrear lo que lo hace avanzar.",
+    "subtitle": "Parto de tu día a día: tareas repetitivas, datos dispersos y oportunidades que se pierden. Desarrollo aplicaciones web, tiendas online y automatizaciones con IA que conectan tus herramientas y simplifican el trabajo, desde el diseño hasta su puesta en uso.",
     "cta": {
-      "discover": "Contactar",
+      "discover": "Hablemos de tu proyecto",
       "projects": "Ver mi trabajo"
     },
-    "quote": "Codifica. Crea. Conecta."
+    "quote": "Codifica. Crea. Conecta.",
+    "eyebrow": "Desarrollador Full-Stack · Aplicaciones de negocio e IA"
   },
   "about": {
     "title": "Sobre mí",
@@ -40,13 +41,12 @@
           "period": "2026 – Actualidad",
           "role": "Desarrollador Full-Stack y Soluciones Digitales",
           "company": "SIMTIS · Casablanca",
-          "desc": "Desarrollador interno de un grupo de marcas de retail. Creé un estudio de IA que convierte fotos de producto en imágenes con modelo, una plataforma de prospección B2B y una web de exportación conectada a su propio CRM. También rehíce una tienda PrestaShop en tres idiomas (más de 20 módulos a medida, de la página 10 a la página 1 de Google), migré otra tienda de WooCommerce a PrestaShop 9 y formé a todo el grupo para trabajar con Claude."
-        },
-        {
-          "period": "Proyecto personal",
-          "role": "Fundador",
-          "company": "M.A.G Store (Shopify)",
-          "desc": "Mi propia tienda Shopify de productos para el confort del hogar, con envíos a todo Marruecos y pago contra reembolso. Monté la tienda y creé la marca, del logotipo al posicionamiento."
+          "desc": "Trabajo en desarrollo de software, integración de IA y digitalización del negocio, diseñando y entregando soluciones utilizadas por distintos equipos del grupo.",
+          "responsibilities": [
+            "Traducir las necesidades operativas en requisitos técnicos y diseñar los flujos de las aplicaciones.",
+            "Desarrollar plataformas full-stack, integrar funciones de IA y mantener los sistemas en producción.",
+            "Colaborar con los equipos de negocio y la dirección para identificar mejoras, entregar herramientas prácticas y formar a los equipos."
+          ]
         },
         {
           "period": "Oct – Dic 2024",
@@ -147,11 +147,31 @@
         }
       }
     },
-    "available": "Abierto a oportunidades",
+    "available": "Abierto a colaboraciones seleccionadas",
     "avatarAlt": "Foto de Mohamed Amine Gharrab",
-    "subtitle": "Desarrollador full-stack en SIMTIS, en Casablanca, abierto a nuevas oportunidades.",
+    "subtitle": "Desarrollador full-stack en SIMTIS, en Casablanca, conectando necesidades de negocio, desarrollo de software e IA.",
     "education": {
       "title": "Formación"
+    },
+    "entrepreneurial": {
+      "title": "Experiencia emprendedora",
+      "items": [
+        {
+          "period": "Proyecto personal",
+          "role": "Fundador",
+          "company": "M.A.G Store (Shopify)",
+          "desc": "Mi propia tienda Shopify de productos para el confort del hogar, con envíos a todo Marruecos y pago contra reembolso. Monté la tienda y creé la marca, del logotipo al posicionamiento."
+        }
+      ]
+    },
+    "collaboration": {
+      "title": "Colaboración con el negocio y responsabilidad de producto",
+      "items": [
+        "Trabajar directamente con los equipos para comprender sus necesidades diarias.",
+        "Traducir las necesidades de la dirección en requisitos técnicos.",
+        "Gestionar prioridades entre varios proyectos.",
+        "Entregar y mejorar soluciones a partir de los comentarios de los usuarios."
+      ]
     }
   },
   "skills": {
@@ -194,6 +214,16 @@
     }
   },
   "projects": {
+    "featuredTitle": "Proyectos destacados",
+    "featuredSubtitle": "Cuatro proyectos que conectan las necesidades del negocio, el desarrollo y la IA.",
+    "showPortfolio": "Ver el portfolio completo",
+    "hidePortfolio": "Contraer portfolio",
+    "featuredSummaries": {
+      "11": "Imágenes con modelo, fieles a la marca, en pocos clics en lugar de una sesión de fotos, listas para la web, las redes y los catálogos de clientes.",
+      "8": "De la página 10 a la página 1 de Google en los tres idiomas. Sigo manteniendo y protegiendo la tienda cada día.",
+      "6": "Una sola herramienta compartida, de la primera búsqueda a la venta. Los prospectos se califican antes de dedicarles tiempo, y ninguno se pierde.",
+      "13": "Un cambio limpio: los totales de pedidos coinciden con el origen, todos los enlaces antiguos siguen funcionando y el equipo tiene guías de despliegue."
+    },
     "title": "Proyectos",
     "meta": {
       "title": "Proyectos de Mohamed Amine Gharrab",
@@ -661,7 +691,7 @@
         }
       ]
     },
-    "availability": "Disponibilidad freelance",
+    "availability": "Abierto a colaboraciones seleccionadas",
     "read": "Leer más",
     "close": "Cerrar",
     "testimonialsData": [
@@ -685,7 +715,7 @@
       }
     ],
     "freelance": {
-      "availableForWork": "Disponible para nuevos proyectos",
+      "availableForWork": "Abierto a colaboraciones seleccionadas",
       "services": "Lo que puedo asumir",
       "contactMe": "Contáctame",
       "downloadCV": "Descargar mi CV",

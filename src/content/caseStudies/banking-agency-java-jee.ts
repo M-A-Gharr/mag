@@ -4,7 +4,7 @@ const study: CaseStudy = {
   "slug": "banking-agency-java-jee",
   "projectId": 18,
   "published": "2026-11-11",
-  "modified": "2026-11-11",
+  "modified": "2026-11-14",
   "text": {
     "en": {
       "title": "A reusable application foundation for public share offerings",
@@ -15,6 +15,27 @@ const study: CaseStudy = {
       "brief": {
         "mission": "Build authentication and the application foundation for banking-agency workflows around public share offerings",
         "result": "A reusable foundation for agency workflows involving OPV clients"
+      },
+      technical: {
+        "heading": "Project technical overview",
+        "groups": [
+          {
+            "heading": "Technology stack",
+            "text": "Java, Java EE (JEE), REST API"
+          },
+          {
+            "heading": "Architecture and workflows",
+            "text": "Java/JEE application foundation designed for reuse in bank branches, with authentication and client onboarding for public share offerings."
+          },
+          {
+            "heading": "Integrations and data",
+            "text": "REST APIs and PDF generation within the banking workflow."
+          },
+          {
+            "heading": "My role and responsibilities",
+            "text": "Contribution focused on authentication and the application foundation, as part of the 2020 final-year project at Eurafric Maroc."
+          }
+        ]
       },
       "sections": [
         {
@@ -49,6 +70,27 @@ const study: CaseStudy = {
         "mission": "Développer l’authentification et le socle d’une application bancaire pour les parcours liés aux OPV",
         "result": "Un socle réutilisable pour les parcours en agence des clients OPV"
       },
+      technical: {
+        "heading": "Fiche technique du projet",
+        "groups": [
+          {
+            "heading": "Stack utilisée",
+            "text": "Java, Java EE (JEE), REST API"
+          },
+          {
+            "heading": "Architecture et fonctionnement",
+            "text": "Socle applicatif Java/JEE conçu pour être réutilisable en agence bancaire, avec authentification et parcours d’entrée en relation pour les OPV."
+          },
+          {
+            "heading": "Intégrations et données",
+            "text": "API REST et génération de documents PDF dans le parcours bancaire."
+          },
+          {
+            "heading": "Mon rôle et mes responsabilités",
+            "text": "Contribution centrée sur l’authentification et le socle applicatif, dans le cadre du projet de fin d’études de 2020 chez Eurafric Maroc."
+          }
+        ]
+      },
       "sections": [
         {
           "heading": "Le défi",
@@ -81,6 +123,27 @@ const study: CaseStudy = {
       "brief": {
         "mission": "تطوير المصادقة وأساس تطبيق بنكي لمسارات العمل المرتبطة بعروض البيع العام للأسهم",
         "result": "أساس قابل لإعادة الاستخدام لخدمة عملاء عروض بيع الأسهم في الوكالات"
+      },
+      technical: {
+        "heading": "الملف التقني للمشروع",
+        "groups": [
+          {
+            "heading": "التقنيات المستخدمة",
+            "text": "Java, Java EE (JEE), REST API"
+          },
+          {
+            "heading": "البنية ومسارات العمل",
+            "text": "أساس تطبيقي Java/JEE قابل لإعادة الاستخدام في الوكالات البنكية، مع المصادقة وتسجيل العملاء لعروض البيع العام للأسهم."
+          },
+          {
+            "heading": "التكامل والبيانات",
+            "text": "واجهات REST API وإنشاء مستندات PDF ضمن المسار البنكي."
+          },
+          {
+            "heading": "دوري ومسؤولياتي",
+            "text": "مساهمة تركز على المصادقة وأساس التطبيق ضمن مشروع التخرج سنة 2020 لدى Eurafric Maroc."
+          }
+        ]
       },
       "sections": [
         {

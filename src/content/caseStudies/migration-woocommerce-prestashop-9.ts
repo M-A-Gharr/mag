@@ -6,7 +6,7 @@ const study: CaseStudy = {
   slug: 'migration-woocommerce-prestashop-9',
   projectId: 13,
   published: '2026-11-10',
-  modified: '2026-11-10',
+  modified: '2026-11-14',
   text: {
     fr: {
       title: "Migration d'une boutique de mode de WooCommerce vers PrestaShop 9",
@@ -19,6 +19,27 @@ const study: CaseStudy = {
       brief: {
         mission: 'Migration complète de WooCommerce vers PrestaShop 9, avec un thème et des modules sur mesure',
         result: 'Aucun client, aucune commande et aucune page perdus',
+      },
+      technical: {
+        "heading": "Fiche technique du projet",
+        "groups": [
+          {
+            "heading": "Stack utilisée",
+            "text": "PrestaShop 9, PHP 8.4, Python, WooCommerce, Puppeteer, Docker"
+          },
+          {
+            "heading": "Architecture et fonctionnement",
+            "text": "Chaîne d’extraction et d’import vers PrestaShop 9, avec essai à blanc et imports rejouables sans doublons ni écrasement des modifications manuelles."
+          },
+          {
+            "heading": "Intégrations et données",
+            "text": "Données WooCommerce : catalogue, contenus, clients et commandes ; redirections 301 entre les anciennes et nouvelles URL."
+          },
+          {
+            "heading": "Mon rôle et mes responsabilités",
+            "text": "Développement de l’extracteur Python, de l’import, du thème et des modules ; contrôle des totaux, tests navigateur et documentation de déploiement."
+          }
+        ]
       },
       sections: [
         {
@@ -94,6 +115,27 @@ const study: CaseStudy = {
         mission: 'Full migration from WooCommerce to PrestaShop 9, with a custom theme and modules',
         result: 'No customer, no order and no page lost',
       },
+      technical: {
+        "heading": "Project technical overview",
+        "groups": [
+          {
+            "heading": "Technology stack",
+            "text": "PrestaShop 9, PHP 8.4, Python, WooCommerce, Puppeteer, Docker"
+          },
+          {
+            "heading": "Architecture and workflows",
+            "text": "Extraction and import pipeline into PrestaShop 9, with dry runs and repeatable imports that avoid duplicates and preserve manual changes."
+          },
+          {
+            "heading": "Integrations and data",
+            "text": "WooCommerce catalogue, content, customers and orders; 301 redirects between old and new URLs."
+          },
+          {
+            "heading": "My role and responsibilities",
+            "text": "Developing the Python extractor, import, theme and modules; reconciling totals, browser testing and deployment documentation."
+          }
+        ]
+      },
       sections: [
         {
           heading: 'The context',
@@ -167,6 +209,27 @@ const study: CaseStudy = {
       brief: {
         mission: 'نقل كامل من WooCommerce إلى PrestaShop 9، مع قالب ووحدات مخصصة',
         result: 'لم يضع أي عميل أو طلب أو صفحة',
+      },
+      technical: {
+        "heading": "الملف التقني للمشروع",
+        "groups": [
+          {
+            "heading": "التقنيات المستخدمة",
+            "text": "PrestaShop 9, PHP 8.4, Python, WooCommerce, Puppeteer, Docker"
+          },
+          {
+            "heading": "البنية ومسارات العمل",
+            "text": "مسار استخراج واستيراد إلى PrestaShop 9 مع تشغيل تجريبي واستيراد قابل للإعادة دون تكرار أو استبدال التعديلات اليدوية."
+          },
+          {
+            "heading": "التكامل والبيانات",
+            "text": "كتالوج WooCommerce والمحتوى والعملاء والطلبات، وإعادة توجيه 301 بين الروابط القديمة والجديدة."
+          },
+          {
+            "heading": "دوري ومسؤولياتي",
+            "text": "تطوير مستخرج Python والاستيراد والقالب والوحدات، والتحقق من الإجماليات واختبارات المتصفح وتوثيق النشر."
+          }
+        ]
       },
       sections: [
         {

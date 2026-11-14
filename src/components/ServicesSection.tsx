@@ -3,7 +3,9 @@
 import { useTranslation } from 'react-i18next';
 import { Link as RouterLink } from 'react-router-dom';
 import { serviceForKey } from '@/content/services';
-import { servicePath } from '@/i18n/paths';
+import { servicePath, caseStudyPath } from '@/i18n/paths';
+import { caseStudyLang } from '@/content/caseStudies';
+import { conversionCopy } from '@/content/conversion';
 import { ArrowUpRight, Bot, Check, Code, ShoppingCart } from 'lucide-react';
 import { SectionHeading, Stagger, StaggerItem } from './motion';
 
@@ -43,13 +45,19 @@ const ServicesSection = () => {
                 )}
               </ul>
               {serviceForKey(key) && (
+                <div className="mt-auto flex flex-col gap-3 pt-6">
                 <RouterLink
                   to={servicePath(i18n.language, serviceForKey(key)!.slug)}
-                  className="mt-auto inline-flex items-center gap-1 pt-6 text-sm font-medium text-[#483dfb] underline-offset-4 hover:underline dark:text-[#9b87f5]"
+                  className="inline-flex items-center gap-1 text-sm font-medium text-[#483dfb] underline-offset-4 hover:underline dark:text-[#9b87f5]"
                 >
                   {t('servicePage.discover')}
                   <ArrowUpRight className="h-4 w-4 rtl:-scale-x-100" aria-hidden />
                 </RouterLink>
+                <RouterLink to={caseStudyPath(i18n.language, serviceForKey(key)!.caseStudies[0])} className="inline-flex items-center gap-1 text-sm underline-offset-4 hover:underline">
+                  {conversionCopy[caseStudyLang(i18n.language)].example}
+                  <ArrowUpRight className="h-4 w-4 rtl:-scale-x-100" aria-hidden />
+                </RouterLink>
+                </div>
               )}
             </article>
           </StaggerItem>

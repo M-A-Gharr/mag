@@ -4,7 +4,7 @@
 import { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { ArrowRight, ArrowUpRight, Download, ChevronRight, Trophy } from 'lucide-react';
+import { ArrowUpRight, ChevronRight, Trophy } from 'lucide-react';
 import '@/i18n/config';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -12,9 +12,10 @@ import SectionLink from '@/components/SectionLink';
 import { Reveal } from '@/components/motion';
 import { CASE_STUDY_PAGES, caseStudyLang, relatedCaseStudies, type CaseStudy } from '@/content/caseStudies';
 import { caseStudyPath, pathFor, servicePath, SITE_URL } from '@/i18n/paths';
-import { serviceForCaseStudy } from '@/content/services';
+import { servicesForCaseStudy } from '@/content/services';
 import NotFound from './NotFound';
-import { downloadCv } from '@/lib/cv';
+import { conversionCopy } from '@/content/conversion';
+import ContextualContact from '@/components/ContextualContact';
 
 const OG_LOCALES: Record<string, string> = { en: 'en_US', fr: 'fr_FR', ar: 'ar_MA' };
 
@@ -29,7 +30,10 @@ const CaseStudyPage = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    entry?.load().then((m) => setStudy(m.default));
+    let cancelled = false;
+    setStudy(null);
+    entry?.load().then((m) => { if (!cancelled) setStudy(m.default); });
+    return () => { cancelled = true; };
   }, [entry]);
 
   const lang = caseStudyLang(i18n.language);
@@ -59,7 +63,10 @@ const CaseStudyPage = () => {
   // Short sector and result of every case study, from the home page cards (all 7 languages).
   const cardsRaw = t('bonus.caseStudies.items', { returnObjects: true });
   const cards = Array.isArray(cardsRaw) ? (cardsRaw as { projectId: number; sector: string; result: string }[]) : [];
-  const related = relatedCaseStudies(slug);
+  const relevantServices = servicesForCaseStudy(slug);
+  const relevantSlugs = new Set(relevantServices.flatMap((service) => service.caseStudies));
+  const related = [...CASE_STUDY_PAGES.filter((page) => page.slug !== slug && relevantSlugs.has(page.slug)), ...relatedCaseStudies(slug)]
+    .filter((page, index, pages) => pages.findIndex((candidate) => candidate.slug === page.slug) === index).slice(0, 2);
 
   const raw = study ? t(`projects.items.${study.projectId}.technologies`, { returnObjects: true }) : [];
   const technologies = Array.isArray(raw) ? (raw as string[]) : [];
@@ -104,6 +111,7 @@ const CaseStudyPage = () => {
                 </span>
                 <h1 className="mt-5 text-3xl font-bold leading-tight md:text-5xl">{text.title}</h1>
                 <p className="mt-6 text-lg leading-relaxed text-foreground/80 md:text-xl">{text.lead}</p>
+                <ContextualContact topic={`project:${slug}`} compact />
               </Reveal>
 
               {/* At a glance */}
@@ -120,16 +128,17 @@ const CaseStudyPage = () => {
                   <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">{t('caseStudyPage.result')}</p>
                   <p className="mt-1.5 font-medium text-[#483dfb] dark:text-[#9b87f5]">{text.brief.result}</p>
                 </div>
-                {serviceForCaseStudy(slug) && (
+                {relevantServices.length > 0 && (
                   <div className="md:col-span-3">
-                    <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">{t('caseStudyPage.service')}</p>
-                    <Link
-                      to={servicePath(i18n.language, serviceForCaseStudy(slug)!.slug)}
-                      className="mt-1.5 inline-flex items-center gap-1 font-medium text-[#483dfb] underline-offset-4 hover:underline dark:text-[#9b87f5]"
-                    >
-                      {t(`about.services.${serviceForCaseStudy(slug)!.key}.title`)}
-                      <ArrowUpRight className="h-4 w-4 rtl:-scale-x-100" aria-hidden />
-                    </Link>
+                    <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">{conversionCopy[lang].related}</p>
+                    <div className="mt-2 flex flex-wrap gap-4">
+                      {relevantServices.map((service) => (
+                        <Link key={service.slug} to={servicePath(i18n.language, service.slug)} className="inline-flex items-center gap-1 font-medium text-[#483dfb] underline-offset-4 hover:underline dark:text-[#9b87f5]">
+                          {t(`about.services.${service.key}.title`)}
+                          <ArrowUpRight className="h-4 w-4 rtl:-scale-x-100" aria-hidden />
+                        </Link>
+                      ))}
+                    </div>
                   </div>
                 )}
                 {technologies.length > 0 && (
@@ -148,6 +157,19 @@ const CaseStudyPage = () => {
 
               {/* The story: no reveal animation, the text is there to be read straight away */}
               <div className="mt-14 space-y-12">
+                {text.technical && (
+                  <section aria-labelledby="project-technical-title">
+                    <h2 id="project-technical-title" className="text-2xl font-semibold md:text-3xl">{text.technical.heading}</h2>
+                    <dl className="mt-6 grid gap-4 sm:grid-cols-2">
+                      {text.technical.groups.map((group) => (
+                        <div key={group.heading} className="panel p-5 md:p-6">
+                          <dt className="font-semibold text-[#483dfb] dark:text-[#9b87f5]">{group.heading}</dt>
+                          <dd className="mt-3 leading-relaxed text-foreground/85">{group.text}</dd>
+                        </div>
+                      ))}
+                    </dl>
+                  </section>
+                )}
                 {text.sections.map((section, s) => (
                   <section key={s}>
                     <h2 className="text-2xl font-semibold md:text-3xl">{section.heading}</h2>
@@ -199,36 +221,7 @@ const CaseStudyPage = () => {
                 <p className="text-lg font-medium leading-relaxed md:text-xl">{text.result}</p>
               </div>
 
-              {/* Call to action */}
-              <div className="panel mt-8 flex flex-col gap-5 p-6 md:p-8">
-                <div>
-                  <h2 className="text-xl font-semibold">{t('caseStudyPage.ctaTitle')}</h2>
-                  <p className="mt-1 text-muted-foreground">{t('caseStudyPage.ctaDesc')}</p>
-                </div>
-                <div className="flex shrink-0 flex-col gap-3 sm:flex-row">
-                  <SectionLink
-                    to="contact"
-                    className="group inline-flex items-center justify-center gap-2 rounded-full bg-[#261bfb] px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-[#3e30fb]"
-                  >
-                    {t('hero.cta.discover')}
-                    <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 rtl:rotate-180" aria-hidden />
-                  </SectionLink>
-                  <button
-                    type="button"
-                    onClick={() => downloadCv(i18n.language)}
-                    className="inline-flex items-center justify-center gap-2 rounded-full border border-border bg-background/60 px-5 py-2.5 text-sm font-medium transition-colors hover:border-[#483dfb]/50 hover:text-[#483dfb]"
-                  >
-                    <Download className="h-4 w-4" aria-hidden />
-                    {t('bonus.freelance.downloadCV')}
-                  </button>
-                  <SectionLink
-                    to="projects"
-                    className="inline-flex items-center justify-center rounded-full border border-border px-5 py-2.5 text-sm font-medium transition-colors hover:border-[#483dfb]/50 hover:text-[#483dfb]"
-                  >
-                    {t('caseStudyPage.ctaWork')}
-                  </SectionLink>
-                </div>
-              </div>
+              <ContextualContact topic={`project:${slug}`} />
               {/* Other case studies: the internal links between the case study pages */}
               <nav aria-labelledby="related-title" className="mt-16">
                 <h2 id="related-title" className="mb-5 text-xl font-semibold">

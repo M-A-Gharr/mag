@@ -11,6 +11,10 @@ import { BlockTitle, EASE_OUT, Reveal, SectionHeading, Stagger, StaggerItem } fr
 import FloatingField from './contact/FloatingField';
 import PaperPlaneButton, { type SendStatus } from './contact/PaperPlaneButton';
 import ContactItem from './contact/ContactItem';
+import { useLocation } from 'react-router-dom';
+import { CASE_STUDY_PAGES, caseStudyLang } from '@/content/caseStudies';
+import { SERVICE_PAGES } from '@/content/services';
+import { conversionCopy } from '@/content/conversion';
 
 const MESSAGE_MAX = 1000;
 
@@ -20,6 +24,12 @@ const BookingCalendar = lazy(() => import('./BookingCalendar'));
 
 const ContactSection = () => {
   const { t, i18n } = useTranslation();
+  const { search } = useLocation();
+  const topic = new URLSearchParams(search).get('topic') ?? '';
+  const project = topic.startsWith('project:') ? CASE_STUDY_PAGES.find((p) => p.slug === topic.slice(8)) : undefined;
+  const service = topic.startsWith('service:') ? SERVICE_PAGES.find((s) => s.slug === topic.slice(8)) : undefined;
+  const subject = project ? t(`projects.items.${project.projectId}.title`) : service ? t(`about.services.${service.key}.title`) : '';
+  const copy = conversionCopy[caseStudyLang(i18n.language)];
   const [formData, setFormData] = useState({
     from_name: '',
     reply_to: '',
@@ -28,6 +38,10 @@ const ContactSection = () => {
   const [status, setStatus] = useState<SendStatus>('idle');
   const [errorCount, setErrorCount] = useState(0);
   const resetTimer = useRef<ReturnType<typeof setTimeout>>();
+
+  useEffect(() => {
+    if (subject) setFormData((previous) => previous.message ? previous : { ...previous, message: copy.prompt(subject) });
+  }, [subject, copy]);
 
   useEffect(() => () => clearTimeout(resetTimer.current), []);
 
@@ -113,6 +127,7 @@ const ContactSection = () => {
           {/* Form */}
           <Reveal className="panel relative z-10 p-6 md:p-8">
             <BlockTitle icon={Send} title={t('contact.form.title')} />
+            {subject && <p className="mb-5 rounded-lg bg-secondary/30 p-3 text-sm">{copy.context} : <strong>{subject}</strong></p>}
 
             <Stagger as="div" stagger={0.1} delay={0.15}>
             <form onSubmit={handleSubmit} className="space-y-5" noValidate={false}>

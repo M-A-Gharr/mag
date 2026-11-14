@@ -16,6 +16,7 @@ import path from 'path';
 import type { Plugin } from 'vite';
 import { CASE_STUDIES } from '../src/content/caseStudies/all';
 import type { CaseStudy, CaseStudyLang, CaseStudyText } from '../src/content/caseStudies/types';
+import { conversionCopy } from '../src/content/conversion';
 import { SERVICES } from '../src/content/services/all';
 import type { Service, ServiceText } from '../src/content/services/types';
 import { caseStudyPath, pathFor, servicePath, SITE_URL } from '../src/i18n/paths';
@@ -86,9 +87,20 @@ const write = (outDir: string, urlPath: string, html: string) => {
   fs.writeFileSync(path.join(dir, 'index.html'), html);
 };
 
+const conversionHtml = (lng: CaseStudyLang, topic: string, key?: Service['key']) => {
+  const copy = conversionCopy[lng];
+  const label = key ? copy.services[key] : copy.project;
+  return `<section><h2>${esc(copy.title)}</h2><p>${esc(copy.description)}</p><a href="${pathFor(lng)}?topic=${encodeURIComponent(topic)}#contact">${esc(label)}</a> <a href="${pathFor(lng)}#book">${esc(copy.book)}</a></section>`;
+};
+
 /** The article as plain HTML, for crawlers that do not run JavaScript. */
-const articleHtml = (t: CaseStudyText, related: { href: string; title: string }[], relatedHeading: string) => {
+const articleHtml = (t: CaseStudyText, related: { href: string; title: string }[], relatedHeading: string, lng: CaseStudyLang, slug: string) => {
   const parts = [`<main><article>`, `<p>${esc(t.sector)}</p>`, `<h1>${esc(t.title)}</h1>`, `<p>${esc(t.lead)}</p>`];
+  if (t.technical) {
+    parts.push(`<section><h2>${esc(t.technical.heading)}</h2>`);
+    for (const group of t.technical.groups) parts.push(`<h3>${esc(group.heading)}</h3><p>${esc(group.text)}</p>`);
+    parts.push('</section>');
+  }
   for (const s of t.sections) {
     parts.push(`<h2>${esc(s.heading)}</h2>`);
     s.paragraphs?.forEach((p) => parts.push(`<p>${esc(p)}</p>`));
@@ -100,6 +112,9 @@ const articleHtml = (t: CaseStudyText, related: { href: string; title: string }[
     }
   }
   parts.push(`<p>${esc(t.result)}</p>`);
+  const services = SERVICES.filter((service) => service.caseStudies.includes(slug));
+  parts.push(`<nav><h2>${esc(conversionCopy[lng].related)}</h2><ul>${services.map((service) => `<li><a href="${servicePath(lng, service.slug)}">${esc(service.text[lng].title)}</a></li>`).join('')}</ul></nav>`);
+  parts.push(conversionHtml(lng, `project:${slug}`));
   if (related.length) {
     parts.push(`<nav><h2>${esc(relatedHeading)}</h2><ul>${related.map((r) => `<li><a href="${r.href}">${esc(r.title)}</a></li>`).join('')}</ul></nav>`);
   }
@@ -108,11 +123,24 @@ const articleHtml = (t: CaseStudyText, related: { href: string; title: string }[
 };
 
 /** An expertise page as plain HTML, for crawlers that do not run JavaScript. */
-const serviceHtml = (t: ServiceText, examples: { href: string; title: string }[], examplesHeading: string) => {
+const serviceHtml = (t: ServiceText, examples: { href: string; title: string }[], examplesHeading: string, lng: CaseStudyLang, service: Service) => {
   const list = (items: string[]) => `<ul>${items.map((i) => `<li>${esc(i)}</li>`).join('')}</ul>`;
   const parts = [`<main><article>`, `<h1>${esc(t.title)}</h1>`, `<p>${esc(t.lead)}</p>`];
   parts.push(`<h2>${esc(t.audience.heading)}</h2>`, list(t.audience.items));
   parts.push(`<h2>${esc(t.offer.heading)}</h2>`, list(t.offer.items));
+  for (const level of t.offer.levels ?? []) {
+    parts.push(`<h3>${esc(level.heading)}</h3>`, `<p>${esc(level.description)}</p>`, list(level.items));
+  }
+  if (t.offer.support) {
+    parts.push(`<h3>${esc(t.offer.support.heading)}</h3>`, `<p>${esc(t.offer.support.text)}</p>`);
+  }
+  if (t.technicalCapabilities) {
+    const capabilities = t.technicalCapabilities;
+    parts.push(`<h2>${esc(capabilities.heading)}</h2>`, `<p>${esc(capabilities.intro)}</p>`);
+    for (const group of capabilities.groups) {
+      parts.push(`<h3>${esc(group.heading)}</h3>`, list(group.items));
+    }
+  }
   parts.push(
     `<h2>${esc(t.process.heading)}</h2>`,
     `<ol>${t.process.steps.map((st) => `<li><h3>${esc(st.heading)}</h3><p>${esc(st.text)}</p></li>`).join('')}</ol>`
@@ -120,6 +148,7 @@ const serviceHtml = (t: ServiceText, examples: { href: string; title: string }[]
   if (examples.length) {
     parts.push(`<h2>${esc(examplesHeading)}</h2><ul>${examples.map((e) => `<li><a href="${e.href}">${esc(e.title)}</a></li>`).join('')}</ul>`);
   }
+  parts.push(conversionHtml(lng, `service:${service.slug}`, service.key));
   parts.push(`</article></main>`);
   return parts.join('');
 };
@@ -316,8 +345,11 @@ const sitemap = (entries: { url: string; alternates: Alternate[]; lastmod: strin
 
 /** The next two case studies, in home-page order (same rule as relatedCaseStudies in the app). */
 const relatedOf = (slug: string) => {
-  const i = CASE_STUDIES.findIndex((c) => c.slug === slug);
-  return [1, 2].filter((k) => k < CASE_STUDIES.length).map((k) => CASE_STUDIES[(i + k) % CASE_STUDIES.length]);
+  const relevant = new Set(SERVICES.filter((service) => service.caseStudies.includes(slug)).flatMap((service) => service.caseStudies));
+  const index = CASE_STUDIES.findIndex((study) => study.slug === slug);
+  const fallback = [1, 2].map((offset) => CASE_STUDIES[(index + offset) % CASE_STUDIES.length]);
+  return [...CASE_STUDIES.filter((study) => study.slug !== slug && relevant.has(study.slug)), ...fallback]
+    .filter((study, i, studies) => studies.findIndex((candidate) => candidate.slug === study.slug) === i).slice(0, 2);
 };
 
 /**
@@ -395,7 +427,7 @@ export function pagesPlugin(): Plugin {
               body: articleHtml(
                 t,
                 relatedOf(study.slug).map((r) => ({ href: caseStudyPath(lng, r.slug), title: r.text[lng].title })),
-                locales[lng].caseStudyPage.related
+                locales[lng].caseStudyPage.related, lng, study.slug
               ),
             })
           );
@@ -424,7 +456,7 @@ export function pagesPlugin(): Plugin {
               description: t.metaDescription,
               alternates: serviceAlternates(service.slug),
               jsonLd: serviceJsonLd(service, lng, locales[lng].services.title, locales[lng].caseStudyPage.home),
-              body: serviceHtml(t, examples, locales[lng].servicePage.examples),
+              body: serviceHtml(t, examples, locales[lng].servicePage.examples, lng, service),
             })
           );
           entries.push({ url, alternates: serviceAlternates(service.slug), lastmod: service.modified });

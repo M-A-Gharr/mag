@@ -7,7 +7,7 @@ const study: CaseStudy = {
   slug: 'export-showcase-site-b2b-crm',
   projectId: 12,
   published: '2026-11-10',
-  modified: '2026-11-10',
+  modified: '2026-11-14',
   text: {
     fr: {
       title: "Un site vitrine export et un CRM pour conquérir des acheteurs professionnels à l'étranger",
@@ -20,6 +20,27 @@ const study: CaseStudy = {
       brief: {
         mission: "Conception d'un site vitrine en anglais et en arabe et d'un CRM de prospection relié au site",
         result: 'Aucune demande perdue, du formulaire au commercial',
+      },
+      technical: {
+        "heading": "Fiche technique du projet",
+        "groups": [
+          {
+            "heading": "Stack utilisée",
+            "text": "WordPress, CRM, Apify, Scoring de leads, Multilingue / RTL"
+          },
+          {
+            "heading": "Architecture et fonctionnement",
+            "text": "Site WordPress multilingue relié à un CRM distinct. Les demandes sont enregistrées avant transmission, avec reprise automatique en cas d’indisponibilité du CRM."
+          },
+          {
+            "heading": "Intégrations et données",
+            "text": "Formulaires du site vers le CRM ; Apify pour la recherche de prospects sur les réseaux sociaux ; import de fiches produit du studio IA."
+          },
+          {
+            "heading": "Mon rôle et mes responsabilités",
+            "text": "Création du site et du parcours de demande B2B, connexion au CRM et organisation de la prospection et du suivi des acheteurs."
+          }
+        ]
       },
       sections: [
         {
@@ -94,6 +115,27 @@ const study: CaseStudy = {
         mission: 'Design of a showcase website in English and Arabic and of a prospecting CRM connected to it',
         result: 'No enquiry lost, from the form to the salesperson',
       },
+      technical: {
+        "heading": "Project technical overview",
+        "groups": [
+          {
+            "heading": "Technology stack",
+            "text": "WordPress, CRM, Apify, Lead scoring, Multilingual / RTL"
+          },
+          {
+            "heading": "Architecture and workflows",
+            "text": "Multilingual WordPress site connected to a separate CRM. Requests are saved before delivery and retried when the CRM is unavailable."
+          },
+          {
+            "heading": "Integrations and data",
+            "text": "Website forms connected to the CRM; Apify for social prospect research; product-sheet imports from the AI studio."
+          },
+          {
+            "heading": "My role and responsibilities",
+            "text": "Building the site and B2B enquiry journey, connecting the CRM and organising prospecting and buyer follow-up."
+          }
+        ]
+      },
       sections: [
         {
           heading: 'The context',
@@ -166,6 +208,27 @@ const study: CaseStudy = {
       brief: {
         mission: 'تصميم موقع عرض بالإنجليزية والعربية ونظام CRM للتنقيب مرتبط به',
         result: 'لا ضياع لأي طلب، من النموذج إلى مستشار المبيعات',
+      },
+      technical: {
+        "heading": "الملف التقني للمشروع",
+        "groups": [
+          {
+            "heading": "التقنيات المستخدمة",
+            "text": "WordPress, CRM, Apify, تقييم العملاء المحتملين, متعدد اللغات / RTL"
+          },
+          {
+            "heading": "البنية ومسارات العمل",
+            "text": "موقع WordPress متعدد اللغات مرتبط بنظام CRM مستقل، مع حفظ الطلبات قبل الإرسال وإعادة المحاولة عند تعذّر الوصول."
+          },
+          {
+            "heading": "التكامل والبيانات",
+            "text": "نماذج الموقع مرتبطة بـ CRM، وApify للبحث عن العملاء على الشبكات الاجتماعية واستيراد بطاقات المنتجات من استوديو الذكاء الاصطناعي."
+          },
+          {
+            "heading": "دوري ومسؤولياتي",
+            "text": "إنشاء الموقع ومسار الطلبات المهنية وربط CRM وتنظيم التنقيب ومتابعة المشترين."
+          }
+        ]
       },
       sections: [
         {

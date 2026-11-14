@@ -6,7 +6,7 @@ const study: CaseStudy = {
   slug: 'ai-fashion-visuals-studio',
   projectId: 11,
   published: '2026-11-10',
-  modified: '2026-11-10',
+  modified: '2026-11-14',
   text: {
     fr: {
       title: "Simtis Studio : des visuels portés par mannequin, créés par IA à partir d'une photo produit",
@@ -19,6 +19,27 @@ const study: CaseStudy = {
       brief: {
         mission: "Conception et développement d'un studio IA interne, de la génération d'images à la fiche produit",
         result: "Des visuels portés en quelques clics au lieu d'une séance photo",
+      },
+      technical: {
+        "heading": "Fiche technique du projet",
+        "groups": [
+          {
+            "heading": "Stack utilisée",
+            "text": "OpenAI, FASHN AI, IA générative, Accès par rôle, FR / EN / AR (RTL)"
+          },
+          {
+            "heading": "Architecture et fonctionnement",
+            "text": "Studio interne avec file de génération partagée, quotas par boutique, accès par rôle et validation des visuels avant utilisation."
+          },
+          {
+            "heading": "Intégrations et données",
+            "text": "OpenAI et FASHN AI pour la génération et l’essayage virtuel ; fiches produit multilingues exportées en PDF."
+          },
+          {
+            "heading": "Mon rôle et mes responsabilités",
+            "text": "Compréhension des besoins des magasins, conception des parcours, développement du studio et intégration des moteurs IA."
+          }
+        ]
       },
       sections: [
         {
@@ -93,6 +114,27 @@ const study: CaseStudy = {
         mission: 'Design and development of an in-house AI studio, from image generation to the product sheet',
         result: 'Model shots in a few clicks instead of a photo shoot',
       },
+      technical: {
+        "heading": "Project technical overview",
+        "groups": [
+          {
+            "heading": "Technology stack",
+            "text": "OpenAI, FASHN AI, Generative AI, Role-based access, FR / EN / AR (RTL)"
+          },
+          {
+            "heading": "Architecture and workflows",
+            "text": "Internal studio with a shared generation queue, store quotas, role-based access and visual approval before use."
+          },
+          {
+            "heading": "Integrations and data",
+            "text": "OpenAI and FASHN AI for generation and virtual try-on; multilingual product sheets exported as PDFs."
+          },
+          {
+            "heading": "My role and responsibilities",
+            "text": "Understanding store needs, designing workflows, developing the studio and integrating AI engines."
+          }
+        ]
+      },
       sections: [
         {
           heading: 'The context',
@@ -163,6 +205,27 @@ const study: CaseStudy = {
       brief: {
         mission: 'تصميم وتطوير استوديو ذكاء اصطناعي داخلي، من توليد الصور إلى بطاقة المنتج',
         result: 'صور ملبوسة ببضع نقرات بدل جلسة تصوير',
+      },
+      technical: {
+        "heading": "الملف التقني للمشروع",
+        "groups": [
+          {
+            "heading": "التقنيات المستخدمة",
+            "text": "OpenAI, FASHN AI, الذكاء الاصطناعي التوليدي, صلاحيات حسب الدور, FR / EN / AR (RTL)"
+          },
+          {
+            "heading": "البنية ومسارات العمل",
+            "text": "استوديو داخلي بطابور توليد مشترك وحصص لكل متجر وصلاحيات حسب الدور واعتماد الصور قبل الاستخدام."
+          },
+          {
+            "heading": "التكامل والبيانات",
+            "text": "OpenAI وFASHN AI للتوليد والتجربة الافتراضية، وبطاقات منتجات متعددة اللغات تُصدّر بصيغة PDF."
+          },
+          {
+            "heading": "دوري ومسؤولياتي",
+            "text": "فهم احتياجات المتاجر وتصميم المسارات وتطوير الاستوديو ودمج محركات الذكاء الاصطناعي."
+          }
+        ]
       },
       sections: [
         {

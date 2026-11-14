@@ -4,7 +4,7 @@ const study: CaseStudy = {
   "slug": "bakery-management-saas",
   "projectId": 2,
   "published": "2026-11-11",
-  "modified": "2026-11-11",
+  "modified": "2026-11-14",
   "text": {
     "en": {
       "title": "Bakery SaaS: bringing stock, recipes and sales into one application",
@@ -15,6 +15,27 @@ const study: CaseStudy = {
       "brief": {
         "mission": "Design and development of a bakery management application",
         "result": "Stock, recipes, orders and sales in a shared workspace"
+      },
+      technical: {
+        "heading": "Project technical overview",
+        "groups": [
+          {
+            "heading": "Technology stack",
+            "text": "React.js, Node.js, Vite, PostgreSQL"
+          },
+          {
+            "heading": "Architecture and workflows",
+            "text": "React interface, Node.js server and PostgreSQL database bringing together stock, recipes, orders, point of sale and dashboards."
+          },
+          {
+            "heading": "Integrations and data",
+            "text": "Internal connections between ingredients, recipes, products and sales; French, English and Arabic interfaces with RTL layouts."
+          },
+          {
+            "heading": "My role and responsibilities",
+            "text": "Design and development of management modules and adaptation of interfaces for desktop, tablet and mobile."
+          }
+        ]
       },
       "sections": [
         {
@@ -79,6 +100,27 @@ const study: CaseStudy = {
         "mission": "Conception et développement d’une application de gestion de boulangerie",
         "result": "Les stocks, les recettes, les commandes et les ventes dans un espace commun"
       },
+      technical: {
+        "heading": "Fiche technique du projet",
+        "groups": [
+          {
+            "heading": "Stack utilisée",
+            "text": "React.js, Node.js, Vite, PostgreSQL"
+          },
+          {
+            "heading": "Architecture et fonctionnement",
+            "text": "Interface React, serveur Node.js et base PostgreSQL réunissant stocks, recettes, commandes, caisse et tableaux de bord."
+          },
+          {
+            "heading": "Intégrations et données",
+            "text": "Liaisons internes entre ingrédients, recettes, produits et ventes ; interfaces françaises, anglaises et arabes avec mise en page RTL."
+          },
+          {
+            "heading": "Mon rôle et mes responsabilités",
+            "text": "Conception et développement des modules de gestion et adaptation des interfaces aux ordinateurs, tablettes et mobiles."
+          }
+        ]
+      },
       "sections": [
         {
           "heading": "Le contexte",
@@ -141,6 +183,27 @@ const study: CaseStudy = {
       "brief": {
         "mission": "تصميم وتطوير تطبيق لإدارة المخابز",
         "result": "المخزون والوصفات والطلبات والمبيعات في مساحة عمل مشتركة"
+      },
+      technical: {
+        "heading": "الملف التقني للمشروع",
+        "groups": [
+          {
+            "heading": "التقنيات المستخدمة",
+            "text": "React.js, Node.js, Vite, PostgreSQL"
+          },
+          {
+            "heading": "البنية ومسارات العمل",
+            "text": "واجهة React وخادم Node.js وقاعدة PostgreSQL تجمع المخزون والوصفات والطلبات ونقطة البيع ولوحات المتابعة."
+          },
+          {
+            "heading": "التكامل والبيانات",
+            "text": "روابط داخلية بين المكونات والوصفات والمنتجات والمبيعات، وواجهات فرنسية وإنجليزية وعربية باتجاه RTL."
+          },
+          {
+            "heading": "دوري ومسؤولياتي",
+            "text": "تصميم وتطوير وحدات الإدارة وتكييف الواجهات للحاسوب والجهاز اللوحي والهاتف."
+          }
+        ]
       },
       "sections": [
         {

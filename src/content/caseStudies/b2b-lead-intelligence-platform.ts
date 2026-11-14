@@ -6,7 +6,7 @@ const study: CaseStudy = {
   slug: 'b2b-lead-intelligence-platform',
   projectId: 6,
   published: '2026-11-10',
-  modified: '2026-11-10',
+  modified: '2026-11-14',
   text: {
     fr: {
       title: "Une plateforme de prospection B2B qui trouve, qualifie et suit les prospects avec l'IA",
@@ -19,6 +19,27 @@ const study: CaseStudy = {
       brief: {
         mission: "Conception et développement d'une plateforme de prospection et d'un CRM, pour l'export et le marché local",
         result: 'Un seul outil, de la première recherche à la vente',
+      },
+      technical: {
+        "heading": "Fiche technique du projet",
+        "groups": [
+          {
+            "heading": "Stack utilisée",
+            "text": "React, TanStack Start, Supabase, Vercel, OpenAI, Hunter.io"
+          },
+          {
+            "heading": "Architecture et fonctionnement",
+            "text": "Application React / TanStack Start avec Supabase, pipeline commercial, rôles et vues séparées pour les marchés local et export."
+          },
+          {
+            "heading": "Intégrations et données",
+            "text": "OpenAI pour la qualification et les suggestions de messages ; Hunter.io pour enrichir les contacts."
+          },
+          {
+            "heading": "Mon rôle et mes responsabilités",
+            "text": "Conception et développement de la plateforme de prospection, des parcours de qualification et du suivi commercial avec validation humaine."
+          }
+        ]
       },
       sections: [
         {
@@ -91,6 +112,27 @@ const study: CaseStudy = {
         mission: 'Design and development of a prospecting platform and CRM, for export and the local market',
         result: 'One tool, from the first search to the sale',
       },
+      technical: {
+        "heading": "Project technical overview",
+        "groups": [
+          {
+            "heading": "Technology stack",
+            "text": "React, TanStack Start, Supabase, Vercel, OpenAI, Hunter.io"
+          },
+          {
+            "heading": "Architecture and workflows",
+            "text": "React / TanStack Start application with Supabase, a sales pipeline, roles and separate local and export market views."
+          },
+          {
+            "heading": "Integrations and data",
+            "text": "OpenAI for qualification and suggested messages; Hunter.io for contact enrichment."
+          },
+          {
+            "heading": "My role and responsibilities",
+            "text": "Design and development of the prospecting platform, qualification workflows and sales follow-up with human approval."
+          }
+        ]
+      },
       sections: [
         {
           heading: 'The context',
@@ -161,6 +203,27 @@ const study: CaseStudy = {
       brief: {
         mission: 'تصميم وتطوير منصة للتنقيب ونظام CRM للتصدير وللسوق المحلية',
         result: 'أداة واحدة، من أول بحث حتى البيع',
+      },
+      technical: {
+        "heading": "الملف التقني للمشروع",
+        "groups": [
+          {
+            "heading": "التقنيات المستخدمة",
+            "text": "React, TanStack Start, Supabase, Vercel, OpenAI, Hunter.io"
+          },
+          {
+            "heading": "البنية ومسارات العمل",
+            "text": "تطبيق React / TanStack Start مع Supabase ومسار مبيعات وأدوار وواجهات منفصلة للسوق المحلي والتصدير."
+          },
+          {
+            "heading": "التكامل والبيانات",
+            "text": "OpenAI للتأهيل واقتراح الرسائل، وHunter.io لإثراء جهات الاتصال."
+          },
+          {
+            "heading": "دوري ومسؤولياتي",
+            "text": "تصميم وتطوير منصة التنقيب ومسارات التأهيل والمتابعة التجارية مع اعتماد بشري."
+          }
+        ]
       },
       sections: [
         {

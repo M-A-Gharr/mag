@@ -4,9 +4,9 @@ import type { Service } from './types';
 const service: Service = {
   slug: 'web-application-development',
   key: 'webapps',
-  caseStudies: ['b2b-lead-intelligence-platform', 'export-showcase-site-b2b-crm', 'bakery-management-saas', 'vr-property-showroom-crm'],
+  caseStudies: ['b2b-lead-intelligence-platform', 'export-showcase-site-b2b-crm', 'bakery-management-saas', 'vr-property-showroom-crm', 'medical-practice-management-mvp', 'banking-agency-java-jee'],
   tools: ['React', 'Node.js', 'TypeScript', 'PHP', 'ASP.NET', 'C#', 'PostgreSQL', 'MySQL', 'MSSQL', 'Supabase'],
-  modified: '2026-11-11',
+  modified: '2026-11-14',
   text: {
     fr: {
       title: "Développement d'applications web sur mesure",
@@ -33,6 +33,36 @@ const service: Service = {
           'automatisation des tâches répétitives de votre équipe ;',
           "interfaces en français, en anglais et en arabe, de droite à gauche quand il le faut.",
         ],
+      },
+      technicalCapabilities: {
+        "heading": "Compétences techniques",
+        "intro": "Des technologies et des architectures utilisées dans mes projets, des outils internes aux plateformes commerciales connectées.",
+        "groups": [
+          {
+            "heading": "Technologies utilisées",
+            "items": [
+              "React, TypeScript, Vite et TanStack Start pour les interfaces web ; React avec Three.js / WebGL pour le showroom immobilier interactif.",
+              "Node.js et PostgreSQL pour la gestion de boulangerie ; Supabase pour B2B Lead Intelligence.",
+              "PHP pour les modules PrestaShop sur mesure ; Python pour la migration de données et l’extraction de factures ; C# pour la gestion de cabinet médical et Java/JEE pour le projet bancaire."
+            ]
+          },
+          {
+            "heading": "Architectures applicatives",
+            "items": [
+              "Interfaces React reliées à Node.js et à une base relationnelle, avec stocks, commandes, ventes et rapports dans une même application.",
+              "Applications avec authentification, permissions par rôle et circuits de validation, notamment pour les visuels générés par IA.",
+              "Site connecté à un CRM distinct : les demandes sont enregistrées avant envoi, puis renvoyées automatiquement lorsque le CRM est indisponible."
+            ]
+          },
+          {
+            "heading": "Intégrations et échanges de données",
+            "items": [
+              "API REST et services externes : OpenAI et FASHN AI pour les fonctions IA, Hunter.io pour enrichir les contacts et Apify pour rechercher des prospects.",
+              "Synchronisation des stocks ERP par imports CSV planifiés ; migration WooCommerce vers PrestaShop avec imports rejouables et prévention des doublons.",
+              "Intégrations Salesforce avec Apex, Lightning Web Components, Flow et Node.js ; OCR de factures avec Tesseract et Rossum AI, vérification humaine et sorties JSON / CSV."
+            ]
+          }
+        ]
       },
       process: {
         heading: 'Comment je travaille',
@@ -71,6 +101,36 @@ const service: Service = {
           'interfaces in French, English and Arabic, right to left where needed.',
         ],
       },
+      technicalCapabilities: {
+        "heading": "Technical capabilities",
+        "intro": "Technologies and application patterns used in my projects, from internal tools to connected sales platforms.",
+        "groups": [
+          {
+            "heading": "Technologies used",
+            "items": [
+              "React, TypeScript, Vite and TanStack Start for web interfaces; React with Three.js / WebGL for the interactive property showroom.",
+              "Node.js and PostgreSQL for the bakery management application; Supabase for B2B Lead Intelligence.",
+              "PHP for custom PrestaShop modules; Python for data migration and invoice extraction; C# for medical practice management and Java/JEE for the banking project."
+            ]
+          },
+          {
+            "heading": "Application architecture",
+            "items": [
+              "React interfaces backed by Node.js and a relational database, connecting stock, orders, sales and reporting.",
+              "Applications with authentication, role-based permissions and review workflows, including approval of AI-generated visuals.",
+              "A website connected to a separate CRM: requests are saved before delivery and retried automatically when the CRM is unavailable."
+            ]
+          },
+          {
+            "heading": "Integrations and data flows",
+            "items": [
+              "REST APIs and external services: OpenAI and FASHN AI for AI features, Hunter.io for contact enrichment and Apify for prospect research.",
+              "ERP stock synchronisation through scheduled CSV imports; WooCommerce-to-PrestaShop migration with repeatable imports and duplicate prevention.",
+              "Salesforce integrations using Apex, Lightning Web Components, Flow and Node.js; invoice OCR with Tesseract and Rossum AI, human review and JSON / CSV output."
+            ]
+          }
+        ]
+      },
       process: {
         heading: 'How I work',
         steps: [
@@ -107,6 +167,36 @@ const service: Service = {
           'أتمتة المهام المتكررة لفريقكم؛',
           'واجهات بالفرنسية والإنجليزية والعربية، من اليمين إلى اليسار عند الحاجة.',
         ],
+      },
+      technicalCapabilities: {
+        "heading": "القدرات التقنية",
+        "intro": "تقنيات وبنى تطبيقية استخدمتها في مشاريعي، من الأدوات الداخلية إلى منصات المبيعات المتصلة.",
+        "groups": [
+          {
+            "heading": "التقنيات المستخدمة",
+            "items": [
+              "React وTypeScript وVite وTanStack Start لواجهات الويب؛ وReact مع Three.js / WebGL لصالة العرض العقارية التفاعلية.",
+              "Node.js وPostgreSQL لتطبيق إدارة المخابز؛ وSupabase لمنصة B2B Lead Intelligence.",
+              "PHP لوحدات PrestaShop المخصصة؛ وPython لترحيل البيانات واستخراج الفواتير؛ وC# لإدارة العيادات وJava/JEE للمشروع البنكي."
+            ]
+          },
+          {
+            "heading": "بنية التطبيقات",
+            "items": [
+              "واجهات React مرتبطة بـ Node.js وقاعدة بيانات علائقية، تجمع المخزون والطلبات والمبيعات والتقارير.",
+              "تطبيقات بالمصادقة والصلاحيات حسب الدور ومسارات المراجعة، بما فيها اعتماد الصور المولّدة بالذكاء الاصطناعي.",
+              "موقع مرتبط بنظام CRM مستقل: تُحفظ الطلبات قبل إرسالها وتُعاد المحاولة تلقائيًا عند تعذّر الوصول إلى النظام."
+            ]
+          },
+          {
+            "heading": "التكامل وتبادل البيانات",
+            "items": [
+              "واجهات REST API وخدمات خارجية: OpenAI وFASHN AI لوظائف الذكاء الاصطناعي، وHunter.io لإثراء جهات الاتصال وApify للبحث عن العملاء المحتملين.",
+              "مزامنة مخزون ERP باستيراد ملفات CSV مجدول؛ وترحيل WooCommerce إلى PrestaShop باستيراد قابل لإعادة التشغيل ومنع التكرار.",
+              "تكامل Salesforce باستخدام Apex وLightning Web Components وFlow وNode.js؛ واستخراج الفواتير باستخدام Tesseract وRossum AI مع مراجعة بشرية ومخرجات JSON / CSV."
+            ]
+          }
+        ]
       },
       process: {
         heading: 'طريقتي في العمل',

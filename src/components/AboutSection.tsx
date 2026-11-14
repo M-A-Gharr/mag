@@ -1,7 +1,7 @@
 // About: who I am. Photo and signature on one side; experience, education and the way I
 // work on the other, all on the same timeline style. Expertise has its own section.
 import { useTranslation } from 'react-i18next';
-import { Briefcase, Compass, GraduationCap, Quote } from 'lucide-react';
+import { Briefcase, Compass, GraduationCap, Quote, Handshake, Store } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { cn } from '@/lib/utils';
 import GlitchText from './GlitchText';
@@ -13,6 +13,7 @@ type TimelineItem = {
   role: string;
   company?: string;
   desc?: string;
+  responsibilities?: string[];
 };
 
 /** Vertical timeline whose rail draws itself; the first (current) item has a filled dot. */
@@ -40,6 +41,11 @@ const Timeline = ({ items }: { items: TimelineItem[] }) => (
           <h4 className="text-lg font-medium leading-snug">{item.role}</h4>
           {item.company && <span className="text-sm font-medium text-[#483dfb] dark:text-[#9b87f5]">{item.company}</span>}
           {item.desc && <p className="mt-1 text-foreground/80">{item.desc}</p>}
+          {item.responsibilities && (
+            <ul className="mt-3 list-disc space-y-2 ps-5 text-foreground/80">
+              {item.responsibilities.map((responsibility) => <li key={responsibility}>{responsibility}</li>)}
+            </ul>
+          )}
         </StaggerItem>
       ))}
     </Stagger>
@@ -51,6 +57,9 @@ const AboutSection = () => {
 
   const resume = t('about.resume.items', { returnObjects: true });
   const experience = Array.isArray(resume) ? (resume as TimelineItem[]) : [];
+  const ventures = t('about.entrepreneurial.items', { returnObjects: true });
+  const entrepreneurial = Array.isArray(ventures) ? (ventures as TimelineItem[]) : [];
+  const collaboration = t('about.collaboration.items', { returnObjects: true });
 
   // Education, newest first (the texts come from the former Certificates section).
   const education: TimelineItem[] = [
@@ -87,6 +96,18 @@ const AboutSection = () => {
           <Reveal className="panel p-6 md:p-8">
             <BlockTitle icon={Briefcase} title={t('about.resume.title')} />
             <Timeline items={experience} />
+          </Reveal>
+
+          <Reveal className="panel p-6 md:p-8">
+            <BlockTitle icon={Handshake} title={t('about.collaboration.title')} />
+            <ul className="list-disc space-y-3 ps-5 text-foreground/80">
+              {Array.isArray(collaboration) && collaboration.map((item: string) => <li key={item}>{item}</li>)}
+            </ul>
+          </Reveal>
+
+          <Reveal className="panel p-6 md:p-8">
+            <BlockTitle icon={Store} title={t('about.entrepreneurial.title')} />
+            <Timeline items={entrepreneurial} />
           </Reveal>
 
           <Reveal className="panel p-6 md:p-8">

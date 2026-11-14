@@ -4,7 +4,7 @@ const study: CaseStudy = {
   "slug": "configurable-invoice-ocr",
   "projectId": 16,
   "published": "2026-11-11",
-  "modified": "2026-11-11",
+  "modified": "2026-11-14",
   "text": {
     "en": {
       "title": "Invoice extraction with in-app review and editing",
@@ -15,6 +15,27 @@ const study: CaseStudy = {
       "brief": {
         "mission": "Build a configurable invoice OCR application with human review",
         "result": "Configurable extraction with JSON and CSV outputs"
+      },
+      technical: {
+        "heading": "Project technical overview",
+        "groups": [
+          {
+            "heading": "Technology stack",
+            "text": "Python, Tesseract, TensorFlow, Rossum AI"
+          },
+          {
+            "heading": "Architecture and workflows",
+            "text": "JPG / PDF invoice extraction application with configurable fields and review, editing and approval steps."
+          },
+          {
+            "heading": "Integrations and data",
+            "text": "Tesseract, TensorFlow and Rossum AI for document processing; structured JSON and CSV output."
+          },
+          {
+            "heading": "My role and responsibilities",
+            "text": "Developing configurable extraction and the in-app review workflow at OpenView."
+          }
+        ]
       },
       "sections": [
         {
@@ -42,6 +63,27 @@ const study: CaseStudy = {
         "mission": "Développer une application OCR de factures configurable avec validation humaine",
         "result": "Une extraction configurable avec sorties JSON et CSV"
       },
+      technical: {
+        "heading": "Fiche technique du projet",
+        "groups": [
+          {
+            "heading": "Stack utilisée",
+            "text": "Python, Tesseract, TensorFlow, Rossum AI"
+          },
+          {
+            "heading": "Architecture et fonctionnement",
+            "text": "Application d’extraction de factures JPG / PDF avec choix des champs et étapes de vérification, modification et validation."
+          },
+          {
+            "heading": "Intégrations et données",
+            "text": "Tesseract, TensorFlow et Rossum AI pour le traitement documentaire ; restitution structurée en JSON et CSV."
+          },
+          {
+            "heading": "Mon rôle et mes responsabilités",
+            "text": "Développement chez OpenView de l’extraction configurable et du parcours de vérification des résultats dans l’application."
+          }
+        ]
+      },
       "sections": [
         {
           "heading": "Le défi",
@@ -67,6 +109,27 @@ const study: CaseStudy = {
       "brief": {
         "mission": "تطوير تطبيق قابل للتخصيص لاستخراج بيانات الفواتير مع مراجعة بشرية",
         "result": "استخراج قابل للتخصيص مع مخرجات JSON وCSV"
+      },
+      technical: {
+        "heading": "الملف التقني للمشروع",
+        "groups": [
+          {
+            "heading": "التقنيات المستخدمة",
+            "text": "Python, Tesseract, TensorFlow, Rossum AI"
+          },
+          {
+            "heading": "البنية ومسارات العمل",
+            "text": "تطبيق لاستخراج فواتير JPG / PDF مع تحديد الحقول وخطوات المراجعة والتعديل والاعتماد."
+          },
+          {
+            "heading": "التكامل والبيانات",
+            "text": "Tesseract وTensorFlow وRossum AI لمعالجة المستندات ومخرجات منظّمة بصيغتي JSON وCSV."
+          },
+          {
+            "heading": "دوري ومسؤولياتي",
+            "text": "تطوير الاستخراج القابل للتخصيص ومسار مراجعة النتائج داخل التطبيق لدى OpenView."
+          }
+        ]
       },
       "sections": [
         {

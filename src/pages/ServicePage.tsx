@@ -4,7 +4,7 @@
 import { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { ArrowRight, ArrowUpRight, Download, Check, ChevronRight } from 'lucide-react';
+import { ArrowUpRight, Check, ChevronRight } from 'lucide-react';
 import '@/i18n/config';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -14,7 +14,7 @@ import { CASE_STUDY_PAGES, caseStudyLang } from '@/content/caseStudies';
 import { SERVICE_PAGES, type Service } from '@/content/services';
 import { caseStudyPath, pathFor, servicePath, SITE_URL } from '@/i18n/paths';
 import NotFound from './NotFound';
-import { downloadCv } from '@/lib/cv';
+import ContextualContact from '@/components/ContextualContact';
 
 const OG_LOCALES: Record<string, string> = { en: 'en_US', fr: 'fr_FR', ar: 'ar_MA' };
 
@@ -29,7 +29,10 @@ const ServicePage = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    entry?.load().then((m) => setService(m.default));
+    let cancelled = false;
+    setService(null);
+    entry?.load().then((m) => { if (!cancelled) setService(m.default); });
+    return () => { cancelled = true; };
   }, [entry]);
 
   const lang = caseStudyLang(i18n.language);
@@ -101,6 +104,7 @@ const ServicePage = () => {
                 </span>
                 <h1 className="mt-5 text-3xl font-bold leading-tight md:text-5xl">{text.title}</h1>
                 <p className="mt-6 text-lg leading-relaxed text-foreground/80 md:text-xl">{text.lead}</p>
+                <ContextualContact topic={`service:${slug}`} serviceKey={entry.key} compact />
               </Reveal>
 
               {/* At a glance */}
@@ -137,6 +141,33 @@ const ServicePage = () => {
 
                 <section>
                   <h2 className="text-2xl font-semibold md:text-3xl">{text.offer.heading}</h2>
+                  {text.offer.levels && (
+                    <div className="mt-6 space-y-5">
+                      {text.offer.levels.map((level, index) => (
+                        <div key={level.heading} className="panel p-6 md:p-8">
+                          <div className="flex items-center gap-3">
+                            <span aria-hidden className="text-sm font-semibold tabular-nums text-[#483dfb] dark:text-[#9b87f5]">0{index + 1}</span>
+                            <h3 className="text-xl font-semibold">{level.heading}</h3>
+                          </div>
+                          <p className="mt-3 leading-relaxed text-foreground/85">{level.description}</p>
+                          <ul className="mt-4 space-y-2">
+                            {level.items.map((item) => (
+                              <li key={item} className="flex gap-3 text-sm leading-relaxed text-muted-foreground">
+                                <Check aria-hidden className="mt-1 h-4 w-4 shrink-0 text-[#483dfb] dark:text-[#9b87f5]" />
+                                <span>{item}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                  {text.offer.support && (
+                    <div className="mt-6 border-s-2 border-[#483dfb]/50 ps-5">
+                      <h3 className="text-xl font-semibold">{text.offer.support.heading}</h3>
+                      <p className="mt-2 leading-relaxed text-foreground/85">{text.offer.support.text}</p>
+                    </div>
+                  )}
                   <ul className="mt-4 space-y-2">
                     {text.offer.items.map((item, i) => (
                       <li key={i} className="flex gap-3 text-lg leading-relaxed text-foreground/85">
@@ -146,6 +177,28 @@ const ServicePage = () => {
                     ))}
                   </ul>
                 </section>
+
+                {text.technicalCapabilities && (
+                  <section aria-labelledby="technical-capabilities-title">
+                    <h2 id="technical-capabilities-title" className="text-2xl font-semibold md:text-3xl">{text.technicalCapabilities.heading}</h2>
+                    <p className="mt-4 text-lg leading-relaxed text-foreground/80">{text.technicalCapabilities.intro}</p>
+                    <div className="mt-6 space-y-4">
+                      {text.technicalCapabilities.groups.map((group) => (
+                        <div key={group.heading} className="panel p-6 md:p-8">
+                          <h3 className="text-xl font-semibold">{group.heading}</h3>
+                          <ul className="mt-4 space-y-3">
+                            {group.items.map((item) => (
+                              <li key={item} className="flex gap-3 leading-relaxed text-foreground/85">
+                                <Check aria-hidden className="mt-1 h-4 w-4 shrink-0 text-[#483dfb] dark:text-[#9b87f5]" />
+                                <span>{item}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      ))}
+                    </div>
+                  </section>
+                )}
 
                 <section>
                   <h2 className="text-2xl font-semibold md:text-3xl">{text.process.heading}</h2>
@@ -201,29 +254,7 @@ const ServicePage = () => {
 
               </div>
 
-              {/* Call to action */}
-              <div className="mt-14 rounded-2xl border border-[#483dfb]/25 bg-gradient-to-br from-[#483dfb]/10 to-[#9b87f5]/5 p-6 md:p-8">
-                <h2 className="text-xl font-semibold">{t('caseStudyPage.ctaTitle')}</h2>
-                <p className="mt-1 text-muted-foreground">{t('caseStudyPage.ctaDesc')}</p>
-                <div className="mt-5 flex flex-col gap-3 sm:flex-row">
-                  <SectionLink
-                    to="contact"
-                    className="group inline-flex items-center justify-center gap-2 rounded-full bg-[#261bfb] px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-[#3e30fb]"
-                  >
-                    {t('hero.cta.discover')}
-                    <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 rtl:rotate-180" aria-hidden />
-                  </SectionLink>
-                  <button
-                    type="button"
-                    onClick={() => downloadCv(i18n.language)}
-                    className="inline-flex items-center justify-center gap-2 rounded-full border border-border bg-background/60 px-5 py-2.5 text-sm font-medium transition-colors hover:border-[#483dfb]/50 hover:text-[#483dfb]"
-                  >
-                    <Download className="h-4 w-4" aria-hidden />
-                    {t('bonus.freelance.downloadCV')}
-                  </button>
-                </div>
-              </div>
-
+              <ContextualContact topic={`service:${slug}`} serviceKey={entry.key} />
               {/* The other services */}
               <nav aria-labelledby="other-services-title" className="mt-16">
                 <h2 id="other-services-title" className="mb-5 text-xl font-semibold">
