@@ -106,7 +106,10 @@ const HeroSection = () => {
         initial="hidden"
         animate="show"
       >
-        <motion.p variants={fadeUp} className="text-sm md:text-base font-medium text-foreground/70 mb-5">
+        <motion.p variants={fadeUp} className="text-xl md:text-2xl font-semibold text-foreground mb-3">
+          Mohamed Amine Gharrab
+        </motion.p>
+        <motion.p variants={fadeUp} className="text-sm md:text-base font-medium text-foreground/70 mb-7">
           {t('hero.eyebrow')}
         </motion.p>
 
