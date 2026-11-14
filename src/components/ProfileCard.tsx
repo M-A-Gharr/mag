@@ -80,6 +80,8 @@ const ProfileCard = () => {
             {/* The photo, cut out: it moves a little against the backdrop when the card tilts */}
             <motion.img
               src="/images/profile/profile-cutout.webp"
+              srcSet="/images/profile/profile-cutout-280.webp 280w, /images/profile/profile-cutout-560.webp 560w, /images/profile/profile-cutout.webp 800w"
+              sizes="(min-width: 640px) 268px, 238px"
               alt={t('about.avatarAlt')}
               width={800}
               height={800}

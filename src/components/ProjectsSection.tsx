@@ -38,7 +38,13 @@ type Project = {
   images: string[]; // tableau pour les url des images
   captions?: string[]; // tableau pour les légendes des images
   /** Presentation video, shown instead of the screenshot stack. */
-  video?: { src: string; poster: string; portrait?: boolean };
+  video?: {
+    src: string;
+    poster: string;
+    cardPosterSrcSet?: string;
+    cardPosterSizes?: string;
+    portrait?: boolean;
+  };
 };
 
 const ProjectsSection = () => {
@@ -119,13 +125,24 @@ const ProjectsSection = () => {
       id: 6,
       icon: <Target className="h-8 w-8 text-[#483dfb]" />,
       images: [],
-      video: { src: '/videos/projects/lead-intelligence.mp4', poster: '/videos/projects/lead-intelligence-poster.webp' }
+      video: {
+        src: '/videos/projects/lead-intelligence.mp4',
+        poster: '/videos/projects/lead-intelligence-poster.webp',
+        cardPosterSrcSet: '/videos/projects/lead-intelligence-poster-400.webp 400w, /videos/projects/lead-intelligence-poster-800.webp 800w, /videos/projects/lead-intelligence-poster.webp 1280w',
+        cardPosterSizes: '(min-width: 768px) 50vw, 100vw',
+      }
     },
     {
       id: 11,
       icon: <Wand2 className="h-8 w-8 text-[#483dfb]" />,
       images: [],
-      video: { src: '/videos/projects/ai-fashion-studio.mp4', poster: '/videos/projects/ai-fashion-studio-poster.webp', portrait: true }
+      video: {
+        src: '/videos/projects/ai-fashion-studio.mp4',
+        poster: '/videos/projects/ai-fashion-studio-poster.webp',
+        cardPosterSrcSet: '/videos/projects/ai-fashion-studio-poster-300.webp 300w, /videos/projects/ai-fashion-studio-poster-600.webp 600w, /videos/projects/ai-fashion-studio-poster.webp 720w',
+        cardPosterSizes: '300px',
+        portrait: true,
+      }
     },
     {
       id: 2,
@@ -151,7 +168,12 @@ const ProjectsSection = () => {
       id: 13,
       icon: <ArrowRightLeft className="h-8 w-8 text-[#483dfb]" />,
       images: [],
-      video: { src: '/videos/projects/migration-ecommerce.mp4', poster: '/videos/projects/migration-ecommerce-poster.webp' }
+      video: {
+        src: '/videos/projects/migration-ecommerce.mp4',
+        poster: '/videos/projects/migration-ecommerce-poster.webp',
+        cardPosterSrcSet: '/videos/projects/migration-ecommerce-poster-400.webp 400w, /videos/projects/migration-ecommerce-poster-800.webp 800w, /videos/projects/migration-ecommerce-poster.webp 1280w',
+        cardPosterSizes: '(min-width: 768px) 50vw, 100vw',
+      }
     },
     {
       id: 10,
@@ -255,7 +277,14 @@ const ProjectsSection = () => {
               >
                 <div className="relative flex aspect-video items-center justify-center overflow-hidden bg-gradient-to-br from-[#483dfb]/15 to-[#9b87f5]/5">
                   {project.video ? (
-                    <img src={project.video.poster} alt="" loading="lazy" className="h-full w-full object-contain transition-transform duration-500 group-hover:scale-105" />
+                    <img
+                      src={project.video.poster}
+                      srcSet={project.video.cardPosterSrcSet}
+                      sizes={project.video.cardPosterSizes}
+                      alt=""
+                      loading="lazy"
+                      className="h-full w-full object-contain transition-transform duration-500 group-hover:scale-105"
+                    />
                   ) : (
                     <div className="flex flex-col items-center gap-4 p-6 text-center">
                       <div className="rounded-2xl bg-background/80 p-5">{project.icon}</div>
