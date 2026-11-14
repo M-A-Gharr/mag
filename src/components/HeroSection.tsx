@@ -79,6 +79,11 @@ const HeroSection = () => {
         animate={{ opacity: 1 }}
         transition={{ duration: 1.6, ease: 'easeOut' }}
       >
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: 'url("/images/profile/fallback.webp")' }}
+        />
+
         {/* The static background keeps the first render light; the decorative video is nonessential. */}
         {wideScreen && videoReady && (
           <video
@@ -89,13 +94,9 @@ const HeroSection = () => {
             className="absolute inset-0 w-full h-full object-cover"
           >
             <source src="/videos/intro.webm" type="video/webm" />
+            <source src="/videos/intro.mp4" type="video/mp4" />
           </video>
         )}
-
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: 'url("/images/profile/fallback.webp")' }}
-        />
       </motion.div>
 
       {/* Gradient overlay */}
