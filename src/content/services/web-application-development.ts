@@ -12,7 +12,7 @@ const service: Service = {
       title: "Développement d'applications web sur mesure",
       metaTitle: "Développeur d'applications web à Casablanca · M.A.G",
       metaDescription:
-        'Développeur full-stack à Casablanca : outils internes, CRM et plateformes métier en React et Node.js, reliés à vos données et pensés pour votre équipe.',
+        "Développeur full-stack à Casablanca : applications métier, CRM et outils internes sur mesure, avec intégrations API, IA et systèmes de gestion.",
       lead:
         "Je conçois des applications web qui épousent la façon dont votre équipe travaille vraiment : outils internes, CRM, portails clients, plateformes de prospection. Aujourd'hui, je les construis chez SIMTIS, pour des équipes au Maroc et à l'export.",
       audience: {
@@ -79,7 +79,7 @@ const service: Service = {
       title: 'Custom web application development',
       metaTitle: 'Web application developer in Casablanca · M.A.G',
       metaDescription:
-        'Full-stack developer in Casablanca: internal tools, CRMs and business platforms in React and Node.js, connected to your data and built around your team.',
+        "Full-stack developer in Casablanca: custom business applications, CRMs and internal tools with API, AI and management system integrations.",
       lead:
         'I build web applications around the way your team actually works: internal tools, CRMs, client portals, prospecting platforms. Today I build them at SIMTIS, for teams in Morocco and abroad.',
       audience: {
@@ -146,7 +146,7 @@ const service: Service = {
       title: 'تطوير تطبيقات ويب مخصصة',
       metaTitle: 'مطوّر تطبيقات ويب في الدار البيضاء · M.A.G',
       metaDescription:
-        'مطوّر full-stack في الدار البيضاء: أدوات داخلية وأنظمة CRM ومنصات أعمال بـ React وNode.js، مرتبطة ببياناتكم ومصممة حول فريقكم.',
+        "مطوّر full-stack في الدار البيضاء: تطبيقات أعمال وأنظمة CRM وأدوات داخلية مخصصة، مع ربط واجهات API والذكاء الاصطناعي وأنظمة الإدارة.",
       lead:
         'أصمّم تطبيقات ويب تلائم طريقة عمل فريقكم الفعلية: أدوات داخلية، وأنظمة CRM، وبوابات للعملاء، ومنصات للتنقيب. وأبنيها اليوم في SIMTIS لفرق في المغرب وخارجه.',
       audience: {

@@ -159,7 +159,11 @@ const PROFILES = [
   { name: 'GitHub', href: 'https://github.com/M-A-Gharr' },
 ];
 
-type ResumeItem = { period: string; role: string; company?: string; desc?: string };
+type ResumeItem = { period: string; role: string; company?: string; desc?: string; responsibilities?: string[] };
+
+const resumeHtml = (items: ResumeItem[]) => `<ul>${items.map((item) =>
+  `<li><p>${esc(item.period)}</p><h4>${esc(item.role)}</h4>${item.company ? `<p>${esc(item.company)}</p>` : ''}${item.desc ? `<p>${esc(item.desc)}</p>` : ''}${item.responsibilities?.length ? `<ul>${item.responsibilities.map((responsibility) => `<li>${esc(responsibility)}</li>`).join('')}</ul>` : ''}</li>`
+).join('')}</ul>`;
 
 /**
  * The home page as plain HTML, for crawlers that do not run JavaScript: who I am, the areas of
@@ -169,7 +173,11 @@ type ResumeItem = { period: string; role: string; company?: string; desc?: strin
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const homeHtml = (lng: CaseStudyLang, l: any) => {
   const parts = [`<header><nav><a href="${pathFor(lng)}">M.A.G</a></nav></header>`, `<main>`];
-  parts.push(`<section><h1>${esc(l.hero.title.replace(/\s*\n\s*/g, ' '))}</h1><p>${esc(l.hero.subtitle)}</p></section>`);
+  parts.push(
+    `<section id="hero"><p>Mohamed Amine Gharrab</p><p>${esc(l.hero.eyebrow)}</p>`,
+    `<h1>${esc(l.hero.title.replace(/\s*\n\s*/g, ' '))}</h1><p>${esc(l.hero.subtitle)}</p>`,
+    `<a href="#contact">${esc(l.hero.cta.discover)}</a> <a href="#projects">${esc(l.hero.cta.projects)}</a></section>`
+  );
 
   parts.push(`<section id="services"><h2>${esc(l.services.title)}</h2><p>${esc(l.services.subtitle)}</p><ul>`);
   for (const s of SERVICES) {
@@ -188,13 +196,14 @@ const homeHtml = (lng: CaseStudyLang, l: any) => {
 
   const resume = (l.about.resume?.items ?? []) as ResumeItem[];
   parts.push(`<section id="about"><h2>${esc(l.about.title)}</h2><p>${esc(l.about.subtitle)}</p>`);
-  parts.push(`<h3>${esc(l.about.resume.title)}</h3><ul>`);
-  for (const r of resume) {
-    parts.push(
-      `<li><p>${esc(r.period)}</p><h4>${esc(r.role)}</h4>${r.company ? `<p>${esc(r.company)}</p>` : ''}${r.desc ? `<p>${esc(r.desc)}</p>` : ''}</li>`
-    );
-  }
-  parts.push(`</ul></section>`);
+  parts.push(`<h3>${esc(l.about.resume.title)}</h3>`, resumeHtml(resume));
+  parts.push(
+    `<h3>${esc(l.about.collaboration.title)}</h3>`,
+    `<ul>${l.about.collaboration.items.map((item: string) => `<li>${esc(item)}</li>`).join('')}</ul>`,
+    `<h3>${esc(l.about.entrepreneurial.title)}</h3>`,
+    resumeHtml(l.about.entrepreneurial.items),
+    `<p>${esc(l.about.available)}</p></section>`
+  );
 
   parts.push(
     `<section id="contact"><h2>${esc(l.contact.title)}</h2><p>${esc(l.contact.subtitle)}</p><ul>`,

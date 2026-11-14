@@ -13,7 +13,7 @@ const service: Service = {
       title: 'E-commerce et SEO : PrestaShop, WordPress et Shopify',
       metaTitle: 'Développeur PrestaShop et SEO e-commerce à Casablanca',
       metaDescription:
-        'Boutiques PrestaShop, WordPress et Shopify rapides et bien placées sur Google : refonte, modules sur mesure, migration et SEO multilingue, depuis Casablanca.',
+        "Développeur PrestaShop à Casablanca : modules sur mesure, migrations complexes, intégrations ERP et logiciels de gestion, refonte et SEO multilingue.",
       lead:
         'Je crée, refonds et fais évoluer des boutiques en ligne qui se chargent vite, se trouvent sur Google et restent simples à gérer au quotidien. Mon expertise PrestaShop couvre les modules sur mesure, les migrations complexes et les connexions ERP ou logiciels de gestion. J’interviens aussi sur WordPress et Shopify, en français, en anglais et en arabe.',
       audience: {
@@ -81,7 +81,7 @@ const service: Service = {
       title: 'E-commerce and SEO: PrestaShop, WordPress and Shopify',
       metaTitle: 'PrestaShop developer and e-commerce SEO in Casablanca',
       metaDescription:
-        'Fast PrestaShop, WordPress and Shopify stores that rank on Google: redesigns, custom modules, platform migrations and multilingual SEO, from Casablanca.',
+        "PrestaShop developer in Casablanca: custom modules, complex migrations, ERP and management software integrations, redesigns and multilingual SEO.",
       lead:
         'I build, redesign and improve online stores that load fast, get found on Google and stay easy to run day to day. My PrestaShop expertise covers custom modules, complex migrations and connections to ERP or management software. I also work with WordPress and Shopify, in French, English and Arabic.',
       audience: {
@@ -149,7 +149,7 @@ const service: Service = {
       title: 'التجارة الإلكترونية وSEO: PrestaShop وWordPress وShopify',
       metaTitle: 'مطوّر PrestaShop وSEO للتجارة الإلكترونية في الدار البيضاء',
       metaDescription:
-        'متاجر PrestaShop وWordPress وShopify سريعة وظاهرة في Google: إعادة تصميم، ووحدات مخصصة، ونقل المنصات، وSEO متعدد اللغات، من الدار البيضاء.',
+        "مطوّر PrestaShop في الدار البيضاء: وحدات مخصصة وترحيل معقد وربط بأنظمة ERP وبرامج الإدارة، مع إعادة التصميم وتحسين SEO متعدد اللغات.",
       lead:
         'أنشئ متاجر إلكترونية وأعيد تصميمها وأطوّرها لتكون سريعة وظاهرة في Google وسهلة الإدارة يومياً. تشمل خبرتي في PrestaShop الوحدات المخصصة والترحيل المعقد والربط بأنظمة ERP أو برامج الإدارة. وأعمل أيضًا على WordPress وShopify بالفرنسية والإنجليزية والعربية.',
       audience: {

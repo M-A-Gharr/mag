@@ -12,7 +12,7 @@ const service: Service = {
       title: "Automatisation par l'IA et formation des équipes",
       metaTitle: 'Automatisation IA et formation Claude au Maroc · M.A.G',
       metaDescription:
-        'Workflows qui rédigent, trient et qualifient à votre place, Skills Claude sur mesure et formation des équipes à l’IA générative.',
+        "Intégration IA, automatisation des processus métier et développement d’applications IA sur mesure. Formation et accompagnement des équipes à Casablanca.",
       lead:
         "J'ajoute de l'IA là où elle fait vraiment gagner du temps : rédiger, trier, qualifier des prospects, produire des visuels. Et je forme les équipes à s'en servir chaque jour, en gardant toujours la main sur les décisions.",
       audience: {
@@ -76,7 +76,7 @@ const service: Service = {
       title: 'AI automation and team training',
       metaTitle: 'AI automation and Claude training in Morocco · M.A.G',
       metaDescription:
-        'Workflows that write, sort and qualify for you, custom Claude Skills and generative AI training for teams.',
+        "AI integration, business process automation and custom AI application development, with team training and adoption support in Casablanca.",
       lead:
         'I add AI where it really saves time: writing, sorting, qualifying leads, producing visuals. And I train teams to use it every day, while they stay in charge of every decision.',
       audience: {
@@ -140,7 +140,7 @@ const service: Service = {
       title: 'الأتمتة بالذكاء الاصطناعي وتكوين الفرق',
       metaTitle: 'الأتمتة بالذكاء الاصطناعي وتكوين Claude في المغرب · M.A.G',
       metaDescription:
-        'مسارات عمل تكتب وتفرز وتؤهل نيابة عنكم، وSkills مخصصة لـ Claude، وتكوين الفرق على الذكاء الاصطناعي التوليدي.',
+        "دمج الذكاء الاصطناعي وأتمتة عمليات الأعمال وتطوير تطبيقات مخصصة تعتمد عليه، مع تدريب الفرق ومرافقتها في الاستخدام بالدار البيضاء.",
       lead:
         'أضيف الذكاء الاصطناعي حيث يوفّر الوقت فعلاً: الكتابة والفرز وتأهيل العملاء المحتملين وإنتاج الصور. وأكوّن الفرق على استخدامه كل يوم، مع بقاء القرار دائماً بأيديها.',
       audience: {
