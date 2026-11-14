@@ -45,12 +45,30 @@ const HeroSection = () => {
   const [wideScreen, setWideScreen] = useState(
     () => typeof window !== 'undefined' && window.matchMedia('(min-width: 640px)').matches
   );
+  const [videoReady, setVideoReady] = useState(false);
   useEffect(() => {
     const mq = window.matchMedia('(min-width: 640px)');
     const onChange = () => setWideScreen(mq.matches);
     mq.addEventListener('change', onChange);
     return () => mq.removeEventListener('change', onChange);
   }, []);
+
+  useEffect(() => {
+    if (!wideScreen || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    let timeout: number | undefined;
+    const startVideoAfterLoad = () => {
+      timeout = window.setTimeout(() => setVideoReady(true), 2500);
+    };
+
+    if (document.readyState === 'complete') startVideoAfterLoad();
+    else window.addEventListener('load', startVideoAfterLoad, { once: true });
+
+    return () => {
+      window.removeEventListener('load', startVideoAfterLoad);
+      if (timeout !== undefined) window.clearTimeout(timeout);
+    };
+  }, [wideScreen]);
 
   return (
     <header ref={ref} id="hero" className="relative min-h-screen flex items-center justify-center py-20 overflow-hidden">
@@ -61,23 +79,21 @@ const HeroSection = () => {
         animate={{ opacity: 1 }}
         transition={{ duration: 1.6, ease: 'easeOut' }}
       >
-        {/* Only mounted from 640px: a hidden <video> would still be downloaded on phones */}
-        {wideScreen && (
+        {/* The static background keeps the first render light; the decorative video is nonessential. */}
+        {wideScreen && videoReady && (
           <video
             autoPlay
             muted
             loop
             playsInline
-            preload="auto"
             className="absolute inset-0 w-full h-full object-cover"
           >
             <source src="/videos/intro.webm" type="video/webm" />
           </video>
         )}
 
-        {/* Fallback image for mobile */}
         <div
-          className="absolute inset-0 bg-cover bg-center sm:hidden"
+          className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: 'url("/images/profile/fallback.webp")' }}
         />
       </motion.div>
