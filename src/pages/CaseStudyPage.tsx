@@ -9,7 +9,7 @@ import '@/i18n/config';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import SectionLink from '@/components/SectionLink';
-import { Reveal } from '@/components/motion';
+import ArticleReveal from '@/components/ArticleReveal';
 import { CASE_STUDY_PAGES, caseStudyLang, relatedCaseStudies, type CaseStudy } from '@/content/caseStudies';
 import { caseStudyPath, pathFor, servicePath, SITE_URL } from '@/i18n/paths';
 import { servicesForCaseStudy } from '@/content/services';
@@ -75,7 +75,7 @@ const CaseStudyPage = () => {
     <div className="relative min-h-screen bg-background text-foreground" dir={rtl ? 'rtl' : 'ltr'}>
       <Header />
       <main>
-        <article className="mx-auto max-w-3xl px-4 pb-16 pt-28 sm:px-6 md:pb-24 md:pt-32">
+        <article key={`${slug}:${lang}`} className="mx-auto max-w-3xl px-4 pb-16 pt-28 sm:px-6 md:pb-24 md:pt-32">
           {!text ? (
             <div className="space-y-4" aria-busy="true">
               <div className="h-4 w-48 animate-pulse rounded bg-secondary/40" />
@@ -105,17 +105,17 @@ const CaseStudyPage = () => {
                 </ol>
               </nav>
 
-              <Reveal>
+              <ArticleReveal>
                 <span className="rounded-full bg-[#483dfb]/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-[#483dfb] dark:text-[#9b87f5]">
                   {text.sector}
                 </span>
                 <h1 className="mt-5 text-3xl font-bold leading-tight md:text-5xl">{text.title}</h1>
                 <p className="mt-6 text-lg leading-relaxed text-foreground/80 md:text-xl">{text.lead}</p>
                 <ContextualContact topic={`project:${slug}`} compact />
-              </Reveal>
+              </ArticleReveal>
 
               {/* At a glance */}
-              <Reveal delay={0.1} className="panel mt-10 grid gap-6 p-6 md:grid-cols-3 md:p-8">
+              <ArticleReveal delay={0.1} className="panel mt-10 grid gap-6 p-6 md:grid-cols-3 md:p-8">
                 <div>
                   <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">{t('caseStudyPage.sector')}</p>
                   <p className="mt-1.5 font-medium">{text.sector}</p>
@@ -153,30 +153,30 @@ const CaseStudyPage = () => {
                     </ul>
                   </div>
                 )}
-              </Reveal>
+              </ArticleReveal>
 
-              {/* The story: no reveal animation, the text is there to be read straight away */}
+              {/* Short reveals keep the reading pace independent of section length. */}
               <div className="mt-14 space-y-12">
                 {text.technical && (
                   <section aria-labelledby="project-technical-title">
-                    <h2 id="project-technical-title" className="text-2xl font-semibold md:text-3xl">{text.technical.heading}</h2>
+                    <ArticleReveal as="h2" id="project-technical-title" className="text-2xl font-semibold md:text-3xl">{text.technical.heading}</ArticleReveal>
                     <dl className="mt-6 grid gap-4 sm:grid-cols-2">
-                      {text.technical.groups.map((group) => (
-                        <div key={group.heading} className="panel p-5 md:p-6">
+                      {text.technical.groups.map((group, index) => (
+                        <ArticleReveal key={group.heading} delay={(index % 2) * 0.08} className="panel p-5 md:p-6">
                           <dt className="font-semibold text-[#483dfb] dark:text-[#9b87f5]">{group.heading}</dt>
                           <dd className="mt-3 leading-relaxed text-foreground/85">{group.text}</dd>
-                        </div>
+                        </ArticleReveal>
                       ))}
                     </dl>
                   </section>
                 )}
                 {text.sections.map((section, s) => (
                   <section key={s}>
-                    <h2 className="text-2xl font-semibold md:text-3xl">{section.heading}</h2>
+                    <ArticleReveal as="h2" className="text-2xl font-semibold md:text-3xl">{section.heading}</ArticleReveal>
                     {section.paragraphs?.map((p, i) => (
-                      <p key={i} className="mt-4 text-lg leading-relaxed text-foreground/85">
+                      <ArticleReveal as="p" key={i} className="mt-4 text-lg leading-relaxed text-foreground/85">
                         {p}
-                      </p>
+                      </ArticleReveal>
                     ))}
                     {section.list && (
                       <ul className="mt-4 space-y-2">
@@ -191,7 +191,7 @@ const CaseStudyPage = () => {
                     {section.steps && (
                       <ol className="mt-6 space-y-8">
                         {section.steps.map((step, i) => (
-                          <li key={i} className="relative ps-14">
+                          <ArticleReveal as="li" key={i} className="relative ps-14">
                             <span
                               aria-hidden
                               className="absolute start-0 top-0 flex h-9 w-9 items-center justify-center rounded-full bg-gradient-to-br from-[#261bfb] to-[#9b87f5] text-sm font-semibold text-white"
@@ -204,7 +204,7 @@ const CaseStudyPage = () => {
                                 {p}
                               </p>
                             ))}
-                          </li>
+                          </ArticleReveal>
                         ))}
                       </ol>
                     )}
@@ -213,28 +213,28 @@ const CaseStudyPage = () => {
               </div>
 
               {/* Result */}
-              <div className="mt-14 rounded-2xl border border-[#483dfb]/25 bg-gradient-to-br from-[#483dfb]/10 to-[#9b87f5]/5 p-6 md:p-8">
+              <ArticleReveal className="mt-14 rounded-2xl border border-[#483dfb]/25 bg-gradient-to-br from-[#483dfb]/10 to-[#9b87f5]/5 p-6 md:p-8">
                 <div className="mb-3 flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-[#483dfb] dark:text-[#9b87f5]">
                   <Trophy className="h-4 w-4" aria-hidden />
                   {t('bonus.caseStudies.result')}
                 </div>
                 <p className="text-lg font-medium leading-relaxed md:text-xl">{text.result}</p>
-              </div>
+              </ArticleReveal>
 
               <ContextualContact topic={`project:${slug}`} />
               {/* Other case studies: the internal links between the case study pages */}
               <nav aria-labelledby="related-title" className="mt-16">
-                <h2 id="related-title" className="mb-5 text-xl font-semibold">
+                <ArticleReveal as="h2" id="related-title" className="mb-5 text-xl font-semibold">
                   {t('caseStudyPage.related')}
-                </h2>
+                </ArticleReveal>
                 <ul className="grid gap-4 sm:grid-cols-2">
-                  {related.map((page) => {
+                  {related.map((page, index) => {
                     const card = cards.find((c) => c.projectId === page.projectId);
                     return (
-                      <li key={page.slug}>
+                      <ArticleReveal as="li" key={page.slug} delay={(index % 2) * 0.08}>
                         <Link
                           to={caseStudyPath(i18n.language, page.slug)}
-                          className="panel card-lift group flex h-full flex-col p-5 transition-colors hover:border-[#483dfb]/40"
+                          className="panel card-lift group flex h-full flex-col p-5 transition-[border-color,box-shadow,transform] duration-300 motion-reduce:transition-none hover:shadow-lg hover:shadow-[#483dfb]/5 hover:border-[#483dfb]/40"
                         >
                           {card && (
                             <span className="text-[11px] font-semibold uppercase tracking-wider text-[#483dfb] dark:text-[#9b87f5]">
@@ -248,7 +248,7 @@ const CaseStudyPage = () => {
                             <ArrowUpRight className="h-4 w-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5 rtl:-scale-x-100" aria-hidden />
                           </span>
                         </Link>
-                      </li>
+                      </ArticleReveal>
                     );
                   })}
                 </ul>

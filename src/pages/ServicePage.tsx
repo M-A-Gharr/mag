@@ -9,7 +9,7 @@ import '@/i18n/config';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import SectionLink from '@/components/SectionLink';
-import { Reveal } from '@/components/motion';
+import ArticleReveal from '@/components/ArticleReveal';
 import { CASE_STUDY_PAGES, caseStudyLang } from '@/content/caseStudies';
 import { SERVICE_PAGES, type Service } from '@/content/services';
 import { caseStudyPath, pathFor, servicePath, SITE_URL } from '@/i18n/paths';
@@ -68,7 +68,7 @@ const ServicePage = () => {
     <div className="relative min-h-screen bg-background text-foreground" dir={rtl ? 'rtl' : 'ltr'}>
       <Header />
       <main>
-        <article className="mx-auto max-w-3xl px-4 pb-16 pt-28 sm:px-6 md:pb-24 md:pt-32">
+        <article key={`${slug}:${lang}`} className="mx-auto max-w-3xl px-4 pb-16 pt-28 sm:px-6 md:pb-24 md:pt-32">
           {!text ? (
             <div className="space-y-4" aria-busy="true">
               <div className="h-4 w-48 animate-pulse rounded bg-secondary/40" />
@@ -98,17 +98,17 @@ const ServicePage = () => {
                 </ol>
               </nav>
 
-              <Reveal>
+              <ArticleReveal>
                 <span className="rounded-full bg-[#483dfb]/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-[#483dfb] dark:text-[#9b87f5]">
                   {t('services.title')}
                 </span>
                 <h1 className="mt-5 text-3xl font-bold leading-tight md:text-5xl">{text.title}</h1>
                 <p className="mt-6 text-lg leading-relaxed text-foreground/80 md:text-xl">{text.lead}</p>
                 <ContextualContact topic={`service:${slug}`} serviceKey={entry.key} compact />
-              </Reveal>
+              </ArticleReveal>
 
               {/* At a glance */}
-              <Reveal delay={0.1} className="panel mt-10 grid gap-6 p-6 sm:grid-cols-2 md:p-8">
+              <ArticleReveal delay={0.1} className="panel mt-10 grid gap-6 p-6 sm:grid-cols-2 md:p-8">
                 <div>
                   <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">{t('servicePage.tools')}</p>
                   <ul className="mt-2 flex flex-wrap gap-2">
@@ -123,12 +123,12 @@ const ServicePage = () => {
                   <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">{t('servicePage.where')}</p>
                   <p className="mt-1.5 font-medium">{t('servicePage.whereValue')}</p>
                 </div>
-              </Reveal>
+              </ArticleReveal>
 
-              {/* The content: no reveal animation, it is there to be read */}
+              {/* Each heading and card reveals independently as the reader scrolls. */}
               <div className="mt-14 space-y-12">
                 <section>
-                  <h2 className="text-2xl font-semibold md:text-3xl">{text.audience.heading}</h2>
+                  <ArticleReveal as="h2" className="text-2xl font-semibold md:text-3xl">{text.audience.heading}</ArticleReveal>
                   <ul className="mt-4 space-y-2">
                     {text.audience.items.map((item, i) => (
                       <li key={i} className="flex gap-3 text-lg leading-relaxed text-foreground/85">
@@ -140,11 +140,11 @@ const ServicePage = () => {
                 </section>
 
                 <section>
-                  <h2 className="text-2xl font-semibold md:text-3xl">{text.offer.heading}</h2>
+                  <ArticleReveal as="h2" className="text-2xl font-semibold md:text-3xl">{text.offer.heading}</ArticleReveal>
                   {text.offer.levels && (
                     <div className="mt-6 space-y-5">
                       {text.offer.levels.map((level, index) => (
-                        <div key={level.heading} className="panel p-6 md:p-8">
+                        <ArticleReveal key={level.heading} className="panel p-6 md:p-8">
                           <div className="flex items-center gap-3">
                             <span aria-hidden className="text-sm font-semibold tabular-nums text-[#483dfb] dark:text-[#9b87f5]">0{index + 1}</span>
                             <h3 className="text-xl font-semibold">{level.heading}</h3>
@@ -158,7 +158,7 @@ const ServicePage = () => {
                               </li>
                             ))}
                           </ul>
-                        </div>
+                        </ArticleReveal>
                       ))}
                     </div>
                   )}
@@ -180,11 +180,11 @@ const ServicePage = () => {
 
                 {text.technicalCapabilities && (
                   <section aria-labelledby="technical-capabilities-title">
-                    <h2 id="technical-capabilities-title" className="text-2xl font-semibold md:text-3xl">{text.technicalCapabilities.heading}</h2>
+                    <ArticleReveal as="h2" id="technical-capabilities-title" className="text-2xl font-semibold md:text-3xl">{text.technicalCapabilities.heading}</ArticleReveal>
                     <p className="mt-4 text-lg leading-relaxed text-foreground/80">{text.technicalCapabilities.intro}</p>
                     <div className="mt-6 space-y-4">
                       {text.technicalCapabilities.groups.map((group) => (
-                        <div key={group.heading} className="panel p-6 md:p-8">
+                        <ArticleReveal key={group.heading} className="panel p-6 md:p-8">
                           <h3 className="text-xl font-semibold">{group.heading}</h3>
                           <ul className="mt-4 space-y-3">
                             {group.items.map((item) => (
@@ -194,17 +194,17 @@ const ServicePage = () => {
                               </li>
                             ))}
                           </ul>
-                        </div>
+                        </ArticleReveal>
                       ))}
                     </div>
                   </section>
                 )}
 
                 <section>
-                  <h2 className="text-2xl font-semibold md:text-3xl">{text.process.heading}</h2>
+                  <ArticleReveal as="h2" className="text-2xl font-semibold md:text-3xl">{text.process.heading}</ArticleReveal>
                   <ol className="mt-6 space-y-6">
                     {text.process.steps.map((step, i) => (
-                      <li key={i} className="relative ps-14">
+                      <ArticleReveal as="li" key={i} className="relative ps-14">
                         <span
                           aria-hidden
                           className="absolute start-0 top-0 flex h-9 w-9 items-center justify-center rounded-full bg-gradient-to-br from-[#261bfb] to-[#9b87f5] text-sm font-semibold text-white"
@@ -213,7 +213,7 @@ const ServicePage = () => {
                         </span>
                         <h3 className="text-xl font-semibold leading-snug">{step.heading}</h3>
                         <p className="mt-2 text-lg leading-relaxed text-foreground/85">{step.text}</p>
-                      </li>
+                      </ArticleReveal>
                     ))}
                   </ol>
                 </section>
@@ -221,17 +221,17 @@ const ServicePage = () => {
                 {/* Case studies that prove this service */}
                 {examples.length > 0 && (
                   <section aria-labelledby="examples-title">
-                    <h2 id="examples-title" className="text-2xl font-semibold md:text-3xl">
+                    <ArticleReveal as="h2" id="examples-title" className="text-2xl font-semibold md:text-3xl">
                       {t('servicePage.examples')}
-                    </h2>
+                    </ArticleReveal>
                     <ul className="mt-6 grid gap-4 sm:grid-cols-2">
-                      {examples.map((page) => {
+                      {examples.map((page, index) => {
                         const card = cards.find((c) => c.projectId === page.projectId);
                         return (
-                          <li key={page.slug}>
+                          <ArticleReveal as="li" key={page.slug} delay={(index % 2) * 0.08}>
                             <Link
                               to={caseStudyPath(i18n.language, page.slug)}
-                              className="panel card-lift group flex h-full flex-col p-5 transition-colors hover:border-[#483dfb]/40"
+                              className="panel card-lift group flex h-full flex-col p-5 transition-[border-color,box-shadow,transform] duration-300 motion-reduce:transition-none hover:shadow-lg hover:shadow-[#483dfb]/5 hover:border-[#483dfb]/40"
                             >
                               {card && (
                                 <span className="text-[11px] font-semibold uppercase tracking-wider text-[#483dfb] dark:text-[#9b87f5]">
@@ -245,7 +245,7 @@ const ServicePage = () => {
                                 <ArrowUpRight className="h-4 w-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5 rtl:-scale-x-100" aria-hidden />
                               </span>
                             </Link>
-                          </li>
+                          </ArticleReveal>
                         );
                       })}
                     </ul>
@@ -257,15 +257,15 @@ const ServicePage = () => {
               <ContextualContact topic={`service:${slug}`} serviceKey={entry.key} />
               {/* The other services */}
               <nav aria-labelledby="other-services-title" className="mt-16">
-                <h2 id="other-services-title" className="mb-5 text-xl font-semibold">
+                <ArticleReveal as="h2" id="other-services-title" className="mb-5 text-xl font-semibold">
                   {t('servicePage.otherServices')}
-                </h2>
+                </ArticleReveal>
                 <ul className="grid gap-4 sm:grid-cols-2">
                   {others.map((s) => (
-                    <li key={s.slug}>
+                    <ArticleReveal as="li" key={s.slug}>
                       <Link
                         to={servicePath(i18n.language, s.slug)}
-                        className="panel card-lift group flex h-full flex-col p-5 transition-colors hover:border-[#483dfb]/40"
+                        className="panel card-lift group flex h-full flex-col p-5 transition-[border-color,box-shadow,transform] duration-300 motion-reduce:transition-none hover:shadow-lg hover:shadow-[#483dfb]/5 hover:border-[#483dfb]/40"
                       >
                         <span className="font-semibold">{t(`about.services.${s.key}.title`)}</span>
                         <span className="mt-2 line-clamp-3 text-sm text-muted-foreground">{t(`about.services.${s.key}.desc`)}</span>
@@ -274,7 +274,7 @@ const ServicePage = () => {
                           <ArrowUpRight className="h-4 w-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5 rtl:-scale-x-100" aria-hidden />
                         </span>
                       </Link>
-                    </li>
+                    </ArticleReveal>
                   ))}
                 </ul>
               </nav>
