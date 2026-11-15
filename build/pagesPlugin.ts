@@ -159,10 +159,10 @@ const PROFILES = [
   { name: 'GitHub', href: 'https://github.com/M-A-Gharr' },
 ];
 
-type ResumeItem = { period: string; role: string; company?: string; desc?: string; responsibilities?: string[] };
+type ResumeItem = { period: string; role: string; company?: string; companyUrl?: string; desc?: string; responsibilities?: string[] };
 
 const resumeHtml = (items: ResumeItem[]) => `<ul>${items.map((item) =>
-  `<li><p>${esc(item.period)}</p><h4>${esc(item.role)}</h4>${item.company ? `<p>${esc(item.company)}</p>` : ''}${item.desc ? `<p>${esc(item.desc)}</p>` : ''}${item.responsibilities?.length ? `<ul>${item.responsibilities.map((responsibility) => `<li>${esc(responsibility)}</li>`).join('')}</ul>` : ''}</li>`
+  `<li><p>${esc(item.period)}</p><h4>${esc(item.role)}</h4>${item.company ? `<p>${item.companyUrl ? `<a href="${esc(item.companyUrl)}">${esc(item.company)}</a>` : esc(item.company)}</p>` : ''}${item.desc ? `<p>${esc(item.desc)}</p>` : ''}${item.responsibilities?.length ? `<ul>${item.responsibilities.map((responsibility) => `<li>${esc(responsibility)}</li>`).join('')}</ul>` : ''}</li>`
 ).join('')}</ul>`;
 
 /**
@@ -202,8 +202,17 @@ const homeHtml = (lng: CaseStudyLang, l: any) => {
     `<ul>${l.about.collaboration.items.map((item: string) => `<li>${esc(item)}</li>`).join('')}</ul>`,
     `<h3>${esc(l.about.entrepreneurial.title)}</h3>`,
     resumeHtml(l.about.entrepreneurial.items),
-    `<p>${esc(l.about.available)}</p></section>`
+    `<p>${esc(l.about.available)}</p>`
   );
+  const academic = l.certificates.academic;
+  const education = l.certificates.education;
+  const continuous = l.certificates.continuous;
+  parts.push(`<h3>${esc(l.about.education.title)}</h3>`, resumeHtml([
+    { period: academic.hndYears, role: academic.hnd, desc: academic.hndDesc },
+    { period: education.years, role: education.degree, company: `${education.university} · ${education.specialization}`, companyUrl: 'https://uic.ac.ma/', desc: education.internship },
+    { period: academic.bachelorYears, role: academic.bachelor, company: academic.bachelorSchool, companyUrl: 'https://www.ens.uh2c.ac.ma/', desc: academic.bachelorDesc },
+    { period: continuous.onlineYears, role: continuous.online, desc: continuous.onlineDesc },
+  ]), '</section>');
 
   parts.push(
     `<section id="contact"><h2>${esc(l.contact.title)}</h2><p>${esc(l.contact.subtitle)}</p><ul>`,

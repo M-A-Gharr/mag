@@ -12,6 +12,7 @@ type TimelineItem = {
   period: string;
   role: string;
   company?: string;
+  companyUrl?: string;
   desc?: string;
   responsibilities?: string[];
 };
@@ -39,7 +40,7 @@ const Timeline = ({ items }: { items: TimelineItem[] }) => (
           />
           <span className="text-sm text-muted-foreground">{item.period}</span>
           <h4 className="text-lg font-medium leading-snug">{item.role}</h4>
-          {item.company && <span className="text-sm font-medium text-[#483dfb] dark:text-[#9b87f5]">{item.company}</span>}
+          {item.company && <span className="text-sm font-medium text-[#483dfb] dark:text-[#9b87f5]">{item.companyUrl ? <a href={item.companyUrl} className="underline decoration-current/30 underline-offset-4 hover:decoration-current">{item.company}</a> : item.company}</span>}
           {item.desc && <p className="mt-1 text-foreground/80">{item.desc}</p>}
           {item.responsibilities && (
             <ul className="mt-3 list-disc space-y-2 ps-5 text-foreground/80">
@@ -68,9 +69,10 @@ const AboutSection = () => {
       period: t('certificates.education.years'),
       role: t('certificates.education.degree'),
       company: `${t('certificates.education.university')} · ${t('certificates.education.specialization')}`,
+      companyUrl: 'https://uic.ac.ma/',
       desc: t('certificates.education.internship'),
     },
-    { period: t('certificates.academic.bachelorYears'), role: t('certificates.academic.bachelor'), desc: t('certificates.academic.bachelorDesc') },
+    { period: t('certificates.academic.bachelorYears'), role: t('certificates.academic.bachelor'), company: t('certificates.academic.bachelorSchool'), companyUrl: 'https://www.ens.uh2c.ac.ma/', desc: t('certificates.academic.bachelorDesc') },
     { period: t('certificates.continuous.onlineYears'), role: t('certificates.continuous.online'), desc: t('certificates.continuous.onlineDesc') },
   ];
 
