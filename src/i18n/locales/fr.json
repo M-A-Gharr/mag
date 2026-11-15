@@ -794,7 +794,24 @@
   "services": {
     "title": "Expertise",
     "subtitle": "Ce que je sais faire, et les projets où je l'ai prouvé.",
-    "cta": "Réserver un appel gratuit"
+    "cta": "Réserver un appel gratuit",
+    "needsTitle": "Quel défi souhaitez-vous résoudre ?",
+    "needsSubtitle": "Partez de votre besoin pour découvrir les solutions adaptées.",
+    "needsCta": "Explorer les solutions",
+    "needs": {
+      "webapps": {
+        "title": "Créer un outil adapté à mon métier",
+        "description": "Vos données sont dispersées et vos équipes jonglent entre tableurs et logiciels ? Réunissons votre travail dans une application adaptée."
+      },
+      "ai": {
+        "title": "Intégrer l’IA à mon activité",
+        "description": "La rédaction, le tri ou la qualification prennent trop de temps ? Identifions les tâches à simplifier et les outils à connecter."
+      },
+      "ecommerce": {
+        "title": "Faire évoluer ma boutique",
+        "description": "Votre boutique freine vos ventes ou votre gestion ? Modules PrestaShop, migration et connexion au stock : partons du problème concret."
+      }
+    }
   },
   "testimonials": {
     "subtitle": "Ce qu'en disent les personnes avec qui j'ai travaillé."

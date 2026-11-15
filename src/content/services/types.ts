@@ -11,6 +11,12 @@ export type ServiceText = {
   /** Meta description, about 160 characters at most. */
   metaDescription: string;
   lead: string;
+  deliverables?: {
+    heading: string;
+    intro: string;
+    items: string[];
+    nextStep: { heading: string; text: string };
+  };
   audience: { heading: string; items: string[] };
   offer: {
     heading: string;

@@ -800,7 +800,24 @@
   "services": {
     "title": "Expertise",
     "subtitle": "What I do best, and the projects that prove it.",
-    "cta": "Book a free call"
+    "cta": "Book a free call",
+    "needsTitle": "What challenge would you like to solve?",
+    "needsSubtitle": "Start with your needs to explore the right solutions.",
+    "needsCta": "Explore solutions",
+    "needs": {
+      "webapps": {
+        "title": "Build a tool around my business",
+        "description": "Scattered data and teams juggling spreadsheets and software? Bring your work together in an application built around your needs."
+      },
+      "ai": {
+        "title": "Bring AI into my business",
+        "description": "Writing, sorting or qualification taking too much time? Identify the tasks to simplify and the tools to connect."
+      },
+      "ecommerce": {
+        "title": "Improve my online store",
+        "description": "Is your store holding back sales or operations? Explore PrestaShop modules, migration and stock integration around your actual needs."
+      }
+    }
   },
   "testimonials": {
     "subtitle": "What people I've worked with say."

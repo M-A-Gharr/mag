@@ -134,6 +134,10 @@ const serviceHtml = (t: ServiceText, examples: { href: string; title: string }[]
   if (t.offer.support) {
     parts.push(`<h3>${esc(t.offer.support.heading)}</h3>`, `<p>${esc(t.offer.support.text)}</p>`);
   }
+  if (t.deliverables) {
+    parts.push(`<h2>${esc(t.deliverables.heading)}</h2>`, `<p>${esc(t.deliverables.intro)}</p>`, list(t.deliverables.items),
+      `<h3>${esc(t.deliverables.nextStep.heading)}</h3><p>${esc(t.deliverables.nextStep.text)}</p>`);
+  }
   if (t.technicalCapabilities) {
     const capabilities = t.technicalCapabilities;
     parts.push(`<h2>${esc(capabilities.heading)}</h2>`, `<p>${esc(capabilities.intro)}</p>`);
@@ -179,10 +183,10 @@ const homeHtml = (lng: CaseStudyLang, l: any) => {
     `<a href="#contact">${esc(l.hero.cta.discover)}</a> <a href="#projects">${esc(l.hero.cta.projects)}</a></section>`
   );
 
-  parts.push(`<section id="services"><h2>${esc(l.services.title)}</h2><p>${esc(l.services.subtitle)}</p><ul>`);
+  parts.push(`<section id="services"><h2>${esc(l.services.needsTitle)}</h2><p>${esc(l.services.needsSubtitle)}</p><ul>`);
   for (const s of SERVICES) {
     parts.push(
-      `<li><h3><a href="${servicePath(lng, s.slug)}">${esc(s.text[lng].title)}</a></h3><p>${esc(l.about.services[s.key].desc)}</p></li>`
+      `<li><p>${esc(l.about.services[s.key].title)}</p><h3><a href="${servicePath(lng, s.slug)}">${esc(l.services.needs[s.key].title)}</a></h3><p>${esc(l.services.needs[s.key].description)}</p><a href="${servicePath(lng, s.slug)}">${esc(l.services.needsCta)}</a></li>`
     );
   }
   parts.push(`</ul></section>`);

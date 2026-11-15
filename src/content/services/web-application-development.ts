@@ -6,7 +6,7 @@ const service: Service = {
   key: 'webapps',
   caseStudies: ['b2b-lead-intelligence-platform', 'export-showcase-site-b2b-crm', 'bakery-management-saas', 'vr-property-showroom-crm', 'medical-practice-management-mvp', 'banking-agency-java-jee'],
   tools: ['React', 'Node.js', 'TypeScript', 'PHP', 'ASP.NET', 'C#', 'PostgreSQL', 'MySQL', 'MSSQL', 'Supabase'],
-  modified: '2026-11-14',
+  modified: '2026-11-15',
   text: {
     fr: {
       title: "Développement d'applications web sur mesure",
@@ -63,6 +63,20 @@ const service: Service = {
             ]
           }
         ]
+      },
+      deliverables: {
+        "heading": "Ce que vous recevez",
+        "intro": "Les livrables sont définis selon la prestation choisie et validés ensemble avant le développement. La maintenance et les évolutions sont cadrées séparément.",
+        "items": [
+          "Un périmètre écrit : utilisateurs, parcours, fonctionnalités prioritaires et données à connecter.",
+          "Une application avec les écrans métier et les permissions prévus : outil interne, CRM ou portail client.",
+          "Les connexions convenues aux API, fichiers ou systèmes existants, avec vérification des échanges.",
+          "Une version testée et déployée, un guide de prise en main et une présentation aux utilisateurs."
+        ],
+        "nextStep": {
+          "heading": "Le premier échange",
+          "text": "Nous faisons le point sur votre fonctionnement actuel, les utilisateurs, les outils et les contraintes. Nous définissons ensuite la prochaine étape adaptée : cadrage, prototype ou proposition de réalisation."
+        }
       },
       process: {
         heading: 'Comment je travaille',
@@ -131,6 +145,20 @@ const service: Service = {
           }
         ]
       },
+      deliverables: {
+        "heading": "What you receive",
+        "intro": "Deliverables depend on the selected service and are agreed before development. Maintenance and further improvements are scoped separately.",
+        "items": [
+          "A written scope: users, workflows, priority features and data to connect.",
+          "An application with the agreed business screens and permissions: internal tool, CRM or client portal.",
+          "Agreed connections to APIs, files or existing systems, with data exchange checks.",
+          "A tested, deployed version, a getting-started guide and a walkthrough for users."
+        ],
+        "nextStep": {
+          "heading": "The first conversation",
+          "text": "We review your current workflow, users, tools and constraints, then identify the appropriate next step: scoping, a prototype or a delivery proposal."
+        }
+      },
       process: {
         heading: 'How I work',
         steps: [
@@ -197,6 +225,20 @@ const service: Service = {
             ]
           }
         ]
+      },
+      deliverables: {
+        "heading": "ما الذي تتسلمونه؟",
+        "intro": "تُحدّد المخرجات حسب الخدمة المختارة ونتفق عليها قبل التطوير. ويُحدّد نطاق الصيانة والتطويرات اللاحقة بشكل منفصل.",
+        "items": [
+          "نطاق مكتوب يحدّد المستخدمين والمسارات والوظائف ذات الأولوية والبيانات المطلوب ربطها.",
+          "تطبيق بالشاشات والصلاحيات المتفق عليها: أداة داخلية أو CRM أو بوابة عملاء.",
+          "الروابط المتفق عليها مع API أو الملفات أو الأنظمة القائمة، مع التحقق من تبادل البيانات.",
+          "نسخة مختبرة ومنشورة ودليل استخدام وعرض للمستخدمين."
+        ],
+        "nextStep": {
+          "heading": "اللقاء الأول",
+          "text": "نراجع سير عملكم الحالي والمستخدمين والأدوات والقيود، ثم نحدّد الخطوة المناسبة: تحديد النطاق أو نموذج أولي أو عرض تنفيذ."
+        }
       },
       process: {
         heading: 'طريقتي في العمل',

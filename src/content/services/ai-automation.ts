@@ -6,7 +6,7 @@ const service: Service = {
   key: 'ai',
   caseStudies: ['ai-fashion-visuals-studio', 'b2b-lead-intelligence-platform', 'configurable-invoice-ocr'],
   tools: ['Claude', 'OpenAI', 'Perplexity', 'FASHN AI', 'Make'],
-  modified: '2026-11-14',
+  modified: '2026-11-15',
   text: {
     fr: {
       title: "Automatisation par l'IA et formation des équipes",
@@ -59,6 +59,20 @@ const service: Service = {
         "support": {
           "heading": "Formation et adoption, à chaque niveau",
           "text": "J’accompagne les équipes dans la prise en main : ateliers par service, Skills Claude sur mesure et guides pratiques. L’objectif est de rendre l’outil utile au quotidien, avec des personnes qui comprennent son fonctionnement et gardent la main sur les décisions."
+        }
+      },
+      deliverables: {
+        "heading": "Ce que vous recevez",
+        "intro": "Les livrables sont définis selon la prestation choisie et validés ensemble avant le développement. La maintenance et les évolutions sont cadrées séparément.",
+        "items": [
+          "AI Integration : une fonctionnalité IA intégrée à votre application, avec les données d’entrée, les résultats et leur validation définis.",
+          "AI Automation : un workflow configuré et testé, avec déclencheurs, outils connectés et points de validation.",
+          "AI Product Development : une application complète avec interface, données, accès utilisateurs et fonctions IA selon le périmètre convenu.",
+          "Pour la prestation retenue : documentation, formation des utilisateurs et règles d’usage et de suivi des coûts."
+        ],
+        "nextStep": {
+          "heading": "Le premier échange",
+          "text": "Nous faisons le point sur votre fonctionnement actuel, les utilisateurs, les outils et les contraintes. Nous définissons ensuite la prochaine étape adaptée : cadrage, prototype ou proposition de réalisation."
         }
       },
       process: {
@@ -125,6 +139,20 @@ const service: Service = {
           "text": "I help teams get started through department workshops, custom Claude Skills and practical guides. The goal is an everyday tool people understand and can use while staying in control of decisions."
         }
       },
+      deliverables: {
+        "heading": "What you receive",
+        "intro": "Deliverables depend on the selected service and are agreed before development. Maintenance and further improvements are scoped separately.",
+        "items": [
+          "AI Integration: an AI feature added to your application, with defined inputs, outputs and review steps.",
+          "AI Automation: a configured and tested workflow with triggers, connected tools and approval checkpoints.",
+          "AI Product Development: a complete application with interface, data, user access and AI features within the agreed scope.",
+          "For the selected service: documentation, user training, usage guidelines and cost monitoring guidance."
+        ],
+        "nextStep": {
+          "heading": "The first conversation",
+          "text": "We review your current workflow, users, tools and constraints, then identify the appropriate next step: scoping, a prototype or a delivery proposal."
+        }
+      },
       process: {
         heading: 'How I work',
         steps: [
@@ -187,6 +215,20 @@ const service: Service = {
         "support": {
           "heading": "التكوين واعتماد الأداة في كل مستوى",
           "text": "أرافق الفرق في الاستخدام عبر ورشات لكل قسم وSkills مخصصة لـ Claude وأدلة عملية. الهدف أداة مفيدة يوميًا يفهمها المستخدمون مع بقاء القرارات بأيديهم."
+        }
+      },
+      deliverables: {
+        "heading": "ما الذي تتسلمونه؟",
+        "intro": "تُحدّد المخرجات حسب الخدمة المختارة ونتفق عليها قبل التطوير. ويُحدّد نطاق الصيانة والتطويرات اللاحقة بشكل منفصل.",
+        "items": [
+          "AI Integration: وظيفة ذكاء اصطناعي داخل تطبيقكم مع تحديد المدخلات والمخرجات وخطوات المراجعة.",
+          "AI Automation: مسار عمل مضبوط ومختبر مع محفزات وأدوات مرتبطة ونقاط اعتماد.",
+          "AI Product Development: تطبيق كامل بواجهة وبيانات وصلاحيات ووظائف ذكاء اصطناعي حسب النطاق المتفق عليه.",
+          "للخدمة المختارة: توثيق وتدريب المستخدمين وإرشادات الاستخدام ومتابعة التكاليف."
+        ],
+        "nextStep": {
+          "heading": "اللقاء الأول",
+          "text": "نراجع سير عملكم الحالي والمستخدمين والأدوات والقيود، ثم نحدّد الخطوة المناسبة: تحديد النطاق أو نموذج أولي أو عرض تنفيذ."
         }
       },
       process: {

@@ -800,7 +800,24 @@
   "services": {
     "title": "Aree di competenza",
     "subtitle": "Ciò che so fare meglio, e i progetti che lo dimostrano.",
-    "cta": "Prenota una chiamata gratuita"
+    "cta": "Prenota una chiamata gratuita",
+    "needsTitle": "Quale sfida vuoi risolvere?",
+    "needsSubtitle": "Parti dalle tue esigenze per scoprire le soluzioni adatte.",
+    "needsCta": "Esplora le soluzioni",
+    "needs": {
+      "webapps": {
+        "title": "Creare uno strumento per la mia attività",
+        "description": "Dati sparsi e team divisi tra fogli di calcolo e programmi? Riuniamo il lavoro in un’applicazione adatta."
+      },
+      "ai": {
+        "title": "Integrare l’IA nella mia attività",
+        "description": "Scrittura, classificazione o qualificazione richiedono troppo tempo? Individuiamo le attività da semplificare e gli strumenti da collegare."
+      },
+      "ecommerce": {
+        "title": "Migliorare il mio negozio online",
+        "description": "Il negozio ostacola vendite o gestione? Moduli PrestaShop, migrazione e collegamento dello stock in base alle tue esigenze."
+      }
+    }
   },
   "testimonials": {
     "subtitle": "Cosa dicono le persone con cui ho lavorato."

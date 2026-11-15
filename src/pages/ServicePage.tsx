@@ -178,6 +178,26 @@ const ServicePage = () => {
                   </ul>
                 </section>
 
+                {text.deliverables && (
+                  <section aria-labelledby="deliverables-title">
+                    <ArticleReveal as="h2" id="deliverables-title" className="text-2xl font-semibold md:text-3xl">{text.deliverables.heading}</ArticleReveal>
+                    <p className="mt-4 leading-relaxed text-muted-foreground">{text.deliverables.intro}</p>
+                    <ul className="mt-6 grid gap-4 sm:grid-cols-2">
+                      {text.deliverables.items.map((item, index) => (
+                        <ArticleReveal as="li" key={item} delay={(index % 2) * 0.08} className="panel p-5">
+                          <Check aria-hidden className="mb-3 h-5 w-5 text-[#483dfb] dark:text-[#9b87f5]" />
+                          <p className="leading-relaxed">{item}</p>
+                        </ArticleReveal>
+                      ))}
+                    </ul>
+                    <ArticleReveal className="mt-6 border-s-2 border-[#483dfb]/50 ps-5">
+                      <h3 className="text-xl font-semibold">{text.deliverables.nextStep.heading}</h3>
+                      <p className="mt-2 leading-relaxed text-foreground/85">{text.deliverables.nextStep.text}</p>
+                      <ContextualContact topic={`service:${slug}`} serviceKey={entry.key} compact />
+                    </ArticleReveal>
+                  </section>
+                )}
+
                 {text.technicalCapabilities && (
                   <section aria-labelledby="technical-capabilities-title">
                     <ArticleReveal as="h2" id="technical-capabilities-title" className="text-2xl font-semibold md:text-3xl">{text.technicalCapabilities.heading}</ArticleReveal>

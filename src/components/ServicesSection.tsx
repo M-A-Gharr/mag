@@ -23,7 +23,7 @@ const ServicesSection = () => {
 
   return (
     <section id="services" className="section-container">
-      <SectionHeading title={t('services.title')} subtitle={t('services.subtitle')} />
+      <SectionHeading title={t('services.needsTitle')} subtitle={t('services.needsSubtitle')} />
 
       <Stagger className="grid gap-6 md:grid-cols-3" stagger={0.12}>
         {SERVICES.map(({ key, icon: Icon, items }) => (
@@ -32,8 +32,9 @@ const ServicesSection = () => {
               <span className="mb-5 w-fit rounded-xl bg-[#483dfb]/10 p-3 transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:-translate-y-1">
                 <Icon className="h-7 w-7 text-[#483dfb] dark:text-[#9b87f5]" aria-hidden />
               </span>
-              <h3 className="text-xl font-semibold">{t(`about.services.${key}.title`)}</h3>
-              <p className="mt-2 text-muted-foreground">{t(`about.services.${key}.desc`)}</p>
+              <p className="mb-2 text-xs font-medium uppercase tracking-wide text-muted-foreground">{t(`about.services.${key}.title`)}</p>
+              <h3 className="text-xl font-semibold">{t(`services.needs.${key}.title`)}</h3>
+              <p className="mt-2 text-muted-foreground">{t(`services.needs.${key}.description`)}</p>
               <ul className="mt-5 space-y-2 border-t border-border/60 pt-5 text-sm">
                 {items.map((i) =>
                   list[i] ? (
@@ -50,7 +51,7 @@ const ServicesSection = () => {
                   to={servicePath(i18n.language, serviceForKey(key)!.slug)}
                   className="inline-flex items-center gap-1 text-sm font-medium text-[#483dfb] underline-offset-4 hover:underline dark:text-[#9b87f5]"
                 >
-                  {t('servicePage.discover')}
+                  {t('services.needsCta')}
                   <ArrowUpRight className="h-4 w-4 rtl:-scale-x-100" aria-hidden />
                 </RouterLink>
                 <RouterLink to={caseStudyPath(i18n.language, serviceForKey(key)!.caseStudies[0])} className="inline-flex items-center gap-1 text-sm underline-offset-4 hover:underline">

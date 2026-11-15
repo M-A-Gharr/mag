@@ -7,7 +7,7 @@ const service: Service = {
   key: 'ecommerce',
   caseStudies: ['prestashop-redesign-multilingual-seo', 'migration-woocommerce-prestashop-9'],
   tools: ['PrestaShop', 'WordPress', 'Shopify', 'PHP', 'Google Search Console', 'Google Analytics', 'Surfer SEO', 'Semrush'],
-  modified: '2026-11-14',
+  modified: '2026-11-15',
   text: {
     fr: {
       title: 'E-commerce et SEO : PrestaShop, WordPress et Shopify',
@@ -65,6 +65,20 @@ const service: Service = {
             ]
           }
         ]
+      },
+      deliverables: {
+        "heading": "Ce que vous recevez",
+        "intro": "Les livrables sont définis selon la prestation choisie et validés ensemble avant le développement. La maintenance et les évolutions sont cadrées séparément.",
+        "items": [
+          "Refonte ou module : thème ou fonctionnalité PrestaShop développés et testés selon les règles commerciales convenues.",
+          "Migration : données reprises, contrôles de cohérence, correspondance des URL et redirections, avec un plan de bascule.",
+          "Intégration ERP : flux défini, synchronisation configurée et contrôles des données échangées selon les interfaces disponibles.",
+          "SEO et prise en main : corrections convenues de structure et de métadonnées, vérifications avant lancement et guide de gestion."
+        ],
+        "nextStep": {
+          "heading": "Le premier échange",
+          "text": "Nous faisons le point sur votre fonctionnement actuel, les utilisateurs, les outils et les contraintes. Nous définissons ensuite la prochaine étape adaptée : cadrage, prototype ou proposition de réalisation."
+        }
       },
       process: {
         heading: 'Comment je travaille',
@@ -134,6 +148,20 @@ const service: Service = {
           }
         ]
       },
+      deliverables: {
+        "heading": "What you receive",
+        "intro": "Deliverables depend on the selected service and are agreed before development. Maintenance and further improvements are scoped separately.",
+        "items": [
+          "Redesign or module: a PrestaShop theme or feature developed and tested against the agreed business rules.",
+          "Migration: transferred data, consistency checks, URL mapping and redirects, with a cutover plan.",
+          "ERP integration: a defined data flow, configured synchronisation and exchange checks using the available interfaces.",
+          "SEO and handover: agreed structure and metadata improvements, pre-launch checks and a management guide."
+        ],
+        "nextStep": {
+          "heading": "The first conversation",
+          "text": "We review your current workflow, users, tools and constraints, then identify the appropriate next step: scoping, a prototype or a delivery proposal."
+        }
+      },
       process: {
         heading: 'How I work',
         steps: [
@@ -201,6 +229,20 @@ const service: Service = {
             ]
           }
         ]
+      },
+      deliverables: {
+        "heading": "ما الذي تتسلمونه؟",
+        "intro": "تُحدّد المخرجات حسب الخدمة المختارة ونتفق عليها قبل التطوير. ويُحدّد نطاق الصيانة والتطويرات اللاحقة بشكل منفصل.",
+        "items": [
+          "إعادة التصميم أو الوحدة: قالب أو وظيفة PrestaShop مطوّرة ومختبرة حسب القواعد التجارية المتفق عليها.",
+          "الترحيل: بيانات منقولة وفحوصات اتساق ومطابقة الروابط وإعادة التوجيه وخطة انتقال.",
+          "ربط ERP: تدفق بيانات محدد ومزامنة مضبوطة وفحوصات التبادل بحسب الواجهات المتاحة.",
+          "SEO والتسليم: تحسينات البنية والبيانات الوصفية المتفق عليها وفحوصات ما قبل الإطلاق ودليل الإدارة."
+        ],
+        "nextStep": {
+          "heading": "اللقاء الأول",
+          "text": "نراجع سير عملكم الحالي والمستخدمين والأدوات والقيود، ثم نحدّد الخطوة المناسبة: تحديد النطاق أو نموذج أولي أو عرض تنفيذ."
+        }
       },
       process: {
         heading: 'طريقتي في العمل',
