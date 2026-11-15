@@ -4,10 +4,10 @@
 import { useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { AnimatePresence, motion, useInView, useReducedMotion, type PanInfo } from 'framer-motion';
-import { ChevronLeft, ChevronRight, Quote } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Linkedin, Quote } from 'lucide-react';
 import { EASE_OUT } from '../motion';
 
-type Testimonial = { id: number; author: string; role: string; quote: string };
+type Testimonial = { id: number; author: string; role: string; quote: string; quoteLang?: string; linkedinUrl?: string };
 
 const DURATION_S = 7; // seconds per testimonial
 const SWIPE = 50;
@@ -37,6 +37,7 @@ const TestimonialsCarousel = () => {
 
   if (items.length === 0) return null;
   const current = items[index % items.length];
+  const duration = Math.max(DURATION_S, current.quote.split(/\s+/).length / 3 + 2);
 
   const go = (step: 1 | -1) => {
     setDirection(step);
@@ -84,7 +85,7 @@ const TestimonialsCarousel = () => {
                     reduce
                       ? undefined
                       : {
-                          animation: `testimonial-progress ${DURATION_S}s linear forwards`,
+                          animation: `testimonial-progress ${duration}s linear forwards`,
                           animationPlayState: paused || !inView ? 'paused' : 'running',
                         }
                   }
@@ -118,7 +119,7 @@ const TestimonialsCarousel = () => {
             onDragEnd={onDragEnd}
             className="relative flex min-h-[220px] cursor-grab touch-pan-y select-none flex-col justify-between pt-12 active:cursor-grabbing"
           >
-            <blockquote className="text-lg font-medium leading-relaxed text-foreground md:text-xl">
+            <blockquote lang={current.quoteLang} dir={current.quoteLang === 'en' ? 'ltr' : undefined} className="text-lg font-medium leading-relaxed text-foreground md:text-xl">
               {current.quote}
             </blockquote>
 
@@ -129,6 +130,19 @@ const TestimonialsCarousel = () => {
               <span className="min-w-0">
                 <span className="block truncate font-semibold">{current.author}</span>
                 <span className="block truncate text-sm text-muted-foreground">{current.role}</span>
+                {current.linkedinUrl && (
+                  <a
+                    href={current.linkedinUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`${current.author} — LinkedIn`}
+                    onPointerDown={(event) => event.stopPropagation()}
+                    className="mt-1 inline-flex items-center gap-1.5 rounded-sm text-sm text-primary underline-offset-4 hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+                  >
+                    <Linkedin aria-hidden="true" className="h-3.5 w-3.5" />
+                    LinkedIn
+                  </a>
+                )}
               </span>
             </figcaption>
           </motion.figure>
