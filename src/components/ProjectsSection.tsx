@@ -162,7 +162,8 @@ const ProjectsSection = () => {
     {
       id: 8,
       icon: <ShoppingCart className="h-8 w-8 text-[#483dfb]" />,
-      images: []
+      images: [],
+      video: { src: '/videos/projects/prestashop-redesign.mp4', poster: '/videos/projects/prestashop-redesign-poster.webp' }
     },
     {
       id: 13,
