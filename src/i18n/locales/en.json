@@ -758,7 +758,24 @@
       "success": "Thanks, your message is on its way. I'll get back to you within a day.",
       "sent": "Message sent!",
       "error": "Something went wrong and your message wasn’t sent. Please try again, or email me directly.",
-      "characters": "{{count}} of {{max}} characters"
+      "characters": "{{count}} of {{max}} characters",
+      "need": "What do you need?",
+      "needPlaceholder": "Choose a need",
+      "timeframe": "Desired timeframe (optional)",
+      "timeframePlaceholder": "Not specified",
+      "needOptions": {
+        "webapps": "Web application / business tool",
+        "ai": "AI integration or automation",
+        "ecommerce": "E-commerce / PrestaShop",
+        "other": "Other / to discuss"
+      },
+      "timeframeOptions": {
+        "soon": "As soon as possible",
+        "oneToThreeMonths": "Within 1–3 months",
+        "later": "More than 3 months away",
+        "flexible": "To discuss together"
+      },
+      "messageHelp": "Describe your current workflow, the tools you use and what you would like to improve or create."
     },
     "info": {
       "title": "Contact information",

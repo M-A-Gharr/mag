@@ -758,7 +758,24 @@
       "success": "Gracias, tu mensaje ya está en camino. Te responderé en el día.",
       "sent": "¡Mensaje enviado!",
       "error": "Algo salió mal y tu mensaje no se envió. Inténtalo de nuevo o escríbeme directamente por correo.",
-      "characters": "{{count}} de {{max}} caracteres"
+      "characters": "{{count}} de {{max}} caracteres",
+      "need": "¿Qué necesitas?",
+      "needPlaceholder": "Elige una necesidad",
+      "timeframe": "Plazo deseado (opcional)",
+      "timeframePlaceholder": "Sin especificar",
+      "needOptions": {
+        "webapps": "Aplicación web / herramienta de negocio",
+        "ai": "Integración o automatización con IA",
+        "ecommerce": "E-commerce / PrestaShop",
+        "other": "Otro / por concretar"
+      },
+      "timeframeOptions": {
+        "soon": "Lo antes posible",
+        "oneToThreeMonths": "En 1–3 meses",
+        "later": "Dentro de más de 3 meses",
+        "flexible": "A definir juntos"
+      },
+      "messageHelp": "Describe cómo trabajas, las herramientas que utilizas y lo que quieres mejorar o crear."
     },
     "info": {
       "title": "Información de contacto",

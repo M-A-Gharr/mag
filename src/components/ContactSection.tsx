@@ -13,7 +13,7 @@ import PaperPlaneButton, { type SendStatus } from './contact/PaperPlaneButton';
 import ContactItem from './contact/ContactItem';
 import { useLocation } from 'react-router-dom';
 import { CASE_STUDY_PAGES, caseStudyLang } from '@/content/caseStudies';
-import { SERVICE_PAGES } from '@/content/services';
+import { SERVICE_PAGES, servicesForProject } from '@/content/services';
 import { conversionCopy } from '@/content/conversion';
 
 const MESSAGE_MAX = 1000;
@@ -30,10 +30,13 @@ const ContactSection = () => {
   const service = topic.startsWith('service:') ? SERVICE_PAGES.find((s) => s.slug === topic.slice(8)) : undefined;
   const subject = project ? t(`projects.items.${project.projectId}.title`) : service ? t(`about.services.${service.key}.title`) : '';
   const copy = conversionCopy[caseStudyLang(i18n.language)];
+  const suggestedNeed = service?.key ?? (project ? servicesForProject(project.projectId)[0]?.key : '') ?? '';
   const [formData, setFormData] = useState({
     from_name: '',
     reply_to: '',
-    message: ''
+    message: '',
+    need: suggestedNeed,
+    timeframe: ''
   });
   const [status, setStatus] = useState<SendStatus>('idle');
   const [errorCount, setErrorCount] = useState(0);
@@ -43,9 +46,13 @@ const ContactSection = () => {
     if (subject) setFormData((previous) => previous.message ? previous : { ...previous, message: copy.prompt(subject) });
   }, [subject, copy]);
 
+  useEffect(() => {
+    if (suggestedNeed) setFormData((previous) => previous.need ? previous : { ...previous, need: suggestedNeed });
+  }, [suggestedNeed]);
+
   useEffect(() => () => clearTimeout(resetTimer.current), []);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
     if (status === 'error') setStatus('idle');
@@ -55,12 +62,23 @@ const ContactSection = () => {
     e.preventDefault();
     if (status === 'sending' || status === 'sent') return;
     setStatus('sending');
+    // Include qualification in the existing message field: no EmailJS template change needed.
+    const payload = {
+      ...formData,
+      message: [
+        `${t('contact.form.need')}: ${t(`contact.form.needOptions.${formData.need}`)}`,
+        ...(formData.timeframe ? [`${t('contact.form.timeframe')}: ${t(`contact.form.timeframeOptions.${formData.timeframe}`)}`] : []),
+        ...(subject ? [`${copy.context}: ${subject}`] : []),
+        '',
+        formData.message,
+      ].join('\n'),
+    };
     // Let the plane "taxi" for a moment even when the network is fast.
     const minDelay = new Promise((resolve) => setTimeout(resolve, 900));
 
     try {
       // Notification to me; this one decides success.
-      await emailjs.send('service_8nsntik', 'template_ziyld0c', formData, 'vfswi8UCo__CgVoZo');
+      await emailjs.send('service_8nsntik', 'template_ziyld0c', payload, 'vfswi8UCo__CgVoZo');
     } catch (error) {
       console.error('FAILED sending notification email...', error);
       await minDelay;
@@ -71,12 +89,12 @@ const ContactSection = () => {
 
     // Confirmation to the sender; a failure here doesn't lose the message.
     emailjs
-      .send('service_8nsntik', 'template_pnyo2ld', formData, 'vfswi8UCo__CgVoZo')
+      .send('service_8nsntik', 'template_pnyo2ld', payload, 'vfswi8UCo__CgVoZo')
       .catch((error) => console.error('FAILED sending confirmation email...', error));
 
     await minDelay;
     setStatus('sent');
-    setFormData({ from_name: '', reply_to: '', message: '' });
+    setFormData({ from_name: '', reply_to: '', message: '', need: suggestedNeed, timeframe: '' });
     clearTimeout(resetTimer.current);
     resetTimer.current = setTimeout(() => setStatus('idle'), 6000);
   };
@@ -158,7 +176,32 @@ const ContactSection = () => {
                 />
               </StaggerItem>
 
+              <StaggerItem className="grid gap-5 sm:grid-cols-2">
+                {(['need', 'timeframe'] as const).map((field) => (
+                  <div key={field}>
+                    <label htmlFor={`contact-${field}`} className="mb-2 block text-sm font-medium">
+                      {t(`contact.form.${field}`)}
+                    </label>
+                    <select
+                      id={`contact-${field}`}
+                      name={field}
+                      value={formData[field]}
+                      onChange={handleChange}
+                      required={field === 'need'}
+                      disabled={status === 'sending'}
+                      className="h-14 w-full rounded-lg border border-input bg-background px-3 text-sm text-foreground outline-none transition-colors focus:border-[#483dfb]/60 focus:ring-2 focus:ring-[#483dfb]/20 disabled:opacity-60"
+                    >
+                      <option value="" disabled={field === 'need'}>{t(`contact.form.${field}Placeholder`)}</option>
+                      {(field === 'need' ? ['webapps', 'ai', 'ecommerce', 'other'] : ['soon', 'oneToThreeMonths', 'later', 'flexible']).map((value) => (
+                        <option key={value} value={value}>{t(`contact.form.${field}Options.${value}`)}</option>
+                      ))}
+                    </select>
+                  </div>
+                ))}
+              </StaggerItem>
+
               <StaggerItem>
+                <p className="mb-3 text-sm text-muted-foreground">{t('contact.form.messageHelp')}</p>
                 <FloatingField
                   id="message"
                   name="message"

@@ -758,7 +758,24 @@
       "sent": "Message envoyé !",
       "error": "Un problème est survenu et votre message n’a pas été envoyé. Réessayez, ou écrivez-moi directement par e-mail.",
       "characters": "{{count}} caractères sur {{max}}",
-      "title": "Envoyer un message"
+      "title": "Envoyer un message",
+      "need": "Votre besoin",
+      "needPlaceholder": "Choisir un besoin",
+      "timeframe": "Échéance souhaitée (facultatif)",
+      "timeframePlaceholder": "Non précisée",
+      "needOptions": {
+        "webapps": "Application web / outil métier",
+        "ai": "Intégration ou automatisation IA",
+        "ecommerce": "E-commerce / PrestaShop",
+        "other": "Autre / à préciser"
+      },
+      "timeframeOptions": {
+        "soon": "Dès que possible",
+        "oneToThreeMonths": "Dans 1 à 3 mois",
+        "later": "Dans plus de 3 mois",
+        "flexible": "À définir ensemble"
+      },
+      "messageHelp": "Décrivez votre fonctionnement actuel, les outils utilisés et ce que vous souhaitez améliorer ou créer."
     },
     "info": {
       "title": "Informations de contact",
