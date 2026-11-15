@@ -38,3 +38,8 @@ chatbase/
 # Video work files and Lighthouse reports (local only)
 output/
 www.maminegh.com-*.html
+
+# Video source files and store-capture scripts (contain client material: local only)
+/Video/
+scripts/video/capture-store.cjs
+scripts/video/inspect-store.cjs

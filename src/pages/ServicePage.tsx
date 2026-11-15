@@ -302,7 +302,8 @@ const ServicePage = () => {
           )}
         </article>
       </main>
-      <Footer />
+      {/* Footer only once the content is in: shown under the short skeleton, it would jump down (layout shift) */}
+      {text && <Footer />}
     </div>
   );
 };
