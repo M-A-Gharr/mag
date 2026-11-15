@@ -72,7 +72,7 @@ const AboutSection = () => {
       companyUrl: 'https://uic.ac.ma/',
       desc: t('certificates.education.internship'),
     },
-    { period: t('certificates.academic.bachelorYears'), role: t('certificates.academic.bachelor'), company: t('certificates.academic.bachelorSchool'), companyUrl: 'https://www.ens.uh2c.ac.ma/', desc: t('certificates.academic.bachelorDesc') },
+    { period: t('certificates.academic.bachelorYears'), role: t('certificates.academic.bachelor'), company: t('certificates.academic.bachelorSchool'), companyUrl: 'https://www.enscasa.ac.ma/', desc: t('certificates.academic.bachelorDesc') },
     { period: t('certificates.continuous.onlineYears'), role: t('certificates.continuous.online'), desc: t('certificates.continuous.onlineDesc') },
   ];
 

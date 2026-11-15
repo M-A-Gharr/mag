@@ -210,7 +210,7 @@ const homeHtml = (lng: CaseStudyLang, l: any) => {
   parts.push(`<h3>${esc(l.about.education.title)}</h3>`, resumeHtml([
     { period: academic.hndYears, role: academic.hnd, desc: academic.hndDesc },
     { period: education.years, role: education.degree, company: `${education.university} · ${education.specialization}`, companyUrl: 'https://uic.ac.ma/', desc: education.internship },
-    { period: academic.bachelorYears, role: academic.bachelor, company: academic.bachelorSchool, companyUrl: 'https://www.ens.uh2c.ac.ma/', desc: academic.bachelorDesc },
+    { period: academic.bachelorYears, role: academic.bachelor, company: academic.bachelorSchool, companyUrl: 'https://www.enscasa.ac.ma/', desc: academic.bachelorDesc },
     { period: continuous.onlineYears, role: continuous.online, desc: continuous.onlineDesc },
   ]), '</section>');
 
