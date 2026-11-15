@@ -34,3 +34,7 @@ projectSimtis/
 
 # Chatbase setup notes (pasted into the Chatbase dashboard, not part of the site)
 chatbase/
+
+# Video work files and Lighthouse reports (local only)
+output/
+www.maminegh.com-*.html
