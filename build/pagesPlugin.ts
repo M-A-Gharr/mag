@@ -387,7 +387,6 @@ const redirectHtml = (lng: string, target: string) =>
     `<html lang="${lng}">`,
     '<head>',
     '<meta charset="utf-8" />',
-    '<meta name="robots" content="noindex" />',
     `<link rel="canonical" href="${target}" />`,
     `<meta http-equiv="refresh" content="0; url=${target}" />`,
     `<title>${target}</title>`,
