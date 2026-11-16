@@ -8,6 +8,8 @@ export default {
 		"./components/**/*.{ts,tsx}",
 		"./app/**/*.{ts,tsx}",
 		"./src/**/*.{ts,tsx}",
+		// Classes of the prerendered pages
+		"./build/**/*.ts",
 	],
 	prefix: "",
 	theme: {
@@ -72,7 +74,7 @@ export default {
 				sm: 'calc(var(--radius) - 4px)'
 			},
 			fontFamily: {
-				inter: ['Inter', 'sans-serif'],
+				inter: ['Inter', 'Inter Fallback', 'sans-serif'],
 			},
 			keyframes: {
 				'accordion-down': {

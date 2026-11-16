@@ -103,6 +103,60 @@ const write = (outDir: string, urlPath: string, html: string) => {
   fs.writeFileSync(path.join(dir, 'index.html'), html);
 };
 
+// ---------------------------------------------------------------------------------------------
+// Prerendered markup. The top of each page (what is on screen before scrolling) uses the same
+// elements and Tailwind classes as the React components, so the page looks final from the first
+// paint and nothing moves when the app takes over. Mirrors: CaseStudyPage, ServicePage,
+// ContextualContact, ProjectVideo, HeroSection, LetterSwapTitle. The rest of the content gets
+// simple reading styles (.prerender in src/index.css).
+// ---------------------------------------------------------------------------------------------
+
+const svg = (cls: string, body: string, fill = 'none') =>
+  `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="${fill}" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="${cls}" aria-hidden="true">${body}</svg>`;
+const CHEVRON = svg('h-3.5 w-3.5 rtl:rotate-180', '<path d="m9 18 6-6-6-6"></path>');
+const ARROW = svg('h-4 w-4 shrink-0 rtl:rotate-180', '<path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path>');
+const PLAY = svg('relative ms-1 h-7 w-7 fill-current', '<polygon points="6 3 20 12 6 21 6 3"></polygon>');
+const CLOCK = svg('h-4 w-4 text-[#483dfb] dark:text-[#9b87f5]', '<circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>');
+
+/** Root wrapper of the reading pages (CaseStudyPage, ServicePage). */
+const readingPage = (dir: 'ltr' | 'rtl', article: string) =>
+  `<div class="relative min-h-screen bg-background text-foreground" dir="${dir}"><main><article class="mx-auto max-w-3xl px-4 pb-16 pt-28 sm:px-6 md:pb-24 md:pt-32">${article}</article></main></div>`;
+
+const breadcrumb = (items: { label: string; href?: string }[]) =>
+  `<nav aria-label="Breadcrumb" class="mb-8 text-sm text-muted-foreground"><ol class="flex flex-wrap items-center gap-1.5">${items
+    .map((item, i) =>
+      (i ? CHEVRON : '') +
+      (item.href ? `<li><a href="${item.href}" class="hover:text-[#483dfb]">${esc(item.label)}</a></li>` : `<li aria-current="page" class="text-foreground/80">${esc(item.label)}</li>`)
+    )
+    .join('')}</ol></nav>`;
+
+/** Chip, title, lead and the compact contact button. */
+const pageHeader = (chip: string, title: string, lead: string, ctaHref: string, ctaLabel: string) =>
+  `<div><span class="rounded-full bg-[#483dfb]/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-[#483dfb] dark:text-[#9b87f5]">${esc(chip)}</span>` +
+  `<h1 class="mt-5 text-3xl font-bold leading-tight md:text-5xl">${esc(title)}</h1>` +
+  `<p class="mt-6 text-lg leading-relaxed text-foreground/80 md:text-xl">${esc(lead)}</p>` +
+  `<div class="mt-6"><a href="${ctaHref}" class="inline-flex items-center justify-center gap-2 rounded-full bg-[#261bfb] px-5 py-3 text-sm font-medium text-white transition-[background-color,box-shadow,transform] duration-300 motion-safe:hover:-translate-y-0.5 hover:shadow-lg hover:shadow-[#261bfb]/20 motion-reduce:transition-none hover:bg-[#3e30fb] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#9b87f5] focus-visible:ring-offset-2">${esc(ctaLabel)}${ARROW}</a></div></div>`;
+
+const formatDuration = (seconds: number) => `${Math.floor(seconds / 60)}:${String(Math.round(seconds % 60)).padStart(2, '0')}`;
+
+/** The case study video with its poster, as ProjectVideo shows it before the first play. */
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const videoFigure = (video: CaseStudyVideo, title: string, l: any) => {
+  const portrait = video.height > video.width;
+  const label = String(l.projects.videoOf).replace('{{title}}', title);
+  return (
+    `<figure class="relative mt-10"><div aria-hidden="true" class="pointer-events-none absolute -inset-4 -z-10 rounded-[1.75rem] bg-gradient-to-br from-[#261bfb]/25 via-[#9b87f5]/15 to-transparent blur-2xl"></div>` +
+    `<div class="rounded-2xl border border-[#483dfb]/20 bg-background/40 p-1.5 shadow-2xl shadow-[#483dfb]/10 backdrop-blur-sm md:p-2 ${portrait ? 'mx-auto max-w-[356px] md:max-w-[360px]' : ''}">` +
+    `<div class="group relative w-full overflow-hidden ${portrait ? 'mx-auto aspect-[4/5] max-w-[340px]' : 'aspect-video'} rounded-xl border border-border bg-black shadow-xl shadow-[#483dfb]/10">` +
+    `<video src="${video.src}" poster="${video.poster}" width="${video.width}" height="${video.height}" preload="none" playsinline aria-label="${esc(label)}" class="h-full w-full object-contain"></video>` +
+    `<div class="absolute inset-0 flex items-center justify-center bg-gradient-to-t from-black/50 via-black/10 to-transparent"><span class="relative flex h-16 w-16 items-center justify-center rounded-full bg-white/95 text-[#483dfb] shadow-2xl">${PLAY}</span>` +
+    `<span class="absolute bottom-3 start-4 rounded-md bg-black/60 px-2.5 py-1 text-xs font-medium text-white">${esc(l.projects.playVideo)}</span></div></div></div>` +
+    `<figcaption class="mt-3 flex items-center gap-2 px-1 text-sm text-muted-foreground ${portrait ? 'justify-center' : ''}">${CLOCK}<span>${esc(l.caseStudyPage.video)}</span><span aria-hidden="true">·</span><span dir="ltr">${formatDuration(video.duration)}</span></figcaption></figure>`
+  );
+};
+
+const contactHref = (lng: CaseStudyLang, topic: string) => `${pathFor(lng)}?topic=${encodeURIComponent(topic)}#contact`;
+
 const conversionHtml = (lng: CaseStudyLang, topic: string, key?: Service['key']) => {
   const copy = conversionCopy[lng];
   const label = key ? copy.services[key] : copy.project;
@@ -111,19 +165,25 @@ const conversionHtml = (lng: CaseStudyLang, topic: string, key?: Service['key'])
 
 /** The article as plain HTML, for crawlers that do not run JavaScript. */
 const articleHtml = (
-  t: CaseStudyText,
+  study: CaseStudy,
   related: { href: string; title: string }[],
-  relatedHeading: string,
   lng: CaseStudyLang,
-  slug: string,
-  video?: CaseStudyVideo
+  dir: 'ltr' | 'rtl',
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  l: any
 ) => {
-  const parts = [`<main><article>`, `<p>${esc(t.sector)}</p>`, `<h1>${esc(t.title)}</h1>`, `<p>${esc(t.lead)}</p>`];
-  if (video) {
-    parts.push(
-      `<figure><video src="${video.src}" poster="${video.poster}" width="${video.width}" height="${video.height}" controls preload="none" playsinline title="${esc(t.title)}"></video><figcaption>${esc(t.metaDescription)}</figcaption></figure>`
-    );
-  }
+  const t = study.text[lng];
+  const slug = study.slug;
+  const parts = [
+    breadcrumb([
+      { label: l.caseStudyPage.home, href: pathFor(lng) },
+      { label: l.bonus.caseStudies.title, href: `${pathFor(lng)}#projects` },
+      { label: l.projects.items[study.projectId]?.title ?? t.title },
+    ]),
+    pageHeader(t.sector, t.title, t.lead, contactHref(lng, `project:${slug}`), conversionCopy[lng].project),
+  ];
+  if (study.video) parts.push(videoFigure(study.video, l.projects.items[study.projectId]?.title ?? t.title, l));
+  parts.push(`<div class="prerender mt-14">`);
   if (t.technical) {
     parts.push(`<section><h2>${esc(t.technical.heading)}</h2>`);
     for (const group of t.technical.groups) parts.push(`<h3>${esc(group.heading)}</h3><p>${esc(group.text)}</p>`);
@@ -144,16 +204,32 @@ const articleHtml = (
   parts.push(`<nav><h2>${esc(conversionCopy[lng].related)}</h2><ul>${services.map((service) => `<li><a href="${servicePath(lng, service.slug)}">${esc(service.text[lng].title)}</a></li>`).join('')}</ul></nav>`);
   parts.push(conversionHtml(lng, `project:${slug}`));
   if (related.length) {
-    parts.push(`<nav><h2>${esc(relatedHeading)}</h2><ul>${related.map((r) => `<li><a href="${r.href}">${esc(r.title)}</a></li>`).join('')}</ul></nav>`);
+    parts.push(`<nav><h2>${esc(l.caseStudyPage.related)}</h2><ul>${related.map((r) => `<li><a href="${r.href}">${esc(r.title)}</a></li>`).join('')}</ul></nav>`);
   }
-  parts.push(`</article></main>`);
-  return parts.join('');
+  parts.push(`</div>`);
+  return readingPage(dir, parts.join(''));
 };
 
 /** An expertise page as plain HTML, for crawlers that do not run JavaScript. */
-const serviceHtml = (t: ServiceText, examples: { href: string; title: string }[], examplesHeading: string, lng: CaseStudyLang, service: Service) => {
+const serviceHtml = (
+  service: Service,
+  examples: { href: string; title: string }[],
+  lng: CaseStudyLang,
+  dir: 'ltr' | 'rtl',
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  l: any
+) => {
+  const t: ServiceText = service.text[lng];
   const list = (items: string[]) => `<ul>${items.map((i) => `<li>${esc(i)}</li>`).join('')}</ul>`;
-  const parts = [`<main><article>`, `<h1>${esc(t.title)}</h1>`, `<p>${esc(t.lead)}</p>`];
+  const parts = [
+    breadcrumb([
+      { label: l.caseStudyPage.home, href: pathFor(lng) },
+      { label: l.services.title, href: `${pathFor(lng)}#services` },
+      { label: l.about.services[service.key].title },
+    ]),
+    pageHeader(l.services.title, t.title, t.lead, contactHref(lng, `service:${service.slug}`), conversionCopy[lng].services[service.key]),
+    `<div class="prerender mt-14">`,
+  ];
   parts.push(`<h2>${esc(t.audience.heading)}</h2>`, list(t.audience.items));
   parts.push(`<h2>${esc(t.offer.heading)}</h2>`, list(t.offer.items));
   for (const level of t.offer.levels ?? []) {
@@ -178,11 +254,11 @@ const serviceHtml = (t: ServiceText, examples: { href: string; title: string }[]
     `<ol>${t.process.steps.map((st) => `<li><h3>${esc(st.heading)}</h3><p>${esc(st.text)}</p></li>`).join('')}</ol>`
   );
   if (examples.length) {
-    parts.push(`<h2>${esc(examplesHeading)}</h2><ul>${examples.map((e) => `<li><a href="${e.href}">${esc(e.title)}</a></li>`).join('')}</ul>`);
+    parts.push(`<h2>${esc(l.servicePage.examples)}</h2><ul>${examples.map((e) => `<li><a href="${e.href}">${esc(e.title)}</a></li>`).join('')}</ul>`);
   }
   parts.push(conversionHtml(lng, `service:${service.slug}`, service.key));
-  parts.push(`</article></main>`);
-  return parts.join('');
+  parts.push(`</div>`);
+  return readingPage(dir, parts.join(''));
 };
 
 const EMAIL = 'contact.maminegh@gmail.com';
@@ -190,6 +266,38 @@ const PROFILES = [
   { name: 'LinkedIn', href: 'https://www.linkedin.com/in/m-amine-gharrab' },
   { name: 'GitHub', href: 'https://github.com/M-A-Gharr' },
 ];
+
+// Entrance states of HeroSection's animations (framer-motion "hidden" variants), so the app takes
+// over without a jump: these elements animate in from there. The subtitle, the page's largest
+// text, is not animated and is visible from the first paint.
+const FADE_UP_HIDDEN = 'opacity:0;transform:translateY(20px);filter:blur(6px)';
+const LINE_HIDDEN = 'transform:translateY(110%)';
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const heroHtml = (l: any) => {
+  const lines = String(l.hero.title).split('\n');
+  const word = (w: string) =>
+    `<span class="inline-flex whitespace-nowrap"><span class="relative -mb-[0.1em] -mt-[0.2em] inline-flex overflow-hidden"><span class="relative block pb-[0.22em] pt-[0.2em]">${esc(w)}</span></span></span>`;
+  const title = lines
+    .map((line) => `<span aria-hidden="true" class="-mt-[0.2em] block overflow-hidden pt-[0.2em]"><span class="block" style="${LINE_HIDDEN}">${line.split(' ').filter(Boolean).map(word).join(' ')}</span></span>`)
+    .join('');
+  const button = 'relative cursor-pointer inline-flex items-center justify-center px-6 py-3 overflow-hidden font-medium rounded-md';
+  return (
+    `<header id="hero" class="relative min-h-screen flex items-center justify-center py-20 overflow-hidden">` +
+    `<div class="absolute inset-0 bg-gradient-to-br from-background via-background/70 to-background/90 z-10"></div>` +
+    `<div aria-hidden="true" class="absolute top-40 left-20 w-72 h-72 bg-[#483dfb]/20 rounded-full blur-3xl z-10"></div>` +
+    `<div aria-hidden="true" class="absolute bottom-40 right-20 w-72 h-72 bg-[#9b87f5]/20 rounded-full blur-3xl z-10"></div>` +
+    `<div class="container mx-auto px-4 text-center relative z-10">` +
+    `<p class="text-xl md:text-2xl font-semibold text-foreground mb-3" style="${FADE_UP_HIDDEN}">Mohamed Amine Gharrab</p>` +
+    `<p class="text-sm md:text-base font-medium text-foreground/70 mb-7" style="${FADE_UP_HIDDEN}">${esc(l.hero.eyebrow)}</p>` +
+    `<h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 text-foreground"><span class="inline-block"><span class="sr-only">${esc(lines.join(' '))}</span>${title}</span></h1>` +
+    `<p class="text-lg md:text-xl leading-relaxed text-foreground/80 max-w-3xl mx-auto mb-10 whitespace-pre-line">${esc(l.hero.subtitle)}</p>` +
+    `<div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16" style="${FADE_UP_HIDDEN}">` +
+    `<a href="#contact" class="${button} text-white bg-[#261bfb] shadow-lg shadow-[#261bfb]/25">${esc(l.hero.cta.discover)}</a>` +
+    `<a href="#projects" class="${button} border border-[#261bfb] text-[#261bfb] bg-transparent">${esc(l.hero.cta.projects)}</a>` +
+    `</div></div></header>`
+  );
+};
 
 type ResumeItem = { period: string; role: string; company?: string; companyUrl?: string; desc?: string; responsibilities?: string[] };
 
@@ -203,13 +311,8 @@ const resumeHtml = (items: ResumeItem[]) => `<ul>${items.map((item) =>
  * Same texts as the app (locale files and content files), so what crawlers read is what visitors see.
  */
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-const homeHtml = (lng: CaseStudyLang, l: any) => {
-  const parts = [`<header><nav><a href="${pathFor(lng)}">M.A.G</a></nav></header>`, `<main>`];
-  parts.push(
-    `<section id="hero"><p>Mohamed Amine Gharrab</p><p>${esc(l.hero.eyebrow)}</p>`,
-    `<h1>${esc(l.hero.title.replace(/\s*\n\s*/g, ' '))}</h1><p>${esc(l.hero.subtitle)}</p>`,
-    `<a href="#contact">${esc(l.hero.cta.discover)}</a> <a href="#projects">${esc(l.hero.cta.projects)}</a></section>`
-  );
+const homeHtml = (lng: CaseStudyLang, dir: 'ltr' | 'rtl', l: any) => {
+  const parts = [`<div class="relative min-h-screen bg-background text-foreground" dir="${dir}">`, `<main>`, heroHtml(l), `<div class="prerender container mx-auto px-4 py-16">`];
 
   parts.push(`<section id="services"><h2>${esc(l.services.needsTitle)}</h2><p>${esc(l.services.needsSubtitle)}</p><ul>`);
   for (const s of SERVICES) {
@@ -252,7 +355,7 @@ const homeHtml = (lng: CaseStudyLang, l: any) => {
     `<li>${esc(l.contact.info.address)} : ${esc(l.contact.info.addressValue)}</li>`,
     ...PROFILES.map((p) => `<li><a href="${p.href}">${p.name}</a></li>`),
     `</ul></section>`,
-    `</main>`
+    `</div></main></div>`
   );
   return parts.join('');
 };
@@ -492,7 +595,7 @@ export function pagesPlugin(): Plugin {
         write(
           outDir,
           pathFor(lng),
-          renderPage(source, { lng, dir, ogLocale, url: homeUrl(lng), title, description, body: homeHtml(lng, locales[lng]) })
+          renderPage(source, { lng, dir, ogLocale, url: homeUrl(lng), title, description, body: homeHtml(lng, dir, locales[lng]) })
         );
       }
       const homeAlternates: Alternate[] = [
@@ -521,9 +624,11 @@ export function pagesPlugin(): Plugin {
               ogType: 'article',
               jsonLd: studyJsonLd(study, lng, locales[lng].bonus.caseStudies.title, locales[lng].caseStudyPage.home, modified),
               body: articleHtml(
-                t,
+                study,
                 relatedOf(study.slug).map((r) => ({ href: caseStudyPath(lng, r.slug), title: r.text[lng].title })),
-                locales[lng].caseStudyPage.related, lng, study.slug, study.video
+                lng,
+                dir,
+                locales[lng]
               ),
             })
           );
@@ -558,7 +663,7 @@ export function pagesPlugin(): Plugin {
               description: t.metaDescription,
               alternates: serviceAlternates(service.slug),
               jsonLd: serviceJsonLd(service, lng, locales[lng].services.title, locales[lng].caseStudyPage.home),
-              body: serviceHtml(t, examples, locales[lng].servicePage.examples, lng, service),
+              body: serviceHtml(service, examples, lng, dir, locales[lng]),
             })
           );
           entries.push({ url, alternates: serviceAlternates(service.slug), lastmod: modified });

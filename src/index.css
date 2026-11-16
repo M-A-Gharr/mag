@@ -10,7 +10,63 @@ body {
   overflow-x: clip;
 }
 
-
+/* Fonts, self-hosted (public/fonts, SIL Open Font License) and preloaded in index.html.
+   Latin (English, French, Spanish, Italian) and Cyrillic (Russian, downloaded only when used).
+   Arabic and Hindi use the system font. */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('/fonts/inter-latin-variable.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('/fonts/inter-cyrillic-variable.woff2') format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* Fallback shown until Inter arrives: Arial scaled to Inter's widths (measured per weight on the
+   site's own titles and leads) with Inter's vertical metrics (divided by size-adjust, which also
+   scales them). The text keeps its size and line breaks when the font swaps, so nothing moves. */
+@font-face {
+  font-family: 'Inter Fallback';
+  font-weight: 100 549;
+  src: local('Arial'), local('ArialMT'), local('Helvetica');
+  size-adjust: 106.7%;
+  ascent-override: 90.79%;
+  descent-override: 22.61%;
+  line-gap-override: 0%;
+}
+@font-face {
+  font-family: 'Inter Fallback';
+  font-weight: 550 649;
+  src: local('Arial Bold'), local('Arial-BoldMT'), local('Helvetica Bold');
+  size-adjust: 100.9%;
+  ascent-override: 96.01%;
+  descent-override: 23.91%;
+  line-gap-override: 0%;
+}
+@font-face {
+  font-family: 'Inter Fallback';
+  font-weight: 650 900;
+  src: local('Arial Bold'), local('Arial-BoldMT'), local('Helvetica Bold');
+  size-adjust: 102.0%;
+  ascent-override: 94.98%;
+  descent-override: 23.65%;
+  line-gap-override: 0%;
+}
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/fonts/space-grotesk-latin-700.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
 
 @layer base {
   :root {
@@ -263,4 +319,27 @@ body {
 @keyframes testimonial-progress {
   from { transform: scaleX(0); }
   to { transform: scaleX(1); }
+}
+
+/* Prerendered page content below the first screen (build/pagesPlugin.ts): readable before the
+   app loads and replaces it. The top of each page uses the components' own classes instead. */
+@layer components {
+  .prerender {
+    @apply space-y-4 text-lg leading-relaxed text-foreground/85;
+  }
+  .prerender h2 {
+    @apply pt-8 text-2xl font-semibold text-foreground md:text-3xl;
+  }
+  .prerender h3 {
+    @apply pt-2 text-xl font-semibold text-foreground;
+  }
+  .prerender ul {
+    @apply list-disc space-y-2 ps-6;
+  }
+  .prerender ol {
+    @apply list-decimal space-y-2 ps-6;
+  }
+  .prerender a {
+    @apply text-[#483dfb] underline-offset-4 hover:underline dark:text-[#9b87f5];
+  }
 }

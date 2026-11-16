@@ -40,7 +40,8 @@ const syncUrlWithLanguage = (lng: string) => {
 // The address follows the language: /fr/ and /ar/ have their own pages, the others use the English ones.
 i18next.on('languageChanged', syncUrlWithLanguage);
 
-i18next
+/** Resolves once the detected language's translations are loaded (React waits for it in main.tsx). */
+export const i18nReady = i18next
   .use(lazyLocales)
   .use(LanguageDetector)
   .use(initReactI18next)

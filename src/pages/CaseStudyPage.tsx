@@ -10,7 +10,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import SectionLink from '@/components/SectionLink';
 import ArticleReveal from '@/components/ArticleReveal';
-import { CASE_STUDY_PAGES, caseStudyLang, relatedCaseStudies, type CaseStudy } from '@/content/caseStudies';
+import { CASE_STUDY_PAGES, caseStudyLang, loadCaseStudy, loadedCaseStudy, relatedCaseStudies, type CaseStudy } from '@/content/caseStudies';
 import { caseStudyPath, pathFor, servicePath, SITE_URL } from '@/i18n/paths';
 import { servicesForCaseStudy } from '@/content/services';
 import NotFound from './NotFound';
@@ -30,15 +30,17 @@ const CaseStudyPage = () => {
   const { slug = '' } = useParams();
   const { t, i18n } = useTranslation();
   const entry = CASE_STUDY_PAGES.find((p) => p.slug === slug);
-  const [study, setStudy] = useState<CaseStudy | null>(null);
+  // Already downloaded on a first visit (src/preload.ts): rendered on the first frame.
+  const [study, setStudy] = useState<CaseStudy | null>(() => loadedCaseStudy(slug));
 
   useEffect(() => {
     window.scrollTo(0, 0);
     let cancelled = false;
-    setStudy(null);
-    entry?.load().then((m) => { if (!cancelled) setStudy(m.default); });
+    const cached = loadedCaseStudy(slug);
+    setStudy(cached);
+    if (!cached) loadCaseStudy(slug).then((s) => { if (!cancelled) setStudy(s); });
     return () => { cancelled = true; };
-  }, [entry]);
+  }, [slug]);
 
   const lang = caseStudyLang(i18n.language);
   const text = study?.text[lang];
@@ -109,18 +111,19 @@ const CaseStudyPage = () => {
                 </ol>
               </nav>
 
-              <ArticleReveal>
+              {/* Not animated: the same markup is prerendered (build/pagesPlugin.ts) and shown before the app loads */}
+              <div>
                 <span className="rounded-full bg-[#483dfb]/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-[#483dfb] dark:text-[#9b87f5]">
                   {text.sector}
                 </span>
                 <h1 className="mt-5 text-3xl font-bold leading-tight md:text-5xl">{text.title}</h1>
                 <p className="mt-6 text-lg leading-relaxed text-foreground/80 md:text-xl">{text.lead}</p>
                 <ContextualContact topic={`project:${slug}`} compact />
-              </ArticleReveal>
+              </div>
 
               {/* Presentation video, at the top so it is the first thing seen (and what Google indexes) */}
               {study?.video && (
-                <ArticleReveal as="figure" delay={0.05} className="relative mt-10">
+                <figure className="relative mt-10">
                   <div
                     aria-hidden
                     className="pointer-events-none absolute -inset-4 -z-10 rounded-[1.75rem] bg-gradient-to-br from-[#261bfb]/25 via-[#9b87f5]/15 to-transparent blur-2xl"
@@ -140,7 +143,7 @@ const CaseStudyPage = () => {
                     <span aria-hidden>·</span>
                     <span dir="ltr">{formatDuration(study.video.duration)}</span>
                   </figcaption>
-                </ArticleReveal>
+                </figure>
               )}
 
               {/* At a glance */}

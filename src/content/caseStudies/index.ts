@@ -28,3 +28,18 @@ export const relatedCaseStudies = (slug: string, count = 2) => {
 export const caseStudyLang = (lng: string): CaseStudyLang => (lng === 'fr' || lng === 'ar' ? lng : 'en');
 
 export const caseStudyForProject = (projectId: number) => CASE_STUDY_PAGES.find((p) => p.projectId === projectId);
+
+// Texts already downloaded, so a page can render them on its first frame (see src/preload.ts).
+const loadedStudies = new Map<string, CaseStudy>();
+
+/** The case study's text if it has already been downloaded. */
+export const loadedCaseStudy = (slug: string) => loadedStudies.get(slug) ?? null;
+
+/** Downloads the case study's text (once) and keeps it for loadedCaseStudy. */
+export const loadCaseStudy = async (slug: string) => {
+  const entry = CASE_STUDY_PAGES.find((p) => p.slug === slug);
+  if (!entry) return null;
+  const study = (await entry.load()).default;
+  loadedStudies.set(slug, study);
+  return study;
+};

@@ -11,7 +11,7 @@ import Footer from '@/components/Footer';
 import SectionLink from '@/components/SectionLink';
 import ArticleReveal from '@/components/ArticleReveal';
 import { CASE_STUDY_PAGES, caseStudyLang } from '@/content/caseStudies';
-import { SERVICE_PAGES, type Service } from '@/content/services';
+import { SERVICE_PAGES, loadService, loadedService, type Service } from '@/content/services';
 import { caseStudyPath, pathFor, servicePath, SITE_URL } from '@/i18n/paths';
 import NotFound from './NotFound';
 import ContextualContact from '@/components/ContextualContact';
@@ -25,15 +25,17 @@ const ServicePage = () => {
   const { slug = '' } = useParams();
   const { t, i18n } = useTranslation();
   const entry = SERVICE_PAGES.find((p) => p.slug === slug);
-  const [service, setService] = useState<Service | null>(null);
+  // Already downloaded on a first visit (src/preload.ts): rendered on the first frame.
+  const [service, setService] = useState<Service | null>(() => loadedService(slug));
 
   useEffect(() => {
     window.scrollTo(0, 0);
     let cancelled = false;
-    setService(null);
-    entry?.load().then((m) => { if (!cancelled) setService(m.default); });
+    const cached = loadedService(slug);
+    setService(cached);
+    if (!cached) loadService(slug).then((s) => { if (!cancelled) setService(s); });
     return () => { cancelled = true; };
-  }, [entry]);
+  }, [slug]);
 
   const lang = caseStudyLang(i18n.language);
   const text = service?.text[lang];
@@ -98,14 +100,15 @@ const ServicePage = () => {
                 </ol>
               </nav>
 
-              <ArticleReveal>
+              {/* Not animated: the same markup is prerendered (build/pagesPlugin.ts) and shown before the app loads */}
+              <div>
                 <span className="rounded-full bg-[#483dfb]/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-[#483dfb] dark:text-[#9b87f5]">
                   {t('services.title')}
                 </span>
                 <h1 className="mt-5 text-3xl font-bold leading-tight md:text-5xl">{text.title}</h1>
                 <p className="mt-6 text-lg leading-relaxed text-foreground/80 md:text-xl">{text.lead}</p>
                 <ContextualContact topic={`service:${slug}`} serviceKey={entry.key} compact />
-              </ArticleReveal>
+              </div>
 
               {/* At a glance */}
               <ArticleReveal delay={0.1} className="panel mt-10 grid gap-6 p-6 sm:grid-cols-2 md:p-8">

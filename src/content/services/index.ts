@@ -47,3 +47,18 @@ export const servicesForProject = (projectId: number) => {
   };
   return SERVICE_PAGES.filter((service) => keys[projectId]?.includes(service.key));
 };
+
+// Texts already downloaded, so a page can render them on its first frame (see src/preload.ts).
+const loadedServices = new Map<string, Service>();
+
+/** The service's text if it has already been downloaded. */
+export const loadedService = (slug: string) => loadedServices.get(slug) ?? null;
+
+/** Downloads the service's text (once) and keeps it for loadedService. */
+export const loadService = async (slug: string) => {
+  const entry = SERVICE_PAGES.find((p) => p.slug === slug);
+  if (!entry) return null;
+  const service = (await entry.load()).default;
+  loadedServices.set(slug, service);
+  return service;
+};

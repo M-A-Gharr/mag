@@ -22,13 +22,6 @@ const fadeUp: Variants = {
   show: { opacity: 1, y: 0, filter: 'blur(0px)', transition: { duration: 0.9, ease: EASE_OUT } },
 };
 
-// The subtitle is the page's largest text (what Google times as "largest contentful paint"):
-// it is visible from the first frame and only sharpens and slides into place.
-const settleIn: Variants = {
-  hidden: { y: 12, filter: 'blur(4px)' },
-  show: { y: 0, filter: 'blur(0px)', transition: { duration: 0.9, ease: EASE_OUT } },
-};
-
 const HeroSection = () => {
   const { t, i18n } = useTranslation();
   const ref = useRef<HTMLElement>(null);
@@ -138,12 +131,11 @@ const HeroSection = () => {
           />
         </h1>
 
-        <motion.p
-          variants={settleIn}
-          className="text-lg md:text-xl leading-relaxed text-foreground/80 max-w-3xl mx-auto mb-10 whitespace-pre-line"
-        >
+        {/* The page's largest text (Google's "largest contentful paint"): not animated, it is
+            prerendered (build/pagesPlugin.ts) and visible from the first paint. */}
+        <p className="text-lg md:text-xl leading-relaxed text-foreground/80 max-w-3xl mx-auto mb-10 whitespace-pre-line">
           {t('hero.subtitle')}
-        </motion.p>
+        </p>
 
         <motion.div variants={fadeUp} className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
           <Link
