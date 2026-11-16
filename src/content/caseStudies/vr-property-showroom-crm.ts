@@ -4,7 +4,14 @@ const study: CaseStudy = {
   "slug": "vr-property-showroom-crm",
   "projectId": 10,
   "published": "2026-11-11",
-  "modified": "2026-11-14",
+  video: {
+    src: '/videos/projects/vr-showroom.mp4',
+    poster: '/videos/projects/vr-showroom-poster.webp',
+    width: 1280,
+    height: 720,
+    duration: 116,
+    uploadDate: '2026-11-09',
+  },
   "text": {
     "en": {
       "title": "VR Showroom: connecting virtual property visits to sales follow-up",

@@ -6,7 +6,14 @@ const study: CaseStudy = {
   slug: 'b2b-lead-intelligence-platform',
   projectId: 6,
   published: '2026-11-10',
-  modified: '2026-11-14',
+  video: {
+    src: '/videos/projects/lead-intelligence.mp4',
+    poster: '/videos/projects/lead-intelligence-poster.webp',
+    width: 1280,
+    height: 720,
+    duration: 56,
+    uploadDate: '2026-11-15',
+  },
   text: {
     fr: {
       title: "Une plateforme de prospection B2B qui trouve, qualifie et suit les prospects avec l'IA",

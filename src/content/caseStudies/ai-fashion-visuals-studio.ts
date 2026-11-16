@@ -6,7 +6,14 @@ const study: CaseStudy = {
   slug: 'ai-fashion-visuals-studio',
   projectId: 11,
   published: '2026-11-10',
-  modified: '2026-11-14',
+  video: {
+    src: '/videos/projects/ai-fashion-studio.mp4',
+    poster: '/videos/projects/ai-fashion-studio-poster.webp',
+    width: 720,
+    height: 900,
+    duration: 56,
+    uploadDate: '2026-11-09',
+  },
   text: {
     fr: {
       title: "Simtis Studio : des visuels portés par mannequin, créés par IA à partir d'une photo produit",

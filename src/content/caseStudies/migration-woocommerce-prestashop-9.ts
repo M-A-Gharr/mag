@@ -6,7 +6,14 @@ const study: CaseStudy = {
   slug: 'migration-woocommerce-prestashop-9',
   projectId: 13,
   published: '2026-11-10',
-  modified: '2026-11-14',
+  video: {
+    src: '/videos/projects/migration-ecommerce.mp4',
+    poster: '/videos/projects/migration-ecommerce-poster.webp',
+    width: 1280,
+    height: 720,
+    duration: 84,
+    uploadDate: '2026-11-11',
+  },
   text: {
     fr: {
       title: "Migration d'une boutique de mode de WooCommerce vers PrestaShop 9",

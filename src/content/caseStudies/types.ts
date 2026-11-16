@@ -29,12 +29,25 @@ export type CaseStudyText = {
   result: string;
 };
 
+/** Presentation video, shown at the top of the page and declared to search engines. */
+export type CaseStudyVideo = {
+  /** Path under public/, e.g. /videos/projects/x.mp4 */
+  src: string;
+  poster: string;
+  width: number;
+  height: number;
+  /** Length in seconds. */
+  duration: number;
+  /** ISO date the video was first published. */
+  uploadDate: string;
+};
+
 export type CaseStudy = {
   slug: string;
   /** Matching card in the projects section (its technologies are shown on the page). */
   projectId: number;
-  /** ISO dates for the structured data. */
+  /** ISO date for the structured data. The modification date comes from git (build/lastModified.ts). */
   published: string;
-  modified: string;
+  video?: CaseStudyVideo;
   text: Record<CaseStudyLang, CaseStudyText>;
 };

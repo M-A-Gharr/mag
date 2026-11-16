@@ -40,6 +40,5 @@ export type Service = {
   caseStudies: string[];
   /** Main tools, shown in the summary (same in every language). */
   tools: string[];
-  modified: string;
   text: Record<ServiceLang, ServiceText>;
 };

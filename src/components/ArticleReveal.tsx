@@ -4,7 +4,7 @@ import { EASE_OUT } from './motion';
 
 type Props = {
   children: ReactNode;
-  as?: 'div' | 'section' | 'li' | 'p' | 'h1' | 'h2';
+  as?: 'div' | 'section' | 'li' | 'p' | 'h1' | 'h2' | 'figure';
   className?: string;
   id?: string;
   delay?: number;

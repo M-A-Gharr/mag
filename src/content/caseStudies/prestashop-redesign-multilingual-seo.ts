@@ -7,7 +7,14 @@ const study: CaseStudy = {
   slug: 'prestashop-redesign-multilingual-seo',
   projectId: 8,
   published: '2026-11-10',
-  modified: '2026-11-14',
+  video: {
+    src: '/videos/projects/prestashop-redesign.mp4',
+    poster: '/videos/projects/prestashop-redesign-poster.webp',
+    width: 1920,
+    height: 1080,
+    duration: 60,
+    uploadDate: '2026-11-15',
+  },
   text: {
     fr: {
       title: 'Refonte, SEO multilingue et modules sur mesure pour une boutique PrestaShop',

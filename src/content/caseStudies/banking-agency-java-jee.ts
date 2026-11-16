@@ -4,7 +4,6 @@ const study: CaseStudy = {
   "slug": "banking-agency-java-jee",
   "projectId": 18,
   "published": "2026-11-11",
-  "modified": "2026-11-14",
   "text": {
     "en": {
       "title": "A reusable application foundation for public share offerings",

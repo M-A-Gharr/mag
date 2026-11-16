@@ -4,7 +4,6 @@ const study: CaseStudy = {
   "slug": "medical-practice-management-mvp",
   "projectId": 17,
   "published": "2026-11-11",
-  "modified": "2026-11-14",
   "text": {
     "en": {
       "title": "Medical practice management: records, appointments and invoicing",

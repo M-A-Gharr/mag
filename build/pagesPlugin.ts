@@ -6,7 +6,7 @@
 //   dist/<case study path>/index.html               each case study, in English, French, Arabic
 //   dist/<expertise path>/index.html                each area of expertise, in English, French, Arabic
 //   dist/<old /services/ path>/index.html            redirects to the expertise pages (renamed)
-//   dist/sitemap.xml                                every page, with its language versions
+//   dist/sitemap.xml                                every page, with its language versions and videos
 //   dist/llms.txt                                   a summary of the site for AI assistants
 //   dist/404.html                                   the app, not indexed (GitHub Pages 404)
 //
@@ -15,11 +15,12 @@ import fs from 'fs';
 import path from 'path';
 import type { Plugin } from 'vite';
 import { CASE_STUDIES } from '../src/content/caseStudies/all';
-import type { CaseStudy, CaseStudyLang, CaseStudyText } from '../src/content/caseStudies/types';
+import type { CaseStudy, CaseStudyLang, CaseStudyText, CaseStudyVideo } from '../src/content/caseStudies/types';
 import { conversionCopy } from '../src/content/conversion';
 import { SERVICES } from '../src/content/services/all';
 import type { Service, ServiceText } from '../src/content/services/types';
 import { caseStudyPath, pathFor, servicePath, SITE_URL } from '../src/i18n/paths';
+import { lastModified } from './lastModified';
 
 const LANGS: { lng: CaseStudyLang; ogLocale: string; dir: 'ltr' | 'rtl' }[] = [
   { lng: 'en', ogLocale: 'en_US', dir: 'ltr' },
@@ -35,6 +36,21 @@ const studyUrl = (lng: string, slug: string) => abs(caseStudyPath(lng, slug));
 const serviceUrl = (lng: string, slug: string) => abs(servicePath(lng, slug));
 
 type Alternate = { hreflang: string; href: string };
+
+const root = (file: string) => path.resolve(__dirname, '..', file);
+/** A case study changes when its text or its video does. */
+const studyModified = (study: CaseStudy) =>
+  lastModified([root(`src/content/caseStudies/${study.slug}.ts`), ...(study.video ? [root(`public${study.video.src}`)] : [])]);
+const serviceModified = (service: Service) => lastModified([root(`src/content/services/${service.slug}.ts`)]);
+
+/** ISO 8601 duration (PT1M56S) from seconds. */
+const isoDuration = (seconds: number) => {
+  const m = Math.floor(seconds / 60);
+  const s = Math.round(seconds % 60);
+  return `PT${m ? `${m}M` : ''}${s ? `${s}S` : ''}`;
+};
+/** Morocco is UTC+1: Google asks for a time zone with the date. */
+const videoDate = (date: string) => `${date}T09:00:00+01:00`;
 
 type PageOptions = {
   lng: CaseStudyLang;
@@ -94,8 +110,20 @@ const conversionHtml = (lng: CaseStudyLang, topic: string, key?: Service['key'])
 };
 
 /** The article as plain HTML, for crawlers that do not run JavaScript. */
-const articleHtml = (t: CaseStudyText, related: { href: string; title: string }[], relatedHeading: string, lng: CaseStudyLang, slug: string) => {
+const articleHtml = (
+  t: CaseStudyText,
+  related: { href: string; title: string }[],
+  relatedHeading: string,
+  lng: CaseStudyLang,
+  slug: string,
+  video?: CaseStudyVideo
+) => {
   const parts = [`<main><article>`, `<p>${esc(t.sector)}</p>`, `<h1>${esc(t.title)}</h1>`, `<p>${esc(t.lead)}</p>`];
+  if (video) {
+    parts.push(
+      `<figure><video src="${video.src}" poster="${video.poster}" width="${video.width}" height="${video.height}" controls preload="none" playsinline title="${esc(t.title)}"></video><figcaption>${esc(t.metaDescription)}</figcaption></figure>`
+    );
+  }
   if (t.technical) {
     parts.push(`<section><h2>${esc(t.technical.heading)}</h2>`);
     for (const group of t.technical.groups) parts.push(`<h3>${esc(group.heading)}</h3><p>${esc(group.text)}</p>`);
@@ -330,7 +358,22 @@ const studyAlternates = (slug: string): Alternate[] => [
   { hreflang: 'x-default', href: studyUrl('en', slug) },
 ];
 
-const studyJsonLd = (study: CaseStudy, lng: CaseStudyLang, sectionName: string, homeName: string) => {
+const videoJsonLd = (video: CaseStudyVideo, t: CaseStudyText, lng: CaseStudyLang, url: string) => ({
+  '@type': 'VideoObject',
+  '@id': `${url}#video`,
+  name: t.title,
+  description: t.metaDescription,
+  thumbnailUrl: abs(video.poster),
+  uploadDate: videoDate(video.uploadDate),
+  duration: isoDuration(video.duration),
+  contentUrl: abs(video.src),
+  width: video.width,
+  height: video.height,
+  inLanguage: lng,
+  author: { '@id': `${SITE_URL}#person` },
+});
+
+const studyJsonLd = (study: CaseStudy, lng: CaseStudyLang, sectionName: string, homeName: string, modified: string) => {
   const t = study.text[lng];
   const url = studyUrl(lng, study.slug);
   return {
@@ -342,12 +385,14 @@ const studyJsonLd = (study: CaseStudy, lng: CaseStudyLang, sectionName: string, 
         description: t.metaDescription,
         inLanguage: lng,
         datePublished: study.published,
-        dateModified: study.modified,
-        image: SHARE_IMAGE,
+        dateModified: modified,
+        image: study.video ? abs(study.video.poster) : SHARE_IMAGE,
         mainEntityOfPage: url,
         author: { '@id': `${SITE_URL}#person` },
         publisher: { '@id': `${SITE_URL}#person` },
+        ...(study.video ? { video: { '@id': `${url}#video` } } : {}),
       },
+      ...(study.video ? [videoJsonLd(study.video, t, lng, url)] : []),
       {
         '@type': 'BreadcrumbList',
         itemListElement: [
@@ -360,10 +405,25 @@ const studyJsonLd = (study: CaseStudy, lng: CaseStudyLang, sectionName: string, 
   };
 };
 
-const sitemap = (entries: { url: string; alternates: Alternate[]; lastmod: string }[]) =>
+type SitemapVideo = { video: CaseStudyVideo; title: string; description: string };
+type SitemapEntry = { url: string; alternates: Alternate[]; lastmod: string; video?: SitemapVideo };
+
+const sitemapVideo = ({ video, title, description }: SitemapVideo) => [
+  '    <video:video>',
+  `      <video:thumbnail_loc>${abs(video.poster)}</video:thumbnail_loc>`,
+  `      <video:title>${esc(title)}</video:title>`,
+  `      <video:description>${esc(description)}</video:description>`,
+  `      <video:content_loc>${abs(video.src)}</video:content_loc>`,
+  `      <video:duration>${Math.round(video.duration)}</video:duration>`,
+  `      <video:publication_date>${videoDate(video.uploadDate)}</video:publication_date>`,
+  '      <video:family_friendly>yes</video:family_friendly>',
+  '    </video:video>',
+];
+
+const sitemap = (entries: SitemapEntry[]) =>
   [
     '<?xml version="1.0" encoding="UTF-8"?>',
-    '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">',
+    '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">',
     '  <!-- Generated at build time by build/pagesPlugin.ts -->',
     ...entries.map((e) =>
       [
@@ -371,6 +431,7 @@ const sitemap = (entries: { url: string; alternates: Alternate[]; lastmod: strin
         `    <loc>${e.url}</loc>`,
         `    <lastmod>${e.lastmod}</lastmod>`,
         ...e.alternates.map((a) => `    <xhtml:link rel="alternate" hreflang="${a.hreflang}" href="${a.href}" />`),
+        ...(e.video ? sitemapVideo(e.video) : []),
         '  </url>',
       ].join('\n')
     ),
@@ -438,10 +499,11 @@ export function pagesPlugin(): Plugin {
         ...LANGS.map(({ lng }) => ({ hreflang: lng, href: homeUrl(lng) })),
         { hreflang: 'x-default', href: homeUrl('en') },
       ];
-      const entries = LANGS.map(({ lng }) => ({ url: homeUrl(lng), alternates: homeAlternates, lastmod: today }));
+      const entries: SitemapEntry[] = LANGS.map(({ lng }) => ({ url: homeUrl(lng), alternates: homeAlternates, lastmod: today }));
 
       // Case studies, one page per language.
       for (const study of CASE_STUDIES) {
+        const modified = studyModified(study);
         for (const { lng, ogLocale, dir } of LANGS) {
           const t = study.text[lng];
           const url = studyUrl(lng, study.slug);
@@ -457,20 +519,26 @@ export function pagesPlugin(): Plugin {
               description: t.metaDescription,
               alternates: studyAlternates(study.slug),
               ogType: 'article',
-              jsonLd: studyJsonLd(study, lng, locales[lng].bonus.caseStudies.title, locales[lng].caseStudyPage.home),
+              jsonLd: studyJsonLd(study, lng, locales[lng].bonus.caseStudies.title, locales[lng].caseStudyPage.home, modified),
               body: articleHtml(
                 t,
                 relatedOf(study.slug).map((r) => ({ href: caseStudyPath(lng, r.slug), title: r.text[lng].title })),
-                locales[lng].caseStudyPage.related, lng, study.slug
+                locales[lng].caseStudyPage.related, lng, study.slug, study.video
               ),
             })
           );
-          entries.push({ url, alternates: studyAlternates(study.slug), lastmod: study.modified });
+          entries.push({
+            url,
+            alternates: studyAlternates(study.slug),
+            lastmod: modified,
+            video: study.video && { video: study.video, title: t.title, description: t.metaDescription },
+          });
         }
       }
 
       // Services, one page per language.
       for (const service of SERVICES) {
+        const modified = serviceModified(service);
         for (const { lng, ogLocale, dir } of LANGS) {
           const t = service.text[lng];
           const url = serviceUrl(lng, service.slug);
@@ -493,7 +561,7 @@ export function pagesPlugin(): Plugin {
               body: serviceHtml(t, examples, locales[lng].servicePage.examples, lng, service),
             })
           );
-          entries.push({ url, alternates: serviceAlternates(service.slug), lastmod: service.modified });
+          entries.push({ url, alternates: serviceAlternates(service.slug), lastmod: modified });
         }
       }
 

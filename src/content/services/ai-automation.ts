@@ -6,7 +6,6 @@ const service: Service = {
   key: 'ai',
   caseStudies: ['ai-fashion-visuals-studio', 'b2b-lead-intelligence-platform', 'configurable-invoice-ocr'],
   tools: ['Claude', 'OpenAI', 'Perplexity', 'FASHN AI', 'Make'],
-  modified: '2026-11-15',
   text: {
     fr: {
       title: 'Automatisation IA et formation des équipes au Maroc',

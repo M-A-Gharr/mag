@@ -4,7 +4,7 @@
 import { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { ArrowUpRight, ChevronRight, Trophy } from 'lucide-react';
+import { ArrowUpRight, ChevronRight, Clock, Trophy } from 'lucide-react';
 import '@/i18n/config';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -16,8 +16,12 @@ import { servicesForCaseStudy } from '@/content/services';
 import NotFound from './NotFound';
 import { conversionCopy } from '@/content/conversion';
 import ContextualContact from '@/components/ContextualContact';
+import ProjectVideo from '@/components/ProjectVideo';
 
 const OG_LOCALES: Record<string, string> = { en: 'en_US', fr: 'fr_FR', ar: 'ar_MA' };
+
+/** 116 → "1:56" */
+const formatDuration = (seconds: number) => `${Math.floor(seconds / 60)}:${String(Math.round(seconds % 60)).padStart(2, '0')}`;
 
 const setMeta = (selector: string, value: string) =>
   document.head.querySelector(selector)?.setAttribute(selector.startsWith('link') ? 'href' : 'content', value);
@@ -113,6 +117,31 @@ const CaseStudyPage = () => {
                 <p className="mt-6 text-lg leading-relaxed text-foreground/80 md:text-xl">{text.lead}</p>
                 <ContextualContact topic={`project:${slug}`} compact />
               </ArticleReveal>
+
+              {/* Presentation video, at the top so it is the first thing seen (and what Google indexes) */}
+              {study?.video && (
+                <ArticleReveal as="figure" delay={0.05} className="relative mt-10">
+                  <div
+                    aria-hidden
+                    className="pointer-events-none absolute -inset-4 -z-10 rounded-[1.75rem] bg-gradient-to-br from-[#261bfb]/25 via-[#9b87f5]/15 to-transparent blur-2xl"
+                  />
+                  <div className={`rounded-2xl border border-[#483dfb]/20 bg-background/40 p-1.5 shadow-2xl shadow-[#483dfb]/10 backdrop-blur-sm md:p-2 ${study.video.height > study.video.width ? 'mx-auto max-w-[356px] md:max-w-[360px]' : ''}`}>
+                    <ProjectVideo
+                      src={study.video.src}
+                      poster={study.video.poster}
+                      portrait={study.video.height > study.video.width}
+                      label={t('projects.videoOf', { title: t(`projects.items.${study.projectId}.title`) })}
+                      playLabel={t('projects.playVideo')}
+                    />
+                  </div>
+                  <figcaption className={`mt-3 flex items-center gap-2 px-1 text-sm text-muted-foreground ${study.video.height > study.video.width ? 'justify-center' : ''}`}>
+                    <Clock className="h-4 w-4 text-[#483dfb] dark:text-[#9b87f5]" aria-hidden />
+                    <span>{t('caseStudyPage.video')}</span>
+                    <span aria-hidden>·</span>
+                    <span dir="ltr">{formatDuration(study.video.duration)}</span>
+                  </figcaption>
+                </ArticleReveal>
+              )}
 
               {/* At a glance */}
               <ArticleReveal delay={0.1} className="panel mt-10 grid gap-6 p-6 md:grid-cols-3 md:p-8">

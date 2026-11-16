@@ -4,7 +4,14 @@ const study: CaseStudy = {
   "slug": "bakery-management-saas",
   "projectId": 2,
   "published": "2026-11-11",
-  "modified": "2026-11-14",
+  video: {
+    src: '/videos/projects/bakery-saas.mp4',
+    poster: '/videos/projects/bakery-saas-poster.webp',
+    width: 1920,
+    height: 1080,
+    duration: 36,
+    uploadDate: '2026-11-11',
+  },
   "text": {
     "en": {
       "title": "Bakery SaaS: bringing stock, recipes and sales into one application",

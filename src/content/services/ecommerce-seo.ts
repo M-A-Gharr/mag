@@ -7,7 +7,6 @@ const service: Service = {
   key: 'ecommerce',
   caseStudies: ['prestashop-redesign-multilingual-seo', 'migration-woocommerce-prestashop-9'],
   tools: ['PrestaShop', 'WordPress', 'Shopify', 'PHP', 'Google Search Console', 'Google Analytics', 'Surfer SEO', 'Semrush'],
-  modified: '2026-11-15',
   text: {
     fr: {
       title: 'Développeur PrestaShop et e-commerce à Casablanca',

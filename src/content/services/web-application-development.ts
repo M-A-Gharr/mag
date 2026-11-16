@@ -6,7 +6,6 @@ const service: Service = {
   key: 'webapps',
   caseStudies: ['b2b-lead-intelligence-platform', 'export-showcase-site-b2b-crm', 'bakery-management-saas', 'vr-property-showroom-crm', 'medical-practice-management-mvp', 'banking-agency-java-jee'],
   tools: ['React', 'Node.js', 'TypeScript', 'PHP', 'ASP.NET', 'C#', 'PostgreSQL', 'MySQL', 'MSSQL', 'Supabase'],
-  modified: '2026-11-15',
   text: {
     fr: {
       title: "Développement d'applications web sur mesure",

@@ -4,7 +4,6 @@ const study: CaseStudy = {
   "slug": "configurable-invoice-ocr",
   "projectId": 16,
   "published": "2026-11-11",
-  "modified": "2026-11-14",
   "text": {
     "en": {
       "title": "Invoice extraction with in-app review and editing",

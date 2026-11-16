@@ -7,7 +7,14 @@ const study: CaseStudy = {
   slug: 'export-showcase-site-b2b-crm',
   projectId: 12,
   published: '2026-11-10',
-  modified: '2026-11-14',
+  video: {
+    src: '/videos/projects/export-showroom-crm.mp4',
+    poster: '/videos/projects/export-showroom-crm-poster.webp',
+    width: 1280,
+    height: 720,
+    duration: 111,
+    uploadDate: '2026-11-15',
+  },
   text: {
     fr: {
       title: "Un site vitrine export et un CRM pour conquérir des acheteurs professionnels à l'étranger",
