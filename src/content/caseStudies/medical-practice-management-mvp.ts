@@ -8,7 +8,7 @@ const study: CaseStudy = {
   "text": {
     "en": {
       "title": "Medical practice management: records, appointments and invoicing",
-      "metaTitle": "Medical practice management · Case study",
+      "metaTitle": "Medical practice management software (MVP)",
       "metaDescription": "A C# application combining OCR-assisted records, role-based permissions, telephone bookings, insurance deductions and emailed invoices.",
       "sector": "Medical practice administration · 2020–2021",
       "lead": "In late 2020 and early 2021, I built a C# application from scratch to digitise client and insurance records and support the medical practice’s daily administration, from appointments to invoicing.",
@@ -72,7 +72,7 @@ const study: CaseStudy = {
     },
     "fr": {
       "title": "Gestion de cabinet médical : dossiers, rendez-vous et facturation",
-      "metaTitle": "Gestion de cabinet médical · Étude de cas",
+      "metaTitle": "Logiciel de gestion de cabinet médical (MVP)",
       "metaDescription": "Une application C# avec OCR, permissions par rôle, rendez-vous téléphoniques, déductions d’assurance et de mutuelle, et factures par e-mail.",
       "sector": "Gestion de cabinet médical · 2020–2021",
       "lead": "Fin 2020 et début 2021, j’ai développé de zéro une application C# pour numériser les dossiers clients et les informations d’assurance, et accompagner la gestion quotidienne du cabinet, des rendez-vous à la facturation.",
@@ -136,7 +136,7 @@ const study: CaseStudy = {
     },
     "ar": {
       "title": "إدارة العيادة الطبية: السجلات والمواعيد والفوترة",
-      "metaTitle": "إدارة عيادة طبية · دراسة حالة",
+      "metaTitle": "برنامج لإدارة العيادات الطبية (MVP)",
       "metaDescription": "تطبيق C# يجمع الرقمنة بمساعدة OCR والصلاحيات بحسب الأدوار وحجز المواعيد وخصم التغطية التأمينية وإرسال الفواتير بالبريد الإلكتروني.",
       "sector": "إدارة عيادة طبية · 2020–2021",
       "lead": "في أواخر 2020 وبداية 2021، طوّرت من الصفر تطبيقًا بلغة C# لرقمنة بيانات العملاء والتأمين ودعم إدارة العيادة اليومية، من المواعيد إلى الفوترة.",

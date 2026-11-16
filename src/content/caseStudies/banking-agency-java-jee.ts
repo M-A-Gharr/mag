@@ -8,7 +8,7 @@ const study: CaseStudy = {
   "text": {
     "en": {
       "title": "A reusable application foundation for public share offerings",
-      "metaTitle": "Banking application for share offerings · Case study",
+      "metaTitle": "Java EE banking app for public share offerings in Morocco",
       "metaDescription": "A 2020 Java/JEE project at Eurafric Maroc: authentication, an application foundation, client onboarding for public share offerings (OPV) and PDFs.",
       "sector": "Banking · Public share offerings (OPV) · 2020 · Eurafric Maroc",
       "lead": "For my 2020 final-year project at Eurafric Maroc, I worked on a Java/JEE application foundation designed for reuse across banking agencies. Its client onboarding workflow concerned participants in public offerings of shares (OPV).",
@@ -62,7 +62,7 @@ const study: CaseStudy = {
     },
     "fr": {
       "title": "Un socle applicatif réutilisable pour les offres publiques de vente",
-      "metaTitle": "Application bancaire pour les OPV · Étude de cas",
+      "metaTitle": "Application bancaire Java EE pour les OPV au Maroc",
       "metaDescription": "Projet Java/JEE réalisé en 2020 chez Eurafric Maroc : authentification, socle applicatif, clients des offres publiques de vente d’actions et PDF.",
       "sector": "Banque · Offres publiques de vente (OPV) · 2020 · Eurafric Maroc",
       "lead": "Pour mon projet de fin d’études en 2020 chez Eurafric Maroc, j’ai travaillé sur un socle applicatif Java/JEE réutilisable dans plusieurs agences bancaires. Le parcours d’entrée en relation concernait les clients participant aux offres publiques de vente (OPV) d’actions.",
@@ -116,7 +116,7 @@ const study: CaseStudy = {
     },
     "ar": {
       "title": "أساس تطبيقي قابل لإعادة الاستخدام لعروض البيع العام للأسهم",
-      "metaTitle": "تطبيق بنكي لعروض بيع الأسهم · دراسة حالة",
+      "metaTitle": "تطبيق بنكي Java EE لعروض بيع الأسهم في المغرب",
       "metaDescription": "مشروع Java/JEE أُنجز سنة 2020 لدى Eurafric Maroc: المصادقة وأساس التطبيق وتسجيل عملاء عروض البيع العام للأسهم (OPV) وإنشاء PDF.",
       "sector": "القطاع البنكي · عروض البيع العام للأسهم (OPV) · 2020 · Eurafric Maroc",
       "lead": "في إطار مشروع تخرّجي سنة 2020 لدى Eurafric Maroc، عملت على أساس تطبيق Java/JEE قابل لإعادة الاستخدام في الوكالات البنكية. وكان مسار تسجيل العملاء يخصّ المشاركين في عروض البيع العام للأسهم (OPV).",

@@ -11,7 +11,7 @@ const study: CaseStudy = {
   text: {
     fr: {
       title: "Un site vitrine export et un CRM pour conquérir des acheteurs professionnels à l'étranger",
-      metaTitle: 'Site vitrine export et CRM B2B · Étude de cas',
+      metaTitle: 'Site vitrine export multilingue et CRM B2B',
       metaDescription:
         'Un site vitrine pour les grossistes étrangers, en anglais et en arabe, relié à un CRM qui trouve et suit les prospects sur Instagram, TikTok et Facebook.',
       sector: 'Export · B2B',
@@ -105,7 +105,7 @@ const study: CaseStudy = {
     },
     en: {
       title: 'An export showcase website and a CRM to win trade buyers abroad',
-      metaTitle: 'Export showcase website and B2B CRM · Case study',
+      metaTitle: 'Multilingual export showcase website and B2B CRM',
       metaDescription:
         'A showcase site for foreign wholesalers, in English and Arabic, connected to a CRM that finds and follows prospects on Instagram, TikTok and Facebook.',
       sector: 'Export · B2B',
@@ -199,7 +199,7 @@ const study: CaseStudy = {
     },
     ar: {
       title: 'موقع عرض للتصدير ونظام CRM لكسب المشترين المحترفين في الخارج',
-      metaTitle: 'موقع عرض للتصدير ونظام CRM للشركات · دراسة حالة',
+      metaTitle: 'موقع عرض متعدد اللغات للتصدير ونظام CRM للشركات',
       metaDescription:
         'موقع عرض لتجار الجملة في الخارج، بالإنجليزية والعربية، مرتبط بنظام CRM يجد العملاء المحتملين ويتابعهم على Instagram وTikTok وFacebook.',
       sector: 'التصدير · B2B',

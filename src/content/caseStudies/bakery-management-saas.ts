@@ -8,7 +8,7 @@ const study: CaseStudy = {
   "text": {
     "en": {
       "title": "Bakery SaaS: bringing stock, recipes and sales into one application",
-      "metaTitle": "Bakery management SaaS · Case study",
+      "metaTitle": "Custom bakery management SaaS application",
       "metaDescription": "A bakery management application combining stock, recipes, orders and point of sale, with dashboards and an interface in English, French and Arabic.",
       "sector": "Bakery management · Full-stack application",
       "lead": "A bakery’s working day moves between ingredients, production and the counter. I built a management application that brings stock, recipes, orders and sales into one workspace, with views for desktop, tablet and mobile.",
@@ -92,7 +92,7 @@ const study: CaseStudy = {
     },
     "fr": {
       "title": "Bakery SaaS : réunir les stocks, les recettes et les ventes dans une seule application",
-      "metaTitle": "SaaS de gestion de boulangerie · Étude de cas",
+      "metaTitle": "Logiciel SaaS de gestion de boulangerie sur mesure",
       "metaDescription": "Une application de gestion de boulangerie : stocks, recettes, commandes, caisse et tableaux de bord, avec une interface en français, anglais et arabe.",
       "sector": "Gestion de boulangerie · Application full-stack",
       "lead": "La journée d’une boulangerie se partage entre les matières premières, la préparation et le comptoir. J’ai développé une application qui réunit les stocks, les recettes, les commandes et les ventes dans un même espace, sur ordinateur, tablette et mobile.",
@@ -176,7 +176,7 @@ const study: CaseStudy = {
     },
     "ar": {
       "title": "Bakery SaaS: إدارة المخزون والوصفات والمبيعات في تطبيق واحد",
-      "metaTitle": "تطبيق لإدارة المخابز · دراسة حالة",
+      "metaTitle": "تطبيق SaaS مخصص لإدارة المخابز",
       "metaDescription": "تطبيق لإدارة المخابز يجمع المخزون والوصفات والطلبات ونقطة البيع ولوحات المتابعة، بواجهة عربية وفرنسية وإنجليزية.",
       "sector": "إدارة المخابز · تطوير تطبيق متكامل",
       "lead": "يتوزّع يوم العمل في المخبز بين المواد الأولية والتحضير وخدمة الزبائن. طوّرت تطبيقًا يجمع المخزون والوصفات والطلبات والمبيعات في مساحة عمل واحدة، بواجهات للحاسوب والجهاز اللوحي والهاتف.",

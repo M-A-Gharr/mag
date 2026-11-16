@@ -8,7 +8,7 @@ const study: CaseStudy = {
   "text": {
     "en": {
       "title": "Invoice extraction with in-app review and editing",
-      "metaTitle": "Invoice OCR & data extraction · Case study",
+      "metaTitle": "Invoice OCR: automatic data extraction from PDF and JPG",
       "metaDescription": "Configurable JPG and PDF invoice extraction at OpenView, with in-app editing, human validation and structured JSON or CSV outputs.",
       "sector": "Document processing · OpenView",
       "lead": "At OpenView, I built an invoice OCR application for JPG and PDF documents. Users could choose the fields to capture or request broader extraction, then review, edit and validate the result directly in the application.",
@@ -55,7 +55,7 @@ const study: CaseStudy = {
     },
     "fr": {
       "title": "Extraire les données des factures avec vérification et modification intégrées",
-      "metaTitle": "OCR et extraction de factures · Étude de cas",
+      "metaTitle": "OCR de factures : extraction automatique PDF et JPG",
       "metaDescription": "Extraction configurable de factures JPG et PDF chez OpenView, avec modification dans l’application, validation humaine et sorties JSON ou CSV.",
       "sector": "Traitement documentaire · OpenView",
       "lead": "Chez OpenView, j’ai développé une application OCR pour les factures JPG et PDF. L’utilisateur pouvait choisir les champs à récupérer ou demander une extraction plus large, puis vérifier, modifier et valider le résultat directement dans l’application.",
@@ -102,7 +102,7 @@ const study: CaseStudy = {
     },
     "ar": {
       "title": "استخراج بيانات الفواتير مع مراجعتها وتعديلها داخل التطبيق",
-      "metaTitle": "استخراج بيانات الفواتير بتقنية OCR · دراسة حالة",
+      "metaTitle": "OCR للفواتير: استخراج تلقائي للبيانات من PDF وJPG",
       "metaDescription": "استخراج قابل للتخصيص لبيانات فواتير JPG وPDF لدى OpenView، مع تعديل داخل التطبيق ومراجعة بشرية ومخرجات JSON أو CSV.",
       "sector": "معالجة المستندات · OpenView",
       "lead": "طوّرت لدى OpenView تطبيقًا للتعرّف الضوئي على النصوص في فواتير JPG وPDF. كان المستخدم يختار الحقول المطلوبة أو يطلب استخراجًا أوسع، ثم يراجع النتائج ويعدّلها ويعتمدها داخل التطبيق.",

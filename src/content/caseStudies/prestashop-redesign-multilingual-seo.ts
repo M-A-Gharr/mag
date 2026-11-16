@@ -11,7 +11,7 @@ const study: CaseStudy = {
   text: {
     fr: {
       title: 'Refonte, SEO multilingue et modules sur mesure pour une boutique PrestaShop',
-      metaTitle: 'Refonte et SEO PrestaShop multilingue · Étude de cas',
+      metaTitle: 'Refonte PrestaShop multilingue : de la page 10 à la page 1',
       metaDescription:
         'Refonte d’une boutique PrestaShop en trois langues : plus de 20 modules sur mesure, stock relié aux magasins, et de la page 10 à la page 1 de Google.',
       sector: 'Mode · E-commerce multilingue',
@@ -102,7 +102,7 @@ const study: CaseStudy = {
     },
     en: {
       title: 'Redesign, multilingual SEO and custom modules for a PrestaShop store',
-      metaTitle: 'PrestaShop redesign and multilingual SEO · Case study',
+      metaTitle: 'Multilingual PrestaShop redesign: from page 10 to page 1',
       metaDescription:
         'A three-language PrestaShop redesign: 20+ custom modules, stock connected to the physical stores, and from page 10 to page 1 of Google.',
       sector: 'Fashion · Multilingual e-commerce',
@@ -193,7 +193,7 @@ const study: CaseStudy = {
     },
     ar: {
       title: 'إعادة تصميم وتحسين SEO متعدد اللغات ووحدات مخصصة لمتجر PrestaShop',
-      metaTitle: 'إعادة تصميم متجر PrestaShop وSEO متعدد اللغات · دراسة حالة',
+      metaTitle: 'إعادة تصميم PrestaShop متعدد اللغات: من الصفحة 10 إلى الأولى',
       metaDescription:
         'إعادة تصميم متجر PrestaShop بثلاث لغات: أكثر من 20 وحدة مخصصة، ومخزون مرتبط بالمتاجر، ومن الصفحة 10 إلى الصفحة 1 في Google.',
       sector: 'الأزياء · تجارة إلكترونية متعددة اللغات',

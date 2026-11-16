@@ -10,7 +10,7 @@ const study: CaseStudy = {
   text: {
     fr: {
       title: "Migration d'une boutique de mode de WooCommerce vers PrestaShop 9",
-      metaTitle: 'Migration WooCommerce vers PrestaShop 9 · Étude de cas',
+      metaTitle: 'Migration WooCommerce vers PrestaShop 9 sans perte SEO',
       metaDescription:
         "Comment j'ai migré une boutique de mode de WooCommerce vers PrestaShop 9 sans perdre ses clients, son historique de commandes ni son référencement Google.",
       sector: 'Mode · E-commerce',
@@ -105,7 +105,7 @@ const study: CaseStudy = {
     },
     en: {
       title: 'Migrating a fashion store from WooCommerce to PrestaShop 9',
-      metaTitle: 'WooCommerce to PrestaShop 9 migration · Case study',
+      metaTitle: 'WooCommerce to PrestaShop 9 migration without SEO loss',
       metaDescription:
         'How I moved a fashion store from WooCommerce to PrestaShop 9 without losing its customers, its order history or its Google rankings.',
       sector: 'Fashion · E-commerce',
@@ -200,7 +200,7 @@ const study: CaseStudy = {
     },
     ar: {
       title: 'نقل متجر أزياء من WooCommerce إلى PrestaShop 9',
-      metaTitle: 'نقل متجر من WooCommerce إلى PrestaShop 9 · دراسة حالة',
+      metaTitle: 'نقل متجر من WooCommerce إلى PrestaShop 9 دون خسارة SEO',
       metaDescription:
         'كيف نقلت متجر أزياء من WooCommerce إلى PrestaShop 9 دون أن يفقد عملاءه أو سجل طلباته أو مراتبه في Google.',
       sector: 'الأزياء · التجارة الإلكترونية',

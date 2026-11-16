@@ -10,7 +10,7 @@ const study: CaseStudy = {
   text: {
     fr: {
       title: "Simtis Studio : des visuels portés par mannequin, créés par IA à partir d'une photo produit",
-      metaTitle: 'Studio IA de visuels mode · Étude de cas',
+      metaTitle: 'Studio IA de visuels mode et fiches produit',
       metaDescription:
         "Un studio IA interne qui transforme la photo d'un châle en visuels portés par mannequin, avec validation, quotas par magasin et fiches produit en trois langues.",
       sector: 'Mode & retail · IA générative',
@@ -104,7 +104,7 @@ const study: CaseStudy = {
     },
     en: {
       title: 'Simtis Studio: AI-generated model shots from a single product photo',
-      metaTitle: 'AI fashion visuals studio · Case study',
+      metaTitle: 'AI fashion visuals studio and product listings',
       metaDescription:
         'An in-house AI studio that turns a photo of a shawl into model shots, with an approval step, quotas per store and product sheets in three languages.',
       sector: 'Fashion retail · Generative AI',
@@ -196,7 +196,7 @@ const study: CaseStudy = {
     },
     ar: {
       title: 'Simtis Studio: صور ملبوسة على عارضات يُنشئها الذكاء الاصطناعي من صورة منتج واحدة',
-      metaTitle: 'استوديو ذكاء اصطناعي لصور الأزياء · دراسة حالة',
+      metaTitle: 'استوديو ذكاء اصطناعي لصور الأزياء وبطاقات المنتجات',
       metaDescription:
         'استوديو ذكاء اصطناعي داخلي يحوّل صورة شال إلى صور ملبوسة على عارضات، مع خطوة موافقة وحصص لكل متجر وبطاقات منتجات بثلاث لغات.',
       sector: 'الأزياء والتجزئة · الذكاء الاصطناعي التوليدي',

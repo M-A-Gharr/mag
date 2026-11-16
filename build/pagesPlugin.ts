@@ -298,7 +298,20 @@ const serviceJsonLd = (service: Service, lng: CaseStudyLang, sectionName: string
         url,
         inLanguage: lng,
         about: { '@id': `${SITE_URL}#person` },
+        mainEntity: { '@id': `${url}#service` },
         keywords: service.tools.join(', '),
+      },
+      {
+        '@type': 'Service',
+        '@id': `${url}#service`,
+        name: t.title,
+        description: t.metaDescription,
+        url,
+        provider: { '@id': `${SITE_URL}#person` },
+        areaServed: [
+          { '@type': 'City', name: 'Casablanca' },
+          { '@type': 'Country', name: 'Morocco' },
+        ],
       },
       {
         '@type': 'BreadcrumbList',

@@ -8,7 +8,7 @@ const study: CaseStudy = {
   "text": {
     "en": {
       "title": "VR Showroom: connecting virtual property visits to sales follow-up",
-      "metaTitle": "VR real estate showroom and CRM · Case study",
+      "metaTitle": "Interactive 3D real estate showroom with CRM",
       "metaDescription": "A personal real estate project combining interactive plans, 3D models, 360° visits and a CRM with lead scoring, assignment and sales follow-up.",
       "sector": "Real estate · Interactive 3D · Personal project",
       "lead": "I built VR Showroom as a personal project for real estate developers: a place where buyers can explore a property online, and where the sales team can follow the interest those visits generate.",
@@ -93,7 +93,7 @@ const study: CaseStudy = {
     },
     "fr": {
       "title": "VR Showroom : relier les visites immobilières virtuelles au suivi commercial",
-      "metaTitle": "Showroom immobilier 3D et CRM · Étude de cas",
+      "metaTitle": "Showroom immobilier 3D interactif avec CRM",
       "metaDescription": "Un projet personnel associant plans interactifs, modèles 3D, visites à 360° et CRM avec scoring, attribution des prospects et suivi commercial.",
       "sector": "Immobilier · 3D interactive · Projet personnel",
       "lead": "J’ai conçu VR Showroom comme un projet personnel destiné aux promoteurs immobiliers : un espace où les acheteurs explorent un bien en ligne et où l’équipe commerciale peut suivre l’intérêt suscité par ces visites.",
@@ -178,7 +178,7 @@ const study: CaseStudy = {
     },
     "ar": {
       "title": "VR Showroom: ربط الزيارات العقارية الافتراضية بالمتابعة التجارية",
-      "metaTitle": "معرض عقاري ثلاثي الأبعاد مع CRM · دراسة حالة",
+      "metaTitle": "معرض عقاري تفاعلي ثلاثي الأبعاد مع CRM",
       "metaDescription": "مشروع شخصي يجمع المخططات التفاعلية والنماذج ثلاثية الأبعاد وزيارات 360° مع نظام لتقييم العملاء المحتملين وإسنادهم ومتابعتهم.",
       "sector": "العقارات · عرض ثلاثي الأبعاد · مشروع شخصي",
       "lead": "طوّرت VR Showroom كمشروع شخصي موجّه للمطوّرين العقاريين: مساحة يستكشف فيها المشترون العقار عبر الإنترنت، ويتابع فيها فريق المبيعات الاهتمام الناتج عن هذه الزيارات.",

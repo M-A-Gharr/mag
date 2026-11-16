@@ -10,7 +10,7 @@ const study: CaseStudy = {
   text: {
     fr: {
       title: "Une plateforme de prospection B2B qui trouve, qualifie et suit les prospects avec l'IA",
-      metaTitle: 'Plateforme de prospection B2B avec IA · Étude de cas',
+      metaTitle: "Prospection B2B automatisée par l'IA et CRM",
       metaDescription:
         "Une plateforme qui trouve des entreprises cibles, les qualifie avec l'IA et suit chaque opportunité jusqu'à la vente, avec une personne qui valide chaque étape.",
       sector: 'B2B · Export et marché local',
@@ -102,7 +102,7 @@ const study: CaseStudy = {
     },
     en: {
       title: 'A B2B prospecting platform that finds, qualifies and follows leads with AI',
-      metaTitle: 'B2B lead intelligence platform with AI · Case study',
+      metaTitle: 'AI-powered B2B lead generation platform and CRM',
       metaDescription:
         'A platform that finds target companies, qualifies them with AI and follows each opportunity to the sale, with a person approving every step.',
       sector: 'B2B · Export and local market',
@@ -194,7 +194,7 @@ const study: CaseStudy = {
     },
     ar: {
       title: 'منصة للتنقيب عن عملاء الشركات تجد العملاء المحتملين وتؤهلهم وتتابعهم بالذكاء الاصطناعي',
-      metaTitle: 'منصة تنقيب B2B بالذكاء الاصطناعي · دراسة حالة',
+      metaTitle: 'منصة تنقيب عن عملاء B2B بالذكاء الاصطناعي مع CRM',
       metaDescription:
         'منصة تجد الشركات المستهدفة وتؤهلها بالذكاء الاصطناعي وتتابع كل فرصة حتى البيع، مع شخص يوافق على كل خطوة.',
       sector: 'B2B · التصدير والسوق المحلية',
