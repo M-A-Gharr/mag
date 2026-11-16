@@ -9,12 +9,12 @@ const service: Service = {
   modified: '2026-11-15',
   text: {
     fr: {
-      title: "Automatisation par l'IA et formation des équipes",
+      title: 'Automatisation IA et formation des équipes au Maroc',
       metaTitle: 'Automatisation IA et formation Claude au Maroc · M.A.G',
       metaDescription:
         "Intégration IA, automatisation des processus métier et développement d’applications IA sur mesure. Formation et accompagnement des équipes à Casablanca.",
       lead:
-        "J'ajoute de l'IA là où elle fait vraiment gagner du temps : rédiger, trier, qualifier des prospects, produire des visuels. Et je forme les équipes à s'en servir chaque jour, en gardant toujours la main sur les décisions.",
+        "J'ajoute de l'IA là où elle fait vraiment gagner du temps : rédiger, trier, qualifier des prospects, produire des visuels. Et je forme les équipes, à Casablanca et partout au Maroc, à s'en servir chaque jour, en gardant toujours la main sur les décisions.",
       audience: {
         heading: 'Les problèmes que je résous',
         items: [
@@ -87,12 +87,12 @@ const service: Service = {
       },
     },
     en: {
-      title: 'AI automation and team training',
+      title: 'AI automation and team training in Morocco',
       metaTitle: 'AI automation and Claude training in Morocco · M.A.G',
       metaDescription:
         "AI integration, business process automation and custom AI application development, with team training and adoption support in Casablanca.",
       lead:
-        'I add AI where it really saves time: writing, sorting, qualifying leads, producing visuals. And I train teams to use it every day, while they stay in charge of every decision.',
+        'I add AI where it really saves time: writing, sorting, qualifying leads, producing visuals. And I train teams in Casablanca and across Morocco to use it every day, while they stay in charge of every decision.',
       audience: {
         heading: 'Problems I solve',
         items: [
@@ -165,12 +165,12 @@ const service: Service = {
       },
     },
     ar: {
-      title: 'الأتمتة بالذكاء الاصطناعي وتكوين الفرق',
+      title: 'الأتمتة بالذكاء الاصطناعي وتكوين الفرق في المغرب',
       metaTitle: 'الأتمتة بالذكاء الاصطناعي وتكوين Claude في المغرب · M.A.G',
       metaDescription:
         "دمج الذكاء الاصطناعي وأتمتة عمليات الأعمال وتطوير تطبيقات مخصصة تعتمد عليه، مع تدريب الفرق ومرافقتها في الاستخدام بالدار البيضاء.",
       lead:
-        'أضيف الذكاء الاصطناعي حيث يوفّر الوقت فعلاً: الكتابة والفرز وتأهيل العملاء المحتملين وإنتاج الصور. وأكوّن الفرق على استخدامه كل يوم، مع بقاء القرار دائماً بأيديها.',
+        'أضيف الذكاء الاصطناعي حيث يوفّر الوقت فعلاً: الكتابة والفرز وتأهيل العملاء المحتملين وإنتاج الصور. وأكوّن الفرق في الدار البيضاء وفي كل أنحاء المغرب على استخدامه كل يوم، مع بقاء القرار دائماً بأيديها.',
       audience: {
         heading: 'المشكلات التي أحلّها',
         items: [

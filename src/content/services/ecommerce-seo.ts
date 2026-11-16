@@ -10,7 +10,7 @@ const service: Service = {
   modified: '2026-11-15',
   text: {
     fr: {
-      title: 'E-commerce et SEO : PrestaShop, WordPress et Shopify',
+      title: 'Développeur PrestaShop et e-commerce à Casablanca',
       metaTitle: 'Développeur PrestaShop et SEO e-commerce à Casablanca',
       metaDescription:
         "Développeur PrestaShop à Casablanca : modules sur mesure, migrations complexes, intégrations ERP et logiciels de gestion, refonte et SEO multilingue.",
@@ -92,7 +92,7 @@ const service: Service = {
       },
     },
     en: {
-      title: 'E-commerce and SEO: PrestaShop, WordPress and Shopify',
+      title: 'PrestaShop and e-commerce developer in Casablanca',
       metaTitle: 'PrestaShop developer and e-commerce SEO in Casablanca',
       metaDescription:
         "PrestaShop developer in Casablanca: custom modules, complex migrations, ERP and management software integrations, redesigns and multilingual SEO.",
@@ -174,7 +174,7 @@ const service: Service = {
       },
     },
     ar: {
-      title: 'التجارة الإلكترونية وSEO: PrestaShop وWordPress وShopify',
+      title: 'مطوّر PrestaShop والتجارة الإلكترونية في الدار البيضاء',
       metaTitle: 'مطوّر PrestaShop وSEO للتجارة الإلكترونية في الدار البيضاء',
       metaDescription:
         "مطوّر PrestaShop في الدار البيضاء: وحدات مخصصة وترحيل معقد وربط بأنظمة ERP وبرامج الإدارة، مع إعادة التصميم وتحسين SEO متعدد اللغات.",
