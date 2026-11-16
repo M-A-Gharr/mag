@@ -25,17 +25,18 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
+          cache: npm
 
-      - name: 💾 Cache node_modules
-        uses: actions/cache@v4
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-npm-cache
-          restore-keys: |
-            ${{ runner.os }}-npm-cache
-
+      # Exact versions from package-lock.json
       - name: 📦 Install dependencies
-        run: npm install
+        run: npm ci
+
+      # Nothing is deployed if the code has a lint warning or a type error
+      - name: 🔍 Lint
+        run: npm run lint
+
+      - name: 🧪 Type check
+        run: npm run typecheck
 
       - name: 🛠️ Build project
         run: npm run build

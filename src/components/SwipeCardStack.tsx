@@ -62,9 +62,10 @@ const SwipeCardStack = ({
   // A drag ends with a pointer-up on the card; this keeps it from counting as a click.
   const wasDragged = useRef(false);
 
+  const count = images.length;
   useEffect(() => {
-    setOrder(images.map((_, i) => i));
-  }, [images.length]);
+    setOrder(Array.from({ length: count }, (_, i) => i));
+  }, [count]);
 
   useEffect(() => () => clearTimeout(returnTimer.current), []);
 
@@ -82,8 +83,13 @@ const SwipeCardStack = ({
     return () => observer.disconnect();
   }, []);
 
+  // Latest callback in a ref: a new function from the parent must not re-announce the same card.
+  const onTopCardChangeRef = useRef(onTopCardChange);
   useEffect(() => {
-    if (order.length > 0) onTopCardChange?.(order[0]);
+    onTopCardChangeRef.current = onTopCardChange;
+  });
+  useEffect(() => {
+    if (order.length > 0) onTopCardChangeRef.current?.(order[0]);
   }, [order]);
 
   if (images.length === 0) return null;

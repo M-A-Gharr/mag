@@ -60,7 +60,7 @@ const AboutSection = () => {
   const experience = Array.isArray(resume) ? (resume as TimelineItem[]) : [];
   const ventures = t('about.entrepreneurial.items', { returnObjects: true });
   const entrepreneurial = Array.isArray(ventures) ? (ventures as TimelineItem[]) : [];
-  const collaboration = t('about.collaboration.items', { returnObjects: true });
+  const collaboration = t('about.collaboration.items', { returnObjects: true }) as string[];
 
   // Education, newest first (the texts come from the former Certificates section).
   const education: TimelineItem[] = [
