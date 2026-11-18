@@ -25,14 +25,15 @@ const WhatsAppDialog = ({ open, onOpenChange }: WhatsAppDialogProps) => {
 
   const onSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const text = [
-      t('contact.whatsapp.greeting'),
-      '',
+    // A single line: some WhatsApp apps (desktop especially) drop everything after the first
+    // line break of a pre-filled text, which lost the name and the answers.
+    const details = [
       `${t('contact.form.name')} : ${form.name.trim()}`,
       `${t('contact.form.need')} : ${t(`contact.form.needOptions.${form.need}`)}`,
       ...(form.timeframe ? [`${t('contact.whatsapp.timeframe')} : ${t(`contact.form.timeframeOptions.${form.timeframe}`)}`] : []),
-      ...(form.message.trim() ? ['', form.message.trim()] : []),
-    ].join('\n');
+      ...(form.message.trim() ? [`${t('contact.form.message')} : ${form.message.trim().replace(/\s*\n+\s*/g, ' ')}`] : []),
+    ];
+    const text = `${t('contact.whatsapp.greeting')} ${details.join(' | ')}`;
     // Opened synchronously from the submit so pop-up blockers let it through.
     window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`, '_blank', 'noopener,noreferrer');
     onOpenChange(false);

@@ -11,6 +11,8 @@ import { isHomePath, pathFor } from '@/i18n/paths';
 import { AnimatePresence, motion, type Variants } from 'framer-motion';
 import { ArrowUpRight, Github, Linkedin, Mail } from 'lucide-react';
 import ThemeSwitcher from './ThemeSwitcher';
+import WhatsAppDialog from './contact/WhatsAppDialog';
+import WhatsAppIcon from './contact/WhatsAppIcon';
 import { EASE_OUT } from './motion';
 import { cn } from '@/lib/utils';
 
@@ -88,6 +90,7 @@ const MobileMenu = ({ id, open, onClose, links }: MobileMenuProps) => {
   const rtl = i18n.language === 'ar';
   const firstLinkRef = useRef<HTMLButtonElement>(null);
   const [current, setCurrent] = useState<string | null>(null);
+  const [whatsAppOpen, setWhatsAppOpen] = useState(false);
 
   // Lock the page behind, close on Escape, move focus into the menu.
   useEffect(() => {
@@ -132,11 +135,19 @@ const MobileMenu = ({ id, open, onClose, links }: MobileMenuProps) => {
     requestAnimationFrame(() => scroller.scrollTo(to, { smooth: 'easeInOutQuart', duration: 700, offset: -70 }));
   };
 
+  // The form opens once the menu is closed, so it is not drawn underneath it.
+  const openWhatsApp = () => {
+    document.documentElement.style.overflow = '';
+    onClose();
+    setWhatsAppOpen(true);
+  };
+
   // The circle grows from the menu button corner (top right, or top left in Arabic).
   const origin = rtl ? '2.5rem 2.25rem' : 'calc(100% - 2.5rem) 2.25rem';
 
   // Rendered in <body>: the header is transformed, which would trap a fixed child inside it.
   return createPortal(
+    <>
     <AnimatePresence>
       {open && (
         <motion.div
@@ -254,12 +265,22 @@ const MobileMenu = ({ id, open, onClose, links }: MobileMenuProps) => {
                     <Icon className="h-5 w-5" />
                   </a>
                 ))}
+                <button
+                  type="button"
+                  onClick={openWhatsApp}
+                  aria-label="WhatsApp"
+                  className="flex h-11 w-11 items-center justify-center rounded-full border border-border text-foreground transition-all duration-300 hover:-translate-y-0.5 hover:border-[#25D366] hover:bg-[#25D366] hover:text-white"
+                >
+                  <WhatsAppIcon size={20} />
+                </button>
               </div>
             </motion.div>
           </div>
         </motion.div>
       )}
-    </AnimatePresence>,
+    </AnimatePresence>
+    <WhatsAppDialog open={whatsAppOpen} onOpenChange={setWhatsAppOpen} />
+    </>,
     document.body
   );
 };

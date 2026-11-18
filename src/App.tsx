@@ -5,6 +5,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { MotionConfig } from "framer-motion";
+import FloatingContact from "./components/FloatingContact";
 
 // The home page is in the entry bundle; the other pages load on demand (src/routes.ts).
 import Index from "./pages/Index";
@@ -18,6 +19,7 @@ const App = () => (
       <TooltipProvider>
         <Toaster />
         <Sonner />
+        <FloatingContact />
         <BrowserRouter>
           <Suspense fallback={<div className="flex items-center justify-center min-h-screen">
             <span className="animate-spin rounded-full border-4 border-gray-300 border-t-blue-500 h-8 w-8"></span>

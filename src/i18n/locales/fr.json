@@ -806,6 +806,13 @@
       "submit": "Ouvrir WhatsApp",
       "note": "Rien n'est envoyé tant que vous n'appuyez pas sur Envoyer dans WhatsApp.",
       "greeting": "Bonjour Amine, je vous contacte depuis votre portfolio."
+    },
+    "floating": {
+      "open": "Me contacter : assistant IA ou WhatsApp",
+      "close": "Fermer",
+      "assistant": "Assistant IA",
+      "assistantHint": "Réponse immédiate, 24h/24",
+      "whatsappHint": "Écrire directement à Amine"
     }
   },
   "footer": {

@@ -151,6 +151,26 @@ body {
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
+  /* Chatbase's own bubble is replaced by the shared floating button (FloatingContact.tsx),
+     which opens the chat through window.chatbase('open'). */
+  #chatbase-bubble-button {
+    display: none !important;
+  }
+
+  /* Arabic (RTL): the chat sits bottom left, like the floating button. The widget sets
+     right/left as inline styles (no !important), so these win. Below 640px the chat window
+     is full width (left and right at 0): only the message bubbles move there. */
+  html[dir='rtl'] #chatbase-message-bubbles {
+    left: 1rem !important;
+    right: auto !important;
+  }
+  @media (min-width: 640px) {
+    html[dir='rtl'] #chatbase-bubble-window {
+      left: 1rem !important;
+      right: auto !important;
+    }
+  }
+
   /* Chatbase Bubble Button Styling for Light Mode */
   @media (prefers-color-scheme: light) {
     [chatbase-bubble-button] {
