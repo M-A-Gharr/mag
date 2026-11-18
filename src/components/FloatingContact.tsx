@@ -11,7 +11,13 @@ import WhatsAppDialog from './contact/WhatsAppDialog';
 import WhatsAppIcon from './contact/WhatsAppIcon';
 
 type Chatbase = (command: 'open' | 'close') => void;
-const chatbase = (command: 'open' | 'close') => (window as unknown as { chatbase?: Chatbase }).chatbase?.(command);
+// Called through a plain variable: the production build turns `window.chatbase?.(x)` into
+// `window.chatbase.call(window, x)`, and Chatbase's proxy reads any property, `call`
+// included, as an (unknown) command, so the chat never opened.
+const chatbase = (command: 'open' | 'close') => {
+  const run = (window as unknown as { chatbase?: Chatbase }).chatbase;
+  if (typeof run === 'function') run(command);
+};
 
 const VIOLET = 'linear-gradient(135deg, #483dfb, #9b87f5)';
 const GREEN = 'linear-gradient(135deg, #25D366, #128C4A)';
