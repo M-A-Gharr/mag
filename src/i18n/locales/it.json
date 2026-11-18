@@ -796,6 +796,16 @@
       "copied": "Copiato!",
       "copyEmail": "Clicca per copiare l’indirizzo email",
       "openMap": "Vedi su Google Maps"
+    },
+    "whatsapp": {
+      "label": "Scrivimi su WhatsApp",
+      "title": "Parliamone su WhatsApp",
+      "description": "Qualche informazione per preparare il tuo messaggio: WhatsApp si aprirà con il testo pronto, dovrai solo inviarlo.",
+      "timeframe": "Tempistica",
+      "message": "Il tuo messaggio (facoltativo)",
+      "submit": "Apri WhatsApp",
+      "note": "Non viene inviato nulla finché non premi Invia su WhatsApp.",
+      "greeting": "Ciao Amine, ti contatto dal tuo portfolio."
     }
   },
   "map": {

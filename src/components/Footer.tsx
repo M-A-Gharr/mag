@@ -1,9 +1,12 @@
 
 import { ArrowUp, Github, Linkedin, Mail } from 'lucide-react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { Reveal } from './motion';
 import Logo from './Logo';
+import WhatsAppDialog from './contact/WhatsAppDialog';
+import WhatsAppIcon from './contact/WhatsAppIcon';
 import { CASE_STUDY_PAGES } from '@/content/caseStudies';
 import { SERVICE_PAGES } from '@/content/services';
 import { caseStudyPath, servicePath } from '@/i18n/paths';
@@ -11,6 +14,7 @@ import { caseStudyPath, servicePath } from '@/i18n/paths';
 const Footer = () => {
   const { t, i18n } = useTranslation();
   const currentYear = new Date().getFullYear();
+  const [whatsAppOpen, setWhatsAppOpen] = useState(false);
   
   return (
     <footer className="bg-secondary/30 pt-16 pb-8">
@@ -97,7 +101,16 @@ const Footer = () => {
               >
                 <Linkedin size={20} />
               </a>
+              <button
+                type="button"
+                onClick={() => setWhatsAppOpen(true)}
+                aria-label="WhatsApp"
+                className="p-3 bg-secondary/50 hover:bg-[#25D366] text-foreground hover:text-white rounded-full transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-1"
+              >
+                <WhatsAppIcon size={20} />
+              </button>
             </div>
+            <WhatsAppDialog open={whatsAppOpen} onOpenChange={setWhatsAppOpen} />
           </div>
         </Reveal>
         

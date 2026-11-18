@@ -13,12 +13,13 @@ type ContactItemProps = {
   copyValue?: string;
   copiedLabel?: string;
   copyHint?: string;
+  onClick?: () => void;
 };
 
 const PULL = 0.35;
 const MAX_SHIFT = 10;
 
-const ContactItem = ({ icon, label, value, href, copyValue, copiedLabel, copyHint }: ContactItemProps) => {
+const ContactItem = ({ icon, label, value, href, copyValue, copiedLabel, copyHint, onClick }: ContactItemProps) => {
   const iconRef = useRef<HTMLDivElement>(null);
   const x = useMotionValue(0);
   const y = useMotionValue(0);
@@ -77,6 +78,10 @@ const ContactItem = ({ icon, label, value, href, copyValue, copiedLabel, copyHin
             <span className="text-muted-foreground opacity-0 transition-opacity duration-300 group-hover:opacity-100">
               {copied ? <Check className="h-3.5 w-3.5 text-emerald-500" /> : <Copy className="h-3.5 w-3.5" />}
             </span>
+          </button>
+        ) : onClick ? (
+          <button type="button" onClick={onClick} className={`${valueClass} text-start`}>
+            <bdi dir="ltr">{value}</bdi>
           </button>
         ) : href ? (
           <a

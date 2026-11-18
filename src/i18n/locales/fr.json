@@ -796,6 +796,16 @@
       "copied": "Copié !",
       "copyEmail": "Cliquez pour copier l’adresse e-mail",
       "openMap": "Voir sur Google Maps"
+    },
+    "whatsapp": {
+      "label": "Écrire sur WhatsApp",
+      "title": "Discutons sur WhatsApp",
+      "description": "Quelques infos pour préparer votre message : WhatsApp s'ouvrira avec le texte prêt, il ne vous restera qu'à l'envoyer.",
+      "timeframe": "Échéance",
+      "message": "Votre message (facultatif)",
+      "submit": "Ouvrir WhatsApp",
+      "note": "Rien n'est envoyé tant que vous n'appuyez pas sur Envoyer dans WhatsApp.",
+      "greeting": "Bonjour Amine, je vous contacte depuis votre portfolio."
     }
   },
   "footer": {

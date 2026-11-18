@@ -11,6 +11,8 @@ import { BlockTitle, EASE_OUT, Reveal, SectionHeading, Stagger, StaggerItem } fr
 import FloatingField from './contact/FloatingField';
 import PaperPlaneButton, { type SendStatus } from './contact/PaperPlaneButton';
 import ContactItem from './contact/ContactItem';
+import WhatsAppDialog from './contact/WhatsAppDialog';
+import WhatsAppIcon from './contact/WhatsAppIcon';
 import { useLocation } from 'react-router-dom';
 import { CASE_STUDY_PAGES, caseStudyLang } from '@/content/caseStudies';
 import { SERVICE_PAGES, servicesForProject } from '@/content/services';
@@ -41,6 +43,7 @@ const ContactSection = () => {
   const [status, setStatus] = useState<SendStatus>('idle');
   const [errorCount, setErrorCount] = useState(0);
   const resetTimer = useRef<ReturnType<typeof setTimeout>>();
+  const [whatsAppOpen, setWhatsAppOpen] = useState(false);
 
   useEffect(() => {
     if (subject) setFormData((previous) => previous.message ? previous : { ...previous, message: copy.prompt(subject) });
@@ -128,6 +131,13 @@ const ContactSection = () => {
       label: t('contact.info.phone'),
       value: "+212 6 44 58 92 07",
       link: "tel:+212644589207"
+    },
+    {
+      icon: <WhatsAppIcon size={20} className="text-[#25D366]" />,
+      label: "WhatsApp",
+      value: t('contact.whatsapp.label'),
+      link: null,
+      onClick: () => setWhatsAppOpen(true)
     },
     {
       icon: <Linkedin className="h-5 w-5 text-[#483dfb]" />,
@@ -273,6 +283,7 @@ const ContactSection = () => {
                       copyValue={item.copy ? item.value : undefined}
                       copiedLabel={t('contact.info.copied')}
                       copyHint={t('contact.info.copyEmail')}
+                      onClick={item.onClick}
                     />
                   </StaggerItem>
                 ))}
@@ -325,6 +336,8 @@ const ContactSection = () => {
             </Reveal>
           </div>
         </div>
+
+        <WhatsAppDialog open={whatsAppOpen} onOpenChange={setWhatsAppOpen} />
 
         {/* Scheduling a call: target of the "#book" links */}
         <Element name="book" id="book" className="mt-12 scroll-mt-24">

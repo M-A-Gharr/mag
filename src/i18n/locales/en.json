@@ -796,6 +796,16 @@
       "copied": "Copied!",
       "copyEmail": "Click to copy the email address",
       "openMap": "See on Google Maps"
+    },
+    "whatsapp": {
+      "label": "Message me on WhatsApp",
+      "title": "Let's talk on WhatsApp",
+      "description": "A few details to prepare your message: WhatsApp will open with the text ready, you just have to send it.",
+      "timeframe": "Timeframe",
+      "message": "Your message (optional)",
+      "submit": "Open WhatsApp",
+      "note": "Nothing is sent until you press Send in WhatsApp.",
+      "greeting": "Hi Amine, I'm reaching out from your portfolio."
     }
   },
   "map": {

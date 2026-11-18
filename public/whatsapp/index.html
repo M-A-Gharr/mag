@@ -1,0 +1,48 @@
+<!doctype html>
+<!-- maminegh.com/whatsapp: short link to the WhatsApp Business chat. GitHub Pages has no
+     server redirects, so this page forwards at once, with a greeting in the visitor's language:
+     the language chosen on the site if they used it, else the browser's, else English. -->
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>WhatsApp · M.A.G</title>
+  <link rel="canonical" href="https://wa.me/212644589207">
+  <link rel="icon" href="/favicon.ico">
+  <script>
+    (function () {
+      var GREETINGS = {
+        fr: 'Bonjour Amine, ',
+        en: 'Hi Amine, ',
+        ar: 'مرحباً أمين، ',
+        es: 'Hola Amine, ',
+        it: 'Ciao Amine, ',
+        ru: 'Здравствуйте, Амин! ',
+        hi: 'नमस्ते अमीन, '
+      };
+      var wanted = [];
+      try { wanted.push(localStorage.getItem('mag-lang')); } catch (e) {}
+      wanted = wanted.concat(navigator.languages || [], navigator.language);
+      var lang = 'en';
+      for (var i = 0; i < wanted.length; i++) {
+        var code = String(wanted[i] || '').slice(0, 2).toLowerCase();
+        if (GREETINGS[code]) { lang = code; break; }
+      }
+      window.__waUrl = 'https://wa.me/212644589207?text=' + encodeURIComponent(GREETINGS[lang]);
+      location.replace(window.__waUrl);
+    })();
+  </script>
+  <noscript><meta http-equiv="refresh" content="0; url=https://wa.me/212644589207"></noscript>
+  <style>
+    :root { color-scheme: light dark; }
+    body { margin: 0; min-height: 100vh; display: grid; place-items: center; font: 16px/1.5 system-ui, sans-serif; background: #fff; color: #111; }
+    @media (prefers-color-scheme: dark) { body { background: #0b0b12; color: #eee; } }
+    a { color: #128c4a; font-weight: 600; }
+  </style>
+</head>
+<body>
+  <p><a id="wa" href="https://wa.me/212644589207">WhatsApp →</a></p>
+  <script>if (window.__waUrl) document.getElementById('wa').href = window.__waUrl;</script>
+</body>
+</html>
