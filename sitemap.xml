@@ -1,0 +1,529 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+  <!-- Generated at build time by build/pagesPlugin.ts -->
+  <url>
+    <loc>https://www.maminegh.com/</loc>
+    <lastmod>2026-11-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.maminegh.com/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.maminegh.com/fr/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.maminegh.com/ar/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.maminegh.com/" />
+  </url>
+  <url>
+    <loc>https://www.maminegh.com/fr/</loc>
+    <lastmod>2026-11-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.maminegh.com/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.maminegh.com/fr/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.maminegh.com/ar/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.maminegh.com/" />
+  </url>
+  <url>
+    <loc>https://www.maminegh.com/ar/</loc>
+    <lastmod>2026-11-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.maminegh.com/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.maminegh.com/fr/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.maminegh.com/ar/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.maminegh.com/" />
+  </url>
+  <url>
+    <loc>https://www.maminegh.com/case-studies/ai-fashion-visuals-studio/</loc>
+    <lastmod>2026-11-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.maminegh.com/case-studies/ai-fashion-visuals-studio/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.maminegh.com/fr/etudes-de-cas/ai-fashion-visuals-studio/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.maminegh.com/ar/case-studies/ai-fashion-visuals-studio/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.maminegh.com/case-studies/ai-fashion-visuals-studio/" />
+    <video:video>
+      <video:thumbnail_loc>https://www.maminegh.com/videos/projects/ai-fashion-studio-poster.webp</video:thumbnail_loc>
+      <video:title>Simtis Studio: AI-generated model shots from a single product photo</video:title>
+      <video:description>An in-house AI studio that turns a photo of a shawl into model shots, with an approval step, quotas per store and product sheets in three languages.</video:description>
+      <video:content_loc>https://www.maminegh.com/videos/projects/ai-fashion-studio.mp4</video:content_loc>
+      <video:duration>56</video:duration>
+      <video:publication_date>2026-11-09T09:00:00+01:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://www.maminegh.com/fr/etudes-de-cas/ai-fashion-visuals-studio/</loc>
+    <lastmod>2026-11-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.maminegh.com/case-studies/ai-fashion-visuals-studio/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.maminegh.com/fr/etudes-de-cas/ai-fashion-visuals-studio/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.maminegh.com/ar/case-studies/ai-fashion-visuals-studio/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.maminegh.com/case-studies/ai-fashion-visuals-studio/" />
+    <video:video>
+      <video:thumbnail_loc>https://www.maminegh.com/videos/projects/ai-fashion-studio-poster.webp</video:thumbnail_loc>
+      <video:title>Simtis Studio : des visuels portés par mannequin, créés par IA à partir d'une photo produit</video:title>
+      <video:description>Un studio IA interne qui transforme la photo d'un châle en visuels portés par mannequin, avec validation, quotas par magasin et fiches produit en trois langues.</video:description>
+      <video:content_loc>https://www.maminegh.com/videos/projects/ai-fashion-studio.mp4</video:content_loc>
+      <video:duration>56</video:duration>
+      <video:publication_date>2026-11-09T09:00:00+01:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://www.maminegh.com/ar/case-studies/ai-fashion-visuals-studio/</loc>
+    <lastmod>2026-11-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.maminegh.com/case-studies/ai-fashion-visuals-studio/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.maminegh.com/fr/etudes-de-cas/ai-fashion-visuals-studio/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.maminegh.com/ar/case-studies/ai-fashion-visuals-studio/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.maminegh.com/case-studies/ai-fashion-visuals-studio/" />
+    <video:video>
+      <video:thumbnail_loc>https://www.maminegh.com/videos/projects/ai-fashion-studio-poster.webp</video:thumbnail_loc>
+      <video:title>Simtis Studio: صور ملبوسة على عارضات يُنشئها الذكاء الاصطناعي من صورة منتج واحدة</video:title>
+      <video:description>استوديو ذكاء اصطناعي داخلي يحوّل صورة شال إلى صور ملبوسة على عارضات، مع خطوة موافقة وحصص لكل متجر وبطاقات منتجات بثلاث لغات.</video:description>
+      <video:content_loc>https://www.maminegh.com/videos/projects/ai-fashion-studio.mp4</video:content_loc>
+      <video:duration>56</video:duration>
+      <video:publication_date>2026-11-09T09:00:00+01:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://www.maminegh.com/case-studies/prestashop-redesign-multilingual-seo/</loc>
+    <lastmod>2026-11-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.maminegh.com/case-studies/prestashop-redesign-multilingual-seo/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.maminegh.com/fr/etudes-de-cas/prestashop-redesign-multilingual-seo/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.maminegh.com/ar/case-studies/prestashop-redesign-multilingual-seo/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.maminegh.com/case-studies/prestashop-redesign-multilingual-seo/" />
+    <video:video>
+      <video:thumbnail_loc>https://www.maminegh.com/videos/projects/prestashop-redesign-poster.webp</video:thumbnail_loc>
+      <video:title>Redesign, multilingual SEO and custom modules for a PrestaShop store</video:title>
+      <video:description>A three-language PrestaShop redesign: 20+ custom modules, stock connected to the physical stores, and from page 10 to page 1 of Google.</video:description>
+      <video:content_loc>https://www.maminegh.com/videos/projects/prestashop-redesign.mp4</video:content_loc>
+      <video:duration>60</video:duration>
+      <video:publication_date>2026-11-15T09:00:00+01:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://www.maminegh.com/fr/etudes-de-cas/prestashop-redesign-multilingual-seo/</loc>
+    <lastmod>2026-11-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.maminegh.com/case-studies/prestashop-redesign-multilingual-seo/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.maminegh.com/fr/etudes-de-cas/prestashop-redesign-multilingual-seo/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.maminegh.com/ar/case-studies/prestashop-redesign-multilingual-seo/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.maminegh.com/case-studies/prestashop-redesign-multilingual-seo/" />
+    <video:video>
+      <video:thumbnail_loc>https://www.maminegh.com/videos/projects/prestashop-redesign-poster.webp</video:thumbnail_loc>
+      <video:title>Refonte, SEO multilingue et modules sur mesure pour une boutique PrestaShop</video:title>
+      <video:description>Refonte d’une boutique PrestaShop en trois langues : plus de 20 modules sur mesure, stock relié aux magasins, et de la page 10 à la page 1 de Google.</video:description>
+      <video:content_loc>https://www.maminegh.com/videos/projects/prestashop-redesign.mp4</video:content_loc>
+      <video:duration>60</video:duration>
+      <video:publication_date>2026-11-15T09:00:00+01:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://www.maminegh.com/ar/case-studies/prestashop-redesign-multilingual-seo/</loc>
+    <lastmod>2026-11-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.maminegh.com/case-studies/prestashop-redesign-multilingual-seo/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.maminegh.com/fr/etudes-de-cas/prestashop-redesign-multilingual-seo/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.maminegh.com/ar/case-studies/prestashop-redesign-multilingual-seo/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.maminegh.com/case-studies/prestashop-redesign-multilingual-seo/" />
+    <video:video>
+      <video:thumbnail_loc>https://www.maminegh.com/videos/projects/prestashop-redesign-poster.webp</video:thumbnail_loc>
+      <video:title>إعادة تصميم وتحسين SEO متعدد اللغات ووحدات مخصصة لمتجر PrestaShop</video:title>
+      <video:description>إعادة تصميم متجر PrestaShop بثلاث لغات: أكثر من 20 وحدة مخصصة، ومخزون مرتبط بالمتاجر، ومن الصفحة 10 إلى الصفحة 1 في Google.</video:description>
+      <video:content_loc>https://www.maminegh.com/videos/projects/prestashop-redesign.mp4</video:content_loc>
+      <video:duration>60</video:duration>
+      <video:publication_date>2026-11-15T09:00:00+01:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://www.maminegh.com/case-studies/b2b-lead-intelligence-platform/</loc>
+    <lastmod>2026-11-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.maminegh.com/case-studies/b2b-lead-intelligence-platform/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.maminegh.com/fr/etudes-de-cas/b2b-lead-intelligence-platform/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.maminegh.com/ar/case-studies/b2b-lead-intelligence-platform/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.maminegh.com/case-studies/b2b-lead-intelligence-platform/" />
+    <video:video>
+      <video:thumbnail_loc>https://www.maminegh.com/videos/projects/lead-intelligence-poster.webp</video:thumbnail_loc>
+      <video:title>A B2B prospecting platform that finds, qualifies and follows leads with AI</video:title>
+      <video:description>A platform that finds target companies, qualifies them with AI and follows each opportunity to the sale, with a person approving every step.</video:description>
+      <video:content_loc>https://www.maminegh.com/videos/projects/lead-intelligence.mp4</video:content_loc>
+      <video:duration>56</video:duration>
+      <video:publication_date>2026-11-15T09:00:00+01:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://www.maminegh.com/fr/etudes-de-cas/b2b-lead-intelligence-platform/</loc>
+    <lastmod>2026-11-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.maminegh.com/case-studies/b2b-lead-intelligence-platform/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.maminegh.com/fr/etudes-de-cas/b2b-lead-intelligence-platform/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.maminegh.com/ar/case-studies/b2b-lead-intelligence-platform/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.maminegh.com/case-studies/b2b-lead-intelligence-platform/" />
+    <video:video>
+      <video:thumbnail_loc>https://www.maminegh.com/videos/projects/lead-intelligence-poster.webp</video:thumbnail_loc>
+      <video:title>Une plateforme de prospection B2B qui trouve, qualifie et suit les prospects avec l'IA</video:title>
+      <video:description>Une plateforme qui trouve des entreprises cibles, les qualifie avec l'IA et suit chaque opportunité jusqu'à la vente, avec une personne qui valide chaque étape.</video:description>
+      <video:content_loc>https://www.maminegh.com/videos/projects/lead-intelligence.mp4</video:content_loc>
+      <video:duration>56</video:duration>
+      <video:publication_date>2026-11-15T09:00:00+01:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://www.maminegh.com/ar/case-studies/b2b-lead-intelligence-platform/</loc>
+    <lastmod>2026-11-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.maminegh.com/case-studies/b2b-lead-intelligence-platform/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.maminegh.com/fr/etudes-de-cas/b2b-lead-intelligence-platform/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.maminegh.com/ar/case-studies/b2b-lead-intelligence-platform/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.maminegh.com/case-studies/b2b-lead-intelligence-platform/" />
+    <video:video>
+      <video:thumbnail_loc>https://www.maminegh.com/videos/projects/lead-intelligence-poster.webp</video:thumbnail_loc>
+      <video:title>منصة للتنقيب عن عملاء الشركات تجد العملاء المحتملين وتؤهلهم وتتابعهم بالذكاء الاصطناعي</video:title>
+      <video:description>منصة تجد الشركات المستهدفة وتؤهلها بالذكاء الاصطناعي وتتابع كل فرصة حتى البيع، مع شخص يوافق على كل خطوة.</video:description>
+      <video:content_loc>https://www.maminegh.com/videos/projects/lead-intelligence.mp4</video:content_loc>
+      <video:duration>56</video:duration>
+      <video:publication_date>2026-11-15T09:00:00+01:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://www.maminegh.com/case-studies/export-showcase-site-b2b-crm/</loc>
+    <lastmod>2026-11-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.maminegh.com/case-studies/export-showcase-site-b2b-crm/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.maminegh.com/fr/etudes-de-cas/export-showcase-site-b2b-crm/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.maminegh.com/ar/case-studies/export-showcase-site-b2b-crm/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.maminegh.com/case-studies/export-showcase-site-b2b-crm/" />
+    <video:video>
+      <video:thumbnail_loc>https://www.maminegh.com/videos/projects/export-showroom-crm-poster.webp</video:thumbnail_loc>
+      <video:title>An export showcase website and a CRM to win trade buyers abroad</video:title>
+      <video:description>A showcase site for foreign wholesalers, in English and Arabic, connected to a CRM that finds and follows prospects on Instagram, TikTok and Facebook.</video:description>
+      <video:content_loc>https://www.maminegh.com/videos/projects/export-showroom-crm.mp4</video:content_loc>
+      <video:duration>111</video:duration>
+      <video:publication_date>2026-11-15T09:00:00+01:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://www.maminegh.com/fr/etudes-de-cas/export-showcase-site-b2b-crm/</loc>
+    <lastmod>2026-11-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.maminegh.com/case-studies/export-showcase-site-b2b-crm/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.maminegh.com/fr/etudes-de-cas/export-showcase-site-b2b-crm/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.maminegh.com/ar/case-studies/export-showcase-site-b2b-crm/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.maminegh.com/case-studies/export-showcase-site-b2b-crm/" />
+    <video:video>
+      <video:thumbnail_loc>https://www.maminegh.com/videos/projects/export-showroom-crm-poster.webp</video:thumbnail_loc>
+      <video:title>Un site vitrine export et un CRM pour conquérir des acheteurs professionnels à l'étranger</video:title>
+      <video:description>Un site vitrine pour les grossistes étrangers, en anglais et en arabe, relié à un CRM qui trouve et suit les prospects sur Instagram, TikTok et Facebook.</video:description>
+      <video:content_loc>https://www.maminegh.com/videos/projects/export-showroom-crm.mp4</video:content_loc>
+      <video:duration>111</video:duration>
+      <video:publication_date>2026-11-15T09:00:00+01:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://www.maminegh.com/ar/case-studies/export-showcase-site-b2b-crm/</loc>
+    <lastmod>2026-11-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.maminegh.com/case-studies/export-showcase-site-b2b-crm/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.maminegh.com/fr/etudes-de-cas/export-showcase-site-b2b-crm/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.maminegh.com/ar/case-studies/export-showcase-site-b2b-crm/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.maminegh.com/case-studies/export-showcase-site-b2b-crm/" />
+    <video:video>
+      <video:thumbnail_loc>https://www.maminegh.com/videos/projects/export-showroom-crm-poster.webp</video:thumbnail_loc>
+      <video:title>موقع عرض للتصدير ونظام CRM لكسب المشترين المحترفين في الخارج</video:title>
+      <video:description>موقع عرض لتجار الجملة في الخارج، بالإنجليزية والعربية، مرتبط بنظام CRM يجد العملاء المحتملين ويتابعهم على Instagram وTikTok وFacebook.</video:description>
+      <video:content_loc>https://www.maminegh.com/videos/projects/export-showroom-crm.mp4</video:content_loc>
+      <video:duration>111</video:duration>
+      <video:publication_date>2026-11-15T09:00:00+01:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://www.maminegh.com/case-studies/migration-woocommerce-prestashop-9/</loc>
+    <lastmod>2026-11-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.maminegh.com/case-studies/migration-woocommerce-prestashop-9/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.maminegh.com/fr/etudes-de-cas/migration-woocommerce-prestashop-9/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.maminegh.com/ar/case-studies/migration-woocommerce-prestashop-9/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.maminegh.com/case-studies/migration-woocommerce-prestashop-9/" />
+    <video:video>
+      <video:thumbnail_loc>https://www.maminegh.com/videos/projects/migration-ecommerce-poster.webp</video:thumbnail_loc>
+      <video:title>Migrating a fashion store from WooCommerce to PrestaShop 9</video:title>
+      <video:description>How I moved a fashion store from WooCommerce to PrestaShop 9 without losing its customers, its order history or its Google rankings.</video:description>
+      <video:content_loc>https://www.maminegh.com/videos/projects/migration-ecommerce.mp4</video:content_loc>
+      <video:duration>84</video:duration>
+      <video:publication_date>2026-11-11T09:00:00+01:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://www.maminegh.com/fr/etudes-de-cas/migration-woocommerce-prestashop-9/</loc>
+    <lastmod>2026-11-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.maminegh.com/case-studies/migration-woocommerce-prestashop-9/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.maminegh.com/fr/etudes-de-cas/migration-woocommerce-prestashop-9/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.maminegh.com/ar/case-studies/migration-woocommerce-prestashop-9/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.maminegh.com/case-studies/migration-woocommerce-prestashop-9/" />
+    <video:video>
+      <video:thumbnail_loc>https://www.maminegh.com/videos/projects/migration-ecommerce-poster.webp</video:thumbnail_loc>
+      <video:title>Migration d'une boutique de mode de WooCommerce vers PrestaShop 9</video:title>
+      <video:description>Comment j'ai migré une boutique de mode de WooCommerce vers PrestaShop 9 sans perdre ses clients, son historique de commandes ni son référencement Google.</video:description>
+      <video:content_loc>https://www.maminegh.com/videos/projects/migration-ecommerce.mp4</video:content_loc>
+      <video:duration>84</video:duration>
+      <video:publication_date>2026-11-11T09:00:00+01:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://www.maminegh.com/ar/case-studies/migration-woocommerce-prestashop-9/</loc>
+    <lastmod>2026-11-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.maminegh.com/case-studies/migration-woocommerce-prestashop-9/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.maminegh.com/fr/etudes-de-cas/migration-woocommerce-prestashop-9/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.maminegh.com/ar/case-studies/migration-woocommerce-prestashop-9/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.maminegh.com/case-studies/migration-woocommerce-prestashop-9/" />
+    <video:video>
+      <video:thumbnail_loc>https://www.maminegh.com/videos/projects/migration-ecommerce-poster.webp</video:thumbnail_loc>
+      <video:title>نقل متجر أزياء من WooCommerce إلى PrestaShop 9</video:title>
+      <video:description>كيف نقلت متجر أزياء من WooCommerce إلى PrestaShop 9 دون أن يفقد عملاءه أو سجل طلباته أو مراتبه في Google.</video:description>
+      <video:content_loc>https://www.maminegh.com/videos/projects/migration-ecommerce.mp4</video:content_loc>
+      <video:duration>84</video:duration>
+      <video:publication_date>2026-11-11T09:00:00+01:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://www.maminegh.com/case-studies/bakery-management-saas/</loc>
+    <lastmod>2026-11-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.maminegh.com/case-studies/bakery-management-saas/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.maminegh.com/fr/etudes-de-cas/bakery-management-saas/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.maminegh.com/ar/case-studies/bakery-management-saas/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.maminegh.com/case-studies/bakery-management-saas/" />
+    <video:video>
+      <video:thumbnail_loc>https://www.maminegh.com/videos/projects/bakery-saas-poster.webp</video:thumbnail_loc>
+      <video:title>Bakery SaaS: bringing stock, recipes and sales into one application</video:title>
+      <video:description>A bakery management application combining stock, recipes, orders and point of sale, with dashboards and an interface in English, French and Arabic.</video:description>
+      <video:content_loc>https://www.maminegh.com/videos/projects/bakery-saas.mp4</video:content_loc>
+      <video:duration>36</video:duration>
+      <video:publication_date>2026-11-11T09:00:00+01:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://www.maminegh.com/fr/etudes-de-cas/bakery-management-saas/</loc>
+    <lastmod>2026-11-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.maminegh.com/case-studies/bakery-management-saas/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.maminegh.com/fr/etudes-de-cas/bakery-management-saas/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.maminegh.com/ar/case-studies/bakery-management-saas/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.maminegh.com/case-studies/bakery-management-saas/" />
+    <video:video>
+      <video:thumbnail_loc>https://www.maminegh.com/videos/projects/bakery-saas-poster.webp</video:thumbnail_loc>
+      <video:title>Bakery SaaS : réunir les stocks, les recettes et les ventes dans une seule application</video:title>
+      <video:description>Une application de gestion de boulangerie : stocks, recettes, commandes, caisse et tableaux de bord, avec une interface en français, anglais et arabe.</video:description>
+      <video:content_loc>https://www.maminegh.com/videos/projects/bakery-saas.mp4</video:content_loc>
+      <video:duration>36</video:duration>
+      <video:publication_date>2026-11-11T09:00:00+01:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://www.maminegh.com/ar/case-studies/bakery-management-saas/</loc>
+    <lastmod>2026-11-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.maminegh.com/case-studies/bakery-management-saas/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.maminegh.com/fr/etudes-de-cas/bakery-management-saas/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.maminegh.com/ar/case-studies/bakery-management-saas/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.maminegh.com/case-studies/bakery-management-saas/" />
+    <video:video>
+      <video:thumbnail_loc>https://www.maminegh.com/videos/projects/bakery-saas-poster.webp</video:thumbnail_loc>
+      <video:title>Bakery SaaS: إدارة المخزون والوصفات والمبيعات في تطبيق واحد</video:title>
+      <video:description>تطبيق لإدارة المخابز يجمع المخزون والوصفات والطلبات ونقطة البيع ولوحات المتابعة، بواجهة عربية وفرنسية وإنجليزية.</video:description>
+      <video:content_loc>https://www.maminegh.com/videos/projects/bakery-saas.mp4</video:content_loc>
+      <video:duration>36</video:duration>
+      <video:publication_date>2026-11-11T09:00:00+01:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://www.maminegh.com/case-studies/vr-property-showroom-crm/</loc>
+    <lastmod>2026-11-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.maminegh.com/case-studies/vr-property-showroom-crm/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.maminegh.com/fr/etudes-de-cas/vr-property-showroom-crm/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.maminegh.com/ar/case-studies/vr-property-showroom-crm/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.maminegh.com/case-studies/vr-property-showroom-crm/" />
+    <video:video>
+      <video:thumbnail_loc>https://www.maminegh.com/videos/projects/vr-showroom-poster.webp</video:thumbnail_loc>
+      <video:title>VR Showroom: connecting virtual property visits to sales follow-up</video:title>
+      <video:description>A personal real estate project combining interactive plans, 3D models, 360° visits and a CRM with lead scoring, assignment and sales follow-up.</video:description>
+      <video:content_loc>https://www.maminegh.com/videos/projects/vr-showroom.mp4</video:content_loc>
+      <video:duration>116</video:duration>
+      <video:publication_date>2026-11-09T09:00:00+01:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://www.maminegh.com/fr/etudes-de-cas/vr-property-showroom-crm/</loc>
+    <lastmod>2026-11-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.maminegh.com/case-studies/vr-property-showroom-crm/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.maminegh.com/fr/etudes-de-cas/vr-property-showroom-crm/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.maminegh.com/ar/case-studies/vr-property-showroom-crm/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.maminegh.com/case-studies/vr-property-showroom-crm/" />
+    <video:video>
+      <video:thumbnail_loc>https://www.maminegh.com/videos/projects/vr-showroom-poster.webp</video:thumbnail_loc>
+      <video:title>VR Showroom : relier les visites immobilières virtuelles au suivi commercial</video:title>
+      <video:description>Un projet personnel associant plans interactifs, modèles 3D, visites à 360° et CRM avec scoring, attribution des prospects et suivi commercial.</video:description>
+      <video:content_loc>https://www.maminegh.com/videos/projects/vr-showroom.mp4</video:content_loc>
+      <video:duration>116</video:duration>
+      <video:publication_date>2026-11-09T09:00:00+01:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://www.maminegh.com/ar/case-studies/vr-property-showroom-crm/</loc>
+    <lastmod>2026-11-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.maminegh.com/case-studies/vr-property-showroom-crm/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.maminegh.com/fr/etudes-de-cas/vr-property-showroom-crm/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.maminegh.com/ar/case-studies/vr-property-showroom-crm/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.maminegh.com/case-studies/vr-property-showroom-crm/" />
+    <video:video>
+      <video:thumbnail_loc>https://www.maminegh.com/videos/projects/vr-showroom-poster.webp</video:thumbnail_loc>
+      <video:title>VR Showroom: ربط الزيارات العقارية الافتراضية بالمتابعة التجارية</video:title>
+      <video:description>مشروع شخصي يجمع المخططات التفاعلية والنماذج ثلاثية الأبعاد وزيارات 360° مع نظام لتقييم العملاء المحتملين وإسنادهم ومتابعتهم.</video:description>
+      <video:content_loc>https://www.maminegh.com/videos/projects/vr-showroom.mp4</video:content_loc>
+      <video:duration>116</video:duration>
+      <video:publication_date>2026-11-09T09:00:00+01:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://www.maminegh.com/case-studies/configurable-invoice-ocr/</loc>
+    <lastmod>2026-11-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.maminegh.com/case-studies/configurable-invoice-ocr/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.maminegh.com/fr/etudes-de-cas/configurable-invoice-ocr/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.maminegh.com/ar/case-studies/configurable-invoice-ocr/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.maminegh.com/case-studies/configurable-invoice-ocr/" />
+  </url>
+  <url>
+    <loc>https://www.maminegh.com/fr/etudes-de-cas/configurable-invoice-ocr/</loc>
+    <lastmod>2026-11-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.maminegh.com/case-studies/configurable-invoice-ocr/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.maminegh.com/fr/etudes-de-cas/configurable-invoice-ocr/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.maminegh.com/ar/case-studies/configurable-invoice-ocr/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.maminegh.com/case-studies/configurable-invoice-ocr/" />
+  </url>
+  <url>
+    <loc>https://www.maminegh.com/ar/case-studies/configurable-invoice-ocr/</loc>
+    <lastmod>2026-11-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.maminegh.com/case-studies/configurable-invoice-ocr/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.maminegh.com/fr/etudes-de-cas/configurable-invoice-ocr/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.maminegh.com/ar/case-studies/configurable-invoice-ocr/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.maminegh.com/case-studies/configurable-invoice-ocr/" />
+  </url>
+  <url>
+    <loc>https://www.maminegh.com/case-studies/medical-practice-management-mvp/</loc>
+    <lastmod>2026-11-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.maminegh.com/case-studies/medical-practice-management-mvp/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.maminegh.com/fr/etudes-de-cas/medical-practice-management-mvp/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.maminegh.com/ar/case-studies/medical-practice-management-mvp/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.maminegh.com/case-studies/medical-practice-management-mvp/" />
+  </url>
+  <url>
+    <loc>https://www.maminegh.com/fr/etudes-de-cas/medical-practice-management-mvp/</loc>
+    <lastmod>2026-11-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.maminegh.com/case-studies/medical-practice-management-mvp/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.maminegh.com/fr/etudes-de-cas/medical-practice-management-mvp/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.maminegh.com/ar/case-studies/medical-practice-management-mvp/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.maminegh.com/case-studies/medical-practice-management-mvp/" />
+  </url>
+  <url>
+    <loc>https://www.maminegh.com/ar/case-studies/medical-practice-management-mvp/</loc>
+    <lastmod>2026-11-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.maminegh.com/case-studies/medical-practice-management-mvp/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.maminegh.com/fr/etudes-de-cas/medical-practice-management-mvp/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.maminegh.com/ar/case-studies/medical-practice-management-mvp/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.maminegh.com/case-studies/medical-practice-management-mvp/" />
+  </url>
+  <url>
+    <loc>https://www.maminegh.com/case-studies/banking-agency-java-jee/</loc>
+    <lastmod>2026-11-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.maminegh.com/case-studies/banking-agency-java-jee/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.maminegh.com/fr/etudes-de-cas/banking-agency-java-jee/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.maminegh.com/ar/case-studies/banking-agency-java-jee/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.maminegh.com/case-studies/banking-agency-java-jee/" />
+  </url>
+  <url>
+    <loc>https://www.maminegh.com/fr/etudes-de-cas/banking-agency-java-jee/</loc>
+    <lastmod>2026-11-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.maminegh.com/case-studies/banking-agency-java-jee/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.maminegh.com/fr/etudes-de-cas/banking-agency-java-jee/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.maminegh.com/ar/case-studies/banking-agency-java-jee/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.maminegh.com/case-studies/banking-agency-java-jee/" />
+  </url>
+  <url>
+    <loc>https://www.maminegh.com/ar/case-studies/banking-agency-java-jee/</loc>
+    <lastmod>2026-11-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.maminegh.com/case-studies/banking-agency-java-jee/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.maminegh.com/fr/etudes-de-cas/banking-agency-java-jee/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.maminegh.com/ar/case-studies/banking-agency-java-jee/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.maminegh.com/case-studies/banking-agency-java-jee/" />
+  </url>
+  <url>
+    <loc>https://www.maminegh.com/expertise/web-application-development/</loc>
+    <lastmod>2026-11-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.maminegh.com/expertise/web-application-development/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.maminegh.com/fr/expertise/web-application-development/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.maminegh.com/ar/expertise/web-application-development/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.maminegh.com/expertise/web-application-development/" />
+  </url>
+  <url>
+    <loc>https://www.maminegh.com/fr/expertise/web-application-development/</loc>
+    <lastmod>2026-11-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.maminegh.com/expertise/web-application-development/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.maminegh.com/fr/expertise/web-application-development/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.maminegh.com/ar/expertise/web-application-development/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.maminegh.com/expertise/web-application-development/" />
+  </url>
+  <url>
+    <loc>https://www.maminegh.com/ar/expertise/web-application-development/</loc>
+    <lastmod>2026-11-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.maminegh.com/expertise/web-application-development/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.maminegh.com/fr/expertise/web-application-development/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.maminegh.com/ar/expertise/web-application-development/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.maminegh.com/expertise/web-application-development/" />
+  </url>
+  <url>
+    <loc>https://www.maminegh.com/expertise/ai-automation/</loc>
+    <lastmod>2026-11-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.maminegh.com/expertise/ai-automation/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.maminegh.com/fr/expertise/ai-automation/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.maminegh.com/ar/expertise/ai-automation/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.maminegh.com/expertise/ai-automation/" />
+  </url>
+  <url>
+    <loc>https://www.maminegh.com/fr/expertise/ai-automation/</loc>
+    <lastmod>2026-11-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.maminegh.com/expertise/ai-automation/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.maminegh.com/fr/expertise/ai-automation/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.maminegh.com/ar/expertise/ai-automation/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.maminegh.com/expertise/ai-automation/" />
+  </url>
+  <url>
+    <loc>https://www.maminegh.com/ar/expertise/ai-automation/</loc>
+    <lastmod>2026-11-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.maminegh.com/expertise/ai-automation/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.maminegh.com/fr/expertise/ai-automation/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.maminegh.com/ar/expertise/ai-automation/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.maminegh.com/expertise/ai-automation/" />
+  </url>
+  <url>
+    <loc>https://www.maminegh.com/expertise/ecommerce-seo/</loc>
+    <lastmod>2026-11-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.maminegh.com/expertise/ecommerce-seo/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.maminegh.com/fr/expertise/ecommerce-seo/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.maminegh.com/ar/expertise/ecommerce-seo/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.maminegh.com/expertise/ecommerce-seo/" />
+  </url>
+  <url>
+    <loc>https://www.maminegh.com/fr/expertise/ecommerce-seo/</loc>
+    <lastmod>2026-11-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.maminegh.com/expertise/ecommerce-seo/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.maminegh.com/fr/expertise/ecommerce-seo/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.maminegh.com/ar/expertise/ecommerce-seo/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.maminegh.com/expertise/ecommerce-seo/" />
+  </url>
+  <url>
+    <loc>https://www.maminegh.com/ar/expertise/ecommerce-seo/</loc>
+    <lastmod>2026-11-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.maminegh.com/expertise/ecommerce-seo/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.maminegh.com/fr/expertise/ecommerce-seo/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.maminegh.com/ar/expertise/ecommerce-seo/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.maminegh.com/expertise/ecommerce-seo/" />
+  </url>
+</urlset>

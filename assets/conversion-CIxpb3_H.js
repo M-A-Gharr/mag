@@ -1,0 +1,18 @@
+import{c as o}from"./index-DPYK3IcL.js";/**
+ * @license lucide-react v0.545.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */const t=[["path",{d:"M5 12h14",key:"1ays0h"}],["path",{d:"m12 5 7 7-7 7",key:"xquz4c"}]],s=o("arrow-right",t),c={fr:{title:"Un besoin similaire dans votre équipe ?",description:"Décrivez votre contexte, vos outils actuels et le résultat recherché. Nous pourrons préciser le périmètre et une première étape utile.",project:"Discuter d’un projet similaire",services:{webapps:"Parlons de votre application",ai:"Identifions votre cas d’usage IA",ecommerce:"Parlons de votre boutique"},book:"Planifier un échange",related:"Expertises mobilisées",example:"Voir un projet concret",context:"Votre demande concerne",prompt:e=>`Bonjour, je souhaite échanger au sujet de : ${e}.
+
+Mon contexte :
+Mes outils actuels :
+Le résultat recherché :`},en:{title:"Does your team have a similar need?",description:"Describe your context, current tools and desired outcome. We can clarify the scope and identify a useful first step.",project:"Discuss a similar project",services:{webapps:"Let’s discuss your application",ai:"Explore your AI use case",ecommerce:"Let’s discuss your store"},book:"Schedule a conversation",related:"Related expertise",example:"See a real project",context:"Your enquiry concerns",prompt:e=>`Hello, I would like to discuss: ${e}.
+
+My context:
+My current tools:
+The outcome I’m looking for:`},ar:{title:"هل لدى فريقكم احتياج مشابه؟",description:"صفوا سياق عملكم وأدواتكم الحالية والنتيجة المطلوبة، لنحدّد النطاق وخطوة أولى مفيدة.",project:"مناقشة مشروع مشابه",services:{webapps:"لنتحدث عن تطبيقكم",ai:"لنحدّد استخدام الذكاء الاصطناعي المناسب",ecommerce:"لنتحدث عن متجركم"},book:"تحديد موعد للتواصل",related:"الخبرات المرتبطة",example:"مشاهدة مشروع فعلي",context:"موضوع طلبكم",prompt:e=>`مرحبًا، أود مناقشة: ${e}.
+
+سياق عملي:
+أدواتي الحالية:
+النتيجة المطلوبة:`}};export{s as A,c};
