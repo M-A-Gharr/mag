@@ -15,6 +15,19 @@
     "testimonials": "Testimonials"
   },
   "hero": {
+    "terminal": {
+      "intro": "A few questions to start our next collaboration.",
+      "skipped": "Not specified",
+      "edit": "Edit",
+      "review": "All set. Check your answers before sending.",
+      "restart": "New message",
+      "next": "Continue",
+      "preview": "Review message",
+      "back": "Back",
+      "enter": "Enter to continue · You can edit your answers.",
+      "multiline": "Enter for a new line · Review your message before sending.",
+      "required": "Please enter a response."
+    },
     "meta": {
       "title": "Mohamed Amine Gharrab · Full-Stack & AI Developer",
       "description": "Full-Stack Developer in Casablanca: web applications, AI automation, e-commerce (PrestaShop, WordPress, Shopify) and CRM integration."

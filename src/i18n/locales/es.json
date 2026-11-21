@@ -15,6 +15,19 @@
     "testimonials": "Testimonios"
   },
   "hero": {
+    "terminal": {
+      "intro": "Unas preguntas para iniciar nuestra próxima colaboración.",
+      "skipped": "Sin especificar",
+      "edit": "Editar",
+      "review": "Todo listo. Revisa tus respuestas antes de enviar.",
+      "restart": "Nuevo mensaje",
+      "next": "Continuar",
+      "preview": "Revisar mensaje",
+      "back": "Volver",
+      "enter": "Intro para continuar · Puedes editar tus respuestas.",
+      "multiline": "Intro para una nueva línea · Revisa el mensaje antes de enviar.",
+      "required": "Introduce una respuesta."
+    },
     "meta": {
       "title": "Mohamed Amine Gharrab · Desarrollador Full-Stack e IA",
       "description": "Desarrollador Full-Stack en Casablanca: aplicaciones web, automatización con IA, e-commerce (PrestaShop, WordPress, Shopify) e integración de CRM."

@@ -1,15 +1,14 @@
 
-import { lazy, Suspense, useEffect, useRef, useState } from 'react';
-import { Contact as ContactIcon, Download, MapPin, Mail, Phone, Linkedin, Send } from 'lucide-react';
+import { lazy, Suspense, useEffect, useState } from 'react';
+import { Contact as ContactIcon, Download, MapPin, Mail, Phone, Linkedin } from 'lucide-react';
 import { Element } from 'react-scroll';
 import { toast } from 'sonner';
 import { downloadCv } from '@/lib/cv';
 import emailjs from 'emailjs-com'
 import { useTranslation } from 'react-i18next';
-import { AnimatePresence, motion } from 'framer-motion';
-import { BlockTitle, EASE_OUT, Reveal, SectionHeading, Stagger, StaggerItem } from './motion';
-import FloatingField from './contact/FloatingField';
-import PaperPlaneButton, { type SendStatus } from './contact/PaperPlaneButton';
+import { BlockTitle, Reveal, SectionHeading, Stagger, StaggerItem } from './motion';
+import TerminalContactForm from './contact/TerminalContactForm';
+import { type SendStatus } from './contact/PaperPlaneButton';
 import ContactItem from './contact/ContactItem';
 import WhatsAppDialog from './contact/WhatsAppDialog';
 import WhatsAppIcon from './contact/WhatsAppIcon';
@@ -18,7 +17,6 @@ import { CASE_STUDY_PAGES, caseStudyLang } from '@/content/caseStudies';
 import { SERVICE_PAGES, servicesForProject } from '@/content/services';
 import { conversionCopy } from '@/content/conversion';
 
-const MESSAGE_MAX = 1000;
 
 // The calendar (slots outside working hours), its date locales and EmailJS load only when the
 // contact section renders.
@@ -41,8 +39,6 @@ const ContactSection = () => {
     timeframe: ''
   });
   const [status, setStatus] = useState<SendStatus>('idle');
-  const [errorCount, setErrorCount] = useState(0);
-  const resetTimer = useRef<ReturnType<typeof setTimeout>>();
   const [whatsAppOpen, setWhatsAppOpen] = useState(false);
 
   useEffect(() => {
@@ -53,7 +49,6 @@ const ContactSection = () => {
     if (suggestedNeed) setFormData((previous) => previous.need ? previous : { ...previous, need: suggestedNeed });
   }, [suggestedNeed]);
 
-  useEffect(() => () => clearTimeout(resetTimer.current), []);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -76,7 +71,7 @@ const ContactSection = () => {
         formData.message,
       ].join('\n'),
     };
-    // Let the plane "taxi" for a moment even when the network is fast.
+    // Keep the sending state readable even on a fast connection.
     const minDelay = new Promise((resolve) => setTimeout(resolve, 900));
 
     try {
@@ -86,7 +81,6 @@ const ContactSection = () => {
       console.error('FAILED sending notification email...', error);
       await minDelay;
       setStatus('error');
-      setErrorCount((c) => c + 1);
       return;
     }
 
@@ -97,9 +91,7 @@ const ContactSection = () => {
 
     await minDelay;
     setStatus('sent');
-    setFormData({ from_name: '', reply_to: '', message: '', need: suggestedNeed, timeframe: '' });
-    clearTimeout(resetTimer.current);
-    resetTimer.current = setTimeout(() => setStatus('idle'), 6000);
+
   };
 
   const onDownloadCv = () => {
@@ -153,116 +145,18 @@ const ContactSection = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Form */}
-          <Reveal className="panel relative z-10 p-6 md:p-8">
-            <BlockTitle icon={Send} title={t('contact.form.title')} />
-            {subject && <p className="mb-5 rounded-lg bg-secondary/30 p-3 text-sm">{copy.context} : <strong>{subject}</strong></p>}
-
-            <Stagger as="div" stagger={0.1} delay={0.15}>
-            <form onSubmit={handleSubmit} className="space-y-5" noValidate={false}>
-              <StaggerItem>
-                <FloatingField
-                  id="name"
-                  name="from_name"
-                  label={t('contact.form.name')}
-                  value={formData.from_name}
-                  onChange={handleChange}
-                  autoComplete="name"
-                  required
-                  disabled={status === 'sending'}
-                />
-              </StaggerItem>
-
-              <StaggerItem>
-                <FloatingField
-                  id="email"
-                  name="reply_to"
-                  type="email"
-                  label={t('contact.form.email')}
-                  value={formData.reply_to}
-                  onChange={handleChange}
-                  autoComplete="email"
-                  required
-                  disabled={status === 'sending'}
-                />
-              </StaggerItem>
-
-              <StaggerItem className="grid gap-5 sm:grid-cols-2">
-                {(['need', 'timeframe'] as const).map((field) => (
-                  <div key={field}>
-                    <label htmlFor={`contact-${field}`} className="mb-2 block text-sm font-medium">
-                      {t(`contact.form.${field}`)}
-                    </label>
-                    <select
-                      id={`contact-${field}`}
-                      name={field}
-                      value={formData[field]}
-                      onChange={handleChange}
-                      required={field === 'need'}
-                      disabled={status === 'sending'}
-                      className="h-14 w-full rounded-lg border border-input bg-background px-3 text-sm text-foreground outline-none transition-colors focus:border-[#483dfb]/60 focus:ring-2 focus:ring-[#483dfb]/20 disabled:opacity-60"
-                    >
-                      <option value="" disabled={field === 'need'}>{t(`contact.form.${field}Placeholder`)}</option>
-                      {(field === 'need' ? ['webapps', 'ai', 'ecommerce', 'other'] : ['soon', 'oneToThreeMonths', 'later', 'flexible']).map((value) => (
-                        <option key={value} value={value}>{t(`contact.form.${field}Options.${value}`)}</option>
-                      ))}
-                    </select>
-                  </div>
-                ))}
-              </StaggerItem>
-
-              <StaggerItem>
-                <p className="mb-3 text-sm text-muted-foreground">{t('contact.form.messageHelp')}</p>
-                <FloatingField
-                  id="message"
-                  name="message"
-                  label={t('contact.form.message')}
-                  value={formData.message}
-                  onChange={handleChange}
-                  multiline
-                  maxLength={MESSAGE_MAX}
-                  required
-                  disabled={status === 'sending'}
-                  counterLabel={(count, max) => t('contact.form.characters', { count, max })}
-                />
-              </StaggerItem>
-
-              <StaggerItem>
-                <PaperPlaneButton
-                  status={status}
-                  errorCount={errorCount}
-                  rtl={i18n.language === 'ar'}
-                  labels={{ idle: t('contact.form.submit'), sending: t('contact.form.sending'), sent: t('contact.form.sent') }}
-                />
-              </StaggerItem>
-            </form>
-            </Stagger>
-
-            {/* Result message unfolds under the button */}
-            <AnimatePresence mode="wait">
-              {(status === 'sent' || status === 'error') && (
-                <motion.div
-                  key={status}
-                  initial={{ opacity: 0, height: 0, marginTop: 0 }}
-                  animate={{ opacity: 1, height: 'auto', marginTop: 20 }}
-                  exit={{ opacity: 0, height: 0, marginTop: 0 }}
-                  transition={{ duration: 0.5, ease: EASE_OUT, delay: status === 'sent' ? 0.9 : 0 }}
-                  className="overflow-hidden"
-                  role={status === 'error' ? 'alert' : 'status'}
-                >
-                  <div
-                    className={
-                      status === 'sent'
-                        ? 'rounded-lg border border-emerald-500/30 bg-emerald-500/10 p-4'
-                        : 'rounded-lg border border-red-500/30 bg-red-500/10 p-4'
-                    }
-                  >
-                    <p className="font-medium text-foreground">
-                      {status === 'sent' ? t('contact.form.success') : t('contact.form.error')}
-                    </p>
-                  </div>
-                </motion.div>
-              )}
-            </AnimatePresence>
+          <Reveal className="relative z-10 min-w-0">
+            <TerminalContactForm
+              data={formData}
+              status={status}
+              onChange={handleChange}
+              onSubmit={handleSubmit}
+              context={subject ? `${copy.context} : ${subject}` : undefined}
+              onRestart={() => {
+                setFormData({ from_name: '', reply_to: '', message: '', need: suggestedNeed, timeframe: '' });
+                setStatus('idle');
+              }}
+            />
           </Reveal>
 
           {/* Contact and map */}
