@@ -19,20 +19,13 @@ import { caseStudyForProject } from '@/content/caseStudies';
 import { caseStudyPath, servicePath } from '@/i18n/paths';
 import { servicesForProject } from '@/content/services';
 import { SHOW_PROJECT_EVENT } from '@/lib/events';
+import { FEATURED_PROJECTS, PROJECT_FILTERS, projectMatchesFilter, type ProjectFilter } from '@/content/projectCategories';
 
 // three.js is only downloaded when the projects section renders.
 const CrumpleCardCarousel = lazy(() => import('./CrumpleCardCarousel'));
 const CaseStudies = lazy(() => import('./CaseStudies'));
 
 const STAGE_HEIGHT = 'h-[320px] sm:h-[400px] md:h-[440px] lg:h-[520px]';
-
-type ProjectFilter = 'all' | 'ai' | 'ecommerce' | 'business';
-
-const PROJECT_FILTER_IDS: Record<Exclude<ProjectFilter, 'all'>, number[]> = {
-  ai: [1, 6, 7, 11, 15, 16],
-  ecommerce: [2, 8, 9, 13],
-  business: [2, 6, 10, 12, 14, 16, 17, 18],
-};
 
 const isRealLink = (href?: string): href is string => !!href && href !== '#';
 
@@ -58,6 +51,7 @@ type Project = {
 const ProjectsSection = () => {
   const { t, i18n } = useTranslation();
   const [showAll, setShowAll] = useState(false);
+  const [filter, setFilter] = useState<ProjectFilter>('featured');
   const [projectFilter, setProjectFilter] = useState<ProjectFilter>('all');
   const [pendingProjectId, setPendingProjectId] = useState<number | null>(null);
 
@@ -238,9 +232,13 @@ const ProjectsSection = () => {
     }
   ];
 
+  const filteredProjects = filter === 'featured'
+    ? FEATURED_PROJECTS.map((id) => projects.find((project) => project.id === id)).filter((project): project is Project => !!project)
+    : projects.filter((project) => projectMatchesFilter(project.id, filter));
+
   const visibleProjects = projectFilter === 'all'
     ? projects
-    : projects.filter((project) => PROJECT_FILTER_IDS[projectFilter].includes(project.id));
+    : projects.filter((project) => projectMatchesFilter(project.id, projectFilter));
   const current = visibleProjects[active] ?? visibleProjects[0] ?? projects[0];
 
   const coverInputs: CoverInput[] = visibleProjects.map((project) => {
@@ -287,46 +285,57 @@ const ProjectsSection = () => {
     <section ref={sectionRef} id="projects" className="section-container">
       <SectionHeading title={t('projects.featuredTitle')} subtitle={t('projects.featuredSubtitle')} />
 
-      <div className="grid gap-6 md:grid-cols-2">
-        {[11, 6, 12, 14, 8, 13].map((id, index) => {
-          const project = projects.find((item) => item.id === id)!;
-          const study = caseStudyForProject(id)!;
-          return (
-            <Reveal key={id}>
-              <RouterLink
-                to={caseStudyPath(i18n.language, study.slug)}
-                className="group flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-secondary/20 transition-colors hover:border-[#483dfb]/60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#483dfb]"
-              >
-                <div className="relative flex aspect-video items-center justify-center overflow-hidden bg-gradient-to-br from-[#483dfb]/15 to-[#9b87f5]/5">
-                  {project.video ? (
-                    <img
-                      src={project.video.poster}
-                      srcSet={project.video.cardPosterSrcSet}
-                      sizes={project.video.cardPosterSizes}
-                      alt=""
-                      loading="lazy"
-                      className="h-full w-full object-contain transition-transform duration-500 group-hover:scale-105"
-                    />
-                  ) : (
-                    <div className="flex flex-col items-center gap-4 p-6 text-center">
-                      <div className="rounded-2xl bg-background/80 p-5">{project.icon}</div>
-                      <span className="text-2xl font-semibold">PrestaShop</span>
-                      <span className="text-sm text-muted-foreground">{t(`projects.items.${id}.technologies.3`)}</span>
-                    </div>
-                  )}
-                  <span className="absolute start-4 top-4 rounded-full bg-background/90 px-3 py-1 text-xs font-medium tabular-nums">0{index + 1}</span>
+      <div className="mb-4 flex flex-wrap gap-2" role="group" aria-label={t('projects.filterLabel')}>
+        {PROJECT_FILTERS.map((category) => (
+          <button key={category} type="button" aria-pressed={filter === category} aria-controls="filtered-projects"
+            onClick={() => { setFilter(category); setShowAll(false); }}
+            className={`rounded-full border px-4 py-2 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#483dfb] ${filter === category ? 'border-[#483dfb] bg-[#483dfb] text-white' : 'border-border bg-background hover:bg-secondary'}`}>
+            {t(`projects.filters.${category}`)}
+            <span className="ms-2 tabular-nums opacity-75" aria-hidden>{projects.filter((project) => projectMatchesFilter(project.id, category)).length}</span>
+          </button>
+        ))}
+      </div>
+      <p className="mb-6 text-sm text-muted-foreground" role="status" aria-live="polite">{t('projects.filterCount', { count: filteredProjects.length })}</p>
+      <div id="filtered-projects" className="grid gap-6 md:grid-cols-2">
+        {filteredProjects.map((project) => {
+          const id = project.id;
+          const study = caseStudyForProject(id);
+          const summaryKey = `projects.featuredSummaries.${id}`;
+          const summary = i18n.exists(summaryKey) ? t(summaryKey) : t(`projects.items.${id}.description`);
+          const content = <>
+            <div className="relative flex aspect-video items-center justify-center overflow-hidden bg-gradient-to-br from-[#483dfb]/15 to-[#9b87f5]/5">
+              {project.video ? (
+                <img src={project.video.poster} srcSet={project.video.cardPosterSrcSet} sizes={project.video.cardPosterSizes}
+                  alt="" loading="lazy" decoding="async" className="h-full w-full object-contain transition-transform duration-500 group-hover:scale-105" />
+              ) : (
+                <div className="flex flex-col items-center gap-4 p-6 text-center">
+                  <div className="rounded-2xl bg-background/80 p-5">{project.icon}</div>
+                  <span className="text-xl font-semibold">{t(`projects.items.${id}.technologies.0`)}</span>
                 </div>
-                <div className="flex flex-1 flex-col p-6 md:p-8">
-                  <h3 className="mb-3 text-xl font-semibold">{t(`projects.items.${id}.title`)}</h3>
-                  <p className="mb-4 text-sm leading-relaxed text-muted-foreground">{t(`projects.featuredSummaries.${id}`)}</p>
-                  {[6, 12, 14].includes(id) && <p className="mb-5 text-sm font-medium text-foreground/80">{t('projects.delivery')}</p>}
-                  <span className="mt-auto inline-flex items-center gap-2 text-sm font-medium text-[#483dfb] dark:text-[#9b87f5]">
-                    {t('caseStudyPage.readFull')}
-                    <ArrowRight aria-hidden className="h-4 w-4 rtl:rotate-180" />
-                  </span>
-                </div>
-              </RouterLink>
-            </Reveal>
+              )}
+            </div>
+            <div className="flex flex-1 flex-col p-6 md:p-8">
+              <h3 className="mb-3 text-xl font-semibold">{t(`projects.items.${id}.title`)}</h3>
+              <p className="mb-4 text-sm leading-relaxed text-muted-foreground">{summary}</p>
+              {[6, 12, 14].includes(id) && <p className="mb-5 text-sm font-medium text-foreground/80">{t('projects.delivery')}</p>}
+              <span className="mt-auto text-sm font-medium text-[#483dfb] dark:text-[#9b87f5]">{t(study ? 'caseStudyPage.readFull' : 'projects.projectDetails')}</span>
+            </div>
+          </>;
+          const cardClass = 'group h-full overflow-hidden rounded-2xl border border-border bg-secondary/20 transition-colors hover:border-[#483dfb]/60';
+          return study ? (
+            <RouterLink key={id} to={caseStudyPath(i18n.language, study.slug)} className={`${cardClass} flex flex-col focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#483dfb]`}>
+              {content}
+            </RouterLink>
+          ) : (
+            <details key={id} className={cardClass}>
+              <summary className="flex cursor-pointer list-none flex-col focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-[#483dfb] [&::-webkit-details-marker]:hidden">{content}</summary>
+              <div className="space-y-4 border-t border-border p-6">
+                {project.video && <ProjectVideo src={project.video.src} poster={project.video.poster} portrait={project.video.portrait} label={t('projects.videoOf', { title: t(`projects.items.${id}.title`) })} playLabel={t('projects.playVideo')} />}
+                <ul className="list-disc space-y-2 ps-5 text-sm leading-relaxed">{asList(t(`projects.items.${id}.features`, { returnObjects: true })).map((feature) => <li key={feature}>{feature}</li>)}</ul>
+                <p className="text-sm text-muted-foreground">{asList(t(`projects.items.${id}.technologies`, { returnObjects: true })).join(' · ')}</p>
+                {isRealLink(project.link) && <a href={project.link} target="_blank" rel="noopener noreferrer" className="inline-block text-sm font-medium underline">{t('projects.code')}</a>}
+              </div>
+            </details>
           );
         })}
       </div>
@@ -342,7 +351,7 @@ const ProjectsSection = () => {
       <SectionHeading title={t('projects.title')} subtitle={t('projects.subtitle')} />
 
       <div role="group" aria-label={t('projects.filterLabel')} className="mb-6 flex flex-wrap justify-center gap-2">
-        {(['all', 'ai', 'ecommerce', 'business'] as const).map((filter) => (
+        {(['all', 'websites', 'apps', 'ecommerce', 'ai'] as const).map((filter) => (
           <Button
             key={filter}
             type="button"

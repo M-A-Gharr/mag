@@ -266,6 +266,16 @@ const CaseStudyPage = () => {
                 <p className="text-lg font-medium leading-relaxed md:text-xl">{text.result}</p>
               </ArticleReveal>
 
+              {compact && relevantServices.length > 0 && (
+                <nav aria-label={conversionCopy[lang].related} className="mt-8">
+                  <h2 className="text-lg font-semibold">{conversionCopy[lang].related}</h2>
+                  <ul className="mt-3 flex flex-wrap gap-4">
+                    {relevantServices.map((service) => (
+                      <li key={service.slug}><Link to={servicePath(i18n.language, service.slug)} className="font-medium text-[#483dfb] underline underline-offset-4 dark:text-[#9b87f5]">{t(`about.services.${service.key}.title`)}</Link></li>
+                    ))}
+                  </ul>
+                </nav>
+              )}
               <ContextualContact topic={`project:${slug}`} />
               {/* Other case studies: the internal links between the case study pages */}
               <nav aria-labelledby="related-title" className="mt-16">

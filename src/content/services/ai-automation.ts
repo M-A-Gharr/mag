@@ -4,7 +4,7 @@ import type { Service } from './types';
 const service: Service = {
   slug: 'ai-automation',
   key: 'ai',
-  caseStudies: ['ai-fashion-visuals-studio', 'b2b-lead-intelligence-platform', 'configurable-invoice-ocr'],
+  caseStudies: ['ai-fashion-visuals-studio', 'b2b-lead-intelligence-platform', 'configurable-invoice-ocr', 'visualforce-ai-documentation', 'claude-team-training', 'ai-linkedin-content-planner'],
   tools: ['Claude', 'OpenAI', 'Perplexity', 'FASHN AI', 'Make'],
   text: {
     fr: {

@@ -5,7 +5,7 @@ import type { Service } from './types';
 const service: Service = {
   slug: 'ecommerce-seo',
   key: 'ecommerce',
-  caseStudies: ['prestashop-redesign-multilingual-seo', 'migration-woocommerce-prestashop-9'],
+  caseStudies: ['prestashop-redesign-multilingual-seo', 'migration-woocommerce-prestashop-9', 'shopify-home-comfort-store'],
   tools: ['PrestaShop', 'WordPress', 'Shopify', 'PHP', 'Google Search Console', 'Google Analytics', 'Surfer SEO', 'Semrush'],
   text: {
     fr: {

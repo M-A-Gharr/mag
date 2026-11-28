@@ -1,3 +1,7 @@
+import added1 from './visualforce-ai-documentation';
+import added7 from './claude-team-training';
+import added9 from './shopify-home-comfort-store';
+import added15 from './ai-linkedin-content-planner';
 // Every case study, imported statically. Used by the build (build/pagesPlugin.ts) to write the
 // pages, their meta tags and the sitemap. The app loads them one by one instead (see ./index.ts).
 import aiStudio from './ai-fashion-visuals-studio';
@@ -14,4 +18,4 @@ import bankingAgency from './banking-agency-java-jee';
 import type { CaseStudy } from './types';
 
 /** Same order as the case studies on the home page. */
-export const CASE_STUDIES: CaseStudy[] = [aiStudio, prestashop, leadPlatform, exportSite, industrialSite, migration, bakery, vrShowroom, invoiceOcr, medicalMvp, bankingAgency];
+export const CASE_STUDIES: CaseStudy[] = [aiStudio, prestashop, leadPlatform, exportSite, industrialSite, migration, bakery, vrShowroom, invoiceOcr, medicalMvp, bankingAgency, added1, added7, added9, added15];

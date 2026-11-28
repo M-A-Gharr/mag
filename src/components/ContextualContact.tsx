@@ -1,8 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { ArrowRight } from 'lucide-react';
-import { caseStudyLang } from '@/content/caseStudies';
-import { conversionCopy } from '@/content/conversion';
+import { CASE_STUDY_PAGES, caseStudyLang } from '@/content/caseStudies';
+import { conversionCopy, projectContactLabel } from '@/content/conversion';
 import { pathFor } from '@/i18n/paths';
 import type { Service } from '@/content/services';
 import SectionLink from './SectionLink';
@@ -13,11 +12,12 @@ type Props = { topic: string; serviceKey?: Service['key']; compact?: boolean };
 export default function ContextualContact({ topic, serviceKey, compact = false }: Props) {
   const { i18n } = useTranslation();
   const copy = conversionCopy[caseStudyLang(i18n.language)];
-  const label = serviceKey ? copy.services[serviceKey] : copy.project;
+  const project = topic.startsWith('project:') ? CASE_STUDY_PAGES.find((page) => page.slug === topic.slice(8)) : undefined;
+  const label = project ? projectContactLabel(caseStudyLang(i18n.language), project.projectId) : serviceKey ? copy.services[serviceKey] : copy.project;
   const href = `${pathFor(i18n.language)}?topic=${encodeURIComponent(topic)}#contact`;
   const action = (
     <Link to={href} className="inline-flex items-center justify-center gap-2 rounded-full bg-[#261bfb] px-5 py-3 text-sm font-medium text-white transition-[background-color,box-shadow,transform] duration-300 motion-safe:hover:-translate-y-0.5 hover:shadow-lg hover:shadow-[#261bfb]/20 motion-reduce:transition-none hover:bg-[#3e30fb] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#9b87f5] focus-visible:ring-offset-2">
-      {label}<ArrowRight aria-hidden className="h-4 w-4 shrink-0 rtl:rotate-180" />
+      {label}
     </Link>
   );
   if (compact) return <div className="mt-6">{action}</div>;

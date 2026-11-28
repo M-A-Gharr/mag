@@ -233,10 +233,12 @@
     "hidePortfolio": "Riduci il portfolio",
     "filterLabel": "Filtra i progetti",
     "filters": {
-      "all": "Tutti i progetti",
-      "ai": "IA e automazione",
+      "featured": "Selezione",
+      "all": "Tutti",
+      "websites": "Siti vetrina",
+      "apps": "Applicazioni e CRM",
       "ecommerce": "E-commerce",
-      "business": "Applicazioni aziendali e CRM"
+      "ai": "IA"
     },
     "featuredSummaries": {
       "6": "Qualificazione assistita dall’IA, portafogli export e mercato locale, pipeline e follow-up in un’applicazione.",
@@ -325,8 +327,8 @@
         ]
       },
       "7": {
-        "title": "Formazione IA Claude per il gruppo",
-        "description": "Ho progettato e tenuto la formazione sull'IA generativa per tutto il gruppo. Prima ho intervistato ogni reparto, così ogni sessione e ogni Skill di Claude corrisponde a una parte reale del loro lavoro.",
+        "title": "Formazione Claude: dalle attività alle Skills riutilizzabili",
+        "description": "Nel team di formazione IA, ho progettato materiali, strutturato la raccolta delle esigenze e creato Skills adatte alle attività lavorative.",
         "technologies": [
           "Claude",
           "Claude Skills",
@@ -334,10 +336,9 @@
           "Formazione"
         ],
         "features": [
-          "Interviste con ogni reparto prima di qualsiasi sessione",
-          "Sessioni introduttive per tutto il gruppo",
-          "Workshop pratici per reparto",
-          "Skill di Claude su misura per le attività ricorrenti di ogni team"
+          "Materiali e kit formativo riutilizzabili",
+          "Esigenze operative tradotte in Skills Claude",
+          "100% delle classificazioni storiche riprodotte: 974 articoli in cinque mesi"
         ]
       },
       "8": {
@@ -540,7 +541,9 @@
     "playVideo": "Riproduci il video",
     "videoOf": "{{title}} – video",
     "caseStudiesSubtitle": "Com'è andata con alcuni di questi progetti, dal problema al risultato.",
-    "delivery": "Realizzazione completa · In produzione"
+    "delivery": "Realizzazione completa · In produzione",
+    "filterCount": "{{count}} progetti mostrati",
+    "projectDetails": "Vedi i dettagli del progetto"
   },
   "certificates": {
     "title": "Certificati e formazione",

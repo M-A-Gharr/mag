@@ -233,10 +233,12 @@
     "hidePortfolio": "Collapse portfolio",
     "filterLabel": "Filter projects",
     "filters": {
-      "all": "All projects",
-      "ai": "AI & automation",
+      "featured": "Featured",
+      "all": "All",
+      "websites": "Websites",
+      "apps": "Apps & CRM",
       "ecommerce": "E-commerce",
-      "business": "Business apps & CRM"
+      "ai": "AI"
     },
     "featuredSummaries": {
       "6": "AI-assisted qualification, export and domestic portfolios, pipeline and follow-ups in one application.",
@@ -325,8 +327,8 @@
         ]
       },
       "7": {
-        "title": "Group-wide Claude AI Training",
-        "description": "I designed and ran the generative AI training for the whole group. Each department was interviewed first, so every session and every custom Claude Skill matches a real part of their job.",
+        "title": "Claude training: from business tasks to reusable Skills",
+        "description": "As part of the AI training team, I designed learning materials, structured the needs assessment and created Skills tailored to business tasks.",
         "technologies": [
           "Claude",
           "Claude Skills",
@@ -334,10 +336,9 @@
           "Training"
         ],
         "features": [
-          "Interviews with each department before any session",
-          "Group-wide introduction sessions",
-          "Hands-on workshops for each department",
-          "Custom Claude Skills for each team's recurring tasks"
+          "Reusable learning materials and training kit",
+          "Business needs translated into Claude Skills",
+          "100% of historical classifications reproduced: 974 items across five months"
         ]
       },
       "8": {
@@ -540,7 +541,9 @@
     "playVideo": "Play the video",
     "videoOf": "{{title}} – video",
     "caseStudiesSubtitle": "How some of these projects went, from the problem to the result.",
-    "delivery": "End-to-end delivery · In production"
+    "delivery": "End-to-end delivery · In production",
+    "filterCount": "{{count}} projects shown",
+    "projectDetails": "View project details"
   },
   "certificates": {
     "title": "Certificates & Education",

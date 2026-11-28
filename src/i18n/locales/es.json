@@ -233,10 +233,12 @@
     "hidePortfolio": "Contraer portfolio",
     "filterLabel": "Filtrar proyectos",
     "filters": {
-      "all": "Todos los proyectos",
-      "ai": "IA y automatización",
-      "ecommerce": "Comercio electrónico",
-      "business": "Aplicaciones empresariales y CRM"
+      "featured": "Selección",
+      "all": "Todos",
+      "websites": "Sitios web",
+      "apps": "Aplicaciones y CRM",
+      "ecommerce": "E-commerce",
+      "ai": "IA"
     },
     "featuredSummaries": {
       "6": "Calificación asistida por IA, carteras de exportación y mercado local, pipeline y seguimientos en una aplicación.",
@@ -325,8 +327,8 @@
         ]
       },
       "7": {
-        "title": "Formación en IA Claude para el grupo",
-        "description": "Diseñé e impartí la formación en IA generativa de todo el grupo. Primero entrevisté a cada departamento, para que cada sesión y cada Skill de Claude respondiera a una parte real de su trabajo.",
+        "title": "Formación Claude: de tareas a Skills reutilizables",
+        "description": "Como parte del equipo de formación en IA, diseñé materiales, estructuré la recogida de necesidades y creé Skills adaptadas al trabajo.",
         "technologies": [
           "Claude",
           "Claude Skills",
@@ -334,10 +336,9 @@
           "Formación"
         ],
         "features": [
-          "Entrevistas con cada departamento antes de cualquier sesión",
-          "Sesiones de introducción para todo el grupo",
-          "Talleres prácticos por departamento",
-          "Skills de Claude a medida para las tareas recurrentes de cada equipo"
+          "Materiales y kit de formación reutilizables",
+          "Necesidades del negocio traducidas en Skills Claude",
+          "100 % de clasificaciones históricas reproducidas: 974 artículos en cinco meses"
         ]
       },
       "8": {
@@ -540,7 +541,9 @@
     "playVideo": "Reproducir el vídeo",
     "videoOf": "{{title}} – vídeo",
     "caseStudiesSubtitle": "Cómo fueron algunos de estos proyectos, del problema al resultado.",
-    "delivery": "Realización integral · En producción"
+    "delivery": "Realización integral · En producción",
+    "filterCount": "{{count}} proyectos mostrados",
+    "projectDetails": "Ver detalles del proyecto"
   },
   "certificates": {
     "title": "Certificados y educación",

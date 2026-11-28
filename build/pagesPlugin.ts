@@ -16,7 +16,7 @@ import path from 'path';
 import type { Plugin } from 'vite';
 import { CASE_STUDIES } from '../src/content/caseStudies/all';
 import type { CaseStudy, CaseStudyLang, CaseStudyText, CaseStudyVideo } from '../src/content/caseStudies/types';
-import { conversionCopy } from '../src/content/conversion';
+import { conversionCopy, projectContactLabel } from '../src/content/conversion';
 import { SERVICES } from '../src/content/services/all';
 import type { Service, ServiceText } from '../src/content/services/types';
 import { caseStudyPath, pathFor, servicePath, SITE_URL } from '../src/i18n/paths';
@@ -162,7 +162,8 @@ const contactHref = (lng: CaseStudyLang, topic: string) => `${pathFor(lng)}?topi
 
 const conversionHtml = (lng: CaseStudyLang, topic: string, key?: Service['key']) => {
   const copy = conversionCopy[lng];
-  const label = key ? copy.services[key] : copy.project;
+  const project = topic.startsWith('project:') ? CASE_STUDIES.find((study) => study.slug === topic.slice(8)) : undefined;
+  const label = project ? projectContactLabel(lng, project.projectId) : key ? copy.services[key] : copy.project;
   return `<section><h2>${esc(copy.title)}</h2><p>${esc(copy.description)}</p><a href="${pathFor(lng)}?topic=${encodeURIComponent(topic)}#contact">${esc(label)}</a> <a href="${pathFor(lng)}#book">${esc(copy.book)}</a></section>`;
 };
 
@@ -188,7 +189,7 @@ const articleHtml = (
       { label: l.bonus.caseStudies.title, href: `${pathFor(lng)}#projects` },
       { label: l.projects.items[study.projectId]?.title ?? t.title },
     ]),
-    pageHeader(t.sector, t.title, t.lead, contactHref(lng, `project:${slug}`), conversionCopy[lng].project,
+    pageHeader(t.sector, t.title, t.lead, contactHref(lng, `project:${slug}`), projectContactLabel(lng, study.projectId),
       media, compact),
   ];
   parts.push(`<div class="prerender mt-14">`);

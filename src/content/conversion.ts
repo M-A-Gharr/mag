@@ -33,3 +33,17 @@ export const conversionCopy = {
     prompt: (subject: string) => `مرحبًا، أود مناقشة: ${subject}.\n\nسياق عملي:\nأدواتي الحالية:\nالنتيجة المطلوبة:`,
   },
 };
+
+/** Shared by the interactive pages and their static HTML. */
+export const projectContactLabel = (lang: keyof typeof conversionCopy, projectId: number) => {
+  const kind = projectId === 7 ? 'training' : projectId === 14 ? 'website'
+    : [6, 10, 12].includes(projectId) ? 'crm'
+    : [8, 9, 13].includes(projectId) ? 'store'
+    : [1, 11, 15, 16].includes(projectId) ? 'ai' : 'app';
+  const labels = {
+    fr: { training: 'Discuter de votre formation IA', website: 'Discuter de votre site vitrine', crm: 'Discuter de votre projet CRM', store: 'Discuter de votre boutique', ai: 'Discuter de votre projet IA', app: 'Discuter de votre application' },
+    en: { training: 'Discuss your AI training', website: 'Discuss your business website', crm: 'Discuss your CRM project', store: 'Discuss your online store', ai: 'Discuss your AI project', app: 'Discuss your application' },
+    ar: { training: 'مناقشة تدريب فريقكم على الذكاء الاصطناعي', website: 'مناقشة موقعكم التعريفي', crm: 'مناقشة مشروع إدارة علاقات العملاء', store: 'مناقشة متجركم الإلكتروني', ai: 'مناقشة مشروعكم للذكاء الاصطناعي', app: 'مناقشة تطبيقكم' },
+  };
+  return labels[lang][kind];
+};

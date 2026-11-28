@@ -12,19 +12,19 @@ export const SERVICE_PAGES: ServiceEntry[] = [
   {
     slug: 'web-application-development',
     key: 'webapps',
-    caseStudies: ['b2b-lead-intelligence-platform', 'export-showcase-site-b2b-crm', 'industrial-multilingual-showcase', 'bakery-management-saas', 'vr-property-showroom-crm', 'medical-practice-management-mvp', 'banking-agency-java-jee'],
+    caseStudies: ['b2b-lead-intelligence-platform', 'export-showcase-site-b2b-crm', 'industrial-multilingual-showcase', 'bakery-management-saas', 'vr-property-showroom-crm', 'medical-practice-management-mvp', 'banking-agency-java-jee', 'visualforce-ai-documentation'],
     load: () => import('./web-application-development'),
   },
   {
     slug: 'ai-automation',
     key: 'ai',
-    caseStudies: ['ai-fashion-visuals-studio', 'b2b-lead-intelligence-platform', 'configurable-invoice-ocr'],
+    caseStudies: ['ai-fashion-visuals-studio', 'b2b-lead-intelligence-platform', 'configurable-invoice-ocr', 'visualforce-ai-documentation', 'claude-team-training', 'ai-linkedin-content-planner'],
     load: () => import('./ai-automation'),
   },
   {
     slug: 'ecommerce-seo',
     key: 'ecommerce',
-    caseStudies: ['prestashop-redesign-multilingual-seo', 'migration-woocommerce-prestashop-9'],
+    caseStudies: ['prestashop-redesign-multilingual-seo', 'migration-woocommerce-prestashop-9', 'shopify-home-comfort-store'],
     load: () => import('./ecommerce-seo'),
   },
 ];

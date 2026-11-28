@@ -17,6 +17,10 @@ export const CASE_STUDY_PAGES: { slug: string; projectId: number; load: () => Pr
   { slug: 'configurable-invoice-ocr', projectId: 16, load: () => import('./configurable-invoice-ocr') },
   { slug: 'medical-practice-management-mvp', projectId: 17, load: () => import('./medical-practice-management-mvp') },
   { slug: 'banking-agency-java-jee', projectId: 18, load: () => import('./banking-agency-java-jee') },
+  { slug: 'visualforce-ai-documentation', projectId: 1, load: () => import('./visualforce-ai-documentation') },
+  { slug: 'claude-team-training', projectId: 7, load: () => import('./claude-team-training') },
+  { slug: 'shopify-home-comfort-store', projectId: 9, load: () => import('./shopify-home-comfort-store') },
+  { slug: 'ai-linkedin-content-planner', projectId: 15, load: () => import('./ai-linkedin-content-planner') },
 ];
 
 /** The other case studies to suggest at the end of one: the next two, in home-page order. */
