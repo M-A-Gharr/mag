@@ -1,0 +1,85 @@
+# Mohamed Amine Gharrab (M.A.G)
+
+> Full-stack developer at SIMTIS in Casablanca, connecting business needs, software engineering and AI.
+
+I build web applications, CRMs and AI solutions around your business needs. I work from analysis through deployment, supporting the teams who use them.
+
+Languages: Arabic, French, English. Based in Casablanca, Morocco.
+Contact: contact.maminegh@gmail.com · LinkedIn: https://www.linkedin.com/in/m-amine-gharrab · GitHub: https://github.com/M-A-Gharr
+
+## Areas of expertise
+
+- [Custom web application development](https://www.maminegh.com/expertise/web-application-development/): Full-stack developer in Casablanca: custom business applications, CRMs and internal tools with API, AI and management system integrations. Tools: React, Node.js, TypeScript, PHP, ASP.NET, C#, PostgreSQL, MySQL, MSSQL, Supabase.
+- [AI automation and team training in Morocco](https://www.maminegh.com/expertise/ai-automation/): AI integration, business process automation and custom AI application development, with team training and adoption support in Casablanca. Tools: Claude, OpenAI, Perplexity, FASHN AI, Make.
+- [PrestaShop and e-commerce developer in Casablanca](https://www.maminegh.com/expertise/ecommerce-seo/): PrestaShop developer in Casablanca: custom modules, complex migrations, ERP and management software integrations, redesigns and multilingual SEO. Tools: PrestaShop, WordPress, Shopify, PHP, Google Search Console, Google Analytics, Surfer SEO, Semrush.
+
+## Case studies
+
+- [Simtis Studio: AI-generated model shots from a single product photo](https://www.maminegh.com/case-studies/ai-fashion-visuals-studio/): An in-house AI studio that turns a photo of a shawl into model shots, with an approval step, quotas per store and product sheets in three languages.
+- [Redesign, multilingual SEO and custom modules for a PrestaShop store](https://www.maminegh.com/case-studies/prestashop-redesign-multilingual-seo/): A three-language PrestaShop redesign: 20+ custom modules, stock connected to the physical stores, and from page 10 to page 1 of Google.
+- [An AI prospecting and sales follow-up platform](https://www.maminegh.com/case-studies/b2b-lead-intelligence-platform/): A platform that finds target companies, qualifies them with AI and follows each opportunity to the sale, with a person approving every step.
+- [An international website and its B2B CRM](https://www.maminegh.com/case-studies/export-showcase-site-b2b-crm/): A collections website in English, Arabic and Russian, paired with a CRM for prospecting, candidate review and sales follow-up.
+- [An industrial website, from catalogue to quote](https://www.maminegh.com/case-studies/industrial-multilingual-showcase/): A WordPress redesign for a nonwoven manufacturer: product ranges, catalogue, customisation and quote requests in French, English and Spanish.
+- [Migrating a fashion store from WooCommerce to PrestaShop 9](https://www.maminegh.com/case-studies/migration-woocommerce-prestashop-9/): How I moved a fashion store from WooCommerce to PrestaShop 9 without losing its customers, its order history or its Google rankings.
+- [Bakery SaaS: bringing stock, recipes and sales into one application](https://www.maminegh.com/case-studies/bakery-management-saas/): A bakery management application combining stock, recipes, orders and point of sale, with dashboards and an interface in English, French and Arabic.
+- [VR Showroom: connecting virtual property visits to sales follow-up](https://www.maminegh.com/case-studies/vr-property-showroom-crm/): A personal real estate project combining interactive plans, 3D models, 360° visits and a CRM with lead scoring, assignment and sales follow-up.
+- [Invoice extraction with in-app review and editing](https://www.maminegh.com/case-studies/configurable-invoice-ocr/): Configurable JPG and PDF invoice extraction at OpenView, with in-app editing, human validation and structured JSON or CSV outputs.
+- [Medical practice management: records, appointments and invoicing](https://www.maminegh.com/case-studies/medical-practice-management-mvp/): A C# application combining OCR-assisted records, role-based permissions, telephone bookings, insurance deductions and emailed invoices.
+- [A reusable application foundation for public share offerings](https://www.maminegh.com/case-studies/banking-agency-java-jee/): A 2020 Java/JEE project at Eurafric Maroc: authentication, an application foundation, client onboarding for public share offerings (OPV) and PDFs.
+- [AI documentation for Visualforce](https://www.maminegh.com/case-studies/visualforce-ai-documentation/): A command-line tool that produces structured, customisable Markdown documentation.
+- [Claude training: from business tasks to reusable Skills](https://www.maminegh.com/case-studies/claude-team-training/): Claude training built around real tasks, reusable materials and Skills. One Skill tested against 974 historical items, with human decisions retained.
+- [Shopify store with cash on delivery](https://www.maminegh.com/case-studies/shopify-home-comfort-store/): A Shopify store, brand identity and an offer with delivery across Morocco and cash on delivery.
+- [AI LinkedIn drafts and content calendar](https://www.maminegh.com/case-studies/ai-linkedin-content-planner/): A workspace combining draft generation, multiple formats, favourites and an editorial calendar.
+
+## Experience
+
+- 2026 – Present: Full-Stack Developer & Digital Solutions, SIMTIS · Casablanca. I work across software engineering, AI integration and business digitalisation, designing and delivering solutions used by different teams across the group.
+- Oct – Dec 2024: Full-Stack Developer, SaaS Inventory Platform · Casablanca. An inventory, order and sales platform with dashboards and stock alerts, built with React, Node.js and PostgreSQL.
+- Aug – Sep 2024: Web Developer, Responsive Business Website · Casablanca. A multilingual business website, designed mobile-first, with analytics and social media connected.
+
+## Other languages
+
+- [Accueil en français](https://www.maminegh.com/fr/)
+- [Développement d'applications web sur mesure](https://www.maminegh.com/fr/expertise/web-application-development/)
+- [Automatisation IA et formation des équipes au Maroc](https://www.maminegh.com/fr/expertise/ai-automation/)
+- [Refonte PrestaShop et développement e-commerce à Casablanca](https://www.maminegh.com/fr/expertise/ecommerce-seo/)
+- [Simtis Studio : des visuels portés par mannequin, créés par IA à partir d'une photo produit](https://www.maminegh.com/fr/etudes-de-cas/ai-fashion-visuals-studio/)
+- [Refonte, SEO multilingue et modules sur mesure pour une boutique PrestaShop](https://www.maminegh.com/fr/etudes-de-cas/prestashop-redesign-multilingual-seo/)
+- [Une plateforme de prospection IA et de suivi commercial](https://www.maminegh.com/fr/etudes-de-cas/b2b-lead-intelligence-platform/)
+- [Un site international et son CRM B2B](https://www.maminegh.com/fr/etudes-de-cas/export-showcase-site-b2b-crm/)
+- [Un site industriel, du catalogue au devis](https://www.maminegh.com/fr/etudes-de-cas/industrial-multilingual-showcase/)
+- [Migration d'une boutique de mode de WooCommerce vers PrestaShop 9](https://www.maminegh.com/fr/etudes-de-cas/migration-woocommerce-prestashop-9/)
+- [Bakery SaaS : réunir les stocks, les recettes et les ventes dans une seule application](https://www.maminegh.com/fr/etudes-de-cas/bakery-management-saas/)
+- [VR Showroom : relier les visites immobilières virtuelles au suivi commercial](https://www.maminegh.com/fr/etudes-de-cas/vr-property-showroom-crm/)
+- [OCR de factures : extraire, vérifier et modifier les données](https://www.maminegh.com/fr/etudes-de-cas/configurable-invoice-ocr/)
+- [Gestion de cabinet médical : dossiers, rendez-vous et facturation](https://www.maminegh.com/fr/etudes-de-cas/medical-practice-management-mvp/)
+- [Un socle applicatif réutilisable pour les offres publiques de vente](https://www.maminegh.com/fr/etudes-de-cas/banking-agency-java-jee/)
+- [Documenter Visualforce avec l’IA](https://www.maminegh.com/fr/etudes-de-cas/visualforce-ai-documentation/)
+- [Formation Claude : des tâches métier aux Skills réutilisables](https://www.maminegh.com/fr/etudes-de-cas/claude-team-training/)
+- [Boutique Shopify avec paiement à la livraison](https://www.maminegh.com/fr/etudes-de-cas/shopify-home-comfort-store/)
+- [Générateur LinkedIn IA et calendrier éditorial](https://www.maminegh.com/fr/etudes-de-cas/ai-linkedin-content-planner/)
+- [الصفحة الرئيسية بالعربية](https://www.maminegh.com/ar/)
+- [تطوير تطبيقات ويب مخصصة](https://www.maminegh.com/ar/expertise/web-application-development/)
+- [الأتمتة بالذكاء الاصطناعي وتكوين الفرق في المغرب](https://www.maminegh.com/ar/expertise/ai-automation/)
+- [مطوّر PrestaShop والتجارة الإلكترونية في الدار البيضاء](https://www.maminegh.com/ar/expertise/ecommerce-seo/)
+- [Simtis Studio: صور ملبوسة على عارضات يُنشئها الذكاء الاصطناعي من صورة منتج واحدة](https://www.maminegh.com/ar/case-studies/ai-fashion-visuals-studio/)
+- [إعادة تصميم وتحسين SEO متعدد اللغات ووحدات مخصصة لمتجر PrestaShop](https://www.maminegh.com/ar/case-studies/prestashop-redesign-multilingual-seo/)
+- [منصة تنقيب بالذكاء الاصطناعي ومتابعة تجارية](https://www.maminegh.com/ar/case-studies/b2b-lead-intelligence-platform/)
+- [موقع دولي ونظام CRM للشركات](https://www.maminegh.com/ar/case-studies/export-showcase-site-b2b-crm/)
+- [موقع صناعي، من الكتالوج إلى طلب السعر](https://www.maminegh.com/ar/case-studies/industrial-multilingual-showcase/)
+- [نقل متجر أزياء من WooCommerce إلى PrestaShop 9](https://www.maminegh.com/ar/case-studies/migration-woocommerce-prestashop-9/)
+- [Bakery SaaS: إدارة المخزون والوصفات والمبيعات في تطبيق واحد](https://www.maminegh.com/ar/case-studies/bakery-management-saas/)
+- [VR Showroom: ربط الزيارات العقارية الافتراضية بالمتابعة التجارية](https://www.maminegh.com/ar/case-studies/vr-property-showroom-crm/)
+- [استخراج بيانات الفواتير مع مراجعتها وتعديلها داخل التطبيق](https://www.maminegh.com/ar/case-studies/configurable-invoice-ocr/)
+- [إدارة العيادة الطبية: السجلات والمواعيد والفوترة](https://www.maminegh.com/ar/case-studies/medical-practice-management-mvp/)
+- [أساس تطبيقي قابل لإعادة الاستخدام لعروض البيع العام للأسهم](https://www.maminegh.com/ar/case-studies/banking-agency-java-jee/)
+- [توثيق Visualforce بالذكاء الاصطناعي](https://www.maminegh.com/ar/case-studies/visualforce-ai-documentation/)
+- [تدريب Claude: من مهام العمل إلى مهارات قابلة لإعادة الاستخدام](https://www.maminegh.com/ar/case-studies/claude-team-training/)
+- [متجر Shopify مع الدفع عند الاستلام](https://www.maminegh.com/ar/case-studies/shopify-home-comfort-store/)
+- [مسودات LinkedIn بالذكاء الاصطناعي وتقويم المحتوى](https://www.maminegh.com/ar/case-studies/ai-linkedin-content-planner/)
+
+## Optional
+
+- [Sitemap](https://www.maminegh.com/sitemap.xml)
+- [CV (English, PDF)](https://www.maminegh.com/cv/Mohamed-Amine-Gharrab-CV-EN.pdf)
+- [CV (French, PDF)](https://www.maminegh.com/cv/Mohamed-Amine-Gharrab-CV-FR.pdf)

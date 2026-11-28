@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+  <head>
+    <script defer src="https://t.contentsquare.net/uxa/d982538e979a4.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Application bancaire Java EE pour les OPV au Maroc</title>
+    <meta name="description" content="Projet Java/JEE réalisé en 2020 chez Eurafric Maroc : authentification, socle applicatif, clients des offres publiques de vente d’actions et PDF." />
+    <meta name="author" content="Mohamed Amine Gharrab" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <link rel="canonical" href="https://www.maminegh.com/fr/etudes-de-cas/banking-agency-java-jee/" />
+    <!-- Language versions: each page lists all of them (Google shows the right one to each visitor) -->
+    <link rel="alternate" hreflang="en" href="https://www.maminegh.com/case-studies/banking-agency-java-jee/" />
+    <link rel="alternate" hreflang="fr" href="https://www.maminegh.com/fr/etudes-de-cas/banking-agency-java-jee/" />
+    <link rel="alternate" hreflang="ar" href="https://www.maminegh.com/ar/case-studies/banking-agency-java-jee/" />
+    <link rel="alternate" hreflang="x-default" href="https://www.maminegh.com/case-studies/banking-agency-java-jee/" />
+    <meta name="theme-color" content="#261bfb" />
+    <!-- Theme before the first paint (same rule as ThemeSwitcher): no light-to-dark flash -->
+    <script>
+      try {
+        var theme = localStorage.getItem('theme') || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        if (theme === 'dark') document.documentElement.classList.add('dark');
+      } catch (e) {}
+    </script>
+    <!-- Icons: .ico for browser tabs, PNGs (multiples of 48px) for search results, manifest for phones -->
+    <link rel="icon" href="/favicon.ico" sizes="16x16 32x32" />
+    <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- Link previews (LinkedIn, WhatsApp, X…): read here, these crawlers do not run JavaScript -->
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="M.A.G — Mohamed Amine Gharrab" />
+    <meta property="og:url" content="https://www.maminegh.com/fr/etudes-de-cas/banking-agency-java-jee/" />
+    <meta property="og:title" content="Application bancaire Java EE pour les OPV au Maroc" />
+    <meta property="og:description" content="Projet Java/JEE réalisé en 2020 chez Eurafric Maroc : authentification, socle applicatif, clients des offres publiques de vente d’actions et PDF." />
+    <meta property="og:image" content="https://www.maminegh.com/images/share/og-image.jpg" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Application bancaire Java EE pour les OPV au Maroc" />
+    <meta property="og:locale" content="fr_FR" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Application bancaire Java EE pour les OPV au Maroc" />
+    <meta name="twitter:description" content="Projet Java/JEE réalisé en 2020 chez Eurafric Maroc : authentification, socle applicatif, clients des offres publiques de vente d’actions et PDF." />
+    <meta name="twitter:image" content="https://www.maminegh.com/images/share/og-image.jpg" />
+
+    <!-- Structured data: tells search engines who the site is about -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Person",
+          "@id": "https://www.maminegh.com/#person",
+          "name": "Mohamed Amine Gharrab",
+          "alternateName": "M.A.G",
+          "url": "https://www.maminegh.com/",
+          "image": "https://www.maminegh.com/images/profile/ProfileImage.png",
+          "jobTitle": "Full-Stack Developer",
+          "description": "Full-Stack Developer in Casablanca: web applications, AI automation, e-commerce (PrestaShop, WordPress, Shopify) and CRM integration.",
+          "worksFor": { "@type": "Organization", "name": "SIMTIS" },
+          "address": { "@type": "PostalAddress", "addressLocality": "Casablanca", "addressCountry": "MA" },
+          "email": "mailto:contact.maminegh@gmail.com",
+          "knowsLanguage": ["ar", "fr", "en"],
+          "knowsAbout": ["Full-stack web development", "React", "Node.js", "TypeScript", "PHP", "Python", "PrestaShop", "WordPress", "Shopify", "SEO", "AI automation", "Generative AI", "Claude", "CRM integration"],
+          "sameAs": ["https://www.linkedin.com/in/m-amine-gharrab", "https://github.com/M-A-Gharr"]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://www.maminegh.com/#website",
+          "url": "https://www.maminegh.com/",
+          "name": "M.A.G — Mohamed Amine Gharrab",
+          "inLanguage": ["en", "fr", "ar", "es", "it", "ru", "hi"],
+          "about": { "@id": "https://www.maminegh.com/#person" }
+        }
+      ]
+    }
+    </script>
+
+    <!-- Google tag (gtag.js): calls are queued right away (no visit is lost); the 190 KB script
+         itself loads once the page has finished loading, so it never delays the first paint. -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-WJ17T7CYTE');
+      window.addEventListener('load', function () {
+        var load = function () {
+          var s = document.createElement('script');
+          s.async = true;
+          s.src = 'https://www.googletagmanager.com/gtag/js?id=G-WJ17T7CYTE';
+          document.head.appendChild(s);
+        };
+        if ('requestIdleCallback' in window) requestIdleCallback(load, { timeout: 3000 });
+        else setTimeout(load, 1500);
+      });
+    </script>
+    <script type="module" crossorigin src="/assets/index-CKieQwgw.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/react-Dvwkxfce.js">
+    <link rel="modulepreload" crossorigin href="/assets/animation-D0JAb89q.js">
+    <link rel="modulepreload" crossorigin href="/assets/i18n-uNPxxJJX.js">
+    <link rel="stylesheet" crossorigin href="/assets/index-DRltEsVl.css">
+      <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"Un socle applicatif réutilisable pour les offres publiques de vente","description":"Projet Java/JEE réalisé en 2020 chez Eurafric Maroc : authentification, socle applicatif, clients des offres publiques de vente d’actions et PDF.","inLanguage":"fr","datePublished":"2026-11-11","dateModified":"2026-11-16","image":"https://www.maminegh.com/images/share/og-image.jpg","mainEntityOfPage":"https://www.maminegh.com/fr/etudes-de-cas/banking-agency-java-jee/","author":{"@id":"https://www.maminegh.com/#person"},"publisher":{"@id":"https://www.maminegh.com/#person"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Accueil","item":"https://www.maminegh.com/fr/"},{"@type":"ListItem","position":2,"name":"Études de cas","item":"https://www.maminegh.com/fr/#projects"},{"@type":"ListItem","position":3,"name":"Un socle applicatif réutilisable pour les offres publiques de vente","item":"https://www.maminegh.com/fr/etudes-de-cas/banking-agency-java-jee/"}]}]}</script>
+  </head>
+
+  <body class="relative min-h-screen">
+    <div id="root"><div class="relative min-h-screen bg-background text-foreground" dir="ltr"><main><article class="mx-auto max-w-3xl px-4 pb-16 pt-28 sm:px-6 md:pb-24 md:pt-32"><nav aria-label="Breadcrumb" class="mb-8 text-sm text-muted-foreground"><ol class="flex flex-wrap items-center gap-1.5"><li><a href="/fr/" class="hover:text-[#483dfb]">Accueil</a></li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-3.5 w-3.5 rtl:rotate-180" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg><li><a href="/fr/#projects" class="hover:text-[#483dfb]">Études de cas</a></li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-3.5 w-3.5 rtl:rotate-180" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg><li aria-current="page" class="text-foreground/80">Application pour agences bancaires - Projet de fin d’études</li></ol></nav><div><span class="rounded-full bg-[#483dfb]/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-[#483dfb] dark:text-[#9b87f5]">Banque · Offres publiques de vente (OPV) · 2020 · Eurafric Maroc</span><h1 class="mt-5 text-3xl font-bold leading-tight md:text-5xl">Un socle applicatif réutilisable pour les offres publiques de vente</h1><p class="mt-6 text-lg leading-relaxed text-foreground/80 md:text-xl">Pour mon projet de fin d’études en 2020 chez Eurafric Maroc, j’ai travaillé sur un socle applicatif Java/JEE réutilisable dans plusieurs agences bancaires. Le parcours d’entrée en relation concernait les clients participant aux offres publiques de vente (OPV) d’actions.</p><div class="mt-6"><a href="/fr/?topic=project%3Abanking-agency-java-jee#contact" class="inline-flex items-center justify-center gap-2 rounded-full bg-[#261bfb] px-5 py-3 text-sm font-medium text-white transition-[background-color,box-shadow,transform] duration-300 motion-safe:hover:-translate-y-0.5 hover:shadow-lg hover:shadow-[#261bfb]/20 motion-reduce:transition-none hover:bg-[#3e30fb] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#9b87f5] focus-visible:ring-offset-2">Discuter de votre application<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4 shrink-0 rtl:rotate-180" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a></div></div><div class="prerender mt-14"><section><h2>Fiche technique du projet</h2><h3>Stack utilisée</h3><p>Java, Java EE (JEE), REST API</p><h3>Architecture et fonctionnement</h3><p>Socle applicatif Java/JEE conçu pour être réutilisable en agence bancaire, avec authentification et parcours d’entrée en relation pour les OPV.</p><h3>Intégrations et données</h3><p>API REST et génération de documents PDF dans le parcours bancaire.</p><h3>Mon rôle et mes responsabilités</h3><p>Contribution centrée sur l’authentification et le socle applicatif, dans le cadre du projet de fin d’études de 2020 chez Eurafric Maroc.</p></section><h2>Le défi</h2><p>Le projet nécessitait un socle réutilisable dans les agences bancaires, avec authentification, entrée en relation avec les clients participant aux offres publiques de vente (OPV) d’actions et génération de documents PDF.</p><p>Les parcours liés aux OPV devaient également respecter les permissions, le prix d’achat fixé par l’entreprise et les limites sur le nombre d’actions accessibles à chaque client.</p><h2>Ce que j’ai développé</h2><p>Ma contribution portait sur le composant d’authentification et la base de l’application, avec Java/JEE et des API REST. L’application permettait également l’entrée en relation avec les clients des offres publiques de vente (OPV) d’actions et la génération de documents PDF.</p><p>L’application gérait également les permissions et les restrictions d’achat, notamment le prix fixé par l’entreprise et les limites sur le nombre d’actions qu’un client pouvait acquérir.</p><ul><li>Permissions et restrictions d’achat liées aux OPV</li><li>Prix d’achat des actions fixé par l’entreprise</li><li>Limites sur le nombre d’actions qu’un client peut acquérir</li></ul><p>Le projet de fin d’études a posé une base applicative pour les parcours en agence des clients participant aux OPV d’actions. Cette présentation concerne le projet à l’époque, et non l’état actuel d’une éventuelle application ultérieure.</p><nav><h2>Expertises mobilisées</h2><ul><li><a href="/fr/expertise/web-application-development/">Développement d'applications web sur mesure</a></li></ul></nav><section><h2>Un besoin similaire dans votre équipe ?</h2><p>Décrivez votre contexte, vos outils actuels et le résultat recherché. Nous pourrons préciser le périmètre et une première étape utile.</p><a href="/fr/?topic=project%3Abanking-agency-java-jee#contact">Discuter de votre application</a> <a href="/fr/#book">Planifier un échange</a></section><nav><h2>Autres études de cas</h2><ul><li><a href="/fr/etudes-de-cas/b2b-lead-intelligence-platform/">Une plateforme de prospection IA et de suivi commercial</a></li><li><a href="/fr/etudes-de-cas/export-showcase-site-b2b-crm/">Un site international et son CRM B2B</a></li></ul></nav></div></article></main></div></div>
+    <script>
+      (function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="1eD3-A8ZxJWQeyzQaE89z";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
+    </script>
+  </body>
+</html>
