@@ -62,6 +62,10 @@ export default function TerminalContactForm({ data, status, context, onChange, o
         <p className="mb-5 break-words text-sm" dir="ltr"><span className="text-violet-700 dark:text-violet-300">➜ portfolio</span> contact --new</p>
         <h3 className="text-lg font-semibold">{t('contact.form.title')}</h3>
         <p className="mt-2 text-sm leading-relaxed text-slate-600 dark:text-slate-400">{t('contact.terminal.intro')}</p>
+        <div className="mt-5" role="progressbar" aria-label={t('contact.terminal.progressLabel')} aria-valuemin={0} aria-valuemax={fields.length} aria-valuenow={Math.min(step + 1, fields.length)} aria-valuetext={t(review ? 'contact.terminal.reviewStep' : 'contact.terminal.progress', { current: Math.min(step + 1, fields.length), total: fields.length })}>
+          <p className="mb-2 text-sm text-slate-600 dark:text-slate-400">{t(review ? 'contact.terminal.reviewStep' : 'contact.terminal.progress', { current: Math.min(step + 1, fields.length), total: fields.length })}</p>
+          <div className="flex gap-1.5" aria-hidden>{fields.map((key, index) => <span key={key} className={`h-1 flex-1 rounded-full ${index <= step ? 'bg-violet-600 dark:bg-violet-400' : 'bg-slate-200 dark:bg-white/10'}`} />)}</div>
+        </div>
         {context && <p className="mt-4 border-s-2 border-violet-500 dark:border-violet-400 ps-3 text-sm text-violet-800 dark:text-violet-200">{context}</p>}
 
         <form ref={form} onSubmit={advance} className="mt-7" aria-label={t('contact.form.title')}>

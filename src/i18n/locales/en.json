@@ -32,8 +32,8 @@
       "title": "Mohamed Amine Gharrab · Full-Stack & AI Developer",
       "description": "Full-Stack Developer in Casablanca: web applications, AI automation, e-commerce (PrestaShop, WordPress, Shopify) and CRM integration."
     },
-    "title": "From business challenges\nto intelligent digital solutions.",
-    "subtitle": "I design and build applications that connect business needs, software engineering and AI. Working closely with teams and management, I translate operational challenges into practical tools — from shaping requirements and technical decisions to development, delivery and team training.",
+    "title": "Useful applications.\nFrom idea to production.",
+    "subtitle": "I build web applications, CRMs and AI solutions around your business needs. I work from analysis through deployment, supporting the teams who use them.",
     "cta": {
       "discover": "Let’s discuss your project",
       "projects": "Explore my work"
@@ -224,11 +224,13 @@
     "certifications": {
       "title": "Certifications",
       "subtitle": "Earned on Trailhead (Salesforce) and freeCodeCamp."
-    }
+    },
+    "showDetails": "Explore technical skills",
+    "hideDetails": "Hide details"
   },
   "projects": {
-    "featuredTitle": "Featured projects",
-    "featuredSubtitle": "Projects showing how I connect business needs, development and AI.",
+    "featuredTitle": "Projects with a practical purpose",
+    "featuredSubtitle": "Explore work by need. Each project explains the context, my contribution and the deliverables.",
     "showPortfolio": "View the complete portfolio",
     "hidePortfolio": "Collapse portfolio",
     "filterLabel": "Filter projects",
@@ -854,6 +856,22 @@
       "assistant": "AI assistant",
       "assistantHint": "Instant answers, 24/7",
       "whatsappHint": "Message Amine directly"
+    },
+    "terminal": {
+      "intro": "A few questions to start our next collaboration.",
+      "skipped": "Not specified",
+      "edit": "Edit",
+      "review": "All set. Check your answers before sending.",
+      "restart": "New message",
+      "next": "Continue",
+      "preview": "Review message",
+      "back": "Back",
+      "enter": "Enter to continue · You can edit your answers.",
+      "multiline": "Enter for a new line · Review your message before sending.",
+      "required": "Please enter a response.",
+      "progressLabel": "Form progress",
+      "progress": "Step {{current}} of {{total}}",
+      "reviewStep": "Final step: review"
     }
   },
   "map": {

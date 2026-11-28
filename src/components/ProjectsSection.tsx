@@ -1,35 +1,13 @@
-import { lazy, Suspense, useEffect, useRef, useState } from 'react';
+import { useEffect, useLayoutEffect, useRef, useState } from 'react';
+import { useLocation, useNavigationType, Link as RouterLink, useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { ArrowRight, ArrowRightLeft, BookOpenCheck, Box, ChevronLeft, ChevronRight, Code, Cpu, FileScan, Globe, GraduationCap, Handshake, Landmark, ShoppingBag, ShoppingCart, Stethoscope, Store, Target, Wand2 } from 'lucide-react';
-import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import 'swiper/css/navigation';
-import { Navigation, Keyboard } from 'swiper/modules';
-import { motion, AnimatePresence, useInView } from 'framer-motion';
-import SwipeCardStack from './SwipeCardStack';
-import { BlockTitle, EASE_OUT, Reveal, SectionHeading, Stagger, StaggerItem } from './motion';
-import type { CrumpleCarouselHandle } from './CrumpleCardCarousel';
-import { useProjectCovers, type CoverInput } from './projectCovers';
-import ProjectVideo, { type ProjectVideoHandle } from './ProjectVideo';
-import { scroller } from 'react-scroll';
-import { Link as RouterLink } from 'react-router-dom';
+import { ArrowRightLeft, Box, Cpu, FileScan, Globe, GraduationCap, Handshake, Landmark, ShoppingBag, ShoppingCart, Stethoscope, Store, Target, Wand2 } from 'lucide-react';
+import { SectionHeading } from './motion';
 import { caseStudyForProject } from '@/content/caseStudies';
-import { caseStudyPath, servicePath } from '@/i18n/paths';
-import { servicesForProject } from '@/content/services';
+import { caseStudyPath } from '@/i18n/paths';
 import { SHOW_PROJECT_EVENT } from '@/lib/events';
 import { FEATURED_PROJECTS, PROJECT_FILTERS, projectMatchesFilter, type ProjectFilter } from '@/content/projectCategories';
-
-// three.js is only downloaded when the projects section renders.
-const CrumpleCardCarousel = lazy(() => import('./CrumpleCardCarousel'));
-const CaseStudies = lazy(() => import('./CaseStudies'));
-
-const STAGE_HEIGHT = 'h-[320px] sm:h-[400px] md:h-[440px] lg:h-[520px]';
-
-const isRealLink = (href?: string): href is string => !!href && href !== '#';
-
-const asList = (value: unknown): string[] => (Array.isArray(value) ? (value as string[]) : []);
+import { readProjectNavigation, saveProjectNavigation } from '@/lib/projectNavigation';
 
 type Project = {
   id: number;
@@ -50,79 +28,33 @@ type Project = {
 
 const ProjectsSection = () => {
   const { t, i18n } = useTranslation();
-  const [showAll, setShowAll] = useState(false);
-  const [filter, setFilter] = useState<ProjectFilter>('featured');
-  const [projectFilter, setProjectFilter] = useState<ProjectFilter>('all');
-  const [pendingProjectId, setPendingProjectId] = useState<number | null>(null);
+  const location = useLocation();
+  const navigationType = useNavigationType();
+  const navigate = useNavigate();
+  const saved = useRef(readProjectNavigation());
+  const [filter, setFilter] = useState<ProjectFilter>(saved.current?.filter ?? 'featured');
+  const sectionRef = useRef<HTMLElement>(null);
 
-  const [isOpen, setIsOpen] = useState(false);
-  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
-  const [startIndex, setStartIndex] = useState(0);
-  const [topCards, setTopCards] = useState<Record<number, number>>({});
-  const [active, setActive] = useState(0);
-  const [hovering, setHovering] = useState(false);
-  const [interacted, setInteracted] = useState(false);
-  const [webglOk, setWebglOk] = useState(true);
-  const carouselRef = useRef<CrumpleCarouselHandle>(null);
+  useLayoutEffect(() => {
+    if (navigationType !== 'POP' && location.hash !== '#projects') return;
+    const id = saved.current?.projectId;
+    if (!id || (navigationType === 'POP' && location.key === 'default' && location.hash !== '#projects')) return;
+    const frame = requestAnimationFrame(() => {
+      const card = sectionRef.current?.querySelector<HTMLElement>(`[data-project-id="${id}"]`);
+      card?.scrollIntoView({ block: 'center', behavior: 'instant' });
+      card?.focus({ preventScroll: true });
+    });
+    return () => cancelAnimationFrame(frame);
+  }, [navigationType, location.key, location.hash]);
 
-  const go = (step: 1 | -1) => {
-    setInteracted(true);
-    if (webglOk) {
-      if (step === 1) carouselRef.current?.next();
-      else carouselRef.current?.prev();
-    } else {
-      setActive((i) => (i + step + visibleProjects.length) % visibleProjects.length);
-    }
-  };
-  const goTo = (index: number) => {
-    setInteracted(true);
-    if (webglOk) carouselRef.current?.goTo(index);
-    else setActive(index);
-  };
-  const handleStageKey = (e: React.KeyboardEvent) => {
-    if (e.key === 'ArrowRight') {
-      e.preventDefault();
-      go(1);
-    } else if (e.key === 'ArrowLeft') {
-      e.preventDefault();
-      go(-1);
-    } else if (e.key === 'Enter' && visibleProjects[active]?.video) {
-      e.preventDefault();
-      playVideo();
-    } else if (e.key === 'Enter' && visibleProjects[active]?.images.length) {
-      e.preventDefault();
-      openModal(visibleProjects[active], 0);
-    }
-  };
-
-  const detailsRef = useRef<HTMLDivElement>(null);
-  const videoRef = useRef<ProjectVideoHandle>(null);
-  // Clicking the centred card of a project with a video brings the player into view and starts it.
-  const playVideo = () => {
-    setInteracted(true);
-    detailsRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    videoRef.current?.play();
-  };
-
-  const openModal = (project: Project, imageIndex: number) => {
-    setSelectedProject(project);
-    setStartIndex(imageIndex);
-    setIsOpen(true);
-  };
-  const closeModal = () => {
-    setIsOpen(false);
-    setSelectedProject(null);
-  };
   useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === 'Escape' && isOpen) {
-        closeModal();
-      }
+    const onShow = (event: Event) => {
+      const entry = caseStudyForProject((event as CustomEvent<{ id: number }>).detail?.id);
+      if (entry) navigate(caseStudyPath(i18n.language, entry.slug));
     };
-
-    window.addEventListener('keydown', handleKeyDown);
-    return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [isOpen]);
+    window.addEventListener(SHOW_PROJECT_EVENT, onShow);
+    return () => window.removeEventListener(SHOW_PROJECT_EVENT, onShow);
+  }, [navigate, i18n.language]);
 
   const projects: Project[] = [
     {
@@ -233,63 +165,17 @@ const ProjectsSection = () => {
   ];
 
   const filteredProjects = filter === 'featured'
-    ? FEATURED_PROJECTS.map((id) => projects.find((project) => project.id === id)).filter((project): project is Project => !!project)
+    ? FEATURED_PROJECTS.flatMap((id) => projects.filter((project) => project.id === id))
     : projects.filter((project) => projectMatchesFilter(project.id, filter));
-
-  const visibleProjects = projectFilter === 'all'
-    ? projects
-    : projects.filter((project) => projectMatchesFilter(project.id, projectFilter));
-  const current = visibleProjects[active] ?? visibleProjects[0] ?? projects[0];
-
-  const coverInputs: CoverInput[] = visibleProjects.map((project) => {
-    const technologies = asList(t(`projects.items.${project.id}.technologies`, { returnObjects: true }));
-    return {
-      title: t(`projects.items.${project.id}.title`),
-      category: technologies[0] ?? '',
-      stack: technologies.slice(1),
-      image: project.video?.poster ?? project.images[0],
-    };
-  });
-  // The 3D carousel (three.js) and its cover drawings only start when the visitor gets close
-  // to this section, so they never compete with the first paint of the page.
-  const sectionRef = useRef<HTMLElement>(null);
-  const near = useInView(sectionRef, { once: true, margin: '800px 0px 800px 0px' });
-  const covers = useProjectCovers(near && showAll ? coverInputs : [], i18n.language);
-
-  // "See the project" in a case study: scroll up here and bring that project to the front.
-  useEffect(() => {
-    const onShow = (e: Event) => {
-      const id = (e as CustomEvent<{ id: number }>).detail?.id;
-      const i = projects.findIndex((p) => p.id === id);
-      if (i < 0) return;
-      setShowAll(true);
-      setProjectFilter('all');
-      setPendingProjectId(id);
-      scroller.scrollTo('projects', { smooth: 'easeInOutQuart', duration: 900, offset: -70 });
-    };
-    window.addEventListener(SHOW_PROJECT_EVENT, onShow);
-    return () => window.removeEventListener(SHOW_PROJECT_EVENT, onShow);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
-  useEffect(() => {
-    if (pendingProjectId === null || projectFilter !== 'all') return;
-    const index = visibleProjects.findIndex((project) => project.id === pendingProjectId);
-    if (index < 0) return;
-    setActive(index);
-    if (webglOk) carouselRef.current?.goTo(index);
-    setPendingProjectId(null);
-  }, [pendingProjectId, projectFilter, visibleProjects, webglOk]);
 
   return (
     <section ref={sectionRef} id="projects" className="section-container">
       <SectionHeading title={t('projects.featuredTitle')} subtitle={t('projects.featuredSubtitle')} />
-
-      <div className="mb-4 flex flex-wrap gap-2" role="group" aria-label={t('projects.filterLabel')}>
+      <div className="mb-5 flex flex-wrap gap-2" role="group" aria-label={t('projects.filterLabel')}>
         {PROJECT_FILTERS.map((category) => (
           <button key={category} type="button" aria-pressed={filter === category} aria-controls="filtered-projects"
-            onClick={() => { setFilter(category); setShowAll(false); }}
-            className={`rounded-full border px-4 py-2 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#483dfb] ${filter === category ? 'border-[#483dfb] bg-[#483dfb] text-white' : 'border-border bg-background hover:bg-secondary'}`}>
+            onClick={() => { setFilter(category); saveProjectNavigation({ filter: category }); }}
+            className={`min-h-11 rounded-full border px-4 py-2 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#483dfb] focus-visible:ring-offset-2 focus-visible:ring-offset-background ${filter === category ? 'border-[#483dfb] bg-[#483dfb] text-white' : 'border-border bg-background hover:bg-secondary'}`}>
             {t(`projects.filters.${category}`)}
             <span className="ms-2 tabular-nums opacity-75" aria-hidden>{projects.filter((project) => projectMatchesFilter(project.id, category)).length}</span>
           </button>
@@ -298,386 +184,28 @@ const ProjectsSection = () => {
       <p className="mb-6 text-sm text-muted-foreground" role="status" aria-live="polite">{t('projects.filterCount', { count: filteredProjects.length })}</p>
       <div id="filtered-projects" className="grid gap-6 md:grid-cols-2">
         {filteredProjects.map((project) => {
-          const id = project.id;
-          const study = caseStudyForProject(id);
-          const summaryKey = `projects.featuredSummaries.${id}`;
-          const summary = i18n.exists(summaryKey) ? t(summaryKey) : t(`projects.items.${id}.description`);
-          const content = <>
-            <div className="relative flex aspect-video items-center justify-center overflow-hidden bg-gradient-to-br from-[#483dfb]/15 to-[#9b87f5]/5">
-              {project.video ? (
-                <img src={project.video.poster} srcSet={project.video.cardPosterSrcSet} sizes={project.video.cardPosterSizes}
-                  alt="" loading="lazy" decoding="async" className="h-full w-full object-contain transition-transform duration-500 group-hover:scale-105" />
-              ) : (
-                <div className="flex flex-col items-center gap-4 p-6 text-center">
-                  <div className="rounded-2xl bg-background/80 p-5">{project.icon}</div>
-                  <span className="text-xl font-semibold">{t(`projects.items.${id}.technologies.0`)}</span>
-                </div>
-              )}
-            </div>
-            <div className="flex flex-1 flex-col p-6 md:p-8">
-              <h3 className="mb-3 text-xl font-semibold">{t(`projects.items.${id}.title`)}</h3>
-              <p className="mb-4 text-sm leading-relaxed text-muted-foreground">{summary}</p>
-              {[6, 12, 14].includes(id) && <p className="mb-5 text-sm font-medium text-foreground/80">{t('projects.delivery')}</p>}
-              <span className="mt-auto text-sm font-medium text-[#483dfb] dark:text-[#9b87f5]">{t(study ? 'caseStudyPage.readFull' : 'projects.projectDetails')}</span>
-            </div>
-          </>;
-          const cardClass = 'group h-full overflow-hidden rounded-2xl border border-border bg-secondary/20 transition-colors hover:border-[#483dfb]/60';
-          return study ? (
-            <RouterLink key={id} to={caseStudyPath(i18n.language, study.slug)} className={`${cardClass} flex flex-col focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#483dfb]`}>
-              {content}
-            </RouterLink>
-          ) : (
-            <details key={id} className={cardClass}>
-              <summary className="flex cursor-pointer list-none flex-col focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-[#483dfb] [&::-webkit-details-marker]:hidden">{content}</summary>
-              <div className="space-y-4 border-t border-border p-6">
-                {project.video && <ProjectVideo src={project.video.src} poster={project.video.poster} portrait={project.video.portrait} label={t('projects.videoOf', { title: t(`projects.items.${id}.title`) })} playLabel={t('projects.playVideo')} />}
-                <ul className="list-disc space-y-2 ps-5 text-sm leading-relaxed">{asList(t(`projects.items.${id}.features`, { returnObjects: true })).map((feature) => <li key={feature}>{feature}</li>)}</ul>
-                <p className="text-sm text-muted-foreground">{asList(t(`projects.items.${id}.technologies`, { returnObjects: true })).join(' · ')}</p>
-                {isRealLink(project.link) && <a href={project.link} target="_blank" rel="noopener noreferrer" className="inline-block text-sm font-medium underline">{t('projects.code')}</a>}
+          const study = caseStudyForProject(project.id);
+          if (!study) return null;
+          const summaryKey = `projects.featuredSummaries.${project.id}`;
+          const summary = i18n.exists(summaryKey) ? t(summaryKey) : t(`projects.items.${project.id}.description`);
+          return (
+            <RouterLink key={project.id} data-project-id={project.id} to={caseStudyPath(i18n.language, study.slug)}
+              onClick={() => saveProjectNavigation({ filter, projectId: project.id })}
+              className="group flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-secondary/20 transition-[border-color,box-shadow] hover:border-[#483dfb]/60 hover:shadow-lg hover:shadow-[#483dfb]/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#483dfb] focus-visible:ring-offset-4 focus-visible:ring-offset-background">
+              <div className="relative flex aspect-video items-center justify-center overflow-hidden bg-gradient-to-br from-[#483dfb]/15 to-[#9b87f5]/5">
+                {project.video ? <img src={project.video.poster} srcSet={project.video.cardPosterSrcSet} sizes={project.video.cardPosterSizes} alt="" loading="lazy" decoding="async" className="h-full w-full object-contain transition-transform duration-500 motion-safe:group-hover:scale-[1.02]" /> :
+                  <div className="flex flex-col items-center gap-4 p-6 text-center"><div className="rounded-2xl bg-background/80 p-5" aria-hidden>{project.icon}</div><span className="text-xl font-semibold">{t(`projects.items.${project.id}.technologies.0`)}</span></div>}
               </div>
-            </details>
+              <div className="flex flex-1 flex-col p-6 md:p-8">
+                <h3 className="mb-3 text-xl font-semibold leading-snug">{t(`projects.items.${project.id}.title`)}</h3>
+                <p className="mb-5 line-clamp-3 text-base leading-relaxed text-muted-foreground">{summary}</p>
+                <span className="mt-auto border-t border-border/60 pt-4 text-sm font-medium text-[#483dfb] dark:text-[#9b87f5]">{t('caseStudyPage.readFull')}</span>
+              </div>
+            </RouterLink>
           );
         })}
       </div>
-
-      <div className="my-10 text-center">
-        <Button variant="outline" aria-expanded={showAll} aria-controls="complete-portfolio" onClick={() => setShowAll(!showAll)}>
-          {t(showAll ? 'projects.hidePortfolio' : 'projects.showPortfolio')}
-        </Button>
-      </div>
-
-      <div id="complete-portfolio" hidden={!showAll}>
-      {showAll && <>
-      <SectionHeading title={t('projects.title')} subtitle={t('projects.subtitle')} />
-
-      <div role="group" aria-label={t('projects.filterLabel')} className="mb-6 flex flex-wrap justify-center gap-2">
-        {(['all', 'websites', 'apps', 'ecommerce', 'ai'] as const).map((filter) => (
-          <Button
-            key={filter}
-            type="button"
-            variant={projectFilter === filter ? 'default' : 'outline'}
-            aria-pressed={projectFilter === filter}
-            onClick={() => {
-              setProjectFilter(filter);
-              setActive(0);
-              setInteracted(true);
-            }}
-          >
-            {t(`projects.filters.${filter}`)}
-          </Button>
-        ))}
-      </div>
-
-      <Reveal y={40}>
-        <div
-          onPointerEnter={(e) => e.pointerType === 'mouse' && setHovering(true)}
-          onPointerLeave={() => setHovering(false)}
-          onFocus={() => setHovering(true)}
-          onBlur={() => setHovering(false)}
-        >
-          {/* Stage */}
-          <div
-            role="region"
-            aria-roledescription="carousel"
-            aria-label={t('projects.title')}
-            tabIndex={0}
-            onKeyDown={handleStageKey}
-            className="relative -mx-4 sm:mx-0 rounded-2xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#483dfb]"
-          >
-            {!near ? (
-              <div className={STAGE_HEIGHT} />
-            ) : webglOk ? (
-              <Suspense fallback={<div className={STAGE_HEIGHT} />}>
-                <CrumpleCardCarousel
-                  key={projectFilter}
-                  ref={carouselRef}
-                  images={covers}
-                  itemWidth={620}
-                  itemHeight={490}
-                  speed={15}
-                  hold={2500}
-                  paused={hovering || interacted || isOpen}
-                  onIndexChange={setActive}
-                  onInteract={() => setInteracted(true)}
-                  onCardClick={(i) => {
-                    const project = visibleProjects[i];
-                    if (project.video) playVideo();
-                    else if (project.images.length > 0) openModal(project, 0);
-                  }}
-                  onUnsupported={() => setWebglOk(false)}
-                  className={`w-full ${STAGE_HEIGHT}`}
-                />
-              </Suspense>
-            ) : (
-              // Flat fallback when WebGL is unavailable.
-              <div className={`relative w-full ${STAGE_HEIGHT} flex items-center justify-center`}>
-                <AnimatePresence mode="wait">
-                  {covers[active] && (
-                    <motion.img
-                      key={active}
-                      src={covers[active]}
-                      alt=""
-                      className="h-[80%] max-w-[86%] rounded-xl object-contain shadow-2xl"
-                      initial={{ opacity: 0, scale: 0.96 }}
-                      animate={{ opacity: 1, scale: 1 }}
-                      exit={{ opacity: 0, scale: 0.96 }}
-                      transition={{ duration: 0.5, ease: EASE_OUT }}
-                    />
-                  )}
-                </AnimatePresence>
-              </div>
-            )}
-          </div>
-
-          {/* Controls */}
-          <div className="mt-4 flex items-center justify-center gap-4 sm:gap-6">
-            <Button
-              variant="outline"
-              size="icon"
-              onClick={() => go(-1)}
-              aria-label={t('projects.prev')}
-              className="h-11 w-11 shrink-0 rounded-full transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-x-0.5 hover:border-[#483dfb]/60 hover:text-[#483dfb]"
-            >
-              <ChevronLeft className="h-5 w-5 rtl:rotate-180" />
-            </Button>
-
-            <div className="flex flex-col items-center gap-2">
-              <span className="text-sm tabular-nums text-muted-foreground" aria-live="polite">
-                {String(active + 1).padStart(2, '0')} / {String(visibleProjects.length).padStart(2, '0')}
-              </span>
-              <div className="flex items-center gap-1.5">
-                {visibleProjects.map((project, i) => (
-                  <button
-                    key={project.id}
-                    type="button"
-                    onClick={() => goTo(i)}
-                    aria-label={t('projects.goTo', { n: i + 1, title: t(`projects.items.${project.id}.title`) })}
-                    aria-current={i === active}
-                    className="group flex h-6 items-center justify-center px-0.5"
-                  >
-                    <span
-                      className={`block h-1.5 rounded-full transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${
-                        i === active ? 'w-6 bg-[#483dfb]' : 'w-1.5 bg-foreground/25 group-hover:bg-foreground/50'
-                      }`}
-                    />
-                  </button>
-                ))}
-              </div>
-            </div>
-
-            <Button
-              variant="outline"
-              size="icon"
-              onClick={() => go(1)}
-              aria-label={t('projects.next')}
-              className="h-11 w-11 shrink-0 rounded-full transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:translate-x-0.5 hover:border-[#483dfb]/60 hover:text-[#483dfb]"
-            >
-              <ChevronRight className="h-5 w-5 rtl:rotate-180" />
-            </Button>
-          </div>
-          <p className="mt-2 text-center text-xs text-muted-foreground">{t('projects.carouselHint')}</p>
-
-          {/* Details of the centred project */}
-          <div ref={detailsRef} className="mt-8 md:mt-10 scroll-mt-24">
-            <AnimatePresence mode="wait" initial={false}>
-              <motion.article
-                key={current.id}
-                initial={{ opacity: 0, y: 24, filter: 'blur(6px)' }}
-                animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
-                exit={{ opacity: 0, y: -12, filter: 'blur(4px)' }}
-                transition={{ duration: 0.55, ease: EASE_OUT }}
-                className={`grid gap-8 rounded-2xl border border-secondary/20 bg-secondary/20 p-6 md:p-8 lg:p-10 ${
-                  current.images.length > 0 || current.video ? 'lg:grid-cols-[1.15fr_1fr] lg:items-center' : ''
-                }`}
-              >
-                {current.video ? (
-                  <div className="min-w-0 lg:order-2">
-                    <ProjectVideo
-                      ref={videoRef}
-                      src={current.video.src}
-                      poster={current.video.poster}
-                      portrait={current.video.portrait}
-                      label={t('projects.videoOf', { title: t(`projects.items.${current.id}.title`) })}
-                      playLabel={t('projects.playVideo')}
-                    />
-                  </div>
-                ) : current.images.length > 0 && (
-                  <div className="min-w-0 lg:order-2">
-                    <SwipeCardStack
-                      images={current.images.map((src, i) => ({
-                        src,
-                        alt: current.captions?.[i] ?? `${t(`projects.items.${current.id}.title`)} ${i + 1}`,
-                      }))}
-                      ariaLabel={t('projects.viewScreenshots')}
-                      onCardClick={(i) => openModal(current, i)}
-                      onTopCardChange={(i) => setTopCards((prev) => (prev[current.id] === i ? prev : { ...prev, [current.id]: i }))}
-                    />
-                    <p className="mt-2 min-h-[2.5rem] text-center text-sm text-foreground/80" aria-live="polite">
-                      {current.captions?.[topCards[current.id] ?? 0]}
-                    </p>
-                    <p className="text-center text-xs text-muted-foreground">{t('projects.swipeHint')}</p>
-                  </div>
-                )}
-                <div className="min-w-0">
-                  <div className="mb-5 flex items-start justify-between gap-4">
-                    <div className="flex min-w-0 items-center gap-4">
-                      <div className="shrink-0 rounded-xl bg-[#483dfb]/10 p-3">{current.icon}</div>
-                      <div className="min-w-0">
-                        <span className="text-xs font-medium uppercase tracking-widest text-[#483dfb]">
-                          {String(active + 1).padStart(2, '0')}
-                        </span>
-                        <h3 className="text-xl md:text-2xl font-semibold leading-tight">
-                          {t(`projects.items.${current.id}.title`)}
-                        </h3>
-                      </div>
-                    </div>
-                    <div className="flex shrink-0 gap-1">
-                      {isRealLink(current.link) && (
-                        <Button variant="ghost" size="icon" asChild className="h-9 w-9">
-                          <a href={current.link} target="_blank" rel="noopener noreferrer" aria-label={t('projects.code')}>
-                            <Code className="h-4 w-4" />
-                          </a>
-                        </Button>
-                      )}
-                      {isRealLink(current.demo) && current.demo !== current.link && (
-                        <Button variant="ghost" size="icon" asChild className="h-9 w-9">
-                          <a href={current.demo} target="_blank" rel="noopener noreferrer" aria-label={t('projects.demo')}>
-                            <Globe className="h-4 w-4" />
-                          </a>
-                        </Button>
-                      )}
-                    </div>
-                  </div>
-
-                  <p className="mb-6 text-foreground/80 md:text-lg">{t(`projects.items.${current.id}.description`)}</p>
-                  <nav aria-label={t('services.title')} className="mb-5 flex flex-wrap gap-3">
-                    {servicesForProject(current.id).map((service) => (
-                      <RouterLink key={service.slug} to={servicePath(i18n.language, service.slug)} className="inline-flex items-center gap-1 text-sm font-medium text-[#483dfb] underline-offset-4 hover:underline dark:text-[#9b87f5]">
-                        {t(`about.services.${service.key}.title`)}
-                        <ArrowRight aria-hidden className="h-4 w-4 rtl:rotate-180" />
-                      </RouterLink>
-                    ))}
-                  </nav>
-                  {caseStudyForProject(current.id) && (
-                    <RouterLink
-                      to={caseStudyPath(i18n.language, caseStudyForProject(current.id)!.slug)}
-                      className="group -mt-2 mb-6 inline-flex items-center gap-1.5 text-sm font-medium text-[#483dfb] underline-offset-4 hover:underline dark:text-[#9b87f5]"
-                    >
-                      {t('caseStudyPage.readFull')}
-                      <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 rtl:rotate-180" aria-hidden />
-                    </RouterLink>
-                  )}
-
-                  <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2">
-                    <div>
-                      <h4 className="mb-2 text-sm font-medium text-foreground/70">{t('projects.technologies')}</h4>
-                      <Stagger className="flex flex-wrap gap-2" stagger={0.04} delay={0.15}>
-                        {asList(t(`projects.items.${current.id}.technologies`, { returnObjects: true })).map((tech, i) => (
-                          // Position key: some technology names are translated (see ContactSection).
-                          <StaggerItem as="span" key={i}>
-                            <Badge variant="outline" className="bg-secondary/30 transition-colors duration-300 hover:bg-[#483dfb]/10 hover:border-[#483dfb]/40">
-                              {tech}
-                            </Badge>
-                          </StaggerItem>
-                        ))}
-                      </Stagger>
-                    </div>
-                    <div>
-                      <h4 className="mb-2 text-sm font-medium text-foreground/70">{t('projects.features')}</h4>
-                      <Stagger as="ul" className="space-y-1.5 text-sm text-foreground/80" stagger={0.06} delay={0.2}>
-                        {asList(t(`projects.items.${current.id}.features`, { returnObjects: true })).map((feature, i) => (
-                          <StaggerItem as="li" key={i} className="flex gap-2">
-                            <span aria-hidden className="mt-[7px] h-1.5 w-1.5 shrink-0 rounded-full bg-[#483dfb]" />
-                            <span>{feature}</span>
-                          </StaggerItem>
-                        ))}
-                      </Stagger>
-                    </div>
-                  </div>
-                </div>
-
-
-              </motion.article>
-            </AnimatePresence>
-          </div>
-        </div>
-      </Reveal>
-
-      {/* Case studies of these projects, right under them */}
-      <Reveal className="panel mx-auto mt-10 max-w-3xl p-6 sm:p-8 md:mt-14">
-        <BlockTitle icon={BookOpenCheck} title={t('bonus.caseStudies.title')} subtitle={t('projects.caseStudiesSubtitle')} />
-        <Suspense fallback={<div className="h-64 animate-pulse rounded-xl bg-secondary/20" />}>
-          <CaseStudies />
-        </Suspense>
-      </Reveal>
-      {/* Popup Modal for slideshow */}
-      </>}
-      </div>
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.4, ease: EASE_OUT }}
-            onClick={closeModal}
-            className="fixed inset-0 z-50 flex items-center justify-center backdrop-blur-md bg-black/40 p-4"
-          >
-            <motion.div
-              initial={{ scale: 0.94, y: 24, opacity: 0 }}
-              animate={{ scale: 1, y: 0, opacity: 1 }}
-              exit={{ scale: 0.97, y: 12, opacity: 0 }}
-              transition={{ duration: 0.5, ease: EASE_OUT }}
-              onClick={(e) => e.stopPropagation()}
-              className="relative w-full max-w-4xl bg-white dark:bg-black rounded-xl overflow-hidden shadow-2xl"
-            >
-              {/* Close button */}
-              <button
-                onClick={closeModal}
-                aria-label={t('nav.close')}
-                className="absolute top-4 right-4 z-50 text-gray-600 hover:text-black text-3xl font-bold bg-white rounded-full w-10 h-10 flex items-center justify-center shadow-md transition-all"
-              >
-                ×
-              </button>
-
-              <Swiper
-                modules={[Navigation, Keyboard]}
-                navigation
-                keyboard={{ enabled: true }}
-                initialSlide={startIndex}
-                spaceBetween={10}
-                slidesPerView={1}
-                className="rounded-lg overflow-hidden"
-                tabIndex={0}
-              >
-                {selectedProject?.images.map((img, i) => {
-                  const caption = selectedProject.captions?.[i];
-
-                  return (
-                    <SwiperSlide key={i}>
-                      <div className="relative">
-                        <img
-                          src={img}
-                          alt={caption ?? `${t(`projects.items.${selectedProject.id}.title`)} ${i + 1}`}
-                          className="w-full h-[70vh] max-h-[500px] object-contain"
-                        />
-                        {caption && (
-                          <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 bg-black/60 text-white text-sm px-4 py-2 text-center w-fit max-w-full rounded-md">
-                            {caption}
-                          </div>
-                        )}
-                      </div>
-                    </SwiperSlide>
-                  );
-                })}
-              </Swiper>
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-
     </section>
   );
 };
-
 export default ProjectsSection;

@@ -1,9 +1,11 @@
 
 import { useTranslation } from 'react-i18next';
 import { Code, Database, Layout, Lightbulb, ShoppingCart, Bot } from 'lucide-react';
-import { useRef, useState } from 'react';
+import { lazy, Suspense, useRef, useState } from 'react';
+import { Link } from 'react-router-dom';
+import { caseStudyPath } from '@/i18n/paths';
 import { motion, useInView, useReducedMotion } from 'framer-motion';
-import SkillConstellation from './SkillConstellation';
+const SkillConstellation = lazy(() => import('./SkillConstellation'));
 import { EASE_OUT, Reveal, SectionHeading } from './motion';
 import Certifications from './Certifications';
 
@@ -78,9 +80,10 @@ const SkillBar = ({ skill, index }: { skill: Skill; index: number }) => {
 };
 
 const SkillsSection = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const [expanded, setExpanded] = useState(false);
   // The skills map is shown first on tablets and desktops; phones always get the levels.
-  const [view, setView] = useState<'levels' | 'map'>('map');
+  const [view, setView] = useState<'levels' | 'map'>('levels');
 
   const skillCategories: SkillCategory[] = [
     {
@@ -169,15 +172,27 @@ const SkillsSection = () => {
     <section id="skills" className="section-container">
       <SectionHeading title={t('skills.title')} subtitle={t('skills.subtitle')} />
 
+      <div className="mb-6 grid gap-4 md:grid-cols-3">
+        {[
+          { key: 'webapps', stack: 'React · TypeScript · API', slug: 'b2b-lead-intelligence-platform' },
+          { key: 'ai', stack: 'Claude · Skills · Python', slug: 'claude-team-training' },
+          { key: 'ecommerce', stack: 'PrestaShop · WordPress · Shopify', slug: 'migration-woocommerce-prestashop-9' },
+        ].map(({ key, stack, slug }) => <Link key={key} to={caseStudyPath(i18n.language, slug)} className="rounded-2xl border border-border p-6 transition-colors hover:border-[#483dfb]/60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#483dfb]">
+          <h3 className="text-lg font-semibold">{t(`about.services.${key}.title`)}</h3>
+          <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{stack}</p>
+          <span className="mt-5 block text-sm font-medium text-[#483dfb] dark:text-[#9b87f5]">{t('caseStudyPage.readFull')}</span>
+        </Link>)}
+      </div>
+      <button type="button" onClick={() => setExpanded(!expanded)} aria-expanded={expanded} aria-controls="skills-detail" className="mb-8 min-h-11 rounded-full border border-border px-5 py-2 text-sm font-medium hover:bg-secondary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#483dfb]">{t(expanded ? 'skills.hideDetails' : 'skills.showDetails')}</button>
+      {expanded && <div id="skills-detail">
       {/* Tablet and up: switch between the levels and the map of how skills connect */}
       <div className="mb-8 hidden justify-center md:flex">
-        <div role="tablist" aria-label={t('skills.title')} className="panel inline-flex gap-1 rounded-full p-1">
+        <div role="group" aria-label={t('skills.title')} className="panel inline-flex gap-1 rounded-full p-1">
           {(['map', 'levels'] as const).map((key) => (
             <button
               key={key}
               type="button"
-              role="tab"
-              aria-selected={view === key}
+              aria-pressed={view === key}
               onClick={() => setView(key)}
               className={`relative rounded-full px-5 py-2 text-sm font-medium transition-colors duration-300 ${
                 view === key ? 'text-white' : 'text-muted-foreground hover:text-foreground'
@@ -222,16 +237,17 @@ const SkillsSection = () => {
       {/* Map of how skills connect (tablet and up, first tab) */}
       {view === 'map' && (
         <div className="hidden md:block">
-          <SkillConstellation
+          <Suspense fallback={<div className="h-[560px] lg:h-[620px]" aria-busy="true" />}><SkillConstellation
             centerLabel="M.A.G"
             categories={skillCategories.map(({ id, name, skills }) => ({ id, name, skills: skills.map(({ id, name }) => ({ id, name })) }))}
             crossLinks={CROSS_LINKS}
             className="h-[560px] lg:h-[620px]"
-          />
+          /></Suspense>
           <p className="mt-4 text-center text-sm text-muted-foreground">{t('skills.constellationHint')}</p>
         </div>
       )}
 
+      </div>}
       <Certifications />
     </section>
   );

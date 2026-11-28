@@ -32,8 +32,8 @@
       "title": "Mohamed Amine Gharrab · Développeur Full-Stack & IA",
       "description": "Développeur Full-Stack à Casablanca : applications web, automatisation IA, e-commerce (PrestaShop, WordPress, Shopify) et intégration CRM."
     },
-    "title": "Des enjeux métier\naux solutions digitales intelligentes.",
-    "subtitle": "Je conçois et développe des applications à la croisée des besoins métier, du développement logiciel et de l’IA. En collaboration avec les équipes et la direction, je transforme les défis opérationnels en outils concrets, de la définition des besoins et des choix techniques au développement, à la livraison et à la formation des équipes.",
+    "title": "Des applications utiles.\nDe l’idée à la mise en production.",
+    "subtitle": "Je développe des applications web, des CRM et des solutions IA adaptés à vos besoins métier. J’interviens de l’analyse au déploiement, avec l’accompagnement des équipes.",
     "cta": {
       "discover": "Parlons de votre projet",
       "projects": "Découvrir mes réalisations"
@@ -224,11 +224,13 @@
     "certifications": {
       "title": "Certifications",
       "subtitle": "Obtenues sur Trailhead (Salesforce) et freeCodeCamp."
-    }
+    },
+    "showDetails": "Voir les compétences détaillées",
+    "hideDetails": "Masquer le détail"
   },
   "projects": {
-    "featuredTitle": "Projets à la une",
-    "featuredSubtitle": "Des projets pour découvrir ma façon de relier les enjeux métier, le développement et l’IA.",
+    "featuredTitle": "Des projets, des solutions concrètes",
+    "featuredSubtitle": "Explorez mes réalisations par besoin. Chaque projet détaille le contexte, ma contribution et les livrables.",
     "showPortfolio": "Voir le portfolio complet",
     "hidePortfolio": "Réduire le portfolio",
     "filterLabel": "Filtrer les projets",
@@ -854,6 +856,22 @@
       "assistant": "Assistant IA",
       "assistantHint": "Réponse immédiate, 24h/24",
       "whatsappHint": "Écrire directement à Amine"
+    },
+    "terminal": {
+      "intro": "Quelques questions pour lancer notre prochaine collaboration.",
+      "skipped": "Non précisé",
+      "edit": "Modifier",
+      "review": "Tout est prêt. Vérifiez vos réponses avant l’envoi.",
+      "restart": "Nouveau message",
+      "next": "Continuer",
+      "preview": "Vérifier le message",
+      "back": "Retour",
+      "enter": "Entrée pour continuer · Vous pouvez modifier vos réponses.",
+      "multiline": "Entrée pour une nouvelle ligne · Vérifiez le message avant l’envoi.",
+      "required": "Veuillez saisir une réponse.",
+      "progressLabel": "Progression du formulaire",
+      "progress": "Étape {{current}} sur {{total}}",
+      "reviewStep": "Dernière étape : vérification"
     }
   },
   "footer": {

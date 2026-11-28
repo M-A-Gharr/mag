@@ -32,8 +32,8 @@
       "title": "Mohamed Amine Gharrab · Desarrollador Full-Stack e IA",
       "description": "Desarrollador Full-Stack en Casablanca: aplicaciones web, automatización con IA, e-commerce (PrestaShop, WordPress, Shopify) e integración de CRM."
     },
-    "title": "De los retos del negocio\na soluciones digitales inteligentes.",
-    "subtitle": "Diseño y desarrollo aplicaciones que conectan las necesidades del negocio, la ingeniería de software y la IA. En colaboración con los equipos y la dirección, transformo los retos operativos en herramientas prácticas, desde la definición de requisitos y las decisiones técnicas hasta el desarrollo, la entrega y la formación de los equipos.",
+    "title": "Aplicaciones útiles.\nDe la idea a producción.",
+    "subtitle": "Desarrollo aplicaciones web, CRM y soluciones de IA para sus necesidades. Trabajo desde el análisis hasta el despliegue y el acompañamiento de los equipos.",
     "cta": {
       "discover": "Hablemos de tu proyecto",
       "projects": "Explora mis proyectos"
@@ -224,11 +224,13 @@
     "certifications": {
       "title": "Certificaciones",
       "subtitle": "Obtenidas en Trailhead (Salesforce) y freeCodeCamp."
-    }
+    },
+    "showDetails": "Ver habilidades técnicas",
+    "hideDetails": "Ocultar detalles"
   },
   "projects": {
-    "featuredTitle": "Proyectos destacados",
-    "featuredSubtitle": "Proyectos que muestran cómo conecto las necesidades del negocio, el desarrollo y la IA.",
+    "featuredTitle": "Proyectos y soluciones concretas",
+    "featuredSubtitle": "Explore por necesidad: contexto, mi contribución y entregables en cada proyecto.",
     "showPortfolio": "Ver el portfolio completo",
     "hidePortfolio": "Contraer portfolio",
     "filterLabel": "Filtrar proyectos",
@@ -854,6 +856,22 @@
       "assistant": "Asistente IA",
       "assistantHint": "Respuesta inmediata, 24/7",
       "whatsappHint": "Escribe directamente a Amine"
+    },
+    "terminal": {
+      "intro": "Unas preguntas para iniciar nuestra próxima colaboración.",
+      "skipped": "Sin especificar",
+      "edit": "Editar",
+      "review": "Todo listo. Revisa tus respuestas antes de enviar.",
+      "restart": "Nuevo mensaje",
+      "next": "Continuar",
+      "preview": "Revisar mensaje",
+      "back": "Volver",
+      "enter": "Intro para continuar · Puedes editar tus respuestas.",
+      "multiline": "Intro para una nueva línea · Revisa el mensaje antes de enviar.",
+      "required": "Introduce una respuesta.",
+      "progressLabel": "Progreso del formulario",
+      "progress": "Paso {{current}} de {{total}}",
+      "reviewStep": "Último paso: revisión"
     }
   },
   "map": {
