@@ -10,6 +10,7 @@ export const CASE_STUDY_PAGES: { slug: string; projectId: number; load: () => Pr
   { slug: 'prestashop-redesign-multilingual-seo', projectId: 8, load: () => import('./prestashop-redesign-multilingual-seo') },
   { slug: 'b2b-lead-intelligence-platform', projectId: 6, load: () => import('./b2b-lead-intelligence-platform') },
   { slug: 'export-showcase-site-b2b-crm', projectId: 12, load: () => import('./export-showcase-site-b2b-crm') },
+  { slug: 'industrial-multilingual-showcase', projectId: 14, load: () => import('./industrial-multilingual-showcase') },
   { slug: 'migration-woocommerce-prestashop-9', projectId: 13, load: () => import('./migration-woocommerce-prestashop-9') },
   { slug: 'bakery-management-saas', projectId: 2, load: () => import('./bakery-management-saas') },
   { slug: 'vr-property-showroom-crm', projectId: 10, load: () => import('./vr-property-showroom-crm') },

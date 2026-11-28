@@ -228,14 +228,16 @@
   },
   "projects": {
     "featuredTitle": "Featured projects",
-    "featuredSubtitle": "Four projects connecting business needs, development and AI.",
+    "featuredSubtitle": "Projects showing how I connect business needs, development and AI.",
     "showPortfolio": "View the complete portfolio",
     "hidePortfolio": "Collapse portfolio",
     "featuredSummaries": {
-      "11": "On-brand model shots in a few clicks instead of a photo shoot, ready for the website, social media and customer catalogues.",
+      "6": "AI-assisted qualification, export and domestic portfolios, pipeline and follow-ups in one application.",
       "8": "From page 10 to page 1 of Google in all three languages. I still maintain and secure the store every day.",
-      "6": "One shared tool from the first search to the sale. Prospects are qualified before anyone spends time on them, and none slip through.",
-      "13": "A clean switch: order totals match the source, every old link still works, and the team has deployment guides."
+      "11": "On-brand model shots in a few clicks instead of a photo shoot, ready for the website, social media and customer catalogues.",
+      "12": "A collections website in three languages and a CRM for reviewing candidates and planning next actions.",
+      "13": "A clean switch: order totals match the source, every old link still works, and the team has deployment guides.",
+      "14": "An industrial catalogue in three languages, clear product ranges and a journey from product to quote request."
     },
     "title": "Projects",
     "meta": {
@@ -295,8 +297,8 @@
         }
       },
       "6": {
-        "title": "Lead Intelligence Platform (SLI)",
-        "description": "Built for an export team that was looking for distributors by hand. The platform finds target companies and their decision-makers, scores each prospect with AI and follows it through to the sale. Nobody gets contacted until a person has said yes.",
+        "title": "AI prospecting platform & B2B CRM",
+        "description": "AI-assisted qualification, export and domestic portfolios, pipeline and follow-ups in one application.",
         "technologies": [
           "React",
           "TanStack Start",
@@ -311,7 +313,8 @@
           "AI scoring: buying intent, signals and a suggested first message",
           "Kanban pipeline, follow-ups, calendar and exportable reports",
           "Separate views for export and local markets, with roles",
-          "Checks for duplicates, anomalies and badly formatted data"
+          "Checks for duplicates, anomalies and badly formatted data",
+          "Designed, developed and deployed to production end to end."
         ]
       },
       "7": {
@@ -402,8 +405,8 @@
         ]
       },
       "12": {
-        "title": "Export Showcase Site & B2B Prospecting CRM",
-        "description": "A heritage scarf and shawl house wanted to sell to wholesalers abroad. I built a multilingual showcase site for trade buyers, and behind it a CRM that finds, scores and follows international prospects until their first order.",
+        "title": "International showcase website & B2B CRM",
+        "description": "A collections website in three languages and a CRM for reviewing candidates and planning next actions.",
         "technologies": [
           "WordPress",
           "CRM",
@@ -412,12 +415,13 @@
           "Multilingual / RTL"
         ],
         "features": [
-          "A catalogue you leaf through like a book, with no cart: every page leads to a trade enquiry",
-          "Multilingual, with a right-to-left Arabic version, designed for mobile",
-          "Enquiries saved and resent until they reach the CRM, with bots filtered out",
-          "Prospect search on Instagram, TikTok and Facebook, scored in several languages",
-          "Human review, duplicate detection, a 7-stage pipeline and follow-ups",
-          "Roles, territories and a history no one can edit"
+          "Collections, history, manufacturing expertise and international presence",
+          "English, Arabic with RTL layout and Russian; mobile navigation",
+          "Catalogue, information and partnership requests",
+          "Candidates from searches, imports and forms, subject to human review",
+          "Portfolio, opportunities with 7 statuses, tasks and follow-ups",
+          "A test website enquiry visible in the review queue",
+          "Designed, developed and deployed to production end to end."
         ]
       },
       "13": {
@@ -441,16 +445,17 @@
         ]
       },
       "14": {
-        "title": "WordPress Store Redesign",
-        "description": "Redesign of a WordPress website showcasing nonwoven materials and custom bags for business customers. Visitors can browse the catalogue, choose product colours and request a quote, on desktop or mobile.",
+        "title": "Multilingual industrial showcase website",
+        "description": "An industrial catalogue in three languages, clear product ranges and a journey from product to quote request.",
         "technologies": [
           "WordPress"
         ],
         "features": [
-          "Catalogue of nonwoven materials and custom bags",
-          "Product colour options and a quote request form",
-          "Website available in French, English and Spanish",
-          "Responsive navigation on desktop and mobile"
+          "Priority ranges and catalogue navigation by application",
+          "Product sheets and customisation options",
+          "Quote request journey",
+          "French, English and Spanish; desktop and mobile navigation",
+          "Designed, developed and deployed to production end to end."
         ]
       },
       "15": {
@@ -527,7 +532,8 @@
     "demo": "Live demo",
     "playVideo": "Play the video",
     "videoOf": "{{title}} – video",
-    "caseStudiesSubtitle": "How some of these projects went, from the problem to the result."
+    "caseStudiesSubtitle": "How some of these projects went, from the problem to the result.",
+    "delivery": "End-to-end delivery · In production"
   },
   "certificates": {
     "title": "Certificates & Education",
@@ -616,19 +622,31 @@
             "Had AI score each prospect: buying intent and a suggested first message",
             "Set up a Kanban pipeline with follow-ups and reports, where a person approves every contact"
           ],
-          "result": "One shared tool from the first search to the sale. Prospects are qualified before anyone spends time on them, and none slip through."
+          "result": "AI-assisted qualification, export and domestic portfolios, pipeline and follow-ups in one application."
         },
         {
           "projectId": 12,
           "sector": "Export · B2B CRM",
-          "challenge": "A heritage scarf and shawl house wanted to reach wholesalers abroad, but its website was not built for trade buyers and enquiries got lost.",
+          "challenge": "Presenting a textile house and its collections to buyers abroad, then organising prospecting and sales follow-up.",
           "approach": [
-            "Built a multilingual showcase site, with a right-to-left Arabic version and a catalogue you leaf through like a book",
-            "Made every page lead to a trade enquiry, with no cart, saved and resent until it reaches the CRM",
-            "Set up prospect search on Instagram, TikTok and Facebook, scored in several languages",
-            "Organised follow-up in a 7-stage pipeline, with territories, roles and a history no one can edit"
+            "Collections, history, manufacturing expertise and international presence",
+            "English, Arabic with RTL layout and Russian; mobile navigation",
+            "Candidates from searches, imports and forms, subject to human review",
+            "Portfolio, opportunities with 7 statuses, tasks and follow-ups"
           ],
-          "result": "Foreign buyers land on a site made for them, and every enquiry is followed up until the first order."
+          "result": "A collections website in three languages and a CRM for reviewing candidates and planning next actions."
+        },
+        {
+          "projectId": 14,
+          "sector": "Textile manufacturing · B2B website",
+          "challenge": "Helping trade buyers understand industrial ranges and prepare a quote request.",
+          "approach": [
+            "Priority ranges and catalogue navigation by application",
+            "Product sheets and customisation options",
+            "Quote request journey",
+            "French, English and Spanish; desktop and mobile navigation"
+          ],
+          "result": "An industrial catalogue in three languages, clear product ranges and a journey from product to quote request."
         },
         {
           "projectId": 13,
@@ -888,7 +906,9 @@
     "readFull": "Read the full case study",
     "related": "More case studies",
     "video": "Video presentation",
-    "service": "Expertise"
+    "service": "Expertise",
+    "role": "My role",
+    "highlights": "What I delivered"
   },
   "servicePage": {
     "where": "Where",

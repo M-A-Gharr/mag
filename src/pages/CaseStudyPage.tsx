@@ -45,6 +45,7 @@ const CaseStudyPage = () => {
   const lang = caseStudyLang(i18n.language);
   const text = study?.text[lang];
   const rtl = lang === 'ar';
+  const compact = !!text?.highlights;
 
   // Title, description, canonical and share tags of this page, in the current language.
   useEffect(() => {
@@ -71,11 +72,39 @@ const CaseStudyPage = () => {
   const cards = Array.isArray(cardsRaw) ? (cardsRaw as { projectId: number; sector: string; result: string }[]) : [];
   const relevantServices = servicesForCaseStudy(slug);
   const relevantSlugs = new Set(relevantServices.flatMap((service) => service.caseStudies));
-  const related = [...CASE_STUDY_PAGES.filter((page) => page.slug !== slug && relevantSlugs.has(page.slug)), ...relatedCaseStudies(slug)]
+  const explicitRelated = (study?.relatedSlugs ?? []).flatMap((relatedSlug) => CASE_STUDY_PAGES.filter((page) => page.slug === relatedSlug));
+  const related = [...explicitRelated, ...CASE_STUDY_PAGES.filter((page) => page.slug !== slug && relevantSlugs.has(page.slug)), ...relatedCaseStudies(slug)]
     .filter((page, index, pages) => pages.findIndex((candidate) => candidate.slug === page.slug) === index).slice(0, 2);
 
   const raw = study ? t(`projects.items.${study.projectId}.technologies`, { returnObjects: true }) : [];
   const technologies = Array.isArray(raw) ? (raw as string[]) : [];
+
+  const presentationVideo = (
+    study?.video && (
+      <figure className="relative mt-10">
+        <div
+          aria-hidden
+          className="pointer-events-none absolute -inset-4 -z-10 rounded-[1.75rem] bg-gradient-to-br from-[#261bfb]/25 via-[#9b87f5]/15 to-transparent blur-2xl"
+        />
+        <div className={`rounded-2xl border border-[#483dfb]/20 bg-background/40 p-1.5 shadow-2xl shadow-[#483dfb]/10 backdrop-blur-sm md:p-2 ${study.video.height > study.video.width ? 'mx-auto max-w-[356px] md:max-w-[360px]' : ''}`}>
+          <ProjectVideo
+            src={study.video.src}
+            poster={study.video.poster}
+            portrait={study.video.height > study.video.width}
+            label={t('projects.videoOf', { title: t(`projects.items.${study.projectId}.title`) })}
+            playLabel={t('projects.playVideo')}
+          />
+        </div>
+        <figcaption className={`mt-3 flex items-center gap-2 px-1 text-sm text-muted-foreground ${study.video.height > study.video.width ? 'justify-center' : ''}`}>
+          <Clock className="h-4 w-4 text-[#483dfb] dark:text-[#9b87f5]" aria-hidden />
+          <span>{t('caseStudyPage.video')}</span>
+          <span aria-hidden>·</span>
+          <span dir="ltr">{formatDuration(study.video.duration)}</span>
+        </figcaption>
+        {text?.mediaCaption && <p className="mt-2 px-1 text-sm leading-relaxed text-muted-foreground">{text.mediaCaption}</p>}
+      </figure>
+              )
+  );
 
   return (
     <div className="relative min-h-screen bg-background text-foreground" dir={rtl ? 'rtl' : 'ltr'}>
@@ -117,37 +146,21 @@ const CaseStudyPage = () => {
                   {text.sector}
                 </span>
                 <h1 className="mt-5 text-3xl font-bold leading-tight md:text-5xl">{text.title}</h1>
-                <p className="mt-6 text-lg leading-relaxed text-foreground/80 md:text-xl">{text.lead}</p>
-                <ContextualContact topic={`project:${slug}`} compact />
               </div>
 
-              {/* Presentation video, at the top so it is the first thing seen (and what Google indexes) */}
-              {study?.video && (
-                <figure className="relative mt-10">
-                  <div
-                    aria-hidden
-                    className="pointer-events-none absolute -inset-4 -z-10 rounded-[1.75rem] bg-gradient-to-br from-[#261bfb]/25 via-[#9b87f5]/15 to-transparent blur-2xl"
-                  />
-                  <div className={`rounded-2xl border border-[#483dfb]/20 bg-background/40 p-1.5 shadow-2xl shadow-[#483dfb]/10 backdrop-blur-sm md:p-2 ${study.video.height > study.video.width ? 'mx-auto max-w-[356px] md:max-w-[360px]' : ''}`}>
-                    <ProjectVideo
-                      src={study.video.src}
-                      poster={study.video.poster}
-                      portrait={study.video.height > study.video.width}
-                      label={t('projects.videoOf', { title: t(`projects.items.${study.projectId}.title`) })}
-                      playLabel={t('projects.playVideo')}
-                    />
-                  </div>
-                  <figcaption className={`mt-3 flex items-center gap-2 px-1 text-sm text-muted-foreground ${study.video.height > study.video.width ? 'justify-center' : ''}`}>
-                    <Clock className="h-4 w-4 text-[#483dfb] dark:text-[#9b87f5]" aria-hidden />
-                    <span>{t('caseStudyPage.video')}</span>
-                    <span aria-hidden>·</span>
-                    <span dir="ltr">{formatDuration(study.video.duration)}</span>
-                  </figcaption>
-                </figure>
+              {compact && <p className="mt-4 text-lg leading-relaxed text-foreground/80">{text.lead}</p>}
+              {text.delivery && <p className="mt-3 text-sm leading-relaxed text-muted-foreground"><strong className="font-semibold text-foreground">{t('caseStudyPage.role')} : </strong>{text.delivery}</p>}
+              {presentationVideo}
+              {!compact && <p className="mt-6 text-lg leading-relaxed text-foreground/80 md:text-xl">{text.lead}</p>}
+              {text.highlights && (
+                <ul className="mt-5 grid gap-3 sm:grid-cols-3" aria-label={t('caseStudyPage.highlights')}>
+                  {text.highlights.map((item) => <li key={item} className="rounded-xl border border-border bg-secondary/20 p-4 text-sm leading-relaxed">{item}</li>)}
+                </ul>
               )}
+              <ContextualContact topic={`project:${slug}`} compact />
 
               {/* At a glance */}
-              <ArticleReveal delay={0.1} className="panel mt-10 grid gap-6 p-6 md:grid-cols-3 md:p-8">
+              {!compact && <ArticleReveal delay={0.1} className="panel mt-10 grid gap-6 p-6 md:grid-cols-3 md:p-8">
                 <div>
                   <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">{t('caseStudyPage.sector')}</p>
                   <p className="mt-1.5 font-medium">{text.sector}</p>
@@ -185,13 +198,13 @@ const CaseStudyPage = () => {
                     </ul>
                   </div>
                 )}
-              </ArticleReveal>
+              </ArticleReveal>}
 
               {/* Short reveals keep the reading pace independent of section length. */}
               <div className="mt-14 space-y-12">
                 {text.technical && (
-                  <section aria-labelledby="project-technical-title">
-                    <ArticleReveal as="h2" id="project-technical-title" className="text-2xl font-semibold md:text-3xl">{text.technical.heading}</ArticleReveal>
+                  <details open={!compact} className="rounded-xl border border-border p-5">
+                    <summary className="cursor-pointer font-semibold">{text.technical.heading}</summary>
                     <dl className="mt-6 grid gap-4 sm:grid-cols-2">
                       {text.technical.groups.map((group, index) => (
                         <ArticleReveal key={group.heading} delay={(index % 2) * 0.08} className="panel p-5 md:p-6">
@@ -200,7 +213,7 @@ const CaseStudyPage = () => {
                         </ArticleReveal>
                       ))}
                     </dl>
-                  </section>
+                  </details>
                 )}
                 {text.sections.map((section, s) => (
                   <section key={s}>

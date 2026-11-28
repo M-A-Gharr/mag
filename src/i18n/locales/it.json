@@ -228,14 +228,16 @@
   },
   "projects": {
     "featuredTitle": "Progetti in evidenza",
-    "featuredSubtitle": "Quattro progetti che collegano esigenze aziendali, sviluppo e IA.",
+    "featuredSubtitle": "Progetti che mostrano come collego esigenze aziendali, sviluppo e IA.",
     "showPortfolio": "Vedi il portfolio completo",
     "hidePortfolio": "Riduci il portfolio",
     "featuredSummaries": {
-      "11": "Immagini indossate, fedeli al marchio, in pochi clic invece di un servizio fotografico, pronte per il sito, i social e i cataloghi clienti.",
+      "6": "Qualificazione assistita dall’IA, portafogli export e mercato locale, pipeline e follow-up in un’applicazione.",
       "8": "Dalla pagina 10 alla pagina 1 di Google in tutte e tre le lingue. Mi occupo ancora ogni giorno della manutenzione e della sicurezza del negozio.",
-      "6": "Un unico strumento condiviso, dalla prima ricerca alla vendita. I prospect vengono qualificati prima di dedicarci tempo, e nessuno va perso.",
-      "13": "Un passaggio pulito: i totali degli ordini corrispondono alla fonte, ogni vecchio link funziona ancora e il team ha le guide di deploy."
+      "11": "Immagini indossate, fedeli al marchio, in pochi clic invece di un servizio fotografico, pronte per il sito, i social e i cataloghi clienti.",
+      "12": "Collezioni in tre lingue e un CRM per esaminare i candidati e organizzare le prossime azioni.",
+      "13": "Un passaggio pulito: i totali degli ordini corrispondono alla fonte, ogni vecchio link funziona ancora e il team ha le guide di deploy.",
+      "14": "Catalogo industriale in tre lingue, gamme chiare e percorso dal prodotto alla richiesta di preventivo."
     },
     "title": "Progetti",
     "meta": {
@@ -295,8 +297,8 @@
         }
       },
       "6": {
-        "title": "Piattaforma Lead Intelligence (SLI)",
-        "description": "Creata per un team export che cercava distributori a mano. La piattaforma trova le aziende target e i loro decisori, assegna a ogni contatto un punteggio con l'IA e lo segue fino alla vendita. Nessuno viene contattato senza il via libera di una persona.",
+        "title": "Piattaforma di prospezione IA e CRM B2B",
+        "description": "Qualificazione assistita dall’IA, portafogli export e mercato locale, pipeline e follow-up in un’applicazione.",
         "technologies": [
           "React",
           "TanStack Start",
@@ -311,7 +313,8 @@
           "Punteggio IA: intenzione d'acquisto, segnali e un primo messaggio suggerito",
           "Pipeline Kanban, follow-up, agenda e report esportabili",
           "Viste separate per export e mercato locale, con ruoli",
-          "Controllo di duplicati, anomalie e dati formattati male"
+          "Controllo di duplicati, anomalie e dati formattati male",
+          "Progettazione, sviluppo e messa in produzione dall’inizio alla fine."
         ]
       },
       "7": {
@@ -402,8 +405,8 @@
         ]
       },
       "12": {
-        "title": "Sito vetrina export e CRM di prospezione B2B",
-        "description": "Una storica maison di scialli e foulard voleva vendere ai grossisti all'estero. Ho creato un sito vetrina multilingue per gli acquirenti professionali e, dietro, un CRM che trova, valuta e segue i prospect internazionali fino al primo ordine.",
+        "title": "Sito vetrina internazionale e CRM B2B",
+        "description": "Collezioni in tre lingue e un CRM per esaminare i candidati e organizzare le prossime azioni.",
         "technologies": [
           "WordPress",
           "CRM",
@@ -412,12 +415,13 @@
           "Multilingue / RTL"
         ],
         "features": [
-          "Un catalogo da sfogliare come un libro, senza carrello: ogni pagina porta a una richiesta professionale",
-          "Multilingue, con una versione araba da destra a sinistra, pensato per il mobile",
-          "Richieste salvate e reinviate finché non arrivano al CRM, con i bot filtrati",
-          "Ricerca di prospect su Instagram, TikTok e Facebook, valutati in più lingue",
-          "Revisione umana, rilevamento dei duplicati, pipeline in 7 fasi e follow-up",
-          "Ruoli, territori e uno storico che nessuno può modificare"
+          "Collezioni, storia, produzione e presenza internazionale",
+          "Inglese, arabo con layout RTL e russo; navigazione mobile",
+          "Richieste di catalogo, informazioni e collaborazione",
+          "Candidati da ricerche, importazioni e moduli con revisione umana",
+          "Portafoglio, opportunità in 7 stati, attività e follow-up",
+          "Una richiesta di prova dal sito visibile nella coda di revisione",
+          "Progettazione, sviluppo e messa in produzione dall’inizio alla fine."
         ]
       },
       "13": {
@@ -441,16 +445,17 @@
         ]
       },
       "14": {
-        "title": "Riprogettazione di un negozio WordPress",
-        "description": "Riprogettazione di un sito WordPress dedicato ai clienti professionali, con un catalogo di materiali in tessuto non tessuto e borse personalizzate. I visitatori possono consultare i prodotti, scegliere i colori e richiedere un preventivo, sia da computer che da smartphone.",
+        "title": "Sito vetrina industriale multilingue",
+        "description": "Catalogo industriale in tre lingue, gamme chiare e percorso dal prodotto alla richiesta di preventivo.",
         "technologies": [
           "WordPress"
         ],
         "features": [
-          "Catalogo di materiali in tessuto non tessuto e borse personalizzate",
-          "Scelta dei colori e modulo di richiesta preventivo",
-          "Sito disponibile in francese, inglese e spagnolo",
-          "Navigazione ottimizzata per computer e smartphone"
+          "Gamme prioritarie e catalogo per applicazione",
+          "Schede prodotto e opzioni di personalizzazione",
+          "Percorso di richiesta preventivo",
+          "Francese, inglese e spagnolo; navigazione su computer e mobile",
+          "Progettazione, sviluppo e messa in produzione dall’inizio alla fine."
         ]
       },
       "15": {
@@ -527,7 +532,8 @@
     "demo": "Demo online",
     "playVideo": "Riproduci il video",
     "videoOf": "{{title}} – video",
-    "caseStudiesSubtitle": "Com'è andata con alcuni di questi progetti, dal problema al risultato."
+    "caseStudiesSubtitle": "Com'è andata con alcuni di questi progetti, dal problema al risultato.",
+    "delivery": "Realizzazione completa · In produzione"
   },
   "certificates": {
     "title": "Certificati e formazione",
@@ -612,19 +618,31 @@
             "Ho fatto valutare ogni prospect all'IA: intenzione d'acquisto e un primo messaggio suggerito",
             "Ho impostato una pipeline Kanban con follow-up e report, dove una persona approva ogni contatto"
           ],
-          "result": "Un unico strumento condiviso, dalla prima ricerca alla vendita. I prospect vengono qualificati prima di dedicarci tempo, e nessuno va perso."
+          "result": "Qualificazione assistita dall’IA, portafogli export e mercato locale, pipeline e follow-up in un’applicazione."
         },
         {
           "projectId": 12,
           "sector": "Export · CRM B2B",
-          "challenge": "Una storica maison di scialli e foulard voleva raggiungere i grossisti all'estero, ma il suo sito non era pensato per gli acquirenti professionali e le richieste andavano perse.",
+          "challenge": "Presentare una maison tessile e le sue collezioni agli acquirenti esteri e organizzare la prospezione e il follow-up.",
           "approach": [
-            "Ho creato un sito vetrina multilingue, con una versione araba da destra a sinistra e un catalogo da sfogliare come un libro",
-            "Ho fatto in modo che ogni pagina porti a una richiesta professionale, senza carrello, salvata e reinviata finché non arriva al CRM",
-            "Ho avviato la ricerca di prospect su Instagram, TikTok e Facebook, valutati in più lingue",
-            "Ho organizzato il follow-up in una pipeline in 7 fasi, con territori, ruoli e uno storico che nessuno può modificare"
+            "Collezioni, storia, produzione e presenza internazionale",
+            "Inglese, arabo con layout RTL e russo; navigazione mobile",
+            "Candidati da ricerche, importazioni e moduli con revisione umana",
+            "Portafoglio, opportunità in 7 stati, attività e follow-up"
           ],
-          "result": "Gli acquirenti esteri arrivano su un sito pensato per loro, e ogni richiesta viene seguita fino al primo ordine."
+          "result": "Collezioni in tre lingue e un CRM per esaminare i candidati e organizzare le prossime azioni."
+        },
+        {
+          "projectId": 14,
+          "sector": "Industria tessile · Sito B2B",
+          "challenge": "Aiutare gli acquirenti professionali a comprendere le gamme industriali e preparare una richiesta di preventivo.",
+          "approach": [
+            "Gamme prioritarie e catalogo per applicazione",
+            "Schede prodotto e opzioni di personalizzazione",
+            "Percorso di richiesta preventivo",
+            "Francese, inglese e spagnolo; navigazione su computer e mobile"
+          ],
+          "result": "Catalogo industriale in tre lingue, gamme chiare e percorso dal prodotto alla richiesta di preventivo."
         },
         {
           "projectId": 13,
@@ -888,7 +906,9 @@
     "readFull": "Leggi il caso completo",
     "related": "Altri casi di studio",
     "video": "Presentazione video",
-    "service": "Aree di competenza"
+    "service": "Aree di competenza",
+    "role": "Il mio ruolo",
+    "highlights": "Cosa ho realizzato"
   },
   "servicePage": {
     "where": "Dove",

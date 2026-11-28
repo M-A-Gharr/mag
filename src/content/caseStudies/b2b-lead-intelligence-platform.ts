@@ -1,33 +1,35 @@
-// Case study: the B2B lead intelligence platform (SLI). The company is described only as a
-// B2B company with several business units, selling in Morocco and abroad.
+// Company identities are omitted; the presentation video is anonymised.
 import type { CaseStudy } from './types';
 
 const study: CaseStudy = {
-  slug: 'b2b-lead-intelligence-platform',
-  projectId: 6,
-  published: '2026-11-10',
-  video: {
-    src: '/videos/projects/lead-intelligence.mp4',
-    poster: '/videos/projects/lead-intelligence-poster.webp',
-    width: 1280,
-    height: 720,
-    duration: 56,
-    uploadDate: '2026-11-15',
+  "slug": "b2b-lead-intelligence-platform",
+  "projectId": 6,
+  "relatedSlugs": [
+    "industrial-multilingual-showcase",
+    "export-showcase-site-b2b-crm"
+  ],
+  "published": "2026-11-10",
+  "video": {
+    "src": "/videos/projects/lead-intelligence.mp4",
+    "poster": "/videos/projects/lead-intelligence-poster.webp",
+    "width": 1280,
+    "height": 720,
+    "duration": 56,
+    "uploadDate": "2026-11-15"
   },
-  text: {
-    fr: {
-      title: "Une plateforme de prospection B2B qui trouve, qualifie et suit les prospects avec l'IA",
-      metaTitle: "Prospection B2B automatisée par l'IA et CRM",
-      metaDescription:
-        "Une plateforme qui trouve des entreprises cibles, les qualifie avec l'IA et suit chaque opportunité jusqu'à la vente, avec une personne qui valide chaque étape.",
-      sector: 'B2B · Export et marché local',
-      lead:
-        "Une entreprise B2B, qui vend au Maroc et à l'export, cherchait ses distributeurs et ses clients à la main. J'ai conçu une plateforme qui découvre les entreprises cibles, les qualifie avec l'IA et suit chaque dossier jusqu'à la vente. L'IA propose, mais c'est toujours une personne qui décide.",
-      brief: {
-        mission: "Conception et développement d'une plateforme de prospection et d'un CRM, pour l'export et le marché local",
-        result: 'Un seul outil, de la première recherche à la vente',
+  "text": {
+    "fr": {
+      "title": "Une plateforme de prospection IA et de suivi commercial",
+      "metaTitle": "Prospection B2B automatisée par l'IA et CRM",
+      "metaDescription": "Une plateforme qui trouve des entreprises cibles, les qualifie avec l'IA et suit chaque opportunité jusqu'à la vente, avec une personne qui valide chaque étape.",
+      "sector": "B2B · Export et marché local",
+      "mediaCaption": "Présentation anonymisée : qualification, pipeline et suivi des prospects.",
+      "lead": "Recherche d’entreprises, qualification assistée par IA et suivi des prospects dans une application commune aux équipes Export et Maroc.",
+      "brief": {
+        "mission": "Conception et développement d'une plateforme de prospection et d'un CRM, pour l'export et le marché local",
+        "result": "Des portefeuilles Export et Maroc, avec qualification, pipeline et relances"
       },
-      technical: {
+      "technical": {
         "heading": "Fiche technique du projet",
         "groups": [
           {
@@ -44,82 +46,90 @@ const study: CaseStudy = {
           },
           {
             "heading": "Mon rôle et mes responsabilités",
-            "text": "Conception et développement de la plateforme de prospection, des parcours de qualification et du suivi commercial avec validation humaine."
+            "text": "Conception et développement intégral du projet, des premières lignes de code jusqu’à la mise en production."
+          },
+          {
+            "heading": "SEO et performance",
+            "text": "Prise en compte de la performance du CRM et de ses interfaces jusqu’à la mise en production."
           }
         ]
       },
-      sections: [
+      "sections": [
         {
-          heading: 'Le contexte',
-          paragraphs: [
-            "L'entreprise est organisée en plusieurs activités, chacune avec ses offres et ses produits. Ses équipes prospectaient entre recherches sur le web, tableurs et boîtes mail, sans vue commune sur qui avait déjà été contacté ni sur l'état de chaque discussion.",
-          ],
+          "heading": "Le contexte",
+          "paragraphs": [
+            "L'entreprise est organisée en plusieurs activités, chacune avec ses offres et ses produits. Ses équipes prospectaient entre recherches sur le web, tableurs et boîtes mail, sans vue commune sur qui avait déjà été contacté ni sur l'état de chaque discussion."
+          ]
         },
         {
-          heading: 'Le défi',
-          paragraphs: [
-            "L'IA sait trouver et résumer beaucoup d'informations. Le risque, c'est de remplir un CRM d'entreprises mal ciblées, ou d'envoyer des messages sans contrôle. La plateforme devait donc :",
+          "heading": "Le défi",
+          "paragraphs": [
+            "L'IA sait trouver et résumer beaucoup d'informations. Le risque, c'est de remplir un CRM d'entreprises mal ciblées, ou d'envoyer des messages sans contrôle. La plateforme devait donc :"
           ],
-          list: [
+          "list": [
             "trouver des entreprises réellement liées aux produits de chaque activité ;",
-            'expliquer pourquoi chaque prospect est proposé, sources à l’appui ;',
+            "expliquer pourquoi chaque prospect est proposé, sources à l’appui ;",
             "ne contacter personne sans l'accord d'un commercial ;",
-            'garder des données propres, sans doublons ni fiches incomplètes.',
-          ],
+            "garder des données propres, sans doublons ni fiches incomplètes."
+          ]
         },
         {
-          heading: "Ce que j'ai fait",
-          steps: [
+          "heading": "Ce que j'ai fait",
+          "steps": [
             {
-              heading: 'Des recherches ciblées par activité et par produit',
-              paragraphs: [
-                "Chaque recherche se définit par activité, offre, produit du catalogue et type d'acheteur visé. Elle tourne dans plusieurs langues, et ses résultats arrivent dans une file de revue. Chaque source affiche son statut, sa dernière exécution et ce qu'elle a trouvé.",
-              ],
+              "heading": "Des recherches ciblées par activité et par produit",
+              "paragraphs": [
+                "Chaque recherche se définit par activité, offre, produit du catalogue et type d'acheteur visé. Elle tourne dans plusieurs langues, et ses résultats arrivent dans une file de revue. Chaque source affiche son statut, sa dernière exécution et ce qu'elle a trouvé."
+              ]
             },
             {
-              heading: 'Une revue humaine avant tout',
-              paragraphs: [
-                "Chaque découverte est présentée avec l'extrait de la source, le pays, le secteur, un score et une justification qui explique le lien avec les produits. Le commercial ouvre la source d'origine, puis approuve ou rejette. Rien n'entre dans le suivi commercial sans cette décision.",
-              ],
+              "heading": "Une revue humaine avant tout",
+              "paragraphs": [
+                "Chaque découverte est présentée avec l'extrait de la source, le pays, le secteur, un score et une justification qui explique le lien avec les produits. Le commercial ouvre la source d'origine, puis approuve ou rejette. Rien n'entre dans le suivi commercial sans cette décision."
+              ]
             },
             {
-              heading: "Une qualification par IA, un prospect ou un lot à la fois",
-              paragraphs: [
+              "heading": "Une qualification par IA, un prospect ou un lot à la fois",
+              "paragraphs": [
                 "Pour les prospects retenus, l'IA rédige une synthèse de l'intérêt commercial, une évaluation par activité, les critères de qualification et un premier message recommandé, que le commercial peut reprendre. Il note la qualité de chaque synthèse, ce qui aide à ajuster l'analyse.",
-                "Les contacts sont enrichis en commençant par les décideurs, et la plateforme signale les dossiers où il en manque encore un.",
-              ],
+                "Les contacts sont enrichis en commençant par les décideurs, et la plateforme signale les dossiers où il en manque encore un."
+              ]
             },
             {
-              heading: 'Un CRM pour suivre chaque opportunité',
-              paragraphs: [
-                "Les dossiers avancent dans un pipeline par étapes (nouveau, analysé, qualifié, contacté…), par glisser-déposer. Une page « à traiter » regroupe les relances en retard, du jour et de la semaine, ainsi que les prospects inactifs. Les vues export et marché local sont séparées, avec leurs commerciaux, leurs portefeuilles et leurs rôles.",
-              ],
+              "heading": "Un CRM pour suivre chaque opportunité",
+              "paragraphs": [
+                "Les dossiers avancent dans un pipeline par étapes (nouveau, analysé, qualifié, contacté…), par glisser-déposer. Une page « à traiter » regroupe les relances en retard, du jour et de la semaine, ainsi que les prospects inactifs. Les vues export et marché local sont séparées, avec leurs commerciaux, leurs portefeuilles et leurs rôles."
+              ]
             },
             {
-              heading: 'Des données propres et des chiffres utiles',
-              paragraphs: [
-                "Un module de qualité repère les fiches incomplètes, les e-mails à vérifier, les domaines à normaliser et les doublons, que l'administrateur fusionne. Les rapports suivent les taux de qualification et de gain, la valeur estimée du pipeline, les causes de perte et les concurrents rencontrés, et un journal garde la trace de chaque action.",
-              ],
-            },
-          ],
-        },
+              "heading": "Des données propres et des chiffres utiles",
+              "paragraphs": [
+                "Un module de qualité repère les fiches incomplètes, les e-mails à vérifier, les domaines à normaliser et les doublons, que l'administrateur fusionne. Les rapports suivent les taux de qualification et de gain, la valeur estimée du pipeline, les causes de perte et les concurrents rencontrés, et un journal garde la trace de chaque action."
+              ]
+            }
+          ]
+        }
       ],
-      result:
-        "Les équipes travaillent dans un seul outil, de la première recherche à la vente. Les prospects sont qualifiés avant qu'on y consacre du temps, chaque décision reste humaine, et aucune relance ne se perd.",
+      "result": "Une application en production qui réunit les portefeuilles Export et Maroc, la qualification, le pipeline et les relances. Les tableaux de bord distinguent les statuts actuels des résultats sur une période.",
+      "highlights": [
+        "Recherche et qualification assistée par IA",
+        "Portefeuilles Export et Maroc",
+        "Pipeline, agenda et relances"
+      ],
+      "delivery": "Conception, développement et mise en production, de bout en bout."
     },
-    en: {
-      title: 'A B2B prospecting platform that finds, qualifies and follows leads with AI',
-      metaTitle: 'AI-powered B2B lead generation platform and CRM',
-      metaDescription:
-        'A platform that finds target companies, qualifies them with AI and follows each opportunity to the sale, with a person approving every step.',
-      sector: 'B2B · Export and local market',
-      lead:
-        'A B2B company selling in Morocco and abroad was looking for distributors and customers by hand. I designed a platform that discovers target companies, qualifies them with AI and follows each account through to the sale. The AI suggests; a person always decides.',
-      brief: {
-        mission: 'Design and development of a prospecting platform and CRM, for export and the local market',
-        result: 'One tool, from the first search to the sale',
+    "en": {
+      "title": "An AI prospecting and sales follow-up platform",
+      "metaTitle": "AI-powered B2B lead generation platform and CRM",
+      "metaDescription": "A platform that finds target companies, qualifies them with AI and follows each opportunity to the sale, with a person approving every step.",
+      "sector": "B2B · Export and local market",
+      "mediaCaption": "Anonymised presentation: qualification, pipeline and prospect follow-up.",
+      "lead": "Company research, AI-assisted qualification and prospect follow-up in one application for export and domestic teams.",
+      "brief": {
+        "mission": "Design and development of a prospecting platform and CRM, for export and the local market",
+        "result": "Export and domestic portfolios with qualification, pipeline and follow-ups"
       },
-      technical: {
+      "technical": {
         "heading": "Project technical overview",
         "groups": [
           {
@@ -136,82 +146,90 @@ const study: CaseStudy = {
           },
           {
             "heading": "My role and responsibilities",
-            "text": "Design and development of the prospecting platform, qualification workflows and sales follow-up with human approval."
+            "text": "Full project design and development, from the first lines of code through production deployment."
+          },
+          {
+            "heading": "SEO and performance",
+            "text": "CRM and interface performance considered through production deployment."
           }
         ]
       },
-      sections: [
+      "sections": [
         {
-          heading: 'The context',
-          paragraphs: [
-            'The company is organised into several business units, each with its own offers and products. Its teams prospected across web searches, spreadsheets and inboxes, with no shared view of who had already been contacted or where each conversation stood.',
-          ],
+          "heading": "The context",
+          "paragraphs": [
+            "The company is organised into several business units, each with its own offers and products. Its teams prospected across web searches, spreadsheets and inboxes, with no shared view of who had already been contacted or where each conversation stood."
+          ]
         },
         {
-          heading: 'The challenge',
-          paragraphs: [
-            'AI can find and summarise a lot of information. The risk is filling a CRM with poorly targeted companies, or sending messages without control. So the platform had to:',
+          "heading": "The challenge",
+          "paragraphs": [
+            "AI can find and summarise a lot of information. The risk is filling a CRM with poorly targeted companies, or sending messages without control. So the platform had to:"
           ],
-          list: [
-            'find companies genuinely related to each business unit’s products;',
-            'explain why each prospect is suggested, with its sources;',
-            'contact no one without a salesperson’s approval;',
-            'keep the data clean, with no duplicates or incomplete records.',
-          ],
+          "list": [
+            "find companies genuinely related to each business unit’s products;",
+            "explain why each prospect is suggested, with its sources;",
+            "contact no one without a salesperson’s approval;",
+            "keep the data clean, with no duplicates or incomplete records."
+          ]
         },
         {
-          heading: 'What I did',
-          steps: [
+          "heading": "What I did",
+          "steps": [
             {
-              heading: 'Searches targeted by business unit and product',
-              paragraphs: [
-                'Each search is defined by business unit, offer, catalogue product and the type of buyer sought. It runs in several languages, and its results land in a review queue. Each source shows its status, its last run and what it found.',
-              ],
+              "heading": "Searches targeted by business unit and product",
+              "paragraphs": [
+                "Each search is defined by business unit, offer, catalogue product and the type of buyer sought. It runs in several languages, and its results land in a review queue. Each source shows its status, its last run and what it found."
+              ]
             },
             {
-              heading: 'A human review first',
-              paragraphs: [
-                'Each discovery comes with the source extract, the country, the sector, a score and a rationale explaining the link with the products. The salesperson opens the original source, then approves or rejects. Nothing enters the sales follow-up without that decision.',
-              ],
+              "heading": "A human review first",
+              "paragraphs": [
+                "Each discovery comes with the source extract, the country, the sector, a score and a rationale explaining the link with the products. The salesperson opens the original source, then approves or rejects. Nothing enters the sales follow-up without that decision."
+              ]
             },
             {
-              heading: 'AI qualification, one prospect or a batch at a time',
-              paragraphs: [
-                'For the prospects kept, the AI writes a summary of the commercial interest, an assessment per business unit, the qualification criteria and a suggested first message the salesperson can reuse. They rate each summary, which helps tune the analysis.',
-                'Contacts are enriched starting with the decision-makers, and the platform flags accounts that still lack one.',
-              ],
+              "heading": "AI qualification, one prospect or a batch at a time",
+              "paragraphs": [
+                "For the prospects kept, the AI writes a summary of the commercial interest, an assessment per business unit, the qualification criteria and a suggested first message the salesperson can reuse. They rate each summary, which helps tune the analysis.",
+                "Contacts are enriched starting with the decision-makers, and the platform flags accounts that still lack one."
+              ]
             },
             {
-              heading: 'A CRM to follow every opportunity',
-              paragraphs: [
-                'Accounts move through a pipeline of stages (new, analysed, qualified, contacted and so on) by drag and drop. A “to do” page gathers overdue follow-ups, today’s and this week’s, as well as inactive prospects. Export and local-market views are kept apart, each with its salespeople, portfolios and roles.',
-              ],
+              "heading": "A CRM to follow every opportunity",
+              "paragraphs": [
+                "Accounts move through a pipeline of stages (new, analysed, qualified, contacted and so on) by drag and drop. A “to do” page gathers overdue follow-ups, today’s and this week’s, as well as inactive prospects. Export and local-market views are kept apart, each with its salespeople, portfolios and roles."
+              ]
             },
             {
-              heading: 'Clean data and useful figures',
-              paragraphs: [
-                'A data-quality module flags incomplete records, emails to verify, domains to normalise and duplicates, which the administrator merges. Reports track qualification and win rates, estimated pipeline value, loss reasons and competitors met, and an activity log keeps a trace of every action.',
-              ],
-            },
-          ],
-        },
+              "heading": "Clean data and useful figures",
+              "paragraphs": [
+                "A data-quality module flags incomplete records, emails to verify, domains to normalise and duplicates, which the administrator merges. Reports track qualification and win rates, estimated pipeline value, loss reasons and competitors met, and an activity log keeps a trace of every action."
+              ]
+            }
+          ]
+        }
       ],
-      result:
-        'The teams work in a single tool, from the first search to the sale. Prospects are qualified before anyone spends time on them, every decision stays human, and no follow-up is lost.',
+      "result": "A production application combining export and domestic portfolios, qualification, pipeline and follow-ups. Dashboards distinguish current statuses from results over a period.",
+      "highlights": [
+        "AI-assisted research and qualification",
+        "Export and domestic portfolios",
+        "Pipeline, calendar and follow-ups"
+      ],
+      "delivery": "End-to-end design, development and production deployment."
     },
-    ar: {
-      title: 'منصة للتنقيب عن عملاء الشركات تجد العملاء المحتملين وتؤهلهم وتتابعهم بالذكاء الاصطناعي',
-      metaTitle: 'منصة تنقيب عن عملاء B2B بالذكاء الاصطناعي مع CRM',
-      metaDescription:
-        'منصة تجد الشركات المستهدفة وتؤهلها بالذكاء الاصطناعي وتتابع كل فرصة حتى البيع، مع شخص يوافق على كل خطوة.',
-      sector: 'B2B · التصدير والسوق المحلية',
-      lead:
-        'كانت شركة تعمل مع الشركات، وتبيع في المغرب والخارج، تبحث عن موزعيها وعملائها يدوياً. صمّمت منصة تكتشف الشركات المستهدفة وتؤهلها بالذكاء الاصطناعي وتتابع كل ملف حتى البيع. الذكاء الاصطناعي يقترح، لكن القرار يبقى دائماً لشخص.',
-      brief: {
-        mission: 'تصميم وتطوير منصة للتنقيب ونظام CRM للتصدير وللسوق المحلية',
-        result: 'أداة واحدة، من أول بحث حتى البيع',
+    "ar": {
+      "title": "منصة تنقيب بالذكاء الاصطناعي ومتابعة تجارية",
+      "metaTitle": "منصة تنقيب عن عملاء B2B بالذكاء الاصطناعي مع CRM",
+      "metaDescription": "منصة تجد الشركات المستهدفة وتؤهلها بالذكاء الاصطناعي وتتابع كل فرصة حتى البيع، مع شخص يوافق على كل خطوة.",
+      "sector": "B2B · التصدير والسوق المحلية",
+      "mediaCaption": "عرض مع إخفاء الهوية: التأهيل ومسار الفرص ومتابعة العملاء المحتملين.",
+      "lead": "البحث عن الشركات والتأهيل بمساعدة الذكاء الاصطناعي ومتابعة العملاء المحتملين في تطبيق مشترك لفرق التصدير والسوق المحلي.",
+      "brief": {
+        "mission": "تصميم وتطوير منصة للتنقيب ونظام CRM للتصدير وللسوق المحلية",
+        "result": "محافظ للتصدير والسوق المحلي مع التأهيل ومسار الفرص والمتابعة"
       },
-      technical: {
+      "technical": {
         "heading": "الملف التقني للمشروع",
         "groups": [
           {
@@ -228,70 +246,79 @@ const study: CaseStudy = {
           },
           {
             "heading": "دوري ومسؤولياتي",
-            "text": "تصميم وتطوير منصة التنقيب ومسارات التأهيل والمتابعة التجارية مع اعتماد بشري."
+            "text": "تصميم المشروع وتطويره بالكامل، من أول أسطر الشيفرة إلى الإطلاق في بيئة الإنتاج."
+          },
+          {
+            "heading": "تحسين محركات البحث والأداء",
+            "text": "مراعاة أداء نظام CRM وواجهاته حتى الإطلاق في بيئة الإنتاج."
           }
         ]
       },
-      sections: [
+      "sections": [
         {
-          heading: 'السياق',
-          paragraphs: [
-            'تنقسم الشركة إلى عدة أنشطة، لكل منها عروضه ومنتجاته. وكانت فرقها تنقّب بين محركات البحث والجداول والبريد الإلكتروني، دون رؤية مشتركة لمن تم التواصل معه ولا لمرحلة كل نقاش.',
-          ],
+          "heading": "السياق",
+          "paragraphs": [
+            "تنقسم الشركة إلى عدة أنشطة، لكل منها عروضه ومنتجاته. وكانت فرقها تنقّب بين محركات البحث والجداول والبريد الإلكتروني، دون رؤية مشتركة لمن تم التواصل معه ولا لمرحلة كل نقاش."
+          ]
         },
         {
-          heading: 'التحدي',
-          paragraphs: [
-            'يستطيع الذكاء الاصطناعي إيجاد الكثير من المعلومات وتلخيصها. لكن الخطر هو ملء نظام CRM بشركات غير مستهدفة جيداً، أو إرسال رسائل دون رقابة. لذلك كان على المنصة أن:',
+          "heading": "التحدي",
+          "paragraphs": [
+            "يستطيع الذكاء الاصطناعي إيجاد الكثير من المعلومات وتلخيصها. لكن الخطر هو ملء نظام CRM بشركات غير مستهدفة جيداً، أو إرسال رسائل دون رقابة. لذلك كان على المنصة أن:"
           ],
-          list: [
-            'تجد شركات مرتبطة فعلاً بمنتجات كل نشاط؛',
-            'تشرح سبب اقتراح كل عميل محتمل، مع مصادره؛',
-            'لا تتواصل مع أحد دون موافقة مستشار المبيعات؛',
-            'تحافظ على بيانات نظيفة، بلا تكرار ولا ملفات ناقصة.',
-          ],
+          "list": [
+            "تجد شركات مرتبطة فعلاً بمنتجات كل نشاط؛",
+            "تشرح سبب اقتراح كل عميل محتمل، مع مصادره؛",
+            "لا تتواصل مع أحد دون موافقة مستشار المبيعات؛",
+            "تحافظ على بيانات نظيفة، بلا تكرار ولا ملفات ناقصة."
+          ]
         },
         {
-          heading: 'ما قمت به',
-          steps: [
+          "heading": "ما قمت به",
+          "steps": [
             {
-              heading: 'عمليات بحث موجهة حسب النشاط والمنتج',
-              paragraphs: [
-                'يُحدَّد كل بحث بالنشاط والعرض ومنتج الكتالوج ونوع المشتري المستهدف. ويعمل بعدة لغات، وتصل نتائجه إلى طابور مراجعة. ويعرض كل مصدر حالته وآخر تشغيل له وما وجده.',
-              ],
+              "heading": "عمليات بحث موجهة حسب النشاط والمنتج",
+              "paragraphs": [
+                "يُحدَّد كل بحث بالنشاط والعرض ومنتج الكتالوج ونوع المشتري المستهدف. ويعمل بعدة لغات، وتصل نتائجه إلى طابور مراجعة. ويعرض كل مصدر حالته وآخر تشغيل له وما وجده."
+              ]
             },
             {
-              heading: 'مراجعة بشرية قبل كل شيء',
-              paragraphs: [
-                'يُعرض كل اكتشاف مع مقتطف من المصدر والبلد والقطاع وتقييم وتبرير يشرح الصلة بالمنتجات. يفتح المستشار المصدر الأصلي، ثم يوافق أو يرفض. ولا يدخل أي شيء إلى المتابعة التجارية دون هذا القرار.',
-              ],
+              "heading": "مراجعة بشرية قبل كل شيء",
+              "paragraphs": [
+                "يُعرض كل اكتشاف مع مقتطف من المصدر والبلد والقطاع وتقييم وتبرير يشرح الصلة بالمنتجات. يفتح المستشار المصدر الأصلي، ثم يوافق أو يرفض. ولا يدخل أي شيء إلى المتابعة التجارية دون هذا القرار."
+              ]
             },
             {
-              heading: 'تأهيل بالذكاء الاصطناعي، لعميل واحد أو لمجموعة',
-              paragraphs: [
-                'بالنسبة للعملاء المحتملين المقبولين، يكتب الذكاء الاصطناعي ملخصاً للاهتمام التجاري، وتقييماً حسب النشاط، ومعايير التأهيل، ورسالة أولى مقترحة يمكن للمستشار اعتمادها. ويقيّم المستشار جودة كل ملخص، مما يساعد على ضبط التحليل.',
-                'وتُثرى جهات الاتصال بدءاً بصناع القرار، وتنبّه المنصة إلى الملفات التي ما زال ينقصها واحد منهم.',
-              ],
+              "heading": "تأهيل بالذكاء الاصطناعي، لعميل واحد أو لمجموعة",
+              "paragraphs": [
+                "بالنسبة للعملاء المحتملين المقبولين، يكتب الذكاء الاصطناعي ملخصاً للاهتمام التجاري، وتقييماً حسب النشاط، ومعايير التأهيل، ورسالة أولى مقترحة يمكن للمستشار اعتمادها. ويقيّم المستشار جودة كل ملخص، مما يساعد على ضبط التحليل.",
+                "وتُثرى جهات الاتصال بدءاً بصناع القرار، وتنبّه المنصة إلى الملفات التي ما زال ينقصها واحد منهم."
+              ]
             },
             {
-              heading: 'نظام CRM لمتابعة كل فرصة',
-              paragraphs: [
-                'تتقدم الملفات في مسار مبيعات من مراحل (جديد، محلَّل، مؤهَّل، تم التواصل...) بالسحب والإفلات. وتجمع صفحة «للمعالجة» المتابعات المتأخرة ومتابعات اليوم والأسبوع، والعملاء المحتملين غير النشطين. وتُفصل واجهة التصدير عن واجهة السوق المحلية، لكل منهما مستشاروه ومحافظه وأدواره.',
-              ],
+              "heading": "نظام CRM لمتابعة كل فرصة",
+              "paragraphs": [
+                "تتقدم الملفات في مسار مبيعات من مراحل (جديد، محلَّل، مؤهَّل، تم التواصل...) بالسحب والإفلات. وتجمع صفحة «للمعالجة» المتابعات المتأخرة ومتابعات اليوم والأسبوع، والعملاء المحتملين غير النشطين. وتُفصل واجهة التصدير عن واجهة السوق المحلية، لكل منهما مستشاروه ومحافظه وأدواره."
+              ]
             },
             {
-              heading: 'بيانات نظيفة وأرقام مفيدة',
-              paragraphs: [
-                'ترصد وحدة الجودة الملفات الناقصة، وعناوين البريد التي يجب التحقق منها، والنطاقات التي يجب توحيدها، والتكرارات التي يدمجها المسؤول. وتتابع التقارير نسب التأهيل والفوز، والقيمة التقديرية لمسار المبيعات، وأسباب الخسارة، والمنافسين، ويحتفظ سجل بأثر كل إجراء.',
-              ],
-            },
-          ],
-        },
+              "heading": "بيانات نظيفة وأرقام مفيدة",
+              "paragraphs": [
+                "ترصد وحدة الجودة الملفات الناقصة، وعناوين البريد التي يجب التحقق منها، والنطاقات التي يجب توحيدها، والتكرارات التي يدمجها المسؤول. وتتابع التقارير نسب التأهيل والفوز، والقيمة التقديرية لمسار المبيعات، وأسباب الخسارة، والمنافسين، ويحتفظ سجل بأثر كل إجراء."
+              ]
+            }
+          ]
+        }
       ],
-      result:
-        'تعمل الفرق بأداة واحدة، من أول بحث حتى البيع. يُؤهَّل العملاء المحتملون قبل أن يُصرف عليهم الوقت، ويبقى كل قرار بشرياً، ولا تضيع أي متابعة.',
-    },
-  },
+      "result": "تطبيق منشور يجمع محافظ التصدير والسوق المحلي والتأهيل ومسار الفرص والمتابعة. تميّز لوحات القيادة الحالات الحالية عن النتائج خلال فترة محددة.",
+      "highlights": [
+        "بحث وتأهيل بمساعدة الذكاء الاصطناعي",
+        "محافظ للتصدير والسوق المحلي",
+        "مسار فرص وتقويم ومتابعات"
+      ],
+      "delivery": "التصميم والتطوير والإطلاق في بيئة الإنتاج، من البداية إلى النهاية."
+    }
+  }
 };
 
 export default study;

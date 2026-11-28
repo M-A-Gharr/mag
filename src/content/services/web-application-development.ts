@@ -4,7 +4,7 @@ import type { Service } from './types';
 const service: Service = {
   slug: 'web-application-development',
   key: 'webapps',
-  caseStudies: ['b2b-lead-intelligence-platform', 'export-showcase-site-b2b-crm', 'bakery-management-saas', 'vr-property-showroom-crm', 'medical-practice-management-mvp', 'banking-agency-java-jee'],
+  caseStudies: ['b2b-lead-intelligence-platform', 'export-showcase-site-b2b-crm', 'industrial-multilingual-showcase', 'bakery-management-saas', 'vr-property-showroom-crm', 'medical-practice-management-mvp', 'banking-agency-java-jee'],
   tools: ['React', 'Node.js', 'TypeScript', 'PHP', 'ASP.NET', 'C#', 'PostgreSQL', 'MySQL', 'MSSQL', 'Supabase'],
   text: {
     fr: {

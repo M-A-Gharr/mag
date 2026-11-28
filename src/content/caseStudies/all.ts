@@ -4,6 +4,7 @@ import aiStudio from './ai-fashion-visuals-studio';
 import prestashop from './prestashop-redesign-multilingual-seo';
 import leadPlatform from './b2b-lead-intelligence-platform';
 import exportSite from './export-showcase-site-b2b-crm';
+import industrialSite from './industrial-multilingual-showcase';
 import migration from './migration-woocommerce-prestashop-9';
 import bakery from './bakery-management-saas';
 import vrShowroom from './vr-property-showroom-crm';
@@ -13,4 +14,4 @@ import bankingAgency from './banking-agency-java-jee';
 import type { CaseStudy } from './types';
 
 /** Same order as the case studies on the home page. */
-export const CASE_STUDIES: CaseStudy[] = [aiStudio, prestashop, leadPlatform, exportSite, migration, bakery, vrShowroom, invoiceOcr, medicalMvp, bankingAgency];
+export const CASE_STUDIES: CaseStudy[] = [aiStudio, prestashop, leadPlatform, exportSite, industrialSite, migration, bakery, vrShowroom, invoiceOcr, medicalMvp, bankingAgency];

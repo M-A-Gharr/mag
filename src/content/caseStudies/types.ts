@@ -20,6 +20,12 @@ export type CaseStudyText = {
   metaDescription: string;
   sector: string;
   lead: string;
+  /** Three short deliverables for the first reading level. */
+  highlights?: string[];
+  /** Confirmed end-to-end responsibility, including production deployment. */
+  delivery?: string;
+  /** Context for the existing anonymised presentation, when applicable. */
+  mediaCaption?: string;
   brief: { mission: string; result: string };
   technical?: {
     heading: string;
@@ -29,7 +35,7 @@ export type CaseStudyText = {
   result: string;
 };
 
-/** Presentation video, shown at the top of the page and declared to search engines. */
+/** Optional video walkthrough, loaded on demand and declared to search engines. */
 export type CaseStudyVideo = {
   /** Path under public/, e.g. /videos/projects/x.mp4 */
   src: string;
@@ -48,6 +54,8 @@ export type CaseStudy = {
   projectId: number;
   /** ISO date for the structured data. The modification date comes from git (build/lastModified.ts). */
   published: string;
+  /** Explicitly related work, before general service recommendations. */
+  relatedSlugs?: string[];
   video?: CaseStudyVideo;
   text: Record<CaseStudyLang, CaseStudyText>;
 };

@@ -1,302 +1,309 @@
-// Case study: the export showcase site and its B2B prospecting CRM. The heritage house and its
-// brands are not named. The site was still in its development version at the time of writing,
-// so the result describes what the system guarantees, not sales figures.
+// Company identities are omitted; the presentation video is anonymised.
 import type { CaseStudy } from './types';
 
 const study: CaseStudy = {
-  slug: 'export-showcase-site-b2b-crm',
-  projectId: 12,
-  published: '2026-11-10',
-  video: {
-    src: '/videos/projects/export-showroom-crm.mp4',
-    poster: '/videos/projects/export-showroom-crm-poster.webp',
-    width: 1280,
-    height: 720,
-    duration: 111,
-    uploadDate: '2026-11-15',
+  "slug": "export-showcase-site-b2b-crm",
+  "projectId": 12,
+  "published": "2026-11-10",
+  "relatedSlugs": [
+    "industrial-multilingual-showcase",
+    "b2b-lead-intelligence-platform"
+  ],
+  "video": {
+    "src": "/videos/projects/export-showroom-crm.mp4",
+    "poster": "/videos/projects/export-showroom-crm-poster.webp",
+    "width": 1280,
+    "height": 720,
+    "duration": 111,
+    "uploadDate": "2026-11-15"
   },
-  text: {
-    fr: {
-      title: "Un site vitrine export et un CRM pour conquérir des acheteurs professionnels à l'étranger",
-      metaTitle: 'Site vitrine export multilingue et CRM B2B',
-      metaDescription:
-        'Un site vitrine pour les grossistes étrangers, en anglais et en arabe, relié à un CRM qui trouve et suit les prospects sur Instagram, TikTok et Facebook.',
-      sector: 'Export · B2B',
-      lead:
-        "Une maison historique de châles et de foulards voulait vendre à des grossistes et des distributeurs à l'étranger. J'ai conçu deux outils qui fonctionnent ensemble : un site vitrine pensé pour les acheteurs professionnels, et un CRM qui trouve ces acheteurs et suit chaque échange jusqu'à la première commande.",
-      brief: {
-        mission: "Conception d'un site vitrine en anglais et en arabe et d'un CRM de prospection relié au site",
-        result: 'Aucune demande perdue, du formulaire au commercial',
+  "text": {
+    "fr": {
+      "title": "Un site international et son CRM B2B",
+      "metaTitle": "Site vitrine international & CRM B2B · Étude de cas",
+      "metaDescription": "Un site de collections en anglais, arabe et russe, associé à un CRM de prospection, de validation des candidats et de suivi commercial.",
+      "sector": "Textile · Site export & CRM B2B",
+      "lead": "Un site de collections en trois langues, associé à un CRM pour examiner les candidats et organiser le suivi des acheteurs professionnels.",
+      "mediaCaption": "Présentation anonymisée en deux volets : le site multilingue, puis le CRM de prospection.",
+      "brief": {
+        "mission": "Conception du site international et du CRM de prospection B2B",
+        "result": "Des collections accessibles en trois langues et un espace de suivi des demandes"
       },
-      technical: {
+      "technical": {
         "heading": "Fiche technique du projet",
         "groups": [
           {
             "heading": "Stack utilisée",
-            "text": "WordPress, CRM, Apify, Scoring de leads, Multilingue / RTL"
+            "text": "WordPress · CRM · Apify · Scoring de prospects · Multilingue / RTL"
           },
           {
-            "heading": "Architecture et fonctionnement",
-            "text": "Site WordPress multilingue relié à un CRM distinct. Les demandes sont enregistrées avant transmission, avec reprise automatique en cas d’indisponibilité du CRM."
+            "heading": "Architecture et parcours",
+            "text": "Site WordPress en anglais, arabe et russe, associé à une application CRM distincte. Les demandes du site apparaissent dans la file de revue des candidats."
           },
           {
-            "heading": "Intégrations et données",
-            "text": "Formulaires du site vers le CRM ; Apify pour la recherche de prospects sur les réseaux sociaux ; import de fiches produit du studio IA."
+            "heading": "Mon rôle",
+            "text": "Conception et développement intégral du projet, des premières lignes de code jusqu’à la mise en production."
           },
           {
-            "heading": "Mon rôle et mes responsabilités",
-            "text": "Création du site et du parcours de demande B2B, connexion au CRM et organisation de la prospection et du suivi des acheteurs."
+            "heading": "SEO et performance",
+            "text": "Prise en compte du SEO du site vitrine et de la performance du site et du CRM jusqu’à la mise en production."
           }
         ]
       },
-      sections: [
+      "sections": [
         {
-          heading: 'Le contexte',
-          paragraphs: [
-            "La maison avait un site grand public, pensé pour les particuliers. Rien n'y parlait aux grossistes, aux distributeurs ou aux bureaux d'achat, et les demandes professionnelles arrivaient par des canaux dispersés. Côté prospection, l'équipe export cherchait ses acheteurs à la main, surtout sur les réseaux sociaux.",
-          ],
+          "heading": "Le besoin",
+          "paragraphs": [
+            "Présenter une maison textile à des grossistes et distributeurs demande de relier son identité à des informations commerciales utiles : collections, savoir-faire, présence internationale et modalités de prise de contact. L’équipe a aussi besoin d’un espace pour organiser les prospects et leurs prochaines étapes."
+          ]
         },
         {
-          heading: 'Le défi',
-          paragraphs: [
-            "Il fallait un site qui inspire confiance à un acheteur professionnel, et un moyen fiable de transformer son intérêt en relation commerciale :",
-          ],
-          list: [
-            'présenter la maison, ses collections et son savoir-faire à un public international ;',
-            'faire de chaque visite une demande de catalogue, de devis ou de partenariat ;',
-            'trouver de nouveaux acheteurs sans contacter personne au hasard ;',
-            "suivre chaque échange, du premier contact à la première commande.",
-          ],
+          "heading": "Le site vitrine : présenter la maison et ses collections",
+          "steps": [
+            {
+              "heading": "Une identité et un savoir-faire visibles",
+              "paragraphs": [
+                "J’ai organisé la présentation autour de l’histoire de la maison, des collections et des étapes de fabrication : création, impression et finition. La présence internationale complète ce parcours pour les distributeurs qui cherchent un partenaire."
+              ]
+            },
+            {
+              "heading": "Un catalogue pour les acheteurs professionnels",
+              "paragraphs": [
+                "Les familles de châles et de foulards conduisent aux produits. Le parcours met en avant la demande de catalogue et le partenariat ; les fiches permettent de préparer une demande d’information ou de devis."
+              ]
+            },
+            {
+              "heading": "Trois langues et un parcours mobile",
+              "paragraphs": [
+                "Le site propose l’anglais, l’arabe avec une mise en page de droite à gauche, et le russe. Les accès aux collections et aux demandes professionnelles restent disponibles sur mobile."
+              ]
+            }
+          ]
         },
         {
-          heading: "Ce que j'ai fait",
-          steps: [
+          "heading": "Le CRM : organiser la prospection et la relation commerciale",
+          "steps": [
             {
-              heading: 'Un site vitrine pour les professionnels',
-              paragraphs: [
-                "Le site présente les collections, l'histoire et les métiers de la maison, sa présence dans le monde (les boutiques existantes et les marchés en développement) et les marques du groupe. Il existe en anglais et en arabe, avec une mise en page de droite à gauche, et chaque page est reliée à sa traduction.",
-                "On y feuillette les produits comme un catalogue, avec leurs photos, leurs dimensions et leur entretien. Il n'y a pas de panier : chaque page mène à une demande de catalogue, de devis ou de partenariat, par formulaire ou par WhatsApp.",
-              ],
+              "heading": "Des candidats revus avant leur entrée au portefeuille",
+              "paragraphs": [
+                "Les recherches et les imports alimentent une file de candidats. Le commercial examine la source, la pertinence et les informations disponibles avant d’accepter, de rejeter ou de rattacher un candidat à une entreprise existante."
+              ]
             },
             {
-              heading: 'Aucune demande perdue',
-              paragraphs: [
-                "Chaque demande est enregistrée sur le site avant d'être envoyée au CRM, et le site réessaie seul si le CRM ne répond pas. Les robots sont écartés sans case à cocher pour le visiteur. La demande arrive chez un commercial : le site ne répond jamais à la place de l'équipe.",
-              ],
+              "heading": "Des demandes du site dans le même espace",
+              "paragraphs": [
+                "Une demande de test issue du site a été retrouvée dans cette file, avec sa source et le produit concerné. Cette observation documente un exemple de réception ; elle ne mesure pas à elle seule la fiabilité de tous les envois."
+              ]
             },
             {
-              heading: 'Des contenus gérés sans développeur',
-              paragraphs: [
-                "L'équipe met à jour pages, produits, collections, boutiques et marques depuis l'administration, avec un rôle dédié aux contenus. Les fiches produit peuvent être importées depuis les exports du studio IA. Tout nouveau contenu reste « à valider », invisible pour Google, jusqu'à son approbation.",
-              ],
-            },
-            {
-              heading: 'Un CRM qui trouve les acheteurs sur les réseaux sociaux',
-              paragraphs: [
-                "Le commercial lance une recherche sur Instagram, TikTok et Facebook, dans les pays de son territoire, avec des mots-clés en plusieurs langues. Les comptes qui ne parlent ni de châles, ni de foulards, ni de hijabs sont écartés automatiquement, comme les métiers sans rapport, et le type d'acheteur visé (grossiste, distributeur, importateur…) augmente le score.",
-                "Les résultats arrivent dans une file de revue : le commercial accepte un compte, le rejette en donnant une raison, ou le rattache à une entreprise déjà connue.",
-              ],
-            },
-            {
-              heading: 'Un suivi en six étapes, toujours sous contrôle',
-              paragraphs: [
-                "Chaque prospect suit le même chemin : trouvé, revu, ajouté au portefeuille, travaillé, en opportunité, puis client à la première commande gagnée. Le commercial y note chaque appel, e-mail ou échange WhatsApp, même depuis son téléphone, et planifie ses relances. L'application n'envoie jamais de message à sa place.",
-                "Les indicateurs ne comptent que ce qui existe vraiment dans l'outil : pas de chiffre d'affaires ni de taux de réponse inventés.",
-              ],
-            },
-          ],
-        },
+              "heading": "Un suivi des opportunités et des relances",
+              "paragraphs": [
+                "Le parcours global va de la découverte à la revue, puis au portefeuille, au travail commercial, à l’opportunité et au client après une première affaire gagnée.",
+                "À l’intérieur de ce parcours, l’opportunité possède sept statuts distincts : nouvelle, contact engagé, besoin identifié, devis envoyé, négociation, gagnée et perdue. Les tâches et échéances organisent les prochaines actions."
+              ]
+            }
+          ]
+        }
       ],
-      result:
-        "Les acheteurs professionnels trouvent un site fait pour eux, et chaque demande arrive chez un commercial sans jamais se perdre. L'équipe export prospecte avec méthode, garde la trace de chaque échange et suit chaque acheteur jusqu'à sa première commande.",
+      "result": "Un site et un CRM en production. Les collections sont accessibles en trois langues ; les demandes alimentent une file de revue, où une demande de test du site a été vérifiée.",
+      "highlights": [
+        "Collections en anglais, arabe et russe",
+        "Revue humaine des candidats",
+        "Opportunités, tâches et relances"
+      ],
+      "delivery": "Conception, développement et mise en production, de bout en bout."
     },
-    en: {
-      title: 'An export showcase website and a CRM to win trade buyers abroad',
-      metaTitle: 'Multilingual export showcase website and B2B CRM',
-      metaDescription:
-        'A showcase site for foreign wholesalers, in English and Arabic, connected to a CRM that finds and follows prospects on Instagram, TikTok and Facebook.',
-      sector: 'Export · B2B',
-      lead:
-        'A heritage scarf and shawl house wanted to sell to wholesalers and distributors abroad. I designed two tools that work together: a showcase website built for trade buyers, and a CRM that finds those buyers and follows every exchange through to the first order.',
-      brief: {
-        mission: 'Design of a showcase website in English and Arabic and of a prospecting CRM connected to it',
-        result: 'No enquiry lost, from the form to the salesperson',
+    "en": {
+      "title": "An international website and its B2B CRM",
+      "metaTitle": "International showcase website & B2B CRM · Case study",
+      "metaDescription": "A collections website in English, Arabic and Russian, paired with a CRM for prospecting, candidate review and sales follow-up.",
+      "sector": "Textiles · Export website & B2B CRM",
+      "lead": "A collections website in three languages, paired with a CRM for reviewing candidates and organising trade buyer follow-up.",
+      "mediaCaption": "Anonymised presentation in two parts: the multilingual website, then the prospecting CRM.",
+      "brief": {
+        "mission": "Design of the international website and B2B prospecting CRM",
+        "result": "Collections in three languages and a workspace for enquiry follow-up"
       },
-      technical: {
+      "technical": {
         "heading": "Project technical overview",
         "groups": [
           {
             "heading": "Technology stack",
-            "text": "WordPress, CRM, Apify, Lead scoring, Multilingual / RTL"
+            "text": "WordPress · CRM · Apify · Lead scoring · Multilingual / RTL"
           },
           {
-            "heading": "Architecture and workflows",
-            "text": "Multilingual WordPress site connected to a separate CRM. Requests are saved before delivery and retried when the CRM is unavailable."
+            "heading": "Architecture and journeys",
+            "text": "A WordPress website in English, Arabic and Russian, paired with a separate CRM application. Website enquiries appear in the candidate review queue."
           },
           {
-            "heading": "Integrations and data",
-            "text": "Website forms connected to the CRM; Apify for social prospect research; product-sheet imports from the AI studio."
+            "heading": "My role",
+            "text": "Full project design and development, from the first lines of code through production deployment."
           },
           {
-            "heading": "My role and responsibilities",
-            "text": "Building the site and B2B enquiry journey, connecting the CRM and organising prospecting and buyer follow-up."
+            "heading": "SEO and performance",
+            "text": "Website SEO and performance of both the website and CRM considered through production deployment."
           }
         ]
       },
-      sections: [
+      "sections": [
         {
-          heading: 'The context',
-          paragraphs: [
-            'The house had a consumer website built for individual shoppers. Nothing on it spoke to wholesalers, distributors or buying offices, and trade enquiries came in through scattered channels. On the prospecting side, the export team looked for buyers by hand, mostly on social media.',
-          ],
+          "heading": "The need",
+          "paragraphs": [
+            "Presenting a textile house to wholesalers and distributors means connecting its identity with useful business information: collections, manufacturing expertise, international presence and ways to get in touch. The team also needs a workspace to organise prospects and next steps."
+          ]
         },
         {
-          heading: 'The challenge',
-          paragraphs: [
-            'It needed a website that earns a trade buyer’s trust, and a reliable way to turn their interest into a business relationship:',
-          ],
-          list: [
-            'present the house, its collections and its craft to an international audience;',
-            'turn every visit into a request for a catalogue, a quote or a partnership;',
-            'find new buyers without contacting anyone at random;',
-            'follow every exchange, from first contact to first order.',
-          ],
+          "heading": "The website: presenting the house and its collections",
+          "steps": [
+            {
+              "heading": "Identity and manufacturing expertise",
+              "paragraphs": [
+                "I structured the presentation around the house’s history, collections and production stages: design, printing and finishing. International presence completes the journey for distributors looking for a partner."
+              ]
+            },
+            {
+              "heading": "A catalogue for trade buyers",
+              "paragraphs": [
+                "Scarf and shawl families lead to individual products. The journey highlights catalogue and partnership requests; product sheets help visitors prepare an information or quote enquiry."
+              ]
+            },
+            {
+              "heading": "Three languages and a mobile journey",
+              "paragraphs": [
+                "The site offers English, Arabic with a right-to-left layout, and Russian. Collections and business enquiry entry points remain accessible on mobile."
+              ]
+            }
+          ]
         },
         {
-          heading: 'What I did',
-          steps: [
+          "heading": "The CRM: organising prospecting and sales relationships",
+          "steps": [
             {
-              heading: 'A showcase website for professionals',
-              paragraphs: [
-                'The site presents the collections, the history and crafts of the house, its presence around the world (existing stores and markets in development) and the group’s brands. It is available in English and Arabic, with a right-to-left layout, and every page is linked to its translation.',
-                'Visitors leaf through the products like a catalogue, with their photos, dimensions and care instructions. There is no cart: every page leads to a request for a catalogue, a quote or a partnership, by form or by WhatsApp.',
-              ],
+              "heading": "Candidates reviewed before joining the portfolio",
+              "paragraphs": [
+                "Searches and imports feed a candidate queue. The salesperson examines the source, relevance and available information before accepting, rejecting or linking a candidate to an existing company."
+              ]
             },
             {
-              heading: 'No enquiry ever lost',
-              paragraphs: [
-                'Each enquiry is saved on the site before being sent to the CRM, and the site retries on its own if the CRM does not respond. Bots are filtered out without a checkbox for the visitor. The enquiry reaches a salesperson: the site never replies on the team’s behalf.',
-              ],
+              "heading": "Website enquiries in the same workspace",
+              "paragraphs": [
+                "A test enquiry from the website was found in this queue with its source and product. This documents one received enquiry; it does not by itself measure the reliability of all deliveries."
+              ]
             },
             {
-              heading: 'Content managed without a developer',
-              paragraphs: [
-                'The team updates pages, products, collections, stores and brands from the back office, with a dedicated content role. Product sheets can be imported from the AI studio’s exports. Any new content stays “to review”, hidden from Google, until it is approved.',
-              ],
-            },
-            {
-              heading: 'A CRM that finds buyers on social media',
-              paragraphs: [
-                'The salesperson launches a search on Instagram, TikTok and Facebook, in the countries of their territory, with keywords in several languages. Accounts that mention no shawls, scarves or hijabs are dropped automatically, as are unrelated trades, and the type of buyer sought (wholesaler, distributor, importer and so on) raises the score.',
-                'Results land in a review queue: the salesperson accepts an account, rejects it with a reason, or links it to a company already known.',
-              ],
-            },
-            {
-              heading: 'Six steps, always under control',
-              paragraphs: [
-                'Every prospect follows the same path: found, reviewed, added to the portfolio, worked, in an opportunity, then customer at the first won order. The salesperson logs each call, email or WhatsApp exchange, even from their phone, and plans follow-ups. The application never sends a message on their behalf.',
-                'The figures count only what really exists in the tool: no made-up revenue or response rates.',
-              ],
-            },
-          ],
-        },
+              "heading": "Opportunity stages and follow-ups",
+              "paragraphs": [
+                "The overall journey runs from discovery to review, portfolio entry, sales work, opportunity and customer after a first won deal.",
+                "Within that journey, opportunities have seven distinct statuses: new, contact engaged, need identified, quote sent, negotiation, won and lost. Tasks and due dates organise next actions."
+              ]
+            }
+          ]
+        }
       ],
-      result:
-        'Trade buyers find a website built for them, and every enquiry reaches a salesperson without ever getting lost. The export team prospects with method, keeps a record of every exchange and follows each buyer through to the first order.',
+      "result": "A website and CRM in production. Collections are accessible in three languages; enquiries feed a review queue, where a test website enquiry was verified.",
+      "highlights": [
+        "Collections in English, Arabic and Russian",
+        "Human review of candidates",
+        "Opportunities, tasks and follow-ups"
+      ],
+      "delivery": "End-to-end design, development and production deployment."
     },
-    ar: {
-      title: 'موقع عرض للتصدير ونظام CRM لكسب المشترين المحترفين في الخارج',
-      metaTitle: 'موقع عرض متعدد اللغات للتصدير ونظام CRM للشركات',
-      metaDescription:
-        'موقع عرض لتجار الجملة في الخارج، بالإنجليزية والعربية، مرتبط بنظام CRM يجد العملاء المحتملين ويتابعهم على Instagram وTikTok وFacebook.',
-      sector: 'التصدير · B2B',
-      lead:
-        'أرادت دار عريقة للشالات والوشاحات البيع لتجار الجملة والموزعين في الخارج. صمّمت أداتين تعملان معاً: موقع عرض مصمَّم للمشترين المحترفين، ونظام CRM يجد هؤلاء المشترين ويتابع كل تبادل حتى أول طلبية.',
-      brief: {
-        mission: 'تصميم موقع عرض بالإنجليزية والعربية ونظام CRM للتنقيب مرتبط به',
-        result: 'لا ضياع لأي طلب، من النموذج إلى مستشار المبيعات',
+    "ar": {
+      "title": "موقع دولي ونظام CRM للشركات",
+      "metaTitle": "موقع عرض دولي ونظام CRM للشركات · دراسة حالة",
+      "metaDescription": "موقع مجموعات بالإنجليزية والعربية والروسية، مرتبط بنظام CRM للتنقيب ومراجعة المرشحين والمتابعة التجارية.",
+      "sector": "النسيج · موقع للتصدير ونظام CRM",
+      "lead": "موقع مجموعات بثلاث لغات مع نظام CRM لمراجعة المرشحين وتنظيم متابعة المشترين المحترفين.",
+      "mediaCaption": "عرض مع إخفاء الهوية من جزأين: الموقع متعدد اللغات ثم نظام CRM للتنقيب.",
+      "brief": {
+        "mission": "تصميم الموقع الدولي ونظام CRM للتنقيب بين الشركات",
+        "result": "مجموعات بثلاث لغات ومساحة لمتابعة الطلبات"
       },
-      technical: {
+      "technical": {
         "heading": "الملف التقني للمشروع",
         "groups": [
           {
             "heading": "التقنيات المستخدمة",
-            "text": "WordPress, CRM, Apify, تقييم العملاء المحتملين, متعدد اللغات / RTL"
+            "text": "WordPress · CRM · Apify · تقييم العملاء المحتملين · متعدد اللغات / RTL"
           },
           {
-            "heading": "البنية ومسارات العمل",
-            "text": "موقع WordPress متعدد اللغات مرتبط بنظام CRM مستقل، مع حفظ الطلبات قبل الإرسال وإعادة المحاولة عند تعذّر الوصول."
+            "heading": "البنية ومسارات الاستخدام",
+            "text": "موقع WordPress بالإنجليزية والعربية والروسية مع تطبيق CRM مستقل. تظهر طلبات الموقع في قائمة مراجعة المرشحين."
           },
           {
-            "heading": "التكامل والبيانات",
-            "text": "نماذج الموقع مرتبطة بـ CRM، وApify للبحث عن العملاء على الشبكات الاجتماعية واستيراد بطاقات المنتجات من استوديو الذكاء الاصطناعي."
+            "heading": "دوري",
+            "text": "تصميم المشروع وتطويره بالكامل، من أول أسطر الشيفرة إلى الإطلاق في بيئة الإنتاج."
           },
           {
-            "heading": "دوري ومسؤولياتي",
-            "text": "إنشاء الموقع ومسار الطلبات المهنية وربط CRM وتنظيم التنقيب ومتابعة المشترين."
+            "heading": "تحسين محركات البحث والأداء",
+            "text": "مراعاة تحسين محركات البحث للموقع وأداء الموقع ونظام CRM حتى الإطلاق في بيئة الإنتاج."
           }
         ]
       },
-      sections: [
+      "sections": [
         {
-          heading: 'السياق',
-          paragraphs: [
-            'كان للدار موقع موجّه لعامة الزبائن. لم يكن فيه ما يخاطب تجار الجملة أو الموزعين أو مكاتب الشراء، وكانت الطلبات المهنية تصل عبر قنوات متفرقة. أما في التنقيب، فكان فريق التصدير يبحث عن المشترين يدوياً، خاصة على وسائل التواصل.',
-          ],
+          "heading": "الحاجة",
+          "paragraphs": [
+            "يتطلب تقديم دار نسيج لتجار الجملة والموزعين ربط هويتها بمعلومات تجارية مفيدة: المجموعات والخبرة الصناعية والحضور الدولي وطرق التواصل. ويحتاج الفريق أيضاً إلى مساحة لتنظيم العملاء المحتملين وخطواتهم التالية."
+          ]
         },
         {
-          heading: 'التحدي',
-          paragraphs: ['كان المطلوب موقعاً يكسب ثقة المشتري المحترف، ووسيلة موثوقة لتحويل اهتمامه إلى علاقة تجارية:'],
-          list: [
-            'تقديم الدار ومجموعاتها وحِرفها لجمهور دولي؛',
-            'تحويل كل زيارة إلى طلب كتالوج أو عرض سعر أو شراكة؛',
-            'إيجاد مشترين جدد دون مراسلة أي أحد عشوائياً؛',
-            'متابعة كل تبادل، من أول تواصل إلى أول طلبية.',
-          ],
+          "heading": "الموقع: تقديم الدار ومجموعاتها",
+          "steps": [
+            {
+              "heading": "هوية وخبرة صناعية واضحتان",
+              "paragraphs": [
+                "نظّمت العرض حول تاريخ الدار ومجموعاتها ومراحل الإنتاج: التصميم والطباعة والتشطيب. ويكمل الحضور الدولي المسار للموزعين الباحثين عن شريك."
+              ]
+            },
+            {
+              "heading": "كتالوج للمشترين المحترفين",
+              "paragraphs": [
+                "تقود عائلات الشالات والأوشحة إلى المنتجات. يبرز المسار طلب الكتالوج والشراكة، وتساعد بطاقات المنتجات على إعداد طلب معلومات أو عرض سعر."
+              ]
+            },
+            {
+              "heading": "ثلاث لغات ومسار للهاتف",
+              "paragraphs": [
+                "الموقع متاح بالإنجليزية والعربية بتخطيط من اليمين إلى اليسار والروسية، مع وصول إلى المجموعات والطلبات المهنية على الهاتف."
+              ]
+            }
+          ]
         },
         {
-          heading: 'ما قمت به',
-          steps: [
+          "heading": "نظام CRM: تنظيم التنقيب والعلاقة التجارية",
+          "steps": [
             {
-              heading: 'موقع عرض للمحترفين',
-              paragraphs: [
-                'يقدم الموقع المجموعات وتاريخ الدار وحرفها، وحضورها في العالم (المتاجر القائمة والأسواق قيد التطوير)، وعلامات المجموعة. وهو متوفر بالإنجليزية والعربية، مع تخطيط من اليمين إلى اليسار، وكل صفحة مرتبطة بترجمتها.',
-                'يتصفح الزائر المنتجات ككتالوج، مع صورها ومقاساتها وطريقة العناية بها. ولا توجد سلة شراء: كل صفحة تقود إلى طلب كتالوج أو عرض سعر أو شراكة، عبر نموذج أو واتساب.',
-              ],
+              "heading": "مراجعة المرشحين قبل إضافتهم إلى المحفظة",
+              "paragraphs": [
+                "تغذّي عمليات البحث والاستيراد قائمة المرشحين. يراجع المسؤول المصدر والملاءمة والمعلومات المتاحة قبل القبول أو الرفض أو الربط بشركة موجودة."
+              ]
             },
             {
-              heading: 'لا طلب يضيع أبداً',
-              paragraphs: [
-                'يُحفظ كل طلب على الموقع قبل إرساله إلى نظام CRM، ويعيد الموقع المحاولة تلقائياً إذا لم يستجب النظام. وتُستبعد الروبوتات دون أي خانة يملؤها الزائر. ويصل الطلب إلى مستشار مبيعات: لا يرد الموقع أبداً بدل الفريق.',
-              ],
+              "heading": "طلبات الموقع في المساحة نفسها",
+              "paragraphs": [
+                "وُجد طلب تجريبي من الموقع في قائمة المراجعة مع مصدره والمنتج المعني. يوثّق هذا المثال استقبال طلب واحد، ولا يقيس وحده موثوقية جميع عمليات الإرسال."
+              ]
             },
             {
-              heading: 'محتوى يُدار دون مطوّر',
-              paragraphs: [
-                'يحدّث الفريق الصفحات والمنتجات والمجموعات والمتاجر والعلامات من لوحة الإدارة، مع دور مخصص للمحتوى. ويمكن استيراد بطاقات المنتجات من صادرات استوديو الذكاء الاصطناعي. ويبقى كل محتوى جديد «قيد المراجعة»، غير مرئي لـ Google، حتى تتم الموافقة عليه.',
-              ],
-            },
-            {
-              heading: 'نظام CRM يجد المشترين على وسائل التواصل',
-              paragraphs: [
-                'يطلق المستشار بحثاً على Instagram وTikTok وFacebook، في بلدان منطقته، بكلمات مفتاحية بعدة لغات. وتُستبعد تلقائياً الحسابات التي لا تذكر شالات ولا وشاحات ولا حجاباً، وكذلك المهن التي لا علاقة لها، ويرفع نوع المشتري المستهدف (تاجر جملة، موزع، مستورد...) التقييم.',
-                'وتصل النتائج إلى طابور مراجعة: يقبل المستشار الحساب، أو يرفضه مع ذكر السبب، أو يربطه بشركة معروفة مسبقاً.',
-              ],
-            },
-            {
-              heading: 'متابعة في ست مراحل، تحت السيطرة دائماً',
-              paragraphs: [
-                'يسلك كل عميل محتمل الطريق نفسه: تم إيجاده، ثم مراجعته، ثم إضافته إلى المحفظة، ثم العمل عليه، ثم فتح فرصة، ثم يصبح عميلاً عند أول طلبية رابحة. ويسجّل المستشار كل مكالمة أو بريد أو تبادل على واتساب، حتى من هاتفه، ويخطط لمتابعاته. ولا يرسل التطبيق أي رسالة نيابة عنه أبداً.',
-                'ولا تحتسب المؤشرات إلا ما هو موجود فعلاً في الأداة: لا رقم معاملات ولا نسب رد مُختلَقة.',
-              ],
-            },
-          ],
-        },
+              "heading": "حالات الفرص والمتابعة",
+              "paragraphs": [
+                "يمر المسار العام بالاكتشاف والمراجعة والإضافة إلى المحفظة والعمل التجاري والفرصة، ثم يصبح الحساب عميلاً بعد أول صفقة ناجحة.",
+                "ضمن هذا المسار، للفرصة سبع حالات: جديدة، بدأ التواصل، حُدّدت الحاجة، أُرسل عرض السعر، تفاوض، رابحة وخاسرة. تنظّم المهام والمواعيد الإجراءات التالية."
+              ]
+            }
+          ]
+        }
       ],
-      result:
-        'يجد المشترون المحترفون موقعاً صُمّم لهم، ويصل كل طلب إلى مستشار مبيعات دون أن يضيع أبداً. ويُنقّب فريق التصدير بمنهجية، ويحتفظ بأثر كل تبادل، ويتابع كل مشترٍ حتى أول طلبية.',
-    },
-  },
+      "result": "موقع ونظام CRM منشوران. المجموعات متاحة بثلاث لغات وتصل الطلبات إلى قائمة مراجعة، حيث تم التحقق من طلب تجريبي من الموقع.",
+      "highlights": [
+        "مجموعات بالإنجليزية والعربية والروسية",
+        "مراجعة بشرية للمرشحين",
+        "فرص ومهام ومتابعات"
+      ],
+      "delivery": "التصميم والتطوير والإطلاق في بيئة الإنتاج، من البداية إلى النهاية."
+    }
+  }
 };
 
 export default study;

@@ -267,7 +267,7 @@ const ProjectsSection = () => {
       <SectionHeading title={t('projects.featuredTitle')} subtitle={t('projects.featuredSubtitle')} />
 
       <div className="grid gap-6 md:grid-cols-2">
-        {[11, 6, 8, 13].map((id, index) => {
+        {[11, 6, 12, 14, 8, 13].map((id, index) => {
           const project = projects.find((item) => item.id === id)!;
           const study = caseStudyForProject(id)!;
           return (
@@ -297,7 +297,8 @@ const ProjectsSection = () => {
                 </div>
                 <div className="flex flex-1 flex-col p-6 md:p-8">
                   <h3 className="mb-3 text-xl font-semibold">{t(`projects.items.${id}.title`)}</h3>
-                  <p className="mb-6 text-sm leading-relaxed text-muted-foreground">{t(`projects.featuredSummaries.${id}`)}</p>
+                  <p className="mb-4 text-sm leading-relaxed text-muted-foreground">{t(`projects.featuredSummaries.${id}`)}</p>
+                  {[6, 12, 14].includes(id) && <p className="mb-5 text-sm font-medium text-foreground/80">{t('projects.delivery')}</p>}
                   <span className="mt-auto inline-flex items-center gap-2 text-sm font-medium text-[#483dfb] dark:text-[#9b87f5]">
                     {t('caseStudyPage.readFull')}
                     <ArrowRight aria-hidden className="h-4 w-4 rtl:rotate-180" />
@@ -440,6 +441,34 @@ const ProjectsSection = () => {
                   current.images.length > 0 || current.video ? 'lg:grid-cols-[1.15fr_1fr] lg:items-center' : ''
                 }`}
               >
+                {current.video ? (
+                  <div className="min-w-0 lg:order-2">
+                    <ProjectVideo
+                      ref={videoRef}
+                      src={current.video.src}
+                      poster={current.video.poster}
+                      portrait={current.video.portrait}
+                      label={t('projects.videoOf', { title: t(`projects.items.${current.id}.title`) })}
+                      playLabel={t('projects.playVideo')}
+                    />
+                  </div>
+                ) : current.images.length > 0 && (
+                  <div className="min-w-0 lg:order-2">
+                    <SwipeCardStack
+                      images={current.images.map((src, i) => ({
+                        src,
+                        alt: current.captions?.[i] ?? `${t(`projects.items.${current.id}.title`)} ${i + 1}`,
+                      }))}
+                      ariaLabel={t('projects.viewScreenshots')}
+                      onCardClick={(i) => openModal(current, i)}
+                      onTopCardChange={(i) => setTopCards((prev) => (prev[current.id] === i ? prev : { ...prev, [current.id]: i }))}
+                    />
+                    <p className="mt-2 min-h-[2.5rem] text-center text-sm text-foreground/80" aria-live="polite">
+                      {current.captions?.[topCards[current.id] ?? 0]}
+                    </p>
+                    <p className="text-center text-xs text-muted-foreground">{t('projects.swipeHint')}</p>
+                  </div>
+                )}
                 <div className="min-w-0">
                   <div className="mb-5 flex items-start justify-between gap-4">
                     <div className="flex min-w-0 items-center gap-4">
@@ -518,34 +547,7 @@ const ProjectsSection = () => {
                   </div>
                 </div>
 
-                {current.video ? (
-                  <div className="min-w-0">
-                    <ProjectVideo
-                      ref={videoRef}
-                      src={current.video.src}
-                      poster={current.video.poster}
-                      portrait={current.video.portrait}
-                      label={t('projects.videoOf', { title: t(`projects.items.${current.id}.title`) })}
-                      playLabel={t('projects.playVideo')}
-                    />
-                  </div>
-                ) : current.images.length > 0 && (
-                  <div className="min-w-0">
-                    <SwipeCardStack
-                      images={current.images.map((src, i) => ({
-                        src,
-                        alt: current.captions?.[i] ?? `${t(`projects.items.${current.id}.title`)} ${i + 1}`,
-                      }))}
-                      ariaLabel={t('projects.viewScreenshots')}
-                      onCardClick={(i) => openModal(current, i)}
-                      onTopCardChange={(i) => setTopCards((prev) => (prev[current.id] === i ? prev : { ...prev, [current.id]: i }))}
-                    />
-                    <p className="mt-2 min-h-[2.5rem] text-center text-sm text-foreground/80" aria-live="polite">
-                      {current.captions?.[topCards[current.id] ?? 0]}
-                    </p>
-                    <p className="text-center text-xs text-muted-foreground">{t('projects.swipeHint')}</p>
-                  </div>
-                )}
+
               </motion.article>
             </AnimatePresence>
           </div>

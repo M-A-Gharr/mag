@@ -131,17 +131,19 @@ const breadcrumb = (items: { label: string; href?: string }[]) =>
     .join('')}</ol></nav>`;
 
 /** Chip, title, lead and the compact contact button. */
-const pageHeader = (chip: string, title: string, lead: string, ctaHref: string, ctaLabel: string) =>
+const pageHeader = (chip: string, title: string, lead: string, ctaHref: string, ctaLabel: string, media = '', mediaAfterLead = false) =>
   `<div><span class="rounded-full bg-[#483dfb]/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-[#483dfb] dark:text-[#9b87f5]">${esc(chip)}</span>` +
   `<h1 class="mt-5 text-3xl font-bold leading-tight md:text-5xl">${esc(title)}</h1>` +
-  `<p class="mt-6 text-lg leading-relaxed text-foreground/80 md:text-xl">${esc(lead)}</p>` +
+  (mediaAfterLead ? '' : media) +
+  `<p class="${mediaAfterLead ? 'mt-4 text-lg leading-relaxed text-foreground/80' : 'mt-6 text-lg leading-relaxed text-foreground/80 md:text-xl'}">${esc(lead)}</p>` +
+  (mediaAfterLead ? media : '') +
   `<div class="mt-6"><a href="${ctaHref}" class="inline-flex items-center justify-center gap-2 rounded-full bg-[#261bfb] px-5 py-3 text-sm font-medium text-white transition-[background-color,box-shadow,transform] duration-300 motion-safe:hover:-translate-y-0.5 hover:shadow-lg hover:shadow-[#261bfb]/20 motion-reduce:transition-none hover:bg-[#3e30fb] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#9b87f5] focus-visible:ring-offset-2">${esc(ctaLabel)}${ARROW}</a></div></div>`;
 
 const formatDuration = (seconds: number) => `${Math.floor(seconds / 60)}:${String(Math.round(seconds % 60)).padStart(2, '0')}`;
 
 /** The case study video with its poster, as ProjectVideo shows it before the first play. */
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-const videoFigure = (video: CaseStudyVideo, title: string, l: any) => {
+const videoFigure = (video: CaseStudyVideo, title: string, l: any, caption?: string) => {
   const portrait = video.height > video.width;
   const label = String(l.projects.videoOf).replace('{{title}}', title);
   return (
@@ -151,7 +153,8 @@ const videoFigure = (video: CaseStudyVideo, title: string, l: any) => {
     `<video src="${video.src}" poster="${video.poster}" width="${video.width}" height="${video.height}" preload="none" playsinline aria-label="${esc(label)}" class="h-full w-full object-contain"></video>` +
     `<div class="absolute inset-0 flex items-center justify-center bg-gradient-to-t from-black/50 via-black/10 to-transparent"><span class="relative flex h-16 w-16 items-center justify-center rounded-full bg-white/95 text-[#483dfb] shadow-2xl">${PLAY}</span>` +
     `<span class="absolute bottom-3 start-4 rounded-md bg-black/60 px-2.5 py-1 text-xs font-medium text-white">${esc(l.projects.playVideo)}</span></div></div></div>` +
-    `<figcaption class="mt-3 flex items-center gap-2 px-1 text-sm text-muted-foreground ${portrait ? 'justify-center' : ''}">${CLOCK}<span>${esc(l.caseStudyPage.video)}</span><span aria-hidden="true">·</span><span dir="ltr">${formatDuration(video.duration)}</span></figcaption></figure>`
+    `<figcaption class="mt-3 flex items-center gap-2 px-1 text-sm text-muted-foreground ${portrait ? 'justify-center' : ''}">${CLOCK}<span>${esc(l.caseStudyPage.video)}</span><span aria-hidden="true">·</span><span dir="ltr">${formatDuration(video.duration)}</span></figcaption>` +
+    (caption ? `<p class="mt-2 px-1 text-sm leading-relaxed text-muted-foreground">${esc(caption)}</p>` : '') + '</figure>'
   );
 };
 
@@ -174,20 +177,25 @@ const articleHtml = (
 ) => {
   const t = study.text[lng];
   const slug = study.slug;
+  const compact = !!t.highlights;
+  const video = study.video ? videoFigure(study.video, l.projects.items[study.projectId]?.title ?? t.title, l, t.mediaCaption) : '';
+  const role = t.delivery ? `<p class="mt-3 text-sm leading-relaxed text-muted-foreground"><strong class="font-semibold text-foreground">${esc(l.caseStudyPage.role)} : </strong>${esc(t.delivery)}</p>` : '';
+  const highlights = t.highlights ? `<ul class="mt-5 grid gap-3 sm:grid-cols-3" aria-label="${esc(l.caseStudyPage.highlights)}">${t.highlights.map((item) => `<li class="rounded-xl border border-border bg-secondary/20 p-4 text-sm leading-relaxed">${esc(item)}</li>`).join('')}</ul>` : '';
+  const media = role + video + highlights;
   const parts = [
     breadcrumb([
       { label: l.caseStudyPage.home, href: pathFor(lng) },
       { label: l.bonus.caseStudies.title, href: `${pathFor(lng)}#projects` },
       { label: l.projects.items[study.projectId]?.title ?? t.title },
     ]),
-    pageHeader(t.sector, t.title, t.lead, contactHref(lng, `project:${slug}`), conversionCopy[lng].project),
+    pageHeader(t.sector, t.title, t.lead, contactHref(lng, `project:${slug}`), conversionCopy[lng].project,
+      media, compact),
   ];
-  if (study.video) parts.push(videoFigure(study.video, l.projects.items[study.projectId]?.title ?? t.title, l));
   parts.push(`<div class="prerender mt-14">`);
   if (t.technical) {
-    parts.push(`<section><h2>${esc(t.technical.heading)}</h2>`);
+    parts.push(compact ? `<details><summary>${esc(t.technical.heading)}</summary>` : `<section><h2>${esc(t.technical.heading)}</h2>`);
     for (const group of t.technical.groups) parts.push(`<h3>${esc(group.heading)}</h3><p>${esc(group.text)}</p>`);
-    parts.push('</section>');
+    parts.push(compact ? '</details>' : '</section>');
   }
   for (const s of t.sections) {
     parts.push(`<h2>${esc(s.heading)}</h2>`);
@@ -546,8 +554,9 @@ const sitemap = (entries: SitemapEntry[]) =>
 const relatedOf = (slug: string) => {
   const relevant = new Set(SERVICES.filter((service) => service.caseStudies.includes(slug)).flatMap((service) => service.caseStudies));
   const index = CASE_STUDIES.findIndex((study) => study.slug === slug);
+  const explicit = (CASE_STUDIES[index]?.relatedSlugs ?? []).flatMap((relatedSlug) => CASE_STUDIES.filter((study) => study.slug === relatedSlug));
   const fallback = [1, 2].map((offset) => CASE_STUDIES[(index + offset) % CASE_STUDIES.length]);
-  return [...CASE_STUDIES.filter((study) => study.slug !== slug && relevant.has(study.slug)), ...fallback]
+  return [...explicit, ...CASE_STUDIES.filter((study) => study.slug !== slug && relevant.has(study.slug)), ...fallback]
     .filter((study, i, studies) => studies.findIndex((candidate) => candidate.slug === study.slug) === i).slice(0, 2);
 };
 
