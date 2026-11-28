@@ -9,10 +9,10 @@ const service: Service = {
   tools: ['PrestaShop', 'WordPress', 'Shopify', 'PHP', 'Google Search Console', 'Google Analytics', 'Surfer SEO', 'Semrush'],
   text: {
     fr: {
-      title: 'Développeur PrestaShop et e-commerce à Casablanca',
-      metaTitle: 'Développeur PrestaShop et SEO e-commerce à Casablanca',
+      title: 'Refonte PrestaShop et développement e-commerce à Casablanca',
+      metaTitle: 'Refonte PrestaShop à Casablanca | Développeur e-commerce',
       metaDescription:
-        "Développeur PrestaShop à Casablanca : modules sur mesure, migrations complexes, intégrations ERP et logiciels de gestion, refonte et SEO multilingue.",
+        'Refonte de site PrestaShop à Casablanca : modules sur mesure, SEO multilingue, migration WooCommerce et intégrations ERP.',
       lead:
         'Je crée, refonds et fais évoluer des boutiques en ligne qui se chargent vite, se trouvent sur Google et restent simples à gérer au quotidien. Mon expertise PrestaShop couvre les modules sur mesure, les migrations complexes et les connexions ERP ou logiciels de gestion. J’interviens aussi sur WordPress et Shopify, en français, en anglais et en arabe.',
       audience: {

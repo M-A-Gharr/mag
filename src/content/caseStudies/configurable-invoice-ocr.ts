@@ -53,7 +53,7 @@ const study: CaseStudy = {
       "result": "Configurable invoice extraction with in-app editing and validation before structured JSON or CSV output."
     },
     "fr": {
-      "title": "Extraire les données des factures avec vérification et modification intégrées",
+      "title": "OCR de factures : extraire, vérifier et modifier les données",
       "metaTitle": "OCR de factures : extraction automatique PDF et JPG",
       "metaDescription": "Extraction configurable de factures JPG et PDF chez OpenView, avec modification dans l’application, validation humaine et sorties JSON ou CSV.",
       "sector": "Traitement documentaire · OpenView",
