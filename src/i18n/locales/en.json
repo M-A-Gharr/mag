@@ -231,6 +231,13 @@
     "featuredSubtitle": "Projects showing how I connect business needs, development and AI.",
     "showPortfolio": "View the complete portfolio",
     "hidePortfolio": "Collapse portfolio",
+    "filterLabel": "Filter projects",
+    "filters": {
+      "all": "All projects",
+      "ai": "AI & automation",
+      "ecommerce": "E-commerce",
+      "business": "Business apps & CRM"
+    },
     "featuredSummaries": {
       "6": "AI-assisted qualification, export and domestic portfolios, pipeline and follow-ups in one application.",
       "8": "From page 10 to page 1 of Google in all three languages. I still maintain and secure the store every day.",

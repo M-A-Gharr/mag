@@ -231,6 +231,13 @@
     "featuredSubtitle": "Des projets pour découvrir ma façon de relier les enjeux métier, le développement et l’IA.",
     "showPortfolio": "Voir le portfolio complet",
     "hidePortfolio": "Réduire le portfolio",
+    "filterLabel": "Filtrer les projets",
+    "filters": {
+      "all": "Tous les projets",
+      "ai": "IA et automatisation",
+      "ecommerce": "E-commerce",
+      "business": "Applications métier et CRM"
+    },
     "featuredSummaries": {
       "6": "Qualification assistée par IA, portefeuilles Export et Maroc, pipeline et relances dans une même application.",
       "8": "De la page 10 à la page 1 de Google dans les trois langues. J'assure toujours la maintenance et la sécurité de la boutique au quotidien.",

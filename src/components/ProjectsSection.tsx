@@ -26,6 +26,14 @@ const CaseStudies = lazy(() => import('./CaseStudies'));
 
 const STAGE_HEIGHT = 'h-[320px] sm:h-[400px] md:h-[440px] lg:h-[520px]';
 
+type ProjectFilter = 'all' | 'ai' | 'ecommerce' | 'business';
+
+const PROJECT_FILTER_IDS: Record<Exclude<ProjectFilter, 'all'>, number[]> = {
+  ai: [1, 6, 7, 11, 15, 16],
+  ecommerce: [2, 8, 9, 13],
+  business: [2, 6, 10, 12, 14, 16, 17, 18],
+};
+
 const isRealLink = (href?: string): href is string => !!href && href !== '#';
 
 const asList = (value: unknown): string[] => (Array.isArray(value) ? (value as string[]) : []);
@@ -50,6 +58,8 @@ type Project = {
 const ProjectsSection = () => {
   const { t, i18n } = useTranslation();
   const [showAll, setShowAll] = useState(false);
+  const [projectFilter, setProjectFilter] = useState<ProjectFilter>('all');
+  const [pendingProjectId, setPendingProjectId] = useState<number | null>(null);
 
   const [isOpen, setIsOpen] = useState(false);
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
@@ -67,7 +77,7 @@ const ProjectsSection = () => {
       if (step === 1) carouselRef.current?.next();
       else carouselRef.current?.prev();
     } else {
-      setActive((i) => (i + step + projects.length) % projects.length);
+      setActive((i) => (i + step + visibleProjects.length) % visibleProjects.length);
     }
   };
   const goTo = (index: number) => {
@@ -82,12 +92,12 @@ const ProjectsSection = () => {
     } else if (e.key === 'ArrowLeft') {
       e.preventDefault();
       go(-1);
-    } else if (e.key === 'Enter' && projects[active].video) {
+    } else if (e.key === 'Enter' && visibleProjects[active]?.video) {
       e.preventDefault();
       playVideo();
-    } else if (e.key === 'Enter' && projects[active].images.length > 0) {
+    } else if (e.key === 'Enter' && visibleProjects[active]?.images.length) {
       e.preventDefault();
-      openModal(projects[active], 0);
+      openModal(visibleProjects[active], 0);
     }
   };
 
@@ -228,9 +238,12 @@ const ProjectsSection = () => {
     }
   ];
 
-  const current = projects[active] ?? projects[0];
+  const visibleProjects = projectFilter === 'all'
+    ? projects
+    : projects.filter((project) => PROJECT_FILTER_IDS[projectFilter].includes(project.id));
+  const current = visibleProjects[active] ?? visibleProjects[0] ?? projects[0];
 
-  const coverInputs: CoverInput[] = projects.map((project) => {
+  const coverInputs: CoverInput[] = visibleProjects.map((project) => {
     const technologies = asList(t(`projects.items.${project.id}.technologies`, { returnObjects: true }));
     return {
       title: t(`projects.items.${project.id}.title`),
@@ -246,21 +259,29 @@ const ProjectsSection = () => {
   const covers = useProjectCovers(near && showAll ? coverInputs : [], i18n.language);
 
   // "See the project" in a case study: scroll up here and bring that project to the front.
-  const goToRef = useRef(goTo);
-  goToRef.current = goTo;
   useEffect(() => {
     const onShow = (e: Event) => {
       const id = (e as CustomEvent<{ id: number }>).detail?.id;
       const i = projects.findIndex((p) => p.id === id);
       if (i < 0) return;
       setShowAll(true);
+      setProjectFilter('all');
+      setPendingProjectId(id);
       scroller.scrollTo('projects', { smooth: 'easeInOutQuart', duration: 900, offset: -70 });
-      goToRef.current(i);
     };
     window.addEventListener(SHOW_PROJECT_EVENT, onShow);
     return () => window.removeEventListener(SHOW_PROJECT_EVENT, onShow);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+  useEffect(() => {
+    if (pendingProjectId === null || projectFilter !== 'all') return;
+    const index = visibleProjects.findIndex((project) => project.id === pendingProjectId);
+    if (index < 0) return;
+    setActive(index);
+    if (webglOk) carouselRef.current?.goTo(index);
+    setPendingProjectId(null);
+  }, [pendingProjectId, projectFilter, visibleProjects, webglOk]);
 
   return (
     <section ref={sectionRef} id="projects" className="section-container">
@@ -320,6 +341,24 @@ const ProjectsSection = () => {
       {showAll && <>
       <SectionHeading title={t('projects.title')} subtitle={t('projects.subtitle')} />
 
+      <div role="group" aria-label={t('projects.filterLabel')} className="mb-6 flex flex-wrap justify-center gap-2">
+        {(['all', 'ai', 'ecommerce', 'business'] as const).map((filter) => (
+          <Button
+            key={filter}
+            type="button"
+            variant={projectFilter === filter ? 'default' : 'outline'}
+            aria-pressed={projectFilter === filter}
+            onClick={() => {
+              setProjectFilter(filter);
+              setActive(0);
+              setInteracted(true);
+            }}
+          >
+            {t(`projects.filters.${filter}`)}
+          </Button>
+        ))}
+      </div>
+
       <Reveal y={40}>
         <div
           onPointerEnter={(e) => e.pointerType === 'mouse' && setHovering(true)}
@@ -341,6 +380,7 @@ const ProjectsSection = () => {
             ) : webglOk ? (
               <Suspense fallback={<div className={STAGE_HEIGHT} />}>
                 <CrumpleCardCarousel
+                  key={projectFilter}
                   ref={carouselRef}
                   images={covers}
                   itemWidth={620}
@@ -351,7 +391,7 @@ const ProjectsSection = () => {
                   onIndexChange={setActive}
                   onInteract={() => setInteracted(true)}
                   onCardClick={(i) => {
-                    const project = projects[i];
+                    const project = visibleProjects[i];
                     if (project.video) playVideo();
                     else if (project.images.length > 0) openModal(project, 0);
                   }}
@@ -394,10 +434,10 @@ const ProjectsSection = () => {
 
             <div className="flex flex-col items-center gap-2">
               <span className="text-sm tabular-nums text-muted-foreground" aria-live="polite">
-                {String(active + 1).padStart(2, '0')} / {String(projects.length).padStart(2, '0')}
+                {String(active + 1).padStart(2, '0')} / {String(visibleProjects.length).padStart(2, '0')}
               </span>
               <div className="flex items-center gap-1.5">
-                {projects.map((project, i) => (
+                {visibleProjects.map((project, i) => (
                   <button
                     key={project.id}
                     type="button"

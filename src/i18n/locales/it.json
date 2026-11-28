@@ -231,6 +231,13 @@
     "featuredSubtitle": "Progetti che mostrano come collego esigenze aziendali, sviluppo e IA.",
     "showPortfolio": "Vedi il portfolio completo",
     "hidePortfolio": "Riduci il portfolio",
+    "filterLabel": "Filtra i progetti",
+    "filters": {
+      "all": "Tutti i progetti",
+      "ai": "IA e automazione",
+      "ecommerce": "E-commerce",
+      "business": "Applicazioni aziendali e CRM"
+    },
     "featuredSummaries": {
       "6": "Qualificazione assistita dall’IA, portafogli export e mercato locale, pipeline e follow-up in un’applicazione.",
       "8": "Dalla pagina 10 alla pagina 1 di Google in tutte e tre le lingue. Mi occupo ancora ogni giorno della manutenzione e della sicurezza del negozio.",
