@@ -78,15 +78,36 @@ const study: CaseStudy = {
           ]
         },
         {
+          "heading": "Mon apport : formaliser un savoir-faire métier",
+          "paragraphs": [
+            "J’ai analysé les fichiers de la responsable produit pour traduire sa méthode en règles utilisables par la Skill. Ce travail a aussi fait ressortir une pratique non écrite, que j’ai intégrée au traitement."
+          ]
+        },
+        {
           "heading": "Cas détaillé : classer les articles avec une Skill",
           "paragraphs": [
-            "J’ai créé une Skill qui reproduit le classement mensuel qu’une responsable produit refaisait à la main."
+            "J’ai créé une Skill qui reproduit le classement mensuel qu’une responsable produit refaisait à la main.",
+            "De l’extraction au fichier à relire :"
           ],
-          "list": [
-            "Entrées : extraction mensuelle des articles, dates de première vente, quantités vendues, stock et prix.",
-            "Traitement : sa méthode combine âge de vente et taux d’écoulement pour proposer une action. Une pratique non écrite, repérée dans ses fichiers, complète les règles.",
-            "Sortie : fichier Excel à relire, avec synthèse, action par article, fourchette de prix et points d’attention.",
-            "Garde-fou : la Skill propose ; la responsable produit fixe le prix final."
+          "steps": [
+            {
+              "heading": "Extraction mensuelle",
+              "paragraphs": [
+                "La Skill reçoit les articles, les dates de première vente, les quantités vendues, le stock et les prix."
+              ]
+            },
+            {
+              "heading": "Application des règles métier",
+              "paragraphs": [
+                "L’âge de vente et le taux d’écoulement déterminent une proposition d’action, selon la méthode de la responsable produit et la pratique repérée dans ses fichiers."
+              ]
+            },
+            {
+              "heading": "Excel à relire",
+              "paragraphs": [
+                "Le fichier réunit synthèse, action par article, fourchette de prix et points d’attention. La responsable produit vérifie les propositions et fixe le prix final."
+              ]
+            }
           ]
         },
         {
@@ -180,15 +201,36 @@ const study: CaseStudy = {
           ]
         },
         {
+          "heading": "My contribution: making business know-how explicit",
+          "paragraphs": [
+            "I analysed the product manager’s files to turn her method into rules the Skill could use. This also revealed an unwritten practice, which I incorporated into the processing."
+          ]
+        },
+        {
           "heading": "Detailed example: an item-classification Skill",
           "paragraphs": [
-            "I created a Skill that reproduces a monthly classification a product manager previously repeated manually."
+            "I created a Skill that reproduces a monthly classification a product manager previously repeated manually.",
+            "From monthly export to a file for review :"
           ],
-          "list": [
-            "Inputs: monthly item export, first-sale dates, quantities sold, stock and prices.",
-            "Processing: her method combines sales age and sell-through rate to suggest an action, supplemented by an unwritten practice identified in her files.",
-            "Output: an Excel file to review, with a summary, per-item action, price range and attention points.",
-            "Guardrail: the Skill proposes; the product manager sets the final price."
+          "steps": [
+            {
+              "heading": "Monthly export",
+              "paragraphs": [
+                "The Skill receives items, first-sale dates, quantities sold, stock and prices."
+              ]
+            },
+            {
+              "heading": "Business rules",
+              "paragraphs": [
+                "Sales age and sell-through rate determine a suggested action, following the product manager’s method and the practice identified in her files."
+              ]
+            },
+            {
+              "heading": "Excel for review",
+              "paragraphs": [
+                "The file brings together a summary, per-item action, price range and attention points. The product manager checks the suggestions and sets the final price."
+              ]
+            }
           ]
         },
         {
@@ -282,15 +324,36 @@ const study: CaseStudy = {
           ]
         },
         {
+          "heading": "مساهمتي: تحويل الخبرة المهنية إلى قواعد واضحة",
+          "paragraphs": [
+            "حلّلت ملفات مسؤولة المنتجات لتحويل منهجها إلى قواعد تستخدمها المهارة. وكشف هذا العمل أيضًا عن ممارسة غير مكتوبة أدرجتها ضمن المعالجة."
+          ]
+        },
+        {
           "heading": "مثال مفصل: مهارة لتصنيف الأصناف",
           "paragraphs": [
-            "أنشأت مهارة تعيد إنتاج تصنيف شهري كانت مسؤولة المنتجات تنجزه يدويًا."
+            "أنشأت مهارة تعيد إنتاج تصنيف شهري كانت مسؤولة المنتجات تنجزه يدويًا.",
+            "من الاستخراج الشهري إلى ملف للمراجعة :"
           ],
-          "list": [
-            "المدخلات: استخراج شهري للأصناف وتواريخ أول بيع والكميات المباعة والمخزون والأسعار.",
-            "المعالجة: منهجها الذي يجمع عمر البيع ومعدل التصريف لاقتراح إجراء، مع ممارسة غير مكتوبة اكتُشفت في ملفاتها.",
-            "المخرجات: ملف Excel للمراجعة يتضمن ملخصًا وإجراء لكل صنف ونطاق سعر ونقاط انتباه.",
-            "الضابط: المهارة تقترح ومسؤولة المنتجات تحدد السعر النهائي."
+          "steps": [
+            {
+              "heading": "الاستخراج الشهري",
+              "paragraphs": [
+                "تستقبل المهارة الأصناف وتواريخ أول بيع والكميات المباعة والمخزون والأسعار."
+              ]
+            },
+            {
+              "heading": "تطبيق قواعد العمل",
+              "paragraphs": [
+                "يُستخدم عمر البيع ومعدل التصريف لاقتراح إجراء وفق منهج مسؤولة المنتجات والممارسة المكتشفة في ملفاتها."
+              ]
+            },
+            {
+              "heading": "ملف Excel للمراجعة",
+              "paragraphs": [
+                "يجمع الملف ملخصًا وإجراء لكل صنف ونطاق سعر ونقاط انتباه. تراجع مسؤولة المنتجات المقترحات وتحدد السعر النهائي."
+              ]
+            }
           ]
         },
         {
